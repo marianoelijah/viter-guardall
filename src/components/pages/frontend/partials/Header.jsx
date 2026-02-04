@@ -19,7 +19,7 @@ const Header = () => {
           <a href="/who-we-are" className="hover:text-blue-700 transition">
             Who We Are
           </a>
-          <a href="#" className="hover:text-blue-700 transition">
+          <a href="/our-products" className="hover:text-blue-700 transition">
             Our Products
           </a>
           <a href="#" className="hover:text-blue-700 transition">
