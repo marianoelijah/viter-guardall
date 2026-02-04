@@ -13,10 +13,10 @@ const Header = () => {
 
         {/* Navigation */}
         <nav className="hidden md:flex items-center space-x-8 text-gray-700 font-medium">
-          <a href="#" className="text-blue-700 border-b-2 border-blue-700 pb-1">
+          <a href="/" className="text-blue-700 border-b-2 border-blue-700 pb-1">
             Home
           </a>
-          <a href="#" className="hover:text-blue-700 transition">
+          <a href="/who-we-are" className="hover:text-blue-700 transition">
             Who We Are
           </a>
           <a href="#" className="hover:text-blue-700 transition">

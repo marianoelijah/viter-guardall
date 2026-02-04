@@ -3,6 +3,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Home from "./components/pages/frontend/home/Home";
 import { StoreProvider } from "./components/store/storeContext";
 import ProductInfo from "./components/pages/frontend/product-info/ProductInfo";
+import WhoWeArePage from "./components/pages/frontend/landing-page/WhoWeArePage";
 
 const App = () => {
 
@@ -14,6 +15,7 @@ const App = () => {
         <Router>
           <Routes>
             <Route index element={<Home />} />
+            <Route path="/who-we-are" element={<WhoWeArePage />} />
              <Route path="/product/:slug" element={<ProductInfo />} />
           </Routes>
         </Router>

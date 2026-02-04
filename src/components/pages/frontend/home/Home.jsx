@@ -8,6 +8,7 @@ import AboutLegacy from "./AboutLegacy";
 import OurProducts from "./OurProducts";
 import SecureLifeCTA from "./SecureLifeCTA";
 
+
 const Home = () => {
   return (
     <>
@@ -17,6 +18,7 @@ const Home = () => {
       <AboutLegacy />
       <OurProducts />
       <SecureLifeCTA />
+      <Footer />
 
       {/* <NewArrival/> */}
       {/* <FullPageLink
@@ -25,8 +27,9 @@ const Home = () => {
         subheader="Lorem ipsum dolor sit amet."
       />
       <WinterCollection /> */}
+      
 
-      <Footer />
+      
 
     </>
   );
