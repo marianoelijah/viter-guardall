@@ -8,11 +8,11 @@ const Header = () => {
         
         {/* Logo */}
         <div className="flex items-center">
-          <img src="" alt="" className="h-10 w-auto" />
+          <img src="/src/assets/image/logo.png" alt="" className="h-10 w-auto" />
         </div>
 
         {/* Navigation */}
-        <nav className="hidden md:flex items-center space-x-8 text-gray-700 font-medium">
+        <nav className="hidden md:flex items-center space-x-8 text-gray-700 text-medium font-poppins">
           <a href="/" className="text-blue-700 border-b-2 border-blue-700 pb-1">
             Home
           </a>

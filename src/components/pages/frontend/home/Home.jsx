@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../partials/Header";
 import BannerSlider from "./BannerSlider";
-// import NewArrival from "./NewArrival";
 import Footer from "../partials/Footer";
 import TrustedClients from "./TrustedClients";
 import AboutLegacy from "./AboutLegacy";
@@ -19,18 +18,6 @@ const Home = () => {
       <OurProducts />
       <SecureLifeCTA />
       <Footer />
-
-      {/* <NewArrival/> */}
-      {/* <FullPageLink
-        img="fullpage.jpg"
-        header="Lorem, ipsum dolor."
-        subheader="Lorem ipsum dolor sit amet."
-      />
-      <WinterCollection /> */}
-      
-
-      
-
     </>
   );
 };

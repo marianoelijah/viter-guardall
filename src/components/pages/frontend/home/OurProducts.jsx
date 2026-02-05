@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 
@@ -9,14 +10,15 @@ import 'swiper/css/navigation';
 
 const OurProducts = () => {
   const products = [
-    { title: "Quick Alert", img: "/images/quick-alert.jpg" },
-    { title: "Vehicle Barrier System and Pedestrian Barriers", img: "/images/barriers.jpg" },
-    { title: "Vesda System (Aspirating Smoke Detection)", img: "/images/vesda.jpg" },
-    { title: "Access Control System", img: "/images/access-control.jpg" },
-    { title: "Forensic Examination", img: "/images/forensic.jpg" },
-    { title: "Guard Tour Systems", img: "/images/guard-tour.jpg" },
-    { title: "Hotel Locking", img: "/images/hotel-locking.jpg" },
-    { title: "Intrusion/Burglary Alarm Systems", img: "/images/intrusion.jpg" },
+    { title: "Quick Alert", img: "/src/assets/image/quickalert.jpg" },
+    { title: "Vehicle Barrier System and Pedestrian Barriers", img: "/src/assets/image/vehicle.png" },
+    { title: "Vesda System (Aspirating Smoke Detection)", img: "/src/assets/image/vesda.jpg" },
+    { title: "Access Control System", img: "/src/assets/image/access.jpg" },
+    { title: "Forensic Examination", img: "/src/assets/image/forensic.png" },
+    { title: "Guard Tour Systems", img: "/src/assets/image/guard.jpg" },
+    { title: "Hotel Locking", img: "/src/assets/image/hotel.jpg" },
+    { title: "Intrusion /Burglary Alarm Systems", img: "/src/assets/image/intrusion.jpeg" },
+    { title: "Parking Management / Parking Guiding System", img: "/src/assets/image/parking.jpeg" },
   ];
 
   return (
@@ -68,9 +70,9 @@ const OurProducts = () => {
         </div>
 
         {/* Browse Button */}
-        <button className="mt-8 bg-blue-800 text-white px-10 py-3 rounded-md font-bold uppercase tracking-widest hover:bg-blue-700 transition-colors shadow-lg">
+        <Link to="/our-products" className="inline-block mt-8 bg-blue-800 text-white px-10 py-3 rounded-md font-bold uppercase tracking-widest hover:bg-blue-700 transition-colors shadow-lg">
           Browse Products
-        </button>
+        </Link>
       </div>
     </section>
   );

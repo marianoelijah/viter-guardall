@@ -5,18 +5,18 @@ const Founders = () => {
     {
       name: "Derek A. Ramsay",
       position: "General Manager",
-      img: "/images/founder-derek.jpg"
+      img: "/src/assets/image/derek.png"
     },
     {
       name: "Remedios P. Ramsay",
       position: "President",
-      img: "/images/founder-remedios.jpg"
+      img: "/src/assets/image/remedios.png"
     }
   ];
 
   return (
     <section className="py-20 px-6 bg-gradient-to-br from-blue-50/50 to-white">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 font-poppins">
         
         {/* Left Side: Portraits Grid */}
         <div className="w-full lg:w-3/5 grid grid-cols-1 sm:grid-cols-2 gap-8">
@@ -26,7 +26,7 @@ const Founders = () => {
                 <img 
                   src={person.img} 
                   alt={person.name} 
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                  className="w-full h-full object-cover transition-all duration-700"
                 />
               </div>
               <div className="flex items-center gap-2">

@@ -6,7 +6,7 @@ const slides = [
     id: 1,
     title: "Protecting Lives, Securing Properties.",
     cta: "LEARN MORE",
-    image: "/path-to-your-worker-image.jpg", // Replace with your actual paths
+    image: "/src/assets/image/Group-46.png", 
     hasBadge: true,
     clients: ["Nestle", "HSBC", "UNILAB", "British Embassy"]
   },
@@ -14,14 +14,14 @@ const slides = [
     id: 2,
     title: "Ready to Level Up Your Security?",
     cta: "CONTACT US",
-    image: "/path-to-your-turnstile-image.jpg",
+    image: "/src/assets/image/Group-52.png",
     hasBadge: false
   },
   {
     id: 3,
     title: "Your Security Needs, All in One Place",
     cta: "BROWSE PRODUCTS",
-    image: "/path-to-your-keypad-image.jpg",
+    image: "/src/assets/image/Group-53.png",
     hasBadge: false
   }
 ];

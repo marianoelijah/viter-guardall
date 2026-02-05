@@ -2,11 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const clients = [
-  { name: 'Smart', logo: '/logos/smart.png' },
-  { name: 'Decathlon', logo: '/logos/decathlon.png' },
-  { name: 'CAA', logo: '/logos/caa.png' },
-  { name: 'Egis', logo: '/logos/egis.png' },
-  { name: 'PLDT', logo: '/logos/pldt.png' },
+  { name: 'Smart', logo: '/src/assets/image/Logo2-1-2.png' },
+  { name: 'Decathlon', logo: '/src/assets/image/Logo4-1-1.png' },
+  { name: 'CAA', logo: '/src/assets/image/Logo3-1-1.png' },
+  { name: 'Egis', logo: '/src/assets/image/Logo1-1.png' },
+  { name: 'PLDT', logo: '/src/assets/image/Logo5-1-2.png' },
 ];
 
 const TrustedClients = () => {
@@ -16,7 +16,7 @@ const TrustedClients = () => {
   return (
     <div className="bg-[#0a0a0a] py-16 overflow-hidden border-t border-white/5">
       <div className="container mx-auto px-4 mb-10 text-center">
-        <h2 className="text-white text-2xl md:text-3xl font-semibold tracking-wide">
+        <h2 className="text-white text-2xl md:text-3xl font-semibold font-poppins tracking-wide">
           Our Trusted Clients
         </h2>
       </div>
@@ -53,6 +53,8 @@ const TrustedClients = () => {
         </motion.div>
       </div>
 
+      
+
       {/* Manual Navigation Arrows (Optional, as per your screenshot) */}
       <div className="flex justify-center gap-4 mt-8">
         <button className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white/10 transition-colors">
@@ -66,6 +68,8 @@ const TrustedClients = () => {
           </svg>
         </button>
       </div>
+
+    
     </div>
   );
 };

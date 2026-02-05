@@ -39,7 +39,7 @@ const ProductPage = () => {
       description: "These round-the-clock sensors are ideal to secure businesses. Guard-All can help design a system based on your need and connect it to our 24-7-365 Central Monitoring System for prompt response.",
       img: "/images/intrusion-hero.jpg",
       brands: ["PARADOX"]
-    }
+    },
     {
       title: "Parking Management / Parking Guidance System",
       description: "If you’re looking to expand your Vehicle Systems, we recommend our Parking Management Systems. Manage the vehicular flow in your properties with our systems which includes high-speed gate barriers, ticket-based or token-based entry/exit stations, and more.",
