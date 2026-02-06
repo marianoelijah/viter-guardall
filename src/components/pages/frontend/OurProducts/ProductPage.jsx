@@ -13,7 +13,7 @@ const ProductPage = () => {
     {
       title: "Fire Alarm",
       description: "Fire Alarm Systems are a major requirement for buildings today. To equip you with the latest, Guard-All provides smoke & fire detector alarms, beam detectors for open areas, and special devices for high-risk areas.",
-      img: "/images/fire-alarm-hero.jpg",
+      img: "/src/assets/image/alarm.png",
       brands: ["Honeywell", "detnov"]
     },
     {

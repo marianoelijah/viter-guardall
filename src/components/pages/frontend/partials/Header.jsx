@@ -22,7 +22,7 @@ const Header = () => {
           <a href="/our-products" className="hover:text-blue-700 transition">
             Our Products
           </a>
-          <a href="#" className="hover:text-blue-700 transition">
+          <a href="/our-clients" className="hover:text-blue-700 transition"> 
             Our Clients
           </a>
         </nav>

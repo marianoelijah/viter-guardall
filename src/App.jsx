@@ -4,6 +4,7 @@ import Home from "./components/pages/frontend/home/Home";
 import { StoreProvider } from "./components/store/storeContext";
 import OurProductsPage from "./components/pages/frontend/OurProducts/OurProductsPage";
 import WhoWeArePage from "./components/pages/frontend/landing-page/WhoWeArePage";
+import OurClientsPage from "./components/pages/frontend/OurClients/OurClientsPage";
 
 const App = () => {
 
@@ -17,6 +18,7 @@ const App = () => {
             <Route index element={<Home />} />
             <Route path="/who-we-are" element={<WhoWeArePage />} />
             <Route path="/our-products" element={<OurProductsPage />} />
+            <Route path="/our-clients" element={<OurClientsPage />} />
             
           </Routes>
         </Router>
