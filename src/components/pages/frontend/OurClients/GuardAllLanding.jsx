@@ -95,41 +95,59 @@ const ClientSection = ({ title, clients }) => {
 const GuardAllLanding = () => {
   const sectors = {
     agencies: [
-      { img: '/src/assets/image/singapore.png', name: 'Embassy of Singapore' },
-      { name: 'British Embassy Manila', img: '/src/assets/image/british.png' },
-      { name: 'CAA Philippines', img: '/src/assets/image/caa.png' },
-      { name: 'Australian Embassy', img: '/src/assets/image/australian.png' },
-      { name: 'Ambassade de France', img: '/src/assets/image/ambassade.png' },
-      { name: 'Manila Int. Airport Authority', img: '/src/assets/image/manila.png' },
-      { name: 'Presidential Security Group', img: '/src/assets/image/presidential.png' },
-      { name: 'GSIS', img: '/src/assets/image/gsis.png' },
+      { name: 'Embassy of Singapore', src: '/src/assets/image/agencies img/singapore.png' },
+      { name: 'British Embassy Manila', src: '/src/assets/image/agencies img/british.png' },
+      { name: 'CAA Philippines', src: '/src/assets/image/agencies img/caa.png' },
+      { name: 'Australian Embassy', src: '/src/assets/image/agencies img/australian.png' },
+      { name: 'Ambassade de France', src: '/src/assets/image/agencies img/ambassade.png' },
+      { name: 'Manila Int. Airport Authority', src: '/src/assets/image/agencies img/manila.png' },
+      { name: 'Presidential Security Group', src: '/src/assets/image/agencies img/presidential.png' },
+      { name: 'GSIS', src: '/src/assets/image/agencies img/gsis.png' },
+    ],
+     corporations: [
+      { name: 'Samsung Electro Mechanics', src: '/src/assets/image/corporations img/samsung.png' },
+      { name: 'Coca-Cola Philippines', src: '/src/assets/image/corporations img/coca-cola.png' },
+      { name: 'Marubeni', src: '/src/assets/image/corporations img/marubeni.png' },
+      { name: 'Nestle', src: '/src/assets/image/corporations img/nestle.png' },
+      { name: 'PLDT', src: '/src/assets/image/corporations img/pldt.png' },
+      { name: 'Smart', src: '/src/assets/image/corporations img/smart.png' },
+      { name: 'NGCP', src: '/src/assets/image/corporations img/ngcp.png' },
+      { name: 'San Miguel Corporation', src: '/src/assets/image/corporations img/san miguel.png' },
+    ],
+    engineering: [
+      { name: 'Egis', src: '/src/assets/image/ecl img/egis.png' },
+      { name: 'Hanjin Heavy Indrustries', src: '/src/assets/image/ecl img/hanjin.png' },
+      { name: 'ICTS', src: '/src/assets/image/ecl img/icts.png' },
+      { name: 'Negros Navigation', src: '/src/assets/image/ecl img/negros.png' },
+      { name: 'Holcim', src: '/src/assets/image/ecl img/holcim.png' },
+      { name: 'DHL', src: '/src/assets/image/ecl img/dhl.png' },
     ],
     finance: [
-      { name: 'Sun Life Financial', src: '/src/assets/image/sunlife.png' },
-      { name: 'HSBC', src: '/src/assets/image/hsbc.png' },
-      { name: 'Standard Chartered', src: '/src/assets/image/standard.png' },
-      { name: 'Security Bank', src: '/src/assets/image/securitybank.png' },
+      { name: 'Sun Life Financial', src: '/src/assets/image/finance img/sunlife.png' },
+      { name: 'HSBC', src: '/src/assets/image/finance img/hsbc.png' },
+      { name: 'Standard Chartered', src: '/src/assets/image/finance img/standard.png' },
+      { name: 'Security Bank', src: '/src/assets/image/finance img/security-bank.png' },
     ],
     health: [
-      { name: 'Unilab', src: '/src/assets/image/unilab.png' },
-      { name: 'Zuellig Pharma', src: '/src/assets/image/zuellig.png' },
-      { name: 'DOH - RITM', src: '/src/assets/image/ritm.png' },
-      { name: 'Oak Ridge National Laboratory', src: '/src/assets/image/oakridge.png' },
-      { name: 'Pacific Northwest National Lab', src: '/src/assets/image/pnnl.png' },
+      { name: 'Unilab', src: '/src/assets/image/h&r img/unilab.png' },
+      { name: 'Zuellig Pharma', src: '/src/assets/image/h&r img/zuellig.png' },
+      { name: 'DOH - RITM', src: '/src/assets/image/h&r img/doh.png' },
+      { name: 'Oak Ridge National Laboratory', src: '/src/assets/image/h&r img/oak-ridge.png' },
+      { name: 'Pacific Northwest National Lab', src: '/src/assets/image/h&r img/pacific-northwest.png' },
     ],
     properties: [
-      { name: 'PICC', src: '/src/assets/image/picc.png' },
-      { name: 'Solaire Resort Manila', src: '/src/assets/image/solaire.png' },
-      { name: 'Tata Consultancy Services', src: '/src/assets/image/tcs.png' },
-      { name: 'The Peninsula Manila', src: '/src/assets/image/peninsula.png' },
-      { name: 'APMC', src: '/src/assets/image/apmc.png' },
-      { name: 'FIVE | NEO', src: '/src/assets/image/fiveneo.png' },
+      { name: 'PICC', src: '/src/assets/image/properties img/picc.png' },
+      { name: 'Solaire Resort Manila', src: '/src/assets/image/properties img/solaire.png' },
+      { name: 'Tata Consultancy Services', src: '/src/assets/image/properties img/consultance.png' },
+      { name: 'The Peninsula Manila', src: '/src/assets/image/properties img/peninsula-manila.png' },
+      { name: 'APMC', src: '/src/assets/image/properties img/apmc.png' },
+      { name: 'FIVE | NEO', src: '/src/assets/image/properties img/five-neo.png' },
     ]
   };
 
   return (
     <div className="min-h-screen bg-[#f8fafc] py-20 px-6 md:px-12 font-sans selection:bg-blue-100 selection:text-blue-900 overflow-x-hidden">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto text-xl md:text-2xl text-slate-700  leading-relaxed">
         
         {/* Modern Brand Header */}
         <header className="text-center mb-32 relative">
@@ -139,16 +157,18 @@ const GuardAllLanding = () => {
           <h1 className="text-5xl md:text-7xl font-black text-[#2257a0] mb-6 drop-shadow-sm tracking-tight">
             Our Clients
           </h1>
-          <p className="text-slate-500 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
-            Delivering <span className="text-blue-600 font-semibold underline underline-offset-4 decoration-blue-200">uncompromising security excellence</span> to the nation's most critical institutions.
+          <p className="text-black text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
+           We trust Guard-All because they are an exclusive distributor of world-class products to ensure our company gets world-class security
           </p>
         </header>
 
         {/* Dynamic Slider Sections */}
         <ClientSection title="Agencies & Embassies" clients={sectors.agencies} />
-        <ClientSection title="Finance & Banking" clients={sectors.finance} />
+        <ClientSection title="Corporations" clients={sectors.corporations} />
+        <ClientSection title="Engineering, Construction & Logistics" clients={sectors.engineering} />
+        <ClientSection title="Finance" clients={sectors.finance} />
         <ClientSection title="Health & Research" clients={sectors.health} />
-        <ClientSection title="Premier Properties" clients={sectors.properties} />
+        <ClientSection title="Properties" clients={sectors.properties} />
 
         {/* Footer Branding */}
         <footer className="mt-32 pt-16 border-t border-slate-200 text-center">

@@ -5,7 +5,7 @@ import { FaPhone, FaEnvelope, FaFacebookF, FaLinkedinIn, FaMapMarkerAlt } from "
 const Footer = () => {
   return (
     <footer className="bg-white text-gray-800 border-t border-gray-200">
-      <div className="container mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="container mx-20 px-6 py-10 grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Logo & Description */}
         <div>
          <img src="/src/assets/image/logo.png" alt="Guard-All Logo" className="h-10 w-auto" />
@@ -17,7 +17,7 @@ const Footer = () => {
         {/* Company Links */}
         <div>
           <h3 className="text-blue-800 font-semibold font-poppins mb-4">Company</h3>
-          <ul className="space-y-2 text-sm">
+          <ul className="space-y-2 text-sm text-poppins">
             <li><a href="/" className="hover:text-blue-600">Home</a></li>
             <li><a href="/who-we-are" className="hover:text-blue-600">Who We Are</a></li>
             <li><a href="/products" className="hover:text-blue-600">Our Products</a></li>

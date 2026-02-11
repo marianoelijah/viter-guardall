@@ -98,7 +98,7 @@ const BannerSlider = () => {
                   className="absolute top-1/2 -right-4 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-lg border border-gray-100 hidden md:block"
                 >
                   <div className="flex text-blue-900 mb-1">★★★★★</div>
-                  <p className="text-sm italic font-medium">"By far best in the Philippines"</p>
+                  <p className="text-sm italic font-medium">"By far best in the Philippines and the lots of fun I've had working with them."</p>
                 </motion.div>
 
                 {/* Client Logos Card */}
