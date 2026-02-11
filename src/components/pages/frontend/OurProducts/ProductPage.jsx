@@ -7,61 +7,61 @@ const ProductPage = () => {
     {
       title: "Detection Systems",
       description: "Guard-All has been a trusted provider and installer of metal detection systems and X-Ray machines in various airports, banks, and office buildings. With our most advanced Detection Systems, you can precisely detect high-risk items and hidden weapons.",
-      img: "/images/detection-hero.jpg",
+      img: "/src/assets/image/autoclear-xray.png",
       brands: ["SURESCAN", "metrasens", "GILARDONI", "CEIA", "AUTOCLEAR"]
     },
     {
       title: "Fire Alarm",
       description: "Fire Alarm Systems are a major requirement for buildings today. To equip you with the latest, Guard-All provides smoke & fire detector alarms, beam detectors for open areas, and special devices for high-risk areas.",
-      img: "/src/assets/image/alarm.png",
+      img: "/src/assets/image/Rectangle-11-2.png",
       brands: ["Honeywell", "detnov"]
     },
     {
       title: "Forensic Examination",
       description: "To ensure the authenticity of your critical documents and help you detect evidence tampering, our partners in FOSTER + FREEMAN have scientific-grade VSC to identify document manipulation with unparalleled accuracy.",
-      img: "/images/forensic-hero.jpg",
+      img: "/src/assets/image/forensic.png",
       brands: ["foster+freeman"]
     },
     {
       title: "Guard Tour Systems",
       description: "Manage your security personnel and employees with Guard Tour Patrol Systems. It will help you track their live location, communicate two-way, and record their journey to ensure rounds are made safely.",
-      img: "/images/guard-tour-hero.jpg",
+      img: "/src/assets/image/guard.jpg",
       brands: ["EBS"]
     },
     {
       title: "Hotel Locking System",
       description: "Guard-All offers comprehensive locking systems that range from electronic to mechanical locks. Our hotel locking systems can also integrate with IDENTIV access control systems for enhanced security.",
-      img: "/images/hotel-lock-hero.jpg",
+      img: "/src/assets/image/hotel.jpg",
       brands: ["Onity", "orbita"]
     },
     {
-      title: "Intrusion/Burglary Alarm Systems",
+      title: "Intrusion / Burglary Alarm Systems",
       description: "These round-the-clock sensors are ideal to secure businesses. Guard-All can help design a system based on your need and connect it to our 24-7-365 Central Monitoring System for prompt response.",
-      img: "/images/intrusion-hero.jpg",
+      img: "/src/assets/image/intrusion.jpeg",
       brands: ["PARADOX"]
     },
     {
       title: "Parking Management / Parking Guidance System",
       description: "If you’re looking to expand your Vehicle Systems, we recommend our Parking Management Systems. Manage the vehicular flow in your properties with our systems which includes high-speed gate barriers, ticket-based or token-based entry/exit stations, and more.",
-      img: "/images/parking-management.jpg",
+      img: "/src/assets/image/parking.jpeg",
       brands: ["CASS"]
     },
     {
       title: "Quick Alert",
       description: "Aside from investing in security equipment, you need to ensure that your systems are connected to a monitoring station like Quick Alert. Quick Alert is a full service Central Monitoring Station devoted to surveil premises and monitor intrusion, fire, and panic alarms.",
-      img: "/images/quick-alert.jpg",
+      img: "/src/assets/image/quickalert.jpg",
       brands: ["QUICK ALERT SECURITY DEVICES INC."]
     },
     {
       title: "Vehicle Barrier System and Pedestrian Barriers",
       description: "With Vehicle Barrier System and Pedestrian Barriers, you can control the traffic, regulate vehicular access, and limit access to increase security of selected areas. At Guard-All, our vehicle systems include boom barriers for parking and tollways.",
-      img: "/images/vehicle-barriers.jpg",
+      img: "/src/assets/image/vehicle.png",
       brands: ["MAGNETIC", "LEDA", "FAAC", "DELTA"]
     },
     {
       title: "Vesda System (Aspirating Smoke Detection)",
       description: "To increase smoke detection in your buildings and office spaces, we highly recommend the VESDA System. It is an Aspirating Smoke Detector that can monitor smoke levels at various locations to signal early fire breakout by constantly testing the airflow.",
-      img: "/images/vesda-system.jpg",
+      img: "/src/assets/image/vesda.jpg",
       brands: ["VESDA by xtralis"]
     }
   ];

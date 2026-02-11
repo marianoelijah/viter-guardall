@@ -10,7 +10,7 @@ const clients = [
 ];
 
 const TrustedClients = () => {
-  // We duplicate the array to create the infinite loop effect
+  
   const duplicatedClients = [...clients, ...clients];
 
   return (

@@ -11,7 +11,7 @@ const ProductLanding = () => {
     {
       title: "Audio-Video Intercom & PA-BGM",
       description: "We highly recommended complementing your security systems with Audio-Video Intercom for ease of communication within your properties. Moreover, we also offer voice alarm systems for public addresses.",
-      img: "/src/assets/image/audio.png",
+      img: "/src/assets/image/intercom.jpg",
       brands: ["Honeywell", "FERMAX", "Commend"]
     },
     {

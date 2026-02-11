@@ -8,11 +8,11 @@ const Header = () => {
         
         {/* Logo */}
         <div className="flex items-center">
-          <img src="/src/assets/image/logo.png" alt="" className="h-10 w-auto" />
+          <img src="/src/assets/image/logo.png" alt="" className="h-10 w-[20rem]" />
         </div>
 
         {/* Navigation */}
-        <nav className="hidden md:flex items-center space-x-8 text-gray-700 text-medium font-poppins">
+        <nav className="hidden md:flex items-center space-x-8 text-gray-700 text-bold text-large font-poppins">
           <a href="/" className="text-blue-700 border-b-2 border-blue-700 pb-1">
             Home
           </a>
@@ -29,7 +29,7 @@ const Header = () => {
 
         {/* CTA Button */}
         <div className="hidden md:block">
-          <button className="bg-blue-800 text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-700 transition">
+          <button className="bg-blue-800 text-white text-poppins px-6 py-3 rounded-md font-semibold hover:bg-blue-700 transition">
             CONTACT US
           </button>
         </div>

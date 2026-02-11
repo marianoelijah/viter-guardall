@@ -1,54 +1,108 @@
-import React from 'react';
+import React, { useCallback } from 'react';
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-// Unified Client Card with premium hover states
+/**
+ * Premium Client Card Component
+ * Optimized for slider layout
+ */
 const ClientCard = ({ name, src }) => (
-  <div className="group relative flex flex-col items-center justify-center p-6 bg-white rounded-xl border border-slate-100 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/5 transition-all duration-500 transform hover:-translate-y-2">
-    <div className="w-full h-24 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-      <img 
-        src={src} 
-        alt={name} 
-        className="max-h-full max-w-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"
-      />
-    </div>
-    {/* Dynamic Name Label */}
-    <div className="absolute bottom-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-      <span className="text-[9px] font-bold tracking-widest text-blue-600 uppercase text-center px-2">
-        {name}
-      </span>
+  <div className="flex-[0_0_280px] min-w-0 pl-6 md:pl-10 group">
+    <div className="relative flex flex-col items-center justify-center p-8 bg-white rounded-2xl border border-slate-100 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 transform hover:-translate-y-2 h-48">
+      <div className="w-full h-24 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+        <img 
+          src={src} 
+          alt={name} 
+          className="max-h-full max-w-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"
+        />
+      </div>
+      {/* Label that slides up on hover */}
+      <div className="absolute bottom-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 text-center">
+        <span className="text-[10px] font-bold tracking-[0.2em] text-blue-600 uppercase">
+          {name}
+        </span>
+      </div>
     </div>
   </div>
 );
 
-// Modular Section Wrapper for consistent spacing
-const ClientSection = ({ title, clients, cols = "md:grid-cols-4" }) => (
-  <div className="mb-24 last:mb-0">
-    <div className="flex items-center gap-6 mb-12">
-      <div className="h-10 w-1 bg-[#2257a0] rounded-full"></div>
-      <h2 className="text-2xl md:text-3xl font-black text-slate-800 tracking-tight uppercase">
-        {title}
-      </h2>
-      <div className="h-[1px] flex-grow bg-gradient-to-r from-slate-200 to-transparent"></div>
-    </div>
+/**
+ * Slider Section Component
+ * Handles the Carousel logic and Navigation toggles
+ */
+const ClientSection = ({ title, clients }) => {
+  // Slow autoplay configuration for a "prestigious" feel
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { 
+      loop: true, 
+      align: 'start',
+      containScroll: 'trimSnaps'
+    },
+    [Autoplay({ delay: 5000, stopOnInteraction: false })]
+  );
 
-    <div className={`grid grid-cols-2 ${cols} gap-6 md:gap-8`}>
-      {clients.map((client, idx) => (
-        <ClientCard key={idx} {...client} />
-      ))}
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
+  return (
+    <div className="mb-24 last:mb-0">
+      {/* Header with Navigation Controls */}
+      <div className="flex items-center justify-between mb-10">
+        <div className="flex items-center gap-6 flex-grow">
+          <div className="h-10 w-1 bg-[#2257a0] rounded-full"></div>
+          <h2 className="text-xl md:text-2xl font-black text-slate-800 tracking-tight uppercase">
+            {title}
+          </h2>
+          <div className="h-[1px] flex-grow bg-gradient-to-r from-slate-200 to-transparent"></div>
+        </div>
+
+        <div className="flex gap-2 ml-4">
+          <button 
+            onClick={scrollPrev}
+            className="p-2.5 rounded-full border border-slate-200 text-slate-400 hover:bg-[#2257a0] hover:text-white hover:border-[#2257a0] transition-all duration-300 active:scale-90"
+            aria-label="Previous Slide"
+          >
+            <ChevronLeft size={18} />
+          </button>
+          <button 
+            onClick={scrollNext}
+            className="p-2.5 rounded-full border border-slate-200 text-slate-400 hover:bg-[#2257a0] hover:text-white hover:border-[#2257a0] transition-all duration-300 active:scale-90"
+            aria-label="Next Slide"
+          >
+            <ChevronRight size={18} />
+          </button>
+        </div>
+      </div>
+
+      {/* Viewport Area */}
+      <div className="overflow-hidden cursor-grab active:cursor-grabbing" ref={emblaRef}>
+        <div className="flex -ml-6 md:-ml-10">
+          {clients.map((client, idx) => (
+            <ClientCard key={idx} {...client} />
+          ))}
+        </div>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const GuardAllLanding = () => {
   const sectors = {
     agencies: [
-      { name: 'Embassy of Singapore', src: '/src/assets/image/Group-46.png' },
-      { name: 'British Embassy Manila', src: '/src/assets/image/Group-47.png' },
-      { name: 'CAA Philippines', src: '/src/assets/image/Group-48.png' },
-      { name: 'Australian Embassy', src: '/src/assets/image/Group-49.png' },
-      { name: 'Ambassade de France', src: '/src/assets/image/france.png' },
-      { name: 'Manila Int. Airport Authority', src: '/src/assets/image/mnl.png' },
-      { name: 'Presidential Security Group', src: '/src/assets/image/psg.png' },
-      { name: 'GSIS', src: '/src/assets/image/gsis.png' },
+      { img: '/src/assets/image/singapore.png', name: 'Embassy of Singapore' },
+      { name: 'British Embassy Manila', img: '/src/assets/image/british.png' },
+      { name: 'CAA Philippines', img: '/src/assets/image/caa.png' },
+      { name: 'Australian Embassy', img: '/src/assets/image/australian.png' },
+      { name: 'Ambassade de France', img: '/src/assets/image/ambassade.png' },
+      { name: 'Manila Int. Airport Authority', img: '/src/assets/image/manila.png' },
+      { name: 'Presidential Security Group', img: '/src/assets/image/presidential.png' },
+      { name: 'GSIS', img: '/src/assets/image/gsis.png' },
     ],
     finance: [
       { name: 'Sun Life Financial', src: '/src/assets/image/sunlife.png' },
@@ -74,33 +128,36 @@ const GuardAllLanding = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] py-24 px-6 md:px-12 font-sans overflow-hidden">
+    <div className="min-h-screen bg-[#f8fafc] py-20 px-6 md:px-12 font-sans selection:bg-blue-100 selection:text-blue-900 overflow-x-hidden">
       <div className="max-w-7xl mx-auto">
         
-        {/* Main Brand Header */}
+        {/* Modern Brand Header */}
         <header className="text-center mb-32 relative">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.02] text-[10rem] font-black select-none pointer-events-none whitespace-nowrap">
-            GUARD-ALL SECURITY
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.03] text-[6rem] md:text-[12rem] font-black select-none pointer-events-none whitespace-nowrap">
+            GUARD-ALL
           </div>
-          <h1 className="text-5xl md:text-7xl font-black text-[#2257a0] mb-6 drop-shadow-sm">
+          <h1 className="text-5xl md:text-7xl font-black text-[#2257a0] mb-6 drop-shadow-sm tracking-tight">
             Our Clients
           </h1>
-          <p className="text-slate-500 text-lg md:text-xl max-w-3xl mx-auto font-light leading-relaxed">
-            Leading the industry by providing exclusive, <span className="text-blue-600 font-bold">world-class security solutions</span> to the most prestigious organizations in the Philippines.
+          <p className="text-slate-500 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
+            Delivering <span className="text-blue-600 font-semibold underline underline-offset-4 decoration-blue-200">uncompromising security excellence</span> to the nation's most critical institutions.
           </p>
         </header>
 
-        {/* Client Sectors */}
+        {/* Dynamic Slider Sections */}
         <ClientSection title="Agencies & Embassies" clients={sectors.agencies} />
-        <ClientSection title="Finance" clients={sectors.finance} />
-        <ClientSection title="Health & Research" clients={sectors.health} cols="lg:grid-cols-5" />
-        <ClientSection title="Properties" clients={sectors.properties} cols="lg:grid-cols-3" />
+        <ClientSection title="Finance & Banking" clients={sectors.finance} />
+        <ClientSection title="Health & Research" clients={sectors.health} />
+        <ClientSection title="Premier Properties" clients={sectors.properties} />
 
-        {/* Simple Call to Action Footer */}
-        <footer className="mt-32 pt-12 border-t border-slate-200 text-center">
-          <p className="text-slate-400 text-sm tracking-widest uppercase">
-            Trusted by Excellence • Secure by Design
-          </p>
+        {/* Footer Branding */}
+        <footer className="mt-32 pt-16 border-t border-slate-200 text-center">
+          <div className="flex flex-col items-center gap-4">
+            <div className="w-12 h-[2px] bg-blue-600"></div>
+            <p className="text-slate-400 text-xs tracking-[0.4em] uppercase font-bold">
+              Trusted by Excellence • Secure by Design
+            </p>
+          </div>
         </footer>
       </div>
     </div>
