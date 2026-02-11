@@ -6,19 +6,38 @@ const ProductLanding = () => {
       title: "Access Control System",
       description: "In today’s world, Access Control remains as a fundamental security feature in various properties. With Access Control, you can increase your building or facility’s door security, manage the flow of visitors within your premises, and limit their access based on identification.",
       img: "/src/assets/image/access.jpg",
-      brands: ["Honeywell", "HIRSCH", "MAG", "uberGARD", "ALARM.COM"]
+      brands: ["Honeywell", "HIRSCH", "MAG", "uberGARD", "ALARM.COM"],
+      brandLogos: [
+        "/src/assets/image/products logo/HONEYWELL.png",
+        "/src/assets/image/products logo/HIRSCH-Small.png",
+        "/src/assets/image/products logo/MAG.png",
+        "/src/assets/image/products logo/UBER.png",
+        "/src/assets/image/products logo/Alarm.png"
+      ]
     },
     {
       title: "Audio-Video Intercom & PA-BGM",
       description: "We highly recommended complementing your security systems with Audio-Video Intercom for ease of communication within your properties. Moreover, we also offer voice alarm systems for public addresses.",
       img: "/src/assets/image/intercom.jpg",
-      brands: ["Honeywell", "FERMAX", "Commend"]
+      brands: ["Honeywell", "FERMAX", "Commend"],
+      brandLogos: [
+        "/src/assets/image/products logo/HONEYWELL.png",
+        "/src/assets/image/products logo/Fermax.png",
+        "/src/assets/image/products logo/Commend.png"
+      ]
     },
     {
       title: "CCTVs",
       description: "CCTVs serve as your ‘second eye’ in ensuring your properties are secured. It provides focused coverage, surveillance in areas or people, and record events. At Guard-All, we provide cost-effective CCTV Systems tailored to requirements.",
       img: "/src/assets/image/cctv.jpg",
-      brands: ["WEBGATE", "PELCO", "Honeywell", "HIKVISION", "Dahua", "ACTi"]
+      brands: ["WEBGATE", "PELCO", "Honeywell", "HIKVISION", "Dahua", "ACTi"],
+      brandLogos: [
+        "/src/assets/image/products logo/Webgate.png",
+        "/src/assets/image/products logo/Pelco.png",
+        "/src/assets/image/products logo/HONEYWELL.png",
+        "/src/assets/image/products logo/Hikvision.png",
+        "/src/assets/image/products logo/Acti.png"
+      ]
     }
   ];
 
@@ -59,14 +78,17 @@ const ProductLanding = () => {
 
               {/* Brand Section */}
               <div className="mt-auto border-t border-gray-100 pt-6">
-                <span className="text-orange-600 font-bold text-xs uppercase tracking-widest block mb-4">
+                <span className="text-[#f97316] font-bold text-lg uppercase tracking-widest block mb-4">
                   Click to view more:
                 </span>
-                <div className="flex flex-wrap gap-4 items-center opacity-80 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500">
-                  {cat.brands.map((brand, i) => (
-                    <span key={i} className="text-sm font-black text-gray-400 hover:text-blue-900 cursor-pointer uppercase tracking-tighter">
-                      {brand}
-                    </span>
+                <div className="flex flex-wrap gap-4 items-center transition-all duration-500">
+                  {cat.brandLogos.map((logo, i) => (
+                    <img 
+                      key={i} 
+                      src={logo} 
+                      alt={cat.brands[i]} 
+                      className="h-8 w-auto object-contains transition-all duration-500"
+                    />
                   ))}
                 </div>
               </div>

@@ -16,7 +16,7 @@ const TrustedClients = () => {
   return (
     <div className="bg-[#0a0a0a] py-16 overflow-hidden border-t border-white/5">
       <div className="container mx-auto px-4 mb-10 text-center">
-        <h2 className="text-white text-2xl md:text-3xl font-semibold font-poppins tracking-wide">
+        <h2 className="text-white text-3xl md:text-3xl font-semibold font-poppins tracking-wide">
           Our Trusted Clients
         </h2>
       </div>
@@ -34,7 +34,7 @@ const TrustedClients = () => {
           }}
           transition={{
             ease: "linear",
-            duration: 20, // Adjust speed here (lower is faster)
+            duration: 40, // Adjust speed here (lower is faster)
             repeat: Infinity,
           }}
         >

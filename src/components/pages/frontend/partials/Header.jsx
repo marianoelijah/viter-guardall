@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 
 const Header = () => {
@@ -30,7 +31,7 @@ const Header = () => {
         {/* CTA Button */}
         <div className="hidden md:block">
           <button className="bg-blue-800 text-white text-poppins px-6 py-3 rounded-md font-semibold hover:bg-blue-700 transition">
-            CONTACT US
+           <Link to="/contacts">CONTACT US</Link>
           </button>
         </div>
       </div>

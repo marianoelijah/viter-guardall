@@ -14,7 +14,7 @@ const ClientCard = ({ name, src }) => (
         <img 
           src={src} 
           alt={name} 
-          className="max-h-full max-w-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"
+          className="max-h-full max-w-full object-contain duration-700"
         />
       </div>
       {/* Label that slides up on hover */}
@@ -175,7 +175,7 @@ const GuardAllLanding = () => {
           <div className="flex flex-col items-center gap-4">
             <div className="w-12 h-[2px] bg-blue-600"></div>
             <p className="text-slate-400 text-xs tracking-[0.4em] uppercase font-bold">
-              Trusted by Excellence • Secure by Design
+              Trusted by Excellence • Secure by Mariano, Zhanne Elijah
             </p>
           </div>
         </footer>

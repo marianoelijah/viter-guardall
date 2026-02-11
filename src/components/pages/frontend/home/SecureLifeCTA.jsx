@@ -1,5 +1,5 @@
-
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const SecureLifeCTA = () => {
   return (
@@ -23,7 +23,7 @@ const SecureLifeCTA = () => {
           </p>
 
           <button className="bg-[#4dc3e766] hover:bg-blue-500 text-white text-lg font-bold py-4 px-10 rounded-full transition-all duration-300 shadow-xl border border-white/20 uppercase tracking-wide">
-            Contact Us Today
+            <Link to="/contacts">Contact Us Today</Link>
           </button>
         </div>
       </div>
