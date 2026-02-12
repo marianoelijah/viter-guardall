@@ -9,7 +9,7 @@ const Footer = () => {
         {/* Logo & Description */}
         <div>
          <img src="/src/assets/image/logo.png" alt="Guard-All Logo" className="h-10 w-auto" />
-          <p className="text-sm font-poppins mt-4">
+          <p className="text-xl font-poppins mt-4">
             Guard-All is a leading electronic security systems integrator in the Philippines, providing world-class, cost-effective solutions for commercial, industrial, governmental, and residential clients.
           </p>
         </div>
@@ -17,7 +17,7 @@ const Footer = () => {
         {/* Company Links */}
         <div>
           <h3 className="text-blue-800 font-semibold font-poppins mb-4">Company</h3>
-          <ul className="space-y-2 text-sm text-poppins">
+          <ul className="space-y-2 text-xl text-poppins">
             <li><a href="/" className="hover:text-blue-600">Home</a></li>
             <li><a href="/who-we-are" className="hover:text-blue-600">Who We Are</a></li>
             <li><a href="/products" className="hover:text-blue-600">Our Products</a></li>
@@ -29,7 +29,7 @@ const Footer = () => {
         {/* Contact Info */}
         <div>
           <h3 className="text-blue-800 font-semibold font-poppins mb-4">Contact Us</h3>
-          <ul className="space-y-2 text-sm">
+          <ul className="space-y-2 text-xl">
             <li className="flex items-center gap-2">
               <FaPhone /> <span>(02) 8817 4132</span>
             </li>
@@ -48,7 +48,7 @@ const Footer = () => {
         {/* Offices & Social */}
         <div>
           <h3 className="text-blue-800 font-semibold font-poppins mb-4">Offices</h3>
-          <ul className="space-y-2 text-sm">
+          <ul className="space-y-2 text-xl">
             <li className="flex items-start gap-2">
               <FaMapMarkerAlt className="mt-1" />
               <span>
@@ -71,7 +71,7 @@ const Footer = () => {
 
       {/* Copyright */}
       <div className="border-t border-gray-200 mt-6 py-4 text-center text-sm text-gray-500">
-        &copy; 2024 <a href="#" className="text-blue-800 hover:text-blue-600">Guard-All Security Systems Inc.</a> All Rights Reserved.
+        &copy; 2026 <a href="#" className="text-blue-800 hover:text-blue-600">Guard-All Security Systems Inc.</a> All Rights Reserved.
       </div>
     </footer>
   );

@@ -8,18 +8,22 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
  * Optimized for slider layout
  */
 const ClientCard = ({ name, src }) => (
-  <div className="flex-[0_0_280px] min-w-0 pl-6 md:pl-10 group">
-    <div className="relative flex flex-col items-center justify-center p-8 bg-white rounded-2xl border border-slate-100 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 transform hover:-translate-y-2 h-48">
-      <div className="w-full h-24 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+  // Increased base width (flex-[0_0_340px]) and spacing
+  <div className="flex-[0_0_340px] min-w-0 pl-8 md:pl-12 group">
+    <div className="relative flex flex-col items-center justify-center p-10 bg-white rounded-3xl border border-slate-100 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/15 transition-all duration-500 transform hover:-translate-y-3 h-64">
+      
+      {/* Increased logo container size (h-32) */}
+      <div className="w-full h-39 flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
         <img 
           src={src} 
           alt={name} 
-          className="max-h-full max-w-full object-contain duration-700"
+          className="max-h-full max-w-full object-contain filter grayscale-[0.2] group-hover:grayscale-0 duration-700"
         />
       </div>
-      {/* Label that slides up on hover */}
-      <div className="absolute bottom-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 text-center">
-        <span className="text-[10px] font-bold tracking-[0.2em] text-blue-600 uppercase">
+
+      {/* Label - adjusted bottom spacing */}
+      <div className="absolute bottom-6 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 text-center px-4">
+        <span className="text-[11px] font-extrabold tracking-[0.25em] text-blue-600 uppercase block leading-tight">
           {name}
         </span>
       </div>
@@ -82,12 +86,13 @@ const ClientSection = ({ title, clients }) => {
 
       {/* Viewport Area */}
       <div className="overflow-hidden cursor-grab active:cursor-grabbing" ref={emblaRef}>
-        <div className="flex -ml-6 md:-ml-10">
-          {clients.map((client, idx) => (
-            <ClientCard key={idx} {...client} />
-          ))}
-        </div>
-      </div>
+  {/* Matched the negative margin to the pl-8/pl-12 used in ClientCard */}
+  <div className="flex -ml-8 md:-ml-12">
+    {clients.map((client, idx) => (
+      <ClientCard key={idx} {...client} />
+    ))}
+  </div>
+</div>
     </div>
   );
 };

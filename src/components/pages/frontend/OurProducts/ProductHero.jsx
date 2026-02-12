@@ -51,7 +51,7 @@ const ProductHero = () => {
           <div className="h-px bg-white/30 w-full mb-8"></div>
 
           <button className="bg-white text-blue-900 hover:bg-gray-100 font-bold py-3 px-10 rounded-md transition-all uppercase tracking-wide">
-            Browse Products
+            Browse Products 
           </button>
         </div>
 

@@ -3,8 +3,8 @@ import { FaUser } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { HiOutlineUserCircle } from "react-icons/hi2";
 import { IoIosLogOut } from "react-icons/io";
-import { StoreContext } from "@/store/storeContext";
-import { setIsOpen, setIsShow } from "@/store/storeAction";
+import { StoreContext } from "../store/storeContext";
+import { setIsOpen, setIsShow } from "../store/storeAction";
 
 const Header = ({ avatar }) => {
   const { store, dispatch } = React.useContext(StoreContext);
