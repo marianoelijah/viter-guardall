@@ -7,6 +7,8 @@ import WhoWeArePage from "./components/pages/frontend/landing-page/WhoWeArePage"
 import OurClientsPage from "./components/pages/frontend/OurClients/OurClientsPage";
 // import Contacts from "./components/pages/frontend/contacts/Contacts";
 import OurContacts from "./components/pages/frontend/contacts/OurContacts";
+import HoneywellPage from "./components/pages/frontend/OurProducts/product extend/honeywell storage/HoneywellPage";
+
 // import OurContacts from "./components/pages/frontend/contacts/OurContacts";
 
 
@@ -24,6 +26,9 @@ const App = () => {
             <Route path="/our-products" element={<OurProductsPage />} />
             <Route path="/our-clients" element={<OurClientsPage />} />
             <Route path="/contacts" element={<OurContacts />} />
+
+
+            <Route path="products/honeywell" element={<HoneywellPage />} />
             
           </Routes>
         </Router>

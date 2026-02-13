@@ -23,7 +23,7 @@ const SecurityExperts = () => {
         <div className="flex flex-col lg:flex-row justify-between items-start gap-8 mb-16">
           <div className="lg:w-1/3">
             <div className="flex items-center gap-4 mb-4">
-              <h2 className="text-4xl font-bold text-blue-900 leading-tight">
+              <h2 className="text-4xl font-bold text-blue-900 text-oswald leading-tight">
                 Meet Our <br /> Security Experts
               </h2>
               <div className="bg-orange-500 p-2 rounded-full text-white shrink-0">
@@ -36,7 +36,7 @@ const SecurityExperts = () => {
           
           <div className="lg:w-2/3 border-l-4 border-orange-500 pl-6">
             <h3 className="text-xl font-bold text-blue-900 uppercase mb-2">Engineering Department</h3>
-            <p className="text-gray-600 text-lg leading-relaxed">
+            <p className="text-gray-600 text-xl leading-relaxed">
               Our Engineers are committed to deliver tailor-fit solutions for your security needs. 
               From basic integration to complex access control systems, we offer services 
               which anticipate the future needs of companies.

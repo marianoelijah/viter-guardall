@@ -8,8 +8,8 @@ const ProductPage = () => {
       description: "Guard-All has been a trusted provider and installer of metal detection systems and X-Ray machines in various airports, banks, and office buildings. With our most advanced Detection Systems, you can precisely detect high-risk items and hidden weapons.",
       img: "/src/assets/image/autoclear-xray.png",
       brands: [
-        { name: "SURESCAN", logo: "/src/assets/image/products logo/Surescan.png", path: "/products/surescan" },
-        { name: "metrasens", logo: "/src/assets/image/products logo/metrasens.png", path: "/products/metrasens" },
+        // { name: "SURESCAN", logo: "/src/assets/image/products logo/Surescan.png", path: "/products/surescan" },
+        // { name: "metrasens", logo: "/src/assets/image/products logo/metrasens.png", path: "/products/metrasens" },
         { name: "GILARDONI", logo: "/src/assets/image/products logo/Gilardoni.png", path: "/products/gilardoni" },
         { name: "CEIA", logo: "/src/assets/image/products logo/CEIA.png", path: "/products/ceia" },
         { name: "AUTOCLEAR", logo: "/src/assets/image/products logo/Auto-clear.png", path: "/products/autoclear" }

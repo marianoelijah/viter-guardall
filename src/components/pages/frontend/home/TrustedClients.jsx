@@ -16,7 +16,7 @@ const TrustedClients = () => {
   return (
     <div className="bg-[#0a0a0a] py-16 overflow-hidden border-t border-white/5">
       <div className="container mx-auto px-4 mb-10 text-center">
-        <h2 className="text-white text-3xl md:text-3xl font-semibold font-poppins tracking-wide">
+        <h2 className="text-white text-xl md:text-4xl font-black mb-6 drop-shadow-sm tracking-tigh">
           Our Trusted Clients
         </h2>
       </div>

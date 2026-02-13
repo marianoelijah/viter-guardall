@@ -45,7 +45,10 @@ const ProductLanding = () => {
       <div className="max-w-7xl mx-auto px-6">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-blue-900 mb-6">Our Products</h1>
+           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.03] text-[6rem] md:text-[12rem] font-black select-none pointer-events-none whitespace-nowrap">
+            GUARD-ALL
+          </div>
+          <h1 className="text-5xl md:text-7xl font-black text-[#2257a0] mb-6 drop-shadow-sm tracking-tigh">Our Products</h1>
           <p className="text-gray-600 max-w-4xl mx-auto text-xl leading-relaxed">
             With our 40-year expertise in the industry, Guard-All has partnered with the best security product manufacturers to be their “Exclusive” or “Authorized” distributors.
           </p>
