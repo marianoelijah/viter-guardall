@@ -81,12 +81,12 @@ const products = [
     description: "An easy-to-carry proximity card that utilizes RFID technology. It has a high contactless range and is designed to work with OmniProx™ readers.",
     image: "/src/assets/image/HONEYWELL IMG/OMNIPROX-ISO-CARD.jpg"
   },
-   {
+  {
     title: "OmniClass™ Credentials: Contactless Smart Card",
     description: "An easy-to-carry proximity card that utilizes RFID technology. It has a high contactless range and is designed to work with OmniProx™ readers.",
     image: "/src/assets/image/HONEYWELL IMG/OMNICLASS-CREDENTIALS.jpg"
   },
-   {
+  {
     title: "MF-01 Mifare Proximity Cards",
     description: "An easy-to-carry proximity card that utilizes RFID technology. It has a high contactless range and is designed to work with OmniProx™ readers.",
     image: "/src/assets/image/HONEYWELL IMG/MF-01.jpg"
@@ -94,24 +94,22 @@ const products = [
 ];
 
 const ProductCard = ({ title, description, image }) => (
-    
-
-  <div className="bg-white border border-gray-200 rounded shadow-sm hover:shadow-md transition-shadow duration-200 p-2 flex flex-col group-hover:scale-110">
-    {/* Image Container with inner padding/border to match image style */}
-    <div className="bg-white border border-gray-100 rounded p-4 mb-3 flex items-center justify-center h-48 overflow-hidden">
+  <div className="group bg-white border border-gray-200 rounded-xl p-5 flex flex-col h-full transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-2xl cursor-pointer">
+    {/* Enhanced Image Container */}
+    <div className="bg-gray-50 border border-gray-100 rounded-lg p-6 mb-5 flex items-center justify-center h-64 overflow-hidden">
       <img 
         src={image} 
         alt={title} 
-        className="max-h-full max-w-full object-contain mix-blend-multiply transition-transform duration-700 group-hover:scale-110" 
+        className="max-h-full max-w-full object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-110" 
       />
     </div>
     
     {/* Text Content */}
-    <div className="px-1 pb-2 flex-grow">
-      <h3 className="text-[#1a365d] font-bold text-xs uppercase mb-2 tracking-tight leading-[1.1rem]">
+    <div className="flex-grow">
+      <h3 className="text-[#1a365d] font-semibold text-sm uppercase mb-3 leading-tight tracking-wide min-h-[2.5rem]">
         {title}
       </h3>
-      <p className="text-gray-500 text-[11px] leading-relaxed line-clamp-4">
+      <p className="text-gray-600 text-sm leading-relaxed line-clamp-4">
         {description}
       </p>
     </div>
@@ -119,36 +117,33 @@ const ProductCard = ({ title, description, image }) => (
 );
 
 const Honeywell = () => {
-   
   return (
-    <div className='bg-white mx-auto font-poppins text-xl'> 
-      {/* Main Header */}
-      <div className="text-center py-10 md:px-10 lg:px-20 display-block text-xl">
-        <h1 className="text-2xl md:text-7xl font-black text-[#2257a0] mb-6 drop-shadow-sm tracking-tigh">
-             Access Control System - Honeywell
-        </h1>
-      </div>
+    <div className='bg-white min-h-screen font-poppins'> 
+      {/* Main Header - font-normal for a cleaner look */}
+      <header className="text-center py-16 px-6 md:px-10 lg:px-20">
+        <h2 className="text-lg md:text-5xl lg:text-5xl font-normal text-[#2257a0] mb-6 tracking-tight">
+          Access Control System - Honeywell
+        </h2>
+        <div className="h-1 w-24 bg-[#2257a0] mx-auto rounded-full opacity-20"></div>
+      </header>
        
-      <div className="bg-[#e9eff6] min-h-screen py-10 px-4 md:px-10 lg:px-20">
+      <div className="bg-[#e9eff6] py-16 px-4 md:px-10 lg:px-12">
         <div className="max-w-7xl mx-auto">
-
-  {/* Introductory Text */}
-
-          {/* The Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8 transition-transform duration-700 group-hover:scale-110">
+          {/* Grid Layout - Standardized gap and size */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((item, idx) => (
               <ProductCard
                 key={idx}
                 title={item.title}
                 description={item.description}
-                image={item.image} />
+                image={item.image} 
+              />
             ))}
           </div>
 
-          {/* Footer/Pagination Placeholder */}
-          <div className="mt-12 text-center text-gray-400 text-sm">
-            © {new Date().getFullYear()} Honeywell Access Solutions
-          </div>
+          <footer className="mt-20 text-center text-gray-500 text-sm tracking-widest uppercase border-t border-gray-300 pt-10">
+            © {new Date().getFullYear()} Honeywell Access Solutions | Secure Performance
+          </footer>
         </div>
       </div>
     </div>
