@@ -126,7 +126,7 @@ const ProductPage = () => {
                 <p className="text-[#f97316] hover:text-[#f97316]/20 font-bold text-xl uppercase tracking-[0.2em] mb-6">
                   CLICK TO VIEW MORE:
                 </p>
-                <div className="flex flex-wrap gap-6 items-center">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-8 items-center justify-items-center">
                   {cat.brands.map((brand, i) => (
                     <Link 
                       key={i} 
@@ -137,7 +137,7 @@ const ProductPage = () => {
                       <img 
                         src={brand.logo} 
                         alt={brand.name} 
-                        className="h-12 w-[10rem] object-contain transition-all duration-300"
+                        className="h-12 w-[12rem] object-contain transition-all duration-300"
                       />
                     </Link>
                   ))}

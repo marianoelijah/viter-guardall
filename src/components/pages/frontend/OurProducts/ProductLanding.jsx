@@ -35,7 +35,8 @@ const ProductLanding = () => {
         { name: "PELCO", logo: "/src/assets/image/products logo/Pelco.png", path: "/products/pelco" },
         { name: "Honeywell", logo: "/src/assets/image/products logo/HONEYWELL.png", path: "/products/honeywell" },
         { name: "HIKVISION", logo: "/src/assets/image/products logo/Hikvision.png", path: "/products/hikvision" },
-        { name: "ACTi", logo: "/src/assets/image/products logo/Acti.png", path: "/products/acti" }
+        { name: "ACTi", logo: "/src/assets/image/products logo/Acti.png", path: "/products/acti" },
+        { name: "DAHUA", logo: "/src/assets/image/AJHua.png", path: "/products/dahua" }
       ]
     }
   ];
@@ -78,28 +79,31 @@ const ProductLanding = () => {
                 {cat.description}
               </p>
 
-              {/* Brand Section */}
-              <div className="mt-auto border-t border-gray-100 pt-6">
-                <span className="text-[#f97316] hover:text-[#f97316]/20 font-bold text-xl uppercase tracking-widest block mb-4">
-                  CLICK TO VIEW MORE:
-                </span>
-                <div className="flex flex-wrap gap-5 items-center">
-                  {cat.brands.map((brand, i) => (
-                    <Link 
-                      key={i} 
-                      to={brand.path} 
-                      className="hover:scale-110 transition-transform duration-300 active:scale-95"
-                      title={`View ${brand.name} products`}
-                    >
-                      <img 
-                        src={brand.logo} 
-                        alt={brand.name} 
-                        className="h-12 w-[10rem] object-contain transition-all duration-300"
-                      />
-                    </Link>
-                  ))}
-                </div>
-              </div>
+             {/* Brand Section */}
+<div className="mt-auto border-t border-gray-100 pt-6">
+  <span className="text-[#f97316] font-bold text-xl uppercase tracking-widest block mb-6">
+    CLICK TO VIEW MORE:
+  </span>
+  
+  {/* Changed to a grid layout: 2 columns on mobile, 3 on larger screens */}
+  <div className="grid grid-cols-2 md:grid-cols-3 gap-8 items-center justify-items-center">
+    {cat.brands.map((brand, i) => (
+      <Link 
+        key={i} 
+        to={brand.path} 
+        className="w-full flex justify-center hover:scale-110 transition-transform duration-300 active:scale-95"
+        title={`View ${brand.name} products`}
+      >
+        <img 
+          src={brand.logo} 
+          alt={brand.name} 
+          /* Removed fixed width 'w-[10rem]' to let grid handle it, increased height slightly */
+          className="h-15 w-full max-w-[140px] object-contain transition-all duration-300 filter" 
+        />
+      </Link>
+    ))}
+  </div>
+</div>
             </div>
           ))}
         </div>
