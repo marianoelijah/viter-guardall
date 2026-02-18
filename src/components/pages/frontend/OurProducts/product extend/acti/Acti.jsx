@@ -23,7 +23,7 @@ const ActiProducts = [
   },
   {
     title: "Z49 4MP Zoom Bullet with D/N, Adaptive IR, Superior WDR, SLLS, 4.3x Lens",
-    description: "A bullet-style surveillance camera with Wide Dynamic Range and can trigger notifications/alarms to the user.  Product Description:Monitor an indoor or outdoor area with the Z49 4MP Network Bullet Camera from ",
+    description: "A bullet-style surveillance camera with Wide Dynamic Range and can trigger notifications/actis to the user.  Product Description:Monitor an indoor or outdoor area with the Z49 4MP Network Bullet Camera from ",
     image: "/src/assets/image/ACTI IMG/Zoom Bullet With DN.png"
   },
   {
@@ -61,7 +61,7 @@ const ProductCard = ({ title, description, image }) => (
       <h3 className="text-[#1a365d] font-bold text-sm uppercase mb-3 leading-tight group-hover:text-blue-600 transition-colors">
         {title}
       </h3>
-      <p className="text-gray-600 text-[15px] leading-relaxed line-clamp-4">
+      <p className="text-gray-600 text-xl leading-relaxed">
         {description}
       </p>
     </div>
@@ -73,20 +73,20 @@ const ProductCard = ({ title, description, image }) => (
   </div>
 );
 
-const Alarm = () => {
+const Acti = () => {
   return (
     <div className="bg-[#f8fafc] min-h-screen py-16 px-4 sm:px-8 lg:px-16">
       <div className="max-w-7xl mx-auto">
         <header className="text-center mb-16">
           {/* <span className="text-blue-600 font-bold uppercase tracking-widest text-sm">Hardware Collection</span> */}
-          <h2 className="text-lg md:text-5xl lg:text-5xl font-medium text-[#2257a0] mb-6 tracking-tight">
-            Access Control System - Alarm.com
+          <h2 className="text-lg md:text-5xl lg:text-5xl font-medium text-[#0d3874] mb-6 tracking-tight">
+            CCTVs - ACTi
           </h2>
           <div className="h-1 w-20 bg-blue-500 mx-auto rounded-full"></div>
         </header>
         
         {/* Improved Responsive Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {ActiProducts.map((p, idx) => (
             <ProductCard key={idx} {...p} />
           ))}
@@ -96,4 +96,4 @@ const Alarm = () => {
   );
 };
 
-export default Alarm;
+export default Acti;

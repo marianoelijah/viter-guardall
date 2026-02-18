@@ -119,7 +119,7 @@ const ProductCard = ({ title, description, image }) => (
       <h3 className="text-[#1a365d] font-semibold text-sm uppercase mb-3 leading-tight tracking-wide min-h-[2.5rem]">
         {title}
       </h3>
-      <p className="text-gray-600 text-sm leading-relaxed line-clamp-4">
+      <p className="text-gray-600 text-xl leading-relaxed">
         {description}
       </p>
     </div>
@@ -132,7 +132,7 @@ const Mag = () => {
       <div className="max-w-7xl mx-auto">
         <header className="text-center mb-16">
           {/* Heading with normal font weight */}
-          <h2 className="text-lg md:text-5xl lg:text-5xl font-medium text-[#2257a0] mb-6 tracking-tight">
+          <h2 className="text-lg md:text-5xl lg:text-5xl font-medium text-[#0d3874] mb-6 tracking-tight">
             Access Control System – MAG
           </h2>
           <div className="h-1 w-24 bg-[#2257a0] mx-auto rounded-full opacity-20"></div>

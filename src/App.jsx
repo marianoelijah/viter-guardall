@@ -24,6 +24,16 @@ import CeiaPage from "./components/pages/frontend/OurProducts/product extend/cei
 import AutoclearPage from "./components/pages/frontend/OurProducts/product extend/autoclear/AutoclearPage";
 import DetnovPage from "./components/pages/frontend/OurProducts/product extend/detnov/DetnovPage";
 import FosterPage from "./components/pages/frontend/OurProducts/product extend/foster/FosterPage";
+import EbsPage from "./components/pages/frontend/OurProducts/product extend/ebs/EbsPage";
+import OnityPage from "./components/pages/frontend/OurProducts/product extend/onity/OnityPage";
+import OrbitaPage from "./components/pages/frontend/OurProducts/product extend/orbita/OrbitaPage";
+import ParadoxPage from "./components/pages/frontend/OurProducts/product extend/paradox/ParadoxPage";
+import CassPage from "./components/pages/frontend/OurProducts/product extend/cass/CassPage";
+import MagneticPage from "./components/pages/frontend/OurProducts/product extend/magnetic/MagneticPage";
+import LedaPage from "./components/pages/frontend/OurProducts/product extend/leda/LedaPage";
+import FaacPage from "./components/pages/frontend/OurProducts/product extend/faac/FaacPage";
+import DeltaPage from "./components/pages/frontend/OurProducts/product extend/delta/DeltaPage";
+import VesdaPage from "./components/pages/frontend/OurProducts/product extend/vesda/VesdaPage";
 
 
 
@@ -44,7 +54,6 @@ const App = () => {
             <Route path="/our-products" element={<OurProductsPage />} />
             <Route path="/our-clients" element={<OurClientsPage />} />
             <Route path="/contacts" element={<OurContacts />} />
-
 
              {/* Product Brand Section */}
             {/* Access Control System */}
@@ -73,9 +82,30 @@ const App = () => {
              {/* Fire Alarm */}
             <Route path="/products/detnov" element={<DetnovPage />} />
 
-            {/* Forensic Examination */}
-            <Route path="/products/foster" element={<FosterPage />} />
-           
+             {/* Forensic Examination */}
+            <Route path="/products/foster-freeman" element={<FosterPage />} />
+
+             {/* Guard Tour Systems */}
+            <Route path="/products/ebs" element={<EbsPage />} />
+
+             {/* Hotel Locking Systems and Hotel Safes */}
+            <Route path="/products/onity" element={<OnityPage />} />
+            <Route path="/products/orbita" element={<OrbitaPage />} />
+
+              {/* Intrusion / Burglary Alarm Systems */}  
+            <Route path="/products/paradox" element={<ParadoxPage />} />
+
+            {/* Parking Management / Parking Guidance System */} 
+            <Route path="/products/cass" element={<CassPage />} />
+
+            {/* Vehicle Barrier System and Pedestrian Barriers */}
+            <Route path="/products/magnetic" element={<MagneticPage />} />
+            <Route path="/products/leda" element={<LedaPage />} />
+            <Route path="/products/faac" element={<FaacPage />} />
+            <Route path="/products/delta" element={<DeltaPage />} />
+
+            {/* Aspiring Smoke Detection */} 
+            <Route path="/products/vesda" element={<VesdaPage />} />
 
 
           </Routes>

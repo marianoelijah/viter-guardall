@@ -6,7 +6,7 @@ const Who = () => {
     <section className="bg-white pt-16">
       <div className="text-center px-6 h-full">
         {/* Section Title */}
-        <h1 className="text-5xl md:text-7xl font-black text-[#2257a0] mb-6 drop-shadow-sm tracking-tigh">Who We Are</h1>
+        <h1 className="text-5xl md:text-7xl text-[#2257a0] mb-6 drop-shadow-sm tracking-tigh">Who We Are</h1>
 
         {/* Mission & Vision Blue Bar */}
         <div className="bg-[#1e40af] text-white py-16 px-8 md:px-16 text-left width-full rounded-lg shadow-lg">

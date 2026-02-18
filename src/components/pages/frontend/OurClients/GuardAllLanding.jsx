@@ -151,7 +151,7 @@ const GuardAllLanding = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] py-20 px-6 md:px-12 font-sans selection:bg-blue-100 selection:text-blue-900 overflow-x-hidden">
+    <div className="min-h-screen bg-[#c6d3e0] py-20 px-6 md:px-12 font-sans selection:bg-blue-100 selection:text-blue-900 overflow-x-hidden">
       <div className="max-w-7xl mx-auto text-xl md:text-2xl text-slate-700  leading-relaxed">
         
         {/* Modern Brand Header */}
@@ -159,7 +159,7 @@ const GuardAllLanding = () => {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.03] text-[6rem] md:text-[12rem] font-black select-none pointer-events-none whitespace-nowrap">
             GUARD-ALL
           </div>
-          <h1 className="text-5xl md:text-7xl font-black text-[#2257a0] mb-6 drop-shadow-sm tracking-tight">
+          <h1 className="text-5xl md:text-7xl text-[#2257a0] mb-6 drop-shadow-sm tracking-tight">
             Our Clients
           </h1>
           <p className="text-gray-600 max-w-3xl mx-auto mb-12 text-xl leading-relaxed">
@@ -179,7 +179,7 @@ const GuardAllLanding = () => {
         <footer className="mt-32 pt-16 border-t border-slate-200 text-center">
           <div className="flex flex-col items-center gap-4">
             <div className="w-12 h-[2px] bg-blue-600"></div>
-            <p className="text-slate-400 text-xs tracking-[0.4em] uppercase font-bold">
+            <p className="text-black text-xs tracking-[0.4em] uppercase font-bold">
               Trusted by Excellence • Secure by Mariano, Zhanne Elijah
             </p>
           </div>

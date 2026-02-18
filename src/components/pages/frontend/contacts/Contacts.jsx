@@ -102,7 +102,7 @@ const Contacts = () => {
           {/* Blue Shadow Accent */}
           <div className="absolute inset-0 bg-[#0097b2] translate-x-4 translate-y-4 rounded-3xl -z-10"></div>
           
-          <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-slate-100">
+          <div className="bg-gray-300 p-8 md:p-12 rounded-3xl shadow-sm border border-slate-100">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="relative">
                 <input 

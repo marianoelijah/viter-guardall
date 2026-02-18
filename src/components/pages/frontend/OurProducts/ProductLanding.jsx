@@ -46,17 +46,19 @@ const ProductLanding = () => {
       <div className="max-w-7xl mx-auto px-6">
         {/* Header Section */}
         <div className="text-center mb-16">
-           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.03] text-[6rem] md:text-[12rem] font-black select-none pointer-events-none whitespace-nowrap">
+           {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.03] text-[6rem] md:text-[12rem] font-black select-none pointer-events-none whitespace-nowrap">
             GUARD-ALL
-          </div>
-          <h1 className="text-5xl md:text-7xl font-black text-[#2257a0] mb-6 drop-shadow-sm tracking-tigh">Our Products</h1>
+          </div> */}
+          <h1 className="text-4xl md:text-7xl text-[#2257a0] mb-6 drop-shadow-sm tracking-tigh">Our Products</h1>
           <p className="text-gray-600 max-w-4xl mx-auto text-xl leading-relaxed">
             With our 40-year expertise in the industry, Guard-All has partnered with the best security product manufacturers to be their “Exclusive” or “Authorized” distributors.
           </p>
         </div>
 
         {/* Product Category Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="product_wrapper max-w-7xl mx-auto bg-blue-100 rounded-3xl p-10">
+          <div className='product_grid'>
+             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {categories.map((cat, index) => (
             <div 
               key={index} 
@@ -80,33 +82,37 @@ const ProductLanding = () => {
               </p>
 
              {/* Brand Section */}
-<div className="mt-auto border-t border-gray-100 pt-6">
-  <span className="text-[#f97316] font-bold text-xl uppercase tracking-widest block mb-6">
-    CLICK TO VIEW MORE:
-  </span>
+            <div className="mt-auto border-t border-gray-100 pt-6">
+               <span className="text-[#f97316] font-bold text-xl uppercase tracking-widest block mb-6">
+                  CLICK TO VIEW MORE:
+               </span>
   
-  {/* Changed to a grid layout: 2 columns on mobile, 3 on larger screens */}
-  <div className="grid grid-cols-2 md:grid-cols-3 gap-8 items-center justify-items-center">
-    {cat.brands.map((brand, i) => (
-      <Link 
-        key={i} 
-        to={brand.path} 
-        className="w-full flex justify-center hover:scale-110 transition-transform duration-300 active:scale-95"
-        title={`View ${brand.name} products`}
-      >
-        <img 
-          src={brand.logo} 
-          alt={brand.name} 
-          /* Removed fixed width 'w-[10rem]' to let grid handle it, increased height slightly */
-          className="h-15 w-full max-w-[140px] object-contain transition-all duration-300 filter" 
-        />
-      </Link>
-    ))}
-  </div>
-</div>
+            {/* Changed to a grid layout: 2 columns on mobile, 3 on larger screens */}
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 items-center justify-items-center">
+                {cat.brands.map((brand, i) => (
+             <Link 
+               key={i} 
+               to={brand.path} 
+               className="w-full flex justify-center hover:scale-110 transition-transform duration-300 active:scale-95"
+               title={`View ${brand.name} products`}
+             >
+             <img 
+              src={brand.logo} 
+              alt={brand.name} 
+              /* Removed fixed width 'w-[10rem]' to let grid handle it, increased height slightly */
+              className="h-15 w-full max-w-[140px] object-contain transition-all duration-300 filter" 
+              />
+             </Link>
+             ))}
+           </div>
+          </div>
             </div>
           ))}
+          </div>
+          </div>
         </div>
+       
+
       </div>
     </section>
   );

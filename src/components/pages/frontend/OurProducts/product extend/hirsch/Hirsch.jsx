@@ -128,7 +128,7 @@ const ProductCard = ({ title, description, image }) => (
       <h3 className="text-[#1a365d] font-semibold text-sm uppercase mb-3 leading-tight tracking-wide min-h-[3rem]">
         {title}
       </h3>
-      <p className="text-gray-600 text-sm leading-relaxed line-clamp-4">
+      <p className="text-gray-600 text-xl leading-relaxed">
         {description}
       </p>
     </div>
@@ -142,7 +142,7 @@ const Hirsch = () => {
         
         {/* Page Header - Clean Normal Weight */}
         <header className="text-center mb-16 relative">
-          <h2 className="text-lg md:text-5xl lg:text-5xl font-medium text-[#2257a0] mb-6 tracking-tight">
+          <h2 className="text-lg md:text-5xl lg:text-5xl font-medium text-[#0d3874] mb-6 tracking-tight">
             Access Control System – Hirsch
           </h2>
           <div className="h-1 w-24 bg-[#2257a0] mx-auto rounded-full opacity-30"></div>

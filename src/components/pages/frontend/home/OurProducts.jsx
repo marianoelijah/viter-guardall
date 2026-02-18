@@ -25,7 +25,7 @@ const OurProducts = () => {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 text-center">
         {/* Header Section */}
-        <h2 className="text-4xl md:text-7xl font-black text-[#2257a0] mb-6 drop-shadow-sm tracking-tigh">Our Products</h2>
+        <h2 className="text-4xl md:text-7xl text-[#2257a0] mb-6 drop-shadow-sm tracking-tigh">Our Products</h2>
         <p className="text-gray-600 max-w-3xl mx-auto mb-12 text-xl leading-relaxed">
           Guard-All offers a comprehensive range of state-of-the-art electronic security products, 
           including fire alarm systems, CCTV, access control, and intruder alarms, tailored to meet 

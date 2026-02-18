@@ -98,7 +98,9 @@ const ProductPage = () => {
     <section className="py-20 bg-[#f4f7fa]">
       <div className="max-w-7xl mx-auto px-6">
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="product_wrapper max-w-7xl mx-auto bg-blue-100 rounded-3xl p-10">
+          <div className='product_grid'>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {allCategories.map((cat, index) => (
             <div 
               key={index} 
@@ -146,6 +148,10 @@ const ProductPage = () => {
             </div>
           ))}
         </div>
+          </div>
+        </div>
+        
+
       </div>
     </section>
   );

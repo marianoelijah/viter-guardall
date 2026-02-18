@@ -66,7 +66,7 @@ const ProductCard = ({ title, description, image }) => (
       <h3 className="text-[#1a365d] font-bold text-sm uppercase mb-3 leading-tight group-hover:text-blue-600 transition-colors">
         {title}
       </h3>
-      <p className="text-gray-600 text-[15px] leading-relaxed line-clamp-4">
+      <p className="text-gray-600 text-xl leading-relaxed">
         {description}
       </p>
     </div>
@@ -84,18 +84,19 @@ const Alarm = () => {
       <div className="max-w-7xl mx-auto">
         <header className="text-center mb-16">
           {/* <span className="text-blue-600 font-bold uppercase tracking-widest text-sm">Hardware Collection</span> */}
-          <h2 className="text-lg md:text-5xl lg:text-5xl font-medium text-[#2257a0] mb-6 tracking-tight">
+          <h2 className="text-lg md:text-5xl lg:text-5xl font-medium text-[#0d3874] mb-6 tracking-tight">
             Detection Systems - Gilardoni
           </h2>
           <div className="h-1 w-20 bg-blue-500 mx-auto rounded-full"></div>
         </header>
         
         {/* Improved Responsive Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {GilardoniProducts.map((p, idx) => (
             <ProductCard key={idx} {...p} />
           ))}
         </div>
+
       </div>
     </div>
   );
