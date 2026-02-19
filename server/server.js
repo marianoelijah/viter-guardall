@@ -1,24 +1,36 @@
 import express from "express";
 import cors from "cors";
 import db from "./config/db.js";
-import productRoutes from "./routes/productRoutes.js";
 
 
+
+// Mysql Database
+// config/db.js
+// const db = mysql.createPool({
+//   host: 'localhost',
+//   user: 'root',
+//   password: '',
+//   database: 'guard-all_db',
+//   port: 3306,
+//   waitForConnections: true,
+//   connectionLimit: 10,
+//   queueLimit: 0,
+// });
+
+// Initializes express app
 const app = express();
+
 
 // Middlewares
 app.use(cors());
 app.use(express.json());
 
 
-// Test Route
+// Test Route 
+// Root route to check if the server is running
 app.get("/", (req, res) => {
   res.send("Guard-All Backend Running");
 });
-
-
-// Product routes
-app.use("/api/products", productRoutes);
 
 
 // Get all products
@@ -35,7 +47,7 @@ app.get("/api/products", (req, res) => {
 
 
 
-
+// Start server
 app.listen(5000, () => {
   console.log("Server running on port 5000");
 });

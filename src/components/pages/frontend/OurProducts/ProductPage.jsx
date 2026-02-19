@@ -4,6 +4,42 @@ import { Link } from 'react-router-dom';
 const ProductPage = () => {
   const allCategories = [
     {
+      title: "Access Control System",
+      description: "In today’s world, Access Control remains as a fundamental security feature in various properties. With Access Control, you can increase your building or facility’s door security, manage the flow of visitors within your premises, and limit their access based on identification.",
+      img: "/src/assets/image/access.jpg",
+      // Map brand names to logos and URLs
+      brands: [
+        { name: "Honeywell", logo: "/src/assets/image/products logo/HONEYWELL.png", path: "/products/honeywell" },
+        { name: "HIRSCH", logo: "/src/assets/image/products logo/HIRSCH-Small.png", path: "/products/hirsch" },
+        { name: "MAG", logo: "/src/assets/image/products logo/MAG.png", path: "/products/mag" },
+        { name: "uberGARD", logo: "/src/assets/image/products logo/UBER.png", path: "/products/ubergard" },
+        { name: "ALARM.COM", logo: "/src/assets/image/products logo/Alarm.png", path: "/products/alarm-com" }
+      ]
+    },
+    {
+      title: "Audio-Video Intercom & PA-BGM",
+      description: "We highly recommended complementing your security systems with Audio-Video Intercom for ease of communication within your properties. Moreover, we also offer voice alarm systems for public addresses.",
+      img: "/src/assets/image/intercom.jpg",
+      brands: [
+        { name: "Honeywell", logo: "/src/assets/image/products logo/HONEYWELL.png", path: "/products/honeywell" },
+        { name: "FERMAX", logo: "/src/assets/image/products logo/Fermax.png", path: "/products/fermax" },
+        { name: "Commend", logo: "/src/assets/image/products logo/Commend.png", path: "/products/commend" }
+      ]
+    },
+    {
+      title: "CCTVs",
+      description: "CCTVs serve as your ‘second eye’ in ensuring your properties are secured. It provides focused coverage, surveillance in areas or people, and record events. At Guard-All, we provide cost-effective CCTV Systems tailored to requirements.",
+      img: "/src/assets/image/cctv.jpg",
+      brands: [
+        { name: "WEBGATE", logo: "/src/assets/image/products logo/Webgate.png", path: "/products/webgate" },
+        { name: "PELCO", logo: "/src/assets/image/products logo/Pelco.png", path: "/products/pelco" },
+        { name: "Honeywell", logo: "/src/assets/image/products logo/HONEYWELL.png", path: "/products/honeywell" },
+        { name: "HIKVISION", logo: "/src/assets/image/products logo/Hikvision.png", path: "/products/hikvision" },
+        { name: "ACTi", logo: "/src/assets/image/products logo/Acti.png", path: "/products/acti" },
+        { name: "DAHUA", logo: "/src/assets/image/AJHua.png", path: "/products/dahua" }
+      ]
+    },
+    {
       title: "Detection Systems",
       description: "Guard-All has been a trusted provider and installer of metal detection systems and X-Ray machines in various airports, banks, and office buildings. With our most advanced Detection Systems, you can precisely detect high-risk items and hidden weapons.",
       img: "/src/assets/image/autoclear-xray.png",
@@ -97,7 +133,18 @@ const ProductPage = () => {
   return (
     <section className="py-20 bg-[#f4f7fa]">
       <div className="max-w-7xl mx-auto px-6">
-        
+        {/* Header Section */}
+        <div className="text-center mb-16">
+           {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.03] text-[6rem] md:text-[12rem] font-black select-none pointer-events-none whitespace-nowrap">
+            GUARD-ALL
+          </div> */}
+          <h1 className="text-4xl md:text-7xl text-[#2257a0] mb-6 drop-shadow-sm tracking-tigh">Our Products</h1>
+          <p className="text-gray-600 max-w-4xl mx-auto text-xl leading-relaxed">
+            With our 40-year expertise in the industry, Guard-All has partnered with the best security product manufacturers to be their “Exclusive” or “Authorized” distributors.
+          </p>
+        </div>
+
+        {/* Product Category Grid */}
         <div className="product_wrapper max-w-7xl mx-auto bg-blue-100 rounded-3xl p-10">
           <div className='product_grid'>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -123,11 +170,13 @@ const ProductPage = () => {
                 {cat.description}
               </p>
 
-              {/* Clickable Brands */}
+              {/* Clickable Brands Section */}
               <div className="mt-auto border-t border-gray-100 pt-6">
                 <p className="text-[#f97316] hover:text-[#f97316]/20 font-bold text-xl uppercase tracking-[0.2em] mb-6">
                   CLICK TO VIEW MORE:
                 </p>
+
+                {/* Changed to a grid layout: 2 columns on mobile, 3 on larger screens */}
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-8 items-center justify-items-center">
                   {cat.brands.map((brand, i) => (
                     <Link 
@@ -139,7 +188,8 @@ const ProductPage = () => {
                       <img 
                         src={brand.logo} 
                         alt={brand.name} 
-                        className="h-12 w-[12rem] object-contain transition-all duration-300"
+                        /* Removed fixed width 'w-[10rem]' to let grid handle it, increased height slightly */
+                        className="h-10 w-[15rem] object-contain transition-all duration-300"
                       />
                     </Link>
                   ))}

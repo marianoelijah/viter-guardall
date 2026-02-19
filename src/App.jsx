@@ -34,6 +34,7 @@ import LedaPage from "./components/pages/frontend/OurProducts/product extend/led
 import FaacPage from "./components/pages/frontend/OurProducts/product extend/faac/FaacPage";
 import DeltaPage from "./components/pages/frontend/OurProducts/product extend/delta/DeltaPage";
 import VesdaPage from "./components/pages/frontend/OurProducts/product extend/vesda/VesdaPage";
+import QuickPage from "./components/pages/frontend/OurProducts/product extend/quickalert/QuickPage";
 
 
 
@@ -106,6 +107,9 @@ const App = () => {
 
             {/* Aspiring Smoke Detection */} 
             <Route path="/products/vesda" element={<VesdaPage />} />
+
+            {/* Quickalert */} 
+            <Route path="/products/quick-alert" element={<QuickPage />} />
 
 
           </Routes>
