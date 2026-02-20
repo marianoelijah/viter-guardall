@@ -9,13 +9,6 @@ export const db = await mysql.createConnection({
   database: process.env.DB_NAME || "guard-all_db",
 });
 
-const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "guard-all_db",
-});
-
 db.connect((err) => {
   if (err) {
     console.error("❌ Database connection failed:", err);

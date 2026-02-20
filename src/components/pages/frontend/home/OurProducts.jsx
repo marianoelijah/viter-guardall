@@ -10,15 +10,15 @@ import 'swiper/css/navigation';
 
 const OurProducts = () => {
   const products = [
-    { title: "Quick Alert", img: "/src/assets/image/quickalert.jpg" },
-    { title: "Vehicle Barrier System and Pedestrian Barriers", img: "/src/assets/image/vehicle.png" },
-    { title: "Vesda System (Aspirating Smoke Detection)", img: "/src/assets/image/vesda.jpg" },
-    { title: "Access Control System", img: "/src/assets/image/access.jpg" },
-    { title: "Forensic Examination", img: "/src/assets/image/forensic.png" },
-    { title: "Guard Tour Systems", img: "/src/assets/image/guard.jpg" },
-    { title: "Hotel Locking", img: "/src/assets/image/hotel.jpg" },
-    { title: "Intrusion /Burglary Alarm Systems", img: "/src/assets/image/intrusion.jpeg" },
-    { title: "Parking Management / Parking Guiding System", img: "/src/assets/image/parking.jpeg" },
+    { title: "Quick Alert", img: "/src/assets/image/Our Products/quickalert.jpg" },
+    { title: "Vehicle Barrier System and Pedestrian Barriers", img: "/src/assets/image/Our Products/vehicle.png" },
+    { title: "Vesda System (Aspirating Smoke Detection)", img: "/src/assets/image/Our Products/vesda.jpg" },
+    { title: "Access Control System", img: "/src/assets/image/Our Products/access.jpg" },
+    { title: "Forensic Examination", img: "/src/assets/image/Our Products/forensic.png" },
+    { title: "Guard Tour Systems", img: "/src/assets/image/Our Products/guard.jpg" },
+    { title: "Hotel Locking", img: "/src/assets/image/Our Products/hotel.jpg" },
+    { title: "Intrusion /Burglary Alarm Systems", img: "/src/assets/image/Our Products/intrusion.jpeg" },
+    { title: "Parking Management / Parking Guiding System", img: "/src/assets/image/Our Products/parking.jpeg" },
   ];
 
   return (

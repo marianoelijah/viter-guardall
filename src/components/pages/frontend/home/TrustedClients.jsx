@@ -2,11 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const clients = [
-  { name: 'Smart', logo: '/src/assets/image/Logo2-1-2.png' },
-  { name: 'Decathlon', logo: '/src/assets/image/Logo4-1-1.png' },
-  { name: 'CAA', logo: '/src/assets/image/Logo3-1-1.png' },
-  { name: 'Egis', logo: '/src/assets/image/Logo1-1.png' },
-  { name: 'PLDT', logo: '/src/assets/image/Logo5-1-2.png' },
+  { name: 'Smart', logo: '/src/assets/image/Homepage/Trusted Clients/Logo2-1-2.png' },
+  { name: 'Decathlon', logo: '/src/assets/image/Homepage/Trusted Clients/Logo4-1-1.png' },
+  { name: 'CAA', logo: '/src/assets/image/Homepage/Trusted Clients/Logo3-1-1.png' },
+  { name: 'Egis', logo: '/src/assets/image/Homepage/Trusted Clients/Logo1-1.png' },
+  { name: 'PLDT', logo: '/src/assets/image/Homepage/Trusted Clients/Logo5-1-2.png' },
 ];
 
 const TrustedClients = () => {

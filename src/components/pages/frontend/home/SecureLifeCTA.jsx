@@ -8,7 +8,7 @@ const SecureLifeCTA = () => {
         className="max-w-7xl mx-auto rounded-2xl overflow-hidden relative min-h-[400px] flex items-center justify-center text-center"
         style={{
           // Replace with your actual image path
-          backgroundImage: `linear-gradient(rgba(30, 64, 175, 0.8), rgba(30, 64, 175, 0.8)), url('/src/assets/image/secure.jpg')`,
+          backgroundImage: `linear-gradient(rgba(30, 64, 175, 0.8), rgba(30, 64, 175, 0.8)), url('/src/assets/image/Home/secure.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}

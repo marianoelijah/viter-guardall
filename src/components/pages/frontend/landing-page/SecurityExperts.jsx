@@ -2,17 +2,17 @@ import React from 'react';
 
 const SecurityExperts = () => {
   const experts = [
-    { name: "Marlon V. Ramos", position: "Engineering Manager", img: "/src/assets/image/Marlon.png" },
-    { name: "Prince John Lizardo", position: "Service Department Manager", img: "/src/assets/image/Prince.png" },
-    { name: "Ramir S. Aguilar", position: "MIS/IT Department Manager", img: "/src/assets/image/Ramir.png" },
-    { name: "Benedick Santiago", position: "Alarm Department Manager", img: "/src/assets/image/Benedick.png" },
-    { name: "Veronica T. Reyes", position: "Asset Protection Manager", img: "/src/assets/image/Veronica.png" },
-    { name: "Liza E. Cabral", position: "HR Officer/Collection Officer", img: "/src/assets/image/Liza.png" },
-    { name: "Norman R. Pacia", position: "Warehouse Officer", img: "/src/assets/image/Norman.png" },
-    { name: "Rosendel T. Siason", position: "Purchasing Officer", img: "/src/assets/image/Rosendel.png" },
-    { name: "Marife P. Bufete T. Reyes", position: "Logistic Supervisor", img: "/src/assets/image/Marife.png" },
-    { name: "Marie R. Cleofas", position: "Import Supervisor", img: "/src/assets/image/Marie.png" },
-    { name: "Jane D. Naval", position: "Sales and Marketing Associate", img: "/src/assets/image/Jane.png" },
+    { name: "Marlon V. Ramos", position: "Engineering Manager", img: "/src/assets/image/Who Page/Security Experts/Marlon.png" },
+    { name: "Prince John Lizardo", position: "Service Department Manager", img: "/src/assets/image/Who Page/Security Experts/Prince.png" },
+    { name: "Ramir S. Aguilar", position: "MIS/IT Department Manager", img: "/src/assets/image/Who Page/Security Experts/Ramir.png" },
+    { name: "Benedick Santiago", position: "Alarm Department Manager", img: "/src/assets/image/Who Page/Security Experts/Benedick.png" },
+    { name: "Veronica T. Reyes", position: "Asset Protection Manager", img: "/src/assets/image/Who Page/Security Experts/Veronica.png" },
+    { name: "Liza E. Cabral", position: "HR Officer/Collection Officer", img: "/src/assets/image/Who Page/Security Experts/Liza.png" },
+    { name: "Norman R. Pacia", position: "Warehouse Officer", img: "/src/assets/image/Who Page/Security Experts/Norman.png" },
+    { name: "Rosendel T. Siason", position: "Purchasing Officer", img: "/src/assets/image/Who Page/Security Experts/Rosendel.png" },
+    { name: "Marife P. Bufete T. Reyes", position: "Logistic Supervisor", img: "/src/assets/image/Who Page/Security Experts/Marife.png" },
+    { name: "Marie R. Cleofas", position: "Import Supervisor", img: "/src/assets/image/Who Page/Security Experts/Marie.png" },
+    { name: "Jane D. Naval", position: "Sales and Marketing Associate", img: "/src/assets/image/Who Page/Security Experts/Jane.png" },
   ];
 
   return (

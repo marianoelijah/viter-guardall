@@ -6,21 +6,21 @@ const slides = [
     id: 1,
     title: "Protecting Lives, Securing Properties.",
     cta: "LEARN MORE",
-    image: "/src/assets/image/Group-46.png", 
+    image: "/src/assets/image/Homepage/Group-46.png", 
     hasBadge: true,
   },
   {
     id: 2,
     title: "Ready to Level Up Your Security?",
     cta: "CONTACT US",
-    image: "/src/assets/image/Group-52.png",
+    image: "/src/assets/image/Homepage/Group-52.png",
     hasBadge: false
   },
   {
     id: 3,
     title: "Your Security Needs, All in One Place",
     cta: "BROWSE PRODUCTS",
-    image: "/src/assets/image/Group-53.png",
+    image: "/src/assets/image/Homepage/Group-53.png",
     hasBadge: false
   }
 ];

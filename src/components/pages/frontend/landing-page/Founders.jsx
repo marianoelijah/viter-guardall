@@ -5,12 +5,12 @@ const Founders = () => {
     {
       name: "Derek A. Ramsay",
       position: "General Manager",
-      img: "/src/assets/image/derek.png"
+      img: "/src/assets/image/Who Page/Founders/derek.png"
     },
     {
       name: "Remedios P. Ramsay",
       position: "President",
-      img: "/src/assets/image/remedios.png"
+      img: "/src/assets/image/Who Page/Founders/remedios.png"
     }
   ];
 

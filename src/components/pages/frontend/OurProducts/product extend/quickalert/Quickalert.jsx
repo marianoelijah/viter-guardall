@@ -79,20 +79,20 @@ const otherServices = [
                       title="Central Monitoring Station" 
                       image="/src/assets/image/QUICK IMG/central.jpg"
                       desc="We ensure your safety and security via surveillance 24/7/365."
-                      className="h-60 w-full object-cover rounded-lg shadow-md" 
+                      className="h-full w-full object-cover rounded-lg shadow-md" 
                     />
 
                     <ServiceCard 
                       title="Lifeline Ambulance" 
                       image="/src/assets/image/QUICK IMG/ambulance.jpg"
                       desc="Dedicated to providing state-of-the-art emergency medical services."
-                      className="h-60 w-full object-cover rounded-lg shadow-md"
+                      className="h-full w-full object-cover rounded-lg shadow-md"
                     />
                     <ServiceCard 
                       title="CMS Remote Video Monitoring" 
-                      image="/src/assets/image/QUICK IMG/ambulance.jpg"
+                      image="/src/assets/image/QUICK IMG/cms_remote.jpg"
                       desc="Dedicated to providing state-of-the-art emergency medical services."
-                      className="h-60 w-full object-cover rounded-lg shadow-md"
+                      className="h-full w-full object-cover rounded-lg shadow-md"
                     />
                   </section>
               </div>

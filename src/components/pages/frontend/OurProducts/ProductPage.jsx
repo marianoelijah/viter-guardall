@@ -6,7 +6,7 @@ const ProductPage = () => {
     {
       title: "Access Control System",
       description: "In today’s world, Access Control remains as a fundamental security feature in various properties. With Access Control, you can increase your building or facility’s door security, manage the flow of visitors within your premises, and limit their access based on identification.",
-      img: "/src/assets/image/access.jpg",
+      img: "/src/assets/image/Our Products/access.jpg",
       // Map brand names to logos and URLs
       brands: [
         { name: "Honeywell", logo: "/src/assets/image/products logo/HONEYWELL.png", path: "/products/honeywell" },
@@ -19,7 +19,7 @@ const ProductPage = () => {
     {
       title: "Audio-Video Intercom & PA-BGM",
       description: "We highly recommended complementing your security systems with Audio-Video Intercom for ease of communication within your properties. Moreover, we also offer voice alarm systems for public addresses.",
-      img: "/src/assets/image/intercom.jpg",
+      img: "/src/assets/image/Our Products/intercom.jpg",
       brands: [
         { name: "Honeywell", logo: "/src/assets/image/products logo/HONEYWELL.png", path: "/products/honeywell" },
         { name: "FERMAX", logo: "/src/assets/image/products logo/Fermax.png", path: "/products/fermax" },
@@ -29,7 +29,7 @@ const ProductPage = () => {
     {
       title: "CCTVs",
       description: "CCTVs serve as your ‘second eye’ in ensuring your properties are secured. It provides focused coverage, surveillance in areas or people, and record events. At Guard-All, we provide cost-effective CCTV Systems tailored to requirements.",
-      img: "/src/assets/image/cctv.jpg",
+      img: "/src/assets/image/Our Products/cctv.jpg",
       brands: [
         { name: "WEBGATE", logo: "/src/assets/image/products logo/Webgate.png", path: "/products/webgate" },
         { name: "PELCO", logo: "/src/assets/image/products logo/Pelco.png", path: "/products/pelco" },
@@ -42,7 +42,7 @@ const ProductPage = () => {
     {
       title: "Detection Systems",
       description: "Guard-All has been a trusted provider and installer of metal detection systems and X-Ray machines in various airports, banks, and office buildings. With our most advanced Detection Systems, you can precisely detect high-risk items and hidden weapons.",
-      img: "/src/assets/image/autoclear-xray.png",
+      img: "/src/assets/image/Our Products/autoclear-xray.png",
       brands: [
         // { name: "SURESCAN", logo: "/src/assets/image/products logo/Surescan.png", path: "/products/surescan" },
         // { name: "metrasens", logo: "/src/assets/image/products logo/metrasens.png", path: "/products/metrasens" },
@@ -54,7 +54,7 @@ const ProductPage = () => {
     {
       title: "Fire Alarm",
       description: "Fire Alarm Systems are a major requirement for buildings today. To equip you with the latest, Guard-All provides smoke & fire detector alarms, beam detectors for open areas, and special devices for high-risk areas.",
-      img: "/src/assets/image/Rectangle-11-2.png",
+      img: "/src/assets/image/Our Products/Rectangle-11-2.png",
       brands: [
         { name: "Honeywell", logo: "/src/assets/image/products logo/HONEYWELL.png", path: "/products/honeywell" },
         { name: "detnov", logo: "/src/assets/image/products logo/Detnov.png", path: "/products/detnov" }
@@ -63,7 +63,7 @@ const ProductPage = () => {
     {
       title: "Forensic Examination",
       description: "To ensure the authenticity of your critical documents and help you detect evidence tampering, our partners in FOSTER + FREEMAN have scientific-grade VSC to identify document manipulation with unparalleled accuracy.",
-      img: "/src/assets/image/forensic.png",
+      img: "/src/assets/image/Our Products/forensic.png",
       brands: [
         { name: "foster+freeman", logo: "/src/assets/image/products logo/FosterFreeman.png", path: "/products/foster-freeman" }
       ]
@@ -71,7 +71,7 @@ const ProductPage = () => {
     {
       title: "Guard Tour Systems",
       description: "Manage your security personnel and employees with Guard Tour Patrol Systems. It will help you track their live location, communicate two-way, and record their journey to ensure rounds are made safely.",
-      img: "/src/assets/image/guard.jpg",
+      img: "/src/assets/image/Our Products/guard.jpg",
       brands: [
         { name: "EBS", logo: "/src/assets/image/products logo/EBS.png", path: "/products/ebs" }
       ]
@@ -79,7 +79,7 @@ const ProductPage = () => {
     {
       title: "Hotel Locking System",
       description: "Guard-All offers comprehensive locking systems that range from electronic to mechanical locks. Our hotel locking systems can also integrate with IDENTIV access control systems for enhanced security.",
-      img: "/src/assets/image/hotel.jpg",
+      img: "/src/assets/image/Our Products/hotel.jpg",
       brands: [
         { name: "Onity", logo: "/src/assets/image/products logo/Onity.png", path: "/products/onity" },
         { name: "orbita", logo: "/src/assets/image/products logo/orbita.png", path: "/products/orbita" }
@@ -88,7 +88,7 @@ const ProductPage = () => {
     {
       title: "Intrusion / Burglary Alarm Systems",
       description: "These round-the-clock sensors are ideal to secure businesses. Guard-All can help design a system based on your need and connect it to our 24-7-365 Central Monitoring System for prompt response.",
-      img: "/src/assets/image/intrusion.jpeg",
+      img: "/src/assets/image/Our Products/intrusion.jpeg",
       brands: [
         { name: "PARADOX", logo: "/src/assets/image/products logo/paradox.png", path: "/products/paradox" }
       ]
@@ -96,7 +96,7 @@ const ProductPage = () => {
     {
       title: "Parking Management / Parking Guidance System",
       description: "If you’re looking to expand your Vehicle Systems, we recommend our Parking Management Systems. Manage the vehicular flow in your properties with our systems which includes high-speed gate barriers, ticket-based or token-based entry/exit stations, and more.",
-      img: "/src/assets/image/parking.jpeg",
+      img: "/src/assets/image/Our Products/parking.jpeg",
       brands: [
         { name: "CASS", logo: "/src/assets/image/products logo/CASS.png", path: "/products/cass" }
       ]
@@ -104,7 +104,7 @@ const ProductPage = () => {
     {
       title: "Quick Alert",
       description: "Aside from investing in security equipment, you need to ensure that your systems are connected to a monitoring station like Quick Alert. Quick Alert is a full service Central Monitoring Station devoted to surveil premises and monitor intrusion, fire, and panic alarms.",
-      img: "/src/assets/image/quickalert.jpg",
+      img: "/src/assets/image/Our Products/quickalert.jpg",
       brands: [
         { name: "QUICK ALERT", logo: "/src/assets/image/products logo/Quick-Alert.png", path: "/products/quick-alert" }
       ]
@@ -112,7 +112,7 @@ const ProductPage = () => {
     {
       title: "Vehicle Barrier System and Pedestrian Barriers",
       description: "With Vehicle Barrier System and Pedestrian Barriers, you can control the traffic, regulate vehicular access, and limit access to increase security of selected areas. At Guard-All, our vehicle systems include boom barriers for parking and tollways.",
-      img: "/src/assets/image/vehicle.png",
+      img: "/src/assets/image/Our Products/vehicle.png",
       brands: [
         { name: "MAGNETIC", logo: "/src/assets/image/products logo/Magnetic.png", path: "/products/magnetic" },
         { name: "LEDA", logo: "/src/assets/image/products logo/Leda.png", path: "/products/leda" },
@@ -123,7 +123,7 @@ const ProductPage = () => {
     {
       title: "Vesda System (Aspirating Smoke Detection)",
       description: "To increase smoke detection in your buildings and office spaces, we highly recommend the VESDA System. It is an Aspirating Smoke Detector that can monitor smoke levels at various locations to signal early fire breakout by constantly testing the airflow.",
-      img: "/src/assets/image/vesda.jpg",
+      img: "/src/assets/image/Our Products/vesda.jpg",
       brands: [
         { name: "VESDA by xtralis", logo: "/src/assets/image/products logo/vesda-1.png", path: "/products/vesda" }
       ]

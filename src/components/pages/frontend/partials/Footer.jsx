@@ -10,7 +10,7 @@ const Footer = () => {
           
           {/* Logo & Description */}
           <div className="flex flex-col space-y-4">
-            <img src="/src/assets/image/logo.png" alt="Guard-All Logo" className="h-10 w-fit" />
+            <img src="/src/assets/image/Client Logo/logo.png" alt="Guard-All Logo" className="h-10 w-fit" />
             <p className="text-gray-600 leading-relaxed text-base">
               Guard-All is a leading electronic security systems integrator in the Philippines, 
               providing world-class, cost-effective solutions for commercial and residential clients.

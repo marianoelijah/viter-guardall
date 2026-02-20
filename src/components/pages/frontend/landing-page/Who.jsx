@@ -15,7 +15,7 @@ const Who = () => {
              {/* Team Image Container */}
           <div className="w-full rounded-t-lg overflow-hidden shadow-lg">
           <img 
-            src="/src/assets/image/Who.jpg" 
+            src="/src/assets/image/Who Page/Who.jpg" 
             alt="Guard-All Team" 
             className="w-full h-auto object-cover"
           />
