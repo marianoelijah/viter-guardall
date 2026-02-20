@@ -3,7 +3,6 @@ import { Phone, Mail, MapPin, Globe } from 'lucide-react';
 
 // Header and Footer are provided by OurContacts wrapper; remove duplicate imports
 
-
 const Contacts = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -102,6 +101,7 @@ const Contacts = () => {
           {/* Blue Shadow Accent */}
           <div className="absolute inset-0 bg-[#0097b2] translate-x-4 translate-y-4 rounded-3xl -z-10"></div>
           
+          {/* Text Input */}
           <div className="bg-gray-300 p-8 md:p-12 rounded-3xl shadow-sm border border-slate-100">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="relative">
@@ -158,7 +158,7 @@ const Contacts = () => {
           </div>
         </div>
       </div>
-      {/* Footer is provided by OurContacts wrapper */}
+      
       
     </div>
   
