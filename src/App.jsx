@@ -5,7 +5,6 @@ import { StoreProvider } from "./components/store/storeContext";
 import OurProductsPage from "./components/pages/frontend/OurProducts/OurProductsPage";
 import WhoWeArePage from "./components/pages/frontend/landing-page/WhoWeArePage";
 import OurClientsPage from "./components/pages/frontend/OurClients/OurClientsPage";
-// import Contacts from "./components/pages/frontend/contacts/Contacts";
 import OurContacts from "./components/pages/frontend/contacts/OurContacts";
 import HoneywellPage from "./components/pages/frontend/OurProducts/product extend/honeywell/HoneywellPage";
 import HirschPage from "./components/pages/frontend/OurProducts/product extend/hirsch/HirschPage";
@@ -35,9 +34,9 @@ import FaacPage from "./components/pages/frontend/OurProducts/product extend/faa
 import DeltaPage from "./components/pages/frontend/OurProducts/product extend/delta/DeltaPage";
 import VesdaPage from "./components/pages/frontend/OurProducts/product extend/vesda/VesdaPage";
 import QuickPage from "./components/pages/frontend/OurProducts/product extend/quickalert/QuickPage";
-
-
-
+import Fin4000ac from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Fin4000ac";
+import Fin4000mik from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Fin4000mik";
+import OmniProxProduct from "./components/pages/frontend/OurProducts/Honeywell Product-Info/OmniProxProduct";
 
 
 
@@ -111,6 +110,10 @@ const App = () => {
             {/* Quickalert */} 
             <Route path="/products/quick-alert" element={<QuickPage />} />
 
+            {/* Honeywell Product Details Route */}
+             <Route path="/our-products/honeywell/fin4000ac" element={<Fin4000ac />} />
+             <Route path="/our-products/honeywell/fin4000mik" element={<Fin4000mik />} />
+             <Route path="/our-products/honeywell/omniprox" element={<OmniProxProduct />} />
 
           </Routes>
         </Router>

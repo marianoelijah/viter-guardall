@@ -12,7 +12,7 @@ const ProductHero = () => {
             {/* Guard-All Logo/Video Placeholder */}
             <div className="p-12">
                <img 
-                src="/src/assets/image/Group-46.png" 
+                src="/src/assets/image/Group-46.png"
                 alt="Guard-All Video" 
                 className="w-full h-auto drop-shadow-lg"
               />
