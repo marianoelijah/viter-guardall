@@ -9,7 +9,7 @@ const OmniProxProduct = () => {
     <div className="min-h-screen bg-gray-100">
 
       {/* HEADER */}
-      <div className="bg-blue-400 py-16 text-center">
+      <div className="bg-[#7f95b8] py-16 text-center">
         <h1 className="text-4xl font-bold text-white tracking-wide">
           OMNIPROX: PROXIMITY CARD READER
         </h1>
@@ -166,7 +166,7 @@ const OmniProxProduct = () => {
           <div className="space-y-6">
 
             <div className="bg-white p-6 rounded shadow-sm">
-              <h3 className="font-semibold mb-4">More By Honeywell</h3>
+              <h3 className="font-semibold text-black mb-4">More By Honeywell</h3>
               <ul className="text-sm text-black space-y-2">
                 <li>Onity DirectKey with Serene</li>
                 <li>MAD-401 and MAD-402 Series</li>
@@ -177,6 +177,7 @@ const OmniProxProduct = () => {
               </ul>
             </div>
 
+           {/* CTA CARD */}
            <div
               className="bg-blue-600 text-white p-6 rounded shadow-md overflow-hidden relative min-h-[200px]"
               style={{
@@ -197,6 +198,7 @@ const OmniProxProduct = () => {
                 CONTACT US TODAY
               </button>
             </div>
+
             </div>
           </div>
 

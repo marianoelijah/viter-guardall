@@ -9,7 +9,7 @@ const Fin4000ac = () => {
       <div className="min-h-screen bg-gray-100">
 
       {/* HEADER */}
-      <div className="bg-blue-400 py-16 text-center mb-5">
+      <div className="bg-[#7f95b8] py-16 text-center mb-5">
         <h1 className="text-5xl font-bold text-white tracking-wide">
           HON-FIN4000AC-100K: COMPACT <br />
           FINGERPRINT DEVICE

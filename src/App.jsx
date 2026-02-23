@@ -37,6 +37,17 @@ import QuickPage from "./components/pages/frontend/OurProducts/product extend/qu
 import Fin4000ac from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Fin4000ac";
 import Fin4000mik from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Fin4000mik";
 import OmniProxProduct from "./components/pages/frontend/OurProducts/Honeywell Product-Info/OmniProxProduct";
+import LobbyWorksCredentials from "./components/pages/frontend/OurProducts/Honeywell Product-Info/LobbyWorksCredentials";
+import ProWatch from "./components/pages/frontend/OurProducts/Honeywell Product-Info/ProWatch";
+import LobbyWorksVisitor from "./components/pages/frontend/OurProducts/Honeywell Product-Info/LobbyWorksVisitor";
+import OmniProxCredentials from "./components/pages/frontend/OurProducts/Honeywell Product-Info/OmniProxCredentials";
+import OmniAssure from "./components/pages/frontend/OurProducts/Honeywell Product-Info/OmniAssure";
+import OmniProx from "./components/pages/frontend/OurProducts/Honeywell Product-Info/OmniProx";
+import DR4200Series from "./components/pages/frontend/OurProducts/Honeywell Product-Info/DR4200Series";
+import HonFin400Mik from "./components/pages/frontend/OurProducts/Honeywell Product-Info/HonFin400Mik";
+import HonFin400Ac from "./components/pages/frontend/OurProducts/Honeywell Product-Info/HonFin400Ac";
+import Pw6101Series from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Pw6101Series";
+import PwSeries from "./components/pages/frontend/OurProducts/Honeywell Product-Info/PwSeries";
 
 
 
@@ -114,6 +125,21 @@ const App = () => {
              <Route path="/our-products/honeywell/fin4000ac" element={<Fin4000ac />} />
              <Route path="/our-products/honeywell/fin4000mik" element={<Fin4000mik />} />
              <Route path="/our-products/honeywell/omniprox" element={<OmniProxProduct />} />
+
+             <Route path="/our-products/honeywell/lobbyworks-credentials" element={<LobbyWorksCredentials />} />
+             <Route path="/our-products/honeywell/pro-watch" element={<ProWatch />} />
+             <Route path="/our-products/honeywell/lobbyworks-visitor" element={<LobbyWorksVisitor />} />
+             <Route path="/our-products/honeywell/omniprox-credentials" element={<OmniProxCredentials />} />
+             <Route path="/our-products/honeywell/omniassure" element={<OmniAssure />} />
+             <Route path="/our-products/honeywell/omniprox-proximity" element={<OmniProx />} />
+             <Route path="/our-products/honeywell/dr4200-series" element={<DR4200Series />} />
+             <Route path="/our-products/honeywell/fin400mik" element={<HonFin400Mik />} />
+             <Route path="/our-products/honeywell/fin400ac" element={<HonFin400Ac />} />
+             <Route path="/our-products/honeywell/pw6101-series" element={<Pw6101Series />} />
+             <Route path="/our-products/honeywell/pw-series" element={<PwSeries />} />
+
+
+
 
           </Routes>
         </Router>
