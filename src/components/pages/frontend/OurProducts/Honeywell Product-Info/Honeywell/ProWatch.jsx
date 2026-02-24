@@ -1,20 +1,19 @@
 import React from "react";
 import { FaFacebookF, FaLinkedinIn, FaEnvelope, FaWhatsapp, FaTelegramPlane } from "react-icons/fa";
-import Header from "../../partials/Header";
-import Footer from "../../partials/Footer";
+import Header from "../../../partials/Header";
+import Footer from "../../../partials/Footer";
 
-const OmniProxCredentials = () => {
+const ProWatch = () => {
   return (
     <>
     <Header />
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-gray-200 min-h-screen">
 
       {/* HERO SECTION */}
       <div className="bg-[#7f95b8] py-20">
         <div className="container mx-auto px-6">
           <h1 className="text-white text-4xl md:text-5xl font-bold text-center">
-           OmniProx™ Credentials: <br/>
-             Smart Card Readers
+            Pro-Watch™ Integrated Security Suite
           </h1>
         </div>
       </div>
@@ -25,19 +24,20 @@ const OmniProxCredentials = () => {
 
           {/* LEFT CONTENT */}
           <div className="lg:col-span-2">
-            <div className="bg-white rounded-xl shadow-sm p-8">
+            <div className="bg-gray-100 rounded-xl shadow-sm p-8">
 
               <p className="text-black text-lg mb-6">
-                A contactless smart card reader that offers superb reliability, consistent read range, and ease of installation. It also supports biometric features.
+                A comprehensive security system that helps secure people, property, and assets.
+                It can monitor access controls, videos, and manage intrusions all in one interface.
               </p>
 
-              {/* TAGS */}
+               {/* TAGS */}
               <div className="flex flex-wrap gap-3 mb-8">
                 <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
                   HONEYWELL
                 </span>
                 <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
-                   READERS
+                   SOFTWARES
                 </span>
                 <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
                   Access Control System
@@ -47,7 +47,7 @@ const OmniProxCredentials = () => {
               <hr className="mb-6" />
 
               {/* SHARE SECTION */}
-              <div className="mt-8">
+               <div className="mt-8">
               <p className="font-medium text-black mb-3">Share:</p>
               <div className="flex gap-3">
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-blue-400 transition-colors duration-200">
@@ -66,7 +66,7 @@ const OmniProxCredentials = () => {
                     <img src="/src/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
                 </div>
               </div>
-            </div>
+              </div>
 
             </div>
           </div>
@@ -75,12 +75,12 @@ const OmniProxCredentials = () => {
           <div className="space-y-6">
 
             {/* MORE BY SECTION */}
-            <div className="bg-white rounded-xl shadow-sm p-6">
+            <div className="bg-gray-200 rounded-xl shadow-sm p-6">
               <h3 className="text-black font-semibold mb-4">
                 More By HONEYWELL
               </h3>
 
-              <ul className="text-gray-700 text-lg font-oswald space-y-3">
+              <ul className="text-gray-700 text-lg space-y-3">
                 <li>Onity DirectKey with Serene</li>
                 <li>MAD-401 and MAD-402 Series Addressable Modules I & 2 Technical Inputs</li>
                 <li>INR 415 256-Channel 12 Bay RAID Backmount Standalone</li>
@@ -98,7 +98,7 @@ const OmniProxCredentials = () => {
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}
-            >
+              >
               <div className="relative z-10 px-4 max-w-3xl">
                  <h3 className="text-xl font-semibold mb-3">
                    Secure Your Piece Of Mind Today
@@ -110,7 +110,7 @@ const OmniProxCredentials = () => {
               <button className="bg-white text-blue-600 font-semibold px-4 py-2 rounded w-full">
                 CONTACT US TODAY
               </button>
-            </div>
+             </div>
             </div>
 
           </div>
@@ -124,4 +124,4 @@ const OmniProxCredentials = () => {
   );
 };
 
-export default OmniProxCredentials;
+export default ProWatch;

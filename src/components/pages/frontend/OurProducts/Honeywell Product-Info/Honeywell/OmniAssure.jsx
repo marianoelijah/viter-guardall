@@ -1,9 +1,9 @@
 import React from "react";
 import { FaFacebookF, FaLinkedinIn, FaEnvelope, FaWhatsapp, FaTelegramPlane } from "react-icons/fa";
-import Header from "../../partials/Header";
-import Footer from "../../partials/Footer";
+import Header from "../../../partials/Header";
+import Footer from "../../../partials/Footer";
 
-const HonFin400Mik = () => {
+const OmniAssure = () => {
   return (
     <>
     <Header />
@@ -13,8 +13,8 @@ const HonFin400Mik = () => {
       <div className="bg-[#7f95b8] py-20">
         <div className="container mx-auto px-6">
           <h1 className="text-white text-4xl md:text-5xl font-bold text-center">
-                    HON-FIN400MIK-100K: Compact <br/>
-                       Fingerprint Device
+                    OmniAssure™ 2.0 XS Multismart <br/>
+                     Readers: Access Control System
           </h1>
         </div>
       </div>
@@ -28,7 +28,7 @@ const HonFin400Mik = () => {
             <div className="bg-white rounded-xl shadow-sm p-8">
 
               <p className="text-black text-lg mb-6">
-              A standard fingerprint device with touch keypads and color LCD displays. It can accurately identify wet and dry fingerprints. 
+               Provides a flexible range of access control readers for reading high frequency and low frequency credentials.
               </p>
 
               {/* TAGS */}
@@ -47,7 +47,7 @@ const HonFin400Mik = () => {
               <hr className="mb-6" />
 
               {/* SHARE SECTION */}
-             <div className="mt-8">
+               <div className="mt-8">
               <p className="font-medium text-black mb-3">Share:</p>
               <div className="flex gap-3">
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-blue-400 transition-colors duration-200">
@@ -67,6 +67,7 @@ const HonFin400Mik = () => {
                 </div>
               </div>
               </div>
+
             </div>
           </div>
 
@@ -90,14 +91,14 @@ const HonFin400Mik = () => {
             </div>
 
             {/* CTA CARD */}
-             <div
+            <div
               className="bg-blue-600 text-white p-6 rounded shadow-md overflow-hidden relative min-h-[200px]"
               style={{
                 backgroundImage: `linear-gradient(rgba(30, 64, 175, 0.8), rgba(30, 64, 175, 0.8)), url('/src/assets/image/Our Products/quickalert.jpg')`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}
-              >
+            >
               <div className="relative z-10 px-4 max-w-3xl">
                  <h3 className="text-xl font-semibold mb-3">
                    Secure Your Piece Of Mind Today
@@ -109,7 +110,7 @@ const HonFin400Mik = () => {
               <button className="bg-white text-blue-600 font-semibold px-4 py-2 rounded w-full">
                 CONTACT US TODAY
               </button>
-             </div>
+            </div>
             </div>
 
           </div>
@@ -119,9 +120,8 @@ const HonFin400Mik = () => {
 
     </div>
     <Footer />
-    </>
-    
+     </>
   );
 };
 
-export default HonFin400Mik;
+export default OmniAssure;

@@ -1,19 +1,20 @@
 import React from "react";
 import { FaFacebookF, FaLinkedinIn, FaEnvelope, FaWhatsapp, FaTelegramPlane } from "react-icons/fa";
-import Header from "../../partials/Header";
-import Footer from "../../partials/Footer";
+import Header from "../../../partials/Header";
+import Footer from "../../../partials/Footer";
 
-const ProWatch = () => {
+const DR4200Series = () => {
   return (
     <>
     <Header />
-    <div className="bg-gray-200 min-h-screen">
+    <div className="bg-gray-100 min-h-screen">
 
       {/* HERO SECTION */}
       <div className="bg-[#7f95b8] py-20">
         <div className="container mx-auto px-6">
           <h1 className="text-white text-4xl md:text-5xl font-bold text-center">
-            Pro-Watch™ Integrated Security Suite
+                    DR4200 Series: Digital Proximity <br/>
+                                Readers
           </h1>
         </div>
       </div>
@@ -24,20 +25,19 @@ const ProWatch = () => {
 
           {/* LEFT CONTENT */}
           <div className="lg:col-span-2">
-            <div className="bg-gray-100 rounded-xl shadow-sm p-8">
+            <div className="bg-gray-200 border border-gray-300 rounded-xl shadow-sm p-8">
 
               <p className="text-black text-lg mb-6">
-                A comprehensive security system that helps secure people, property, and assets.
-                It can monitor access controls, videos, and manage intrusions all in one interface.
+              A cost-effective and high-performing proximity access that offers the longest ranges available. It has a fast read time to keep traffic moving.
               </p>
 
-               {/* TAGS */}
+              {/* TAGS */}
               <div className="flex flex-wrap gap-3 mb-8">
                 <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
                   HONEYWELL
                 </span>
                 <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
-                   SOFTWARES
+                   READERS
                 </span>
                 <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
                   Access Control System
@@ -47,7 +47,7 @@ const ProWatch = () => {
               <hr className="mb-6" />
 
               {/* SHARE SECTION */}
-               <div className="mt-8">
+              <div className="mt-8">
               <p className="font-medium text-black mb-3">Share:</p>
               <div className="flex gap-3">
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-blue-400 transition-colors duration-200">
@@ -67,7 +67,6 @@ const ProWatch = () => {
                 </div>
               </div>
               </div>
-
             </div>
           </div>
 
@@ -75,7 +74,7 @@ const ProWatch = () => {
           <div className="space-y-6">
 
             {/* MORE BY SECTION */}
-            <div className="bg-gray-200 rounded-xl shadow-sm p-6">
+            <div className="bg-gray-200 border border-gray-300 rounded-xl shadow-sm p-6">
               <h3 className="text-black font-semibold mb-4">
                 More By HONEYWELL
               </h3>
@@ -91,14 +90,14 @@ const ProWatch = () => {
             </div>
 
             {/* CTA CARD */}
-            <div
+             <div
               className="bg-blue-600 text-white p-6 rounded shadow-md overflow-hidden relative min-h-[200px]"
               style={{
                 backgroundImage: `linear-gradient(rgba(30, 64, 175, 0.8), rgba(30, 64, 175, 0.8)), url('/src/assets/image/Our Products/quickalert.jpg')`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}
-              >
+            >
               <div className="relative z-10 px-4 max-w-3xl">
                  <h3 className="text-xl font-semibold mb-3">
                    Secure Your Piece Of Mind Today
@@ -110,7 +109,8 @@ const ProWatch = () => {
               <button className="bg-white text-blue-600 font-semibold px-4 py-2 rounded w-full">
                 CONTACT US TODAY
               </button>
-             </div>
+            </div>
+
             </div>
 
           </div>
@@ -120,8 +120,9 @@ const ProWatch = () => {
 
     </div>
     <Footer />
-     </>
+    </>
+    
   );
 };
 
-export default ProWatch;
+export default DR4200Series;

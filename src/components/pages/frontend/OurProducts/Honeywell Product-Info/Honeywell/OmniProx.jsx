@@ -1,9 +1,9 @@
 import React from "react";
 import { FaFacebookF, FaLinkedinIn, FaEnvelope, FaWhatsapp, FaTelegramPlane } from "react-icons/fa";
-import Header from "../../partials/Header";
-import Footer from "../../partials/Footer";
+import Header from "../../../partials/Header";
+import Footer from "../../../partials/Footer";
 
-const HonFin400Ac = () => {
+const OmniProx = () => {
   return (
     <>
     <Header />
@@ -13,8 +13,8 @@ const HonFin400Ac = () => {
       <div className="bg-[#7f95b8] py-20">
         <div className="container mx-auto px-6">
           <h1 className="text-white text-4xl md:text-5xl font-bold text-center">
-                    HON-FIN400AC-100K: Compact <br/>
-                       Fingerprint Device
+                    OmniProx™ Credentials: <br/>
+                      Proximity Card Reader
           </h1>
         </div>
       </div>
@@ -25,10 +25,10 @@ const HonFin400Ac = () => {
 
           {/* LEFT CONTENT */}
           <div className="lg:col-span-2">
-            <div className="bg-gray-200 rounded-xl shadow-sm p-8">
+            <div className="bg-gray-200 border border-gray-300   rounded-xl shadow-sm p-8">
 
               <p className="text-black text-lg mb-6">
-              A slender, compact fingerprint device that can provide a high level of security for your property and can effectively identify fake fingerprints.
+              A sleek, compact proximity reader that has a reliable and consistent read range. It has added security to avoid tampering and system compromise
               </p>
 
               {/* TAGS */}
@@ -66,7 +66,7 @@ const HonFin400Ac = () => {
                     <img src="/src/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
                 </div>
               </div>
-              </div>
+            </div>
 
             </div>
           </div>
@@ -80,7 +80,7 @@ const HonFin400Ac = () => {
                 More By HONEYWELL
               </h3>
 
-              <ul className="text-gray-700 text-sm space-y-3">
+              <ul className="text-gray-700 text-lg space-y-3">
                 <li>Onity DirectKey with Serene</li>
                 <li>MAD-401 and MAD-402 Series Addressable Modules I & 2 Technical Inputs</li>
                 <li>INR 415 256-Channel 12 Bay RAID Backmount Standalone</li>
@@ -91,14 +91,14 @@ const HonFin400Ac = () => {
             </div>
 
             {/* CTA CARD */}
-             <div
+            <div
               className="bg-blue-600 text-white p-6 rounded shadow-md overflow-hidden relative min-h-[200px]"
               style={{
                 backgroundImage: `linear-gradient(rgba(30, 64, 175, 0.8), rgba(30, 64, 175, 0.8)), url('/src/assets/image/Our Products/quickalert.jpg')`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}
-              >
+            >
               <div className="relative z-10 px-4 max-w-3xl">
                  <h3 className="text-xl font-semibold mb-3">
                    Secure Your Piece Of Mind Today
@@ -110,18 +110,17 @@ const HonFin400Ac = () => {
               <button className="bg-white text-blue-600 font-semibold px-4 py-2 rounded w-full">
                 CONTACT US TODAY
               </button>
-             </div>
             </div>
-          </div>
+            </div>
 
+          </div>
         </div>
       </div>
 
     </div>
     <Footer />
     </>
-    
   );
 };
 
-export default HonFin400Ac;
+export default OmniProx;

@@ -1,9 +1,9 @@
 import React from "react";
 import { FaFacebookF, FaLinkedinIn, FaEnvelope, FaWhatsapp, FaTelegramPlane } from "react-icons/fa";
-import Header from "../../partials/Header";
-import Footer from "../../partials/Footer";
+import Header from "../../../partials/Header";
+import Footer from "../../../partials/Footer";
 
-const OmniProx = () => {
+const OmniProxCredentials = () => {
   return (
     <>
     <Header />
@@ -13,8 +13,8 @@ const OmniProx = () => {
       <div className="bg-[#7f95b8] py-20">
         <div className="container mx-auto px-6">
           <h1 className="text-white text-4xl md:text-5xl font-bold text-center">
-                    OmniProx™ Credentials: <br/>
-                      Proximity Card Reader
+           OmniProx™ Credentials: <br/>
+             Smart Card Readers
           </h1>
         </div>
       </div>
@@ -25,10 +25,10 @@ const OmniProx = () => {
 
           {/* LEFT CONTENT */}
           <div className="lg:col-span-2">
-            <div className="bg-gray-200 border border-gray-300   rounded-xl shadow-sm p-8">
+            <div className="bg-white rounded-xl shadow-sm p-8">
 
               <p className="text-black text-lg mb-6">
-              A sleek, compact proximity reader that has a reliable and consistent read range. It has added security to avoid tampering and system compromise
+                A contactless smart card reader that offers superb reliability, consistent read range, and ease of installation. It also supports biometric features.
               </p>
 
               {/* TAGS */}
@@ -47,7 +47,7 @@ const OmniProx = () => {
               <hr className="mb-6" />
 
               {/* SHARE SECTION */}
-             <div className="mt-8">
+              <div className="mt-8">
               <p className="font-medium text-black mb-3">Share:</p>
               <div className="flex gap-3">
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-blue-400 transition-colors duration-200">
@@ -75,12 +75,12 @@ const OmniProx = () => {
           <div className="space-y-6">
 
             {/* MORE BY SECTION */}
-            <div className="bg-gray-200 rounded-xl shadow-sm p-6">
+            <div className="bg-white rounded-xl shadow-sm p-6">
               <h3 className="text-black font-semibold mb-4">
                 More By HONEYWELL
               </h3>
 
-              <ul className="text-gray-700 text-lg space-y-3">
+              <ul className="text-gray-700 text-lg font-oswald space-y-3">
                 <li>Onity DirectKey with Serene</li>
                 <li>MAD-401 and MAD-402 Series Addressable Modules I & 2 Technical Inputs</li>
                 <li>INR 415 256-Channel 12 Bay RAID Backmount Standalone</li>
@@ -114,13 +114,14 @@ const OmniProx = () => {
             </div>
 
           </div>
+
         </div>
       </div>
 
     </div>
     <Footer />
-    </>
+     </>
   );
 };
 
-export default OmniProx;
+export default OmniProxCredentials;

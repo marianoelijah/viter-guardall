@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "../../partials/Header";
-import Footer from "../../partials/Footer";
+import Header from "../../../partials/Header";
+import Footer from "../../../partials/Footer";
 
 const Fin4000ac = () => {
   return (
@@ -119,6 +119,7 @@ const Fin4000ac = () => {
                 </div>
               </div>
             </div>
+            
           </div>
 
           {/* RIGHT SIDEBAR */}

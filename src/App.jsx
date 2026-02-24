@@ -34,20 +34,30 @@ import FaacPage from "./components/pages/frontend/OurProducts/product extend/faa
 import DeltaPage from "./components/pages/frontend/OurProducts/product extend/delta/DeltaPage";
 import VesdaPage from "./components/pages/frontend/OurProducts/product extend/vesda/VesdaPage";
 import QuickPage from "./components/pages/frontend/OurProducts/product extend/quickalert/QuickPage";
-import Fin4000ac from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Fin4000ac";
-import Fin4000mik from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Fin4000mik";
-import OmniProxProduct from "./components/pages/frontend/OurProducts/Honeywell Product-Info/OmniProxProduct";
-import LobbyWorksCredentials from "./components/pages/frontend/OurProducts/Honeywell Product-Info/LobbyWorksCredentials";
-import ProWatch from "./components/pages/frontend/OurProducts/Honeywell Product-Info/ProWatch";
-import LobbyWorksVisitor from "./components/pages/frontend/OurProducts/Honeywell Product-Info/LobbyWorksVisitor";
-import OmniProxCredentials from "./components/pages/frontend/OurProducts/Honeywell Product-Info/OmniProxCredentials";
-import OmniAssure from "./components/pages/frontend/OurProducts/Honeywell Product-Info/OmniAssure";
-import OmniProx from "./components/pages/frontend/OurProducts/Honeywell Product-Info/OmniProx";
-import DR4200Series from "./components/pages/frontend/OurProducts/Honeywell Product-Info/DR4200Series";
-import HonFin400Mik from "./components/pages/frontend/OurProducts/Honeywell Product-Info/HonFin400Mik";
-import HonFin400Ac from "./components/pages/frontend/OurProducts/Honeywell Product-Info/HonFin400Ac";
-import Pw6101Series from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Pw6101Series";
-import PwSeries from "./components/pages/frontend/OurProducts/Honeywell Product-Info/PwSeries";
+import Fin4000ac from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Honeywell/Fin4000ac";
+import Fin4000mik from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Honeywell/Fin4000mik";
+import OmniProxProduct from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Honeywell/OmniProxProduct";
+import LobbyWorksCredentials from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Honeywell/LobbyWorksCredentials";
+import ProWatch from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Honeywell/ProWatch";
+import LobbyWorksVisitor from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Honeywell/LobbyWorksVisitor";
+import OmniProxCredentials from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Honeywell/OmniProxCredentials";
+import OmniAssure from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Honeywell/OmniAssure";
+import OmniProx from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Honeywell/OmniProx";
+import DR4200Series from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Honeywell/DR4200Series";
+import HonFin400Mik from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Honeywell/HonFin400Mik";
+import HonFin400Ac from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Honeywell/HonFin400Ac";
+import Pw6101Series from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Honeywell/Pw6101Series";
+import PwSeries from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Honeywell/PwSeries";
+import ContactlessProximity from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Honeywell/ContactlessProximity";
+import ContactlessSmart from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Honeywell/ContactlessSmart";
+import Mifare from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Honeywell/Mifare";
+import SmartCardReader from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hirsch/SmartCardReader";
+import GovernmentReader from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hirsch/GovernmentReader";
+import TsReader from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hirsch/TsReader";
+import TsScramblePad from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hirsch/TsScramblePad";
+import ScramblePadReader from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hirsch/ScramblePadReader";
+
+
 
 
 
@@ -125,7 +135,6 @@ const App = () => {
              <Route path="/our-products/honeywell/fin4000ac" element={<Fin4000ac />} />
              <Route path="/our-products/honeywell/fin4000mik" element={<Fin4000mik />} />
              <Route path="/our-products/honeywell/omniprox" element={<OmniProxProduct />} />
-
              <Route path="/our-products/honeywell/lobbyworks-credentials" element={<LobbyWorksCredentials />} />
              <Route path="/our-products/honeywell/pro-watch" element={<ProWatch />} />
              <Route path="/our-products/honeywell/lobbyworks-visitor" element={<LobbyWorksVisitor />} />
@@ -137,6 +146,17 @@ const App = () => {
              <Route path="/our-products/honeywell/fin400ac" element={<HonFin400Ac />} />
              <Route path="/our-products/honeywell/pw6101-series" element={<Pw6101Series />} />
              <Route path="/our-products/honeywell/pw-series" element={<PwSeries />} />
+             <Route path="/our-products/honeywell/contactless-proximity" element={<ContactlessProximity />} />
+             <Route path="/our-products/honeywell/contactless-smart" element={<ContactlessSmart />} />
+             <Route path="/our-products/honeywell/mifare" element={<Mifare />} />
+
+             {/* Hirsch Product Details Route */}
+             <Route path="/our-products/honeywell/smart-card-reader" element={<SmartCardReader />} />
+             <Route path="/our-products/honeywell/government-reader" element={<GovernmentReader />} />
+             <Route path="/our-products/honeywell/ts-reader" element={<TsReader />} />
+             <Route path="/our-products/honeywell/ts-scramblepad" element={<TsScramblePad />} />
+             <Route path="/our-products/honeywell/scramblepad-reader" element={<ScramblePadReader />} />
+
 
 
 

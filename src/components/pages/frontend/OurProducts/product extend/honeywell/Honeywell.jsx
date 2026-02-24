@@ -96,19 +96,19 @@ const products = [
     title: "OmniProx™ Credentials: Contactless Proximity Card",
     description: "An easy-to-carry proximity card that utilizes RFID technology. It has a high contactless range and is designed to work with OmniProx™ readers.",
     image: "/src/assets/image/HONEYWELL IMG/OMNIPROX-ISO-CARD.jpg",
-    detailRoute: "/our-products/honeywell/omniprox-card"
+    detailRoute: "/our-products/honeywell/contactless-proximity"
   },
   {
     title: "OmniClass™ Credentials: Contactless Smart Card",
-    description: "An easy-to-carry proximity card that utilizes RFID technology. It has a high contactless range and is designed to work with OmniProx™ readers.",
+    description: "A laminated PVC card that utilizes RFID technology and has an excellent contactless range. It is designed to work with OmniClass™ readers. ",
     image: "/src/assets/image/HONEYWELL IMG/OMNICLASS-CREDENTIALS.jpg",
-    detailRoute: "/our-products/honeywell/omniclass-credentials"
+    detailRoute: "/our-products/honeywell/contactless-smart"
   },
   {
     title: "MF-01 Mifare Proximity Cards",
-    description: "An easy-to-carry proximity card that utilizes RFID technology. It has a high contactless range and is designed to work with OmniProx™ readers.",
+    description: "A contactless access control fit for student and employee IDs. It also helps in attendance management with Honeywell’s Mifare® technology.",
     image: "/src/assets/image/HONEYWELL IMG/MF-01.jpg",
-    detailRoute: "/our-products/honeywell/mf-01"
+    detailRoute: "/our-products/honeywell/mifare"
   }
 ];
 

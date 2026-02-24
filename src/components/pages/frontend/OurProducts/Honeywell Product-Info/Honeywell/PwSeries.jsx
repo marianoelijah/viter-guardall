@@ -1,9 +1,9 @@
 import React from 'react';
 import { Share2, Facebook, Twitter, Linkedin, Mail } from 'lucide-react'; // Optional for icons
-import Header from '../../partials/Header';
-import Footer from '../../partials/Footer';
+import Header from '../../../partials/Header';
+import Footer from '../../../partials/Footer';
 
-const Pro3200 = () => {
+const PwSeries = () => {
   return (
     <>
     <Header />
@@ -11,8 +11,7 @@ const Pro3200 = () => {
       {/* Blue Header Section */}
       <header className="bg-[#7f95b8] py-10 px-6 md:px-20 text-white shadow-md">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-center align-middle">
-            PRO3200 Professional Series Access <br/>
-                         Modules 
+          PW-Series Access Modules
         </h1>
       </header>
 
@@ -23,33 +22,23 @@ const Pro3200 = () => {
         <main className="lg:w-3/4 space-y-8 bg-gray-200 p-4 md:p-0 px-5">
           <section className="space-y-4 text-lg leading-relaxed px-6 py-8 rounded-xl">
             <p>
-              Designed to work without a PC, the PRO3200 series is a customizable access control that provides real-time processing for connected I/O interfaces.
+              Designed to work without a PC, the PW3000 series is a customizable access control that provides real-time processing for connected I/O interfaces.
             </p>
 
             <h2 className="font-bold text-black text-lg mt-6">Product Description:</h2>
             <p>
-              The PRO3200 professional series family of access control modules is designed for high density installations. Supporting up to 16 readers per enclosure and 32 readers per intelligent controller along with up to 100,000 card capacity provides a combination of small installation footprint and superior cost per door ratio.
+              The PW-Series family of access control modules are controlled by and connected to the intelligent control module, PW5000 or PW6000, through a supervised RS485 bus at 38,400 bps. Hardware interface configuration options are stored in the intelligent control module and may be directly controlled via operator intervention, time schedules, or event-based procedures.
             </p>
 
             <h2 className="font-bold text-black text-lg mt-6">Product Features:</h2>
             <ul className="list-disc text-black ml-5 space-y-1">
               <li>Modular design fits a wide variety of applications</li>
-              <li>Up to 9 modules, power-supply and battery can be accommodated by the PRO22ENC1, PRO22ENC2 and PRO22ENC5 (no battery) enclosures</li>
               <li>User programmable relay outputs allow for specific control needs</li>
-              <li>User programmable alarm inputs offer flexible system configuration and control</li>
-              <li>RS485 communication to all modules</li>
-              <li>Analog to digital converter technology provides digital filtering and input conditionings</li>
               <li>Dedicated cabinet tamper and power monitor inputs</li>
-              <li>Supports the choice of normally open, normally closed, supervised, and non-supervised circuits</li>
               <li>Supports a wide range of reader technologies including Wiegand, magnetic stripe, proximity, and keypad</li>
-              <li>System off-line modes customizable per reader include facility code access, locked (no access),</li>
+              <li>Up to nine modules, power supply and battery can be accommodated by the PW32ENCL1, PW32ENCL2, and PW32ENCL5 enclosure</li>
               <li>Supports multiple reader and card formats for maximum flexibility and security options</li>
-              <li>Operating modes include locked, unlocked, facility code, card only, card and PIN, card or PIN and PIN only</li>
-              <li>Communication to the host is via either 10/100 Ethernet or RS-232(both are standard)</li>
-              <li>Alarm circuit type – normally open, normally closed, non-supervised, supervised (with correct EOL). Meets requirements for UL294 and CUL</li>
-              <li>Any combination of 16 I/0 or readers modules may be connected to the PRO32IC RS485 ports. 4,000 ft (1,250 m) total bus length per port</li>
-              <li>Supports over 50,000 cards and 50,000 transactions</li>
-
+              <li>UL 294 / UL 1076 and CUL Listed</li>
             </ul>
           </section>
 
@@ -232,4 +221,4 @@ const Pro3200 = () => {
   );
 };
 
-export default Pro3200;
+export default PwSeries;
