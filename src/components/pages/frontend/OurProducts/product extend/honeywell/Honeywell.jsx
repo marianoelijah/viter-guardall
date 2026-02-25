@@ -151,6 +151,7 @@ const Honeywell = () => {
         <div className="h-1 w-24 bg-[#2257a0] mx-auto rounded-full opacity-20"></div>
       </header>
        
+       {/* Improved Grid Spacing */}
       <div className="bg-[#e9eff6] py-16 px-4 md:px-10 lg:px-12">
         <div className="max-w-7xl mx-auto">
           {/* Grid Layout - Standardized gap and size */}

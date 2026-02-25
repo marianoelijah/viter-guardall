@@ -56,6 +56,11 @@ import GovernmentReader from "./components/pages/frontend/OurProducts/Honeywell 
 import TsReader from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hirsch/TsReader";
 import TsScramblePad from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hirsch/TsScramblePad";
 import ScramblePadReader from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hirsch/ScramblePadReader";
+import HirschM64 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hirsch/HirschM64";
+import HighAssurance from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hirsch/HighAssurance";
+import MemoryExpansion from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hirsch/MemoryExpansion";
+import HirschMx1Me from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hirsch/HirschMx1Me";
+import AlarmExpansion from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hirsch/AlarmExpansion";
 
 
 
@@ -151,11 +156,20 @@ const App = () => {
              <Route path="/our-products/honeywell/mifare" element={<Mifare />} />
 
              {/* Hirsch Product Details Route */}
-             <Route path="/our-products/honeywell/smart-card-reader" element={<SmartCardReader />} />
-             <Route path="/our-products/honeywell/government-reader" element={<GovernmentReader />} />
-             <Route path="/our-products/honeywell/ts-reader" element={<TsReader />} />
-             <Route path="/our-products/honeywell/ts-scramblepad" element={<TsScramblePad />} />
-             <Route path="/our-products/honeywell/scramblepad-reader" element={<ScramblePadReader />} />
+             <Route path="/our-products/hirsch/utrust-ts-contact-smart-card-readers" element={<SmartCardReader />} />
+             <Route path="/our-products/hirsch/utrust-ts-government-readers" element={<GovernmentReader />} />
+             <Route path="/our-products/hirsch/utrust-ts-readers" element={<TsReader />} />
+             <Route path="/our-products/hirsch/hirsch-ts-scramblepad-sc" element={<TsScramblePad />} />
+             <Route path="/our-products/hirsch/hirsch-scramble-pad-readers" element={<ScramblePadReader />} />
+             <Route path="/our-products/hirsch/hirsch-scramble-factor" element={<HighAssurance />} />
+             <Route path="/our-products/hirsch/meb-cb-memory-expansion-board" element={<MemoryExpansion />} />
+             <Route path="/our-products/hirsch/alarm-expansion" element={<AlarmExpansion />} />
+             <Route path="/our-products/hirsch/m64" element={<HirschM64 />} />
+             <Route path="/our-products/hirsch/mx1-me" element={<HirschMx1Me />} />
+
+
+
+
 
 
 
