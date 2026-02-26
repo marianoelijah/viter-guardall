@@ -61,6 +61,8 @@ import HighAssurance from "./components/pages/frontend/OurProducts/Honeywell Pro
 import MemoryExpansion from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hirsch/MemoryExpansion";
 import HirschMx1Me from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hirsch/HirschMx1Me";
 import AlarmExpansion from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hirsch/AlarmExpansion";
+import Mx1Controller from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hirsch/Mx1Controller";
+import MxController from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hirsch/MxController";
 
 
 
@@ -163,9 +165,11 @@ const App = () => {
              <Route path="/our-products/hirsch/hirsch-scramble-pad-readers" element={<ScramblePadReader />} />
              <Route path="/our-products/hirsch/hirsch-scramble-factor" element={<HighAssurance />} />
              <Route path="/our-products/hirsch/meb-cb-memory-expansion-board" element={<MemoryExpansion />} />
-             <Route path="/our-products/hirsch/alarm-expansion" element={<AlarmExpansion />} />
-             <Route path="/our-products/hirsch/m64" element={<HirschM64 />} />
-             <Route path="/our-products/hirsch/mx1-me" element={<HirschMx1Me />} />
+             <Route path="/our-products/hirsch/aeb8-alarm-expansion-board" element={<AlarmExpansion />} />
+             <Route path="/our-products/hirsch/hirsch-m64-controller" element={<HirschM64 />} />
+             <Route path="/our-products/hirsch/hirsch-mx-1-me-controller" element={<HirschMx1Me />} />
+             <Route path="/our-products/hirsch/hirsch-mx-1-controller" element={<Mx1Controller />} />
+             <Route path="/our-products/hirsch/hirsch-mx-controller" element={<MxController />} />
 
 
 

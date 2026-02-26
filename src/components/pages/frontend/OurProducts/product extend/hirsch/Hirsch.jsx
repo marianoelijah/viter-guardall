@@ -51,10 +51,10 @@ const products = [
     detailRoute: "/our-products/hirsch/aeb8-alarm-expansion-board"
   },
   {
-    title: "Hirsch M8N Controller: Standalone Access Control System With ScramblePad",
-    description: "High-level security access control, with alarm monitoring, relay control and reporting capabilities.",
-    image: "/src/assets/image/HIRSCH IMG/AEB8-Alarm-Expansion-Board.jpg",
-    detailRoute: "/our-products/hirsch/hirsch-m8n-controller"
+    title: "Hirsch M64 Controller: Standalone Access Control System with ScramblePad",
+    description: "Provide a variety of access control, high-security alarm monitoring, relay control outputs, and programmable logic configurations. Product Description:  Identiv’s Hirsch M64 Controllers have the same firmware functionality as Hirsch Mx",
+    // image: "/src/assets/image/HIRSCH IMG/AEB8-Alarm-Expansion-Board.jpg",
+    detailRoute: "/our-products/hirsch/hirsch-m64-controller"
   },
   {
     title: "Hirsch Mx-1-ME Controller: High-Security Access Control",

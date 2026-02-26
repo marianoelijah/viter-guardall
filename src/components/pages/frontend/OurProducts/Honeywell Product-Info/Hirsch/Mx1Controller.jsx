@@ -3,7 +3,7 @@ import Header from '../../../partials/Header';
 import Footer from '../../../partials/Footer';
 import { NavLink } from 'react-router-dom';
 
-const HirschMx1Me = () => {
+const Mx1Controller = () => {
   // Structured technical data matching the detailed specification table
   const technicalData = [
     { type: 'header', label: 'COMMUNICATIONS' },
@@ -18,15 +18,23 @@ const HirschMx1Me = () => {
     { type: 'header', label: 'MEMORY' },
     { label: 'Buffers', value: 'Standard: 1,500 events and 1,500 alarms' },
     { label: 'Credentials', value: 'Up to 500,000' },
+    { label: 'Memory Protection Battery', value: '10 Days for code, setups, lock, and buffers' },
     
     { type: 'header', label: 'PHYSICAL' },
     { label: 'Security', value: 'Cover opening tamper switch' },
-    { label: 'Dimensions', value: '14 x 14 x 3.5 in' },
-    { label: 'Weight', value: '24 lbs (11 kg) w/ battery' },
+    { label: 'Enclosure', value: 'Flame retardant plastic enclosure with exposed connectors and diagnostic LEDs' },
+    { label: 'Dimensions', value: '11.25 x 8.0 x 8.0 in (3.18 x 20.32 x 20.32 cm)' },
+    { label: 'Weight', value: '1.5 lbs (0.69 kg)' },
+    { label: 'OperatingTemperature Range', value: '32° to 140°F (0° to 60°C)' },
+    { label: 'Relative Humidity', value: '0 to 90%, non-condensing' }, 
     
     { type: 'header', label: 'ELECTRICAL' },
+    { label: 'OSDP Keypad/ReaderPower (1 Terminal)', value: '750mA at 12V (up to 2 readers)' },
+    { label: 'WiegandKeypad/Reader (2Terminals)', value: '750mA at 12V' },
     { label: 'Power Supply', value: 'AC INPUT 110 - 200V, 50-60 Hz, fused. Built-in PSU module generates 5A @ 30V DC for the controller and connected devices' },
-    { label: 'Door Relay', value: 'Dry 2A at 30V, Form C Wet 250mA @ 24V / 500mA @ 12V' }
+    { label: 'Door Relay', value: 'Dry 2A at 30V, Form C Wet 250mA @ 24V / 500mA @ 12V' },
+    { label: 'Auxiliary Relay', value: '• Dry 1A at 30V• Wet 750mA at 24V' },
+    { label: 'Listings and Approvals', value: '• UL 294: Access Control Systems Units• UL 1076: Proprietary Burglar Alarm Systems• CE and UKCA' },
   ];
 
   return (
@@ -46,27 +54,42 @@ const HirschMx1Me = () => {
         {/* Left Column: Product Info & Specs */}
         <main className="lg:col-span-9 bg-gray-200 p-8 rounded shadow-sm">
           <p className="text-[17px] text-gray-800 mb-8 border-l-4 border-[#8ba4cc] pl-4">
-            A fully supervised one-door access control with integrated and secure network communication.
+            An access control with PoE (Power over Ethernet) to manage a single fully supervised door. 
           </p>
 
           <section className="mb-8">
             <h2 className="font-bold text-xl mb-3">Product Description:</h2>
             <p className="text-[17px] leading-relaxed text-slate-700">
-              With firmware, functionality, and communication protocols compatible with the Identiv DIGI*TRAC and Mx Controllers, 
-              the Mx-1-ME seamlessly integrates with existing systems. Designed for use with uTrust TS readers and secure keypads, 
-              it adds network edge capability to the Identiv enterprise security management ecosystem.
+             The modular design and scalable architecture enables an installation to start small and 
+             expand as needed, from a single controller system to a larger, multi-site enterprise 
+             environment. The controller is designed for use with the Hirsch Velocity security 
+             management system, uTrust TS Readers and secure keypads, or wireless door locks.
             </p>
           </section>
 
           <section className="mb-10">
             <h2 className="font-bold text-xl mb-3">Product Features:</h2>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 list-disc ml-5 text-[17px] text-gray-800">
-              <li>Fully supervised one-door model with integrated communication</li>
-              <li>Scalable from a single controller to networked multi-site installations</li>
-              <li>Connectivity to OSDP (RS-485) or Wiegand readers</li>
+              <li>Controls one (1) fully supervised door with entry and optional exit keypads/readers or eight (8) wireless door locks</li>
+              <li>Scalable from single controller to networked multi-site installations</li>
+              <li>Multi-microprocessor architecture with dedicated crypto- processor</li>
               <li>Integrated network communication with onboard 10/100/1000 Ethernet IP port</li>
-              <li>Firmware upgrade via Velocity</li>
-              <li>Wet or dry relay hardware setting</li>
+              <li>Auxiliary/alarm relay output</li>
+              <li>Integrated hardware encryption with enabled devices</li>
+              <li>High-security supervised alarm inputs</li>
+              <li>Configurable relay outputs (door or general purpose)</li>
+              <li>Open Secure Device Protocol (OSDP)</li>
+              <li>ScramblePads, TS Readers, and third-party OSDP readers (i.e., Veridt Stealth Series)</li>
+              <li>Reader LED and buzzer control</li>
+              <li>Extended cable runs</li>
+              <li>Entry/exit reader setup</li>
+              <li>Supports Wiegand readers</li>
+              <li>Global I/O</li>
+              <li>Firmware can be updated through Velocity</li>
+              <li>Powered at the edge by PoE+ or external power supply</li>
+              <li>Special circuitry to protect reader/relay terminals from excessive current draws</li>
+              <li>Supports a wide variety of readers and credentials</li>
+              <li>Built-in protection from door strikes and mag locks that generate large inrush current demand during power-up and large induced current demand during power-down</li>
             </ul>
           </section>
 
@@ -105,6 +128,28 @@ const HirschMx1Me = () => {
                 Access Control System
               </span>
             </div>
+
+             {/* SHARE SECTION */}
+            <div className="mt-8">
+              <p className="font-medium text-black mb-3">Share:</p>
+              <div className="flex gap-3">
+                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
+                  <img src="/src/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
+                </div>
+                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
+                  <img src="/src/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
+                </div>
+                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
+                  <img src="/src/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
+                </div>
+                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
+                  <img src="/src/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
+                </div>
+                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
+                  <img src="/src/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
+                </div>
+              </div>
+            </div>  
         </main>
 
         {/* Right Column: Sidebar */}
@@ -153,4 +198,4 @@ const HirschMx1Me = () => {
   );
 };
 
-export default HirschMx1Me;
+export default Mx1Controller;
