@@ -63,6 +63,14 @@ import HirschMx1Me from "./components/pages/frontend/OurProducts/Honeywell Produ
 import AlarmExpansion from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hirsch/AlarmExpansion";
 import Mx1Controller from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hirsch/Mx1Controller";
 import MxController from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hirsch/MxController";
+import Snib3 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hirsch/Snib3";
+import RelayExpansion from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hirsch/RelayExpansion";
+import Reb8 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hirsch/Reb8";
+import CirrusCloud from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hirsch/CirrusCloud";
+import UfhCredentials from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hirsch/UfhCredentials";
+import TsCards from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hirsch/TsCards";
+import HfKeyFob from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hirsch/HfKeyFob";
+import WristbandProximity from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hirsch/WristbandProximity";
 
 
 
@@ -170,7 +178,14 @@ const App = () => {
              <Route path="/our-products/hirsch/hirsch-mx-1-me-controller" element={<HirschMx1Me />} />
              <Route path="/our-products/hirsch/hirsch-mx-1-controller" element={<Mx1Controller />} />
              <Route path="/our-products/hirsch/hirsch-mx-controller" element={<MxController />} />
-
+             <Route path="/our-products/hirsch/snib3-secure-network-interface-board" element={<Snib3/>} />
+             <Route path="/our-products/hirsch/rs-485-relay-expansion-board" element={<RelayExpansion/>} />
+             <Route path="/our-products/hirsch/reb8-relay-expansion-board" element={<Reb8/>} />
+             <Route path="/our-products/hirsch/cirrus-cloud-access-control" element={<CirrusCloud/>} />
+             <Route path="/our-products/hirsch/utrust-uhf-credentials" element={<UfhCredentials/>} />
+             <Route path="/our-products/hirsch/utrust-ts-cards" element={<TsCards/>} />
+             <Route path="/our-products/hirsch/utrust-hf-key-fob" element={<HfKeyFob/>} />
+             <Route path="/our-products/hirsch/utrust-wristband-proximity" element={<WristbandProximity/>} />
 
 
 
