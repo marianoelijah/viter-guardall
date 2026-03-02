@@ -71,6 +71,13 @@ import UfhCredentials from "./components/pages/frontend/OurProducts/Honeywell Pr
 import TsCards from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hirsch/TsCards";
 import HfKeyFob from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hirsch/HfKeyFob";
 import WristbandProximity from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hirsch/WristbandProximity";
+import ProximityCredentials from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hirsch/ProximityCredentials";
+import PcGeneral from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hirsch/PcGeneral";
+import TB01 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Mag/TB01";
+import FR330 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Mag/FR330";
+import FR320 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Mag/FR320";
+import FR300 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Mag/FR300";
+import DF1A from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Mag/DF1A";
 
 
 
@@ -186,7 +193,15 @@ const App = () => {
              <Route path="/our-products/hirsch/utrust-ts-cards" element={<TsCards/>} />
              <Route path="/our-products/hirsch/utrust-hf-key-fob" element={<HfKeyFob/>} />
              <Route path="/our-products/hirsch/utrust-wristband-proximity" element={<WristbandProximity/>} />
+             <Route path="/our-products/hirsch/utrust-proximity-credentials-mag-stripe-card" element={<ProximityCredentials/>} />
+             <Route path="/our-products/hirsch/utrust-proximity-credentials" element={<PcGeneral/>} />
 
+             {/* Mag Product Details Route */}
+             <Route path="/our-products/mag/tb01" element={<TB01/>} />
+             <Route path="/our-products/mag/fr330" element={<FR330/>} />
+             <Route path="/our-products/mag/fr320" element={<FR320/>} />
+             <Route path="/our-products/mag/fr300" element={<FR300/>} />
+             <Route path="/our-products/mag/df1a" element={<DF1A/>} />
 
 
 
