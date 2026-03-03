@@ -78,6 +78,23 @@ import FR330 from "./components/pages/frontend/OurProducts/Honeywell Product-Inf
 import FR320 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Mag/FR320";
 import FR300 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Mag/FR300";
 import DF1A from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Mag/DF1A";
+import CDUE133L from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Mag/CDUE133L";
+import CDUE130L from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Mag/CDUE130L";
+import CDS18 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Mag/CDS18";
+import AR401RO16 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Mag/AR401RO16";
+import AR837EF from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Mag/AR837EF";
+import AR837E from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Mag/AR837E";
+import AR725E from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Mag/AR725E";
+import AR723U from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Mag/AR723U";
+import AR727H from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Mag/AR727H";
+import AR721H from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Mag/AR721H";
+import AR327H from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Mag/AR327H";
+import AR331HT from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Mag/AR331HT";
+import AR331HS from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Mag/AR331HS";
+import AR331U from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Mag/AR331U";
+import AR321H from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Mag/AR321H";
+import CCMS from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Uber/CCMS";
+import KeysManagement from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Uber/KeysManagement";
 
 
 
@@ -202,6 +219,30 @@ const App = () => {
              <Route path="/our-products/mag/fr320" element={<FR320/>} />
              <Route path="/our-products/mag/fr300" element={<FR300/>} />
              <Route path="/our-products/mag/df1a" element={<DF1A/>} />
+             <Route path="/our-products/mag/cdue133l" element={<CDUE133L/>} />
+             <Route path="/our-products/mag/cdue130l" element={<CDUE130L/>} />
+             <Route path="/our-products/mag/cds18" element={<CDS18/>} />
+             <Route path="/our-products/mag/ar401ro16" element={<AR401RO16/>} />
+             <Route path="/our-products/mag/ar837ef" element={<AR837EF/>} />
+             <Route path="/our-products/mag/ar837e" element={<AR837E/>} />
+             <Route path="/our-products/mag/ar725e" element={<AR725E/>} />
+             <Route path="/our-products/mag/ar723u" element={<AR723U/>} />
+             <Route path="/our-products/mag/ar727h" element={<AR727H/>} />
+             <Route path="/our-products/mag/ar721h" element={<AR721H/>} />
+             <Route path="/our-products/mag/ar327h" element={<AR327H/>} />
+             <Route path="/our-products/mag/ar331ht" element={<AR331HT/>} />
+             <Route path="/our-products/mag/ar331hs" element={<AR331HS/>} />
+             <Route path="/our-products/mag/ar331u" element={<AR331U/>} />
+             <Route path="/our-products/mag/ar321h" element={<AR321H/>} />
+
+             {/* UberGard Product Details Route */}
+             <Route path="/our-products/ubergard/software-ccms" element={<CCMS />} />
+             <Route path="/our-products/ubergard/keys-management-system" element={<KeysManagement />} />
+            
+            {/* //  <Route path="/our-products/ubergard/gen5-touchscreen" element={</>} />
+            //  <Route path="/our-products/ubergard/3d-air-22" element={</>} />
+            //  <Route path="/our-products/ubergard/air-12" element={</>} />
+            //  <Route path="/our-products/ubergard/3d-fly" element={</>} /> */}
 
 
 

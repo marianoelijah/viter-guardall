@@ -3,16 +3,15 @@ import { NavLink } from 'react-router-dom';
 import Header from '../../../partials/Header';
 import Footer from '../../../partials/Footer';
 
-const CDUE133L = () => {
+const CDS18 = () => {
   const specs = [
-    { label: "Dual Frequency", value: "UHF 919-923MHz and EM 125Khz" },
-    { label: "Printed Number", value: "UHF Wiegand 26/34, EM Wiegand 26/34" },
-    { label: "Dimension", value: "85 x 55 x 0.84mm" },
-    { label: "Weight", value: "6g" },
+    { label: "Frequency", value: "EM  125KHZ" },
+    { label: "Printed Number", value: "ABA40/ Wiegand 26" },
+    { label: "Dimension", value: "85 x 55 x 1.8mm" },
+    { label: "Weight", value: "11g" },
     { label: "Printing on Card", value: "Yes" },
     { label: "Color", value: "White" },
-    { label: "Material", value: "PET" },
-    { label: "Reading Distance", value: "10-18 cm" },
+    { label: "Reading Distance", value: "5-10" },
   ];
 
   return (
@@ -22,7 +21,7 @@ const CDUE133L = () => {
       {/* Header Banner */}
       <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
         <h1 className="text-3xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
-         CDUE133L UHF & EM Hybrid Card
+            CDS18 EM Proximity Card
         </h1>
       </header>
 
@@ -33,13 +32,13 @@ const CDUE133L = () => {
           {/* Left Column: Product Info */}
           <div className="lg:col-span-3">
             <p className="text-gray-800 text-[17px] mb-6">
-           A dual frequency keycard with 0.84mm thickness and can be used for AR300U Xclone UHF long-range reader. 
+              A 125Khz proximity card with 1.8mm thickness. 
             </p>
 
             <section className="mb-8">
               <h2 className="font-bold text-xl mb-2 text-black">Product Description:</h2>
               <p className="text-gray-800 text-[17px] leading-relaxed">
-              CDUE133L is a dual-frequency card. UHF (Anti clone) and EM (125Khz) 0.84mm thickness. Printed wiegand number on card. Program cards to the system are easier with a printed number. It can be used for AR300U Xclone UHF long-range reader
+              CDS18 is a 125Khz proximity card. 1.8mm thickness. Printed wiegand number. Program card to system is easier with a printed number.
               </p>
             </section>
 
@@ -154,4 +153,4 @@ const CDUE133L = () => {
   );
 };
 
-export default CDUE133L;
+export default CDS18;

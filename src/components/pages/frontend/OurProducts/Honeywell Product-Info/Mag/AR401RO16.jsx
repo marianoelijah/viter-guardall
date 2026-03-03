@@ -3,16 +3,25 @@ import { NavLink } from 'react-router-dom';
 import Header from '../../../partials/Header';
 import Footer from '../../../partials/Footer';
 
-const CDUE133L = () => {
+const AR401RO16 = () => {
   const specs = [
-    { label: "Dual Frequency", value: "UHF 919-923MHz and EM 125Khz" },
-    { label: "Printed Number", value: "UHF Wiegand 26/34, EM Wiegand 26/34" },
-    { label: "Dimension", value: "85 x 55 x 0.84mm" },
-    { label: "Weight", value: "6g" },
-    { label: "Printing on Card", value: "Yes" },
-    { label: "Color", value: "White" },
-    { label: "Material", value: "PET" },
-    { label: "Reading Distance", value: "10-18 cm" },
+    { label: "Power Supply", value: "10-24VDC" },
+    { label: "Power Consumption", value: "8W" },
+    { label: "Communication Interface", value: "RS-485" },
+    { label: "Data transfer rate", value: "RS-485: 9600 bps/ 19200 bps (N, 8, 1)" },
+    { label: "Channel", value: "16 form C relay output" },
+    { label: "Indicator", value: "Power; TX/RX; relay (on/off)" },
+    { label: "Real time clock", value: "No" },
+    { label: "Housing material", value: "metal " },
+    { label: "Dimension (mm)", value: "180 (L) x 231 (W) x 62 (H)" },
+    { label: "Weight (g)", value: "1780+- 10" },
+  ];
+
+  const productFeatures = [
+    "Communication: rs-485",
+    "16 form C relay output",
+    "16 com. were dispatched 16 relay",
+    "N.O/N.C select via jumper",
   ];
 
   return (
@@ -22,7 +31,7 @@ const CDUE133L = () => {
       {/* Header Banner */}
       <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
         <h1 className="text-3xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
-         CDUE133L UHF & EM Hybrid Card
+           AR401RO16 16-Channel Digital Output Module
         </h1>
       </header>
 
@@ -33,14 +42,25 @@ const CDUE133L = () => {
           {/* Left Column: Product Info */}
           <div className="lg:col-span-3">
             <p className="text-gray-800 text-[17px] mb-6">
-           A dual frequency keycard with 0.84mm thickness and can be used for AR300U Xclone UHF long-range reader. 
+             Designed to accomodate up to 16 channels, this card reader can connect up to 16 lift levels.
             </p>
 
             <section className="mb-8">
               <h2 className="font-bold text-xl mb-2 text-black">Product Description:</h2>
               <p className="text-gray-800 text-[17px] leading-relaxed">
-              CDUE133L is a dual-frequency card. UHF (Anti clone) and EM (125Khz) 0.84mm thickness. Printed wiegand number on card. Program cards to the system are easier with a printed number. It can be used for AR300U Xclone UHF long-range reader
+              AR401R016 is a 16 channel relay interface to connect up to 16 lift levels. 
+              Multiple AR401R016 can be looped together via RS485 bus to achieve more than 16 floors. 
+              All relays are NC by default. Upon power up, all relay will become NO. 
+              Card access reader will instruct AR4016R016 lift relay to open designated relay 
+              depending on the floor allowed for access permission.
               </p>
+
+               <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
+            <ul className="list-disc ml-5 text-[17px] space-y-1 text-black">
+              {productFeatures.map((feature, index) => (
+                <li key={index}>{feature}</li>
+              ))}
+            </ul>
             </section>
 
 
@@ -154,4 +174,4 @@ const CDUE133L = () => {
   );
 };
 
-export default CDUE133L;
+export default AR401RO16;

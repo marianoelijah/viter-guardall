@@ -3,16 +3,51 @@ import { NavLink } from 'react-router-dom';
 import Header from '../../../partials/Header';
 import Footer from '../../../partials/Footer';
 
-const CDUE133L = () => {
+const AR837EF = () => {
   const specs = [
-    { label: "Dual Frequency", value: "UHF 919-923MHz and EM 125Khz" },
-    { label: "Printed Number", value: "UHF Wiegand 26/34, EM Wiegand 26/34" },
-    { label: "Dimension", value: "85 x 55 x 0.84mm" },
-    { label: "Weight", value: "6g" },
-    { label: "Printing on Card", value: "Yes" },
-    { label: "Color", value: "White" },
-    { label: "Material", value: "PET" },
-    { label: "Reading Distance", value: "10-18 cm" },
+    { label: "Model", value: "AR837EF" },
+    { label: "Card user", value: "16,000 card users" },
+    { label: "Event memory", value: "32,000" },
+    { label: "Time zone", value: "63" },
+    { label: "Holiday per year", value: "120" },
+    { label: "Door group", value: "255" },
+    { label: "Anti-passback", value: "YES (Local anti-passback)" },
+    { label: "Alarm function", value: "Door sensor input for force entrance and door open too long" },
+    { label: "Duress function", value: "4 duress code pin number" },
+    { label: "LCD screen for AR837EF only", value: "Graphical big LCD 128 x 64 (4 line message, 16 character per line)" },
+    { label: "External weigand port", value: "Yes, WG26/WG34" },
+    { label: "Push button input", value: "YES" },
+    { label: "Access mode Pin only for AR837EF", value: "Fingerprint only* Card only/ Card or PIN/ Card + PIN" },
+    { label: "Fingerprint sensor", value: "Optical sensor OS" },
+    { label: "1:1000 identification time", value: "700 msec" },
+    { label: "FRR", value: "0.01%" },
+    { label: "Fingerprint module CPU", value: "400 MHz DSP" },
+    { label: "Image size", value: "384 Bytes" },
+    { label: "Fingerprint capacity", value: "9,000 templates (each user 2 templates)" },
+    { label: "Sensor size (mm)", value: "63 (L) x 43 (W) x 10(H)" },
+    { label: "Encryption", value: "256 bit AES (fingerprint data protection)" },
+    { label: "Card reading range", value: "EM 5-8cm & Mirfare 2-5cm" },
+    { label: "Relay output", value: "1 x Door relay output1 x Alarm relay output" },
+    { label: "Door unlock travel time interval", value: "Toggle, 0.1 – 600 sec" },
+    { label: "Alarm relay timer", value: "Toggle, 0.1 – 600 sec" },
+    { label: "Communication interface", value: "RS485 & TCPIP" },
+    { label: "Serial port", value: "RS485, 9600, N, 8, 1" },
+    { label: "Ethernet TCPIP", value: "10/100M Base T" },
+    { label: "Power Consumption", value: "10 to 18VDC, Less than 5W" },
+    { label: "Operating temperature", value: "	0°C to 50°Cc" },
+    { label: "AR837EF dimension & weight", value: "128 x 147 x 65mm (LxWxH), 520g" },
+    { label: "AR8371EF dimension & weight", value: "151 x 81 x 73mm (LxWxH), 330g" },
+  ];
+
+  const productFeatures = [
+    "Text display on the LCD welcome screen can be programmed to display company names.",
+    "LCD display employee name (user 0-4999) when flash card",
+    "Built in 1 relay output for automation -activated according to duty time or pre-set weekly schedule.",
+    "Support more accurate duty based time attendance function",
+    "Ability to set expiry date for users",
+    "Assignable user range for multiple master card. Master card is used to as a alternative method to enter editing mode incase user forgot the password",
+    "Auto display current duty name according to the pre-set duty start time",
+    "Powerful access control function with fingerprint anti-passback",
   ];
 
   return (
@@ -22,7 +57,7 @@ const CDUE133L = () => {
       {/* Header Banner */}
       <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
         <h1 className="text-3xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
-         CDUE133L UHF & EM Hybrid Card
+          AR837EF Direct TCPIP Fingerprint with LCD & Keypad Panel
         </h1>
       </header>
 
@@ -33,14 +68,23 @@ const CDUE133L = () => {
           {/* Left Column: Product Info */}
           <div className="lg:col-span-3">
             <p className="text-gray-800 text-[17px] mb-6">
-           A dual frequency keycard with 0.84mm thickness and can be used for AR300U Xclone UHF long-range reader. 
+             A contemporary door access that has a manual keypad, LCD panel, and fingerprint biometric access. 
             </p>
 
             <section className="mb-8">
               <h2 className="font-bold text-xl mb-2 text-black">Product Description:</h2>
               <p className="text-gray-800 text-[17px] leading-relaxed">
-              CDUE133L is a dual-frequency card. UHF (Anti clone) and EM (125Khz) 0.84mm thickness. Printed wiegand number on card. Program cards to the system are easier with a printed number. It can be used for AR300U Xclone UHF long-range reader
+              High performance fingerprint reader built in LCD screen and keypad, support 125Khz 
+              & 13.56Mhz. RS485 & TCPIP interface. 0.8 sec identification time. 16K card users. 
+              32K event memory. 9000 fingerprint (2 fingers per user).
               </p>
+
+               <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
+            <ul className="list-disc ml-5 text-[17px] space-y-1 text-black">
+              {productFeatures.map((feature, index) => (
+                <li key={index}>{feature}</li>
+              ))}
+            </ul>
             </section>
 
 
@@ -154,4 +198,4 @@ const CDUE133L = () => {
   );
 };
 
-export default CDUE133L;
+export default AR837EF;

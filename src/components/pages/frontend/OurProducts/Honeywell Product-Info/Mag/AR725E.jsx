@@ -3,16 +3,52 @@ import { NavLink } from 'react-router-dom';
 import Header from '../../../partials/Header';
 import Footer from '../../../partials/Footer';
 
-const CDUE133L = () => {
+const AR725E = () => {
   const specs = [
-    { label: "Dual Frequency", value: "UHF 919-923MHz and EM 125Khz" },
-    { label: "Printed Number", value: "UHF Wiegand 26/34, EM Wiegand 26/34" },
-    { label: "Dimension", value: "85 x 55 x 0.84mm" },
-    { label: "Weight", value: "6g" },
-    { label: "Printing on Card", value: "Yes" },
-    { label: "Color", value: "White" },
-    { label: "Material", value: "PET" },
-    { label: "Reading Distance", value: "10-18 cm" },
+    { label: "Model", value: "AR837EF" },
+    { label: "Frequency", value: "Dual frequency EM125KHz and 13.56 Mhz" },
+    { label: "Standard", value: "Dual standard EM and Mifare ISO14443A" },
+    { label: "Reading Range (Depends on Tags)", value: "5-15cm2-5cm" },
+    { label: "Power Supply", value: "10-24VDC" },
+    { label: "Power consumption", value: "5W" },
+    { label: "Communication Interface", value: "RS-485 or Ethernet" },
+    { label: "Baud Rate", value: "9600 bps(N,8,1) or 10/100M Ease T" },
+    { label: "Temperature", value: "-10。C to +60。C" },
+    { label: "Digital Input", value: "Egress(R.T.E.) / Door contact x 2" },
+    { label: "Relay Output", value: "Alarm Relay / Lock Relay" },
+    { label: "Lock Relay Time", value: "ON/OFF, 0.1-600 Sec." },
+    { label: "Alarm Time", value: "Toggle, 1-600 Sec" },
+    { label: "Tamper Switch", value: "Limit Switch (Form C)" },
+    { label: "User Capacity", value: "16,000" },
+    { label: "Event log", value: "32,000" },
+    { label: "External Reader", value: "1 Weigend Port" },
+    { label: "Anti-pass-back", value: "Yes" },
+    { label: "Lift Control", value: "64 Floor, 16,000 Users" },
+    { label: "Serial port", value: "Yes" },
+    { label: "Real Time Clock", value: "Yes" },
+    { label: "Transistor Output", value: "Arming LED/Alarm/ Duress/WG Lock Relay / Security trigger signal" },
+    { label: "Ingress Protection", value: "128*64 (4 Lines message, 16 Character each line)" },
+    { label: "Indicator", value: "6 LED & 1 Beeper" },
+    { label: "Keypad Material", value: "Illuminated Rubber" },
+    { label: "Housing Material", value: "RS485 & TCPIP" },
+    { label: "Time Zone", value: "63" },
+    { label: "Operation Mode", value: "Standalone/ Networking" },
+    { label: "Color", value: "Black / Silver" },
+    { label: "Dimensions (mm)", value: "133(L)X96(W)X25(H)" },
+    { label: "Weight (g)", value: "230±10" },
+  ];
+
+  const productFeatures = [
+    "Metal Frame Selectable",
+    "Invisible Keypad",
+    "Backlight Touch Keypad",
+    "Support SOYAL Cascade Structure",
+    "Supports dynamic graphic control and timely jump to emergency events.",
+    "Support for elevator scheduling control.",
+    "Built-in 125KHz and 13.56MHz induction frequencies (EB: 125KHz inductio frequency / ED: 13.56MHz induction frequency / ES: Built-in dual-frequency induction frequency of 125KHz + 13.56MHz)",
+    "2 Sets of UART Ports",
+    "Communication Redundancy",
+   
   ];
 
   return (
@@ -22,7 +58,7 @@ const CDUE133L = () => {
       {/* Header Banner */}
       <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
         <h1 className="text-3xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
-         CDUE133L UHF & EM Hybrid Card
+          AR725E Direct TCPIP Illuminated Touch Keypad Panel
         </h1>
       </header>
 
@@ -33,14 +69,24 @@ const CDUE133L = () => {
           {/* Left Column: Product Info */}
           <div className="lg:col-span-3">
             <p className="text-gray-800 text-[17px] mb-6">
-           A dual frequency keycard with 0.84mm thickness and can be used for AR300U Xclone UHF long-range reader. 
+               A shiny silverblack door access with built-in touchpad and patented anti-vibration relay. 
             </p>
 
             <section className="mb-8">
               <h2 className="font-bold text-xl mb-2 text-black">Product Description:</h2>
               <p className="text-gray-800 text-[17px] leading-relaxed">
-              CDUE133L is a dual-frequency card. UHF (Anti clone) and EM (125Khz) 0.84mm thickness. Printed wiegand number on card. Program cards to the system are easier with a printed number. It can be used for AR300U Xclone UHF long-range reader
+            AR725E is a card access reader typically installed at the door, pedestrian gate and barrier 
+            gate to restrict unauthorized access. It reads EM or Mifare proximity cards. It supports RS485
+             and TCPIP connection, 16,000 users and 32000 event memory. It has a built-in touch panel 
+             keypad.
               </p>
+
+               <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
+            <ul className="list-disc ml-5 text-[17px] space-y-1 text-black">
+              {productFeatures.map((feature, index) => (
+                <li key={index}>{feature}</li>
+              ))}
+            </ul>
             </section>
 
 
@@ -154,4 +200,4 @@ const CDUE133L = () => {
   );
 };
 
-export default CDUE133L;
+export default AR725E;
