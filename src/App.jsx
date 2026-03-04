@@ -95,6 +95,7 @@ import AR331U from "./components/pages/frontend/OurProducts/Honeywell Product-In
 import AR321H from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Mag/AR321H";
 import CCMS from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Uber/CCMS";
 import KeysManagement from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Uber/KeysManagement";
+import Gen5 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Uber/Gen5";
 
 
 
@@ -238,8 +239,9 @@ const App = () => {
              {/* UberGard Product Details Route */}
              <Route path="/our-products/ubergard/software-ccms" element={<CCMS />} />
              <Route path="/our-products/ubergard/keys-management-system" element={<KeysManagement />} />
-            
-            {/* //  <Route path="/our-products/ubergard/gen5-touchscreen" element={</>} />
+             <Route path="/our-products/ubergard/gen5-touchscreen" element={<Gen5/>} />
+
+            {/* //  
             //  <Route path="/our-products/ubergard/3d-air-22" element={</>} />
             //  <Route path="/our-products/ubergard/air-12" element={</>} />
             //  <Route path="/our-products/ubergard/3d-fly" element={</>} /> */}

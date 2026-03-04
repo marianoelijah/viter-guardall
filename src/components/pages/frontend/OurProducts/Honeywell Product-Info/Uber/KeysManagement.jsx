@@ -29,15 +29,20 @@ const KeysManagement = () => {
   ];
 
    const techSpecs = [
-    { ekms: "Built-In Operation Mode", keys: "M4", width: "M6", height: "M8", depth: "1", weight: "2" },
-    { ekms: "Card User", keys: "1024", width: "65,536", height: "1024", depth: "1", weight: "2" },
-    { ekms: "Event Memory", keys: "1200", width: "NONE", height: "1200", depth: "1", weight: "2" },
-    { ekms: "Time Zone/ Holiday", keys: "11/120", width: "NONE", height: "11/120", depth: "1", weight: "2" },
-    { ekms: "Anti-passback", keys: "YES", width: "NONE", height: "YES", depth: "1", weight: "2" },
-    { ekms: "Alarm (tamper, force entry & door open too long)", keys: "YES", width: "NONE", height: "YES", depth: "1", weight: "2" },
-    { ekms: "Elevator Control", keys: "1024 users, 32 floors", width: "NONE", height: "1024 users, 32 floors", depth: "1", weight: "2" },
-    { ekms: "Direct PC Software", keys: "YES", width: "NONE", height: "YES", depth: "1", weight: "2" },
-    { ekms: "Multi reader networking with AR716E", keys: "YES", width: "NONE", height: "YES", depth: "1", weight: "2" },
+    { ekms: "iKLAS-G3-24", keys: "12, 18, 24, 30", width: "430 mm", height: "510 mm", depth: "180 mm", weight: "12 kg" },
+    { ekms: "iKLAS-G3-48", keys: "36, 42, 48, 54", width: "430 mm", height: "750mm", depth: "180 mm", weight: "16 kg" },
+    { ekms: "iKLAS-G3-66", keys: "60, 66, 72", width: "630 mm", height: "855 mm", depth: "220 mm", weight: "53 kg" },
+    { ekms: "iKLAS-G3-96", keys: "84, 96, 108", width: "880 mm", height: "685 mm", depth: "220 mm", weight: "60 kg" },
+    { ekms: "iKLAS-G3-132", keys: "120, 132, 144", width: "900 mm", height: "855 mm", depth: "220 mm", weight: "65 kg" },
+    { ekms: "iKLAS-G3-192", keys: "156, 168, 180, 192 G3 Key Master", width: "710 mm 165 mm", height: "1300 mm 375 mm", depth: "280 mm", weight: "92 kg" },
+    { ekms: "iKLAS-G3-252", keys: "204, 216, 228, 252 G3 Key Master", width: "710 mm 165 mm", height: "1600 mm 375 mm", depth: "280 mm 120 mm", weight: "115 kg" },
+    { ekms: "iKLAS-G5-24", keys: "12,18,24,30", width: "440 mm", height: "540 mm", depth: "180 mm", weight: "23 kg" },
+    { ekms: "iKLAS-G5-48", keys: "36, 42, 48, 54", width: "440 mm", height: "784 mm", depth: "180 mm", weight: "31 kg" },
+    { ekms: "iKLAS-G5-66", keys: "60, 66, 72", width: "630 mm", height: "855 mm", depth: "180 mm", weight: "31 kg" },
+    { ekms: "iKLAS-G5-96", keys: "84, 96, 108", width: "880 mm", height: "685 mm", depth: "220 mm", weight: "60 kg" },
+    { ekms: "iKLAS-G5-132", keys: "120, 132, 144", width: "900 mm", height: "855 mm", depth: "220 mm", weight: "65 kg" },
+    { ekms: "iKLAS-G5-192", keys: "156 ,168, 180, 192 G5 Key Master", width: "710 mm 200 mm", height: "1300 mm 270 mm", depth: "280 mm 70mm", weight: "92 kg" },
+    { ekms: "iKLAS-G5-252", keys: "204, 216, 228, 252 G5 Key Master", width: "710 mm 200 mm", height: "1600 mm 270 mm", depth: "280 mm 70mm", weight: "115 kg" },
     
   ];
 
@@ -87,24 +92,24 @@ const KeysManagement = () => {
             <h2 className="font-bold text-xl text-black mb-4">Technical Specification:</h2>
             <div className="overflow-x-auto border border-black">
               <table className="w-full text-xs text-left">
-                <thead className="bg-gray-100 border-b border-black">
+                <thead className="bg-gray-100 border-b border-black text-black pb-4">
                   <tr>
                     <th className="p-2 border-r text-black text-[17px] border-black w-1/4">
                        iKLAS EKMS Model
                     </th>
-                    <th className="p-2 border-r border-black text-gray-700 text-[17px]">
+                    <th className="p-2 border-r border-black text-[17px]">
                         Number of Keys
                     </th>
-                    <th className="p-2 border-r border-black text-gray-700 text-[17px]">
+                    <th className="p-2 border-r border-black text-[17px]">
                         Width
                     </th>
-                    <th className="p-2 text-gray-700 text-[17px]">
+                    <th className="p-2 border-r border-black text-[17px]">
                         Height
                     </th>
-                    <th className="p-2 border-r border-black text-gray-700 text-[17px]">
+                    <th className="p-2 border-r border-black text-[17px]">
                         Depth
                     </th>
-                    <th className="p-2 text-gray-700 text-[17px]">
+                    <th className="p-2 text-[17px]">
                         Weight
                     </th>
                   </tr>
@@ -157,7 +162,7 @@ const KeysManagement = () => {
         {/* Sidebar */}
         <aside className="lg:w-1/4 space-y-6">
          <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
-            <h3 className="text-xl font-bold text-black mb-4 border-b pb-1">More By UberGard</h3>
+            <h3 className="text-xl font-bold text-black mb-4 border-b pb-1">More By UBERGARD</h3>
             <ul className="text-[17px] space-y-4 text-gray-500 transition-colors">
               <li className='cursor-pointer hover:text-[#f08c09]'>Onity DirectKey with Serene</li>
               <li className='cursor-pointer hover:text-[#f08c09]'>MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs</li>
