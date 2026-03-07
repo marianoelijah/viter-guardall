@@ -165,12 +165,12 @@ const ProductCard = ({ title, description, image, detailRoute }) => (
 
 const Hirsch = () => {
   return (
-    <div className="bg-[#f0f4f8] min-h-screen py-16 px-6 lg:px-12">
+    <div className="bg-[#f0f4f8] min-h-screen px-6 lg:px-12">
       <div className="max-w-7xl mx-auto">
         
         {/* Page Header - Clean Normal Weight */}
-        <header className="text-center mb-16 relative">
-          <h2 className="text-lg md:text-5xl lg:text-5xl font-medium text-[#0d3874] mb-6 tracking-tight">
+        <header className="text-center py-16 px-6 md:px-10 lg:px-20">
+          <h2 className="text-lg md:text-5xl lg:text-5xl font-figtree text-[#0d3874] mb-6 tracking-tight">
             Access Control System – Hirsch
           </h2>
           <div className="h-1 w-24 bg-[#2257a0] mx-auto rounded-full opacity-30"></div>
@@ -189,10 +189,6 @@ const Hirsch = () => {
           ))}
         </div>
 
-        {/* Brand Footer */}
-        <footer className="mt-24 pt-10 border-t border-gray-300 text-center text-gray-500 text-sm tracking-widest uppercase">
-          Hirsch Identification Solutions | High-Security Access Control
-        </footer>
       </div>
     </div>
   );

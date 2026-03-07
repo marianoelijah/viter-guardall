@@ -1,0 +1,197 @@
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import Header from '../../../partials/Header';
+import Footer from '../../../partials/Footer';
+
+
+const MarinePanel = () => {
+  const specs = [
+    { label: "LED lighting consumption", value: "3.5 mA per card holder"},
+    { label: "ST1 Series Board", value: "Plate measurements: 150×180 mm (width-height).Built-in box measurements: 130x160x55 mm (width-height-depth).Surface box measurements: 154x184x95 mm (width-height-depth).Visor measurements: 154x184x40 mm (width-height-depth)." },
+    { label: "Power", value: "18-24 Vdc" },
+    { label: "Consumption", value: "at rest: 94 mA.active audio: 550 mA." },
+    { label: "Audio Power ", value: "Audio power in the home-street direction: 2WAudio power in the street-home direction: 0.15WAdjustable volume in both directionsOperating temperature: -25 to 70 ºC" },
+    { label: "Technology", value: "DUOX" },
+    { label: "Weight", value: "1.04 kg" },
+    { label: "Measures of the packed product", value: "21×15,8×7,8 cm" },
+    { label: "EAN 13", value: "8424299443324" },
+   
+   
+  ];
+
+//   const productFeatures = [
+//     "Call To Apartment – Visitors can call the apartment associated with the plate.",
+//     "Call To Concierge – It is possible to make calls for assistance to the concierge associated with the panel..",
+//     "Aluminum profile",
+//     "Tempered glass",
+//     "High definition color camera",
+//     "Low consumption",
+//     "Extended operating range.",
+//     "Modular Linux-based platform.",
+//     "Remote Firmware Update",
+//   ];
+
+  return (
+    <>
+    <Header />
+     <div className="bg-slate-50 min-h-screen font-sans">
+      {/* Header Banner */}
+      <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
+        <h1 className="text-3xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
+          DUOX PLUS VEO WIFI 4.3” MONITOR
+        </h1>
+      </header>
+
+      
+      <div className="max-w-6xl mx-auto px-4 py-8 flex flex-col lg:flex-row gap-8">
+        {/* Main Content Container */}
+        <main className="lg:w-3/4 bg-gray-200 p-8 shadow-sm">
+            <p className="text-gray-800 text-[17px] mb-6">
+             Suitable for homes and offices, this simple and easy to use video entry monitor has a built-in- WIFI. It allows users to receive calls and manage access control from their smartphones.
+            </p>
+
+            <section className="mb-8">
+              <h2 className="font-bold text-xl mb-2 text-black">Product Description:</h2>
+              <p className="text-gray-800 text-[17px] leading-relaxed">
+                VEO WIFI is equipped with a Wi-Fi connection that allows calls forwarding to mobile devices. 
+                Thanks to the Fermax BLUE app, available free of charge on Play Store and App Store, 
+                the functions of the video doorphone can be managed from a smartphone or a tablet, 
+                in order to connect you to your home, wherever you are. The DUOX VEO WIFI monitor is 
+                made of high-impact ABS plastic. It incorporates a 4,3” (16:9) panoramic color TFT screen. 
+                Its unique handset design incorporating a magnet enables the user to put it back into position 
+                correctly when the call is finished. Its balanced design of pure lines is distinguishing, modern 
+                and minimal.
+              </p>
+
+               {/* <h2 className="font-bold text-xl text-black mb-2">Product Features/ Specifications:</h2>
+            <ul className="list-disc ml-5 text-[17px] space-y-1 text-black">
+              {productFeatures.map((feature, index) => (
+                <li key={index}>{feature}</li>
+              ))}
+            </ul> */}
+
+            </section>
+
+            {/* Technical Specifications Table */}
+                       <section>
+                         <h2 className="font-bold text-xl text-black mb-4">Technical Specification:</h2>
+                         <div className="border border-gray-500 overflow-hidden">
+                           <table className="w-full text-left text-xs border-collapse">
+                             <tbody>
+                               {specs.map((item, idx) => (
+                                 <React.Fragment key={idx}>
+                                   {item.type === 'header' ? (
+                                     <tr className="bg-gray-200">
+                                       <th colSpan="2" className="p-2 border-b border-gray-500 text-[15px] text-black font-bold uppercase tracking-wider">
+                                         {item.label}
+                                       </th>
+                                     </tr>
+                                   ) : (
+                                     <tr className={idx % 2 === 0 ? 'bg-gray-100' : 'bg-gray-50'}>
+                                       <td className="p-3 border-b border-r border-gray-500 font-bold w-1/3 text-[15px] text-black bg-gray-50/50">
+                                         {item.label}
+                                       </td>
+                                       <td className="p-3 border-b border-gray-500 text-gray-800 whitespace-pre-line text-[15px] hover:bg-slate-50/50 transition-colors">
+                                         {item.value}
+                                       </td>
+                                     </tr>
+                                   )}
+                                 </React.Fragment>
+                               ))}
+                             </tbody>
+                           </table>
+                         </div>
+                       </section>
+
+            {/* <img src="" alt="" /> */}
+            
+             
+            {/* Tags & Social */}
+           <div className="flex flex-wrap gap-3 mb-8 mt-10">
+              <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
+                FERMAX
+              </span>
+              
+              <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
+                Audio-Video Intercom & PA-BGM
+              </span>
+            </div>
+
+            {/* SHARE SECTION */}
+            <div className="mt-8">
+              <p className="font-medium text-black mb-3">Share:</p>
+              <div className="flex gap-3">
+                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
+                  <img src="/src/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
+                </div>
+                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
+                  <img src="/src/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
+                </div>
+                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
+                  <img src="/src/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
+                </div>
+                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
+                  <img src="/src/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
+                </div>
+                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
+                  <img src="/src/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
+                </div>
+              </div>
+            </div>
+
+        </main>
+
+          {/* Sidebar */}
+              <aside className="lg:w-1/4 space-y-6"> 
+                     <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
+                        <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By FERMAX</h3>
+                        <ul className="text-[17px] space-y-4 text-gray-500 transition-colors">
+                          <li className='cursor-pointer hover:text-[#f08c09]'>Onity DirectKey with Serene</li>
+                          <li className='cursor-pointer hover:text-[#f08c09]'>MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs</li>
+                          <li className='cursor-pointer hover:text-[#f08c09]'>INR 415 256-Channel 12 Bay RAID Rackmount Standalone</li>
+                          <li className='cursor-pointer hover:text-[#f08c09]'>GNR 340 100-Channel Tower Standalone</li>
+                          <li className='cursor-pointer hover:text-[#f08c09]'>ENR 130 16-Channel Desktop Standalone NVR - No HDD Included</li>
+                          <li className='cursor-pointer hover:text-[#f08c09]'>Z86 Outdoor Network Dome Camera with Night Vision</li>
+                        </ul>
+                      </div>
+                      
+            
+            
+                      {/* Contact Card */}
+                     <div
+                          className="bg-blue-600 text-white p-6 rounded shadow-md overflow-hidden relative min-h-[200px]"
+                          style={{
+                            backgroundImage: `linear-gradient(rgba(30, 64, 175, 0.8), rgba(30, 64, 175, 0.8)), url('/src/assets/image/Our Products/quickalert.jpg')`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                          }}
+                        >
+                          <div className="relative z-10 px-4 max-w-3xl">
+                             <h3 className="text-xl font-semibold mb-3">
+                               Secure Your Piece Of Mind Today
+                             </h3>
+                             <p className="text-lg mb-4">
+                               Contact Guard-All now for a customized security solution
+                               that protects what matters most.
+                             </p>
+                          <button className="bg-blue-700 hover:bg-blue-400 text-white font-semibold px-4 py-2 rounded w-full">
+                            <NavLink to="/contacts" className="w-full h-full block">
+                            CONTACT US TODAY
+                            </NavLink>
+                          </button>
+                        </div>
+                      </div>
+            
+                </aside>
+
+         
+
+        </div>
+    </div>
+    <Footer />
+    </>
+   
+  );
+};
+
+export default MarinePanel;

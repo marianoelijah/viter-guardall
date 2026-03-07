@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+
 const products = [
   {
     title: "HON-FIN4000AC-100K: COMPACT FINGERPRINT DEVICE",
@@ -141,8 +142,10 @@ const ProductCard = ({ title, description, image, detailRoute }) => (
 );
 
 const Honeywell = () => {
+  
   return (
-    <div className='bg-white min-h-screen font-poppins'> 
+    <div className='bg-[#f0f4f8] min-h-screen px-6 lg:px-12'> 
+      <div className="max-w-7xl mx-auto">
       {/* Main Header - font-normal for a cleaner look */}
       <header className="text-center py-16 px-6 md:px-10 lg:px-20">
         <h2 className="text-lg md:text-5xl lg:text-5xl font-figtree text-[#0d3874] mb-6 tracking-tight">
@@ -168,14 +171,12 @@ const Honeywell = () => {
           </div>
 
           
-
-          <footer className="mt-20 text-center text-gray-500 text-sm tracking-widest uppercase border-t border-gray-300 pt-10">
-            © {new Date().getFullYear()} Honeywell Access Solutions | Secure Performance
-          </footer>
         </div>
       </div>
     </div>
+    </div>
   );
+
 };
 
 export default Honeywell;

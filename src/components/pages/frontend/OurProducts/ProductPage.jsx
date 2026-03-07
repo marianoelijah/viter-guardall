@@ -36,7 +36,7 @@ const ProductPage = () => {
         { name: "Honeywell", logo: "/src/assets/image/products logo/HONEYWELL.png", path: "/products/honeywell" },
         { name: "HIKVISION", logo: "/src/assets/image/products logo/Hikvision.png", path: "/products/hikvision" },
         { name: "ACTi", logo: "/src/assets/image/products logo/Acti.png", path: "/products/acti" },
-        { name: "DAHUA", logo: "/src/assets/image/AJHua.png", path: "/products/dahua" }
+        { name: "DAHUA", logo: "/src/assets/image/products logo/AJHua.png", path: "/products/dahua" }
       ]
     },
     {
@@ -154,11 +154,11 @@ const ProductPage = () => {
               className="bg-white rounded-[2.5rem] p-10 shadow-sm hover:shadow-2xl transition-all duration-500 group flex flex-col h-full border border-slate-100"
             >
               {/* Image Container */}
-              <div className="overflow-hidden rounded-3xl mb-8 aspect-square lg:aspect-video">
+              <div className="overflow-hidden mb-8 aspect-square lg:aspect-video">
                 <img 
                   src={cat.img} 
                   alt={cat.title} 
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
+                  className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700" 
                 />
               </div>
 
@@ -177,24 +177,28 @@ const ProductPage = () => {
                 </p>
 
                 {/* Changed to a grid layout: 2 columns on mobile, 3 on larger screens */}
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-8 items-center justify-items-center">
-                  {cat.brands.map((brand, i) => (
-                    <Link 
-                      key={i} 
-                      to={brand.path} 
-                      className="transition-all duration-300 hover:scale-110 active:scale-90"
-                      title={`Explore ${brand.name}`}
-                    >
-                      <img 
-                        src={brand.logo} 
-                        alt={brand.name} 
-                        /* Removed fixed width 'w-[10rem]' to let grid handle it, increased height slightly */
-                        className="h-10 w-[15rem] object-contain transition-all duration-300"
-                      />
-                    </Link>
-                  ))}
-                </div>
+               {/* Brands Grid */}
+<div className="grid grid-cols-2 gap-x-6 gap-y-10 items-center justify-items-center">
+  {cat.brands.map((brand, i) => (
+    <Link 
+      key={i} 
+      to={brand.path} 
+      className="w-full flex justify-center transition-all duration-300 hover:scale-110 active:scale-95"
+    >
+      <img 
+        src={brand.logo} 
+        alt={brand.name} 
+        /* h-24 (96px) on mobile
+           lg:h-28 (112px) on desktop 
+           scale-110 manually zooms into the image to ignore some white space padding
+        */
+        className="h-24 lg:h-28 w-full object-contain transition-all duration-300 transform scale-110"
+      />
+    </Link>
+  ))}
+</div>
               </div>
+
             </div>
           ))}
         </div>

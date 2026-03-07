@@ -38,17 +38,15 @@ const Gen5 = () => {
           <h2 className="text-xl text-black font-semibold mb-2">Product Features:</h2>
           <ul className="list-disc pl-6 text-gray-800 text-[17px] space-y-1 mb-8">
             <li>Input UID Provides an alphanumeric keypad for users to enter their user ID.</li>
-            <li>Built-in door auto open time zone, holiday edit, door group & time setting. With multi-door control panel, support more time and group sets</li>
-            <li>Standalone / Networking / Support Cascade Structure</li>
-            <li>Support RS485 communication encryption, SSC (Soyal Security Communication)</li>
-            <li>In-field firmware upgrade</li>
-            <li>Support DESFire tags (Crypto comply with EAL4+)</li>
-            <li>Multiple access mode: card only, card or password, card and password</li>
-            <li>Multi output: door lock output (0.1-600 sec. and toggle mode)& alarm output (1-600 sec.)</li>
-            <li>Silent operation mode: push button mute and all mute</li>
-            <li>Auto relock for anti-trailing and sneaking</li>
-            <li>Access control, lift control, time attendance, payroll and SCADA: graphic monitoring & remote control function</li>
-            <li>Can be an encrypted RS485 reader if utilized with other brand’s controller</li>
+            <li>Multi Access Provides 2 or 3-user authentication for the withdrawal of critical keys.</li>
+            <li>Read Card Provides administrators/users with the convenience of reading card IDs, especially when a lost card is found.</li>
+            <li>View Status  Provides administrators with a one-glance overview of all key statuses.</li>
+            <li>User Info  Allows users to change their PIN and view which keys they are authorized to withdraw, as well as their key status.</li>
+            <li>Admin Setting Allows administrators to: Carry out system management, View/export transaction records with photo footage, Manage user profiles (add/edit/delete).</li>
+            <li>Forget Card  Allows users, once a month, to access the key system without their access card in a 2FA setup.</li>
+            <li>Send OTP  Allows ad hoc users to access the key system via an OTP remotely issued by an administrator through an optional GSM modem.</li>
+            <li>Login Pin  Provides a numeric keypad for users to enter their PIN.</li>
+            <li>Facial Recognition (FR)  Allows for access via FR plus the convenient facial enrolment of users in the presence of an administrator.</li>
           </ul>
 
       

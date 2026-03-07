@@ -33,10 +33,10 @@ const magProducts = [
     detailRoute: "/our-products/mag/DF1A"
   },
   {
-    title: "CDULI33L UHF & EM Hybrid Card",
+    title: "CDUE133L UHF & EM Hybrid Card",
     description: "A dual frequency tag compatible with UHF and EM range readers. Product design allows for both high and low frequency use.",
     image: "/src/assets/image/MAG IMG/CDULI33L UHF & EM HYBRID.png",
-    detailRoute: "/our-products/mag/CDULI33L"
+    detailRoute: "/our-products/mag/CDUE133L"
   },
   {
     title: "CDUE130L Dual Frequency UHF & EM Hybrid Card",
@@ -127,7 +127,7 @@ const magProducts = [
 const ProductCard = ({ title, description, image, detailRoute }) => (
   <div className="group bg-white border border-gray-200 rounded-xl p-5 flex flex-col h-full transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-2xl cursor-pointer">
     {/* Larger, Responsive Image Container */}
-    <div className="bg-gray-50 border border-gray-100 rounded-lg p-6 mb-5 flex items-center justify-center h-64 overflow-hidden">
+    <div className="bg-gray-200 border border-gray-100 rounded-lg p-6 mb-5 flex items-center justify-center h-64 overflow-hidden">
       <img 
         src={image} 
         alt={title} 
@@ -160,7 +160,7 @@ const Mag = () => {
 
         <header className="text-center mb-16">
           {/* Heading with normal font weight */}
-          <h2 className="text-lg md:text-5xl lg:text-5xl font-medium text-[#0d3874] mb-6 tracking-tight">
+          <h2 className="text-lg md:text-5xl lg:text-5xl font-figtree text-[#0d3874] mb-6 tracking-tight">
             Access Control System – MAG
           </h2>
           <div className="h-1 w-24 bg-[#2257a0] mx-auto rounded-full opacity-20"></div>

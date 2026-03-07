@@ -80,11 +80,11 @@ const ProductCard = ({ title, description, image }) => (
         {description}
       </p>
     </div>
-    {/* <div className="mt-4 px-2">
+    <div className="mt-4 px-2">
        <button className="text-blue-600 font-semibold text-xs uppercase tracking-wider group-hover:underline">
           View Details →
        </button>
-    </div> */}
+    </div>
   </div>
 );
 
@@ -94,7 +94,7 @@ const Alarm = () => {
       <div className="max-w-7xl mx-auto">
         <header className="text-center mb-16">
           {/* <span className="text-blue-600 font-bold uppercase tracking-widest text-sm">Hardware Collection</span> */}
-          <h2 className="text-lg md:text-5xl lg:text-5xl font-medium text-[#0d3874] mb-6 tracking-tight">
+          <h2 className="text-lg md:text-5xl lg:text-5xl font-figtree text-[#0d3874] mb-6 tracking-tight">
             Detection Systems - Ceia
           </h2>
           <div className="h-1 w-20 bg-blue-500 mx-auto rounded-full"></div>

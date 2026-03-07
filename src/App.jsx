@@ -96,6 +96,33 @@ import AR321H from "./components/pages/frontend/OurProducts/Honeywell Product-In
 import CCMS from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Uber/CCMS";
 import KeysManagement from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Uber/KeysManagement";
 import Gen5 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Uber/Gen5";
+import Air22 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Uber/Air22";
+import Air12 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Uber/Air12";
+import TbsFly from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Uber/TbsFly";
+import AccessControl from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Alarm/AccessControl";
+import SmartCredentials from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Alarm/SmartCredentials";
+import FourDoor from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Alarm/FourDoor";
+import DoorController from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Alarm/DoorController";
+import OutputControl from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Alarm/OutputControl";
+import InputMonitor from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Alarm/InputMonitor";
+import TwoReader from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Alarm/TwoReader";
+import HomeAut from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Fermax/HomeAut";
+import Wit7 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Fermax/Wit7";
+import Neo7 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Fermax/Neo7";
+import MiloTouch from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Fermax/MiloTouch";
+import MeetDesktop from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Fermax/MeetDesktop";
+import MarineDigital from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Fermax/MarineDigital";
+import KinTouch from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Fermax/KinTouch";
+import MiloVideo from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Fermax/MiloVideo";
+import BlackMeet from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Fermax/BlackMeet";
+import VeoTelephone from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Fermax/VeoTelephone";
+import VdsExtra from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Fermax/VdsExtra";
+import VeoWifi from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Fermax/VeoWifi";
+import MarinePanel from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Fermax/MarinePanel";
+import CityPanel from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Fermax/CityPanel";
+import DuoxPlus from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Fermax/DuoxPlus";
+
+
 
 
 
@@ -240,16 +267,35 @@ const App = () => {
              <Route path="/our-products/ubergard/software-ccms" element={<CCMS />} />
              <Route path="/our-products/ubergard/keys-management-system" element={<KeysManagement />} />
              <Route path="/our-products/ubergard/gen5-touchscreen" element={<Gen5/>} />
+             <Route path="/our-products/ubergard/3d-air-22" element={<Air22/>} />
+             <Route path="/our-products/ubergard/air-12" element={<Air12/>} />
+             <Route path="/our-products/ubergard/3d-fly" element={<TbsFly/>} />
 
-            {/* //  
-            //  <Route path="/our-products/ubergard/3d-air-22" element={</>} />
-            //  <Route path="/our-products/ubergard/air-12" element={</>} />
-            //  <Route path="/our-products/ubergard/3d-fly" element={</>} /> */}
+             {/* Alarm.com Product Details Route */}
+             <Route path="/our-products/alarm/access-control-readers" element={< AccessControl/>} />
+             <Route path="/our-products/alarm/smart-credentials" element={< SmartCredentials/>} />
+             <Route path="/our-products/alarm/four-door-controller" element={< FourDoor/>} />
+             <Route path="/our-products/alarm/door-controller" element={< DoorController/>} />
+             <Route path="/our-products/alarm/output-control-expansion" element={< OutputControl/>} />
+             <Route path="/our-products/alarm/input-monitor-expansion" element={< InputMonitor/>} />
+             <Route path="/our-products/alarm/two-reader-expansion" element={< TwoReader/>} />
 
-
-
-
-
+             {/* Fermax Product Details Route */}
+             <Route path="/our-products/fermax/home-aut-monitor" element={< HomeAut/>} />
+             <Route path="/our-products/fermax/monitor-poe-black-meet" element={< Wit7/>} />
+             <Route path="/our-products/fermax/monitor-poe-white-meet" element={< Neo7/>} />
+             <Route path="/our-products/fermax/milo-touch-digital" element={< MiloTouch/>} />
+             <Route path="/our-products/fermax/meet-desktop-guard" element={< MeetDesktop/>} />
+             <Route path="/our-products/fermax/marine-digital-video-panel" element={< MarineDigital/>} />
+             <Route path="/our-products/fermax/kin-touch-panel" element={< KinTouch/>} />
+             <Route path="/our-products/fermax/milo-video-panel-with-prox-meet" element={< MiloVideo/>} />
+             <Route path="/our-products/fermax/milo-video-panel-black-meet" element={<BlackMeet/>} />
+             <Route path="/our-products/fermax/duox-plus-veo" element={<VeoTelephone/>} />
+             <Route path="/our-products/fermax/iloft-telephone-vds" element={<VdsExtra/>} />
+             <Route path="/our-products/fermax/duox-plus-veo-wifi" element={<VeoWifi/>} />
+             <Route path="/our-products/fermax/marine-panel-duox-plus" element={<MarinePanel/>} />
+             <Route path="/our-products/fermax/city-panel-duox-plus-s1ap201" element={<CityPanel/>} />
+             <Route path="/our-products/fermax/city-panel-duox-plus-s1cp101" element={<DuoxPlus/>} />
 
 
           </Routes>

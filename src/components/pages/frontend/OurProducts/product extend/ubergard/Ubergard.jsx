@@ -63,7 +63,7 @@ const ProductCard = ({ title, description, image, detailRoute }) => (
             <NavLink to={detailRoute} className="text-blue-500 hover:underline mt-2 block">
               <h3 className='text-xl font-poppins hover:text-green-500 transition-colors duration-300'>View Details</h3>
             </NavLink>
-          </span>
+        </span>
     </div>
   </div>
 );
@@ -74,7 +74,7 @@ const Ubergard = () => {
       <div className="max-w-7xl mx-auto">
         <header className="text-center mb-16">
           {/* Heading weight adjusted to Normal/Medium */}
-          <h2 className="text-lg md:text-5xl lg:text-5xl font-medium text-[#0d3874] mb-6 tracking-tight">
+          <h2 className="text-lg md:text-5xl lg:text-5xl font-figtree text-[#0d3874] mb-6 tracking-tight">
             Access Control System – Ubergard
           </h2>
           <div className="h-1 w-24 bg-[#2257a0] mx-auto rounded-full opacity-20"></div>
@@ -92,8 +92,6 @@ const Ubergard = () => {
              />
           ))}
         </div>
-
-        
 
       </div>
     </div>

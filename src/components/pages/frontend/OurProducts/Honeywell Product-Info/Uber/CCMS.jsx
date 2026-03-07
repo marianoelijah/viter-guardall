@@ -59,7 +59,7 @@ const CCMS = () => {
             </ul>
           </section>
 
-        {/* Tags */}
+         {/* Tags */}
            <div className="mt-8 flex gap-3 mb-5 p-4 rounded">
             <p className="text-lg text-white border bg-red-500 px-2">UBERGARD</p>
             <p className="text-lg text-white border bg-red-500 px-2">Access Control System</p>
@@ -90,6 +90,7 @@ const CCMS = () => {
 
         {/* Sidebar */}
         <aside className="lg:w-1/4 space-y-6">
+
          <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
             <h3 className="text-xl font-bold text-black mb-4 border-b pb-1">More By UberGard</h3>
             <ul className="text-[17px] space-y-4 text-gray-500 transition-colors">

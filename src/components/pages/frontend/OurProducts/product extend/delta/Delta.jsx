@@ -65,7 +65,7 @@ const Delta = () => {
       <div className="max-w-7xl mx-auto">
         <header className="text-center mb-16">
           {/* Changed from font-black to font-normal/medium */}
-          <h2 className="text-lg md:text-5xl lg:text-5xl font-medium text-[#0d3874] mb-6 tracking-tight">
+          <h2 className="text-lg md:text-5xl lg:text-5xl font-figtree text-[#0d3874] mb-6 tracking-tight">
              Vehicle Barrier System and Pedestrian Barriers – Delta
           </h2>
           <div className="h-1 w-24 bg-[#2257a0] mx-auto rounded-full opacity-20"></div>

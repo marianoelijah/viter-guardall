@@ -64,7 +64,7 @@ const PcGeneral = () => {
           <h2 className="font-bold text-xl text-black mb-4 uppercase">Technical Specification:</h2>
 
           {/* 1. uTrust TS Mullion Reader Specifications */}
-          <div className="mb-8">
+          <div className="mb-8 w-3/">
             
              <table className="w-full border-collapse border border-gray-500 text-[10px]">
                 <thead>
