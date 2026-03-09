@@ -121,6 +121,25 @@ import VeoWifi from "./components/pages/frontend/OurProducts/Honeywell Product-I
 import MarinePanel from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Fermax/MarinePanel";
 import CityPanel from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Fermax/CityPanel";
 import DuoxPlus from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Fermax/DuoxPlus";
+import CabinetSpeaker from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Commend/CabinetSpeaker";
+import ProjectorSpeaker from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Commend/ProjectorSpeaker";
+import HornSpeaker from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Commend/HornSpeaker";
+import CeilingSpeaker from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Commend/CeilingSpeaker";
+import WattAmplifier500 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Commend/WattAmplifier500";
+import WattAmplifier250 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Commend/WattAmplifier250";
+import WattAmplifier125 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Commend/WattAmplifier125";
+import WattAmplifier50 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Commend/WattAmplifier50";
+import WattAmplifier20 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Commend/WattAmplifier20";
+import NT4100PTIRZ3 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Webgate/NT4100PTIRZ3";
+import NT4100PTIRZ2 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Webgate/NT4100PTIRZ2";
+import NK1080DIR30 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Webgate/NK1080DIR30";
+import NK1080DF2 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Webgate/NK1080DF2";
+import NE5100VDSIR2 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Webgate/NE5100VDSIR2";
+import NE5100VDSIR1 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Webgate/NE5100VDSIR1";
+import NK5100BLIR42 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Webgate/NK5100BLIR42";
+import NK1080BLIR48 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Webgate/NK1080BLIR48";
+import NE2100EDSIR2 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Webgate/NE2100EDSIR2";
+import NE5100EDSIR1 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Webgate/NE5100EDSIR1";
 
 
 
@@ -296,6 +315,33 @@ const App = () => {
              <Route path="/our-products/fermax/marine-panel-duox-plus" element={<MarinePanel/>} />
              <Route path="/our-products/fermax/city-panel-duox-plus-s1ap201" element={<CityPanel/>} />
              <Route path="/our-products/fermax/city-panel-duox-plus-s1cp101" element={<DuoxPlus/>} />
+
+             {/* Commend Product Details Route */}
+            <Route path="/our-products/commend/cabinet-speaker" element={<CabinetSpeaker/>} />
+            <Route path="/our-products/commend/projector-speaker" element={<ProjectorSpeaker/>} />
+            <Route path="/our-products/commend/horn-speaker" element={<HornSpeaker/>} />
+            <Route path="/our-products/commend/ceiling-speaker" element={<CeilingSpeaker/>} />
+            <Route path="/our-products/commend/watt-amplifier-500" element={<WattAmplifier500/>} />
+            <Route path="/our-products/commend/watt-amplifier-250" element={<WattAmplifier250/>} />
+            <Route path="/our-products/commend/watt-amplifier-125" element={<WattAmplifier125/>} />
+            <Route path="/our-products/commend/watt-amplifier-50" element={<WattAmplifier50/>} />
+            <Route path="/our-products/commend/watt-amplifier-20" element={<WattAmplifier20/>} />
+
+            {/* Webgate Product Details Route */}
+            <Route path="/our-products/webgate/intelligent-network-camera-z3" element={<NT4100PTIRZ3/>} />
+            <Route path="/our-products/webgate/intelligent-network-camera-z2" element={<NT4100PTIRZ2/>} />
+            <Route path="/our-products/webgate/nk1080d-ir30-af" element={<NK1080DIR30/>} />
+            <Route path="/our-products/webgate/nk1080d-f2" element={<NK1080DF2/>} />
+            <Route path="/our-products/webgate/ne5100vd-sir2" element={<NE5100VDSIR2/>} />
+            <Route path="/our-products/webgate/ne5100vd-sir1" element={<NE5100VDSIR1/>} />
+            <Route path="/our-products/webgate/ne2100ed-sir2" element={<NE5100EDSIR1/>} />
+            <Route path="/our-products/webgate/ne2100ed-sir2" element={<NE2100EDSIR2/>} />
+            <Route path="/our-products/webgate/nk1080bl-ir48" element={<NK1080BLIR48/>} />
+            <Route path="/our-products/webgate/nk5100bl" element={<NK5100BLIR42/>} />
+
+            {/* Pelco Product Details Route */}
+
+           
 
 
           </Routes>

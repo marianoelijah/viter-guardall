@@ -1,0 +1,206 @@
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import Header from '../../../partials/Header';
+import Footer from '../../../partials/Footer';
+
+
+const WattAmplifier500 = () => {
+  const specs = [
+    { label: "IP rating", value: "IP20 (acc. EN 60529)"}, 
+    { label: "Output power", value: "500 W RMS" },
+    { label: "Power supply", value: "AC main power supply: 100–240 VAC (50–60 Hz, max. 680 W)DC backup power supply: 24 VDC (21–28 VDC, max. 25 A)" },
+    { label: "Average power consumption(acc. to IEC-60268-3)", value: "idle mode: 25 W (AC main power supply),17 W (DC backup power supply)active mode (1 kHz sine @ −10 dB): 89 W (AC main powersupply), 72 W (DC backup power supply)" },
+    { label: "Protocols (IoIP)", value: "IoIP protocol based on UDP/IP" },
+    { label: "Protocols (SIP)", value: "IPv6, IPv4, TCP, UDP, HTTP (RFC 2617, RFC 3310),RTP (RFC 3550), TLS, SRTP, RTCP, DHCP, STUN,TFTP, SDP (RFC 2327), SIP (RFC 3261), SNMPv2,URI (RFC 2396), DTMF Decoding (RFC 2876,RFC 2833), SIP User Agent (UDP RFC 3261),SIP Refer Method (RFC 3515)" },
+    { label: "Codecs (SIP)", value: "G.711 a-Law, G.711 μ-Law, G.722" },
+    { label: "ONVIF specification", value: "ONVIF Profile S for unidirectional audio" },
+    { label: "IoIP audio bandwidth", value: "16 kHz" },
+    { label: "SIP audio bandwidth", value: "7 kHz" },
+    { label: "Total harmonic distortion (THD+N)", value: " 0.2% at 1 kHz sine at 500 W" },
+    { label: "Signal-to-noise ratio (SNR)", value: "amplifier: > 110 dBcodec G.722: > 84 dB" },
+    { label: "Cabling", value: "min. Cat. 5" },
+    { label: "Connection", value: "2 RJ45 modular jacks (IP uplink and IP downlink)outputs, inputs, microphone 3), line out: pluggable screwterminals (0.08–1.5 mm2/AWG 28–16)loudspeaker output: pluggable screw terminals(0.75–4 mm2/AWG 20–12, class 2 wiring)AC main power supply (IEC-60320-C14)DC backup power supply: 6 mm2/AWG 10" },
+    { label: "Loudspeaker output", value: "100 V, switchable to 70 V via software" },
+    { label: "Microphone input", value: "sensitivity: −43 dBV/Pafeeding voltage: 2.5 V at 3.3 kΩ" },
+    { label: "Line output", value: "nominal level 0 dBu (0.775 V)" },
+    { label: "Inputs", value: "2 inputs for floating contacts(detection of 5 input states)" },
+    { label: "Outputs", value: "relay output (changeover contact): max. 60 W (DC)/37.5 VA (AC), max. 2 A 4), max. 60 VDC/30 VAC effexpected life: min. 105 (30 VDC/2 A), 5 x 105 (30 VDC/1 A)" },
+    { label: "Control input", value: "0 – 10 V (for remote volume control)" },
+    { label: "Operating temperature range", value: "−10 °C to +55 °C (+14 °F to +131 °F)" },
+    { label: "Storage temperature range", value: "−25 °C to +70 °C (−13 °F to +158 °F)" },
+    { label: "Relative humidity", value: "up to 95%, non-condensing" },
+    { label: "Approvals and compliances", value: "EN 61000-6-2, EN 61000-6-3, EN 55032 Class B,EN 55024, EN 60529 IP20IEC/EN/UL 62368-1 and CB-Scheme (by UL)UL LISTED, FCC Part 15 Class B, ICES-003 Class B," },
+    { label: "Dimensions (W x H x D)", value: "401 x 44 x 267 mm (15.79 x 1.73 x 10.51 in)" },
+    { label: "Weight incl. package", value: "approx. 4,100 g (9.1 lbs)" }
+  ];
+
+  const productFeatures = [
+    "500 watts total output power",
+    "Supports IoIP and SIP",
+    "70 V/100 V audio output with loudspeaker line monitoring",
+    "Class-D amplifier, optimized for high efficiency at low operating temperatures",
+    "Short-circuit- and overload-proof",
+    "Installation in a 19” rack or on-site",
+    "Suitable for decentralized on-site use",
+    "Rugged metal housing",
+    "Line monitoring between amplifier and Intercom Server"
+  ];
+
+  return (
+    <>
+    <Header />
+     <div className="bg-slate-50 min-h-screen font-sans">
+      {/* Header Banner */}
+      <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
+        <h1 className="text-4xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
+          AF 500 – 500 Watt Amplifier
+        </h1>
+      </header>
+
+      
+      <div className="max-w-6xl mx-auto px-4 py-8 flex flex-col lg:flex-row gap-8">
+        {/* Main Content Container */}
+        <main className="lg:w-3/4 bg-gray-200 p-8 shadow-sm">
+            <p className="text-gray-800 text-[17px] mb-6">
+              A 500 Watt IP amplifier with metal housing, 1U.
+            </p>
+
+            <section className="mb-8">
+              <h2 className="font-bold text-xl mb-2 text-black">Product Description:</h2>
+              <p className="text-gray-800 text-[17px] leading-relaxed">
+               The AF 500H provides a high output range and various connections from a microphone 
+               input to a relay output. That’s why the amplifier is universally suitable for any size
+               of application – even for complex public address and Intercom solutions. 
+               In order to avoid cabling costs and be more flexible, the AF 500H is specifically
+               optimized for installation either in a 19” rack or on-site.
+              </p>
+             
+
+               <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
+            <ul className="list-disc ml-5 text-[17px] space-y-1 text-black">
+              {productFeatures.map((feature, index) => (
+                <li key={index}>{feature}</li>
+              ))}
+            </ul>
+            </section>
+
+            {/* Technical Specifications Table */}
+            <section>
+              <h2 className="font-bold text-xl text-black mb-4">Technical Specification:</h2>
+              <div className="overflow-x-auto border border-gray-500">
+                <table className="w-full text-left text-xs border-collapse border border-black">
+                 
+                  <tbody>
+                    {specs.map((spec, index) => (
+                      <tr key={index} className={index % 2 === 0 ? 'bg-gray-100' : 'bg-gray-200'}>
+                        <td className="p-3 border-b border-r border-black text-black text-[17px] font-bold w-1/3">
+                          {spec.label}
+                        </td>
+                        <td className="p-3 border-b border-r border-black text-[16px] text-gray-800">
+                          {spec.value}
+                        </td>
+                        {/* <td className="p-3 border-b border-r border-black text-[17px] text-black">
+                          {spec.valu}
+                        </td>
+                        <td className="p-3 border-b border-r border-black text-[17px] text-black">
+                          {spec.vale}
+                        </td> */}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            {/* <img src="" alt="" /> */}
+            
+             
+            {/* Tags & Social */}
+           <div className="flex flex-wrap gap-3 mb-8 mt-10">
+              <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
+                COMMEND
+              </span>
+              
+              <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
+                Audio-Video Intercom & PA-BGM
+              </span>
+            </div>
+
+            {/* SHARE SECTION */}
+            <div className="mt-8">
+              <p className="font-medium text-black mb-3">Share:</p>
+              <div className="flex gap-3">
+                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
+                  <img src="/src/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
+                </div>
+                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
+                  <img src="/src/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
+                </div>
+                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
+                  <img src="/src/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
+                </div>
+                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
+                  <img src="/src/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
+                </div>
+                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
+                  <img src="/src/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
+                </div>
+              </div>
+            </div>
+
+        </main>
+
+          {/* Sidebar */}
+                <aside className="lg:w-1/4 space-y-6"> 
+                     <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
+                        <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By COMMEND</h3>
+                        <ul className="text-[17px] space-y-4 text-gray-500 transition-colors">
+                          <li className='cursor-pointer hover:text-[#f08c09]'>Onity DirectKey with Serene</li>
+                          <li className='cursor-pointer hover:text-[#f08c09]'>MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs</li>
+                          <li className='cursor-pointer hover:text-[#f08c09]'>INR 415 256-Channel 12 Bay RAID Rackmount Standalone</li>
+                          <li className='cursor-pointer hover:text-[#f08c09]'>GNR 340 100-Channel Tower Standalone</li>
+                          <li className='cursor-pointer hover:text-[#f08c09]'>ENR 130 16-Channel Desktop Standalone NVR - No HDD Included</li>
+                          <li className='cursor-pointer hover:text-[#f08c09]'>Z86 Outdoor Network Dome Camera with Night Vision</li>
+                        </ul>
+                      </div>
+                      
+            
+            
+                      {/* Contact Card */}
+                     <div
+                          className="bg-blue-600 text-white p-6 rounded shadow-md overflow-hidden relative min-h-[200px]"
+                          style={{
+                            backgroundImage: `linear-gradient(rgba(30, 64, 175, 0.8), rgba(30, 64, 175, 0.8)), url('/src/assets/image/Our Products/quickalert.jpg')`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                          }}
+                        >
+                          <div className="relative z-10 px-4 max-w-3xl">
+                             <h3 className="text-xl font-semibold mb-3">
+                               Secure Your Piece Of Mind Today
+                             </h3>
+                             <p className="text-lg mb-4">
+                               Contact Guard-All now for a customized security solution
+                               that protects what matters most.
+                             </p>
+                          <button className="bg-blue-700 hover:bg-blue-400 text-white font-semibold px-4 py-2 rounded w-full">
+                            <NavLink to="/contacts" className="w-full h-full block">
+                            CONTACT US TODAY
+                            </NavLink>
+                          </button>
+                        </div>
+                      </div>
+            
+                </aside>
+
+         
+
+        </div>
+    </div>
+    <Footer />
+    </>
+   
+  );
+};
+
+export default WattAmplifier500;
