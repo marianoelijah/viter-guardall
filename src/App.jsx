@@ -1,5 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Analytics } from "@vercel/analytics/react";
 import Home from "./components/pages/frontend/home/Home";
 import { StoreProvider } from "./components/store/storeContext";
 import OurProductsPage from "./components/pages/frontend/OurProducts/OurProductsPage";
@@ -300,6 +301,7 @@ const App = () => {
 
           </Routes>
         </Router>
+        <Analytics />
       </StoreProvider>
     </QueryClientProvider>
   );
