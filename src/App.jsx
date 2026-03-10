@@ -140,6 +140,15 @@ import NK5100BLIR42 from "./components/pages/frontend/OurProducts/Honeywell Prod
 import NK1080BLIR48 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Webgate/NK1080BLIR48";
 import NE2100EDSIR2 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Webgate/NE2100EDSIR2";
 import NE5100EDSIR1 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Webgate/NE5100EDSIR1";
+import Ulisee from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Pelco/Ulisee";
+import Spectra from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Pelco/Spectra";
+import Esprit from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Pelco/Esprit";
+import Sarix from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Pelco/Sarix";
+import Optera from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Pelco/Optera";
+import Pelco from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Pelco/Pelco";
+import TurretCamera from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Pelco/TurretCamera";
+import MiniDome from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Pelco/MiniDome";
+import DomeCamera from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Pelco/DomeCamera";
 
 
 
@@ -340,8 +349,15 @@ const App = () => {
             <Route path="/our-products/webgate/nk5100bl" element={<NK5100BLIR42/>} />
 
             {/* Pelco Product Details Route */}
-
-           
+            <Route path="/our-products/pelco/ulisee-enhanced" element={<Ulisee/>} />
+            <Route path="/our-products/pelco/spectra-enhanced" element={<Spectra/>} />
+            <Route path="/our-products/pelco/esprit-anti-corrosion" element={<Esprit/>} />
+            <Route path="/our-products/pelco/sarix-multi-enhanced" element={<Sarix/>} />
+            <Route path="/our-products/pelco/optera-imm-series" element={<Optera/>} />
+            <Route path="/our-products/pelco/pelco-fisheye-camera" element={<Pelco/>} />
+            <Route path="/our-products/pelco/environmental-turret" element={<TurretCamera/>} />
+            <Route path="/our-products/pelco/environmental-mini-dome" element={<MiniDome/>} />
+            <Route path="/our-products/pelco/sarix-professional-4" element={<DomeCamera/>} />
 
 
           </Routes>
