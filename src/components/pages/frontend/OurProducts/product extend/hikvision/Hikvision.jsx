@@ -1,49 +1,58 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const HikvisionProducts = [
   {
     title: "DS-2CD2T43G2-2I/4I 4MP  AcuSense Fixed Bullet Network Camera",
     description: "A bullet-style, 4MP surveillance camera that can accurately detect human or vehicle motion/target. Product Description: Empowered by deep learning algorithms, Hikvision AcuSense technology brings human and vehicle targets classification alarms",
-    image: "/src/assets/image/HIKVISION IMG/Acusense Fixed Bullet Network.jpg"
+    image: "/src/assets/image/HIKVISION IMG/Acusense Fixed Bullet Network.jpg",
+    detailRoute: "/our-products/hikvision/fixed-bullet-network"
   },
   {
     title: "DS-2DE7A825IW-AEB(T5) 8MP 25 x IR Network Speed Dome Camera",
     description: "Designed for outdoor use, this surveillance dome camera has 25x optical zoom lens and up to 200m IR distance. Product Description: Hikvision DS-2DE7A825IW-AEB(T5) 8 MP 25× IR Network Speed Dome",
-    image: "/src/assets/image/HIKVISION IMG/Network Speed Dome Camera.png"
+    image: "/src/assets/image/HIKVISION IMG/Network Speed Dome Camera.png",
+    detailRoute: "/our-products/hikvision/network-speed-dome-camera"
   },
   {
     title: "DS-2SE7C432MWG-EB/26(F0) TandemVu 4MP 32 x Network PTZ Camera",
     description: "A panoramic surveillance camera with 32x optical zoom and AcuSense technology. Product Description: The TandemVu PTZ cameras feature Hikvision’s next-generation camera design, integrating multiple lenses in one security camera to",
-    image: "/src/assets/image/HIKVISION IMG/TandemVu 4MP 32X Network PTZ.png"
+    image: "/src/assets/image/HIKVISION IMG/TandemVu 4MP 32X Network PTZ.png",
+    detailRoute: "/our-products/hikvision/network-ptz-camera"
   },
   {
     title: " DS-7700NI-I4 (B) Series NVR",
     description: "A network video-recorder with up to 32 channel input. Product Description: With built-in analytics, Hikvision’s Network Video Recorders (NVRs) provide advanced artificial intelligence capabilities for any connected data stream, even",
-    image: "/src/assets/image/HIKVISION IMG/Series NVR.png"
+    image: "/src/assets/image/HIKVISION IMG/Series NVR.png",
+    detailRoute: "/our-products/hikvision/series-nvr"
   },
    {
     title: "DS-7608NXI-I2/8P/S AcuSense Series NVR",
     description: "A network video-recorder with AI functionality and can offer up to 8 channel input. Product Description: With built-in analytics, Hikvision’s Network Video Recorders (NVRs) provide advanced artificial intelligence capabilities for",
-    image: "/src/assets/image/HIKVISION IMG/Acusense Series NVR.png"
+    image: "/src/assets/image/HIKVISION IMG/Acusense Series NVR.png",
+    detailRoute: "/our-products/hikvision/acusense-series-nvr"
   },
   {
     title: "DS-2CD2143G2-I(S) 4MP AcuSense Fixed Dome Network Camera",
     description: "A dome-shaped surveillance camera that can accurately detect human or vehicle motion/target. Product Description: Empowered by deep learning algorithms, Hikvision AcuSense technology brings human and vehicle targets classification alarms to",
-    image: "/src/assets/image/HIKVISION IMG/4MP AcuSense Fixed Dome Network.jpg"
+    image: "/src/assets/image/HIKVISION IMG/4MP AcuSense Fixed Dome Network.jpg",
+    detailRoute: "/our-products/hikvision/acusense-fixed-dome-network-camera"
   },
   {
     title: "DS-2CD2083G2-I(U) 8MP AcuSense Fixed Bullet Network Camera",
     description: "A bullet-style surveillance camera that can accurately detect human or vehicle motion/target. Product Description: Empowered by deep learning algorithms, Hikvision AcuSense technology brings human and vehicle targets classification alarms to",
-    image: "/src/assets/image/HIKVISION IMG/8MP AcuSense Fixed Bullet Network.jpg"
+    image: "/src/assets/image/HIKVISION IMG/8MP AcuSense Fixed Bullet Network.jpg",
+    detailRoute: "/our-products/hikvision/acusense-fixed-bullet-network-camera"
   },
   {
     title: "DS-2DE4225IW-DE(T5) 2MP 25 x Network IR Speed Dome Camera",
     description: "Designed for outdoor use, this surveillance dome camera has 25x optical zoom lens to capture expansive areas.  Product Description: Hikvision DS-2DE4225IW-DE(T5) 2MP 25× Network IR Speed Dome adopts 1/2.8″ progressive",
-    image: "/src/assets/image/HIKVISION IMG/Network IR Speed Dome Camera.png"
+    image: "/src/assets/image/HIKVISION IMG/Network IR Speed Dome Camera.png",
+    detailRoute: "/our-products/hikvision/network-ir-speed-dome-camera"
   }
 ];
 
-const ProductCard = ({ title, description, image }) => (
+const ProductCard = ({ title, description, image, detailRoute }) => (
   <div className="bg-white border border-gray-200 rounded-xl p-5 flex flex-col h-full transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl cursor-pointer">
     {/* Enhanced Image Container Size */}
     <div className="bg-gray-50 border border-gray-100 rounded-lg p-6 mb-5 flex items-center justify-center h-64 overflow-hidden">
@@ -60,6 +69,11 @@ const ProductCard = ({ title, description, image }) => (
       <p className="text-gray-600 text-xl leading-relaxed">
         {description}
       </p>
+       <span className='text-classic block mt-12 text-gray-500 text-sm tracking-widest'>
+            <NavLink to={detailRoute} className="text-blue-500 hover:underline mt-2 block">
+              <h3 className='text-xl font-poppins hover:text-green-500 transition-colors duration-300'>View Details</h3>
+            </NavLink>
+        </span>
     </div>
   </div>
 );
@@ -78,8 +92,14 @@ const Hikvision = () => {
 
         {/* Responsive Grid with improved spacing */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {HikvisionProducts.map((p, idx) => (
-            <ProductCard key={idx} {...p} />
+          {HikvisionProducts.map((item, idx) => (
+            <ProductCard
+             key={idx}
+              title={item.title}
+              description={item.description}
+              image={item.image}
+              detailRoute={item.detailRoute}
+            />
           ))}
         </div>
       </div>

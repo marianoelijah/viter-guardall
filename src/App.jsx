@@ -149,6 +149,15 @@ import Pelco from "./components/pages/frontend/OurProducts/Honeywell Product-Inf
 import TurretCamera from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Pelco/TurretCamera";
 import MiniDome from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Pelco/MiniDome";
 import DomeCamera from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Pelco/DomeCamera";
+import SeriesDome from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Pelco/SeriesDome";
+import LongBullet from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Pelco/LongBullet";
+import CameraSeries from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Pelco/CameraSeries";
+import Professional from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Pelco/Professional";
+import Environmental from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Pelco/Environmental";
+import DS2CD2T43G2 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hikvision/DS2CD2T43G2";
+import DS2DE7A825IW from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hikvision/DS2DE7A825IW";
+import DS2SE7C432MWG from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hikvision/DS2SE7C432MWG";
+import DS7700NI from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hikvision/DS7700NI";
 
 
 
@@ -358,7 +367,17 @@ const App = () => {
             <Route path="/our-products/pelco/environmental-turret" element={<TurretCamera/>} />
             <Route path="/our-products/pelco/environmental-mini-dome" element={<MiniDome/>} />
             <Route path="/our-products/pelco/sarix-professional-4" element={<DomeCamera/>} />
+            <Route path="/our-products/pelco/series-dome-camera" element={<SeriesDome/>} />
+            <Route path="/our-products/pelco/short-and-long-bullet-camera" element={<LongBullet/>} />
+            <Route path="/our-products/pelco/thermal-enhanced-4-camera-series" element={<CameraSeries/>} />
+            <Route path="/our-products/pelco/bullet-camera" element={<Professional/>} />
+            <Route path="/our-products/pelco/environmental-bullet-cameras" element={<Environmental/>} />
 
+            {/* Hikvision Product Details Route */}
+            <Route path="/our-products/hikvision/fixed-bullet-network" element={<DS2CD2T43G2/>} />
+            <Route path="/our-products/hikvision/network-speed-dome-camera" element={<DS2DE7A825IW/>} />
+            <Route path="/our-products/hikvision/network-ptz-camera" element={<DS2SE7C432MWG/>} />
+            <Route path="/our-products/hikvision/series-nvr" element={<DS7700NI/>} />
 
           </Routes>
         </Router>

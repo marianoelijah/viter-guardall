@@ -56,7 +56,7 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
                           </tr>
                         ) : (
                           <tr className={idx % 2 === 0 ? 'bg-gray-100' : 'bg-gray-50'}>
-                            <td className="p-3 border-b border-r border-gray-500 font-bold w-1/3 text-[15px] text-black bg-gray-50/50">
+                            <td className="p-3 border-b border-r border-gray-500 font-bold w-1/3 text-[15px] text-black bg-gray-50/50 w-1/2">
                               {item.label}
                             </td>
                             <td className="p-3 border-b border-gray-500 text-gray-800 whitespace-pre-line text-[15px] hover:bg-slate-50/50 transition-colors">
