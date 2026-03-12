@@ -4,106 +4,58 @@ import Header from '../../../partials/Header';
 import Footer from '../../../partials/Footer';
 
 
-const NK5100BLIR42 = () => {
+const Gnr340 = () => {
   const specs = [
-    { type: 'header', label: 'CAMERA MODULE' },
-    { label: "Image Sensor", value: "1/2.7′′ progressive scan CMOS"},
-    { label: "Mini. Illumination", value: "Color:0.005Lux @ (F1.5,AGC ON)B/W:0.001Lux @ (F1.5,AGC ON)0 Lux with IR" },
-    { label: "Image setting", value: "Flip, Mirror, Saturation, Brightness, Contrast, Sharpness, AGC, and AWB adjusted by client software / browser" },
-    { label: "Shutter Speed", value: "1/1 s – 1/100,000 s" },
-    { label: "White Balance", value: "Auto / Manual / Indoor / Outdoor" },
-    { label: "Gain", value: "Auto / Manual" },
-    { label: "Day & Night", value: "IR Cut filter" },
-    { label: "3D DNR", value: "Auto / Manual" },
-    { label: "Image Enhancement", value: "BLC, HLC, WDR(120 dB)" },
-    { label: "Privacy Mask", value: "4 Programmable privacy masks" },
-    { label: "Defog", value: "Electronic" },
-    { label: "EIS", value: "YES" },
-    { label: "Regional Exposure", value: "No" },
-    { label: "Picture overlay", value: "Logo picture could be overlaid on video with128×128pixels, 24bits jpg format" },
-
-    { type: 'header', label: 'LENS' },
-    { label: "Focus length", value: "F=5.6-208mm lens, 37x optical zoom" },
-    { label: "Zoom Speed", value: "Approx. 4.4s (optical zoom, wide-tele)" },
-    { label: "Field of View", value: "Horizontal:59.8° to 2.0°(wide-tele)Vertical: 33.6°to 1.1°(wide-tele)Diagonal: 68.6° to 2.3°(wide-tele)" },
-    { label: "Working distance", value: "wide: 1.0m ~ INF; tele: 1.5m ~ INF" },
-    { label: "Aperture Range", value: "F1.55 ~ F4.5 (wide-tele)" },
-    { type: 'header', label: 'PTZ' },
-   
-    { label: "Pan Range", value: "360°endless" },
-    { label: "Pan Speed", value: "Configurable, from 0.1~180°/sMax Preset speed: 180°/s" },
-    { label: "Tilt Range", value: "From -20°to 90° (auto-flip at 90°)" },
-    { label: "Tilt Speed", value: "Configurable, from 0.1°~ 150°/s,Max Preset speed: 150°/s" },
-    { label: "Proportional Zoom", value: "Yes" },
-    { label: "Preset", value: "360" },
-    { label: "Cruise", value: "8 cruises, up to 16 presets for each cruises" },
-    { label: "Track", value: "4 tracks, record time over 3 minutes for each track" },
-    { label: "Power off memory", value: "Support" },
-    { label: "Action mode", value: "Preset / Cruise / Track / Auto Scan / Random Scan" },
-    { label: "3D Positioning", value: "Support" },
-    { label: "PTZ Position Display", value: "Support" },
-    { label: "Scheduled Task", value: "Preset / Cruise / Track / Auto Scan / Random Scan /Dome reboot" },
-
-    { type: 'header', label: 'IR' },
-    { label: "IR Distance", value: "500m" },
-    { label: "Smart IR", value: "Yes" },
-
-    { type: 'header', label: 'NETWORK' },
-    { label: "Max Resolution", value: "Yes (by OSD menu) + Red led indication" },
-    { label: "Main Stream", value: "Yes (10 levels by OSD menu)" },
-    { label: "Sub Stream", value: "Yes (by OSD menu)" },
-    { label: "Third Stream", value: "Yes (by OSD menu) + Red led indication" },
-    { label: "SVC", value: "Yes (10 levels by OSD menu)" },
-    { label: "Video Compression", value: "Yes (by OSD menu)" },
-    { label: "Protocols", value: "HTTP, HTTPS, IPv4/IPv6, 802.1x, QoS, FTP, SMTP, UPnP, SNMP,DNS, DDNS, NTP, RTSP, RTCP, RTP, TCP/IP, UDP, IGMP, ICMP,DHCP, PPPoE" },
-    { label: "Simultaneous Live View", value: "Up to 10 channels" },
-    { label: "User/Host", value: "Up to 16 users, 3 levels: Administrator, Advanced User and Normal User" },
-    { label: "Security Measures", value: "User authentication (ID and PW), Host authentication (MAC address)HTTPS encryption, IEEE802.1x port-based networkaccess control; IP address filtering" },
-
-    { type: 'header', label: 'SMART FEATURES' },
-    { label: "Basic Event", value: "Motion detection, video tampering alarm, exception(network disconnected, IP address conflict, SD full, SD error)" },
-    { label: "Face Detection", value: "Default off, max 30 human faces per second" },
-    { label: "People Density", value: "Not support by this product" },
-    { label: "Smart Detection", value: "Intrusion detection, Line crossing detection, Regionentrance detection, Region exiting detection, Unattended baggage detection, Object removal detection, Scene change detection, Support alarm triggering by human or vehicle, filtering flag/animal." },
-    { label: "Smart Tracking", value: "Manual Tracking, Auto Tracking(human or vehicle by software setting)" },
-
-    { type: 'header', label: 'SYSTEM INTEGRATION' },
-    { label: "Alarm Interface", value: "7CH alarm input, 2CH alarm output" },
-    { label: "Audio Interface", value: "1CH audio input, 2 to 2.4v[p-p] 1kΩ±10%1CH audio output (line out), impedance 600Ω" },
-    { label: "Alarm Linkage", value: "Alarm actions, such as Preset, Cruise, Track, Memory Card Video Record, Trigger Recording, Notify Surveillance Center, Upload to FTP/Memory Card, Send Email, etc." },
-    { label: "Network Interface", value: "1 RJ45 10M/100M Ethernet (Hi-PoE optional)" },
-    { label: "CVBS", value: "Yes, 1 BNC Connector" },
-    { label: "RS 485", value: "Pelco-D / P protocol, custom protocols available" },
-    { label: "Storage ", value: "On-Body memory card slot, support microSD/SDHC/SDXC, up to 256G" },
-    { label: "API", value: "ONVIF" },
-    { label: "Web Browser", value: "IE 8-11, Chrome 31.0-44, Firefox 30.0-51,Not support Safari" },
-
-    { type: 'header', label: 'GENERAL' },
-    { label: "Power", value: "AC24V/DC24V 5A (Max.75W, including max.18w forlaser and max.12w for heater)Hi-PoE (Max.60W, including max.18w for laser andmax.12w for heater)" },
-    { label: "Working Condition", value: "-50°C~65°C(-40°F~149°F), 90%RH less(non-condensing), Cold start at -40°C" },
-    { label: "Storage Condition", value: "-40°C ~ 70°C ; ≤ 95% RH" },
-    { label: "Protection", value: "IP67 Level, IK10, 6000V Lightning Protection,Surge Protection and Voltage Transient Protection" },
-    { label: "Material", value: "Aluminum Alloy" },
-    { label: "Dimensions", value: "Φ 278mm × 435mm (Φ10.94′ × 17.12′)" },
-    { label: "Weight", value: "Approx. 8.8 Kg (19.4 lb.)" },
-    { label: "Certification", value: "KC, CE, FCC" },
+    // { type: 'header', label: 'CAMERA MODULE' },
+    { label: "Model", value: "GNR-340"},
+    { label: "Maximum Number of Cameras", value: "100" },
+    { label: "Maximum Number of Clients", value: "Local: 1, Remote: 4" },
+    { label: "Free License", value: "32 (32 channels for ACTi and 1 channel for third-party video device)" },
+    { label: "Video Resolution", value: "Support all ACTi cameras in all resolutions" },
     
+    { label: "Compression", value: "H.265, H.264, MPEG-4, MJPEG" },
+    { label: "Scheduled Recording", value: "Yes" },
+    { label: "Event Recording", value: "Yes" },
+    { label: "Manual Recording", value: "Yes" },
+    { label: "Speed Up", value: "Yes" },
+    { label: "Dual Stream Management", value: "Yes" },
+    { label: "Recording Throughput", value: "180 Mbps" },
+    { label: "HDD Interface", value: "Maximum 2 SATA disks; Options to have empty bays, one 2TB or one4TB storage disk included" },
+    { label: "External Storage Interface", value: "iSCSI, USB" },
 
+    // { type: 'header', label: 'LENS' },
+    { label: "RAID Level", value: "No" },
+    { label: "Digital Zoom", value: "Yes" },
+    { label: "Event Status", value: "Display event status upon alarm or upon connection loss or recovery between server and client or when the allocated disk space is full" },
+    { label: "Instant Playback", value: "Instant Playback in live view window" },
+    { label: "e-Map", value: "Yes" },
+    { label: "PTZ Control", value: "Yes" },
+    
+    { label: "Playback Control", value: "Continuous forward and backward playback with speeds (1/64, 1/32, 1/16, 1/8, 1/4, 1/2, 1, 2, 4, 8, 16, 32, 64, 128, 256) or frame-by-frame, pause, stop" },
+    { label: "Synchronized Playback", value: "up to 225 layout grids**" },
+    { label: "Local Access", value: "USB joystick, keyboard & mouse" },
+    { label: "Remote Access", value: "Workstation, Web Client, Mobile Client" },
+    { label: "Event Trigger", value: "[Video Device]: Video motion detection, Passive IR sensor, External device through digital input, Sound detection, Intelligent event detection, Video Push start and stop, Video loss and recovery, Disk Write Failure and Available. [Extended Device]: Point-of-sale (POS) status, Network I/O status, Access Control status" },
+    { label: "Event Response", value: "Pop-up window with live video and event confirmation activation, Switch to hotspot window, Switch to customize view, Command a PTZ device to go to a preset point, Play alert sound, Activate external device through digital output, Execute system command to activate other programs, Upload video or snapshot to FTP server, E-mail notification with snapshots, Push notification, Send Snapshot to Line Messenger" },
+    { label: "Permission Control", value: "Unlimited number of users, Active Directory, Customizable permissions for user groups, Account lockout, Automatic logout after idle, Playback password protected, Password validity period, Password Expiration Notification" },
+    
+    { label: "Video Export", value: "RAW, AVI, MP4, EXE, GPU Hardware accelerated video export supported with AVI format" },
+    { label: "Server Operating System", value: "Windows 10 IoT" },
+    { label: "ONVIF Compliant", value: "Yes, Profile S (contains the officially ONVIF conformant software NVR 3 Corporate)" },
+    { label: "Operating Temperature", value: "0°C ~ 40°C (32°F ~ 104°F)" },
+    { label: "Approvals", value: "CE, FCC, UL (for built-in power adapter)" },
+    // { type: 'header', label: 'PTZ' },
+   
   ];
 
   const productFeatures = [
-    "1/2.8” Sony STARVIS supersensitive 5MP sensor",
-    "AI enabled high performance / low-heating Korean SoC",
-    "Support three streams",
-    "AI events (Intrusion detection, Line crossing, Loitering / Fall down(*Option))",
-    "3DNR (Noise reduction)",
-    "Digital Image Stabilizer (DIS)",
-    "True WDR (120dB)",
-    "De-Fog function",
-    "H.265 / H.264",
-    "Onvif / PoE",
-    "Developed and Manufactured by Korea"
-
+    "5-bay Tower Standalone NVR",
+    "Maximum Number of Video Devices: 100 (Free License: 32)",
+    "Multi-Browser Support for Lite Web Client",
+    "System Monitoring and Notifications",
+    "Location-based management with e-Map & Google Map",
+    "Workstation, Web Client, Mobile Client",
+    "Event Trigger, Response, Notification and Snapshot to Line Messenger",
   ];
 
   return (
@@ -113,7 +65,7 @@ const NK5100BLIR42 = () => {
       {/* Header Banner */}
       <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
         <h1 className="text-3xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
-         NK5100BL-IR42-F.36 AI Network Camera
+          GNR 340 100-Channel Tower Strandalone
         </h1>
       </header>
 
@@ -122,17 +74,24 @@ const NK5100BLIR42 = () => {
         {/* Main Content Container */}
         <main className="lg:w-3/4 bg-gray-200 p-8 shadow-sm">
             <p className="text-gray-800 text-[17px] mb-6">
-               A surveillance system that has an AI/deep-learning engine that detects objects, intrusions, and even line crossing. 
+               A network video recorder that can manage up to 72 channels and can be expanded to host 5 HDDs.
             </p>
 
-            <section className="mb-8">
+            <h2 className="font-bold text-xl mb-2  text-black">Product Description:</h2>
+              <p className="text-gray-800 text-[17px] leading-relaxed">
+                Record from and manage up to 100 cameras with the GNR-340 72-Channel Tower Standalone NVR 
+                (No HDD) from ACTi. This recorder can be expanded to host five HDDs up to 18TB each for a 
+                maximum internal capacity of 90TB. Compliance with ONVIF profile S ensures interoperability 
+                with ONVIF IP cameras.
+              </p>
+
+            <section className="mb-8 mt-3">
                <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
             <ul className="list-disc ml-5 text-[17px] space-y-1 text-black">
               {productFeatures.map((feature, index) => (
                 <li key={index}>{feature}</li>
               ))}
             </ul>
-
             </section>
 
             {/* Technical Specifications Table */}
@@ -151,10 +110,10 @@ const NK5100BLIR42 = () => {
                                      </tr>
                                    ) : (
                                      <tr className={idx % 2 === 0 ? 'bg-gray-100' : 'bg-gray-50'}>
-                                       <td className="p-3 border-b border-r border-gray-500 font-bold w-1/3 text-[15px] text-black bg-gray-50/50">
+                                       <td className="p-3 border-b border-r border-gray-500 font-bold w-1/2 text-[15px] text-black bg-gray-50/50">
                                          {item.label}
                                        </td>
-                                       <td className="p-3 border-b border-gray-500 text-gray-800 whitespace-pre-line text-[15px] hover:bg-slate-50/50 transition-colors">
+                                       <td className="p-3 border-b border-gray-500 text-gray-800 w-1/2 whitespace-pre-line text-[15px] hover:bg-slate-50/50 transition-colors">
                                          {item.value}
                                        </td>
                                      </tr>
@@ -165,14 +124,12 @@ const NK5100BLIR42 = () => {
                            </table>
                          </div>
                        </section>
-
-            {/* <img src="" alt="" /> */}
             
              
             {/* Tags & Social */}
            <div className="flex flex-wrap gap-3 mb-8 mt-10">
               <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
-                WEBGATE
+                ACTI
               </span>
               
               <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
@@ -208,8 +165,8 @@ const NK5100BLIR42 = () => {
               <aside className="lg:w-1/4 space-y-6"> 
                      <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
                         <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">
-                          More By WEBGATE
-                        </h3>
+                          More By ACTI
+                          </h3>
                         <ul className="text-[17px] space-y-4 text-gray-500 transition-colors">
                           <li className='cursor-pointer hover:text-[#f08c09]'>Onity DirectKey with Serene</li>
                           <li className='cursor-pointer hover:text-[#f08c09]'>MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs</li>
@@ -259,4 +216,4 @@ const NK5100BLIR42 = () => {
   );
 };
 
-export default   NK5100BLIR42;
+export default   Gnr340;

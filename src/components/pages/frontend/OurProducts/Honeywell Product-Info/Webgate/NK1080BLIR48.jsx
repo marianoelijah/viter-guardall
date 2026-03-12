@@ -220,7 +220,9 @@ const NK1080BLIR48 = () => {
           {/* Sidebar */}
               <aside className="lg:w-1/4 space-y-6"> 
                      <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
-                        <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By FERMAX</h3>
+                        <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">
+                         More By WEBGATE
+                        </h3>
                         <ul className="text-[17px] space-y-4 text-gray-500 transition-colors">
                           <li className='cursor-pointer hover:text-[#f08c09]'>Onity DirectKey with Serene</li>
                           <li className='cursor-pointer hover:text-[#f08c09]'>MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs</li>

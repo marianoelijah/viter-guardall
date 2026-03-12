@@ -1,54 +1,64 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const ActiProducts = [
   {
     title: "INR 415 256-Channel 12 Bay RAID Backmount Standalone",
     description: "A network video recorder that can manage up to 256 channels. Product Features:  Technical Specification: Model INR-415 Maximum Number of Cameras 256 Maximum Number of Clients Local: 1, Remote: 5",
-    image: "/src/assets/image/ACTI IMG/Backmount Standalone.png"
+    image: "/src/assets/image/ACTI IMG/Backmount Standalone.png",
+    detailRoute: "/our-products/acti/bay-raid-backmount-standalone"
   },
   {
     title: "GNR 340 100-Channel Tower Strandalone",
     description: "A network video recorder that can manage up to 72 channels and can be expanded to host 5 HDDs. Product Description:Record from and manage up to 100 cameras with the",
-    image: "/src/assets/image/ACTI IMG/Channel Tower Strandalone.png"
+    image: "/src/assets/image/ACTI IMG/Channel Tower Strandalone.png",
+    detailRoute: "/our-products/acti/channel-tower-strandalone"
   },
   {
     title: "ENR 130 16-Channel Desktop Standalone NVR- No HDD Included",
     description: " high-performance network video recorder that can accommodate up to 16 channels. Product Description:Stream and record up to 16 channels of video with this ACTi ENR-130 4MP/10MP Standalone NVR. The recorder",
-    image: "/src/assets/image/ACTI IMG/Channel Desktop Standalone.png"
+    image: "/src/assets/image/ACTI IMG/Channel Desktop Standalone.png",
+    detailRoute: "/our-products/acti/channel-desktop-standalone"
   },
   {
     title: "Z86 Outdoor Network Dome Camera with Night Vision",
     description: "Designed both for indoor and outdoor use, this surveillance camera has a wide area coverage and two-way audio.  Product Description:Monitor an indoor or outdoor area with the Z86 4MP Network",
-    image: "/src/assets/image/ACTI IMG/Outdoor Network Dome Camera.png"
+    image: "/src/assets/image/ACTI IMG/Outdoor Network Dome Camera.png",
+    detailRoute: "/our-products/acti/outdoor-network-dome-camera"
   },
   {
     title: "Z49 4MP Zoom Bullet with D/N, Adaptive IR, Superior WDR, SLLS, 4.3x Lens",
     description: "A bullet-style surveillance camera with Wide Dynamic Range and can trigger notifications/actis to the user.  Product Description:Monitor an indoor or outdoor area with the Z49 4MP Network Bullet Camera from ",
-    image: "/src/assets/image/ACTI IMG/Zoom Bullet With DN.png"
+    image: "/src/assets/image/ACTI IMG/Zoom Bullet With DN.png",
+    detailRoute: "/our-products/acti/zoom-bullet-with-dn"
   },
   {
     title: "1915 2MP Outdoor PTZ Network Dome Camera with Night Vision and Heater",
     description: "A pan-tilt-zoom surveillance camera that can capture videos up to 60fps. Product Description:The I915 2MP Outdoor PTZ Network Dome Camera with Night Vision & Heaterfrom ACTi has a 1/2.8″ progressive",
-    image: "/src/assets/image/ACTI IMG/Outdoor PTZ Network Dome Camera.png"
+    image: "/src/assets/image/ACTI IMG/Outdoor PTZ Network Dome Camera.png",
+    detailRoute: "/our-products/acti/"
   },
   {
     title: "B928 5MP Outdoor PTZ Network Speed Dome Camera with Night Vision",
     description: "A pan-tilt-zoom surveillance camera with 36x optical zoom and extreme Wide Dynamic Range for clearer imaging.  Product Description:The B928 5MP Outdoor PTZ Network Speed Dome Camera from ACTi features a",
-    image: "/src/assets/image/ACTI IMG/B928- 5MP Outdoor.png"
+    image: "/src/assets/image/ACTI IMG/B928- 5MP Outdoor.png",
+    detailRoute: "/our-products/acti/outdoor-ptz-network-speed-dome-camera"
   },
   {
     title: "A817 8MP Outdoor Network Dome Camera",
     description: "Designed both for indoor and outdoor use, this surveillance camera has a high resolution to clearly capture images even at night.  Product Description:Monitor an indoor or outdoor area with the",
-    image: "/src/assets/image/ACTI IMG/A817 8MP Outdoor.png"
+    image: "/src/assets/image/ACTI IMG/A817 8MP Outdoor.png",
+    detailRoute: "/our-products/acti/outdoor-network-dome-camera"
   },
   {
     title: "A713 5MP Outdoor Network Fisheye Dome Camera with Night Vision and Heater",
     description: "A high-security surveillance camera with wide area coverage, night vision, and also two-way audio Product Description:Keep a watchful eye over your property with the A713 5MP Outdoor Network Fisheye Dome",
-    image: "/src/assets/image/ACTI IMG/A713 5MP Outdoor Network Fisheye.png"
+    image: "/src/assets/image/ACTI IMG/A713 5MP Outdoor Network Fisheye.png",
+    detailRoute: "/our-products/acti/network-fisheye-dome-camera"
   }
 ];
 
-const ProductCard = ({ title, description, image }) => (
+const ProductCard = ({ title, description, image, detailRoute }) => (
   <div className="group bg-white border border-gray-200 rounded-xl p-4 flex flex-col h-full transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2 hover:border-blue-300">
     <div className="bg-white rounded-lg p-4 mb-4 flex items-center justify-center h-48 overflow-hidden">
       <img 
@@ -64,11 +74,13 @@ const ProductCard = ({ title, description, image }) => (
       <p className="text-gray-600 text-xl leading-relaxed">
         {description}
       </p>
-    </div>
-    <div className="mt-4 px-2">
-       <button className="text-blue-600 font-semibold text-xs uppercase tracking-wider group-hover:underline">
-          View Details →
-       </button>
+       <span className='text-classic block mt-12 text-gray-500 text-sm tracking-widest'>
+            <NavLink to={detailRoute} className="text-blue-500 hover:underline mt-2 block">
+              <h3 className='text-xl font-poppins hover:text-green-500 transition-colors duration-300'>
+                View Details
+              </h3>
+            </NavLink>
+        </span>
     </div>
   </div>
 );

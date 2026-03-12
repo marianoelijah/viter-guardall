@@ -158,6 +158,12 @@ import DS2CD2T43G2 from "./components/pages/frontend/OurProducts/Honeywell Produ
 import DS2DE7A825IW from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hikvision/DS2DE7A825IW";
 import DS2SE7C432MWG from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hikvision/DS2SE7C432MWG";
 import DS7700NI from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hikvision/DS7700NI";
+import DS7608NXI from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hikvision/DS7608NXI";
+import DS2CD2143G2 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hikvision/DS2CD2143G2";
+import DS2CD2083G2 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hikvision/DS2CD2083G2";
+import DS2DE4225IW from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hikvision/DS2DE4225IW";
+import Inr415 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Acti/Inr415";
+import Gnr340 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Acti/Gnr340";
 
 
 
@@ -378,6 +384,14 @@ const App = () => {
             <Route path="/our-products/hikvision/network-speed-dome-camera" element={<DS2DE7A825IW/>} />
             <Route path="/our-products/hikvision/network-ptz-camera" element={<DS2SE7C432MWG/>} />
             <Route path="/our-products/hikvision/series-nvr" element={<DS7700NI/>} />
+            <Route path="/our-products/hikvision/acusense-series-nvr" element={<DS7608NXI/>} />
+            <Route path="/our-products/hikvision/acusense-fixed-dome-network-camera" element={<DS2CD2143G2/>} />
+            <Route path="/our-products/hikvision/acusense-fixed-bullet-network-camera" element={<DS2CD2083G2/>} />
+            <Route path="/our-products/hikvision/network-ir-speed-dome-camera" element={<DS2DE4225IW/>} />
+
+             {/* Acti Product Details Route */}
+             <Route path="/our-products/acti/bay-raid-backmount-standalone" element={<Inr415/>} />
+             <Route path="/our-products/acti/channel-tower-strandalone" element={<Gnr340/>} />
 
           </Routes>
         </Router>
