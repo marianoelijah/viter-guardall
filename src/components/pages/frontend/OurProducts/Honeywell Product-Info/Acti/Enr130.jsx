@@ -7,55 +7,53 @@ import Footer from '../../../partials/Footer';
 const Enr130 = () => {
   const specs = [
     // { type: 'header', label: 'CAMERA MODULE' },
-    { label: "Model", value: "GNR-340"},
-    { label: "Maximum Number of Cameras", value: "100" },
-    { label: "Maximum Number of Clients", value: "Local: 1, Remote: 4" },
-    { label: "Free License", value: "32 (32 channels for ACTi and 1 channel for third-party video device)" },
-    { label: "Video Resolution", value: "Support all ACTi cameras in all resolutions" },
+    { label: "Model", value: "ENR-130"},
+    { label: "Maximum Number of Cameras", value: "16" },
+    { label: "Maximum Number of Clients", value: "Local: 1, Remote: 2" },
+    { label: "Free License", value: "16" },
+    { label: "Video Resolution", value: "Up to 4-Megapixel (Local display),Up to 10-Megapixel (Remote display)" },
     
-    { label: "Compression", value: "H.265, H.264, MPEG-4, MJPEG" },
+    { label: "Compression", value: "H.264" },
     { label: "Scheduled Recording", value: "Yes" },
     { label: "Event Recording", value: "Yes" },
     { label: "Manual Recording", value: "Yes" },
     { label: "Speed Up", value: "Yes" },
     { label: "Dual Stream Management", value: "Yes" },
-    { label: "Recording Throughput", value: "180 Mbps" },
+    { label: "Recording Throughput", value: "48 Mbps" },
     { label: "HDD Interface", value: "Maximum 2 SATA disks; Options to have empty bays, one 2TB or one4TB storage disk included" },
-    { label: "External Storage Interface", value: "iSCSI, USB" },
+    { label: "External Storage Interface", value: "No" },
 
     // { type: 'header', label: 'LENS' },
     { label: "RAID Level", value: "No" },
     { label: "Digital Zoom", value: "Yes" },
     { label: "Event Status", value: "Display event status upon alarm or upon connection loss or recovery between server and client or when the allocated disk space is full" },
     { label: "Instant Playback", value: "Instant Playback in live view window" },
-    { label: "e-Map", value: "Yes" },
+    { label: "e-Map", value: "No" },
     { label: "PTZ Control", value: "Yes" },
     
     { label: "Playback Control", value: "Continuous forward and backward playback with speeds (1/64, 1/32, 1/16, 1/8, 1/4, 1/2, 1, 2, 4, 8, 16, 32, 64, 128, 256) or frame-by-frame, pause, stop" },
-    { label: "Synchronized Playback", value: "up to 225 layout grids**" },
-    { label: "Local Access", value: "USB joystick, keyboard & mouse" },
-    { label: "Remote Access", value: "Workstation, Web Client, Mobile Client" },
-    { label: "Event Trigger", value: "[Video Device]: Video motion detection, Passive IR sensor, External device through digital input, Sound detection, Intelligent event detection, Video Push start and stop, Video loss and recovery, Disk Write Failure and Available. [Extended Device]: Point-of-sale (POS) status, Network I/O status, Access Control status" },
-    { label: "Event Response", value: "Pop-up window with live video and event confirmation activation, Switch to hotspot window, Switch to customize view, Command a PTZ device to go to a preset point, Play alert sound, Activate external device through digital output, Execute system command to activate other programs, Upload video or snapshot to FTP server, E-mail notification with snapshots, Push notification, Send Snapshot to Line Messenger" },
-    { label: "Permission Control", value: "Unlimited number of users, Active Directory, Customizable permissions for user groups, Account lockout, Automatic logout after idle, Playback password protected, Password validity period, Password Expiration Notification" },
+    { label: "Synchronized Playback", value: "16 channels" },
+    { label: "Local Access", value: "HDMI monitor, USB keyboard & mouse" },
+    { label: "Remote Access", value: "Web Client (IE),Mobile Client (iOS & Android)" },
+    { label: "Event Trigger", value: "Video motion detection; External device through digital input; Network loss and recovery" },
+    { label: "Event Response", value: "Record video; Beep; Digital output;E-mail with snapshots; Event logging;Go to PTZ preset point" },
+    { label: "Permission Control", value: "Unlimited number of users,Customizable permissions for usergroups" },
     
-    { label: "Video Export", value: "RAW, AVI, MP4, EXE, GPU Hardware accelerated video export supported with AVI format" },
-    { label: "Server Operating System", value: "Windows 10 IoT" },
-    { label: "ONVIF Compliant", value: "Yes, Profile S (contains the officially ONVIF conformant software NVR 3 Corporate)" },
-    { label: "Operating Temperature", value: "0°C ~ 40°C (32°F ~ 104°F)" },
-    { label: "Approvals", value: "CE, FCC, UL (for built-in power adapter)" },
+    { label: "Video Export", value: "USB" },
+    { label: "Server Operating System", value: "Embedded Linux" },
+    { label: "Client PC Operating System", value: "Windows 8, Windows 7" },
+    { label: "PC Web Browser", value: "IE 9, IE 10, IE 11" },
+    { label: "ONVIF Compliant", value: "Yes" },
     // { type: 'header', label: 'PTZ' },
+    { label: "Operating Temperature", value: "I0°C ~ 40°C (32°F ~ 104°F)" },
+    { label: "Approvals", value: "CE, FCC" },
    
   ];
 
   const productFeatures = [
-    "5-bay Tower Standalone NVR",
-    "Maximum Number of Video Devices: 100 (Free License: 32)",
-    "Multi-Browser Support for Lite Web Client",
-    "System Monitoring and Notifications",
-    "Location-based management with e-Map & Google Map",
-    "Workstation, Web Client, Mobile Client",
-    "Event Trigger, Response, Notification and Snapshot to Line Messenger",
+    "Export video with raw and AVI formats",
+    "Event trigger, response, and notification",
+    "Remote access via mobile and web clients"
   ];
 
   return (
@@ -81,10 +79,15 @@ const Enr130 = () => {
 
             <h2 className="font-bold text-xl mb-2  text-black">Product Description:</h2>
               <p className="text-gray-800 text-[17px] leading-relaxed">
-                Record from and manage up to 100 cameras with the GNR-340 72-Channel Tower Standalone NVR 
-                (No HDD) from ACTi. This recorder can be expanded to host five HDDs up to 18TB each for a 
-                maximum internal capacity of 90TB. Compliance with ONVIF profile S ensures interoperability 
-                with ONVIF IP cameras.
+                Stream and record up to 16 channels of video with this ACTi ENR-130 4MP/10MP Standalone 
+                NVR. The recorder allows simultaneous access to one local client and two remote clients, 
+                supporting up to 4MP on a local display and up to 10MP on a remote display. When viewing 
+                live video you can choose among a variety of display modes to monitor some or all of the 
+                connected cameras at the same time. Pan, tilt, and zoom controls with speed settings offer
+                remote control of PTZ cameras, joystick control being supported via the recorder’s dual 
+                USB 2.0 interface. Two HDD bays, each with a 10TB capacity, provide the NVR with a total 
+                storage capacity of 20TB (HDDs available separately). H.264 formatting optimizes bandwidth
+                and storage usage.
               </p>
 
             <section className="mb-8 mt-3">

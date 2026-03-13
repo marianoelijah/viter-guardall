@@ -164,6 +164,25 @@ import DS2CD2083G2 from "./components/pages/frontend/OurProducts/Honeywell Produ
 import DS2DE4225IW from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hikvision/DS2DE4225IW";
 import Inr415 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Acti/Inr415";
 import Gnr340 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Acti/Gnr340";
+import Enr130 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Acti/Enr130";
+import Z86 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Acti/Z86";
+import Z49 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Acti/Z49";
+import NetworkDome from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Acti/NetworkDome";
+import B928 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Acti/B928";
+import A817 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Acti/A817";
+import A713 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Acti/A713";
+import Cargo from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Gillardoni/Cargo";
+import CargoDv from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Gillardoni/CargoDv";
+import Fep1000 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Gillardoni/Fep1000";
+import HcDv from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Gillardoni/HcDv";
+import Xray from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Gillardoni/Xray";
+import Amx from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Gillardoni/Amx";
+import Breva from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Gillardoni/Breva";
+import Argo640 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Gillardoni/Argo640";
+import Argo640Dv from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Gillardoni/Argo640Dv";
+import Argo536 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Gillardoni/Argo536";
+import Smd601 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Ceia/Smd601";
+import Smd600 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Ceia/Smd600";
 
 
 
@@ -392,6 +411,31 @@ const App = () => {
              {/* Acti Product Details Route */}
              <Route path="/our-products/acti/bay-raid-backmount-standalone" element={<Inr415/>} />
              <Route path="/our-products/acti/channel-tower-strandalone" element={<Gnr340/>} />
+             <Route path="/our-products/acti/channel-desktop-standalone" element={<Enr130/>} />
+             <Route path="/our-products/acti/outdoor-network-dome-camera" element={<Z86/>} />
+             <Route path="/our-products/acti/zoom-bullet-with-dn" element={<Z49/>} />
+             <Route path="/our-products/acti/network-dome-camera" element={<NetworkDome/>} />
+             <Route path="/our-products/acti/outdoor-ptz-network-speed-dome-camera" element={<B928/>} />
+             <Route path="/our-products/acti/outdoor-network-dome-camera" element={<A817/>} />
+             <Route path="/our-products/acti/network-fisheye-dome-camera" element={<A713/>} />
+
+             {/* Dahua Product Details Route */}
+
+             {/* Gilardoni Product Details Route */}
+             <Route path="/our-products/gilardoni/cargo" element={<Cargo/>} />
+             <Route path="/our-products/gilardoni/cargo-dv" element={<CargoDv/>} />
+             <Route path="/our-products/gilardoni/1000" element={<Fep1000/>} />
+             <Route path="/our-products/gilardoni/1000-hc-dv" element={<HcDv/>} />
+             <Route path="/our-products/gilardoni/640-x-ray" element={<Xray/>} />
+             <Route path="/our-products/gilardoni/640-amx" element={<Amx/>} />
+             <Route path="/our-products/gilardoni/automatic-tray-return-system" element={<Breva/>} />
+             <Route path="/our-products/gilardoni/single-view-hand-baggage" element={<Argo640/>} />
+             <Route path="/our-products/gilardoni/dual-view-hand-baggage" element={<Argo640Dv/>} />
+             <Route path="/our-products/gilardoni/single-view" element={<Argo536/>} />
+
+             {/* Ceia Product Details Route */}
+             <Route path="/our-products/ceia/smd601" element={<Smd601/>} />
+              <Route path="/our-products/ceia/smd600" element={<Smd600/>} />
 
           </Routes>
         </Router>

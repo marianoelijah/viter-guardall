@@ -36,7 +36,7 @@ const ActiProducts = [
     title: "1915 2MP Outdoor PTZ Network Dome Camera with Night Vision and Heater",
     description: "A pan-tilt-zoom surveillance camera that can capture videos up to 60fps. Product Description:The I915 2MP Outdoor PTZ Network Dome Camera with Night Vision & Heaterfrom ACTi has a 1/2.8″ progressive",
     image: "/src/assets/image/ACTI IMG/Outdoor PTZ Network Dome Camera.png",
-    detailRoute: "/our-products/acti/"
+    detailRoute: "/our-products/acti/network-dome-camera"
   },
   {
     title: "B928 5MP Outdoor PTZ Network Speed Dome Camera with Night Vision",
@@ -99,8 +99,14 @@ const Acti = () => {
         
         {/* Improved Responsive Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-          {ActiProducts.map((p, idx) => (
-            <ProductCard key={idx} {...p} />
+          {ActiProducts.map((item, idx) => (
+            <ProductCard
+             key={idx}
+              title={item.title}
+              description={item.description}
+              image={item.image}
+              detailRoute={item.detailRoute} 
+            />
           ))}
         </div>
       </div>

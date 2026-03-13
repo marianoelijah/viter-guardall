@@ -4,70 +4,50 @@ import Header from '../../../partials/Header';
 import Footer from '../../../partials/Footer';
 
 
-const B928 = () => {
+const Breva = () => {
   const specs = [
-    { type: 'header', label: 'KEY SPECS' },
-    { label: "Product Type", value: "Speed dome"},
-    { label: "Maximum Resolution", value: "4 MP" },
-    { label: "Environment", value: "Outdoor" },
-    { label: "Image Sensor", value: "Progressive scan CMOS" },
-    { label: "Sensor Size", value: "1/2.8″″" },
-    { label: "Effective Pixels", value: "1945 x 1097 / 2.13 MP" },
-    { label: "Day & Night", value: "Yes" },
+    { type: 'header', label: 'GENERAL TECHNICAL DATA' },
+    { label: "Dimensions [Mm]", value: "Height: customizableLength: 840 mm (Single module)Width: 708 mm (Max)"},
+    { label: "Weight (standard module)", value: "25 kg" },
+    { label: "Max load capacity (standard module)", value: "50 kg" },
+    { label: "Max Width capacity", value: "620 mm1" },
+    { label: "Speed", value: "0,15 – 1 m/s" },
+    { label: "Power supply", value: "230 Vac; 50/60Hz" },
+    { label: "Max electrical power consumption", value: "2 kW" },
+    { label: "Max incline", value: "20° with belt" },
+
     
-    { type: 'header', label: 'IMAGING' },
-    { label: "Low Light Sensitivity", value: "Extreme" },
-    { label: "Minimum Illumination", value: "Color: 0.003 lux at F1.6 (AGC on); B/W: 0 (IR LED on)" },
-    { label: "D/N Switch", value: "ISP-based switch, configurable" },
-    { label: "Mechanical IR Cut Filter", value: "Yes" },
-    { label: "IR Sensitivity Range", value: "700 to 1100 nm" },
-    { label: "IR Wavelength", value: "850 nm" },
+    { type: 'header', label: 'ENVIRONMENTAL COMPLIANCE' },
+    { label: "Operational temp", value: "0°C – 40°C" },
+    { label: "Humidity", value: "0-95% without condensation" },
+    { label: "Noise Level", value: "70 dB" },
 
-    { type: 'header', label: 'EXPOSURE CONTROL' },
-    { label: "Minimum Illumination", value: "0.05 Lux (Color)0.005 Lux (Black and White)" },
+    { type: 'header', label: 'ROLLERS' },
+    { label: "Type", value: "Gilardoni plastic high grip rollers" },
+    { label: "Diameter", value: "50 mm" },
+    { label: "Material", value: "Plastic" },
 
-    { type: 'header', label: 'LENS' },
-    { label: "Focal Length", value: "4.6 to 165.6mm" },
-    { label: "Optical Zoom Ratio", value: "36x" },
-    { label: "Field of View", value: "Horizontal: 64.3 to 2.04°Vertical: 39.62 to 1.62°" },
-    
-    { type: 'header', label: 'VIDEO' },
-    { label: "Automatic Gain Control", value: "Yes" },
-    { label: "Max IP Streaming", value: "via RJ452592 x 1944 up to 30.00 fps" },
-    { label: "Multi-View Streaming", value: "Yes, 3 Streams" },
+    { type: 'header', label: 'DIVERTER' },
+    { label: "Type", value: "Omnidirectional wheels" },
+    { label: "Movement", value: "Transversal (no height changes)" },
 
-    { type: 'header', label: 'CONTROL' },
-    { label: "Pan/Tilt", value: "ProgrammedPan: 360° (-180 to 180°) at 300°/s Tilt: 220° at 150°/s " },
+    { type: 'header', label: 'MOTORS' },
+    { label: "Type", value: "BLCD transmission ratio 1:36" },
+    { label: "Max speed", value: "24 Vdc" },
 
-    { type: 'header', label: 'NETWORKING' },
-    { label: "Security", value: "Anonymous Authentication, HTTPS, IEEE 802.1X, IP Address Filtering, Password Protection" },
-    { label: "Supported Protocols", value: "ARP, DDNS, FTP, HTTP, ICMP, IPv4/v6, NTP, ONVIF Profile G, PPPoE, QoS Layer 3 DiffServ, RTP, RTSP, SMTP, SNMP v1/v2c/v3 (MIB-II), TCP, UDP, UPnP" },
-
-    { type: 'header', label: 'INTERFACE' },
-    { label: "Media/Memory Card Slot", value: "Single Slot: microSD/microSDHC/microSDXC [64 GB Maximum]" },
-    { label: "Audio I/O", value: "Two-Way" },
-    { label: "Audio Formats", value: "G.711" },
-    { label: "Built-In Mic", value: "No" },
-    { label: "Built-In Speaker", value: "No" },
-
-    { type: 'header', label: 'SENSORS & ALARMS' },
-    { label: "Event Trigger", value: "Yes" },
-    { label: "Event Action", value: "Notification, Alarm" },
-
-    { type: 'header', label: 'GENERAL' },
-    { label: "Impact Resistance", value: "Impact-Resistant (IK10)" },
-    { label: "Operating Conditions", value: "-40 to 131°F / -40 to 55°C at 10 to 85% Humidity" },
-    { label: "Startup Temperature", value: "-40 to 131°F / -40 to 55°C " },
-    { label: "Illumination", value: "IR LEDs up to 98.4′ / 30 m" },
-
+    { type: 'header', label: 'PHOTOCELLS' },
+    { label: "Type", value: "REFLEX O6P203" },
+    { label: "Voltage", value: "10 – 30 Vdc" },
+    { label: "IP rating", value: "IP 67" },
   ];
 
   const productFeatures = [
-    "Image flip and mirror",
-    "32 configurable 3D privacy masks",
-    "Built-in dehumidifier",
-    "Scratch-resistant and water-repellent lens glass",
-    
+    "RFID Tracking",
+    "Modularity",
+    "Ergonomic divesting station",
+    "Lightweight materials for easy modules handling and low load impact",
+    "Adaptable speed",
+    "Empty trays camera"
   ];
 
   return (
@@ -77,7 +57,7 @@ const B928 = () => {
       {/* Header Banner */}
       <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
         <h1 className="text-3xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
-          B928 5MP Outdoor PTZ Network Speed Dome Camera with Night Vision
+           BREVA TRS: BREVA Automatic Tray Return System
         </h1>
       </header>
 
@@ -86,12 +66,13 @@ const B928 = () => {
         {/* Main Content Container */}
         <main className="lg:w-3/4 bg-gray-200 p-8 shadow-sm">
             <p className="text-gray-800 text-[17px] mb-6">
-                A pan-tilt-zoom surveillance camera with 36x optical zoom and extreme Wide Dynamic Range for clearer imaging. .
+              An advanced tray handling system that can be perfectly integrated with X-ray baggage screening machines with the aim of facilitating the work of airport security staff.
             </p>
 
             <h2 className="font-bold text-xl mb-2  text-black">Product Description:</h2>
               <p className="text-gray-800 text-[17px] leading-relaxed">
-                  The B928 5MP Outdoor PTZ Network Speed Dome Camera from ACTi features a 4.6-165.6mm varifocal lens for 36x optical zoom. Utilizing a 1/2.9″ progressive scan CMOS sensor, the camera captures images at a maximum resolution of 2592 x 1944. The camera uses H.264, H.265, and MJPEG compressions to maximize storage and bandwidth efficiency, and a memory card slot supports microSD cards for on-site recording and storage. It also features a mechanical IR cut filter and IR LEDs for night vision up to 492′. Image enhancements include extreme WDR, white balance, brightness, contrast, saturation, sharpness, AGC, 2D & 3D digital noise reduction, flickerless, defogging, and digital image stabilization.              </p>
+                 TRS BREVA is an advanced tray handling system that can be perfectly integrated with X-ray baggage screening machines. The high level of automation and modularity make it ideal for the most modern airport environments, facilitating and speeding up security checking. The moving trays are always tracked thanks to a series of RFID antennas integrated in the structure. BREVA is completely customizable and can be adapted to meet all needs.
+               </p>
 
             <section className="mb-8 mt-3">
                <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
@@ -137,11 +118,11 @@ const B928 = () => {
             {/* Tags & Social */}
            <div className="flex flex-wrap gap-3 mb-8 mt-10">
               <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
-                ACTI
+                GILARDONI
               </span>
               
               <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
-                CCTVs
+                Detection Systems
               </span>
             </div>
 
@@ -173,7 +154,7 @@ const B928 = () => {
               <aside className="lg:w-1/4 space-y-6"> 
                      <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
                         <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">
-                          More By ACTI
+                          More By GILARDONI
                           </h3>
                         <ul className="text-[17px] space-y-4 text-gray-500 transition-colors">
                           <li className='cursor-pointer hover:text-[#f08c09]'>Onity DirectKey with Serene</li>
@@ -219,4 +200,4 @@ const B928 = () => {
   );
 };
 
-export default   B928;
+export default   Breva;

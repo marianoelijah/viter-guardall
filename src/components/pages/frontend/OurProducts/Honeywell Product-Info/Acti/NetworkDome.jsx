@@ -4,9 +4,9 @@ import Header from '../../../partials/Header';
 import Footer from '../../../partials/Footer';
 
 
-const B928 = () => {
+const NetworkDome = () => {
   const specs = [
-    { type: 'header', label: 'KEY SPECS' },
+    { type: 'header', label: 'DEVICE' },
     { label: "Product Type", value: "Speed dome"},
     { label: "Maximum Resolution", value: "4 MP" },
     { label: "Environment", value: "Outdoor" },
@@ -15,7 +15,7 @@ const B928 = () => {
     { label: "Effective Pixels", value: "1945 x 1097 / 2.13 MP" },
     { label: "Day & Night", value: "Yes" },
     
-    { type: 'header', label: 'IMAGING' },
+    // { type: 'header', label: 'IMAGING' },
     { label: "Low Light Sensitivity", value: "Extreme" },
     { label: "Minimum Illumination", value: "Color: 0.003 lux at F1.6 (AGC on); B/W: 0 (IR LED on)" },
     { label: "D/N Switch", value: "ISP-based switch, configurable" },
@@ -23,51 +23,42 @@ const B928 = () => {
     { label: "IR Sensitivity Range", value: "700 to 1100 nm" },
     { label: "IR Wavelength", value: "850 nm" },
 
-    { type: 'header', label: 'EXPOSURE CONTROL' },
-    { label: "Minimum Illumination", value: "0.05 Lux (Color)0.005 Lux (Black and White)" },
-
-    { type: 'header', label: 'LENS' },
-    { label: "Focal Length", value: "4.6 to 165.6mm" },
-    { label: "Optical Zoom Ratio", value: "36x" },
-    { label: "Field of View", value: "Horizontal: 64.3 to 2.04°Vertical: 39.62 to 1.62°" },
-    
-    { type: 'header', label: 'VIDEO' },
-    { label: "Automatic Gain Control", value: "Yes" },
-    { label: "Max IP Streaming", value: "via RJ452592 x 1944 up to 30.00 fps" },
-    { label: "Multi-View Streaming", value: "Yes, 3 Streams" },
-
-    { type: 'header', label: 'CONTROL' },
-    { label: "Pan/Tilt", value: "ProgrammedPan: 360° (-180 to 180°) at 300°/s Tilt: 220° at 150°/s " },
-
-    { type: 'header', label: 'NETWORKING' },
-    { label: "Security", value: "Anonymous Authentication, HTTPS, IEEE 802.1X, IP Address Filtering, Password Protection" },
-    { label: "Supported Protocols", value: "ARP, DDNS, FTP, HTTP, ICMP, IPv4/v6, NTP, ONVIF Profile G, PPPoE, QoS Layer 3 DiffServ, RTP, RTSP, SMTP, SNMP v1/v2c/v3 (MIB-II), TCP, UDP, UPnP" },
-
-    { type: 'header', label: 'INTERFACE' },
-    { label: "Media/Memory Card Slot", value: "Single Slot: microSD/microSDHC/microSDXC [64 GB Maximum]" },
-    { label: "Audio I/O", value: "Two-Way" },
-    { label: "Audio Formats", value: "G.711" },
-    { label: "Built-In Mic", value: "No" },
-    { label: "Built-In Speaker", value: "No" },
-
-    { type: 'header', label: 'SENSORS & ALARMS' },
-    { label: "Event Trigger", value: "Yes" },
-    { label: "Event Action", value: "Notification, Alarm" },
-
-    { type: 'header', label: 'GENERAL' },
-    { label: "Impact Resistance", value: "Impact-Resistant (IK10)" },
-    { label: "Operating Conditions", value: "-40 to 131°F / -40 to 55°C at 10 to 85% Humidity" },
-    { label: "Startup Temperature", value: "-40 to 131°F / -40 to 55°C " },
-    { label: "Illumination", value: "IR LEDs up to 98.4′ / 30 m" },
-
+    // { type: 'header', label: 'EXPOSURE CONTROL' },
+    { label: "Number of IR Leds", value: "6 x adaptive IR LEDs" },
+    { label: "IR Working Distance", value: "492′ / 150 m" },
+    { label: "Electronic Shutter", value: "Manual Mode: 1/32,000 to 1/5 secondsAuto Mode: 1/32,000 to 1/5 seconds" },
+    { label: "Horizontal Resolution (TV Lines)", value: "1800 TVL" },
+    { label: "S/N Ratio", value: "56 dB" },
   ];
 
   const productFeatures = [
+    "Captures 1080p video at up to 60 fps",
+    "62.7-2.7° horizontal field of view",
+    "PoE or AC power",
+    "Equipped with a heater, fan, and dehumidifier",
+    "PTZ controls such as remote manual control, 256 preset points, 10 preset tours, and auto scan",
+    "Supported PTZ protocols include Visca, Pelco D, Pelco P, and ACTi URL command",
+    "H.264 and MJPEG video compression",
+    "Simultaneous triple streams based on three configurations",
+    "CBR and VBR",
+    "Mechanical IR cut filter enables day and night functionality",
+    "Image enhancements include white balance, brightness, contrast, sharpness, automatic gain control, flickerless, digital image stabilizer, and defogging",
+    "145 dB wide dynamic range",
+    "2D-DNR and 3D-DNR",
+    "Auto focus",
+    "Text overlay",
     "Image flip and mirror",
-    "32 configurable 3D privacy masks",
-    "Built-in dehumidifier",
+    "20 configurable 3D privacy masks for areas you don’t want recorded",
+    "Built-in analytics include face detection, object based motion detection, tampering detection, shock detection, PTZ auto tracking, object line crossing detection, object enter area detection, missing object detection, unattended object detection, and object loitering detection",
+    "VMS-based analytics include object line counting, people counting, face detection, object based motion detection, tamper, object line crossing detection, object enter area detection, missing object detection, unattended object detection, smoke detection, heat map, dwell time, direction detection, automatic license plate recognition, and people queue detection",
+    "Fully compatible with ACTi software",
+    "Supports IVS (intelligent video)",
+    "Network security includes IP address filtering, HTTPS encryption, password protected user level, anonymous login, and IEEE 802.1X network access control",
+    "Manual GPS setting",
+    "Cable with terminal block for digital inputs and outputs",
+    "High PoE injector included",
+    "IP66-, NEMA 4X-, and IK10-rated metal enclosure that is suitable for use in outdoor areas at risk of vandalism ",
     "Scratch-resistant and water-repellent lens glass",
-    
   ];
 
   return (
@@ -77,7 +68,7 @@ const B928 = () => {
       {/* Header Banner */}
       <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
         <h1 className="text-3xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
-          B928 5MP Outdoor PTZ Network Speed Dome Camera with Night Vision
+          I915 2MP Outdoor PTZ Network Dome Camera with Night Vision and Heater
         </h1>
       </header>
 
@@ -86,12 +77,13 @@ const B928 = () => {
         {/* Main Content Container */}
         <main className="lg:w-3/4 bg-gray-200 p-8 shadow-sm">
             <p className="text-gray-800 text-[17px] mb-6">
-                A pan-tilt-zoom surveillance camera with 36x optical zoom and extreme Wide Dynamic Range for clearer imaging. .
+                A pan-tilt-zoom surveillance camera that can capture videos up to 60fps.
             </p>
 
             <h2 className="font-bold text-xl mb-2  text-black">Product Description:</h2>
               <p className="text-gray-800 text-[17px] leading-relaxed">
-                  The B928 5MP Outdoor PTZ Network Speed Dome Camera from ACTi features a 4.6-165.6mm varifocal lens for 36x optical zoom. Utilizing a 1/2.9″ progressive scan CMOS sensor, the camera captures images at a maximum resolution of 2592 x 1944. The camera uses H.264, H.265, and MJPEG compressions to maximize storage and bandwidth efficiency, and a memory card slot supports microSD cards for on-site recording and storage. It also features a mechanical IR cut filter and IR LEDs for night vision up to 492′. Image enhancements include extreme WDR, white balance, brightness, contrast, saturation, sharpness, AGC, 2D & 3D digital noise reduction, flickerless, defogging, and digital image stabilization.              </p>
+                The I915 2MP Outdoor PTZ Network Dome Camera with Night Vision & Heaterfrom ACTi has a 1/2.8″ progressive scan CMOS sensor to capture 1920 x 1080 resolution video at up to 60 fps. Its 4.6-165.6mm varifocal lens delivers a 62.7-2.7° horizontal field of view. Additionally, PTZ functionality delivers 360° endless panning, a -20-200° tilting range, and 36x optical zoom. Two-way audio communication is possible thanks to a line input and output. A built-in card slot supports microSDHC/SDXC cards. microSDHC/SDXC are available separately. Integrated PoE technology simplifies connectivity by transferring data and power over one cable.
+              </p>
 
             <section className="mb-8 mt-3">
                <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
@@ -219,4 +211,4 @@ const B928 = () => {
   );
 };
 
-export default   B928;
+export default   NetworkDome;
