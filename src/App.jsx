@@ -183,6 +183,28 @@ import Argo640Dv from "./components/pages/frontend/OurProducts/Honeywell Product
 import Argo536 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Gillardoni/Argo536";
 import Smd601 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Ceia/Smd601";
 import Smd600 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Ceia/Smd600";
+import Pmd2 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Ceia/Pmd2";
+import Hipe from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Ceia/Hipe";
+import Opengate from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Ceia/Opengate";
+import Msdi from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Ceia/Msdi";
+import Msd from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Ceia/Msd";
+import Pd240cb from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Ceia/Pd240cb";
+import Pd240 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Ceia/Pd240";
+import Pd140n from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Ceia/Pd140n";
+import Emis from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Ceia/Emis";
+import Ema from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Ceia/Ema";
+import Handwand from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Autoclear/Handwand";
+import DvXray from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Autoclear/DvXray";
+import Dvsdv from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Autoclear/Dvsdv";
+import DvsXray from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Autoclear/DvsXray";
+import Inspection6040 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Autoclear/Inspection6040";
+import Inspection5333 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Autoclear/Inspection5333";
+import N2300 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Autoclear/N2300";
+import E5000 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Autoclear/E5000";
+import E3500 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Autoclear/E3500";
+import Clx from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Autoclear/Clx";
+import Technical from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Detnov/Technical";
+import Doa from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Detnov/Doa";
 
 
 
@@ -435,7 +457,33 @@ const App = () => {
 
              {/* Ceia Product Details Route */}
              <Route path="/our-products/ceia/smd601" element={<Smd601/>} />
-              <Route path="/our-products/ceia/smd600" element={<Smd600/>} />
+             <Route path="/our-products/ceia/smd600" element={<Smd600/>} />
+             <Route path="/our-products/ceia/pmd2" element={<Pmd2/>} />
+             <Route path="/our-products/ceia/hi-pe" element={<Hipe/>} />
+             <Route path="/our-products/ceia/opengate" element={<Opengate/>} />
+             <Route path="/our-products/ceia/high-performance" element={<Msdi/>} />
+             <Route path="/our-products/ceia/portable-cellphone" element={<Msd/>} />
+             <Route path="/our-products/ceia/long-range-hand-held" element={<Pd240cb/>} />
+             <Route path="/our-products/ceia/wide-search-area" element={<Pd240/>} />
+             <Route path="/our-products/ceia/compact-hand-held" element={<Pd140n/>} />
+             <Route path="/our-products/ceia/mail-scanner" element={<Emis/>} />
+             <Route path="/our-products/ceia/liquid-explosive-detector" element={<Ema/>} />
+
+             {/* AutoClear Product Details Route */}
+            <Route path="/our-products/autoclear/handwand" element={<Handwand/>} />
+            <Route path="/our-products/autoclear/100100tdvs-dv-inspection-system" element={<DvXray/>} />
+            <Route path="/our-products/autoclear/100100tdvs-inspection-system" element={<DvsXray/>} />
+            <Route path="/our-products/autoclear/6040dvs-dv-inspection-system" element={<Dvsdv/>} />
+            <Route path="/our-products/autoclear/6040dvs-inspection-system" element={<Inspection6040/>} />
+            <Route path="/our-products/autoclear/5333dvs-inspection-system" element={<Inspection5333/>} />
+            <Route path="/our-products/autoclear/n2300-trace-detector" element={<N2300/>} />
+            <Route path="/our-products/autoclear/series-trace-detector" element={<E5000/>} />
+            <Route path="/our-products/autoclear/e3500-trace-detector" element={<E3500/>} />
+            <Route path="/our-products/autoclear/compact-tree-detector" element={<Clx/>} />
+
+            {/* Detnov Product Details Route */}
+            <Route path="/our-products/detnov/technical-inputs" element={<Technical/>} />
+            <Route path="/our-products/detnov/indicator-light-with-buzzer" element={<Doa/>} />
 
           </Routes>
         </Router>
