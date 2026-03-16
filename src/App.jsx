@@ -205,6 +205,33 @@ import E3500 from "./components/pages/frontend/OurProducts/Honeywell Product-Inf
 import Clx from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Autoclear/Clx";
 import Technical from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Detnov/Technical";
 import Doa from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Detnov/Doa";
+import Trd100 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Detnov/Trd100";
+import HeatnSmoke from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Detnov/HeatnSmoke";
+import ControlPanel from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Detnov/ControlPanel";
+import Communication from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Detnov/Commuinication";
+import CallPoint from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Detnov/CallPoint";
+import BeaconSeries from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Detnov/BeaconSeries";
+import PowerSupply from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Detnov/PowerSupply";
+import ConnectionBase from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Detnov/ConnectionBase";
+import DetnovCloud from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Detnov/DetnovCloud";
+import Mad464 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Detnov/Mad464";
+import AddressProgram from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Detnov/AddressProgram";
+import Technicalinputs from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Detnov/Technicalinputs";
+import Isolator from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Detnov/Isolator";
+import SmokeDetector from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Detnov/SmokeDetector";
+import MetalBox from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Detnov/MetalBox";
+import Clampbell from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Detnov/Clampbell";
+import Vsc9000 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Foster/Vsc9000";
+import Vsc80i from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Foster/Vsc80i";
+import Fingerprint from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Foster/Fingerprint";
+import Crime from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Foster/Crime";
+import CrimeLite from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Foster/CrimeLite";
+import Mobile from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Ebs/Mobile";
+import View from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Ebs/View";
+import Track from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Ebs/Track";
+import Serene from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Onity/Serene";
+import Trillium from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Onity/Trillium";
+
 
 
 
@@ -484,6 +511,38 @@ const App = () => {
             {/* Detnov Product Details Route */}
             <Route path="/our-products/detnov/technical-inputs" element={<Technical/>} />
             <Route path="/our-products/detnov/indicator-light-with-buzzer" element={<Doa/>} />
+            <Route path="/our-products/detnov/voltage-relay-output" element={<Trd100/>} />
+            <Route path="/our-products/detnov/clampbell-fire-alarm" element={<Clampbell/>} />
+            <Route path="/our-products/detnov/heat-and-smoke-detector" element={<HeatnSmoke/>} />
+            <Route path="/our-products/detnov/conventional-control-panel" element={<ControlPanel/>} />
+            <Route path="/our-products/detnov/multi-pupose-communication-card" element={<Communication/>} />
+            <Route path="/our-products/detnov/manual-call-point" element={<CallPoint/>} />
+            <Route path="/our-products/detnov/beacon-series" element={<BeaconSeries/>} />
+            <Route path="/our-products/detnov/monitored-power-supply" element={<PowerSupply/>} />
+            <Route path="/our-products/detnov/connection-base" element={<ConnectionBase/>} />
+            <Route path="/our-products/detnov/detnov-cloud" element={<DetnovCloud/>} />
+            <Route path="/our-products/detnov/addressable-sounder" element={<Mad464/>} />
+            <Route path="/our-products/detnov/address-programmer" element={<AddressProgram/>} />
+            <Route path="/our-products/detnov/addressable-modules" element={<Technicalinputs/>} />
+            <Route path="/our-products/detnov/manual-call--point-with-isolator" element={<Isolator/>} />
+            <Route path="/our-products/detnov/optical-smoke-detector" element={<SmokeDetector/>} />
+            <Route path="/our-products/detnov/control-panel-with-metal-box" element={<MetalBox/>} />
+
+            {/* Foster+Freeman Product Details Route */}
+            <Route path="/our-products/foster/vsc9000" element={<Vsc9000/>} />
+            <Route path="/our-products/foster/vsc80i" element={<Vsc80i/>} />
+            <Route path="/our-products/foster/fingerprint-imaging-workstation" element={<Fingerprint/>} />
+            <Route path="/our-products/foster/crime-lite-x" element={<Crime/>} />
+            <Route path="/our-products/foster/crime-lite-auto" element={<CrimeLite/>} />
+
+            {/* Ebs Product Details Route */}
+            <Route path="/our-products/ebs/at-mobile" element={<Mobile/>} />
+            <Route path="/our-products/ebs/active-view" element={<View/>} />
+            <Route path="/our-products/ebs/active-track" element={<Track/>} />
+
+             {/* Onity Product Details Route */}
+             <Route path="/our-products/onity/directkey-with-serene" element={<Serene/>} />
+             <Route path="/our-products/onity/trillium-rfid" element={<Trillium/>} />
 
           </Routes>
         </Router>

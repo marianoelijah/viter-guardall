@@ -1,24 +1,28 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const EbsProducts = [
   {
     title: "EBS: AT MOBILE",
     description: "A mobile app which supports lone workers real-time that works best with Active Track. Product Features: ",
-    image: "/src/assets/image/EBS IMG/AT MOBILE.png"
+    image: "/src/assets/image/EBS IMG/AT MOBILE.png",
+    detailRoute: "/our-products/ebs/at-mobile"
   },
   {
     title: "EBS: ACTIVE VIEW",
     description: "A cloud-based monitoring system to help maintain your people, property, and enhance your services. This product works best with Active Track. It’s designed for real-time monitoring and management of lone",
-    image: "/src/assets/image/EBS IMG/ACTIVE VIEW.png"
+    image: "/src/assets/image/EBS IMG/ACTIVE VIEW.png",
+    detailRoute: "/our-products/ebs/active-view"
   },
   {
     title: "EBS: ACTIVE TRACK",
     description: "An easy-to-carry device that combines GPS, RFID, and 4G for remote employee monitoring.  Product Description: ACTIVE TRACK 2 devices are a traditional solution for remote employee monitoring. It is equipped",
-    image: "/src/assets/image/EBS IMG/ACTIVE TRACK.png"
+    image: "/src/assets/image/EBS IMG/ACTIVE TRACK.png",
+    detailRoute: "/our-products/ebs/active-track"
   }
 ];
 
-const ProductCard = ({ title, description, image }) => (
+const ProductCard = ({ title, description, image, detailRoute }) => (
   <div className="bg-white border border-gray-200 rounded-xl p-5 flex flex-col h-full transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl cursor-pointer">
     {/* Enhanced Image Container Size */}
     <div className="bg-gray-50 border border-gray-100 rounded-lg p-6 mb-5 flex items-center justify-center h-64 overflow-hidden">
@@ -35,6 +39,13 @@ const ProductCard = ({ title, description, image }) => (
       <p className="text-gray-600 text-xl leading-relaxed">
         {description}
       </p>
+       <span className='text-classic block mt-12 text-gray-500 text-sm tracking-widest'>
+            <NavLink to={detailRoute} className="text-blue-500 hover:underline mt-2 block">
+              <h3 className='text-xl font-poppins hover:text-green-500 transition-colors duration-300'>
+                View Details
+              </h3>
+            </NavLink>
+        </span>
     </div>
   </div>
 );
@@ -53,8 +64,14 @@ const Foster = () => {
 
         {/* Responsive Grid with improved spacing */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {EbsProducts.map((p, idx) => (
-            <ProductCard key={idx} {...p} />
+          {EbsProducts.map((item, idx) => (
+            <ProductCard
+             key={idx}
+              title={item.title}
+              description={item.description}
+              image={item.image}
+              detailRoute={item.detailRoute} 
+            />
           ))}
         </div>
       </div>

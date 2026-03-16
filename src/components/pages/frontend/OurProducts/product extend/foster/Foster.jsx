@@ -1,34 +1,40 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const FosterProducts = [
   {
     title: " VSC9000",
     description: "A high-performance optical system that enables multi-spectral examinations of documents to reveal and identify tampering or manipulation. Product Description: Equipped with a high-performance optical and illumination system, the VSC9000 enables",
-    image: "/src/assets/image/FOSTER IMG/VSC-9000.jpg"
+    image: "/src/assets/image/FOSTER IMG/VSC-9000.jpg",
+     detailRoute: "/our-products/foster/vsc9000"
   },
   {
     title: "VSC80i",
     description: "A touch screen workstation that provides a complete examination of secure travel and identity documents.   Product Description: The VSC®80i is fully integrated workstation that provides a complete solution to the",
-    image: "/src/assets/image/FOSTER IMG/VSC80i.jpg"
+    image: "/src/assets/image/FOSTER IMG/VSC80i.jpg",
+     detailRoute: "/our-products/foster/vsc80i"
   },
   {
     title: "DCS 5: FINGERPRINT IMAGING WORKSTATION",
     description: "A comprehensive imaging system for any type of fingerprint on any surface or background, ensuring that maximum detail is revealed. Product Description: DCS 5 is a comprehensive imaging system for",
-    image: "/src/assets/image/FOSTER IMG/DCS-5.jpg"
+    image: "/src/assets/image/FOSTER IMG/DCS-5.jpg",
+     detailRoute: "/our-products/foster/fingerprint-imaging-workstation"
   },
   {
     title: "CRIME-LITE X",
     description: "A handheld, multi-spectral LED light source that helps examiners to seamlessly switch between various light options during an examination of a crime scene.  Product Description: A complete ALS kit in",
-    image: "/src/assets/image/FOSTER IMG/Crime-Lite-X.jpg"
+    image: "/src/assets/image/FOSTER IMG/Crime-Lite-X.jpg",
+     detailRoute: "/our-products/foster/crime-lite-x"
   },
    {
     title: "CRIME-LITE AUTO",
     description: "A semi-automated evidence screening tool with a complete, all-in-one solution for the detection and imaging of evidence. Product Description: Combining the latest forensic imaging technology with high- intensity multi-spectral illumination,",
-    image: "/src/assets/image/FOSTER IMG/Crime-Lite-Auto.jpg"
+    image: "/src/assets/image/FOSTER IMG/Crime-Lite-Auto.jpg",
+     detailRoute: "/our-products/foster/crime-lite-auto"
   }
 ];
 
-const ProductCard = ({ title, description, image }) => (
+const ProductCard = ({ title, description, image, detailRoute }) => (
   <div className="bg-white border border-gray-200 rounded-xl p-5 flex flex-col h-full transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl cursor-pointer">
     {/* Enhanced Image Container Size */}
     <div className="bg-gray-50 border border-gray-100 rounded-lg p-6 mb-5 flex items-center justify-center h-64 overflow-hidden">
@@ -45,6 +51,13 @@ const ProductCard = ({ title, description, image }) => (
       <p className="text-gray-600 text-xl leading-relaxed">
         {description}
       </p>
+        <span className='text-classic block mt-12 text-gray-500 text-sm tracking-widest'>
+            <NavLink to={detailRoute} className="text-blue-500 hover:underline mt-2 block">
+              <h3 className='text-xl font-poppins hover:text-green-500 transition-colors duration-300'>
+                View Details
+              </h3>
+            </NavLink>
+        </span>
     </div>
   </div>
 );
@@ -63,8 +76,14 @@ const Foster = () => {
 
         {/* Responsive Grid with improved spacing */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {FosterProducts.map((p, idx) => (
-            <ProductCard key={idx} {...p} />
+          {FosterProducts.map((item, idx) => (
+            <ProductCard
+             key={idx}
+              title={item.title}
+              description={item.description}
+              image={item.image}
+              detailRoute={item.detailRoute} 
+            />
           ))}
         </div>
       </div>

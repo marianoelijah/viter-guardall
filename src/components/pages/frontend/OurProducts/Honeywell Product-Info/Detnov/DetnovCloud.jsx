@@ -3,7 +3,7 @@ import Header from '../../../partials/Header';
 import Footer from '../../../partials/Footer';
 import { NavLink } from 'react-router-dom';
 
-
+// Shared Layout Component to maintain design consistency across all products
 const ProductLayout = ({ title, subtitle, description, features, specs, sidebarItems }) => {
   return (
     <>
@@ -31,152 +31,86 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
               </p>
             </section>
 
-            {/* <section className="mb-10">
+            <section className="mb-10">
               <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
               <ul className="list-disc ml-5 text-[17px] text-gray-680 space-y-1">
                 {features.map((feature, idx) => (
                   <li key={idx}>{feature}</li>
                 ))}
               </ul>
-            </section> */}
-
-            {/* Technical Specifications Table */}
-            <section>
-              <h2 className="font-bold text-xl text-black mb-4">Technical Specification:</h2>
-              <div className="border  border-r overflow-hidden">
-                <table className="w-full text-left text-xs border-collapse">
-                  <tbody>
-                    {specs.map((item, idx) => (
-                      <React.Fragment key={idx}>
-                        {item.type === 'header' ? (
-                          <tr className="bg-gray-200">
-                            <th colSpan="2" className="p-2 border-b border-black border border-r text-[15px] text-black font-bold uppercase tracking-wider">
-                              {item.label}
-                            </th>
-                          </tr>
-                        ) : (
-                          <tr className={idx % 2 === 0 ? 'bg-gray-100' : 'bg-gray-50'}>
-                            <td className="p-3 border-b border-r border-black border  font-bold w-1/3 text-[15px] text-black bg-gray-50/50">
-                              {item.label}
-                            </td>
-                            <td className="p-3 border-b border-black border border-r text-black whitespace-pre-line text-[15px] hover:bg-slate-50/50 transition-colors">
-                              {item.value}
-                            </td>
-                            {/* <td className="p-3 border-b border-black border border-r text-black whitespace-pre-line text-[15px] hover:bg-slate-50/50 transition-colors">
-                              {item.valu}
-                            </td> */}
-                          </tr>
-                        )}
-                      </React.Fragment>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
             </section>
 
              {/* Technical Specifications Table */}
-              {/* <div className="bg-gray-300 p-6 shadow rounded border border-r divine-y">
+              <div className="bg-gray-300 p-6 shadow rounded border border-r divine-y">
             <h2 className="font-bold text-black text-xl mb-4">Technical Specification</h2>
 
             <table className="w-full border text-[15px] text-black">
               <tbody>
+
+                <tr className="bg-gray-300 ">
+                  <td colSpan="5" className="border-r border-black border p-2 font-bold">
+                    CONNECTIONS
+                  </td>
+                </tr>
+
                 <tr className="bg-gray-300 ">
                   <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
-                    Model Name
+                    Wired
                   </td>
                   <td colSpan="3" className="border border-r border-black  p-2">
-                    VARIFOCAL BULLET
+                   Ethernet RJ-45
                   </td>
                 </tr>
+
                 <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    Part Number
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                    IBV229-1ERIBV529-1ER
+                  <td colSpan="5" className="border-r border-black border p-2 font-bold">
+                    ENVIRONMENT
                   </td>
                 </tr>
+
                 <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                   Resolution (MP)
+                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                    Operating temperature
                   </td>
                   <td colSpan="3" className="border border-r border-black  p-2">
-                    2 MP / 5 MP
-                  </td>
-                </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    Image Sensor
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                    1/2.9” Progressive CMOS(IBV229-1ER); 1/2.7”Progressive CMOS(IBV529-1ER)
+                     From -5°C to +40°C
                   </td>
                 </tr>
                  <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    Max. Dynamic Range (dB)
+                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                    Relative humidity
                   </td>
                   <td colSpan="3" className="border border-r border-black  p-2">
-                    120 dB
+                     95% without condensation
                   </td>
                 </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    Max. Image Rate
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                    30 fps at 2 MP 20 fps at 5 MP
-                  </td>
-                </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    Trd100
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                    IP66
-                  </td>
-                </tr>
+
                 <tr className="bg-gray-300 ">
                   <td colSpan="5" className="border-r border-black border p-2 font-bold">
-                    AUDIO, POWER, STORAGE
+                    COMPATIBILITY
                   </td>
                 </tr>
+
                 <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    Audio Compression Method
+                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                    CAD-150 control panels
                   </td>
                   <td colSpan="3" className="border border-r border-black  p-2">
-                    NA
+                    from version 2.83
                   </td>
                 </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    Audio Input/Output
+                 <tr className="bg-gray-300 ">
+                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                    CCD-100 control panels
                   </td>
                   <td colSpan="3" className="border border-r border-black  p-2">
-                    One way audio:Bulit-in Microphone
+                    date of manufacture after January 2016
                   </td>
                 </tr>
-                 
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    PoE Power Source
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                   PoE Class 3
-                  </td>
-                </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    Onboard Storage
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                    MicroSD/SDHC/SDXC card
-                  </td>
-                </tr>
+               
               </tbody>
             </table>
-                </div> */}
+                </div>
             
 
             {/* Footer Tags & Socials */}
@@ -263,42 +197,22 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
 };
 
 // Example Usage for the Hirsch M64 Controller
-const Trd100 = () => {
+const DetnovCloud = () => {
   const data = {
-    title: "TRD-100 Expansion Card of 4 Free Voltage Relay Output",
-    subtitle: "An expansion card designed to increase the number of relay outputs of DETNOV’s fire control panels",
-    description: "The TRD-100 expansion card has been designed to increase the number of relay outputs of Detnov’s CCD-100 range of conventional fire control panels. The TRD-100 card provides 4 free contact relay outputs with their three corresponding contacts (common, normally opened, normally closed), which may be used to carry out activations by zone in a conventional system.",
-    // features: [
-    //   "Excellent low light performance",
-    //   "True Wide Dynamic Range",
-    //   "30 fps @ 1080p, 20 FPS @ 5 MP ",
-    //   "Built-in IR illumination up to 30 M ",
-    //   "Remote zoom and focus varifocal lens",
-    //   "H.265 and H.264 encoding with Pelco Smart Compression",
-    //   "IP66 for Trd100 ruggedness",
-    //   "TBuilt-in MicroSD / SDHC / SDXC Card Slot for On-board Storage, 256 GB tested",
-    // ],
-
-    specs: [
-      { type: 'header', label: 'RELAY OUTPUT' },
-      { label: 'Maximum load', value: '10A to 30VCC' },
-      { label: 'Delay selectable on panel board', value: '0-10 minutes' },
-      { type: 'header', label: 'ENVIRONMENT' },
-      { label: 'Operating temperature', value: 'From -5°C to +40°C' },
-      { label: 'Relative humidity', value: '95% without condensation' },
+    title: "TED-151-CL DETNOV Cloud",
+    subtitle: "A cloud solution that allows remote connectivity to maintain fire alarm systems.",
+    description: "Detnov Cloud is the solution of remote connectivity settled in the cloud that the maintainers were waiting for. This solution will allow them to offer new services to their customers, through an application that is installed on mobile phones, tablets or computers. It allows to know, in real time, the information of the entire park of its facilities, with remote monitoring and control, if the pertinent permits are available, activation and deactivation of zones or devices remotely.",
+    features: [
+      "Remotely monitor and control the detection facilities",
+      "Integrated Ethernet port on board",
+      "Compatible with conventional CCD-100 and addressable CAD-150 control panels",
+      "Multilingual",
+      "Geo localization"
     ],
 
-    // sidebarItems: [
-    //   "Onity DirectKey with Serene",
-    //   "MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs",
-    //   "INR 415 256-Channel 12 Bay RAID Backmount Standalone",
-    //   "GNR 340 100-Channel Tower Standalone",
-    //   "ENR 130 16-Channel Desktop Standalone NVR- No HDD Included",
-    //   "Z86 Outdoor Network Dome Camera with Night Vision"
-    // ]
   };
 
   return <ProductLayout {...data} />;
 };
 
-export default Trd100;
+export default DetnovCloud;

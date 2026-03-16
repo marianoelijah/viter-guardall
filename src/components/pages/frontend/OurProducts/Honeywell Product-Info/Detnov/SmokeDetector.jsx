@@ -3,7 +3,7 @@ import Header from '../../../partials/Header';
 import Footer from '../../../partials/Footer';
 import { NavLink } from 'react-router-dom';
 
-
+// Shared Layout Component to maintain design consistency across all products
 const ProductLayout = ({ title, subtitle, description, features, specs, sidebarItems }) => {
   return (
     <>
@@ -31,152 +31,154 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
               </p>
             </section>
 
-            {/* <section className="mb-10">
+            <section className="mb-10">
               <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
               <ul className="list-disc ml-5 text-[17px] text-gray-680 space-y-1">
                 {features.map((feature, idx) => (
                   <li key={idx}>{feature}</li>
                 ))}
               </ul>
-            </section> */}
-
-            {/* Technical Specifications Table */}
-            <section>
-              <h2 className="font-bold text-xl text-black mb-4">Technical Specification:</h2>
-              <div className="border  border-r overflow-hidden">
-                <table className="w-full text-left text-xs border-collapse">
-                  <tbody>
-                    {specs.map((item, idx) => (
-                      <React.Fragment key={idx}>
-                        {item.type === 'header' ? (
-                          <tr className="bg-gray-200">
-                            <th colSpan="2" className="p-2 border-b border-black border border-r text-[15px] text-black font-bold uppercase tracking-wider">
-                              {item.label}
-                            </th>
-                          </tr>
-                        ) : (
-                          <tr className={idx % 2 === 0 ? 'bg-gray-100' : 'bg-gray-50'}>
-                            <td className="p-3 border-b border-r border-black border  font-bold w-1/3 text-[15px] text-black bg-gray-50/50">
-                              {item.label}
-                            </td>
-                            <td className="p-3 border-b border-black border border-r text-black whitespace-pre-line text-[15px] hover:bg-slate-50/50 transition-colors">
-                              {item.value}
-                            </td>
-                            {/* <td className="p-3 border-b border-black border border-r text-black whitespace-pre-line text-[15px] hover:bg-slate-50/50 transition-colors">
-                              {item.valu}
-                            </td> */}
-                          </tr>
-                        )}
-                      </React.Fragment>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
             </section>
 
              {/* Technical Specifications Table */}
-              {/* <div className="bg-gray-300 p-6 shadow rounded border border-r divine-y">
+              <div className="bg-gray-300 p-6 shadow rounded border border-r divine-y">
             <h2 className="font-bold text-black text-xl mb-4">Technical Specification</h2>
 
             <table className="w-full border text-[15px] text-black">
               <tbody>
+
                 <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
-                    Model Name
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                    VARIFOCAL BULLET
-                  </td>
-                </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    Part Number
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                    IBV229-1ERIBV529-1ER
-                  </td>
-                </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                   Resolution (MP)
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                    2 MP / 5 MP
-                  </td>
-                </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    Image Sensor
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                    1/2.9” Progressive CMOS(IBV229-1ER); 1/2.7”Progressive CMOS(IBV529-1ER)
-                  </td>
-                </tr>
-                 <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    Max. Dynamic Range (dB)
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                    120 dB
-                  </td>
-                </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    Max. Image Rate
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                    30 fps at 2 MP 20 fps at 5 MP
-                  </td>
-                </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    Trd100
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                    IP66
+                  <td colSpan="5" className="border-r border-black border p-2 font-bold">
+                    DETECTOR
                   </td>
                 </tr>
                 <tr className="bg-gray-300 ">
                   <td colSpan="5" className="border-r border-black border p-2 font-bold">
-                    AUDIO, POWER, STORAGE
+                   Loop Features
+                  </td>
+                </tr>
+
+                <tr className="bg-gray-300 ">
+                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                    Operating Voltage
+                  </td>
+                  <td colSpan="3" className="border border-r border-black  p-2">
+                    From 22 to 38VDC
                   </td>
                 </tr>
                 <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    Audio Compression Method
+                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                   Quiescent current consumption
                   </td>
                   <td colSpan="3" className="border border-r border-black  p-2">
-                    NA
+                   300 μA
                   </td>
                 </tr>
                 <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    Audio Input/Output
+                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                   Alarm current consumption
                   </td>
                   <td colSpan="3" className="border border-r border-black  p-2">
-                    One way audio:Bulit-in Microphone
+                    11 mA
                   </td>
                 </tr>
-                 
+
                 <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    PoE Power Source
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                   PoE Class 3
+                  <td colSpan="5" className="border-r border-black border p-2 font-bold">
+                   CONNECTION
                   </td>
                 </tr>
+
                 <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    Onboard Storage
+                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
                   </td>
                   <td colSpan="3" className="border border-r border-black  p-2">
-                    MicroSD/SDHC/SDXC card
+                   2 x 1,5 mm2twisted and shielded cable to a Z-200 base
                   </td>
                 </tr>
+
+                <tr className="bg-gray-300 ">
+                  <td colSpan="5" className="border-r border-black border p-2 font-bold">
+                    ENVIRONMENT
+                  </td>
+                </tr>
+
+                <tr className="bg-gray-300 ">
+                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                    Operating temperature
+                  </td>
+                  <td colSpan="3" className="border border-r border-black  p-2">
+                    From -10°C to +70°C
+                  </td>
+                </tr>
+                 <tr className="bg-gray-300 ">
+                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                    Relative humidity
+                  </td>
+                  <td colSpan="3" className="border border-r border-black  p-2">
+                    95% without condensation
+                  </td>
+                </tr>
+                 <tr className="bg-gray-300 ">
+                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                    IP Index
+                  </td>
+                  <td colSpan="3" className="border border-r border-black  p-2">
+                    IP40
+                  </td>
+                </tr>
+
+                <tr className="bg-gray-300 ">
+                  <td colSpan="5" className="border-r border-black border p-2 font-bold">
+                    PHYSICAL FEATURES
+                  </td>
+                </tr>
+
+                 <tr className="bg-gray-300 ">
+                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                    Head (height x Ø):
+                  </td>
+                  <td colSpan="3" className="border border-r border-black  p-2">
+                    42 mm x 100 mm
+                  </td>
+                </tr>
+                 <tr className="bg-gray-300 ">
+                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                    Base (height x Ø):
+                  </td>
+                  <td colSpan="3" className="border border-r border-black  p-2">
+                    5 mm x 100 mm
+                  </td>
+                </tr>
+                 <tr className="bg-gray-300 ">
+                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                    Material:
+                  </td>
+                  <td colSpan="3" className="border border-r border-black  p-2">
+                    ABS
+                  </td>
+                </tr>
+
+                <tr className="bg-gray-300 ">
+                  <td colSpan="5" className="border-r border-black border p-2 font-bold">
+                    APPROVALS
+                  </td>
+                </tr>
+
+                 <tr className="bg-gray-300 ">
+                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                  </td>
+                  <td colSpan="1" className="border border-r  flex  p-2">
+                    EN 54-7 and EN 54-17 (DOD-220A only EN 54-7)
+                  </td>
+                  <td colSpan="1" className="border border-r border-black  p-2 flex">
+                    DOD-220A Certificate number: 0370-CPR-0881DOD-220A-I Certificate number: 0370-CPR-1859
+                  </td>
+                </tr>
+
               </tbody>
             </table>
-                </div> */}
+                </div>
             
 
             {/* Footer Tags & Socials */}
@@ -263,42 +265,27 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
 };
 
 // Example Usage for the Hirsch M64 Controller
-const Trd100 = () => {
+const SmokeDetector = () => {
   const data = {
-    title: "TRD-100 Expansion Card of 4 Free Voltage Relay Output",
-    subtitle: "An expansion card designed to increase the number of relay outputs of DETNOV’s fire control panels",
-    description: "The TRD-100 expansion card has been designed to increase the number of relay outputs of Detnov’s CCD-100 range of conventional fire control panels. The TRD-100 card provides 4 free contact relay outputs with their three corresponding contacts (common, normally opened, normally closed), which may be used to carry out activations by zone in a conventional system.",
-    // features: [
-    //   "Excellent low light performance",
-    //   "True Wide Dynamic Range",
-    //   "30 fps @ 1080p, 20 FPS @ 5 MP ",
-    //   "Built-in IR illumination up to 30 M ",
-    //   "Remote zoom and focus varifocal lens",
-    //   "H.265 and H.264 encoding with Pelco Smart Compression",
-    //   "IP66 for Trd100 ruggedness",
-    //   "TBuilt-in MicroSD / SDHC / SDXC Card Slot for On-board Storage, 256 GB tested",
-    // ],
-
-    specs: [
-      { type: 'header', label: 'RELAY OUTPUT' },
-      { label: 'Maximum load', value: '10A to 30VCC' },
-      { label: 'Delay selectable on panel board', value: '0-10 minutes' },
-      { type: 'header', label: 'ENVIRONMENT' },
-      { label: 'Operating temperature', value: 'From -5°C to +40°C' },
-      { label: 'Relative humidity', value: '95% without condensation' },
+    title: "DOD-220A/ DOD-220A-I Addressable Optical Smoke Detector",
+    subtitle: "A compact detector  that allows reliable fire detection thanks to its advanced technology.",
+    description: "Detnov’s complete range of 200 series detectors allow reliable fire detection thanks to its advanced analysis technology. Depending on the risk to be protected, you will have to choose the topology of the sensor of the detector, you can choose between: optical, thermal, thermovelocimetric or the combination of said sensors. Detnov’s fire detector has been developed to ensure a quick reaction to fires, meeting the highest quality standards and certification required in the market. A unique reliability when detecting and protecting installations to reduce false alarms, being suitable for the most demanding applications.",
+    features: [
+      "Elegant design and low profile",
+      "Dirtiness compensation",
+      "Dirtiness and insect protection",
+      "Two-wire connection without polarity",
+      "Remote indicator port",
+      "Two-wire connection",
+      "Compatible with Detnov’s addressable fire control panels",
+      "EN 54-7 and EN 54-17 approved",
+      "Addresses from 1 to 250 in the loop",
+      "DOD-220A-I with isolator. Connection with polarity"
     ],
 
-    // sidebarItems: [
-    //   "Onity DirectKey with Serene",
-    //   "MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs",
-    //   "INR 415 256-Channel 12 Bay RAID Backmount Standalone",
-    //   "GNR 340 100-Channel Tower Standalone",
-    //   "ENR 130 16-Channel Desktop Standalone NVR- No HDD Included",
-    //   "Z86 Outdoor Network Dome Camera with Night Vision"
-    // ]
   };
 
   return <ProductLayout {...data} />;
 };
 
-export default Trd100;
+export default SmokeDetector;

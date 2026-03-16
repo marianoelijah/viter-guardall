@@ -46,138 +46,30 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
 
             <table className="w-full border text-[15px] text-black">
               <tbody>
-                {/* Header */}
+
                  <tr className="bg-gray-300 ">
                   <td colSpan="5" className="border-r border-black border p-2 font-bold">
-                    MODULE
-                  </td>
-                </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="5" className="border-r border-black border p-2 font-bold">
-                    Loop Features
+                    DIMENSIONS
                   </td>
                 </tr>
 
                 <tr className="bg-gray-300 ">
                   <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
-                    Operating Voltage
+                    Base Height
                   </td>
                   <td colSpan="3" className="border border-r border-black  p-2">
-                    From 22 to 38VDC
+                   Z-200 / Z-200-B / Z-200-R: 5 mm x 100 mmZ-200-H / Z-200-H-B: 28 mm x 100 mmSTD-200 / STD-200-B: 30 mm x 100 mm
                   </td>
                 </tr>
                 <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    Quiescent current consumption
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                     300 μA
-                  </td>
-                </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    Alarm current consumption
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                    3 mA
-                  </td>
-                </tr>
-
-                 <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                    Technical input through a NC or NO contact (configurable)
-                  </td>
-                </tr>
-
-                {/* Header */}
-                <tr className="bg-gray-300 ">
-                  <td colSpan="5" className="border-r border-black border p-2 font-bold">
-                    CONNECTION
-                  </td>
-                </tr>
-
-                 <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                    2 x 1,5 mm2twisted and shielded cable to a Z-200 base
-                  </td>
-                </tr>
-
-                <tr className="bg-gray-300 ">
-                  <td colSpan="5" className="border-r border-black border p-2 font-bold">
-                    ENVIRONMENT
-                  </td>
-                </tr>
-
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    Operating temperature
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                    From -10°C to +70°C
-                  </td>
-                </tr>
-                 <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                   Relative humidity
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                   95% without condensation
-                  </td>
-                </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    IP Index
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                    IP40
-                  </td>
-                </tr>
-
-                {/* Header */}
-                <tr className="bg-gray-300 ">
-                  <td colSpan="5" className="border-r border-black border p-2 font-bold">
-                    TECHNICAL  FEATURES
-                  </td>
-                </tr>
-
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    Size 
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                   100 mm x 100 mm x 23 mm
-                  </td>
-                </tr>
-
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
+                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
                     Material
                   </td>
                   <td colSpan="3" className="border border-r border-black  p-2">
-                    ABS
+                     ABS
                   </td>
                 </tr>
-
-                 {/* Header */}
-                <tr className="bg-gray-300 ">
-                  <td colSpan="5" className="border-r border-black border p-2 font-bold">
-                   APPROVALS
-                  </td>
-                </tr>
-
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                    EN 54-18 and EN 54-17 (only MAD-401-I and MAD-402-I)
-                  </td>
-                </tr>
-                 
-                
+               
               </tbody>
             </table>
                 </div>
@@ -222,7 +114,7 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
           <aside className="lg:col-span-1 space-y-8">
              <div className="bg-gray-300 p-4 border border-black  border-r mb-6">
             <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By DETNOV</h3>
-            <ul className="text-lg space-y-4 text-gray-500 transition-colors">
+            <ul className="text-xl space-y-4 text-gray-500 transition-colors">
               <li className='cursor-pointer hover:text-[#f08c09]'>Onity DirectKey with Serene</li>
               <li className='cursor-pointer hover:text-[#f08c09]'>MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs</li>
               <li className='cursor-pointer hover:text-[#f08c09]'>INR 415 256-Channel 12 Bay RAID Rackmount Standalone</li>
@@ -267,31 +159,21 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
 };
 
 // Example Usage for the Hirsch M64 Controller
-const Technical = () => {
+const ConnectionBase = () => {
   const data = {
-    title: "MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs",
-    subtitle: "A device ideal for the supervision of any signal for fire control panels. ",
-    description: "The MAD-401 and MAD-402 modules are ideal for the supervising of any signal which may require supervision through a NC or NO contact (for example, the state of a door or a watertight door, or the monitoring of any type of sensors which provide free contact relay). The MAD-401 and MAD-402 modules take the power supply directly from the loop and assign a number of loop addresses according to the number of inputs available in the module.",
+    title: " Z-200/ Z-200H Connection Base/ High Connection Base",
+    subtitle: "Connection base for all Detnov’s ranges of conventional and addressable detectors.",
+    description: "Connection base for all Detnov’s ranges of conventional and addressable detectors.",
     features: [
-      "Simple installation on the wall or fitted into a DIN rail",
-      "Non-polarity supported (only MAD-401 and MAD-402)",
-      "Addressing through a programmer",
-      "Loop-powered device",
-      "Connections through removable terminal blocks and simple fitting of the cable",
-      "EN 54-18 and EN 54-17 approved",
+      "Base compatible with all Detnov’s detectors",
+      "Compensates irregular surfaces",
+      "Connection for a remote indicator",
+      "Available in black color",
     ],
 
-    sidebarItems: [
-      "Onity DirectKey with Serene",
-      "MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs",
-      "INR 415 256-Channel 12 Bay RAID Backmount Standalone",
-      "GNR 340 100-Channel Tower Standalone",
-      "ENR 130 16-Channel Desktop Standalone NVR- No HDD Included",
-      "Z86 Outdoor Network Dome Camera with Night Vision"
-    ]
   };
 
   return <ProductLayout {...data} />;
 };
 
-export default Technical;
+export default ConnectionBase;

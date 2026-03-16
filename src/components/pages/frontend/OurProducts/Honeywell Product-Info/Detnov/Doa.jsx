@@ -12,17 +12,23 @@ const Doa = () => {
     { label: "Frequency", value: "3050 Hz", valu: "2900 Hz", vale: "2900 Hz" },
 
     { type: 'header', label: 'Connections' },
+    { type: 'header', label: '2 x 1,5 mm2 twisted' },
     { type: 'header', label: 'Environment' },
 
-    { label: "Technology", value: "MIFARE DESFire EV2", valu: "MIFARE DESFire EV2 + Proximity", vale: "MIFARE DESFire EV2" },
-    { label: "Dimensions", value: "3.4 x 2.1 x 0.03”(8.7 x 5.4 x 0.08 cm)", valu: "3.4 x 2.1 x 0.03”(8.7 x 5.4 x 0.08 cm)", vale: "1.6 x 1.2 x 0.2”(4.0 x 3.1 x 0.5 cm)" },
-    { label: "Road Range", value: "Up to 3” (7.6 cm)", valu: "Up to 3” (7.6 cm)", vale: "Up to 3” (7.6 cm)" },
-    { label: "Slot Punch", value: "Vertical or Horizontal", valu: "Vertical or Horizontal", vale: "N/A" },
-    { label: "Storage & Operating Temperatures", value: "-50°F – 160°F (10°C – 71°C)", valu: "-50°F – 160°F (10°C – 71°C)", vale: "-13°F – 176°F (-25°C –80°C)" },
-    { label: "Material", value: "PVC + PET", valu: "PVC + PET", vale: "Polycarbonate" },
-    { label: "LEAF Compatibility", value: "LEAF enabled", valu: "LEAF enabled", vale: "LEAF enabled" },
-    { label: "Color", value: "White", valu: "White", vale: "Black with White Center" },
-    { label: "Country of Origin", value: "USA", valu: "USA", vale: "USA" },
+    { label: "Operating temperature", value: "From -10C to +55°C", valu: "From -10C to +55°C", vale: "From -10C to +55°C" },
+    { label: "Relative humidity", value: "95% without condensation", valu: "95% without condensation", vale: "95% without condensation" },
+    { label: "IP Index", value: "IP21C", valu: "IP21C", vale: "IP54" },
+
+    { type: 'header', label: 'PHYSICAL FEATURES' },
+
+    { label: "Size", value: "320 mm x 140 mm x 68 mm", valu: "331 mm x 150 mm x 68 mm", vale: "331 mm x 150 mm x 68 mm" },
+    { label: "Material", value: "ABS and polycarbonate", valu: "ABS and polycarbonate", vale: "ABS and polycarbonate" },
+    
+    { type: 'header', label: 'APPROVALS' },
+
+    { label: "", value: "EN 54-3 and EN 54-23 (DOA FJ/CPD only EN 54-3)" },
+    { label: "", value: "Certificate number: 1328-CPR-0615 ", valu: "Certificate number: 1328-CPR-0725", vale: "Certificate number: 1328-CPR-0726" },
+    
     
   ];
 
