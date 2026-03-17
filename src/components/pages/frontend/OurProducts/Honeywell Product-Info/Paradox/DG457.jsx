@@ -3,28 +3,23 @@ import { NavLink } from 'react-router-dom';
 import Header from '../../../partials/Header';
 import Footer from '../../../partials/Footer';
 
-const Os100 = () => {
+const DG457 = () => {
   const productData = {
-    title: "OS100 In-Room Safe with Keypad and Audit Trail",
-    subtitle: "An economical and cost-effective safe to help secure key properties of hotel guests",
-    description: "Safes have become an expected amenity for many travelers today. The OS100 is an economical safe making it cost effective for properties to provide this important offering to their guests. With a solid design, the OS100 offers many key features while protecting valuables. The OS100 safe comes in traditional design with front-opening door (right hand option only) and is available in black. It comes with two solid steel, anti-drill rotating bolts for mounting and features audit tracking.", 
+    title: "DG457 Glassbreak Detector",
+    subtitle: "Designed to be installed on the wall or ceiling near the windows in need of protection.This compact, motion detector is best for high-ceiling installation and has a 360-degree range. ",
+    description: "GlassTrek delivers effective coverage of plate, tempered, and laminated glass without the need for complicated sensitivity adjustments. GlassTrek can be used in most protected areas, including rooms with blinds, curtains, or multiple windows as long as careful coverage tests are conducted using TestTrek. Breakage in panes of glass 40.6 cm x 61 cm (16 in. x 24 in.) or larger will be detected, for every standard thickness of plate (0.3 cm x 0.6 cm or 1/8 in. x 1/4 in.). ",
     features: [
-      "Easy to use",
-      "Budget friendly",
-      "6-digit red LED display",
-      "3, 4, 5 or 6-digit PIN code options",
-      "ADA compliant keypad",
-      "“Code to Close” technology",
-      "On hold / shut down time after 4 wrong consecutive attempts",
-      "Audit trail records the last 100 operations",
-      "2 solid steel, anti-drill bolts",
-      "Fixing points",
-      "Works with 4 AA standard batteries",
-      "Low consumption motor",
-      "Power status display on screen",
-      "Interior carpet",
-      "Hand: Right"
+      "Two operational modes (addressable for the Digiplex and Digiplex EVO series or conventional relay operation)",
+      "Remote test mode when used with Test Trek V2",
+      "Full audio and infrasonic spectrum analysis",
+      "7 frequency digital filters, digital amplifier gain and frequency fluctuation assessment",
+      "Impact and shock wave analysis",
+      "High-immunity to RFI and EMI signals",
+      "Adjustable sensitivity: covers up to 9m (30ft) when set to high and up to 4.5m (15ft) when set to low",
+      "TestTrek (459) used for testing available separately",
+      "Anti-tamper switch"
     ],
+
     moreByBrand: [
       "Onity DirectKey with Serene",
       "MAD-401 and MAD-402 Series Addressable Modules",
@@ -52,14 +47,14 @@ const Os100 = () => {
             <div className="lg:col-span-3">
               <p className="text-[15px] text-black mb-6">{productData.subtitle}</p>
               
-              <section className="mb-8">
+              {/* <section className="mb-8">
                 <h2 className="font-bold text-xl text-black mb-2 border-b-2 border-gray-100 pb-1 inline-block">Product Description:</h2>
                 <p className="text-base text-black leading-relaxed mt-2">{productData.description}</p>
-              </section>
+              </section> */}
 
               <section className="mb-10">
                 <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1 list-disc text-black ml-5 text-[15px]">
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-9 gap-y-1 list-disc text-black ml-5 text-[15px]">
                   {productData.features.map((f, i) => <li key={i}>{f}</li>)}
                 </ul>
               </section>
@@ -69,165 +64,109 @@ const Os100 = () => {
                 <h2 className="font-bold text-xl mb-4">Technical Specification:</h2>
                 <table className="w-full text-[15px] text-black border-collapse border border-black">
                   
-                  <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                      </td>
-                      <td colSpan="2" className="border border-black p-2 font-bold">
-                         Laptop 15IN
-                      </td>
-                      <td colSpan="2" className="border border-black p-2 font-bold">
-                         Top Opening
-                      </td>
-                    </tr>
                    <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          External Dimensions(H x W x D)
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          Voltage
                       </td>
-                      <td colSpan="2" className="border border-black p-2">
-                         200 x 420 x 370mm(7.87 x 16.54 x 14.57 in)
-                      </td>
-                      <td colSpan="2" className="border border-black p-2">
-                         128 x 400 x 350mm(5.04 x 15.75 x 13.78 in)
+                      <td colSpan="3" className="border border-black p-2">
+                           9 – 16Vdc FOR DG457 ONLY: Used for trouble-shooting, the voltage meter indicates the GlassTrek’s input voltage. Enter section [900]. The 3-digit number that appears on the screen represents input voltage x 10 (e.g. [133] = 13.3V).
                       </td>
                     </tr>
                     <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Door Opening (H x W)	
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          Current
                       </td>
-                      <td colSpan="2" className="border border-black p-2">
-                        178 x 415 x 315mm(7.0 x 16.34 x 12.40 in)
-                      </td>
-                      <td colSpan="2" className="border border-black p-2">
-                         86 x 396mm(3.39 x 15.59 in)
+                      <td colSpan="3" className="border border-black p-2">
+                          DG457 (35mA)   457(25mA)
                       </td>
                     </tr>
                     <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Interior Volume (cubic feet)
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          Coverage
                       </td>
-                      <td colSpan="2" className="border border-black p-2">
-                          22.71 L (6 gal)
-                      </td>
-                      <td colSpan="2" className="border border-black p-2">
-                         1.7 L (3.09 gal)
+                      <td colSpan="3" className="border border-black p-2">
+                          High: 9m (30ft) / Low: 4.5m (15ft)
                       </td>
                     </tr>
                     <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Weight (lbs)
+                      <td className="border border-black p-3 font-bold w-1/2">
+                         Size
                       </td>
-                      <td colSpan="2" className="border border-black p-2">
-                          27.9
-                      </td>
-                      <td colSpan="2" className="border border-black p-2">
-                          22
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Pedestal Mount
-                      </td>
-                      <td colSpan="5" className="border border-black p-2">
-                          Yes, 12” or 15” height
+                      <td colSpan="3" className="border border-black p-2">
+                          9cm (3.5 in) x 6.6cm (2.6 in) x 2.5 (1in)
                       </td>
                     </tr>
                      <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Color
+                      <td className="border border-black p-3 font-bold w-1/2">
+                         Weight
                       </td>
-                      <td colSpan="5" className="border border-black p-2">
-                          Black
+                      <td colSpan="3" className="border border-black p-2">
+                        100g (4oz)
+                      </td>
+                    </tr>
+                     <tr>
+                      <td className="border border-black p-3 font-bold w-1/2">
+                        Alarm output
+                      </td>
+                      <td colSpan="3" className="border border-black p-2">
+                         150mA, 28VDC, Form A (N.C.) / via combus
+                      </td>
+                    </tr>
+                     <tr>
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          Anti-tamper output
+                      </td>
+                      <td colSpan="3" className="border border-black p-2">
+                          150mA, 28VDC, Form A (N.C.) / via combus
+                      </td>
+                    </tr>
+                     <tr>
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          Operating temp.
+                      </td>
+                      <td colSpan="3" className="border border-black p-2">
+                          -20°C to 50°C (4°F to 122°F)
                       </td>
                     </tr>
                     <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Hand
+                      <td className="border border-black p-3 font-bold w-1/2">
+                        Processing
                       </td>
-                      <td colSpan="2" className="border border-black p-2">
-                          Right
-                      </td>
-                      <td colSpan="2" className="border border-black p-2">
-                          Top
+                      <td colSpan="3" className="border border-black p-2">
+                         1. Attack rise time 2. Attack sound pressure level 3. 7-band audio spectrum analysis 4. Envelope duration 5. Infra-sound
                       </td>
                     </tr>
                     <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Audit Trail
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          Microprocessor type
                       </td>
-                      <td colSpan="5" className="border border-black p-2">
-                          Yes, 100 operations
+                      <td colSpan="3" className="border border-black p-2">
+                          	12/8-bits
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          Compatibility
+                      </td>
+                      <td colSpan="3" className="border border-black p-2">
+                          All Digiplex series (DGP/DGPNE) and all EVO series control panels.
                       </td>
                     </tr>
                     <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Pin Code
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          Testing tool
                       </td>
-                      <td colSpan="5" className="border border-black p-2">
-                          3, 4, 5 or 6-digit, 4 digit default
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Screen LED
-                      </td>
-                      <td colSpan="5" className="border border-black p-2">
-                          Yes
+                      <td colSpan="3" className="border border-black p-2">
+                          TestTrek (DG459)
                       </td>
                     </tr>
                     <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          ADA Compliant Keyboard
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          Certification (i.e. CE, UL)
                       </td>
-                      <td colSpan="5" className="border border-black p-2">
-                          Yes
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Battery
-                      </td>
-                      <td colSpan="5" className="border border-black p-2">
-                          4AA, Low power consumption
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Power Status
-                      </td>
-                      <td colSpan="5" className="border border-black p-2">
-                          Display on screen
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Warranty
-                      </td>
-                      <td colSpan="5" className="border border-black p-2">
-                          1 year
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Environmental
-                      </td>
-                      <td colSpan="5" className="border border-black p-2">
-                          Indoor use only
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Environmental
-                      </td>
-                      <td colSpan="5" className="border border-black p-2">
-                          Indoor use only
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Compliance
-                      </td>
-                      <td colSpan="5" className="border border-black p-2">
-                          FCC, IC, CE
+                      <td colSpan="3" className="border border-black p-2">
+                         For updated information, visit www.paradox.com
                       </td>
                     </tr>
                 </table>
@@ -236,11 +175,11 @@ const Os100 = () => {
               {/* Tags & Social */}
            <div className="flex flex-wrap gap-3 mb-8 mt-10 border-b py-5 border-b-gray-400">
               <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
-               ONITY
+                PARADOX
               </span>
               
               <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
-                Hotel Locking Systems and Hotel Safes
+                Intrusion/ Burglary Alarm Systems
               </span>
             </div>
 
@@ -271,7 +210,7 @@ const Os100 = () => {
             {/* Right Column: Sidebar */}
                      <div className="lg:col-span-1 space-y-8">
                          <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
-                       <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By ONITY</h3>
+                       <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By PARADOX</h3>
                        <ul className="text-xs space-y-4 text-gray-500 transition-colors">
                          <li className='cursor-pointer hover:text-[#f08c09]'>Onity DirectKey with Serene</li>
                          <li className='cursor-pointer hover:text-[#f08c09]'>MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs</li>
@@ -316,4 +255,4 @@ const Os100 = () => {
   );
 };
 
-export default Os100;
+export default DG457;

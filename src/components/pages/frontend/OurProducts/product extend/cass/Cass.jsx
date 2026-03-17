@@ -1,24 +1,28 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const CassProducts = [
   {
     title: "CP-020X Gate Barrier",
     description: "A gate barrier that can help deny entry or exit of unauthorized vehicles within your property.  Description: Securing access is one of the most important concerns for any commercial or",
-    image: "/src/assets/image/CASS IMG/CO-020X.jpg"
+    image: "/src/assets/image/CASS IMG/CO-020X.jpg",
+    detailRoute: "/our-products/cass/gate-barrier"
   },
   {
     title: "CP-555 Gen 2  Entry Station/ Ticket Dispenser and CP-655 Gen 2 Exit Station/ Token Acceptor",
     description: "A chipcoin-based parking management system that helps control traffic within your property. Description: One of the best ways to solve parking related issues and to improve motorists’ experience is the",
-    image: "/src/assets/image/CASS IMG/CP-555.png"
+    image: "/src/assets/image/CASS IMG/CP-555.png",
+    detailRoute: "/our-products/cass/token-acceptor"
   },
   {
     title: "CP-505 Gen 2 Entry Station/ Ticket Dispenser and CP-605 Gen 2 Exit Station/ Ticket Scanner",
     description: "A parking management system that prints/releases and scans tickets for efficient entry and exit. Description: CASS Parking offers a completely new series of parking management system products that helps to",
-    image: "/src/assets/image/CASS IMG/CP-505.png"
+    image: "/src/assets/image/CASS IMG/CP-505.png",
+    detailRoute: "/our-products/cass/ticket-scanner"
   }
 ];
 
-const ProductCard = ({ title, description, image }) => (
+const ProductCard = ({ title, description, image, detailRoute }) => (
   <div className="bg-white border border-gray-200 rounded-xl p-5 flex flex-col h-full transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl cursor-pointer">
     {/* Enhanced Image Container Size */}
     <div className="bg-gray-50 border border-gray-100 rounded-lg p-6 mb-5 flex items-center justify-center h-64 overflow-hidden">
@@ -35,6 +39,13 @@ const ProductCard = ({ title, description, image }) => (
       <p className="text-gray-600 text-xl leading-relaxed">
         {description}
       </p>
+      <span className='text-classic block mt-12 text-gray-500 text-sm tracking-widest'>
+            <NavLink to={detailRoute} className="text-blue-500 hover:underline mt-2 block">
+              <h3 className='text-xl font-poppins hover:text-green-500 transition-colors duration-300'>
+                View Details
+              </h3>
+            </NavLink>
+        </span>
     </div>
   </div>
 );
@@ -53,8 +64,14 @@ const Paradox = () => {
 
         {/* Responsive Grid with improved spacing */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {CassProducts.map((p, idx) => (
-            <ProductCard key={idx} {...p} />
+          {CassProducts.map((item, idx) => (
+            <ProductCard
+             key={idx}
+              title={item.title}
+              description={item.description}
+              image={item.image}
+              detailRoute={item.detailRoute}
+            />
           ))}
         </div>
       </div>

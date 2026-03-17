@@ -3,27 +3,23 @@ import { NavLink } from 'react-router-dom';
 import Header from '../../../partials/Header';
 import Footer from '../../../partials/Footer';
 
-const Os100 = () => {
+const E3041 = () => {
   const productData = {
-    title: "OS100 In-Room Safe with Keypad and Audit Trail",
-    subtitle: "An economical and cost-effective safe to help secure key properties of hotel guests",
-    description: "Safes have become an expected amenity for many travelers today. The OS100 is an economical safe making it cost effective for properties to provide this important offering to their guests. With a solid design, the OS100 offers many key features while protecting valuables. The OS100 safe comes in traditional design with front-opening door (right hand option only) and is available in black. It comes with two solid steel, anti-drill rotating bolts for mounting and features audit tracking.", 
+    title: "E3041 Hotel RFID Lock",
+    subtitle: "A waterproof and stainless hotel lock that utilizes RFID/ keycards for room entry. ",
+    description: "The Orbita Hotel Door Lock E3041 is made of grade 304 stainless steel with a PVC card reader cover, with strong resistance to impact, corrosion and abrasion. The door lock PCB is waterproof with stable and reliable quality. E3041 Door Lock can support other types of hotel management software, Fidelio/Opera, and Orbita wireless portable programmer for door lock setting, data collection and download functions. Certified by European CE and U.S. FCC, our products adopt the American standard 5-point tongue lock body with an anti-shim plunger design and an abnormal latch bolt alert for double security, stability and reliability. Functions such as door left open warning, low battery voltage warning, channel function and all-in-one function are available." , 
     features: [
-      "Easy to use",
-      "Budget friendly",
-      "6-digit red LED display",
-      "3, 4, 5 or 6-digit PIN code options",
-      "ADA compliant keypad",
-      "“Code to Close” technology",
-      "On hold / shut down time after 4 wrong consecutive attempts",
-      "Audit trail records the last 100 operations",
-      "2 solid steel, anti-drill bolts",
-      "Fixing points",
-      "Works with 4 AA standard batteries",
-      "Low consumption motor",
-      "Power status display on screen",
-      "Interior carpet",
-      "Hand: Right"
+      "Interface with most of the PMS system,Fidelio/Opera registered",
+      "CE & FCC Certified",
+      "Stainless steel color lasts more than 10 years",
+      "ANSI Standard mortise",
+      "Inside Deadbolt,Inside handle retracts latches and deadbolt",
+      "Can be integrated with 16 public areas such as Lift/Parking/Swimming Pool/Sauna Room/Tennis Court/Gym…etc",
+      "Mifare 1K card,compatible with Mifare Energy Saver",
+      "Lost Guest Card suspension simply by issuing a new guest card with suspending function",
+      "Low battery voltage warning (Lower than 4.8V).",
+      "Self Error detecting by LED and “Beep”",
+      "Passage Model function available"
     ],
     moreByBrand: [
       "Onity DirectKey with Serene",
@@ -52,10 +48,10 @@ const Os100 = () => {
             <div className="lg:col-span-3">
               <p className="text-[15px] text-black mb-6">{productData.subtitle}</p>
               
-              <section className="mb-8">
+              {/* <section className="mb-8">
                 <h2 className="font-bold text-xl text-black mb-2 border-b-2 border-gray-100 pb-1 inline-block">Product Description:</h2>
                 <p className="text-base text-black leading-relaxed mt-2">{productData.description}</p>
-              </section>
+              </section> */}
 
               <section className="mb-10">
                 <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
@@ -69,174 +65,96 @@ const Os100 = () => {
                 <h2 className="font-bold text-xl mb-4">Technical Specification:</h2>
                 <table className="w-full text-[15px] text-black border-collapse border border-black">
                   
-                  <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
+                    <tr>
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          Panel dimensions
                       </td>
-                      <td colSpan="2" className="border border-black p-2 font-bold">
-                         Laptop 15IN
-                      </td>
-                      <td colSpan="2" className="border border-black p-2 font-bold">
-                         Top Opening
-                      </td>
-                    </tr>
-                   <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          External Dimensions(H x W x D)
-                      </td>
-                      <td colSpan="2" className="border border-black p-2">
-                         200 x 420 x 370mm(7.87 x 16.54 x 14.57 in)
-                      </td>
-                      <td colSpan="2" className="border border-black p-2">
-                         128 x 400 x 350mm(5.04 x 15.75 x 13.78 in)
+                      <td colSpan="3" className="border border-black p-2">
+                          L295*W76*D26 mm
                       </td>
                     </tr>
                     <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Door Opening (H x W)	
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          Material
                       </td>
-                      <td colSpan="2" className="border border-black p-2">
-                        178 x 415 x 315mm(7.0 x 16.34 x 12.40 in)
-                      </td>
-                      <td colSpan="2" className="border border-black p-2">
-                         86 x 396mm(3.39 x 15.59 in)
+                      <td colSpan="3" className="border border-black p-2">
+                          Grade 304 stainless steel
                       </td>
                     </tr>
                     <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Interior Volume (cubic feet)
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          Operating Voltage
                       </td>
-                      <td colSpan="2" className="border border-black p-2">
-                          22.71 L (6 gal)
-                      </td>
-                      <td colSpan="2" className="border border-black p-2">
-                         1.7 L (3.09 gal)
+                      <td colSpan="3" className="border border-black p-2">
+                         DC 6V (4 AA dry batteries)
                       </td>
                     </tr>
                     <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Weight (lbs)
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          Operating Power
                       </td>
-                      <td colSpan="2" className="border border-black p-2">
-                          27.9
-                      </td>
-                      <td colSpan="2" className="border border-black p-2">
-                          22
+                      <td colSpan="3" className="border border-black p-2">
+                          Quiescent current: 30 μA; dynamic current: 200 mA
                       </td>
                     </tr>
                     <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Pedestal Mount
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          Battery Life
                       </td>
-                      <td colSpan="5" className="border border-black p-2">
-                          Yes, 12” or 15” height
+                      <td colSpan="3" className="border border-black p-2">
+                          Provide up to 150,000 operations, and last over one year
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td className="border border-black p-3 font-bold w-1/2">
+                        Working Environment
+                      </td>
+                      <td colSpan="3" className="border border-black p-2">
+                         Temperature: -20 °C– 60°C; Relative Humidity: 20% – 90%
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="border border-black p-3 font-bold w-1/2">
+                        Card Type
+                      </td>
+                      <td colSpan="3" className="border border-black p-2">
+                         Mifare 1 card
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="border border-black p-3 font-bold w-1/2">
+                        Low Voltage Warning
+                      </td>
+                      <td colSpan="3" className="border border-black p-2">
+                        When the battery voltage is lower than 4.8V, a buzzer will beep.
+                        After that, the lock lasts about 100 operations
                       </td>
                     </tr>
                      <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Color
+                      <td className="border border-black p-3 font-bold w-1/2">
+                        Activity Log
                       </td>
-                      <td colSpan="5" className="border border-black p-2">
-                          Black
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Hand
-                      </td>
-                      <td colSpan="2" className="border border-black p-2">
-                          Right
-                      </td>
-                      <td colSpan="2" className="border border-black p-2">
-                          Top
+                      <td colSpan="3" className="border border-black p-2">
+                        Stores up to 1,680 pieces of logs (depending on the configuration)
                       </td>
                     </tr>
-                    <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Audit Trail
+                     <tr>
+                      <td className="border border-black p-3 font-bold w-1/2">
+                        Mechanical Key
                       </td>
-                      <td colSpan="5" className="border border-black p-2">
-                          Yes, 100 operations
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Pin Code
-                      </td>
-                      <td colSpan="5" className="border border-black p-2">
-                          3, 4, 5 or 6-digit, 4 digit default
+                      <td colSpan="3" className="border border-black p-2">
+                        Unlock by mechanic keys
                       </td>
                     </tr>
-                    <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Screen LED
-                      </td>
-                      <td colSpan="5" className="border border-black p-2">
-                          Yes
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          ADA Compliant Keyboard
-                      </td>
-                      <td colSpan="5" className="border border-black p-2">
-                          Yes
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Battery
-                      </td>
-                      <td colSpan="5" className="border border-black p-2">
-                          4AA, Low power consumption
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Power Status
-                      </td>
-                      <td colSpan="5" className="border border-black p-2">
-                          Display on screen
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Warranty
-                      </td>
-                      <td colSpan="5" className="border border-black p-2">
-                          1 year
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Environmental
-                      </td>
-                      <td colSpan="5" className="border border-black p-2">
-                          Indoor use only
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Environmental
-                      </td>
-                      <td colSpan="5" className="border border-black p-2">
-                          Indoor use only
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Compliance
-                      </td>
-                      <td colSpan="5" className="border border-black p-2">
-                          FCC, IC, CE
-                      </td>
-                    </tr>
+                    
                 </table>
               </section>
 
               {/* Tags & Social */}
            <div className="flex flex-wrap gap-3 mb-8 mt-10 border-b py-5 border-b-gray-400">
               <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
-               ONITY
+               ORBITA
               </span>
               
               <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
@@ -271,7 +189,7 @@ const Os100 = () => {
             {/* Right Column: Sidebar */}
                      <div className="lg:col-span-1 space-y-8">
                          <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
-                       <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By ONITY</h3>
+                       <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By ORBITA</h3>
                        <ul className="text-xs space-y-4 text-gray-500 transition-colors">
                          <li className='cursor-pointer hover:text-[#f08c09]'>Onity DirectKey with Serene</li>
                          <li className='cursor-pointer hover:text-[#f08c09]'>MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs</li>
@@ -316,4 +234,4 @@ const Os100 = () => {
   );
 };
 
-export default Os100;
+export default E3041;

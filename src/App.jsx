@@ -231,6 +231,48 @@ import View from "./components/pages/frontend/OurProducts/Honeywell Product-Info
 import Track from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Ebs/Track";
 import Serene from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Onity/Serene";
 import Trillium from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Onity/Trillium";
+import AdvanceTrillium from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Onity/AdvanceTrillium";
+import StoragePassport from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Onity/StoragePassport";
+import CardSafe from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Onity/CardSafe";
+import AuditTrail from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Onity/AuditTrail";
+import OpeningOption from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Onity/OpeningOption";
+import Os100 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Onity/Os100";
+import AccessSolution from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Onity/AccessSolution";
+import Orbita from "./components/pages/frontend/OurProducts/product extend/orbita/Orbita";
+import OBT2043MB from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Orbita/OBT2043MB";
+import OBT4135MG from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Orbita/OBT4135MG";
+import OBT2042MJ from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Orbita/OBT2042MJ";
+import OBT2042MG from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Orbita/OBT2042MG";
+import S4432G from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Orbita/S4432G";
+import S3076 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Orbita/S3076";
+import P8030 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Orbita/P8030";
+import P8010 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Orbita/P8010";
+import E4041 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Orbita/E4041";
+import ER3092 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Orbita/ER3092";
+import E3041 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Orbita/E3041";
+import CP020X from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cass/CP020X";
+import CP555 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cass/CP555";
+import CP505 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cass/CP505";
+import SP7000 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/SP7000";
+import SP6000 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/SP6000";
+import SP5500 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/SP5500";
+import SP4000 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/SP4000";
+import SP65 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/SP65";
+import ZX82 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/Zx82";
+import ZX8 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/Zx8";
+import PGM82 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/PGM82";
+import PGM4 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/PGM4";
+import RX1 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/RX1";
+import PS45 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/PS45";
+import PS25 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/PS25";
+import BUS2SER from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/BUS2SER";
+import NV780MR from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/NV780MR";
+import DM70 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/DM70";
+import DM50 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/DM50";
+import DG467360 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/DG467360";
+import DG457 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/DG457";
+import DG85 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/DG85";
+import TM70 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/TM70";
 
 
 
@@ -540,9 +582,59 @@ const App = () => {
             <Route path="/our-products/ebs/active-view" element={<View/>} />
             <Route path="/our-products/ebs/active-track" element={<Track/>} />
 
-             {/* Onity Product Details Route */}
+            {/* Onity Product Details Route */}
              <Route path="/our-products/onity/directkey-with-serene" element={<Serene/>} />
              <Route path="/our-products/onity/trillium-rfid" element={<Trillium/>} />
+             <Route path="/our-products/onity/advance-trillium-rfid" element={<AdvanceTrillium/>} />
+             <Route path="/our-products/onity/self-storage-passport" element={<StoragePassport/>} />
+             <Route path="/our-products/onity/contactless-rfid-card-safe" element={<CardSafe/>} />
+             <Route path="/our-products/onity/keypad-and-audit-trail" element={<AuditTrail/>} />
+             <Route path="/our-products/onity/keypad-and-opening-option-os200" element={<OpeningOption/>} />
+             <Route path="/our-products/onity/keypad-and-opening-option-os100" element={<Os100/>} />
+             <Route path="/our-products/onity/mobile-access-solution" element={<AccessSolution/>} />
+
+            {/* Orbita Product Details Route */}
+            <Route path="/our-products/orbita/obt-2043mb" element={<OBT2043MB/>} />
+            <Route path="/our-products/orbita/obt-4135mg" element={<OBT4135MG/>} />
+            <Route path="/our-products/orbita/obt-2042mj-hotel-room" element={<OBT2042MJ/>} />
+            <Route path="/our-products/orbita/obt-2042mg-hotel-room-safe" element={<OBT2042MG/>} />
+            <Route path="/our-products/orbita/s4432g-lcd-luxury-design" element={<S4432G/>} />
+            <Route path="/our-products/orbita/s3076-hotel-frid-lock" element={<S3076/>} />
+            <Route path="/our-products/orbita/p8030-fully-automatic-smart-lock" element={<P8030/>} />
+            <Route path="/our-products/orbita/p8010-fingerprint-smart-lock" element={<P8010/>} />
+            <Route path="/our-products/orbita/e4041-lcd-smart" element={<E4041/>} />
+            <Route path="/our-products/orbita/er3092-hotel-lock" element={<ER3092/>} />
+            <Route path="/our-products/orbita/e3041-hotel-rfid-lock" element={<E3041/>} />
+
+            {/* Paradox Product Details Route */}
+            <Route path="/our-products/paradox/sp7000-controller" element={<SP7000/>} />
+            <Route path="/our-products/paradox/sp6000-controller" element={<SP6000/>} />
+            <Route path="/our-products/paradox/sp5500-controller" element={<SP5500/>} />
+            <Route path="/our-products/paradox/sp4000-controller" element={<SP4000/>} />
+            <Route path="/our-products/paradox/expandable-32-zone-control-panel" element={<SP65/>} />
+            <Route path="/our-products/paradox/zx82-expansion-module" element={<ZX82/>} />
+            <Route path="/our-products/paradox/zx8-expansion-module" element={<ZX8/>} />
+            <Route path="/our-products/paradox/pgm82-expansion-module" element={<PGM82/>} />
+            <Route path="/our-products/paradox/pgm4-expansion-module" element={<PGM4/>} />
+            <Route path="/our-products/paradox/rx1-wireless-receiver" element={<RX1/>} />
+            <Route path="/our-products/paradox/ps45-supervised-power-supply" element={<PS45/>} />
+            <Route path="/our-products/paradox/ps25-supervised-power-supply" element={<PS25/>} />
+            <Route path="/our-products/paradox/bus2ser-integration-module" element={<BUS2SER/>} />
+            <Route path="/our-products/paradox/nv780mr-digital-outdoor-dual-size-view" element={<NV780MR/>} />
+            <Route path="/our-products/paradox/dm70-high-security-motion-detector" element={<DM70/>} />
+            <Route path="/our-products/paradox/dm50-dual-element-motion-detector" element={<DM50/>} />
+            <Route path="/our-products/paradox/dg467-ceiling-mounted-digital" element={<DG467360/>} />
+            <Route path="/our-products/paradox/dg457-glassbreak-detector" element={<DG457/>} />
+            <Route path="/our-products/paradox/dg85-outdoor-high-security" element={<DG85/>} />
+            <Route path="/our-products/paradox/tm70-touch-intuitive-touchscreen" element={<TM70/>} />
+
+
+            {/* Cass Product Details Route */}
+            <Route path="/our-products/cass/gate-barrier" element={<CP020X/>} />
+            <Route path="/our-products/cass/token-acceptor" element={<CP555/>} />
+            <Route path="/our-products/cass/ticket-scanner" element={<CP505/>} />
+
+            {/* Magnetic Product Details Route */}
 
           </Routes>
         </Router>

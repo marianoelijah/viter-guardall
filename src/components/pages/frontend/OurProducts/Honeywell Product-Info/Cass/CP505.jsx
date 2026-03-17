@@ -3,20 +3,23 @@ import { NavLink } from 'react-router-dom';
 import Header from '../../../partials/Header';
 import Footer from '../../../partials/Footer';
 
-const CardSafe = () => {
+const CP505 = () => {
   const productData = {
-    title: "OS700 Contactless RFID Card Safe",
-    subtitle: "A high-end safe that utilizes contactless RFID technology to unlock",
-    description: "The Onity OS700 RFID guestroom safe is designed to efficiently utilize space and securely store laptops, tablets, purses or other valuables. It comes in the traditional front opening drawer (right or left hand options), and is available in black or white. All models are fully motorized with two solid steel, anti-drill rotating bolts and feature low battery warning, and audit trail.", 
+    title: "CP-505 Gen 2 Entry Station/ Ticket Dispenser and CP-605 Gen 2 Exit Station/ Ticket Scanner",
+    subtitle: "A parking management system that prints/releases and scans tickets for efficient entry and exit.",
+    description: "CASS Parking offers a completely new series of parking management system products that helps to regulate the parking facilities much efficiently with its state-of-the-art technology products. Our PMS system enhances the customer experience which is user-friendly. CASS PMS equipment is designed with highly durable material which is both sleek and elegant that helps blend all types of architecture. These systems come with an advanced thermal printing technology, alphanumeric display and intelligent controller that helps provide a fast and smooth operation for entries and exits for both occasional users and permit holders.",
+    
     features: [
-      "Sleek modern design",
-      "User friendly, works approaching card to reader",
-      "Reading technology: contactless RFID (ISO14443A, 14443B part 4, NFC)",
-      "Supports MIFARE® Classic/EV1, Plus, Ultralight and MIFARE Ultralight C cards",
-      "Multiple opening devices available: cards, wristbands, keychains, etc.",
-      "Non-volatile memory: records last 500 operations, including date, time and user",
-      "Each new guest card overrides any previous ones",
-      "Compatible with Onity OnPortalTM"
+      "High resolution display with good readability under any light conditions",
+      "Large 7” color LED screen with multimedia graphics",
+      "Supports multi-language user interface",
+      "Can be customized to play video commercials and voice prompts",
+      "Customizable – supports both ticket roll / fanfold tickets",
+      "High ticket capacity with small form factor",
+      "Supports loyalty points program",
+      "Access rights verification",
+      "Short term & Season parker handling",
+      "Supports Offline and Stand-alone features"
     ],
     moreByBrand: [
       "Onity DirectKey with Serene",
@@ -45,10 +48,10 @@ const CardSafe = () => {
             <div className="lg:col-span-3">
               <p className="text-[15px] text-black mb-6">{productData.subtitle}</p>
               
-              <section className="mb-8">
+              {/* <section className="mb-8">
                 <h2 className="font-bold text-xl text-black mb-2 border-b-2 border-gray-100 pb-1 inline-block">Product Description:</h2>
                 <p className="text-base text-black leading-relaxed mt-2">{productData.description}</p>
-              </section>
+              </section> */}
 
               <section className="mb-10">
                 <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
@@ -58,134 +61,30 @@ const CardSafe = () => {
               </section>
 
                 {/* Technical Spec Table */}
-              <section className="overflow-x-auto">
+              {/* <section className="overflow-x-auto">
                 <h2 className="font-bold text-xl mb-4">Technical Specification:</h2>
                 <table className="w-full text-[15px] text-black border-collapse border border-black">
                   
-                  <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                      </td>
-                      <td colSpan="3" className="border border-black p-2 font-bold">
-                         Laptop 15IN
-                      </td>
-                    </tr>
-                  <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                       External Dimensions(H x W x D)
+                   <tr>
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          Size (mm)
                       </td>
                       <td colSpan="3" className="border border-black p-2">
-                       204 x 508 x 370mm(7.87 x 20 x 14.57 in)
+                         W420*H200*D370
                       </td>
                     </tr>
-                    <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                          Door Opening (H x W)
-                      </td>
-                      <td colSpan="3" className="border border-black p-2">
-                          160 x 415mm(6.30 x 16.34 in)
-                      </td>
-                    </tr>
-                     
-                    <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                          Interior Volume (cubic feet)
-                      </td>
-                      <td colSpan="3" className="border border-black p-2">
-                          1.09
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                          Weight (lbs)
-                      </td>
-                      <td colSpan="3" className="border border-black p-2">
-                          32
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                          Interior Shelf
-                      </td>
-                      <td colSpan="3" className="border border-black p-2">
-                          N/A
-                      </td>
-                    </tr>
-                     <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                          Interior Carpet
-                      </td>
-                      <td colSpan="3" className="border border-black p-2">
-                          Yes
-                      </td>
-                    </tr>
-                  <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                           Color
-                      </td>
-                      <td colSpan="3" className="border border-black p-2">
-                           Black or White
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                          Hand
-                      </td>
-                      <td colSpan="3" className="border border-black p-2">
-                          Left or Right
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                          Audit Trail
-                      </td>
-                      <td colSpan="3" className="border border-black p-2">
-                          500 operations; Date, Time, User
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                          Warranty
-                      </td>
-                      <td colSpan="3" className="border border-black p-2">
-                          1 year
-                      </td>
-                    </tr>
-                     <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                          Environmental
-                      </td>
-                      <td colSpan="3" className="border border-black p-2">
-                          Indoor Use Only
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                          Compliance
-                      </td>
-                      <td colSpan="3" className="border border-black p-2">
-                          FCC, IC, CE
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                          Battery
-                      </td>
-                      <td colSpan="3" className="border border-black p-2">
-                          4AA, Low power consumption, Low battery LED
-                      </td>
-                    </tr>
+                   
                 </table>
-              </section>
+              </section> */}
 
               {/* Tags & Social */}
            <div className="flex flex-wrap gap-3 mb-8 mt-10 border-b py-5 border-b-gray-400">
               <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
-               ONITY
+                CASS
               </span>
               
               <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
-                Hotel Locking Systems and Hotel Safes
+                Parking Management / Parking Guidance System
               </span>
             </div>
 
@@ -216,7 +115,7 @@ const CardSafe = () => {
             {/* Right Column: Sidebar */}
                      <div className="lg:col-span-1 space-y-8">
                          <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
-                       <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By ONITY</h3>
+                       <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By CASS</h3>
                        <ul className="text-xs space-y-4 text-gray-500 transition-colors">
                          <li className='cursor-pointer hover:text-[#f08c09]'>Onity DirectKey with Serene</li>
                          <li className='cursor-pointer hover:text-[#f08c09]'>MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs</li>
@@ -261,4 +160,4 @@ const CardSafe = () => {
   );
 };
 
-export default CardSafe;
+export default CP505;

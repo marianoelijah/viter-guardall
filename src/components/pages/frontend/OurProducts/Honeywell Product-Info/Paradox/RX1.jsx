@@ -3,21 +3,24 @@ import { NavLink } from 'react-router-dom';
 import Header from '../../../partials/Header';
 import Footer from '../../../partials/Footer';
 
-const CardSafe = () => {
+const RX1 = () => {
   const productData = {
-    title: "OS700 Contactless RFID Card Safe",
-    subtitle: "A high-end safe that utilizes contactless RFID technology to unlock",
-    description: "The Onity OS700 RFID guestroom safe is designed to efficiently utilize space and securely store laptops, tablets, purses or other valuables. It comes in the traditional front opening drawer (right or left hand options), and is available in black or white. All models are fully motorized with two solid steel, anti-drill rotating bolts and feature low battery warning, and audit trail.", 
+    title: "RX1 Wireless Receiver",
+    subtitle: "Seamlessly integrates wireless devices with your Paradox security system, expanding its capabilities and offering flexible protection without the need for extensive wiring.",
+    description: "The RX1 Wireless Receiver adds wireless receiving capability to the Spectra SP Series control panels (V4.5 and higher). Adding the RX1 to an installation allows for the use of one- way remotes as well as wireless one-way zone transmitters with the system.",
     features: [
-      "Sleek modern design",
-      "User friendly, works approaching card to reader",
-      "Reading technology: contactless RFID (ISO14443A, 14443B part 4, NFC)",
-      "Supports MIFARE® Classic/EV1, Plus, Ultralight and MIFARE Ultralight C cards",
-      "Multiple opening devices available: cards, wristbands, keychains, etc.",
-      "Non-volatile memory: records last 500 operations, including date, time and user",
-      "Each new guest card overrides any previous ones",
-      "Compatible with Onity OnPortalTM"
+      "Compatible with SP Series control panels (V4.54 and higher)",
+      "32 wireless zones (SP Series only)",
+      "Maximum number of remote controls: 32",
+      "Remote control compatibility: REM1, RAC1",
+      "Transmitter compatibility: DCT10, DCTXP2, DCT2, PMD1P, PMD75, PMD85, SD738 (SP only)",
+      "In-field firmware upgradable via In-Field Firmware Upgrade software",
+      "RF jamming supervision",
+      "Low battery, tamper, and check-in supervision",
+      "Transmitter signal strength display",
+      "2 PGM outputs follow buttons 1 and 2 on REM1/RAC1 (also programmable through the panel)"
     ],
+
     moreByBrand: [
       "Onity DirectKey with Serene",
       "MAD-401 and MAD-402 Series Addressable Modules",
@@ -45,14 +48,14 @@ const CardSafe = () => {
             <div className="lg:col-span-3">
               <p className="text-[15px] text-black mb-6">{productData.subtitle}</p>
               
-              <section className="mb-8">
+              {/* <section className="mb-8">
                 <h2 className="font-bold text-xl text-black mb-2 border-b-2 border-gray-100 pb-1 inline-block">Product Description:</h2>
                 <p className="text-base text-black leading-relaxed mt-2">{productData.description}</p>
-              </section>
+              </section> */}
 
               <section className="mb-10">
                 <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1 list-disc text-black ml-5 text-[15px]">
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-9 gap-y-1 list-disc text-black ml-5 text-[15px]">
                   {productData.features.map((f, i) => <li key={i}>{f}</li>)}
                 </ul>
               </section>
@@ -62,117 +65,92 @@ const CardSafe = () => {
                 <h2 className="font-bold text-xl mb-4">Technical Specification:</h2>
                 <table className="w-full text-[15px] text-black border-collapse border border-black">
                   
-                  <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                      </td>
-                      <td colSpan="3" className="border border-black p-2 font-bold">
-                         Laptop 15IN
-                      </td>
-                    </tr>
-                  <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                       External Dimensions(H x W x D)
+                   <tr>
+                      <td className="border border-black p-3 font-bold w-1/2">
+                         Power Input Voltage
                       </td>
                       <td colSpan="3" className="border border-black p-2">
-                       204 x 508 x 370mm(7.87 x 20 x 14.57 in)
+                          12 Vdc
                       </td>
                     </tr>
                     <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                          Door Opening (H x W)
+                      <td className="border border-black p-3 font-bold w-1/2">
+                         Frequency
                       </td>
                       <td colSpan="3" className="border border-black p-2">
-                          160 x 415mm(6.30 x 16.34 in)
-                      </td>
-                    </tr>
-                     
-                    <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                          Interior Volume (cubic feet)
-                      </td>
-                      <td colSpan="3" className="border border-black p-2">
-                          1.09
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                          Weight (lbs)
-                      </td>
-                      <td colSpan="3" className="border border-black p-2">
-                          32
+                          433 MHz or 868 MHz
                       </td>
                     </tr>
                     <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                          Interior Shelf
+                      <td className="border border-black p-3 font-bold w-1/2">
+                         Sensitivity
                       </td>
                       <td colSpan="3" className="border border-black p-2">
-                          N/A
+                          -110 dBm (433 MHz) or -106 dBm (868 MHz)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          Current Consumption
+                      </td>
+                      <td colSpan="3" className="border border-black p-2">
+                          25 mA
                       </td>
                     </tr>
                      <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                          Interior Carpet
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          Dimensions (no antenna)
                       </td>
                       <td colSpan="3" className="border border-black p-2">
-                          Yes
-                      </td>
-                    </tr>
-                  <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                           Color
-                      </td>
-                      <td colSpan="3" className="border border-black p-2">
-                           Black or White
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                          Hand
-                      </td>
-                      <td colSpan="3" className="border border-black p-2">
-                          Left or Right
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                          Audit Trail
-                      </td>
-                      <td colSpan="3" className="border border-black p-2">
-                          500 operations; Date, Time, User
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                          Warranty
-                      </td>
-                      <td colSpan="3" className="border border-black p-2">
-                          1 year
+                         5.1 x 8.3 x 2 cm (2 x 3.25 x 0.78 in.)
                       </td>
                     </tr>
                      <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                          Environmental
+                      <td className="border border-black p-3 font-bold w-1/2">
+                         Operating Temperature
                       </td>
                       <td colSpan="3" className="border border-black p-2">
-                          Indoor Use Only
+                         0ºC to 50ºC (32ºF to 122ºF)
                       </td>
                     </tr>
                     <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                          Compliance
+                      <td className="border border-black p-3 font-bold w-1/2">
+                         PGM Outputs
                       </td>
                       <td colSpan="3" className="border border-black p-2">
-                          FCC, IC, CE
+                          PGM1 and PGM2 – via PGM 13 and 14 of panel
                       </td>
                     </tr>
                     <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                          Battery
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          Antenna
                       </td>
                       <td colSpan="3" className="border border-black p-2">
-                          4AA, Low power consumption, Low battery LED
+                          Monopole antenna; error correction algorithm
+                      </td>
+                    </tr>
+                   <tr>
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          Bus Supervision
+                      </td>
+                      <td colSpan="3" className="border border-black p-2">
+                          AC, Battery, Aux Voltage Statusand Consumption, Tamper
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          Dimensions(H x W x D)
+                      </td>
+                      <td colSpan="3" className="border border-black p-2">
+                          25.4 x 27.3 x 8.9 cm(10 x 10.75 x 3.5 in.)
+                      </td>
+                    </tr>
+                     <tr>
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          Compatibility
+                      </td>
+                      <td colSpan="3" className="border border-black p-2">
+                          EVO192, EVOHD all versions,MG5000, MG5050, SP5500,SP6000, SP7000 V6.80 and higher
                       </td>
                     </tr>
                 </table>
@@ -181,11 +159,11 @@ const CardSafe = () => {
               {/* Tags & Social */}
            <div className="flex flex-wrap gap-3 mb-8 mt-10 border-b py-5 border-b-gray-400">
               <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
-               ONITY
+                PARADOX
               </span>
               
               <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
-                Hotel Locking Systems and Hotel Safes
+                Intrusion/ Burglary Alarm Systems
               </span>
             </div>
 
@@ -216,7 +194,7 @@ const CardSafe = () => {
             {/* Right Column: Sidebar */}
                      <div className="lg:col-span-1 space-y-8">
                          <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
-                       <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By ONITY</h3>
+                       <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By PARADOX</h3>
                        <ul className="text-xs space-y-4 text-gray-500 transition-colors">
                          <li className='cursor-pointer hover:text-[#f08c09]'>Onity DirectKey with Serene</li>
                          <li className='cursor-pointer hover:text-[#f08c09]'>MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs</li>
@@ -261,4 +239,4 @@ const CardSafe = () => {
   );
 };
 
-export default CardSafe;
+export default RX1;

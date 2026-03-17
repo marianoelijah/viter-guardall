@@ -3,20 +3,25 @@ import { NavLink } from 'react-router-dom';
 import Header from '../../../partials/Header';
 import Footer from '../../../partials/Footer';
 
-const CardSafe = () => {
+const S4432G = () => {
   const productData = {
-    title: "OS700 Contactless RFID Card Safe",
-    subtitle: "A high-end safe that utilizes contactless RFID technology to unlock",
-    description: "The Onity OS700 RFID guestroom safe is designed to efficiently utilize space and securely store laptops, tablets, purses or other valuables. It comes in the traditional front opening drawer (right or left hand options), and is available in black or white. All models are fully motorized with two solid steel, anti-drill rotating bolts and feature low battery warning, and audit trail.", 
+    title: "S4432G LCD Luxury Design Hotel Lock",
+    subtitle: "A sleek door lock and handle with an LCD screen to show lock status.",
+    // description: "Serene, from Onity, is a sleek all-in-one lock designed both inside and out for luxury hotels. Its small glowing halo of light symbolizes both timeless design and leading-edge DirectKey mobile access technology that allows guests to unlock their room with ease as they approach the door. And, with a range of lever styles and finishes, Serene can be customized to fit the look of any property. This is a lock both technology specialists and designers can easily and securely, totally love.", 
     features: [
-      "Sleek modern design",
-      "User friendly, works approaching card to reader",
-      "Reading technology: contactless RFID (ISO14443A, 14443B part 4, NFC)",
-      "Supports MIFARE® Classic/EV1, Plus, Ultralight and MIFARE Ultralight C cards",
-      "Multiple opening devices available: cards, wristbands, keychains, etc.",
-      "Non-volatile memory: records last 500 operations, including date, time and user",
-      "Each new guest card overrides any previous ones",
-      "Compatible with Onity OnPortalTM"
+      "LCD display show: Welcome, Room Number, Date, Time, Weekday, Battery Status, Wrong Operation Indication",
+      "Interface with most of the PMS system,Fidelio/Opera registered",
+      "CE & FCC Certified",
+      "Stainless steel color lasts more than 10 years",
+      "Stainless steel Europe Mortise Anti-panic Function",
+      "Inside Deadbolt,Inside handle retracts latches and deadbolt",
+
+      "Mifare 1K card,compatible with Mifare Energy Saver",
+      "Lost Guest Card suspension simply by issuing a new guest card with suspending function",
+      "Low battery voltage warning.(Lower than 4.8V).",
+      "Self Error detecting by LED and “Beep”",
+      "Passage Model function available",
+      "Can be integrated with 16 public areas such as Lift/Parking/Swimming Pool/Sauna Room/Tennis Court/Gym…etc"
     ],
     moreByBrand: [
       "Onity DirectKey with Serene",
@@ -45,10 +50,10 @@ const CardSafe = () => {
             <div className="lg:col-span-3">
               <p className="text-[15px] text-black mb-6">{productData.subtitle}</p>
               
-              <section className="mb-8">
+              {/* <section className="mb-8">
                 <h2 className="font-bold text-xl text-black mb-2 border-b-2 border-gray-100 pb-1 inline-block">Product Description:</h2>
                 <p className="text-base text-black leading-relaxed mt-2">{productData.description}</p>
-              </section>
+              </section> */}
 
               <section className="mb-10">
                 <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
@@ -62,126 +67,54 @@ const CardSafe = () => {
                 <h2 className="font-bold text-xl mb-4">Technical Specification:</h2>
                 <table className="w-full text-[15px] text-black border-collapse border border-black">
                   
-                  <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                      </td>
-                      <td colSpan="3" className="border border-black p-2 font-bold">
-                         Laptop 15IN
-                      </td>
-                    </tr>
-                  <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                       External Dimensions(H x W x D)
+                    <tr>
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          Model
                       </td>
                       <td colSpan="3" className="border border-black p-2">
-                       204 x 508 x 370mm(7.87 x 20 x 14.57 in)
+                          S4032
                       </td>
                     </tr>
                     <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                          Door Opening (H x W)
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          Power Consumption
                       </td>
                       <td colSpan="3" className="border border-black p-2">
-                          160 x 415mm(6.30 x 16.34 in)
-                      </td>
-                    </tr>
-                     
-                    <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                          Interior Volume (cubic feet)
-                      </td>
-                      <td colSpan="3" className="border border-black p-2">
-                          1.09
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                          Weight (lbs)
-                      </td>
-                      <td colSpan="3" className="border border-black p-2">
-                          32
+                          Static Load  30 uA, Dynamic Load  200 mA
                       </td>
                     </tr>
                     <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                          Interior Shelf
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          Working Humidity
                       </td>
                       <td colSpan="3" className="border border-black p-2">
-                          N/A
+                          20% – 90%
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          Working Temperature
+                      </td>
+                      <td colSpan="3" className="border border-black p-2">
+                         -20℃—60℃
                       </td>
                     </tr>
                      <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                          Interior Carpet
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          Dimension of External Panel 
                       </td>
                       <td colSpan="3" className="border border-black p-2">
-                          Yes
+                         L100 x W65 x H15mm
                       </td>
                     </tr>
-                  <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                           Color
-                      </td>
-                      <td colSpan="3" className="border border-black p-2">
-                           Black or White
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                          Hand
-                      </td>
-                      <td colSpan="3" className="border border-black p-2">
-                          Left or Right
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                          Audit Trail
-                      </td>
-                      <td colSpan="3" className="border border-black p-2">
-                          500 operations; Date, Time, User
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                          Warranty
-                      </td>
-                      <td colSpan="3" className="border border-black p-2">
-                          1 year
-                      </td>
-                    </tr>
-                     <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                          Environmental
-                      </td>
-                      <td colSpan="3" className="border border-black p-2">
-                          Indoor Use Only
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                          Compliance
-                      </td>
-                      <td colSpan="3" className="border border-black p-2">
-                          FCC, IC, CE
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                          Battery
-                      </td>
-                      <td colSpan="3" className="border border-black p-2">
-                          4AA, Low power consumption, Low battery LED
-                      </td>
-                    </tr>
+                   
                 </table>
               </section>
 
               {/* Tags & Social */}
            <div className="flex flex-wrap gap-3 mb-8 mt-10 border-b py-5 border-b-gray-400">
               <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
-               ONITY
+               ORBITA
               </span>
               
               <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
@@ -216,7 +149,7 @@ const CardSafe = () => {
             {/* Right Column: Sidebar */}
                      <div className="lg:col-span-1 space-y-8">
                          <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
-                       <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By ONITY</h3>
+                       <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By ORBITA</h3>
                        <ul className="text-xs space-y-4 text-gray-500 transition-colors">
                          <li className='cursor-pointer hover:text-[#f08c09]'>Onity DirectKey with Serene</li>
                          <li className='cursor-pointer hover:text-[#f08c09]'>MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs</li>
@@ -261,4 +194,4 @@ const CardSafe = () => {
   );
 };
 
-export default CardSafe;
+export default S4432G;

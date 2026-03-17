@@ -3,28 +3,24 @@ import { NavLink } from 'react-router-dom';
 import Header from '../../../partials/Header';
 import Footer from '../../../partials/Footer';
 
-const Os100 = () => {
+const NV780MR = () => {
   const productData = {
-    title: "OS100 In-Room Safe with Keypad and Audit Trail",
-    subtitle: "An economical and cost-effective safe to help secure key properties of hotel guests",
-    description: "Safes have become an expected amenity for many travelers today. The OS100 is an economical safe making it cost effective for properties to provide this important offering to their guests. With a solid design, the OS100 offers many key features while protecting valuables. The OS100 safe comes in traditional design with front-opening door (right hand option only) and is available in black. It comes with two solid steel, anti-drill rotating bolts for mounting and features audit tracking.", 
+    title: "NV780MR Digital Outdoor Dual Side-View Detector",
+    subtitle: "A comprehensive perimeter protection that detects breaches before it occurs with its dual side-view protection.",
+    description: "The NV780M detector is designed to provide a pre-entry protection solution, while keeping the perimeter free from movement, designed to protect exterior/interior walls and doors or windows. The NV780M rugged indoor/outdoor detector incorporates two double passive infrared side-by-side detectors (right and left view), independent of each other with separate anti-mask detection for each side. The optics are specially designed to provide multiple narrow beams for excellent detection covering up to 12m (40 ft) for each side.",
     features: [
-      "Easy to use",
-      "Budget friendly",
-      "6-digit red LED display",
-      "3, 4, 5 or 6-digit PIN code options",
-      "ADA compliant keypad",
-      "“Code to Close” technology",
-      "On hold / shut down time after 4 wrong consecutive attempts",
-      "Audit trail records the last 100 operations",
-      "2 solid steel, anti-drill bolts",
-      "Fixing points",
-      "Works with 4 AA standard batteries",
-      "Low consumption motor",
-      "Power status display on screen",
-      "Interior carpet",
-      "Hand: Right"
+      "Dual side anti-masking detection – Active IR detection, fast 20 seconds detection designed for outdoor detecting sprayed liquids and blocking items up to 25 cm (10 in.)",
+      "Pet Immunity capability, up to 40 kg (90 lb)",
+      "4 dual element sensors arrangement",
+      "High efficiency long focal point (1.77 in.) LoDiff lens",
+      "Combination optics – mirror and Fresnel Lens for optimal sharp detection",
+      "Wireless frequency selection NV780MR support two internally selectable frequencies",
+      "Single or Dual operation modes",
+      "Optical and digital range adjustments",
+      "Dual LED and buzzer indicators",
+      "Wall-mount, with built-in level tool"
     ],
+
     moreByBrand: [
       "Onity DirectKey with Serene",
       "MAD-401 and MAD-402 Series Addressable Modules",
@@ -52,14 +48,14 @@ const Os100 = () => {
             <div className="lg:col-span-3">
               <p className="text-[15px] text-black mb-6">{productData.subtitle}</p>
               
-              <section className="mb-8">
+              {/* <section className="mb-8">
                 <h2 className="font-bold text-xl text-black mb-2 border-b-2 border-gray-100 pb-1 inline-block">Product Description:</h2>
                 <p className="text-base text-black leading-relaxed mt-2">{productData.description}</p>
-              </section>
+              </section> */}
 
               <section className="mb-10">
                 <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1 list-disc text-black ml-5 text-[15px]">
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-9 gap-y-1 list-disc text-black ml-5 text-[15px]">
                   {productData.features.map((f, i) => <li key={i}>{f}</li>)}
                 </ul>
               </section>
@@ -69,165 +65,173 @@ const Os100 = () => {
                 <h2 className="font-bold text-xl mb-4">Technical Specification:</h2>
                 <table className="w-full text-[15px] text-black border-collapse border border-black">
                   
-                  <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                      </td>
-                      <td colSpan="2" className="border border-black p-2 font-bold">
-                         Laptop 15IN
-                      </td>
-                      <td colSpan="2" className="border border-black p-2 font-bold">
-                         Top Opening
-                      </td>
-                    </tr>
                    <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          External Dimensions(H x W x D)
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          Sensor
                       </td>
-                      <td colSpan="2" className="border border-black p-2">
-                         200 x 420 x 370mm(7.87 x 16.54 x 14.57 in)
-                      </td>
-                      <td colSpan="2" className="border border-black p-2">
-                         128 x 400 x 350mm(5.04 x 15.75 x 13.78 in)
+                      <td colSpan="3" className="border border-black p-2">
+                          4 x dual low noise rectangular elements
                       </td>
                     </tr>
                     <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Door Opening (H x W)	
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          Lens
                       </td>
-                      <td colSpan="2" className="border border-black p-2">
-                        178 x 415 x 315mm(7.0 x 16.34 x 12.40 in)
-                      </td>
-                      <td colSpan="2" className="border border-black p-2">
-                         86 x 396mm(3.39 x 15.59 in)
+                      <td colSpan="3" className="border border-black p-2">
+                          2nd gen., flat 2x dual beam, 1.7 in. focal point, narrow beam long-range Fresnel lens
                       </td>
                     </tr>
                     <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Interior Volume (cubic feet)
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          Processing
                       </td>
-                      <td colSpan="2" className="border border-black p-2">
-                          22.71 L (6 gal)
-                      </td>
-                      <td colSpan="2" className="border border-black p-2">
-                         1.7 L (3.09 gal)
+                      <td colSpan="3" className="border border-black p-2">
+                          Digital APSP / Digital temperature compensation
                       </td>
                     </tr>
                     <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Weight (lbs)
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          Anti-Mask
                       </td>
-                      <td colSpan="2" className="border border-black p-2">
-                          27.9
-                      </td>
-                      <td colSpan="2" className="border border-black p-2">
-                          22
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Pedestal Mount
-                      </td>
-                      <td colSpan="5" className="border border-black p-2">
-                          Yes, 12” or 15” height
+                      <td colSpan="3" className="border border-black p-2">
+                          Dual Active IR left / right with accelerated fast respond processing detecting blocking objects, sprayed materials and degradation
                       </td>
                     </tr>
                      <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Color
+                      <td className="border border-black p-3 font-bold w-1/2">
+                         Startup time
                       </td>
-                      <td colSpan="5" className="border border-black p-2">
-                          Black
+                      <td colSpan="3" className="border border-black p-2">
+                         25 sec, with anti-mask calibration
+                      </td>
+                    </tr>
+                     <tr>
+                      <td className="border border-black p-3 font-bold w-1/2">
+                         Detection speed
+                      </td>
+                      <td colSpan="3" className="border border-black p-2">
+                          0.2m/sec – 4m/sec (0.6 ft/sec – 13.1 ft/sec)
+                      </td>
+                    </tr>
+                     <tr>
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          Power input
+                      </td>
+                      <td colSpan="3" className="border border-black p-2">
+                          NV780MX 9 Vdc to 15 Vdc NV780MR 3x AA alkaline battery
+                      </td>
+                    </tr>
+                     <tr>
+                      <td className="border border-black p-3 font-bold w-1/2">
+                        Current consumption
+                      </td>
+                      <td colSpan="3" className="border border-black p-2">
+                          NV780MX Typical / Standby: 37 mA Max: 80 mA NV780MR 3 year battery life
                       </td>
                     </tr>
                     <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Hand
+                      <td className="border border-black p-3 font-bold w-1/2">
+                        Coverage
                       </td>
-                      <td colSpan="2" className="border border-black p-2">
-                          Right
-                      </td>
-                      <td colSpan="2" className="border border-black p-2">
-                          Top
+                      <td colSpan="3" className="border border-black p-2">
+                         Bi-directional, independent, 2 x 3m to 12m (9.8 ft to 39 ft) at 2.5m height
                       </td>
                     </tr>
                     <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Audit Trail
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          PET Immunity
                       </td>
-                      <td colSpan="5" className="border border-black p-2">
-                          Yes, 100 operations
+                      <td colSpan="3" className="border border-black p-2">
+                          Up to 40 kg (90 lb) – requires min.1.5m (4.9 ft) installation height
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          Installation height
+                      </td>
+                      <td colSpan="3" className="border border-black p-2">
+                          1.5m and above
                       </td>
                     </tr>
                     <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Pin Code
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          Alarm indicator
                       </td>
-                      <td colSpan="5" className="border border-black p-2">
-                          3, 4, 5 or 6-digit, 4 digit default
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Screen LED
-                      </td>
-                      <td colSpan="5" className="border border-black p-2">
-                          Yes
+                      <td colSpan="3" className="border border-black p-2">
+                          Red LED flashes for 3 sec., audible buzzer
                       </td>
                     </tr>
                     <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          ADA Compliant Keyboard
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          Anti-Mask indicator
                       </td>
-                      <td colSpan="5" className="border border-black p-2">
-                          Yes
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Battery
-                      </td>
-                      <td colSpan="5" className="border border-black p-2">
-                          4AA, Low power consumption
+                      <td colSpan="3" className="border border-black p-2">
+                          Orange LED flashes for 6 seconds, repeats every 60 sec.
                       </td>
                     </tr>
                     <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Power Status
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          Alarm output
                       </td>
-                      <td colSpan="5" className="border border-black p-2">
-                          Display on screen
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Warranty
-                      </td>
-                      <td colSpan="5" className="border border-black p-2">
-                          1 year
+                      <td colSpan="3" className="border border-black p-2">
+                          NV780MX 2 Solid State, N.C., 150 mA Dual mode, in Single mode the relays operate together
                       </td>
                     </tr>
                     <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Environmental
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          Anti-tamper switch
                       </td>
-                      <td colSpan="5" className="border border-black p-2">
-                          Indoor use only
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Environmental
-                      </td>
-                      <td colSpan="5" className="border border-black p-2">
-                          Indoor use only
+                      <td colSpan="3" className="border border-black p-2">
+                          NV780MX N.C. 28 Vdc, 0.15A NV780MR Box and wall tamper detection
                       </td>
                     </tr>
                     <tr>
-                      <td colSpan="1" className="border border-black p-3 font-bold w-1/2">
-                          Compliance
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          RF Frequency
                       </td>
-                      <td colSpan="5" className="border border-black p-2">
-                          FCC, IC, CE
+                      <td colSpan="3" className="border border-black p-2">
+                          NV780MR 433 MHz or 868 MHz, internally selectable.
+                      </td>
+                    </tr>
+                   <tr>
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          RF Immunity
+                      </td>
+                      <td colSpan="3" className="border border-black p-2">
+                          Complies with EN 50130-4: 10V/m 80 MHz to 2.7 GHz
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="border border-black p-3 font-bold w-1/2">
+                         Operating Temperature
+                      </td>
+                      <td colSpan="3" className="border border-black p-2">
+                          -35°C to +50°C (-31°F to +122°F)
+                      </td>
+                    </tr>
+                     <tr>
+                      <td className="border border-black p-3 font-bold w-1/2">
+                          Humidity
+                      </td>
+                      <td colSpan="3" className="border border-black p-2">
+                          95% max.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="border border-black p-3 font-bold w-1/2">
+                         Dimensions
+                      </td>
+                      <td colSpan="3" className="border border-black p-2">
+                          L8.2 in. x W4.3 in. x D2.7 in. (21 cm x 11 cm x 7 cm)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="border border-black p-3 font-bold w-1/2">
+                         Standards
+                      </td>
+                      <td colSpan="3" className="border border-black p-2">
+                          EN 50131-2-2, Security Grade 2, EN 50130-5 Environmental Class IVA
                       </td>
                     </tr>
                 </table>
@@ -236,11 +240,11 @@ const Os100 = () => {
               {/* Tags & Social */}
            <div className="flex flex-wrap gap-3 mb-8 mt-10 border-b py-5 border-b-gray-400">
               <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
-               ONITY
+                PARADOX
               </span>
               
               <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
-                Hotel Locking Systems and Hotel Safes
+                Intrusion/ Burglary Alarm Systems
               </span>
             </div>
 
@@ -271,7 +275,7 @@ const Os100 = () => {
             {/* Right Column: Sidebar */}
                      <div className="lg:col-span-1 space-y-8">
                          <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
-                       <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By ONITY</h3>
+                       <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By PARADOX</h3>
                        <ul className="text-xs space-y-4 text-gray-500 transition-colors">
                          <li className='cursor-pointer hover:text-[#f08c09]'>Onity DirectKey with Serene</li>
                          <li className='cursor-pointer hover:text-[#f08c09]'>MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs</li>
@@ -316,4 +320,4 @@ const Os100 = () => {
   );
 };
 
-export default Os100;
+export default NV780MR;
