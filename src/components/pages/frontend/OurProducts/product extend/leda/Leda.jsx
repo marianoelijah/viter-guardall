@@ -1,34 +1,40 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const LedaProducts = [
   {
     title: "SecuraPost Slimline Lighting Bollard: Urban Square Light",
     description: "A sleek bollard designed to seamlessly blend with the surrounding while still providing light at night.  Description:Leda’s Lighting Bollards range was developed to complement models in the existing range of",
-    image: "/src/assets/image/LEDA IMG/Urban Square Light.jpg"
+    image: "/src/assets/image/LEDA IMG/Urban Square Light.jpg",
+    detailRoute: "/our-products/leda/urban-square-light"
   },
   {
     title: "SecuraPost Slimline Lighting Bollards",
     description: "Sleek and modern bollards made with stainless steel and have a lighting function at night.  Description:Leda’s Lighting Bollards range was developed to complement models in the existing range of Architectural",
-    image: "/src/assets/image/LEDA IMG/Slimline Lighting Bollards.jpg"
+    image: "/src/assets/image/LEDA IMG/Slimline Lighting Bollards.jpg",
+    detailRoute: "/our-products/leda/slimline-lighting-bollards"
   },
   {
     title: "SecuraPost Ambassador Aluminum Bollard",
     description: "Made with corrosion-resistant aluminum, these high-security bollards are ideal for traffic control. Description:Leda’s Securapost aluminum bollards are suitable for casting into both traditional and modern shapes. Aluminum provides an excellent",
-    image: "/src/assets/image/LEDA IMG/Ambassador Aluminum Bollard.jpg"
+    image: "/src/assets/image/LEDA IMG/Ambassador Aluminum Bollard.jpg",
+    detailRoute: "/our-products/leda/ambassador-aluminum-bollard"
   },
   {
     title: "SecuraPost Slimline Bollard",
     description: "An aesthetically attractive removable bollard made with stainless steel. Description:Leda stainless steel bollards are normally manufactured from Grade 304 material. Grade 316 is available if specified, and is recommended for",
-    image: "/src/assets/image/LEDA IMG/Slimline Bollard.jpg"
+    image: "/src/assets/image/LEDA IMG/Slimline Bollard.jpg",
+    detailRoute: "/our-products/leda/slimline-bollard"
   },
   {
     title: "SecuraPost Sentinel Bollard",
     description: "A removable and lockable bollard designed to protect factories, warehouses, and shopfronts from ram-raid style attacks. Description:Securapost Sentinel locking and removable bollard provides roller door security for factories and warehouses.",
-    image: "/src/assets/image/LEDA IMG/Sentinel Bollard.jpg"
+    image: "/src/assets/image/LEDA IMG/Sentinel Bollard.jpg",
+    detailRoute: "/our-products/leda/sentinel-bollard"
   }
 ];
 
-const ProductCard = ({ title, description, image }) => (
+const ProductCard = ({ title, description, image, detailRoute }) => (
   <div className="bg-white border border-gray-200 rounded-xl p-5 flex flex-col h-full transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl cursor-pointer">
     {/* Enhanced Image Container Size */}
     <div className="bg-gray-50 border border-gray-100 rounded-lg p-6 mb-5 flex items-center justify-center h-64 overflow-hidden">
@@ -45,6 +51,13 @@ const ProductCard = ({ title, description, image }) => (
       <p className="text-gray-600 text-xl leading-relaxed">
         {description}
       </p>
+       <span className='text-classic block mt-12 text-gray-500 text-sm tracking-widest'>
+            <NavLink to={detailRoute} className="text-blue-500 hover:underline mt-2 block">
+              <h3 className='text-xl font-poppins hover:text-green-500 transition-colors duration-300'>
+                View Details
+              </h3>
+            </NavLink>
+        </span>
     </div>
   </div>
 );
@@ -63,8 +76,14 @@ const Leda = () => {
 
         {/* Responsive Grid with improved spacing */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {LedaProducts.map((p, idx) => (
-            <ProductCard key={idx} {...p} />
+          {LedaProducts.map((item, idx) => (
+            <ProductCard
+             key={idx}
+              title={item.title}
+              description={item.description}
+              image={item.image}
+              detailRoute={item.detailRoute}  
+            />
           ))}
         </div>
       </div>

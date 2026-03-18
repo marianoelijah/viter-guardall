@@ -273,6 +273,34 @@ import DG467360 from "./components/pages/frontend/OurProducts/Honeywell Product-
 import DG457 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/DG457";
 import DG85 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/DG85";
 import TM70 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/TM70";
+import TM50 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/TM50";
+import K656 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/K656";
+import K641 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/K641";
+import K32 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/K32";
+import K32LX from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/K32LX";
+import K10V from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/K10V";
+import K10H from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/K10H";
+import Terminal from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Magnetic/Terminal";
+import TollBarrier from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Magnetic/TollBarrier";
+import AccessXL2 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Magnetic/AccessXL2";
+import AccessProL from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Magnetic/AccessProL";
+import AccessPro from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Magnetic/AccessPro";
+import Magnetic from "./components/pages/frontend/OurProducts/product extend/magnetic/Magnetic";
+import MagneticParking from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Magnetic/MagneticParking";
+import WingGate from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Magnetic/WingGate";
+import Turnstiles from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Magnetic/Turnstiles";
+import SwingGates from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Magnetic/SwingGates";
+import RetractableGates from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Magnetic/RetractableGates";
+import MWingPedestrian from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Magnetic/MWingPedestrian";
+import UrbanSquare from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Leda/UrbanSquare";
+import LightingBollards from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Leda/LightingBollards";
+import AluminumBollard from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Leda/AluminumBollard";
+import SlimlineBollard from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Leda/SlimlineBollard";
+import SentinelBollard from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Leda/SentinelBollard";
+import JS80 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Faac/JS80";
+import JS48 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Faac/JS48";
+import J275 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Faac/J275";
+import J200 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Faac/J200";
 
 
 
@@ -627,6 +655,13 @@ const App = () => {
             <Route path="/our-products/paradox/dg457-glassbreak-detector" element={<DG457/>} />
             <Route path="/our-products/paradox/dg85-outdoor-high-security" element={<DG85/>} />
             <Route path="/our-products/paradox/tm70-touch-intuitive-touchscreen" element={<TM70/>} />
+            <Route path="/our-products/paradox/tm50-touch-intuitive-touchscreen" element={<TM50/>} />
+            <Route path="/our-products/paradox/k656-touch-sense-lcd-keypad" element={<K656/>} />
+            <Route path="/our-products/paradox/k641+-character-blue-lcd-keypad" element={<K641/>} />
+            <Route path="/our-products/paradox/k32+-hardwired-led-keypad" element={<K32/>} />
+            <Route path="/our-products/paradox/k32lx-hardwired-lcd-keypad" element={<K32LX/>} />
+            <Route path="/our-products/paradox/k10v-hardwired-led-keypad" element={<K10V/>} />
+            <Route path="/our-products/paradox/k10h-hardwired-led-keypad" element={<K10H/>} />
 
 
             {/* Cass Product Details Route */}
@@ -635,7 +670,34 @@ const App = () => {
             <Route path="/our-products/cass/ticket-scanner" element={<CP505/>} />
 
             {/* Magnetic Product Details Route */}
+            <Route path="/our-products/magnetic/terminal-ms" element={<Terminal/>} />
+            <Route path="/our-products/magnetic/toll-barrier" element={<TollBarrier/>} />
+            <Route path="/our-products/magnetic/barriers-for-wide-lanes" element={<AccessXL2/>} />
+            <Route path="/our-products/magnetic/access-pro-l" element={<AccessProL/>} />
+            <Route path="/our-products/magnetic/access-pro" element={<AccessPro/>} />
+            <Route path="/our-products/magnetic/access-pro" element={<Magnetic/>} />
+            <Route path="/our-products/magnetic/magnetic-parking" element={<MagneticParking/>} />
+            <Route path="/our-products/magnetic/wing-gate" element={<WingGate/>} />
+            <Route path="/our-products/magnetic/mpp-turnstiles" element={<Turnstiles/>} />
+            <Route path="/our-products/magnetic/mpw-swing-gates" element={<SwingGates/>} />
+            <Route path="/our-products/magnetic/retractable-gates" element={<RetractableGates/>} />
+            <Route path="/our-products/magnetic/pedestrian-passageway-with-wing-gates" element={<MWingPedestrian/>} />
 
+            {/* Leda Product Details Route */}
+            <Route path="/our-products/leda/urban-square-light" element={<UrbanSquare/>} />
+            <Route path="/our-products/leda/slimline-lighting-bollards" element={<LightingBollards/>} />
+            <Route path="/our-products/leda/ambassador-aluminum-bollard" element={<AluminumBollard/>} />
+            <Route path="/our-products/leda/slimline-bollard" element={<SlimlineBollard/>} />
+            <Route path="/our-products/leda/sentinel-bollard" element={<SentinelBollard/>} />
+
+            {/* Faac Product Details Route */}
+            <Route path="/our-products/faac/js80" element={<JS80/>} />
+            <Route path="/our-products/faac/js48" element={<JS48/>} />
+            <Route path="/our-products/faac/j275" element={<J275/>} />
+            <Route path="/our-products/faac/j200" element={<J200/>} />
+
+            {/* Delta Product Details Route */}
+            
           </Routes>
         </Router>
       </StoreProvider>
