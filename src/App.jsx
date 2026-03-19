@@ -301,6 +301,38 @@ import JS80 from "./components/pages/frontend/OurProducts/Honeywell Product-Info
 import JS48 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Faac/JS48";
 import J275 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Faac/J275";
 import J200 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Faac/J200";
+import DSCHD300 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Delta/DSCHD300";
+import DSC2000 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Delta/DSC2000";
+import DSC550 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Delta/DSC550";
+import DSC501 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Delta/DSC501";
+import DSC800 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Delta/DSC800";
+import DSC720 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Delta/DSC720";
+import DSC305 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Delta/DSC305";
+import VesdaEves from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Vesda/VesdaEves";
+import DH80840WANF from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/DH80840WANF";
+import Fisheye from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/Fisheye";
+import MultiSensor from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/MultiSensor";
+import DomeWizMind from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/DomeWizMind";
+import StarlightAnalytics from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/StarlightAnalytics";
+import WizSense from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/WizSense";
+import WizSenseSeries from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/WizSenseSeries";
+import OutdoorTiOC from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/OutdoorTiOC";
+import OutdoorDual from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/OutdoorDual";
+import AcupickN85FJ6Z from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/AcupickN85FJ6Z";
+import AcupickN45FJ62 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/AcupickN45FJ62";
+import N85EUN2 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/N85EUN2";
+import N45EYN2 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/N45EYN2";
+import AcupickN85FL6Z4 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/AcupickN85FL6Z4";
+import N85CL5Z from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/N85CL5Z";
+import N85EFN2 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/N85EFN2";
+import AcupickN85FB6Z4 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/AcupickN85FB6Z4";
+import CompliantUnmanaged from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/CompliantUnmanaged";
+import CompliantCompliant from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/CompliantCompliant";
+import CompliantManaged from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/CompliantManaged";
+import CMNetworkSwitch from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/CMNetworkSwitch";
+import UnmanagedSwitch from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/UnmanagedSwitch";
+import IndustrialSwitch from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/IndustrialSwitch";
+import N84B5N from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/N84B5N";
 
 
 
@@ -539,6 +571,33 @@ const App = () => {
              <Route path="/our-products/acti/network-fisheye-dome-camera" element={<A713/>} />
 
              {/* Dahua Product Details Route */}
+             <Route path="/our-products/dahua/dh-80840wanf" element={<DH80840WANF/>} />
+             <Route path="/our-products/dahua/dh-psdw81642m" element={<DH80840WANF/>} />
+             <Route path="/our-products/dahua/dh-ipc-ebw81242n" element={<Fisheye/>} />
+             <Route path="/our-products/dahua/dh-ipc-pfw83242" element={<MultiSensor/>} />
+             <Route path="/our-products/dahua/dh-ipc-hdbw7442h" element={<DomeWizMind/>} />
+             <Route path="/our-products/dahua/6ce445xanr" element={<StarlightAnalytics/>} />
+             <Route path="/our-products/dahua/wizsense-series-52c432gbnr" element={<WizSense/>} />
+             <Route path="/our-products/dahua/wizsense-series-5a445gbnr" element={<WizSenseSeries/>} />
+             <Route path="/our-products/dahua/6c3425xbpv-outdoor-tioc-network" element={<OutdoorTiOC/>} />
+             <Route path="/our-products/dahua/n83bp83-outdoor-dual-lens" element={<OutdoorDual/>} />
+             <Route path="/our-products/dahua/acupick-n85fj6z" element={<AcupickN85FJ6Z/>} />
+             <Route path="/our-products/dahua/acupick-n45fj62" element={<AcupickN45FJ62/>} />
+             <Route path="/our-products/dahua/night-color-turret-camera" element={<N85EUN2/>} />
+             <Route path="/our-products/dahua/night-color-network-dome-camera" element={<N45EYN2/>} />
+             <Route path="/our-products/dahua/outdoor-network-dome-camera" element={<AcupickN85FL6Z4/>} />
+             <Route path="/our-products/dahua/n85cl5z-outdoor-epoe-network-dome" element={<N85CL5Z/>} />
+             <Route path="/our-products/dahua/n85efn2" element={<N85EFN2/>} />
+             <Route path="/our-products/dahua/acupick-n85fb6z4" element={<AcupickN85FB6Z4/>} />
+             <Route path="/our-products/dahua/dh-s4228" element={<CompliantCompliant/>} />
+             <Route path="/our-products/dahua/dh-psf3010" element={<CompliantUnmanaged/>} />
+             <Route path="/our-products/dahua/dh-s4220" element={<CompliantManaged/>} />
+             <Route path="/our-products/dahua/dh-s4210" element={<CMNetworkSwitch/>} />
+             <Route path="/our-products/dahua/dh-lr2110" element={<UnmanagedSwitch/>} />
+             <Route path="/our-products/dahua/dh-is4210" element={<IndustrialSwitch/>} />
+             <Route path="/our-products/dahua/n84b5n" element={<N84B5N/>} />
+
+
 
              {/* Gilardoni Product Details Route */}
              <Route path="/our-products/gilardoni/cargo" element={<Cargo/>} />
@@ -697,7 +756,17 @@ const App = () => {
             <Route path="/our-products/faac/j200" element={<J200/>} />
 
             {/* Delta Product Details Route */}
-            
+            <Route path="/our-products/delta/dsc-hd300-wedge-barricade" element={<DSCHD300/>} />
+            <Route path="/our-products/delta/dsc-2000-modular-wedge-barricade" element={<DSC2000/>} />
+            <Route path="/our-products/delta/dsc-550-open-frame-wedge-barricade" element={<DSC550/>} />
+            <Route path="/our-products/delta/dsc-501-wedge-barricade" element={<DSC501/>} />
+            <Route path="/our-products/delta/dsc-800-high-seurity-bollard" element={<DSC800/>} />
+            <Route path="/our-products/delta/dsc-720-high-security-bollard" element={<DSC720/>} />
+            <Route path="/our-products/delta/dsc-305-medium-security" element={<DSC305/>} />
+
+            {/* Vesda Product Details Route */}
+            <Route path="/our-products/vesda/vesda-eves" element={<VesdaEves/>} />
+
           </Routes>
         </Router>
       </StoreProvider>

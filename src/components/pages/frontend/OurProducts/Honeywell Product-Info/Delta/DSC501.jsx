@@ -22,54 +22,82 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
           
           {/* Main Product Info */}
           <div className="lg:col-span-3">
-            <p className="text-[17px]  text-black mb-6">{subtitle}</p>
+            <p className="text-[15px]  text-black mb-6">{subtitle}</p>
 
             <section className="mb-8">
               <h2 className="font-bold text-xl text-black mb-2">Product Description:</h2>
-              <p className="text-[17px] text-gray-680 leading-relaxed whitespace-pre-line">
+              <p className="text-[15px] text-black leading-relaxed whitespace-pre-line">
                 {description}
               </p>
             </section>
 
-            <section className="mb-10">
-              <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
-              <ul className="list-disc ml-5 text-[17px] text-gray-680 space-y-1">
-                {features.map((feature, idx) => (
-                  <li key={idx}>{feature}</li>
-                ))}
-              </ul>
-            </section>
-
              {/* Technical Specifications Table */}
               <div className="bg-gray-300 p-6 shadow rounded border border-r divine-y">
-            <h2 className="font-bold text-black text-xl mb-4">Technical Specification</h2>
+            <h2 className="font-semibold text-black text-xl mb-4">Technical Specification</h2>
 
-            <table className="w-full border text-[15px] text-black">
+            <table className="border text-[15px] w-full">
               <tbody>
-
-                 <tr className="bg-gray-300 ">
-                  <td colSpan="5" className="border-r border-black border p-2 font-bold">
-                    DIMENSIONS
+                <tr className="bg-gray-300 font-bold w-1/2">
+                  <td colSpan="1" className="border-r border-black border p-2 text-black">
+                    Crash Rating
+                  </td>
+                  <td colSpan="5" className="border border-r border-black p-2">
+                     K12/L3
+                  </td>
+                </tr> 
+                <tr className="bg-gray-300 font-bold">
+                  <td colSpan="1" className="border-r border-black border text-black p-2 ">
+                     Foundation Depth
+                  </td>
+                  <td colSpan="5" className="border border-r border-black p-2 ">
+                     18"
                   </td>
                 </tr>
-
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
-                    Base Height
+                <tr className="bg-gray-300 font-bold">
+                  <td colSpan="1" className="border-r border-black border text-black p-2 ">
+                    Normal Operating Speed
                   </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                   Z-200 / Z-200-B / Z-200-R: 5 mm x 100 mmZ-200-H / Z-200-H-B: 28 mm x 100 mmSTD-200 / STD-200-B: 30 mm x 100 mm
-                  </td>
-                </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
-                    Material
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                     ABS
+                  <td colSpan="5" className="border border-r border-black p-2 ">
+                    3-5 Seconds
                   </td>
                 </tr>
+                <tr className="bg-gray-300 font-bold">
+                  <td colSpan="1" className="border-r border-black border text-black p-2 ">
+                    Emergency Operating Speed
+                  </td>
+                  <td colSpan="5" className="border border-r border-black p-2 ">
+                    1.5 Seconds
+                  </td>
+                </tr> 
+                <tr className="bg-gray-300 font-bold">
+                  <td colSpan="1" className="border-r border-black border text-black p-2 ">
+                    Height
+                  </td>
+                  <td colSpan="5" className="border border-r border-black p-2 ">
+                    39.4”
+                  </td>
+                </tr> 
                
+                <tr className="bg-gray-300 font-bold">
+                  <td colSpan="1" className="border-r border-black border text-black p-2 ">
+                    Widths
+                  </td>
+                  <td colSpan="5" className="border-black  p-2 border ">
+                    9’ – 16’
+                  </td>
+                </tr>
+
+                <tr className="bg-gray-300 font-bold">
+                  <td colSpan="1" className="border-r border-black border text-black p-2 ">
+                    Configurations
+                  </td>
+                  <td colSpan="5" className="border-black  p-2 border">
+                     Hydraulic
+                  </td>
+                </tr>
+
+                
+                
               </tbody>
             </table>
                 </div>
@@ -78,11 +106,7 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
             {/* Footer Tags & Socials */}
             <div className="flex flex-wrap gap-3 mb-8 mt-10">
               <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
-                DETNOV
-              </span>
-              
-              <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
-                Fire Alarm
+                DELTA
               </span>
             </div>
 
@@ -113,7 +137,7 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
           {/* Sidebar */}
           <aside className="lg:col-span-1 space-y-8">
              <div className="bg-gray-300 p-4 border border-black  border-r mb-6">
-            <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By DETNOV</h3>
+            <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By DELTA</h3>
             <ul className="text-xs space-y-4 text-gray-500 transition-colors">
               <li className='cursor-pointer hover:text-[#f08c09]'>Onity DirectKey with Serene</li>
               <li className='cursor-pointer hover:text-[#f08c09]'>MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs</li>
@@ -159,21 +183,24 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
 };
 
 // Example Usage for the Hirsch M64 Controller
-const ConnectionBase = () => {
+const DSC501 = () => {
   const data = {
-    title: " Z-200/ Z-200H Connection Base/ High Connection Base",
-    subtitle: "Connection base for all Detnov’s ranges of conventional and addressable detectors.",
-    description: "Connection base for all Detnov’s ranges of conventional and addressable detectors.",
-    features: [
-      "Base compatible with all Detnov’s detectors",
-      "Compensates irregular surfaces",
-      "Connection for a remote indicator",
-      "Available in black color",
-    ],
+    title: "DSC 501 Wedge Barricade",
+    subtitle: "A high-security barricade suitable for high water table locations and areas with corrosive soils.",
+    description: 
+    "This high security barricade was designed for the U.S. Navy and has also been selected for use at U.S. Embassies. Set in a foundation only 18 inches (46 cm) deep, the Delta DSC501 is able to survive and operate after a 1.2 million foot pound impact. Upon extracting the truck after its crash test, the barricade was fully functional and performed a resounding 27,000 cycles with no wear! With its shallow foundation and aesthetic design, it is a major breakthrough in high duty, anti-terrorist barricades. It obviates the concerns of interference with buried pipes, power lines and fiber optic communication lines. The shallow foundation also reduces installation complexity, time, materials and corresponding costs. The DSC501 is suitable for high water table locations and areas with corrosive soils. Front face warning lights warn drivers that the barricade is in the “up” position. There is also an open area on the front for signage. Diagonal yellow and white stripes are standard and optional colors and graphics are available. The open channel construction even lets you specify hot dip galvanizing.",
 
+    sidebarItems: [
+      "Onity DirectKey with Serene",
+      "MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs",
+      "INR 415 256-Channel 12 Bay RAID Backmount Standalone",
+      "GNR 340 100-Channel Tower Standalone",
+      "ENR 130 16-Channel Desktop Standalone NVR- No HDD Included",
+      "Z86 Outdoor Network Dome Camera with Night Vision"
+    ]
   };
 
   return <ProductLayout {...data} />;
 };
 
-export default ConnectionBase;
+export default DSC501;

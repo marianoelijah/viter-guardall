@@ -1,14 +1,16 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const VesdaProducts = [
   {
     title: "VESDA-E VES: VES-A00-P & VES-A10-P",
     description: "An aspirating smoke detector that enables a single zone to be divided into four separate sectors, allowing for precise location of the smoke source. It provides four individually configurable alarm",
-    image: "/src/assets/image/VESDA IMG/VESDA Family.jpg"
+    image: "/src/assets/image/VESDA IMG/VESDA Family.jpg",
+    detailRoute: "/our-products/vesda/vesda-eves"
   }
 ];
 
-const ProductCard = ({ title, description, image }) => (
+const ProductCard = ({ title, description, image, detailRoute }) => (
   <div className="bg-white border border-gray-200 rounded-xl p-5 flex flex-col h-full transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl cursor-pointer">
     {/* Enhanced Image Container Size */}
     <div className="bg-gray-50 border border-gray-100 rounded-lg p-6 mb-5 flex items-center justify-center h-64 overflow-hidden">
@@ -25,6 +27,13 @@ const ProductCard = ({ title, description, image }) => (
       <p className="text-gray-600 text-xl leading-relaxed">
         {description}
       </p>
+       <span className='text-classic block mt-12 text-gray-500 text-sm tracking-widest'>
+            <NavLink to={detailRoute} className="text-blue-500 hover:underline mt-2 block">
+              <h3 className='text-xl font-poppins hover:text-green-500 transition-colors duration-300'>
+                View Details
+              </h3>
+            </NavLink>
+        </span>
     </div>
   </div>
 );
@@ -43,8 +52,14 @@ const Vesda = () => {
 
         {/* Responsive Grid with improved spacing */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {VesdaProducts.map((p, idx) => (
-            <ProductCard key={idx} {...p} />
+          {VesdaProducts.map((item, idx) => (
+            <ProductCard
+             key={idx}
+              title={item.title}
+              description={item.description}
+              image={item.image}
+              detailRoute={item.detailRoute} 
+            />
           ))}
         </div>
       </div>
