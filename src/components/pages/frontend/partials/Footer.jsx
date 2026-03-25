@@ -11,7 +11,7 @@ const Footer = () => {
           
           {/* Logo & Description - Centered on mobile */}
           <div className="flex flex-col items-center sm:items-start text-center sm:text-left space-y-4">
-            <img src="/src/assets/image/Client Logo/logo.png" alt="Guard-All Logo" className="h-12 w-auto" />
+            <img src="/assets/image/Client Logo/logo.png" alt="Guard-All Logo" className="h-12 w-auto" />
             <p className="text-gray-600 leading-relaxed text-base max-w-sm">
               Guard-All is a leading electronic security systems integrator in the Philippines, 
               providing world-class, cost-effective solutions.

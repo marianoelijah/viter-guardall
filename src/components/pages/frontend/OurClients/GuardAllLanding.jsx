@@ -100,53 +100,53 @@ const ClientSection = ({ title, clients }) => {
 const GuardAllLanding = () => {
   const sectors = {
     agencies: [
-      { name: 'Embassy of Singapore', src: '/src/assets/image/agencies img/singapore.png' },
-      { name: 'British Embassy Manila', src: '/src/assets/image/agencies img/british.png' },
-      { name: 'CAA Philippines', src: '/src/assets/image/agencies img/caa.png' },
-      { name: 'Australian Embassy', src: '/src/assets/image/agencies img/australian.png' },
-      { name: 'Ambassade de France', src: '/src/assets/image/agencies img/ambassade.png' },
-      { name: 'Manila Int. Airport Authority', src: '/src/assets/image/agencies img/manila.png' },
-      { name: 'Presidential Security Group', src: '/src/assets/image/agencies img/presidential.png' },
-      { name: 'GSIS', src: '/src/assets/image/agencies img/gsis.png' },
+      { name: 'Embassy of Singapore', src: '/assets/image/agencies img/singapore.png' },
+      { name: 'British Embassy Manila', src: '/assets/image/agencies img/british.png' },
+      { name: 'CAA Philippines', src: '/assets/image/agencies img/caa.png' },
+      { name: 'Australian Embassy', src: '/assets/image/agencies img/australian.png' },
+      { name: 'Ambassade de France', src: '/assets/image/agencies img/ambassade.png' },
+      { name: 'Manila Int. Airport Authority', src: '/assets/image/agencies img/manila.png' },
+      { name: 'Presidential Security Group', src: '/assets/image/agencies img/presidential.png' },
+      { name: 'GSIS', src: '/assets/image/agencies img/gsis.png' },
     ],
      corporations: [
-      { name: 'Samsung Electro Mechanics', src: '/src/assets/image/corporations img/samsung.png' },
-      { name: 'Coca-Cola Philippines', src: '/src/assets/image/corporations img/coca-cola.png' },
-      { name: 'Marubeni', src: '/src/assets/image/corporations img/marubeni.png' },
-      { name: 'Nestle', src: '/src/assets/image/corporations img/nestle.png' },
-      { name: 'PLDT', src: '/src/assets/image/corporations img/pldt.png' },
-      { name: 'Smart', src: '/src/assets/image/corporations img/smart.png' },
-      { name: 'NGCP', src: '/src/assets/image/corporations img/ngcp.png' },
-      { name: 'San Miguel Corporation', src: '/src/assets/image/corporations img/san miguel.png' },
+      { name: 'Samsung Electro Mechanics', src: '/assets/image/corporations img/samsung.png' },
+      { name: 'Coca-Cola Philippines', src: '/assets/image/corporations img/coca-cola.png' },
+      { name: 'Marubeni', src: '/assets/image/corporations img/marubeni.png' },
+      { name: 'Nestle', src: '/assets/image/corporations img/nestle.png' },
+      { name: 'PLDT', src: '/assets/image/corporations img/pldt.png' },
+      { name: 'Smart', src: '/assets/image/corporations img/smart.png' },
+      { name: 'NGCP', src: '/assets/image/corporations img/ngcp.png' },
+      { name: 'San Miguel Corporation', src: '/assets/image/corporations img/san miguel.png' },
     ],
     engineering: [
-      { name: 'Egis', src: '/src/assets/image/ecl img/egis.png' },
-      { name: 'Hanjin Heavy Indrustries', src: '/src/assets/image/ecl img/hanjin.png' },
-      { name: 'ICTS', src: '/src/assets/image/ecl img/icts.png' },
-      { name: 'Negros Navigation', src: '/src/assets/image/ecl img/negros.png' },
-      { name: 'Holcim', src: '/src/assets/image/ecl img/holcim.png' },
-      { name: 'DHL', src: '/src/assets/image/ecl img/dhl.png' },
+      { name: 'Egis', src: '/assets/image/ecl img/egis.png' },
+      { name: 'Hanjin Heavy Indrustries', src: '/assets/image/ecl img/hanjin.png' },
+      { name: 'ICTS', src: '/assets/image/ecl img/icts.png' },
+      { name: 'Negros Navigation', src: '/assets/image/ecl img/negros.png' },
+      { name: 'Holcim', src: '/assets/image/ecl img/holcim.png' },
+      { name: 'DHL', src: '/assets/image/ecl img/dhl.png' },
     ],
     finance: [
-      { name: 'Sun Life Financial', src: '/src/assets/image/finance img/sunlife.png' },
-      { name: 'HSBC', src: '/src/assets/image/finance img/hsbc.png' },
-      { name: 'Standard Chartered', src: '/src/assets/image/finance img/standard.png' },
-      { name: 'Security Bank', src: '/src/assets/image/finance img/security-bank.png' },
+      { name: 'Sun Life Financial', src: '/assets/image/finance img/sunlife.png' },
+      { name: 'HSBC', src: '/assets/image/finance img/hsbc.png' },
+      { name: 'Standard Chartered', src: '/assets/image/finance img/standard.png' },
+      { name: 'Security Bank', src: '/assets/image/finance img/security-bank.png' },
     ],
     health: [
-      { name: 'Unilab', src: '/src/assets/image/h&r img/unilab.png' },
-      { name: 'Zuellig Pharma', src: '/src/assets/image/h&r img/zuellig.png' },
-      { name: 'DOH - RITM', src: '/src/assets/image/h&r img/doh.png' },
-      { name: 'Oak Ridge National Laboratory', src: '/src/assets/image/h&r img/oak-ridge.png' },
-      { name: 'Pacific Northwest National Lab', src: '/src/assets/image/h&r img/pacific-northwest.png' },
+      { name: 'Unilab', src: '/assets/image/h&r img/unilab.png' },
+      { name: 'Zuellig Pharma', src: '/assets/image/h&r img/zuellig.png' },
+      { name: 'DOH - RITM', src: '/assets/image/h&r img/doh.png' },
+      { name: 'Oak Ridge National Laboratory', src: '/assets/image/h&r img/oak-ridge.png' },
+      { name: 'Pacific Northwest National Lab', src: '/assets/image/h&r img/pacific-northwest.png' },
     ],
     properties: [
-      { name: 'PICC', src: '/src/assets/image/properties img/picc.png' },
-      { name: 'Solaire Resort Manila', src: '/src/assets/image/properties img/solaire.png' },
-      { name: 'Tata Consultancy Services', src: '/src/assets/image/properties img/consultance.png' },
-      { name: 'The Peninsula Manila', src: '/src/assets/image/properties img/peninsula-manila.png' },
-      { name: 'APMC', src: '/src/assets/image/properties img/apmc.png' },
-      { name: 'FIVE | NEO', src: '/src/assets/image/properties img/five-neo.png' },
+      { name: 'PICC', src: '/assets/image/properties img/picc.png' },
+      { name: 'Solaire Resort Manila', src: '/assets/image/properties img/solaire.png' },
+      { name: 'Tata Consultancy Services', src: '/assets/image/properties img/consultance.png' },
+      { name: 'The Peninsula Manila', src: '/assets/image/properties img/peninsula-manila.png' },
+      { name: 'APMC', src: '/assets/image/properties img/apmc.png' },
+      { name: 'FIVE | NEO', src: '/assets/image/properties img/five-neo.png' },
     ]
   };
 
@@ -176,14 +176,15 @@ const GuardAllLanding = () => {
         <ClientSection title="Properties" clients={sectors.properties} />
 
         {/* Footer Branding */}
-        <footer className="mt-32 pt-16 border-t border-slate-200 text-center">
+        {/* <footer className="mt-32 pt-16 border-t border-slate-200 text-center">
           <div className="flex flex-col items-center gap-4">
             <div className="w-12 h-[2px] bg-blue-600"></div>
             <p className="text-black text-xs tracking-[0.4em] uppercase font-bold">
               Trusted by Excellence • Secure by Mariano, Zhanne Elijah
             </p>
           </div>
-        </footer>
+        </footer> */}
+
       </div>
     </div>
   );

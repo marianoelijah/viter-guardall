@@ -1,64 +1,75 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
-const VesdaProducts = [
-  {
-    title: "VESDA-E VES: VES-A00-P & VES-A10-P",
-    description: "An aspirating smoke detector that enables a single zone to be divided into four separate sectors, allowing for precise location of the smoke source. It provides four individually configurable alarm",
-    image: "/src/assets/image/VESDA IMG/VESDA Family.jpg",
-    detailRoute: "/our-products/vesda/vesda-eves"
-  }
-];
+const IMAGE_BASE_URL = "http://localhost:5000";
 
 const ProductCard = ({ title, description, image, detailRoute }) => (
-  <div className="bg-white border border-gray-200 rounded-xl p-5 flex flex-col h-full transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl cursor-pointer">
-    {/* Enhanced Image Container Size */}
+  <div className="bg-white border border-gray-200 rounded-xl p-5 flex flex-col h-full transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl cursor-pointer group">
     <div className="bg-gray-50 border border-gray-100 rounded-lg p-6 mb-5 flex items-center justify-center h-64 overflow-hidden">
       <img 
-        src={image} 
+        src={`${IMAGE_BASE_URL}${image}`} 
         alt={title} 
-        className="max-h-full max-w-full object-contain transition-transform duration-500 hover:scale-110" 
+        className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-110" 
+        onError={(e) => { e.target.src = "https://via.placeholder.com/300?text=Image+Not+Found"; }}
       />
     </div>
     <div className="flex-grow">
-      <h3 className="text-[#1a365d] font-semibold text-lg uppercase mb-3 leading-tight tracking-wide">
+      <h3 className="text-[#1a365d] font-semibold text-lg uppercase mb-3 leading-tight tracking-wide min-h-[3.5rem]">
         {title}
       </h3>
-      <p className="text-gray-600 text-xl leading-relaxed">
+      <p className="text-gray-600 text-xl leading-relaxed line-clamp-3">
         {description}
       </p>
-       <span className='text-classic block mt-12 text-gray-500 text-sm tracking-widest'>
-            <NavLink to={detailRoute} className="text-blue-500 hover:underline mt-2 block">
-              <h3 className='text-xl font-poppins hover:text-green-500 transition-colors duration-300'>
-                View Details
-              </h3>
-            </NavLink>
-        </span>
+      <span className='block mt-12 text-gray-500 text-sm tracking-widest'>
+        <NavLink to={detailRoute} className="text-blue-500 hover:underline mt-2 block">
+          <h3 className='text-xl font-poppins hover:text-green-500 transition-colors duration-300'>
+            View Details
+          </h3>
+        </NavLink>
+      </span>
     </div>
   </div>
 );
 
 const Vesda = () => {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchVesdaProducts = async () => {
+      try {
+        const response = await fetch(`${IMAGE_BASE_URL}/api/products/brand/Vesda`);
+        const data = await response.json();
+        setProducts(data);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching VESDA products:", error);
+        setLoading(false);
+      }
+    };
+    fetchVesdaProducts();
+  }, []);
+
+  if (loading) return <div className="min-h-screen flex items-center justify-center font-figtree text-[#0d3874]">Loading Smoke Detection Systems...</div>;
+
   return (
-    <div className="bg-[#e9eff6] min-h-screen py-16 px-6 lg:px-12">
+    <div className="bg-[#e9eff6] min-h-screen py-16 px-6 lg:px-12 font-figtree">
       <div className="max-w-7xl mx-auto">
         <header className="text-center mb-16">
-          {/* Changed from font-black to font-normal/medium */}
-          <h2 className="text-lg md:text-5xl lg:text-5xl font-figtree text-[#0d3874] mb-6 tracking-tight">
-             Vesda System ( Aspiring Smoke Detection ) 
+          <h2 className="text-lg md:text-5xl lg:text-5xl text-[#0d3874] mb-6 tracking-tight">
+            {products.length > 0 ? products[0].category_name : "Vesda System (Aspirating Smoke Detection)"}
           </h2>
           <div className="h-1 w-24 bg-[#2257a0] mx-auto rounded-full opacity-20"></div>
         </header>
 
-        {/* Responsive Grid with improved spacing */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {VesdaProducts.map((item, idx) => (
+          {products.map((item) => (
             <ProductCard
-             key={idx}
+              key={item.id}
               title={item.title}
               description={item.description}
-              image={item.image}
-              detailRoute={item.detailRoute} 
+              image={item.image_path}
+              detailRoute={item.detail_route} 
             />
           ))}
         </div>

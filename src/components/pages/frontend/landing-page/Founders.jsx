@@ -1,30 +1,47 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
+const IMAGE_BASE_URL = "http://localhost:5000";
 
 const Founders = () => {
-  const founders = [
-    {
-      name: "Derek A. Ramsay",
-      position: "General Manager",
-      img: "/src/assets/image/Who Page/Founders/derek.png"
-    },
-    {
-      name: "Remedios P. Ramsay",
-      position: "President",
-      img: "/src/assets/image/Who Page/Founders/remedios.png"
-    }
-  ];
+  const [founders, setFounders] = useState([]);
+  const [message, setMessage] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const [foundersRes, messageRes] = await Promise.all([
+          fetch(`${IMAGE_BASE_URL}/api/founders`),
+          fetch(`${IMAGE_BASE_URL}/api/founders-message`)
+        ]);
+        
+        const foundersData = await foundersRes.json();
+        const messageData = await messageRes.json();
+        
+        setFounders(foundersData);
+        setMessage(messageData);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching founders data:", error);
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
+
+  if (loading || !message) return null;
 
   return (
-    <section className="py-20 px-6 bg-gradient-to-br from-blue-50/50 to-white">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 font-poppins">
+    <section className="py-20 px-6 bg-gradient-to-br from-blue-50/50 to-white font-poppins">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
         
         {/* Left Side: Portraits Grid */}
         <div className="w-full lg:w-3/5 grid grid-cols-1 sm:grid-cols-2 gap-8">
-          {founders.map((person, index) => (
-            <div key={index} className="flex flex-col">
+          {founders.map((person) => (
+            <div key={person.id} className="flex flex-col">
               <div className="rounded-xl overflow-hidden shadow-xl mb-6 aspect-[4/5]">
                 <img 
-                  src={person.img} 
+                  src={`${IMAGE_BASE_URL}${person.image_path}`} 
                   alt={person.name} 
                   className="w-full h-full object-cover transition-all duration-700"
                 />
@@ -54,13 +71,13 @@ const Founders = () => {
           <div className="space-y-6">
             <span className="text-6xl text-orange-500 font-serif leading-none">“</span>
             <p className="text-3xl font-bold text-blue-900 leading-snug -mt-8">
-              At Guard-All, we believe that a secured life is one’s greatest asset.
+              {message.short_quote}
             </p>
             
             <div className="flex gap-4">
               <div className="mt-2 w-0 h-0 border-t-[6px] border-t-transparent border-l-[10px] border-l-orange-500 border-b-[6px] border-b-transparent shrink-0"></div>
               <p className="text-gray-600 text-lg leading-relaxed italic">
-                In our 40 years of experience, we take pride in the fact that we do not just integrate security solutions to our partners, but we also help protect the lives of people. We continue to strive today because we only work with the best.
+                {message.long_message}
               </p>
             </div>
           </div>

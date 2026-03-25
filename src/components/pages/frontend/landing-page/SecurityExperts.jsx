@@ -1,29 +1,45 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
+const IMAGE_BASE_URL = "http://localhost:5000";
 
 const SecurityExperts = () => {
-  const experts = [
-    { name: "Marlon V. Ramos", position: "Engineering Manager", img: "/src/assets/image/Who Page/Security Experts/Marlon.png" },
-    { name: "Prince John Lizardo", position: "Service Department Manager", img: "/src/assets/image/Who Page/Security Experts/Prince.png" },
-    { name: "Ramir S. Aguilar", position: "MIS/IT Department Manager", img: "/src/assets/image/Who Page/Security Experts/Ramir.png" },
-    { name: "Benedick Santiago", position: "Alarm Department Manager", img: "/src/assets/image/Who Page/Security Experts/Benedick.png" },
-    { name: "Veronica T. Reyes", position: "Asset Protection Manager", img: "/src/assets/image/Who Page/Security Experts/Veronica.png" },
-    { name: "Liza E. Cabral", position: "HR Officer/Collection Officer", img: "/src/assets/image/Who Page/Security Experts/Liza.png" },
-    { name: "Norman R. Pacia", position: "Warehouse Officer", img: "/src/assets/image/Who Page/Security Experts/Norman.png" },
-    { name: "Rosendel T. Siason", position: "Purchasing Officer", img: "/src/assets/image/Who Page/Security Experts/Rosendel.png" },
-    { name: "Marife P. Bufete T. Reyes", position: "Logistic Supervisor", img: "/src/assets/image/Who Page/Security Experts/Marife.png" },
-    { name: "Marie R. Cleofas", position: "Import Supervisor", img: "/src/assets/image/Who Page/Security Experts/Marie.png" },
-    { name: "Jane D. Naval", position: "Sales and Marketing Associate", img: "/src/assets/image/Who Page/Security Experts/Jane.png" },
-  ];
+  const [experts, setExperts] = useState([]);
+  const [intro, setIntro] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchExpertData = async () => {
+      try {
+        const [expertsRes, introRes] = await Promise.all([
+          fetch(`${IMAGE_BASE_URL}/api/security-experts`),
+          fetch(`${IMAGE_BASE_URL}/api/dept-intro`)
+        ]);
+        
+        const expertsData = await expertsRes.json();
+        const introData = await introRes.json();
+        
+        setExperts(expertsData);
+        setIntro(introData);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching experts:", error);
+        setLoading(false);
+      }
+    };
+    fetchExpertData();
+  }, []);
+
+  if (loading || !intro) return null;
 
   return (
-    <section className="py-20 px-6 bg-white">
+    <section className="py-20 px-6 bg-white font-poppins">
       <div className="max-w-7xl mx-auto">
         
         {/* Header & Department Intro */}
         <div className="flex flex-col lg:flex-row justify-between items-start gap-8 mb-16">
           <div className="lg:w-1/3">
             <div className="flex items-center gap-4 mb-4">
-              <h2 className="text-4xl font-bold text-blue-900 text-oswald leading-tight">
+              <h2 className="text-4xl font-bold text-blue-900 leading-tight">
                 Meet Our <br /> Security Experts
               </h2>
               <div className="bg-orange-500 p-2 rounded-full text-white shrink-0">
@@ -35,31 +51,26 @@ const SecurityExperts = () => {
           </div>
           
           <div className="lg:w-2/3 border-l-4 border-orange-500 pl-6">
-            <h3 className="text-xl font-bold text-blue-900 uppercase mb-2">Engineering Department</h3>
+            <h3 className="text-xl font-bold text-blue-900 uppercase mb-2">{intro.dept_name}</h3>
             <p className="text-gray-600 text-xl leading-relaxed">
-              Our Engineers are committed to deliver tailor-fit solutions for your security needs. 
-              From basic integration to complex access control systems, we offer services 
-              which anticipate the future needs of companies.
+              {intro.description}
             </p>
           </div>
         </div>
 
         {/* Experts Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-12">
-          {experts.map((expert, index) => (
-            <div key={index} className="group cursor-pointer">
-              {/* Image Container with Hover Effect */}
+          {experts.map((expert) => (
+            <div key={expert.id} className="group cursor-pointer">
               <div className="relative overflow-hidden rounded-lg shadow-md aspect-[4/5] mb-4">
                 <img 
-                  src={expert.img} 
+                  src={`${IMAGE_BASE_URL}${expert.image_path}`} 
                   alt={expert.name} 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                {/* Subtle dark overlay on hover */}
                 <div className="absolute inset-0 bg-blue-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
 
-              {/* Text Info */}
               <div className="flex items-start gap-2">
                 <div className="mt-1.5 w-0 h-0 border-t-[5px] border-t-transparent border-l-[8px] border-l-orange-500 border-b-[5px] border-b-transparent shrink-0"></div>
                 <div>
@@ -74,7 +85,6 @@ const SecurityExperts = () => {
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

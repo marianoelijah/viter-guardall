@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { useParams, NavLink } from 'react-router-dom';
 
 const IMAGE_BASE_URL = "http://localhost:5000";
 
@@ -29,50 +29,56 @@ const ProductCard = ({ title, description, image, detailRoute }) => (
   </div>
 );
 
-const Honeywell = () => {
+const BrandProducts = () => {
+  const { brandName } = useParams(); // Grabs 'Honeywell', 'Hirsch', etc. from URL
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchHoneywellProducts = async () => {
+    const fetchBrandProducts = async () => {
+      setLoading(true);
       try {
-        const response = await fetch(`${IMAGE_BASE_URL}/api/products/brand/Honeywell`);
+        const response = await fetch(`${IMAGE_BASE_URL}/api/products/brand/${brandName}`);
         const data = await response.json();
         setProducts(data);
         setLoading(false);
       } catch (error) {
-        console.error("Error:", error);
+        console.error("Error fetching brand products:", error);
         setLoading(false);
       }
     };
-    fetchHoneywellProducts();
-  }, []);
+    fetchBrandProducts();
+  }, [brandName]); // Refetch if the brand in the URL changes
 
-  if (loading) return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
+  if (loading) return <div className="min-h-screen flex items-center justify-center">Loading {brandName} Products...</div>;
 
   return (
     <div className='bg-[#f0f4f8] min-h-screen px-6 lg:px-12 font-figtree'> 
       <div className="max-w-7xl mx-auto">
         <header className="text-center py-16 px-6 md:px-10 lg:px-20">
-          <h2 className="text-lg md:text-5xl lg:text-5xl text-[#0d3874] mb-6 tracking-tight">
-            {products.length > 0 ? products[0].category_name : "Honeywell Products"} - Honeywell
+          <h2 className="text-lg md:text-5xl lg:text-5xl text-[#0d3874] mb-6 tracking-tight uppercase">
+            {brandName} - {products.length > 0 ? products[0].category_name : "Products"}
           </h2>
           <div className="h-1 w-24 bg-[#2257a0] mx-auto rounded-full opacity-20"></div>
         </header>
         
-        <div className="bg-[#e9eff6] py-16 px-4 md:px-10 lg:px-12">
+        <div className="bg-[#e9eff6] py-16 px-4 md:px-10 lg:px-12 rounded-3xl shadow-inner">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {products.map((item) => (
-                <ProductCard
-                  key={item.id}
-                  title={item.title}
-                  description={item.description}
-                  image={item.image_path}
-                  detailRoute={item.detail_route}
-                />
-              ))}
-            </div>
+            {products.length > 0 ? (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                {products.map((item) => (
+                  <ProductCard
+                    key={item.id}
+                    title={item.title}
+                    description={item.description}
+                    image={item.image_path}
+                    detailRoute={item.detail_route}
+                  />
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-20 text-gray-500">No products found for {brandName}.</div>
+            )}
           </div>
         </div>
       </div>
@@ -80,4 +86,4 @@ const Honeywell = () => {
   );
 };
 
-export default Honeywell;
+export default BrandProducts;

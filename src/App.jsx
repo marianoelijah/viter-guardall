@@ -333,6 +333,8 @@ import CMNetworkSwitch from "./components/pages/frontend/OurProducts/Honeywell P
 import UnmanagedSwitch from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/UnmanagedSwitch";
 import IndustrialSwitch from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/IndustrialSwitch";
 import N84B5N from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/N84B5N";
+import BrandDetails from "./components/pages/frontend/OurProducts/BrandDetails";
+import BrandProducts from "./components/pages/frontend/OurProducts/Reusable/BrandProducts";
 
 
 
@@ -353,6 +355,13 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/who-we-are" element={<WhoWeArePage />} />
             <Route path="/our-products" element={<OurProductsPage />} />
+
+          {/* In your Routes section: */}
+            <Route path="/our-products/:brandName" element={<BrandProducts />} />
+
+          {/* The :slug is a variable that represents 'honeywell', 'pelco', etc. */}
+            <Route path="/products/:slug" element={<BrandDetails />} />
+
             <Route path="/our-clients" element={<OurClientsPage />} />
             <Route path="/contacts" element={<OurContacts />} />
 

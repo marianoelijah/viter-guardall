@@ -1,129 +1,75 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
-const CeiaProducts = [
-  {
-    title: "SMD601 Plus:  Most Sensitive Multi-Zone Metal Detector",
-    description: "A highly sensitive metal detection system that detects even the smallest metal items anywhere on or in the body.  Description: The SMD601 Plus is a very highly sensitive Walk-Through Metal",
-    image: "/src/assets/image/CEIA IMG/SMD601 PLUS.png",
-    detailRoute: "/our-products/ceia/smd601"
-  },
-  {
-    title: "SMD600 Plus:  Enhanced Walkthrough and Metal Detector",
-    description: "A two-in-one metal detector that has high sensitivity and high throughput. Description: The SMD®600 Plus is a very high sensitivity Metal Detector that also offers characteristics of high discrimination and",
-    image: "/src/assets/image/CEIA IMG/SMD600 PLUS.png",
-    detailRoute: "/our-products/ceia/smd600"
-  },
-  {
-    title: "PMD2 Plus/EZHD: Elliptic, Multi-Zone And Heavy Duty Enhanced Metal Detector",
-    description: "A walk-through device that quickly detects firearms and knives, even when they are hidden within body cavities.  Description: Strict requirements and detection needs call for security checkpoints to perform efficiently",
-    image: "/src/assets/image/CEIA IMG/PMD2 PLUS.png",
-    detailRoute: "/our-products/ceia/pmd2"
-  },
-  {
-    title: "HI-PE Plus: Enhanced Walkthrough Multi-Zone Metal Detector",
-    description: "A walk-through detection system that provides accurate detection of all metals and has an exceptional immunity to external interferences. Description: The HI-PE Plus Multi-Zone Metal Detector provides accurate detection of",
-    image: "/src/assets/image/CEIA IMG/HIPE PLUS.png",
-    detailRoute: "/our-products/ceia/hi-pe"
-  },
-  {
-    title: "OPENGATE®  Weapons Detection System",
-    description: "An active walk-through detection system designed for faster screening of backpacks, purses, and bags. Description: OPENGATE is the first and only fully open, active walk-through detection system, composed of two",
-    image: "/src/assets/image/CEIA IMG/OPENGATE WEAPONS.png",
-    detailRoute: "/our-products/ceia/opengate"
-  },
-  {
-    title: "MSDi High-Performance Ferromagnetic Weapons Detector",
-    description: "This device can be easily concealed to covertly detect weapons. Description: MSDi has been specifically designed for easy integration of Ferromagnetic Weapons Detection in Covert Access Control. The MSDi’s very",
-    image: "/src/assets/image/CEIA IMG/MSDI HIGH PERFORMANCE.jpg",
-    detailRoute: "/our-products/ceia/high-performance"
-  },
-  {
-    title: "MSD Highly Portable Cellphone, Ferrous Weapon, and Contraband Detector",
-    description: "An easy-to-carry device designed to detect all cellphones and ferrous contraband, particularly in prisons. Description: The illegal use of cell phones is a growing and dangerous problem in correctional institutions",
-    image: "/src/assets/image/CEIA IMG/MSD HIGHLY PORTABLE.png",
-    detailRoute: "/our-products/ceia/portable-cellphone"
-  },
-  {
-    title: "PD240CB Long-Range Hand-Held Metal Detection Set",
-    description: "A device with long detection range for weapons and minimum metal targets and has high immunity to external metal masses. Description: The PD240CB is a Hand Held Metal Detector that",
-    image: "/src/assets/image/CEIA IMG/PD240CB LONG RANGE.png",
-    detailRoute: "/our-products/ceia/long-range-hand-held"
-  },
-  {
-    title: "PD240 Wide Search Area Hand-Held Metal Detection Set",
-    description: "This hand-held metal detection device consists of an offset hand grip for a wider search area. Description: The PD240 is a Hand Held Metal Detector that combines high reliability and",
-    image: "/src/assets/image/CEIA IMG/PD240 WIDE SEARCH.jpg",
-    detailRoute: "/our-products/ceia/wide-search-area"
-  },
-  {
-    title: "PD140N Compact Hand-Held Metal Detection Set",
-    description: "A highly reliable metal detection device with ergonomic design. Description: The PD140N is a Hand Held Metal Detector that combines high reliability and ergonomics with advanced detection and operator signaling",
-    image: "/src/assets/image/CEIA IMG/PD140N COMPACT HAND.png",
-    detailRoute: "/our-products/ceia/compact-hand-held"
-  },
-  {
-    title: "EMIS-MAIL Mail Scanner",
-    description: "Mail scanner for the detection of letter bombs and IEDs in small parcels. Description: The EMIS®-MAIL is designed to detect a wide variety of metal threat items including detonators, batteries,",
-      image: "/src/assets/image/CEIA IMG/EMIS MAIL.png",
-      detailRoute: "/our-products/ceia/mail-scanner"
-    },
-  {
-    title: "EMA Liquid Explosive Detector",
-    description: "A compact liquid detection device, scanning for possible presence of explosive precursors and exclusive liquids.  Description: The EMA is a compact device designed for the analysis of liquid containers and",
-    image: "/src/assets/image/CEIA IMG/EMA LIQUID.png",
-    detailRoute: "/our-products/ceia/liquid-explosive-detector"
-  }
-];
+const IMAGE_BASE_URL = "http://localhost:5000";
 
 const ProductCard = ({ title, description, image, detailRoute }) => (
-  <div className="group bg-white border border-gray-200 rounded-xl p-4 flex flex-col h-full transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2 hover:border-blue-300">
+  <div className="group bg-white border border-gray-200 rounded-xl p-4 flex flex-col h-full transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2 hover:border-blue-300 cursor-pointer">
     <div className="bg-white rounded-lg p-4 mb-4 flex items-center justify-center h-48 overflow-hidden">
       <img 
-        src={image} 
+        src={`${IMAGE_BASE_URL}${image}`} 
         alt={title} 
         className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-110" 
+        onError={(e) => { e.target.src = "https://via.placeholder.com/300?text=Image+Not+Found"; }}
       />
     </div>
     <div className="flex-grow px-2">
-      <h3 className="text-[#1a365d] font-bold text-sm uppercase mb-3 leading-tight group-hover:text-blue-600 transition-colors">
+      <h3 className="text-[#1a365d] font-bold text-sm uppercase mb-3 leading-tight group-hover:text-blue-600 transition-colors min-h-[2.5rem]">
         {title}
       </h3>
-      <p className="text-gray-600 text-xl leading-relaxed">
+      <p className="text-gray-600 text-xl leading-relaxed line-clamp-3">
         {description}
       </p>
-       <span className='text-classic block mt-12 text-gray-500 text-sm tracking-widest'>
-            <NavLink to={detailRoute} className="text-blue-500 hover:underline mt-2 block">
-              <h3 className='text-xl font-poppins hover:text-green-500 transition-colors duration-300'>
-                View Details
-              </h3>
-            </NavLink>
-        </span>
+      <span className='block mt-12 text-gray-500 text-sm tracking-widest'>
+        <NavLink to={detailRoute} className="text-blue-500 hover:underline mt-2 block">
+          <h3 className='text-xl font-poppins hover:text-green-500 transition-colors duration-300'>
+            View Details
+          </h3>
+        </NavLink>
+      </span>
     </div>
   </div>
 );
 
-const Alarm = () => {
+const Ceia = () => {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchCeiaProducts = async () => {
+      try {
+        const response = await fetch(`${IMAGE_BASE_URL}/api/products/brand/Ceia`);
+        const data = await response.json();
+        setProducts(data);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching Ceia products:", error);
+        setLoading(false);
+      }
+    };
+    fetchCeiaProducts();
+  }, []);
+
+  if (loading) return <div className="min-h-screen flex items-center justify-center font-figtree text-[#0d3874]">Loading Detection Systems...</div>;
+
   return (
-    <div className="bg-[#f8fafc] min-h-screen py-16 px-4 sm:px-8 lg:px-16">
+    <div className="bg-[#f8fafc] min-h-screen py-16 px-4 sm:px-8 lg:px-16 font-figtree">
       <div className="max-w-7xl mx-auto">
         <header className="text-center mb-16">
-          {/* <span className="text-blue-600 font-bold uppercase tracking-widest text-sm">Hardware Collection</span> */}
-          <h2 className="text-lg md:text-5xl lg:text-5xl font-figtree text-[#0d3874] mb-6 tracking-tight">
-            Detection Systems - Ceia
+          <h2 className="text-lg md:text-5xl lg:text-5xl text-[#0d3874] mb-6 tracking-tight">
+            {products.length > 0 ? products[0].category_name : "Detection Systems"} - Ceia
           </h2>
           <div className="h-1 w-20 bg-blue-500 mx-auto rounded-full"></div>
         </header>
         
-        {/* Improved Responsive Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-          {CeiaProducts.map((item, idx) => (
+          {products.map((item) => (
             <ProductCard
-             key={idx}
+              key={item.id}
               title={item.title}
               description={item.description}
-              image={item.image}
-              detailRoute={item.detailRoute} 
+              image={item.image_path}
+              detailRoute={item.detail_route} 
             />
           ))}
         </div>
@@ -132,4 +78,4 @@ const Alarm = () => {
   );
 };
 
-export default Alarm;
+export default Ceia;
