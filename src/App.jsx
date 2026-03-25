@@ -335,6 +335,7 @@ import IndustrialSwitch from "./components/pages/frontend/OurProducts/Honeywell 
 import N84B5N from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/N84B5N";
 import BrandDetails from "./components/pages/frontend/OurProducts/BrandDetails";
 import BrandProducts from "./components/pages/frontend/OurProducts/Reusable/BrandProducts";
+import Pro3200 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Honeywell/Pro3200";
 
 
 
@@ -435,6 +436,7 @@ const App = () => {
              <Route path="/our-products/honeywell/fin400ac" element={<HonFin400Ac />} />
              <Route path="/our-products/honeywell/pw6101-series" element={<Pw6101Series />} />
              <Route path="/our-products/honeywell/pw-series" element={<PwSeries />} />
+             <Route path="/our-products/honeywell/pro3200-series" element={<Pro3200 />} />
              <Route path="/our-products/honeywell/contactless-proximity" element={<ContactlessProximity />} />
              <Route path="/our-products/honeywell/contactless-smart" element={<ContactlessSmart />} />
              <Route path="/our-products/honeywell/mifare" element={<Mifare />} />

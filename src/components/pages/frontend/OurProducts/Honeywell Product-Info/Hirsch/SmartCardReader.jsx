@@ -30,13 +30,13 @@ const SmartCardReader = () => {
       <div className="max-w-6xl mx-auto px-4 py-8 flex flex-col lg:flex-row gap-8">
         {/* Main Content Area */}
         <main className="lg:w-3/4 bg-gray-200 p-8 shadow-sm">
-          <p className="text-[17px] leading-relaxed mb-6">
+          <p className="text-[15px] leading-relaxed mb-6">
             Deliver unparalleled security and flexibility for government PACS, combining high-assurance smart card technology with FICAM compliance and versatile authentication options.
           </p>
 
           <section className="mb-8">
             <h2 className="font-bold text-xl text-black mb-2">Product Description:</h2>
-            <div className="text-[17px] leading-relaxed space-y-4 mb-6">
+            <div className="text-[15px] leading-relaxed space-y-4 mb-6">
               <p>
                 Designed specifically with high-security government applications in mind, Identiv's uTrust TS Contact Smart Card (SC) Readers offer an excellent balance of compliance, interoperability, and security for federal agencies, government contractors, and other mission-critical facilities.
               </p>
@@ -46,7 +46,7 @@ const SmartCardReader = () => {
             </div>
 
             <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
-            <ul className="list-disc ml-5 text-[17px] space-y-1">
+            <ul className="list-disc ml-5 text-[15px] space-y-1">
               {productFeatures.map((feature, index) => (
                 <li key={index}>{feature}</li>
               ))}
@@ -56,93 +56,93 @@ const SmartCardReader = () => {
           {/* Technical Specifications Table */}
           <section className="mt-10 overflow-x-auto">
             <h2 className="font-bold text-xl text-black mb-4">Technical Specification:</h2>
-            <table className="w-full border-collapse border border-gray-500 text-[11px]">
+            <table className="w-full border-collapse border border-black text-[11px]">
               <thead>
                 <tr className="bg-gray-100 uppercase font-bold text-[17px]">
-                  <th className="border border-gray-500 p-2 text-left w-1/4"></th>
-                  <th className="border border-gray-500 p-2 text-left">TS Wall Mount SC</th>
-                  <th className="border border-gray-500 p-2 text-left">TS Wall Mount Keypad SC</th>
+                  <th className="border border-black p-2 text-left w-1/4"></th>
+                  <th className="border border-black p-2 text-left text-black">TS Wall Mount SC</th>
+                  <th className="border border-black p-2 text-left text-black">TS Wall Mount Keypad SC</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">Part Numbers</td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">8105ABP0000|8105ABF000|8105ABPR0008105ABTF0008105ABTF0008105ABTR000</td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">8205ABP0000|8205ABPF0008205ABP R0008205ABTF0008205ABTF000820 5ABTR000</td>
+                  <td className="border border-black p-2 font-bold bg-gray-100 text-[17px] text-black ">Part Numbers</td>
+                  <td className="border border-black text-gray-700 text-[15px] p-2 break-all">8105ABP0000|8105ABF000|8105ABPR0008105ABTF0008105ABTF0008105ABTR000</td>
+                  <td className="border border-black text-gray-700 text-[15px] p-2 break-all">8205ABP0000|8205ABPF0008205ABP R0008205ABTF0008205ABTF000820 5ABTR000</td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">Description</td>
-                  <td className="border border-gray-500 p-2 text-[15px] text-gray-700">TS Wall Mount with Contact Smart Card Reader</td>
-                  <td className="border border-gray-500 p-2 text-[15px] text-gray-700">TS Wall Mount Keypad with Contact Smart Card Reader</td>
+                  <td className="border border-black p-2 font-bold bg-gray-100 text-[17px] text-black">Description</td>
+                  <td className="border border-black p-2 text-[15px] text-gray-700">TS Wall Mount with Contact Smart Card Reader</td>
+                  <td className="border border-black p-2 text-[15px] text-gray-700">TS Wall Mount Keypad with Contact Smart Card Reader</td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">Carrier Frequencies</td>
-                  <td colSpan="2" className="border border-gray-500 p-2 text-center text-[15px] text-gray-700">13.56 MHz only or 13.56 MHz and 125 KHz</td>
+                  <td className="border border-black p-2 font-bold bg-gray-100 text-[17px] text-black">Carrier Frequencies</td>
+                  <td colSpan="2" className="border border-black p-2 text-center text-[15px] text-gray-700">13.56 MHz only or 13.56 MHz and 125 KHz</td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">Current Consumption (@ 12V)</td>
-                  <td className="border border-gray-500 p-2 text-[15px] text-gray-700">95mA Average / 125mA Peak</td>
-                  <td className="border border-gray-500 p-2 text-[15px] text-gray-700">110mA Average / 150mA Peak</td>
+                  <td className="border border-black p-2 font-bold bg-gray-100 text-[17px] text-black">Current Consumption (@ 12V)</td>
+                  <td className="border border-black p-2 text-[15px] text-gray-700">95mA Average / 125mA Peak</td>
+                  <td className="border border-black p-2 text-[15px] text-gray-700">110mA Average / 150mA Peak</td>
                 </tr>
                  <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">Power Supply</td>
-                  <td colSpan="2" className="border border-gray-500 p-2  text-[15px] text-gray-700">12 VDC</td>
+                  <td className="border border-black p-2 font-bold bg-gray-100 text-[17px] text-black">Power Supply</td>
+                  <td colSpan="2" className="border border-black p-2  text-[15px] text-gray-700">12 VDC</td>
                 </tr>
                  <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">Dimensions</td>
-                  <td colSpan="2" className="border border-gray-500 p-2  text-[15px] text-gray-700">5.0 x 3.4 x 1.3 in(12.7 x 8.6 x 3.3 cm)</td>
+                  <td className="border border-black p-2 font-bold bg-gray-100 text-[17px] text-black">Dimensions</td>
+                  <td colSpan="2" className="border border-black p-2  text-[15px] text-gray-700">5.0 x 3.4 x 1.3 in(12.7 x 8.6 x 3.3 cm)</td>
                 </tr>
                  <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">Product Weight</td>
-                  <td colSpan="2" className="border border-gray-500 p-2  text-[15px] text-gray-700">9.6 oz (272g)</td>
+                  <td className="border border-black p-2 font-bold bg-gray-100 text-[17px] text-black">Product Weight</td>
+                  <td colSpan="2" className="border border-black p-2  text-[15px] text-gray-700">9.6 oz (272g)</td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">Housing Material</td>
-                  <td colSpan="2" className="border border-gray-500 p-2  text-[15px] text-gray-700">UL94 Polycarbonate</td>
+                  <td className="border border-black p-2 font-bold bg-gray-100 text-[17px] text-black">Housing Material</td>
+                  <td colSpan="2" className="border border-black p-2  text-[15px] text-gray-700">UL94 Polycarbonate</td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">Operating Temperature</td>
-                  <td colSpan="2" className="border border-gray-500 p-2  text-[15px] text-gray-700">32 to 120°F (0 to 49°C)</td>
+                  <td className="border border-black p-2 font-bold bg-gray-100 text-[17px] text-black">Operating Temperature</td>
+                  <td colSpan="2" className="border border-black p-2  text-[15px] text-gray-700">32 to 120°F (0 to 49°C)</td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">Storage Temperature</td>
-                  <td colSpan="2" className="border border-gray-500 p-2  text-[15px] text-gray-700">32 to 140°F (0 to 60°C)</td>
+                  <td className="border border-black p-2 font-bold bg-gray-100 text-[17px] text-black">Storage Temperature</td>
+                  <td colSpan="2" className="border border-black p-2  text-[15px] text-gray-700">32 to 140°F (0 to 60°C)</td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">Operating Humidity</td>
-                  <td colSpan="2" className="border border-gray-500 p-2  text-[15px] text-gray-700">5% to 85% relative humidity (non-condensing)</td>
+                  <td className="border border-black p-2 font-bold bg-gray-100 text-[17px] text-black">Operating Humidity</td>
+                  <td colSpan="2" className="border border-black p-2  text-[15px] text-gray-700">5% to 85% relative humidity (non-condensing)</td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">Dimensions</td>
-                  <td colSpan="2" className="border border-gray-500 p-2  text-[15px] text-gray-700">5.0 x 3.4 x 1.3 in (12.7 x 8.6 x 3.3 cm)</td>
+                  <td className="border border-black p-2 font-bold bg-gray-100 text-[17px] text-black">Dimensions</td>
+                  <td colSpan="2" className="border border-black p-2  text-[15px] text-gray-700">5.0 x 3.4 x 1.3 in (12.7 x 8.6 x 3.3 cm)</td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">Connection</td>
-                  <td colSpan="2" className="border border-gray-500 p-2  text-[15px] text-gray-700">Pigtail or Terminal</td>
+                  <td className="border border-black p-2 font-bold bg-gray-100 text-[17px] text-black">Connection</td>
+                  <td colSpan="2" className="border border-black p-2  text-[15px] text-gray-700">Pigtail or Terminal</td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">Status Indicator</td>
-                  <td colSpan="2" className="border border-gray-500 p-2  text-[15px] text-gray-700">RGB LED, Buzzer</td>
+                  <td className="border border-black p-2 font-bold bg-gray-100 text-[17px] text-black">Status Indicator</td>
+                  <td colSpan="2" className="border border-black p-2  text-[15px] text-gray-700">RGB LED, Buzzer</td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">Cable Distance</td>
-                  <td colSpan="2" className="border border-gray-500 p-2  text-[15px] text-gray-700">Wiegand 500 ft/152 m (18 AWG wire), RS-485 4000 ft/1200 m (18 AWG shielded twisted pair)</td>
+                  <td className="border border-black p-2 font-bold bg-gray-100 text-[17px] text-black">Cable Distance</td>
+                  <td colSpan="2" className="border border-black p-2  text-[15px] text-gray-700">Wiegand 500 ft/152 m (18 AWG wire), RS-485 4000 ft/1200 m (18 AWG shielded twisted pair)</td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">Low Frequency (125 kHz) Compatibility</td>
-                  <td colSpan="2" className="border border-gray-500 p-2  text-[15px] text-gray-700">HID® Prox, Indala®, Casi Rusco®, AWID, and others</td>
+                  <td className="border border-black p-2 font-bold bg-gray-100 text-[17px] text-black">Low Frequency (125 kHz) Compatibility</td>
+                  <td colSpan="2" className="border border-black p-2  text-[15px] text-gray-700">HID® Prox, Indala®, Casi Rusco®, AWID, and others</td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">High Frequency (13.56 MHz) Compatibility</td>
-                  <td colSpan="2" className="border border-gray-500 p-2  text-[15px] text-gray-700">PIV, PIV-I, CIV, CAC, TWIC, uTrust TS, MIFARE Classic, MIFARE DESFire EVx, ISO15693 UID, ISO14443A UID</td>
+                  <td className="border border-black p-2 font-bold bg-gray-100 text-[17px] text-black">High Frequency (13.56 MHz) Compatibility</td>
+                  <td colSpan="2" className="border border-black p-2  text-[15px] text-gray-700">PIV, PIV-I, CIV, CAC, TWIC, uTrust TS, MIFARE Classic, MIFARE DESFire EVx, ISO15693 UID, ISO14443A UID</td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">Certifications</td>
-                  <td colSpan="2" className="border border-gray-500 p-2  text-[15px] text-gray-700">FCC, UL 294, UL1076, CE, IC, RoHS2, REACH, GSA</td>
+                  <td className="border border-black p-2 font-bold bg-gray-100 text-[17px] text-black">Certifications</td>
+                  <td colSpan="2" className="border border-black p-2  text-[15px] text-gray-700">FCC, UL 294, UL1076, CE, IC, RoHS2, REACH, GSA</td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">Warranty</td>
-                  <td colSpan="2" className="border border-gray-500 p-2  text-[15px] text-gray-700">Two (2) Years</td>
+                  <td className="border border-black p-2 font-bold bg-gray-100 text-[17px] text-black">Warranty</td>
+                  <td colSpan="2" className="border border-black p-2  text-[15px] text-gray-700">Two (2) Years</td>
                 </tr>
               </tbody>
             </table>
@@ -150,8 +150,8 @@ const SmartCardReader = () => {
 
         {/* Tags */}
            <div className="mt-8 flex gap-3 mb-5 p-4 rounded">
-            <p className="text-lg text-white border bg-red-500 px-2">Hirsch</p>
-            <p className="text-lg text-white border bg-red-500 px-2">Access Control System</p>
+            <p className="text-lg text-white border bg-red-500 px-2 rounded">Hirsch</p>
+            <p className="text-lg text-white border bg-red-500 px-2 rounded">Access Control System</p>
            </div> 
 
           {/* Share Section */}
@@ -159,19 +159,19 @@ const SmartCardReader = () => {
               <p className="font-medium text-black mb-3">Share:</p>
               <div className="flex gap-3">
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                    <img src="/src/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
+                    <img src="/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                    <img src="/src/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
+                    <img src="/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                    <img src="/src/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
+                    <img src="/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                    <img src="/src/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
+                    <img src="/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                    <img src="/src/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
+                    <img src="/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
                 </div>
               </div>
             </div>
@@ -179,9 +179,9 @@ const SmartCardReader = () => {
 
         {/* Sidebar */}
         <aside className="lg:w-1/4 space-y-6">
-         <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
-            <h3 className="text-xl font-bold text-black mb-4 border-b pb-1">More By HIRSCH</h3>
-            <ul className="text-[17px] space-y-4 text-gray-500 transition-colors">
+         <div className="bg-gray-300 p-4 mb-6">
+            <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By HIRSCH</h3>
+            <ul className="text-xs space-y-4 text-gray-500 transition-colors">
               <li className='cursor-pointer hover:text-[#f08c09]'>Onity DirectKey with Serene</li>
               <li className='cursor-pointer hover:text-[#f08c09]'>MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs</li>
               <li className='cursor-pointer hover:text-[#f08c09]'>INR 415 256-Channel 12 Bay RAID Rackmount Standalone</li>

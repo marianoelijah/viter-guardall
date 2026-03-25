@@ -40,40 +40,7 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
               </ul>
             </section>
 
-            {/* Technical Specifications Table */}
-            {/* <section>
-              <h2 className="font-bold text-xl text-black mb-4">Technical Specification:</h2>
-              <div className="border border-black border-r overflow-hidden">
-                <table className="w-full text-left text-xs border-collapse">
-                  <tbody>
-                    {specs.map((item, idx) => (
-                      <React.Fragment key={idx}>
-                        {item.type === 'header' ? (
-                          <tr className="bg-gray-200">
-                            <th colSpan="2" className="p-2 border-b border-black border border-r text-[15px] text-black font-bold uppercase tracking-wider">
-                              {item.label}
-                            </th>
-                          </tr>
-                        ) : (
-                          <tr className={idx % 2 === 0 ? 'bg-gray-100' : 'bg-gray-50'}>
-                            <td className="p-3 border-b border-r border-black border  font-bold w-1/3 text-[15px] text-black bg-gray-50/50">
-                              {item.label}
-                            </td>
-                            <td className="p-3 border-b border-black border border-r text-black whitespace-pre-line text-[15px] hover:bg-slate-50/50 transition-colors">
-                              {item.value}
-                            </td>
-                            <td className="p-3 border-b border-black border border-r text-black whitespace-pre-line text-[15px] hover:bg-slate-50/50 transition-colors">
-                              {item.valu}
-                            </td>
-                          </tr>
-                        )}
-                      </React.Fragment>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </section> */}
-
+            
              {/* Technical Specifications Table */}
               <div className="bg-gray-300 p-6 shadow rounded border border-r divine-y">
             <h2 className="font-semibold text-black text-xl mb-4">Technical Specification</h2>
@@ -274,7 +241,7 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
           <aside className="lg:col-span-1 space-y-8">
              <div className="bg-gray-300 p-4 border border-black  border-r mb-6">
             <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By PELCO</h3>
-            <ul className="text-xl space-y-4 text-gray-500 transition-colors">
+            <ul className="text-xs space-y-4 text-gray-500 transition-colors">
               <li className='cursor-pointer hover:text-[#f08c09]'>Onity DirectKey with Serene</li>
               <li className='cursor-pointer hover:text-[#f08c09]'>MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs</li>
               <li className='cursor-pointer hover:text-[#f08c09]'>INR 415 256-Channel 12 Bay RAID Rackmount Standalone</li>

@@ -2,6 +2,7 @@ import React from "react";
 import { FaFacebookF, FaLinkedinIn, FaEnvelope, FaWhatsapp, FaTelegramPlane } from "react-icons/fa";
 import Header from "../../../partials/Header";
 import Footer from "../../../partials/Footer";
+import { NavLink } from "react-router-dom";
 
 const DR4200Series = () => {
   return (
@@ -33,13 +34,13 @@ const DR4200Series = () => {
 
               {/* TAGS */}
               <div className="flex flex-wrap gap-3 mb-8">
-                <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
+                <span className="bg-red-500 text-white text-sm px-2 py-1 rounded">
                   HONEYWELL
                 </span>
-                <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
+                <span className="bg-red-500 text-white text-sm px-2 py-1 rounded">
                    READERS
                 </span>
-                <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
+                <span className="bg-red-500 text-white text-sm px-2 py-1 rounded">
                   Access Control System
                 </span>
               </div>
@@ -47,25 +48,26 @@ const DR4200Series = () => {
               <hr className="mb-6" />
 
               {/* SHARE SECTION */}
-              <div className="mt-8">
+               <div className="mt-8">
               <p className="font-medium text-black mb-3">Share:</p>
               <div className="flex gap-3">
-                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-blue-400 transition-colors duration-200">
-                    <img src="/src/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
+                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
+                  <img src="/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
                 </div>
-                <div className="w-8 h-8 bg-blue-400 rounded hover:bg-blue-300 transition-colors duration-200">
-                    <img src="/src/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
+                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
+                  <img src="/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
                 </div>
-                <div className="w-8 h-8 bg-gray-700 rounded hover:bg-gray-600 transition-colors duration-200">
-                    <img src="/src/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
+                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
+                  <img src="/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
                 </div>
-                <div className="w-8 h-8 bg-green-500 rounded hover:bg-green-400 transition-colors duration-200">
-                    <img src="/src/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
+                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
+                  <img src="/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
                 </div>
-                <div className="w-8 h-8 bg-green-500 rounded hover:bg-green-400 transition-colors duration-200">
-                    <img src="/src/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
+                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
+                  <img src="/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
                 </div>
               </div>
+            
               </div>
             </div>
           </div>
@@ -75,18 +77,18 @@ const DR4200Series = () => {
 
             {/* MORE BY SECTION */}
             <div className="bg-gray-200 border border-gray-300 rounded-xl shadow-sm p-6">
-              <h3 className="text-black font-semibold mb-4">
+              <h3 className="text-black text-lg font-semibold mb-4">
                 More By HONEYWELL
               </h3>
 
-              <ul className="text-gray-700 text-lg space-y-3">
-                <li>Onity DirectKey with Serene</li>
-                <li>MAD-401 and MAD-402 Series Addressable Modules I & 2 Technical Inputs</li>
-                <li>INR 415 256-Channel 12 Bay RAID Backmount Standalone</li>
-                <li>GNR 340 100-Channel Tower Standalone</li>
-                <li>ENR 130 16-Channel Desktop Standalone NVR- No HDD Included</li>
-                <li>Z86 Outdoor Network Dome Camera with Night Vision</li>
-              </ul>
+            <ul className="text-xs space-y-4 text-gray-500 transition-colors">
+              <li className='cursor-pointer hover:text-[#f08c09]'>Onity DirectKey with Serene</li>
+              <li className='cursor-pointer hover:text-[#f08c09]'>MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs</li>
+              <li className='cursor-pointer hover:text-[#f08c09]'>INR 415 256-Channel 12 Bay RAID Rackmount Standalone</li>
+              <li className='cursor-pointer hover:text-[#f08c09]'>GNR 340 100-Channel Tower Standalone</li>
+              <li className='cursor-pointer hover:text-[#f08c09]'>ENR 130 16-Channel Desktop Standalone NVR - No HDD Included</li>
+              <li className='cursor-pointer hover:text-[#f08c09]'>Z86 Outdoor Network Dome Camera with Night Vision</li>
+            </ul>
             </div>
 
             {/* CTA CARD */}
@@ -106,8 +108,10 @@ const DR4200Series = () => {
                    Contact Guard-All now for a customized security solution
                    that protects what matters most.
                  </p>
-              <button className="bg-white text-blue-600 font-semibold px-4 py-2 rounded w-full">
+              <button className="bg-blue-700 hover:bg-blue-400 text-white font-semibold px-4 py-2 rounded w-full ">
+                <NavLink to="/contacts" className="w-full h-full block">
                 CONTACT US TODAY
+                </NavLink>
               </button>
             </div>
 

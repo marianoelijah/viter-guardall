@@ -65,7 +65,7 @@ const ProductPage = () => {
       description: "To ensure the authenticity of your critical documents and help you detect evidence tampering, our partners in FOSTER + FREEMAN have scientific-grade VSC to identify document manipulation with unparalleled accuracy.",
       img: "/assets/image/Our Products/forensic.png",
       brands: [
-        { name: "foster+freeman", logo: "/assets/image/products logo/FosterFreeman.png", path: "/products/foster-freeman" }
+        { name: "foster+freeman", logo: "/assets/image/products logo/Fosterfreeman.png", path: "/products/foster-freeman" }
       ]
     },
     {

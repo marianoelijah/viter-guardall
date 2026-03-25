@@ -54,84 +54,84 @@ const ContactlessSmart = () => {
           {/* Large Technical Specification Table */}
           <section className="mt-10 overflow-x-auto">
             <h2 className="font-bold text-xl text-black mb-4">Technical Specification:</h2>
-            <table className="w-full border-collapse border border-gray-500 text-[15px]">
+            <table className="w-full border-collapse border border-black text-[15px]">
               <thead>
                 <tr className="bg-gray-200 uppercase font-bold">
-                  <th className="border border-gray-500 p-2 text-left w-32 text-[15px] text-black">Models</th>
+                  <th className="border border-black p-2 text-left w-32 text-[15px] text-black">Models</th>
                   {models.map((m, i) => (
-                    <th key={i} className="border border-gray-500 p-1 text-left align-top">{m}</th>
+                    <th key={i} className="border border-black p-1 text-left align-top">{m}</th>
                   ))}
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-200">Dimensions</td>
-                  <td className="border border-gray-500 p-2" colSpan="4">2.125" W x 3.370" H x 0.030" T (5.4cm W x 8.6cm H x 0.076cm T)</td>
-                  <td className="border border-gray-500 p-2">2.125" W x 3.370" H x 0.037" T</td>
-                  <td className="border border-gray-500 p-2">1.25" W x 1.35" H</td>
-                  <td className="border border-gray-500 p-2">1.285" D x 0.070" T</td>
+                  <td className="border border-black p-2 font-bold bg-gray-200 text-[15px] text-black">Dimensions</td>
+                  <td className="border border-black p-2 text-[15px] text-black" colSpan="4">2.125" W x 3.370" H x 0.030" T (5.4cm W x 8.6cm H x 0.076cm T)</td>
+                  <td className="border border-black p-2 text-[15px] text-black">2.125" W x 3.370" H x 0.037" T</td>
+                  <td className="border border-black p-2 text-[15px] text-black">1.25" W x 1.35" H</td>
+                  <td className="border border-black p-2 text-[15px] text-black">1.285" D x 0.070" T</td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-200">Finish</td>
-                  <td className="border border-gray-500 p-2" colSpan="5">Gloss White</td>
-                  <td className="border border-gray-500 p-2">Black</td>
-                  <td className="border border-gray-500 p-2">White</td>
+                  <td className="border border-black p-2 font-bold bg-gray-200 text-[15px] text-black">Finish</td>
+                  <td className="border border-black p-2" colSpan="5">Gloss White</td>
+                  <td className="border border-black p-2">Black</td>
+                  <td className="border border-black p-2">White</td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-200">Credential Construction</td>
+                  <td className="border border-black p-2 font-bold bg-gray-200 text-[15px] text-black">Credential Construction</td>
                 </tr>
-                  <tr className="bg-gray-100 font-bold"><td colSpan="8" className="border divine-y border-gray-500 p-2 text-black">Max Read Range^3</td></tr>
-                <tr className="bg-gray-100 font-bold"><td colSpan="8" className="border border-gray-500 p-2 text-black">ISO Standards</td></tr>
+                  <tr className="bg-gray-100 font-bold"><td colSpan="8" className="border divine-y border-black p-2 text-black">Max Read Range^3</td></tr>
+                <tr className="bg-gray-100 font-bold"><td colSpan="8" className="border border-black p-2 text-black">ISO Standards</td></tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-200 text-gray-500">ISO 7810</td>
-                  <td className="border border-gray-500 p-2"></td>
-                  <td className="border border-gray-500 p-2"></td>
-                  <td className="border border-gray-500 p-2"></td>
+                  <td className="border border-black p-2 font-bold bg-gray-200 text-[15px] text-black">ISO 7810</td>
+                  <td className="border border-black p-2"></td>
+                  <td className="border border-black p-2"></td>
+                  <td className="border border-black p-2"></td>
                   {Array(4).fill("Yes").map((v, i) => (
-                    <td key={i} className="border border-gray-500 p-2">{v}</td>
+                    <td key={i} className="border border-black p-2">{v}</td>
                   ))}
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-200 text-gray-500">ISO 7811-2,4,5</td>
+                  <td className="border border-black p-2 font-bold bg-gray-200 text-black">ISO 7811-2,4,5</td>
                   {Array(5).fill("Yes").map((v, i) => (
-                    <td key={i} className="border border-gray-500 p-2">{v}</td>
+                    <td key={i} className="border border-black p-2">{v}</td>
                   ))}
                 </tr>
                  <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-200 text-gray-500">ISO 7816-1,2</td>
+                  <td className="border border-black p-2 font-bold bg-gray-200 text-black">ISO 7816-1,2</td>
                   {Array(4).fill("Yes").map((v, i) => (
-                    <td key={i} className="border border-gray-500 p-2">{v}</td>
+                    <td key={i} className="border border-black p-2">{v}</td>
                   ))}
                 </tr>
                  <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-200 text-black">ISO 10373-1</td>
+                  <td className="border border-black p-2 font-bold bg-gray-200 text-black">ISO 10373-1</td>
                   {Array(5).fill("Yes").map((v, i) => (
-                    <td key={i} className="border border-gray-500 p-2">{v}</td>
+                    <td key={i} className="border border-black p-2">{v}</td>
                   ))}
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-200 text-gray-500">ISO 14443B^4</td>
+                  <td className="border border-black p-2 font-bold bg-gray-200 text-black">ISO 14443B^4</td>
                   {Array(7).fill("Yes").map((v, i) => (
-                    <td key={i} className="border border-gray-500 p-2">{v}</td>
+                    <td key={i} className="border border-black p-2">{v}</td>
                   ))}
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold text-gray-500 bg-gray-200">ISO 15693</td>
+                  <td className="border border-black p-2 font-bold text-black bg-gray-200">ISO 15693</td>
                   {Array(7).fill("Yes").map((v, i) => (
-                    <td key={i} className="border border-gray-500 p-2">{v}</td>
+                    <td key={i} className="border border-black p-2">{v}</td>
                   ))}
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-200 text-black">Operating Temperature</td>
-                  <td className="border border-gray-500 p-2" colSpan="7">-40° – 158°F (-40° – 70°C)</td>
+                  <td className="border border-black p-2 font-bold bg-gray-200 text-black">Operating Temperature</td>
+                  <td className="border border-black p-2" colSpan="7">-40° – 158°F (-40° – 70°C)</td>
                 </tr>
                  <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-200 text-black">Operating Humidity.</td>
-                  <td className="border border-gray-500 p-2" colSpan="7">5-95%, non-condensing</td>
+                  <td className="border border-black p-2 font-bold bg-gray-200 text-black">Operating Humidity.</td>
+                  <td className="border border-black p-2" colSpan="7">5-95%, non-condensing</td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-200 text-black">Warranty</td>
-                  <td className="border border-gray-500 p-2" colSpan="7">Limited lifetime warranty</td>
+                  <td className="border border-black p-2 font-bold bg-gray-200 text-black">Warranty</td>
+                  <td className="border border-black p-2" colSpan="7">Limited lifetime warranty</td>
                 </tr>
               </tbody>
             </table>
@@ -139,9 +139,9 @@ const ContactlessSmart = () => {
 
           {/* Footer Tags */}
            <div className="mt-8 flex gap-3 mb-5 p-4 rounded">
-            <p className="text-lg text-white border bg-red-500 px-2">Honeywell</p>
-            <p className="text-lg text-white border bg-red-500 px-2">Cards</p>
-            <p className="text-lg text-white border bg-red-500 px-2">Access Control System</p>
+            <p className="text-white border bg-red-500 px-2 py-1 rounded">Honeywell</p>
+            <p className="text-white border bg-red-500 px-2 py-1 rounded">Cards</p>
+            <p className="text-white border bg-red-500 px-2 py-1 rounded">Access Control System</p>
            </div> 
 
           {/* Share Section */}
@@ -149,19 +149,19 @@ const ContactlessSmart = () => {
               <p className="font-medium text-black mb-3">Share:</p>
               <div className="flex gap-3">
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                    <img src="/src/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
+                    <img src="/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                    <img src="/src/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
+                    <img src="/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                    <img src="/src/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
+                    <img src="/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                    <img src="/src/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
+                    <img src="/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                    <img src="/src/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
+                    <img src="/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
                 </div>
               </div>
             </div>
@@ -169,9 +169,9 @@ const ContactlessSmart = () => {
 
         {/* Sidebar */}
         <aside className="lg:w-1/4 space-y-6">
-           <div className="bg-gray-200 p-4 border border-gray-500 mb-6">
+           <div className="bg-gray-300 p-4 border border-black mb-6">
             <h3 className="text-xl font-bold text-black mb-4 border-b pb-1">More By HONEYWELL</h3>
-            <ul className="text-[15px] space-y-4 text-gray-500 transition-colors">
+            <ul className="text-xs space-y-4 text-black transition-colors">
               <li className='cursor-pointer hover:text-[#f08c09]'>Onity DirectKey with Serene</li>
               <li className='cursor-pointer hover:text-[#f08c09]'>MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs</li>
               <li className='cursor-pointer hover:text-[#f08c09]'>INR 415 256-Channel 12 Bay RAID Rackmount Standalone</li>

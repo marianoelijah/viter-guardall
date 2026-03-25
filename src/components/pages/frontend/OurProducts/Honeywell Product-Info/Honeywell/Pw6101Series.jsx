@@ -1,47 +1,50 @@
 import React from 'react';
 import Header from '../../../partials/Header';
 import Footer from '../../../partials/Footer';
+import { NavLink } from 'react-router-dom';
 
 const Pw6101Series = () => {
   return (
     <>
       <Header />
-      <div className="bg-gray-100 min-h-screen py-10 px-4 md:px-0">
-        {/* Main Wrapper: Constraints the width and provides the white card aesthetic */}
-        <div className="max-w-6xl mx-auto bg-white shadow-xl rounded-lg overflow-hidden border border-gray-200">
+      <div className="bg-gray-100 px-4">
+        
+        <div className="max-w-6xl mx-auto bg-gray-300 shadow-xl rounded-lg overflow-hidden border">
           
           {/* Header Section */}
-          <header className="bg-[#5C7CB0] text-white p-10 text-center">
-            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">
+          <div className="bg-[#7f95b8] py-20">
+            <div className="container mx-auto px-6">
+               <h1 className="text-white text-4xl md:text-5xl font-bold text-center">
               PW6101 Series
             </h1>
             <p className="mt-2 text-xl opacity-90 font-light italic">
               Single Door PoE Intelligent Controller and Reader Module
             </p>
-          </header>
+            </div>
+          </div>
 
           <div className="p-6 md:p-10 flex flex-col lg:flex-row gap-12">
             
             {/* Main Content Column */}
             <div className="lg:w-2/3">
               <section className="mb-10">
-                <p className="mb-6 text-xl text-gray-700 leading-relaxed font-medium border-l-4 border-blue-500 pl-4">
+                <p className="mb-6 text-[15px] text-black leading-relaxed font-medium border-l-4 border-blue-500 pl-4">
                   A high-performance and cost-effective controller-reader module capable of securing single door access; configurable for either Wiegand or OSDP.
                 </p>
 
-                <h2 className="font-bold text-2xl text-gray-900 mb-4 flex items-center">
+                <h2 className="font-bold text-xl text-black mb-4 flex items-center">
                    Product Description
                 </h2>
-                <p className="text-gray-600 leading-relaxed mb-8 text-lg">
+                <p className="text-black leading-relaxed mb-8 text-[15px]">
                   The PW6101 series controller and reader module is a high performance, Ethernet ready, cost effective system capable of controlling a single opening. The controller and reader module are configurable for either Wiegand or OSDP. PW6K1ICE is a full featured PoE single door access controller designed for high-end security performance.
                 </p>
 
-                <h2 className="font-bold text-2xl text-gray-900 mb-6">Product Features</h2>
+                <h2 className="font-bold text-xl text-black mb-6">Product Features</h2>
                 
                 <div className="grid md:grid-cols-2 gap-6 mb-10">
                   <div className="bg-gray-50 p-6 rounded-lg border border-gray-100">
-                    <h3 className="font-bold text-[#5C7CB0] text-lg mb-3 uppercase tracking-wide">PW6K1ICE Controller</h3>
-                    <ul className="list-disc ml-5 space-y-2 text-gray-700">
+                    <h3 className="font-bold text-black text-lg mb-3 uppercase tracking-wide">PW6K1ICE Controller</h3>
+                    <ul className="list-disc ml-5 space-y-2 text-black">
                       <li>Powered via PoE or standalone supply</li>
                       <li>Supports IN and OUT readers</li>
                       <li>Door-mount ready enclosure size</li>
@@ -50,8 +53,8 @@ const Pw6101Series = () => {
                   </div>
 
                   <div className="bg-gray-50 p-6 rounded-lg border border-gray-100">
-                    <h3 className="font-bold text-[#5C7CB0] text-lg mb-3 uppercase tracking-wide">PW6K1RIE Reader Module</h3>
-                    <ul className="list-disc ml-5 space-y-2 text-gray-700">
+                    <h3 className="font-bold text-black text-lg mb-3 uppercase tracking-wide">PW6K1RIE Reader Module</h3>
+                    <ul className="list-disc ml-5 space-y-2 text-black">
                       <li>Network powered via PoE</li>
                       <li>Supports one door of I/O</li>
                       <li>Linkable to PW6K1ICE or PW6K1IC</li>
@@ -63,19 +66,19 @@ const Pw6101Series = () => {
 
               {/* Technical Specifications Table */}
               <section>
-                <h2 className="font-bold mb-6 uppercase text-gray-900 text-xl tracking-wider">Technical Specifications</h2>
-                <div className="overflow-x-auto rounded-lg border border-gray-200">
+                <h2 className="font-bold mb-6 uppercase text-black text-xl tracking-wider">Technical Specifications</h2>
+                <div className="overflow-x-auto rounded-lg border border-black">
                   <table className="w-full border-collapse text-left">
                     <thead>
-                      <tr className="bg-gray-800 text-white">
-                        <th className="p-4 uppercase text-sm font-semibold w-1/3">Specifications</th>
-                        <th className="p-4 uppercase text-sm font-semibold">Details</th>
+                      <tr className="bg-gray-500 text-white">
+                        <th className="p-4 uppercase text-[15px] font-semibold w-1/3">Specifications</th>
+                        <th className="p-4 uppercase text-[15px] font-semibold">Details</th>
                       </tr>
                     </thead>
-                    <tbody className="text-gray-700 divide-y divide-gray-200">
+                    <tbody className="text-black divide-y divide-gray-200">
                       <tr>
                         <td className="p-4 font-bold bg-gray-50">Power Input</td>
-                        <td className="p-4 text-sm leading-relaxed">
+                        <td className="p-4 text-[15px] leading-relaxed">
                           PoE (IEEE 802.3af) or 12 VDC ±10%. <br/>
                           <span className="text-red-600 text-xs italic font-medium mt-1 block">Note: For UL installations, use UL294 listed power source only.</span>
                         </td>
@@ -101,7 +104,7 @@ const Pw6101Series = () => {
                       </tr>
                       <tr>
                         <td className="p-4 font-bold bg-gray-50">Standards</td>
-                        <td className="p-4 text-sm font-medium">UL294, CE, ROHS, FCC Part 15, NIST Certified</td>
+                        <td className="p-4 text-[15px] font-medium">UL294, CE, ROHS, FCC Part 15, NIST Certified</td>
                       </tr>
                     </tbody>
                   </table>
@@ -111,17 +114,21 @@ const Pw6101Series = () => {
 
             {/* Sidebar Section */}
             <aside className="lg:w-1/3 space-y-8">
-              <div className="bg-white p-6 border rounded-xl shadow-sm">
-                <h4 className="font-bold text-sm mb-4 border-b pb-2 text-gray-400 uppercase tracking-widest">More By HONEYWELL</h4>
-                <ul className="space-y-4">
-                  {['Unity Directory with Serene', 'MAD-401/402 Modules', 'INR 415 256-Channel RAID', 'GNR 340 Tower Standalone', 'Z86 Outdoor Network Camera'].map((item, idx) => (
-                    <li key={idx} className="group flex items-start cursor-pointer">
-                      <span className="text-blue-500 mr-2 group-hover:translate-x-1 transition-transform">→</span>
-                      <span className="text-sm text-gray-600 group-hover:text-blue-600 transition-colors">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <div className="bg-gray-200 rounded-xl shadow-sm p-6">
+              <h3 className="text-black text-lg font-semibold mb-4">
+                More By HONEYWELL
+              </h3>
+
+            <ul className="text-xs space-y-4 text-gray-500 transition-colors">
+              <li className='cursor-pointer hover:text-[#f08c09]'>Onity DirectKey with Serene</li>
+              <li className='cursor-pointer hover:text-[#f08c09]'>MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs</li>
+              <li className='cursor-pointer hover:text-[#f08c09]'>INR 415 256-Channel 12 Bay RAID Rackmount Standalone</li>
+              <li className='cursor-pointer hover:text-[#f08c09]'>GNR 340 100-Channel Tower Standalone</li>
+              <li className='cursor-pointer hover:text-[#f08c09]'>ENR 130 16-Channel Desktop Standalone NVR - No HDD Included</li>
+              <li className='cursor-pointer hover:text-[#f08c09]'>Z86 Outdoor Network Dome Camera with Night Vision</li>
+            </ul>
+            </div>
+
               
               {/* CTA CARD */}
               <div
@@ -136,23 +143,30 @@ const Pw6101Series = () => {
                   <h3 className="text-2xl font-bold text-white mb-4">
                     Secure Your Peace Of Mind Today
                   </h3>
-                  <p className="text-blue-100 mb-6 text-sm">
+                  <p className="text-blue-100 mb-6 text-[15px]">
                     Contact Guard-All now for a customized security solution that protects what matters most.
                   </p>
-                  <button className="bg-white text-blue-700 font-bold px-6 py-3 rounded-full hover:bg-blue-50 transition-colors shadow-md uppercase tracking-wider text-sm">
-                    Contact Us Today
-                  </button>
+                  <button className="bg-blue-700 hover:bg-blue-400 text-white font-semibold px-4 py-2 rounded w-full">
+                <NavLink to="/contacts" className="w-full h-full block">
+                CONTACT US TODAY
+                </NavLink>
+              </button>
                 </div>
               </div>
 
               {/* TAGS moved to Sidebar for better balance */}
-              <div className="flex flex-wrap gap-2 pt-4">
-                {['HONEYWELL', 'READERS', 'ACCESS CONTROL'].map(tag => (
-                   <span key={tag} className="bg-gray-100 text-gray-600 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter border border-gray-200">
-                    {tag}
-                  </span>
-                ))}
+              <div className="flex flex-wrap gap-3 mb-8">
+                <span className="bg-red-500 text-white text-sm px-2 py-1 rounded">
+                  HONEYWELL
+                </span>
+                <span className="bg-red-500 text-white text-sm px-2 py-1 rounded">
+                   READERS
+                </span>
+                <span className="bg-red-500 text-white text-sm px-2 py-1 rounded">
+                  Access Control System
+                </span>
               </div>
+
             </aside>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../../../partials/Header";
 import Footer from "../../../partials/Footer";
+import { NavLink } from "react-router-dom";
 
 const LobbyWorksCredentials = () => {
   return (
@@ -9,7 +10,7 @@ const LobbyWorksCredentials = () => {
      <div className="bg-gray-100 min-h-screen">
 
       {/* HEADER */}
-      <div className="bg-slate-500 py-16">
+      <div className="bg-[#7f95b8] py-16">
         <div className="container mx-auto px-6">
           <h1 className="text-white text-6xl md:text-5xl font-bold text-center tracking-wide">
             LOBBYWORKS™ CREDENTIALS:
@@ -25,7 +26,7 @@ const LobbyWorksCredentials = () => {
         <div className="wrapper grid grid-cols-1 lg:grid-cols-3 gap-8">
 
           {/* LEFT CONTENT */}
-          <div className="lg:col-span-2 bg-gray-300 p-8 rounded shadow border border-black">
+          <div className="lg:col-span-2 bg-gray-300 p-8 rounded shadow">
 
             <p className="text-gray-700 mb-6">
               A platform that enhances your perimeter security by providing a simple and effective way to register, badge, and track visitors.
@@ -62,13 +63,13 @@ const LobbyWorksCredentials = () => {
             <div className="overflow-x-auto mb-10 text-black border border-black">
               <table className="w-full border border-black text-sm">
                 <thead className="bg-gray-300 text-black border-black">
-                  <tr className="text-lg uppercase border-black">
+                  <tr className="text-[17px] uppercase border-black">
                     <th className="border p-2 text-left">Features</th>
                     <th className="border p-2">Express Edition</th>
                     <th className="border p-2">Premier Edition</th>
                   </tr>
                 </thead>
-                <tbody className="text-lg uppercase font-bold border border-black">
+                <tbody className="text-[17px] uppercase font-bold">
                   {[
                     "Registration",
                     "Tracking",
@@ -86,8 +87,8 @@ const LobbyWorksCredentials = () => {
                   ].map((feature, index) => (
                     <tr key={index} className="text-center">
                       <td className="border p-2 text-left">{feature}</td>
-                      <td className="border p-2">X</td>
-                      <td className="border p-2 ">
+                      <td className="border p-2 text-[15px]">X</td>
+                      <td className="border p-2 text-[15px]">
                         {feature === "Pro-Watch Integration" ? "Optional" : "X"}
                       </td>
                     </tr>
@@ -103,55 +104,55 @@ const LobbyWorksCredentials = () => {
               <table className="w-full border border-black text-sm text-black">
                 <tbody>
                   <tr>
-                    <td className="border p-2 font-semibold">Recommended Processor</td>
-                    <td className="border p-2">Intel Pentium IV or equivalent</td>
+                    <td className="border p-2 font-semibold text-[15px] border-r border-black">Recommended Processor</td>
+                    <td className="border p-2 text-[15px] border-r border-black">Intel Pentium IV or equivalent</td>
                   </tr>
                   <tr>
-                    <td className="border p-2 font-semibold">PC MODEL USED FOR TESTING</td>
-                    <td className="border p-2">DELL Optiplex GX280</td>
+                    <td className="border p-2 font-semibold text-[15px] border-r border-black">PC MODEL USED FOR TESTING</td>
+                    <td className="border p-2 text-[15px] border-r border-black">DELL Optiplex GX280</td>
                   </tr>
                   <tr>
-                    <td className="border p-2 font-semibold">RECOMMENDED OPERATING SYSTEM3</td>
-                    <td className="border p-2">Windows server 2003 /20081 standard, Windows XP Editions, Windows 7 Editions.
+                    <td className="border p-2 font-semibold text-[15px] border-r border-black">RECOMMENDED OPERATING SYSTEM3</td>
+                    <td className="border p-2 text-[15px] border-r border-black">Windows server 2003 /20081 standard, Windows XP Editions, Windows 7 Editions.
                                    (32 and 64 bit), Windows 2012 Server OS 64 bit R2 edition</td>
                   </tr>
                   <tr>
-                    <td className="border p-2 font-semibold">RECOMMENDED PC TYPE (SERVER ORWORKSTATION)</td>
-                    <td className="border p-2">Workstation or Server</td>
+                    <td className="border p-2 font-semibold text-[15px] border-r border-black">RECOMMENDED PC TYPE (SERVER ORWORKSTATION)</td>
+                    <td className="border p-2 text-[15px] border-r border-black">Workstation or Server</td>
                   </tr>
                   <tr>
-                    <td className="border p-2 font-semibold">RECOMMENDED SYSTEM MEMORY(RAM)2</td>
-                    <td className="border p-2">2 GB for Windows XP SP3, 4 GB for other OS</td>
+                    <td className="border p-2 font-semibold text-[15px] border-r border-black">RECOMMENDED SYSTEM MEMORY(RAM)2</td>
+                    <td className="border p-2 text-[15px] border-r border-black">2 GB for Windows XP SP3, 4 GB for other OS</td>
                   </tr>
                   <tr>
-                    <td className="border p-2 font-semibold">CD AND DVD DRIVE</td>
-                    <td className="border p-2">Yes</td>
+                    <td className="border p-2 font-semibold text-[15px] border-r border-black">CD AND DVD DRIVE</td>
+                    <td className="border p-2 text-[15px] border-r border-black">Yes</td>
                   </tr>
                   <tr>
-                    <td className="border p-2 font-semibold">HARD DRIVES</td>
-                    <td className="border p-2">Capacity: 40 GB Software: Windows Operating System, Microsoft Office software</td>
+                    <td className="border p-2 font-semibold text-[15px] border-r border-black">HARD DRIVES</td>
+                    <td className="border p-2 text-[15px] border-r border-black">Capacity: 40 GB Software: Windows Operating System, Microsoft Office software</td>
                   </tr>
                    <tr>
-                    <td className="border p-2 font-semibold">USB CONNECTION</td>
-                    <td className="border p-2">2.0</td>
+                    <td className="border p-2 font-semibold text-[15px] border-r border-black">USB CONNECTION</td>
+                    <td className="border p-2 text-[15px] border-r border-black">2.0</td>
                   </tr>
                    <tr>
-                    <td className="border p-2 font-semibold">NETWORK CONNECTION</td>
-                    <td className="border p-2">100 Mbits/sec or greater</td>
+                    <td className="border p-2 font-semibold text-[15px] border-r border-black">NETWORK CONNECTION</td>
+                    <td className="border p-2 text-[15px] border-r border-black">100 Mbits/sec or greater</td>
                   </tr>
                    <tr>
-                    <td className="border p-2 font-semibold">VIDEO RESOLUTION</td>
-                    <td className="border p-2">1024×768 pixels; 24-bit color or higher</td>
+                    <td className="border p-2 font-semibold text-[15px] border-r border-black">VIDEO RESOLUTION</td>
+                    <td className="border p-2 text-[15px] border-r border-black">1024×768 pixels; 24-bit color or higher</td>
                   </tr>
                    <tr>
-                    <td className="border p-2 font-semibold">MULTIMEDIA</td>
-                    <td className="border p-2">Standard VGA Graphics Adapter [Display adapter]</td>
+                    <td className="border p-2 font-semibold text-[15px] border-r border-black">MULTIMEDIA</td>
+                    <td className="border p-2 text-[15px] border-r border-black">Standard VGA Graphics Adapter [Display adapter]</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
-            <div className="text-lg text-gray-700 mt-4 mb-4">
+            <div className="text-[15px] text-black mt-4 mb-4">
               1 Windows Server 2003/2008 is supported for Administrator and Scheduler only.
               <br />
               2 Includes RAM required by the client machine to run the Windows operating system.
@@ -164,69 +165,69 @@ const LobbyWorksCredentials = () => {
               <table className="w-full border border-black text-sm text-black">
                 <tbody >
                   <tr>
-                    <td className="border p-2 font-semibold">LobbyWorks Server1, 2</td>
+                    <td className="border p-2 font-semibold text-[15px] border-r border-black">LobbyWorks Server1, 2</td>
                   </tr>
                   <tr>
-                    <td className="border p-2 font-semibold">FEATURE</td>
-                    <td className="border p-2">Small System Requirement</td>
-                    <td className="border p-2">Requirement</td>
+                    <td className="border p-2 font-semibold text-[15px] border-r border-black">FEATURE</td>
+                    <td className="border p-2 text-[15px] border-r border-black">Small System Requirement</td>
+                    <td className="border p-2 text-[15px] border-r border-black">Requirement</td>
                   </tr>
                   <tr>
-                    <td className="border p-2 font-semibold">RECOMMENDED PROCESSOR</td>
-                    <td className="border p-2">Intel Pentium IV or equivalent</td>
-                    <td className="border p-2">Intel Pentium IV or equivalent</td>
+                    <td className="border p-2 font-semibold text-[15px] border-r border-black">RECOMMENDED PROCESSOR</td>
+                    <td className="border p-2 text-[15px] border-r border-black">Intel Pentium IV or equivalent</td>
+                    <td className="border p-2 text-[15px] border-r border-black">Intel Pentium IV or equivalent</td>
                   </tr>
                   <tr>
-                    <td className="border p-2 font-semibold">PC MODEL USED FOR TESTING</td>
-                    <td className="border p-2">DELL Optiplex GX280</td>
-                    <td className="border p-2">DELL Optiplex GX280</td>
+                    <td className="border p-2 font-semibold text-[15px] border-r border-black">PC MODEL USED FOR TESTING</td>
+                    <td className="border p-2 text-[15px] border-r border-black">DELL Optiplex GX280</td>
+                    <td className="border p-2 text-[15px] border-r border-black">DELL Optiplex GX280</td>
                   </tr>
                   <tr>
-                    <td className="border p-2 font-semibold">RECOMMENDED OPERATING SYSTEM3</td>
-                    <td className="border p-2">Windows server 2003/2008 standard, Windows XP Editions, Windows 7Editions. (32 and 64 bit), Windows 2012</td>
-                    <td className="border p-2">Windows server 2003/2008 1 standard, Windows XP Editions, Windows 7Editions. (32 and 64 bit), Windows 2012 Server OS 64 bit R2 edition</td>
+                    <td className="border p-2 font-semibold text-[15px] border-r border-black">RECOMMENDED OPERATING SYSTEM3</td>
+                    <td className="border p-2 text-[15px] border-r border-black">Windows server 2003/2008 standard, Windows XP Editions, Windows 7Editions. (32 and 64 bit), Windows 2012</td>
+                    <td className="border p-2 text-[15px] border-r border-black">Windows server 2003/2008 1 standard, Windows XP Editions, Windows 7Editions. (32 and 64 bit), Windows 2012 Server OS 64 bit R2 edition</td>
                   </tr>
                   <tr>
-                    <td className="border p-2 font-semibold">RECOMMENDED PC TYPE (SERVER OR WORKSTATION)</td>
-                    <td className="border p-2">Workstation or Server</td>
-                    <td className="border p-2">Workstation or Server</td>
+                    <td className="border p-2 font-semibold text-[15px] border-r border-black">RECOMMENDED PC TYPE (SERVER OR WORKSTATION)</td>
+                    <td className="border p-2 text-[15px] border-r border-black">Workstation or Server</td>
+                    <td className="border p-2 text-[15px] border-r border-black">Workstation or Server</td>
                   </tr>
                   <tr>
-                    <td className="border p-2 font-semibold">RECOMMENDED SYSTEM MEMORY (RAM)2</td>
-                    <td className="border p-2">Capacity: 40 GB Software: Windows Operating System, Microsoft Office software</td>
-                    <td className="border p-2">2.0</td>
+                    <td className="border p-2 font-semibold text-[15px] border-r border-black">RECOMMENDED SYSTEM MEMORY (RAM)2</td>
+                    <td className="border p-2 text-[15px] border-r border-black">Capacity: 40 GB Software: Windows Operating System, Microsoft Office software</td>
+                    <td className="border p-2 text-[15px] border-r border-black">2.0</td>
                   </tr>
                    <tr>
-                    <td className="border p-2 font-semibold">CD AND DVD DRIVE</td>
-                    <td className="border p-2">Yes</td>
-                    <td className="border p-2">Yes</td>
+                    <td className="border p-2 font-semibold text-[15px] border-r border-black">CD AND DVD DRIVE</td>
+                    <td className="border p-2 text-[15px] border-r border-black">Yes</td>
+                    <td className="border p-2 text-[15px] border-r border-black">Yes</td>
                   </tr>
                    <tr>
-                    <td className="border p-2 font-semibold">HARD DRIVES</td>
-                    <td className="border p-2">Capacity: 40 GBSoftware: Windows Operating System, MicrosoftSQL 2005/2008 SQL ExpressSoftware Microsoft OfficeSoftware</td>
-                    <td className="border p-2">Disk Set 1Capacity: 40 GBSoftware: Windows operating system, MicrosoftSQL 2005/2008 (32 and 64 bit)/SQL Express Software, Microsoft Office(if needed)
+                    <td className="border p-2 font-semibold text-[15px] border-r border-black">HARD DRIVES</td>
+                    <td className="border p-2 text-[15px] border-r border-black">Capacity: 40 GBSoftware: Windows Operating System, MicrosoftSQL 2005/2008 SQL ExpressSoftware Microsoft OfficeSoftware</td>
+                    <td className="border p-2 text-[15px] border-r border-black">Disk Set 1Capacity: 40 GBSoftware: Windows operating system, MicrosoftSQL 2005/2008 (32 and 64 bit)/SQL Express Software, Microsoft Office(if needed)
                                    Disk Set 2Capacity: 220 GBSoftware: None</td>
                   </tr>
                     <tr>
-                    <td className="border p-2 font-semibold">NETWORK CONNECTION</td>
-                    <td className="border p-2">00 Mbits/sec or greater</td>
-                    <td className="border p-2">00 Mbits/sec or greater</td>
+                    <td className="border p-2 font-semibold text-[15px] border-r border-black">NETWORK CONNECTION</td>
+                    <td className="border p-2 text-[15px] border-r border-black">00 Mbits/sec or greater</td>
+                    <td className="border p-2 text-[15px] border-r border-black">00 Mbits/sec or greater</td>
                   </tr>
                    <tr>
-                    <td className="border p-2 font-semibold">VIDEO RESOLUTION</td>
-                    <td className="border p-2">1024×768 pixels; 24-bit color or higher</td>
-                    <td className="border p-2">1024×768 pixels; 24-bit color or higher</td>
+                    <td className="border p-2 font-semibold text-[15px] border-r border-black">VIDEO RESOLUTION</td>
+                    <td className="border p-2 text-[15px] border-r border-black">1024×768 pixels; 24-bit color or higher</td>
+                    <td className="border p-2 text-[15px] border-r border-black">1024×768 pixels; 24-bit color or higher</td>
                   </tr>
                    <tr>
-                    <td className="border p-2 font-semibold">MULTIMEDIA</td>
-                    <td className="border p-2">Standard VGA Graphics Adapter[Display adapter] SoundMAXIntegrated Digital Audio</td>
-                    <td className="border p-2">Standard VGA Graphics Adapter[Display adapter] SoundMAXIntegrated Digital Audio</td>
+                    <td className="border p-2 font-semibold text-[15px] border-r border-black">MULTIMEDIA</td>
+                    <td className="border p-2 text-[15px] border-r border-black">Standard VGA Graphics Adapter[Display adapter] SoundMAXIntegrated Digital Audio</td>
+                    <td className="border p-2 text-[15px] border-r border-black">Standard VGA Graphics Adapter[Display adapter] SoundMAXIntegrated Digital Audio</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
-            <div className="text-lg text-black mt-4 mb-4"> 
+            <div className="text-[15px] text-black mt-4 mb-4"> 
               1. For a system to be considered small, the LobbyWorks system must have fewer than <br />
                  1,500 hosts, fewer than 5 clients, and fewer than 400 visitors per day.
               <br />
@@ -239,10 +240,10 @@ const LobbyWorksCredentials = () => {
 
               {/* TAGS */}
               <div className="flex flex-wrap gap-3 mb-8">
-                <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
+                <span className="bg-red-500 text-white text-sm px-2 py-1 rounded">
                   HONEYWELL
                 </span>
-                <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
+                <span className="bg-red-500 text-white text-sm px-2 py-1 rounded">
                   Access Control System
                 </span>
               </div>
@@ -251,23 +252,23 @@ const LobbyWorksCredentials = () => {
              <div className="mt-8">
               <p className="font-medium text-black mb-3">Share:</p>
               <div className="flex gap-3">
-                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-blue-400 transition-colors duration-200">
-                    <img src="/src/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
+                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
+                  <img src="/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
                 </div>
-                <div className="w-8 h-8 bg-blue-400 rounded hover:bg-blue-300 transition-colors duration-200">
-                    <img src="/src/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
+                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
+                  <img src="/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
                 </div>
-                <div className="w-8 h-8 bg-gray-700 rounded hover:bg-gray-600 transition-colors duration-200">
-                    <img src="/src/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
+                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
+                  <img src="/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
                 </div>
-                <div className="w-8 h-8 bg-green-500 rounded hover:bg-green-400 transition-colors duration-200">
-                    <img src="/src/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
+                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
+                  <img src="/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
                 </div>
-                <div className="w-8 h-8 bg-green-500 rounded hover:bg-green-400 transition-colors duration-200">
-                    <img src="/src/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
+                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
+                  <img src="/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
                 </div>
               </div>
-              </div>
+            </div>
 
           </div>
 
@@ -275,15 +276,16 @@ const LobbyWorksCredentials = () => {
           <div className="space-y-6">
 
             {/* More By Section */}
-            <div className="bg-white p-6 rounded shadow">
-              <h4 className="font-semibold text-black mb-4">More By Honeywell</h4>
-              <ul className="text-sm text-gray-700 space-y-2">
-                <li>Omni DirectKey with Scene</li>
-                <li>MAP-4Q and MAP-4Q2 Series</li>
-                <li>Uni 415-256 Channel DVR RAID</li>
-                <li>CBR 340 100-Channel Tower</li>
-                <li>ENR 130 16-Channel Desktop</li>
-              </ul>
+            <div className="bg-gray-300 p-6 rounded shadow">
+              <h4 className="font-semibold text-black text-lg mb-4">More By Honeywell</h4>
+             <ul className="text-xs space-y-4 text-gray-500 transition-colors">
+              <li className='cursor-pointer hover:text-[#f08c09]'>Onity DirectKey with Serene</li>
+              <li className='cursor-pointer hover:text-[#f08c09]'>MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs</li>
+              <li className='cursor-pointer hover:text-[#f08c09]'>INR 415 256-Channel 12 Bay RAID Rackmount Standalone</li>
+              <li className='cursor-pointer hover:text-[#f08c09]'>GNR 340 100-Channel Tower Standalone</li>
+              <li className='cursor-pointer hover:text-[#f08c09]'>ENR 130 16-Channel Desktop Standalone NVR - No HDD Included</li>
+              <li className='cursor-pointer hover:text-[#f08c09]'>Z86 Outdoor Network Dome Camera with Night Vision</li>
+            </ul>
             </div>
 
             {/* CTA Card */}
@@ -303,8 +305,10 @@ const LobbyWorksCredentials = () => {
                    Contact Guard-All now for a customized security solution
                    that protects what matters most.
                  </p>
-              <button className="bg-white text-blue-600 font-semibold px-4 py-2 rounded w-full">
+              <button className="bg-blue-700 hover:bg-blue-400 text-white font-semibold px-4 py-2 rounded w-full">
+                <NavLink to="/contacts" className="w-full h-full block">
                 CONTACT US TODAY
+                </NavLink>
               </button>
              </div>
             </div>

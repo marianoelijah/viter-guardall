@@ -12,7 +12,7 @@ const LobbyWorksVisitor = () => {
       {/* HERO SECTION */}
       <div className="bg-[#7f95b8] py-20">
         <div className="container mx-auto px-6">
-          <h1 className="text-white text-4xl md:text-5xl font-bold text-center">
+          <h1 className="text-white text-5xl md:text-5xl font-bold text-center">
             LobbyWorks™ Visitor Management <br/>
                      Systems
           </h1>
@@ -27,19 +27,19 @@ const LobbyWorksVisitor = () => {
           <div className="lg:col-span-2">
             <div className="bg-gray-200 rounded-xl border shadow-sm p-8 mb-4">
 
-              <p className="text-black text-lg mb-6">
+              <p className="text-black text-[15px] mb-6">
                 A platform that enhances your perimeter security by providing a simple and effective way to register, badge, and track visitors.
               </p>
 
               {/* TAGS */}
               <div className="flex flex-wrap gap-3 mb-8">
-                <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
+                <span className="bg-red-500 text-white text-sm px-2 py-1 rounded">
                   HONEYWELL
                 </span>
-                <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
+                <span className="bg-red-500 text-white text-sm px-2 py-1 rounded">
                   SOFTWARES
                 </span>
-                <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
+                <span className="bg-red-500 text-white text-sm px-2 py-1 rounded">
                   Access Control System
                 </span>
               </div>
@@ -47,26 +47,27 @@ const LobbyWorksVisitor = () => {
               <hr className="mb-6" />
 
               {/* SHARE SECTION */}
-              <div className="mt-8">
+             <div className="mt-8">
               <p className="font-medium text-black mb-3">Share:</p>
               <div className="flex gap-3">
-                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-blue-400 transition-colors duration-200">
-                    <img src="/src/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
+                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
+                  <img src="/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
                 </div>
-                <div className="w-8 h-8 bg-blue-400 rounded hover:bg-blue-300 transition-colors duration-200">
-                    <img src="/src/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
+                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
+                  <img src="/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
                 </div>
-                <div className="w-8 h-8 bg-gray-700 rounded hover:bg-gray-600 transition-colors duration-200">
-                    <img src="/src/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
+                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
+                  <img src="/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
                 </div>
-                <div className="w-8 h-8 bg-green-500 rounded hover:bg-green-400 transition-colors duration-200">
-                    <img src="/src/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
+                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
+                  <img src="/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
                 </div>
-                <div className="w-8 h-8 bg-green-500 rounded hover:bg-green-400 transition-colors duration-200">
-                    <img src="/src/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
+                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
+                  <img src="/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
                 </div>
               </div>
             </div>
+
 
             </div>
           </div>

@@ -23,7 +23,7 @@ const Fin4000ac = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
           {/* LEFT CONTENT */}
-          <div className="lg:col-span-2 bg-white p-8 rounded shadow-sm">
+          <div className="lg:col-span-2 bg-gray-300 p-8 rounded shadow-sm">
 
             <p className="text-black font-oswald text-bold mb-6">
               A slender, compact fingerprint device that can provide a high level of
@@ -54,8 +54,8 @@ const Fin4000ac = () => {
             <h2 className="font-semibold text-black text-lg mb-4">Technical Specification:</h2>
 
             <div className="overflow-x-auto">
-              <table className="w-full border bg-gray-200 text-xl text-black border-black ">
-                <tbody className="divide-y divide-gray-300">
+              <table className="w-full border bg-gray-200 text-xl text-black border-black  ">
+                <tbody className="divide-y divide-gray-300 border border-black border-r">
 
                   {[
                     ["Model", "HON-FIN4000AC-100K"],
@@ -79,8 +79,8 @@ const Fin4000ac = () => {
                     ["Ingress Protection", "IP67"],
                     ["Dimensions", "50 x 172 x 43.5 mm"],
                   ].map((row, index) => (
-                    <tr key={index} className="border-t border-gray-300">
-                      <td className="p-3 font-medium bg-gray-50 w-1/3">
+                    <tr key={index} className="border-t border-gray-300 text-[15px]">
+                      <td className="p-3 font-medium bg-gray-50 w-1/3 text-[17px]">
                         {row[0]}
                       </td>
                       <td className="p-3">{row[1]}</td>
@@ -93,49 +93,50 @@ const Fin4000ac = () => {
 
             {/* TAGS */}
               <div className="mt-8 flex gap-3 mb-5 p-4 rounded">
-            <p className="text-lg text-white border bg-red-500 px-2">Honeywell</p>
-            <p className="text-lg text-white border bg-red-500 px-2">Access Control System</p>
+            <p className="text-lg rounded text-white border bg-red-500 px-2">Honeywell</p>
+            <p className="text-lg rounded text-white border bg-red-500 px-2">Access Control System</p>
              </div> 
             
 
             {/* SHARE SOCIAL */}
             <div className="mt-8">
-              <p className="font-medium text-black mb-3">Share:</p>
+              <p className="font-medium text-black mb-3">Share:</p>  
               <div className="flex gap-3">
-                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-blue-400 transition-colors duration-200">
-                    <img src="/src/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
+                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
+                  <img src="/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
                 </div>
-                <div className="w-8 h-8 bg-blue-400 rounded hover:bg-blue-300 transition-colors duration-200">
-                    <img src="/src/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
+                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
+                  <img src="/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
                 </div>
-                <div className="w-8 h-8 bg-gray-700 rounded hover:bg-gray-600 transition-colors duration-200">
-                    <img src="/src/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
+                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
+                  <img src="/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
                 </div>
-                <div className="w-8 h-8 bg-green-500 rounded hover:bg-green-400 transition-colors duration-200">
-                    <img src="/src/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
+                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
+                  <img src="/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
                 </div>
-                <div className="w-8 h-8 bg-green-500 rounded hover:bg-green-400 transition-colors duration-200">
-                    <img src="/src/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
+                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
+                  <img src="/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
                 </div>
               </div>
             </div>
+            
             
           </div>
 
           {/* RIGHT SIDEBAR */}
           <div className="space-y-6">
 
-            {/* More by Honeywell */}
-            <div className="bg-white p-6 rounded shadow-sm">
+            {/* Sidebar */}
+            <div className="bg-gray-300 p-6 rounded shadow-sm">
               <h3 className="font-semibold text-black text-xl mb-4">More By Honeywell</h3>
-              <ul className="text-lg text-gray-600 space-y-2">
-                <li>Onity DirectKey with Serene</li>
-                <li>MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs</li>
-                <li>INR 415 256-Channel 12 Bay RAID Backmount Standalone</li>
-                <li>GNR 340 100-Channel Tower Strandalone</li>
-                <li>ENR 130 16-Channel Desktop Standalone NVR- No HDD Included</li>
-                <li>Z86 Outdoor Network Dome Camera with Night Vision</li>
-              </ul>
+             <ul className="text-xs space-y-4 text-gray-500 transition-colors">
+              <li className='cursor-pointer hover:text-[#f08c09]'>Onity DirectKey with Serene</li>
+              <li className='cursor-pointer hover:text-[#f08c09]'>MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs</li>
+              <li className='cursor-pointer hover:text-[#f08c09]'>INR 415 256-Channel 12 Bay RAID Rackmount Standalone</li>
+              <li className='cursor-pointer hover:text-[#f08c09]'>GNR 340 100-Channel Tower Standalone</li>
+              <li className='cursor-pointer hover:text-[#f08c09]'>ENR 130 16-Channel Desktop Standalone NVR - No HDD Included</li>
+              <li className='cursor-pointer hover:text-[#f08c09]'>Z86 Outdoor Network Dome Camera with Night Vision</li>
+            </ul>
             </div>
 
             {/* Contact Card */}
