@@ -103,17 +103,14 @@ const Ulisee = () => {
                            </table>
                          </div>
                        </section>
-
-            {/* <img src="" alt="" /> */}
-            
-             
+                       
             {/* Tags & Social */}
            <div className="flex flex-wrap gap-3 mb-8 mt-10">
-              <span className="bg-[#f3760f] text-white text-sm px-4 py-2 rounded">
+              <span className="bg-red-500 text-white px-2 py-1 rounded">
                 PELCO
               </span>
               
-              <span className="bg-[#f3760f] text-white text-sm px-4 py-2 rounded">
+              <span className="bg-red-500 text-white px-2 py-1 rounded">
                 CCTVs
               </span>
             </div>

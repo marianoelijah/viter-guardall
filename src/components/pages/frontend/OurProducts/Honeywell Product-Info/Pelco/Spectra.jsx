@@ -100,17 +100,15 @@ const Spectra = () => {
                            </table>
                          </div>
                        </section>
-
-            {/* <img src="" alt="" /> */}
             
              
             {/* Tags & Social */}
            <div className="flex flex-wrap gap-3 mb-8 mt-10">
-              <span className="bg-[#f3760f] text-white text-sm px-4 py-2 rounded">
+              <span className="bg-[#f3760f] text-white px-2 py-1 rounded">
                 PELCO
               </span>
               
-              <span className="bg-[#f3760f] text-white text-sm px-4 py-2 rounded">
+              <span className="bg-[#f3760f] text-white px-2 py-1 rounded">
                 CCTVs
               </span>
             </div>
@@ -120,19 +118,19 @@ const Spectra = () => {
               <p className="font-medium text-black mb-3">Share:</p>
               <div className="flex gap-3">
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
                 </div>
               </div>
             </div>

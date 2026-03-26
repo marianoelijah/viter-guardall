@@ -185,7 +185,7 @@ const Hipe = () => {
                               <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1 p">
                                 More By CEIA
                                 </h3>
-                              <ul className="text-[17px] space-y-4 text-gray-500 transition-colors">
+                              <ul className="text-xs space-y-4 text-gray-500 transition-colors">
                                 <li className='cursor-pointer hover:text-[#f08c09]'>Onity DirectKey with Serene</li>
                                 <li className='cursor-pointer hover:text-[#f08c09]'>MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs</li>
                                 <li className='cursor-pointer hover:text-[#f08c09]'>INR 415 256-Channel 12 Bay RAID Rackmount Standalone</li>

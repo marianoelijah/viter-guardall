@@ -194,7 +194,7 @@ const PwSeries = () => {
           </section>
 
           {/* Breadcrumbs/Tags */}
-          <div className="flex gap-2 text-sm text-white font-bold">
+          <div className="flex gap-2 text-white font-bold">
             <span className="bg-red-500 px-2 py-1 mb-5 rounded">Honeywell</span>
             <span className="bg-red-500 px-2 py-1 mb-5 rounded">Controllers</span>
             <span className="bg-red-500 px-2 py-1 mb-5 rounded">Access Control System</span>

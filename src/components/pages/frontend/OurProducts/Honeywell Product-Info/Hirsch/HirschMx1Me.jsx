@@ -97,11 +97,11 @@ const HirschMx1Me = () => {
 
           {/* Tags & Branding */}
          <div className="flex flex-wrap gap-3 mb-8 mt-10">
-              <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
+              <span className="bg-red-500 text-white text-sm px-2 py-1 rounded">
                 HIRSCH
               </span>
               
-              <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
+              <span className="bg-red-500 text-white text-sm px-2 py-1 rounded">
                 Access Control System
               </span>
             </div>
@@ -110,8 +110,8 @@ const HirschMx1Me = () => {
         {/* Right Column: Sidebar */}
         <aside className="lg:col-span-3 space-y-6">
            <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
-            <h3 className="text-xl font-bold text-black mb-4 border-b pb-1">More By HIRSCH</h3>
-            <ul className="text-xl space-y-4 text-gray-500 transition-colors">
+            <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By HIRSCH</h3>
+            <ul className="text-xs space-y-4 text-gray-500 transition-colors">
               <li className='cursor-pointer hover:text-[#f08c09]'>Onity DirectKey with Serene</li>
               <li className='cursor-pointer hover:text-[#f08c09]'>MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs</li>
               <li className='cursor-pointer hover:text-[#f08c09]'>INR 415 256-Channel 12 Bay RAID Rackmount Standalone</li>

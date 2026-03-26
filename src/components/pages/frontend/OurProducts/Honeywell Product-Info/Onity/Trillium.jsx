@@ -70,11 +70,6 @@ const Trillium = () => {
                 <h2 className="font-bold text-xl mb-4">Technical Specification:</h2>
                 <table className="w-full text-[15px] text-black border-collapse border border-black">
                   
-                  {/* <tr>
-                      <td colSpan="5" className="border border-black p-3 font-bold w-1/2">
-                       POWER
-                      </td>
-                    </tr> */}
                   <tr>
                       <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
                         Lockcase
@@ -318,11 +313,11 @@ const Trillium = () => {
 
               {/* Tags & Social */}
            <div className="flex flex-wrap gap-3 mb-8 mt-10 border-b py-5 border-b-gray-400">
-              <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
+              <span className="bg-red-500 text-white px-2 py-1 rounded">
                ONITY
               </span>
               
-              <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
+              <span className="bg-red-500 text-white px-2 py-1 rounded">
                 Hotel Locking Systems and Hotel Safes
               </span>
             </div>
@@ -332,19 +327,19 @@ const Trillium = () => {
               <p className="font-medium text-black mb-3">Share:</p>
               <div className="flex gap-3">
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
                 </div>
               </div>
             </div>

@@ -19,18 +19,6 @@ const DuoxPlus = () => {
    
   ];
 
-//   const productFeatures = [
-//     "Call To Apartment – Visitors can call the apartment associated with the plate.",
-//     "Call To Concierge – It is possible to make calls for assistance to the concierge associated with the panel..",
-//     "Aluminum profile",
-//     "Tempered glass",
-//     "High definition color camera",
-//     "Low consumption",
-//     "Extended operating range.",
-//     "Modular Linux-based platform.",
-//     "Remote Firmware Update",
-//   ];
-
   return (
     <>
     <Header />
@@ -63,14 +51,6 @@ const DuoxPlus = () => {
               separators.
 
               </p>
-
-               {/* <h2 className="font-bold text-xl text-black mb-2">Product Features/ Specifications:</h2>
-            <ul className="list-disc ml-5 text-[17px] space-y-1 text-black">
-              {productFeatures.map((feature, index) => (
-                <li key={index}>{feature}</li>
-              ))}
-            </ul> */}
-
             </section>
 
             {/* Technical Specifications Table */}
@@ -103,17 +83,15 @@ const DuoxPlus = () => {
                            </table>
                          </div>
                        </section>
-
-            {/* <img src="" alt="" /> */}
             
              
             {/* Tags & Social */}
            <div className="flex flex-wrap gap-3 mb-8 mt-10">
-              <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
+              <span className="bg-red-500 text-white px-2 py-1 rounded">
                 FERMAX
               </span>
               
-              <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
+              <span className="bg-red-500 text-white px-2 py-1 rounded">
                 Audio-Video Intercom & PA-BGM
               </span>
             </div>
@@ -123,19 +101,19 @@ const DuoxPlus = () => {
               <p className="font-medium text-black mb-3">Share:</p>
               <div className="flex gap-3">
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
                 </div>
               </div>
             </div>
@@ -146,7 +124,7 @@ const DuoxPlus = () => {
               <aside className="lg:w-1/4 space-y-6"> 
                      <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
                         <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By FERMAX</h3>
-                        <ul className="text-[17px] space-y-4 text-gray-500 transition-colors">
+                        <ul className="text-xs space-y-4 text-gray-500 transition-colors">
                           <li className='cursor-pointer hover:text-[#f08c09]'>Onity DirectKey with Serene</li>
                           <li className='cursor-pointer hover:text-[#f08c09]'>MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs</li>
                           <li className='cursor-pointer hover:text-[#f08c09]'>INR 415 256-Channel 12 Bay RAID Rackmount Standalone</li>

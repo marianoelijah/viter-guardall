@@ -7,7 +7,6 @@ const OBT2042MG = () => {
   const productData = {
     title: "OBT-2042MG Hotel Room Safe",
     subtitle: "A scratch-resistant safe that can be fixated to walls and small spaces. It also has an LCD display. ",
-    // description: "Serene, from Onity, is a sleek all-in-one lock designed both inside and out for luxury hotels. Its small glowing halo of light symbolizes both timeless design and leading-edge DirectKey mobile access technology that allows guests to unlock their room with ease as they approach the door. And, with a range of lever styles and finishes, Serene can be customized to fit the look of any property. This is a lock both technology specialists and designers can easily and securely, totally love.", 
     features: [
       "Enhanced LED Display",
       "Allows for Multiple 4 Digit Code",
@@ -48,11 +47,6 @@ const OBT2042MG = () => {
             {/* Left Content */}
             <div className="lg:col-span-3">
               <p className="text-[15px] text-black mb-6">{productData.subtitle}</p>
-              
-              {/* <section className="mb-8">
-                <h2 className="font-bold text-xl text-black mb-2 border-b-2 border-gray-100 pb-1 inline-block">Product Description:</h2>
-                <p className="text-base text-black leading-relaxed mt-2">{productData.description}</p>
-              </section> */}
 
               <section className="mb-10">
                 <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
@@ -80,11 +74,11 @@ const OBT2042MG = () => {
 
               {/* Tags & Social */}
            <div className="flex flex-wrap gap-3 mb-8 mt-10 border-b py-5 border-b-gray-400">
-              <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
+              <span className="bg-red-500 text-white px-2 py-1 rounded">
                ORBITA
               </span>
               
-              <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
+              <span className="bg-red-500 text-white px-2 py-1 rounded">
                 Hotel Locking Systems and Hotel Safes
               </span>
             </div>
@@ -94,19 +88,19 @@ const OBT2042MG = () => {
               <p className="font-medium text-black mb-3">Share:</p>
               <div className="flex gap-3">
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
                 </div>
               </div>
             </div>

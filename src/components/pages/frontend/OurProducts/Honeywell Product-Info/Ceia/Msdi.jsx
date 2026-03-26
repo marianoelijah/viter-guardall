@@ -148,11 +148,11 @@ const Msdi = () => {
 
               {/* Tags & Social */}
            <div className="flex flex-wrap gap-3 mb-8 mt-10">
-              <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
+              <span className="bg-red-500 text-white px-2 py-1 rounded">
                 CEIA
               </span>
               
-              <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
+              <span className="bg-red-500 text-white px-2 py-1 rounded">
                 Detection Systems
               </span>
             </div>
@@ -162,19 +162,19 @@ const Msdi = () => {
               <p className="font-medium text-black mb-3">Share:</p>
               <div className="flex gap-3">
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
                 </div>
               </div>
               </div>
@@ -189,7 +189,7 @@ const Msdi = () => {
                               <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1 p">
                                 More By CEIA
                                 </h3>
-                              <ul className="text-[17px] space-y-4 text-gray-500 transition-colors">
+                              <ul className="text-xs space-y-4 text-gray-500 transition-colors">
                                 <li className='cursor-pointer hover:text-[#f08c09]'>Onity DirectKey with Serene</li>
                                 <li className='cursor-pointer hover:text-[#f08c09]'>MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs</li>
                                 <li className='cursor-pointer hover:text-[#f08c09]'>INR 415 256-Channel 12 Bay RAID Rackmount Standalone</li>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Facebook, Linkedin, Mail, MessageCircle, Share2 } from 'lucide-react';
+import { NavLink } from 'react-router-dom';
 
 const ScrambleFactor = () => {
   const productFeatures = [
@@ -98,8 +99,8 @@ const ScrambleFactor = () => {
 
           {/* Tags */}
           <div className="flex gap-2 mt-8">
-            <span className="bg-[#ff6b35] text-white text-[10px] px-2 py-1 font-bold uppercase tracking-wider">Hirsch</span>
-            <span className="bg-[#ff6b35] text-white text-[10px] px-2 py-1 font-bold uppercase tracking-wider">Access Control System</span>
+            <span className="bg-[#ff6b35] text-white px-2 py-1 tracking-wider">Hirsch</span>
+            <span className="bg-[#ff6b35] text-white px-2 py-1 tracking-wider">Access Control System</span>
           </div>
 
           {/* Share Section */}
@@ -118,8 +119,8 @@ const ScrambleFactor = () => {
         {/* Sidebar */}
         <aside className="lg:w-1/4 space-y-6">
           <div className="bg-gray-50 p-4 border border-gray-200">
-            <h3 className="text-[11px] font-bold text-gray-400 uppercase mb-4 border-b pb-1">More By HIRSCH</h3>
-            <ul className="text-[10px] space-y-4 text-gray-400">
+            <h3 className="text-[11px] font-semibold text-gray-400 uppercase mb-4 border-b pb-1">More By HIRSCH</h3>
+            <ul className="text-xs space-y-4 text-gray-400">
               <li>Onity DirectKey with Serene</li>
               <li>MAD-401 and MAD-402 Series Addressable Modules</li>
               <li>INR 415 256-Channel 12 Bay RAID Rackmount</li>
@@ -134,9 +135,11 @@ const ScrambleFactor = () => {
             <p className="text-xs mb-6 opacity-90 leading-relaxed">
               Contact Guard-All now for a customized security solution that protects what matters most.
             </p>
-            <button className="border-2 border-white px-4 py-2 text-xs font-bold uppercase hover:bg-white hover:text-[#1e4e8c] transition-all">
-              Contact Us Today
-            </button>
+           <button className="bg-blue-700 hover:bg-blue-400 text-white font-semibold px-4 py-2 rounded w-full">
+                <NavLink to="/contacts" className="w-full h-full block">
+                CONTACT US TODAY
+                </NavLink>
+              </button>
           </div>
         </aside>
       </div>

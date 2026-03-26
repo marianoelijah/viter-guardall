@@ -46,13 +46,6 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
 
             <table className="w-full border text-[15px] text-black">
               <tbody>
-
-                {/* <tr className="bg-gray-300 ">
-                  <td colSpan="5" className="border-r border-black border p-2 font-bold">
-                    DIMENSIONS
-                  </td>
-                </tr> */}
-
                 <tr className="bg-gray-300 ">
                   <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
                       Model
@@ -184,11 +177,11 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
 
             {/* Footer Tags & Socials */}
             <div className="flex flex-wrap gap-3 mb-8 mt-10">
-              <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
+              <span className="bg-red-500 text-white px-2 py-1 rounded">
                 DAHUA
               </span>
               
-              <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
+              <span className="bg-red-500 text-white px-2 py-1 rounded">
                 CCTVs
               </span>
             </div>

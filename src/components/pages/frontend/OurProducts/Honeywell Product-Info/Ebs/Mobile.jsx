@@ -42,76 +42,12 @@ const Mobile = () => {
             
             {/* Left Content */}
             <div className="lg:col-span-3">
-              {/* <p className="text-[15px] text-black mb-6">{productData.subtitle}</p> */}
-              
-              {/* <section className="mb-8">
-                <h2 className="font-bold text-xl text-black mb-2 border-b-2 border-gray-100 pb-1 inline-block">Product Description:</h2>
-                <p className="text-base text-black leading-relaxed mt-2">{productData.description}</p>
-              </section> */}
-
               <section className="mb-10">
                 <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1 list-disc text-black ml-5 text-[15px]">
                   {productData.features.map((f, i) => <li key={i}>{f}</li>)}
                 </ul>
               </section>
-
-              {/* Technical Spec Table */}
-              {/* <section className="overflow-x-auto">
-                <h2 className="font-bold text-xl mb-4">Technical and System Specification:</h2>
-                <table className="w-full text-[15px] text-black border-collapse border border-black">
-                  
-                   <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                        Camera
-                      </td>
-                      <td colSpan="3" className="border border-black p-2">
-                       – High sensitivity colour/IR camera- Autofocus macro lens- High resolution still images (5456x3632px)- HDMI live video output
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                        Illumination
-                      </td>
-                      <td colSpan="3" className="border border-black p-2">
-                        High intensity LED illumination ring:- UV 365nm, Violet 410nm, Blue 445nm, Blue Green475nm, Green 520nm, Orange 590nm, Red 640nm- 4x LED per wavelength- Combine LEDs to provide up to 55 combinations- Brightness control function 2x Wide-angle LED illumination arms:- UV 365nm, White VIS, IR 850nm- 2x UV LED, 1x White LED, and 1xIR LED per arm
-                      </td>
-                    </tr>
-                     <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                        IMAGING FILTERS
-                      </td>
-                      <td colSpan="3" className="border border-black p-2">
-                       9-position motorised filter wheel- Longpass filters at:VIS, 455nm, 495nm, 550nm, 590nm, and 780nm- Bandpass filters at:UV 315-380nm, 415nm, and 530nm
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                        INTERFACE
-                      </td>
-                      <td colSpan="3" className="border border-black p-2">
-                       7” multi-touch IPS TFT displayInternal processor (no PC required)App’ style user interfaceWiFi and Bluetooth connectivity
-                      </td>
-                    </tr>
-                     <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                       DIMENSIONS
-                      </td>
-                      <td colSpan="3" className="border border-black p-2">
-                       – H 126mm x W 207mm x D 159mm (excluding battery)- Weight (when fitted with 2Ah battery) 1.6kg (approx.)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
-                        SYSTEM SOFTWARE
-                      </td>
-                      <td colSpan="3" className="border border-black p-2">
-                       Crime-lite AUTO functions are carried out via an ‘App’ style interface using the system’s integrated multi-touch display:
-                       – Live video search and capture (AVI)- High-resolution capture of still images (BMP, TIFF, PNG, JPG)- Complete control of all camera settings- Complete control of all illumination settings- Manual or semi-automated ‘intelligent’ filter selection- Pull-out image gallery of all recent work- Save and Recall images with examination settings- Timestamp captured video and images- Export images and data to external USB- Option to connect secondary viewing monitor via HDMI
-                      </td>
-                    </tr>
-                </table>
-              </section> */}
 
               {/* Tags & Social */}
            <div className="flex flex-wrap gap-3 mb-8 mt-10 border-b py-5 border-b-gray-400">
@@ -129,19 +65,19 @@ const Mobile = () => {
               <p className="font-medium text-black mb-3">Share:</p>
               <div className="flex gap-3">
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
                 </div>
               </div>
             </div>

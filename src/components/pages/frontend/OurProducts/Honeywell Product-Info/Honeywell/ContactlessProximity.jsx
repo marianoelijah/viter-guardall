@@ -91,9 +91,9 @@ const ContactlessProximity = () => {
 
           {/* Tags */}
            <div className="mt-8 flex gap-3 mb-5 p-4 rounded">
-            <p className="text-lg text-white border bg-red-500 px-2 py-1 rounded">Honeywell</p>
-            <p className="text-lg text-white border bg-red-500 px-2 py-1 rounded">Cards</p>
-            <p className="text-lg text-white border bg-red-500 px-2 py-1 rounded">Access Control System</p>
+            <p className=" text-white border bg-red-500 px-2 py-1 rounded">Honeywell</p>
+            <p className=" text-white border bg-red-500 px-2 py-1 rounded">Cards</p>
+            <p className=" text-white border bg-red-500 px-2 py-1 rounded">Access Control System</p>
            </div> 
 
           {/* Social Share Mockup */}

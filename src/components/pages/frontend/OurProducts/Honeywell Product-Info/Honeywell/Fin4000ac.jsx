@@ -93,8 +93,8 @@ const Fin4000ac = () => {
 
             {/* TAGS */}
               <div className="mt-8 flex gap-3 mb-5 p-4 rounded">
-            <p className="text-lg rounded text-white border bg-red-500 px-2">Honeywell</p>
-            <p className="text-lg rounded text-white border bg-red-500 px-2">Access Control System</p>
+            <p className="rounded text-white border bg-red-500 px-2 py-1">Honeywell</p>
+            <p className="rounded text-white border bg-red-500 px-2 py-1">Access Control System</p>
              </div> 
             
 

@@ -14,8 +14,6 @@ const NetworkDome = () => {
     { label: "Sensor Size", value: "1/2.8″″" },
     { label: "Effective Pixels", value: "1945 x 1097 / 2.13 MP" },
     { label: "Day & Night", value: "Yes" },
-    
-    // { type: 'header', label: 'IMAGING' },
     { label: "Low Light Sensitivity", value: "Extreme" },
     { label: "Minimum Illumination", value: "Color: 0.003 lux at F1.6 (AGC on); B/W: 0 (IR LED on)" },
     { label: "D/N Switch", value: "ISP-based switch, configurable" },
@@ -23,7 +21,6 @@ const NetworkDome = () => {
     { label: "IR Sensitivity Range", value: "700 to 1100 nm" },
     { label: "IR Wavelength", value: "850 nm" },
 
-    // { type: 'header', label: 'EXPOSURE CONTROL' },
     { label: "Number of IR Leds", value: "6 x adaptive IR LEDs" },
     { label: "IR Working Distance", value: "492′ / 150 m" },
     { label: "Electronic Shutter", value: "Manual Mode: 1/32,000 to 1/5 secondsAuto Mode: 1/32,000 to 1/5 seconds" },
@@ -128,11 +125,11 @@ const NetworkDome = () => {
              
             {/* Tags & Social */}
            <div className="flex flex-wrap gap-3 mb-8 mt-10">
-              <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
+              <span className="bg-red-500 text-white px-2 py-1 rounded">
                 ACTI
               </span>
               
-              <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
+              <span className="bg-red-500 text-white px-2 py-1 rounded">
                 CCTVs
               </span>
             </div>
@@ -142,19 +139,19 @@ const NetworkDome = () => {
               <p className="font-medium text-black mb-3">Share:</p>
               <div className="flex gap-3">
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
                 </div>
               </div>
             </div>
@@ -167,7 +164,7 @@ const NetworkDome = () => {
                         <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">
                           More By ACTI
                           </h3>
-                        <ul className="text-[17px] space-y-4 text-gray-500 transition-colors">
+                        <ul className="text-xs space-y-4 text-gray-500 transition-colors">
                           <li className='cursor-pointer hover:text-[#f08c09]'>Onity DirectKey with Serene</li>
                           <li className='cursor-pointer hover:text-[#f08c09]'>MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs</li>
                           <li className='cursor-pointer hover:text-[#f08c09]'>INR 415 256-Channel 12 Bay RAID Rackmount Standalone</li>

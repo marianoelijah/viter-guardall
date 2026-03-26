@@ -34,13 +34,13 @@ const OmniProxCredentials = () => {
 
               {/* TAGS */}
               <div className="flex flex-wrap gap-3 mb-8">
-                <span className="bg-red-500 text-white text-sm px-2 py-1 rounded">
+                <span className="bg-red-500 text-white px-2 py-1 rounded">
                   HONEYWELL
                 </span>
-                <span className="bg-red-500 text-white text-sm px-2 py-1 rounded">
+                <span className="bg-red-500 text-white px-2 py-1 rounded">
                    READERS
                 </span>
-                <span className="bg-red-500 text-white text-sm px-2 py-1 rounded">
+                <span className="bg-red-500 text-white px-2 py-1 rounded">
                   Access Control System
                 </span>
               </div>

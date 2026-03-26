@@ -83,12 +83,6 @@ const TwoReader = () => {
                         <td className="p-3 border-b border-r border-black text-[16px] text-gray-800">
                           {spec.value}
                         </td>
-                        {/* <td className="p-3 border-b border-r border-black text-[17px] text-black">
-                          {spec.valu}
-                        </td>
-                        <td className="p-3 border-b border-r border-black text-[17px] text-black">
-                          {spec.vale}
-                        </td> */}
                       </tr>
                     ))}
                   </tbody>
@@ -96,7 +90,7 @@ const TwoReader = () => {
               </div>
             </section>
 
-            {/* <img src="" alt="" /> */}
+            
             
              
             {/* Tags & Social */}
@@ -115,19 +109,19 @@ const TwoReader = () => {
               <p className="font-medium text-black mb-3">Share:</p>
               <div className="flex gap-3">
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
                 </div>
               </div>
             </div>
@@ -137,8 +131,8 @@ const TwoReader = () => {
           {/* Sidebar */}
               <aside className="lg:w-1/4 space-y-6"> 
                      <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
-                        <h3 className="text-xl font-bold text-black mb-4 border-b pb-1">ALARM.COM</h3>
-                        <ul className="text-[17px] space-y-4 text-gray-500 transition-colors">
+                        <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">ALARM.COM</h3>
+                        <ul className="text-xs space-y-4 text-gray-500 transition-colors">
                           <li className='cursor-pointer hover:text-[#f08c09]'>Onity DirectKey with Serene</li>
                           <li className='cursor-pointer hover:text-[#f08c09]'>MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs</li>
                           <li className='cursor-pointer hover:text-[#f08c09]'>INR 415 256-Channel 12 Bay RAID Rackmount Standalone</li>

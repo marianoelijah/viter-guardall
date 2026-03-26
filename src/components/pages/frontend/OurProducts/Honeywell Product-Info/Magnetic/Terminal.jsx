@@ -95,7 +95,7 @@ const Terminal = () => {
              
             {/* Tags & Social */}
             <div className="flex flex-wrap gap-3 mb-8 mt-10">
-              <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
+              <span className="bg-red-500 text-white px-2 py-1 rounded">
                MAGNETIC
               </span>
             </div>

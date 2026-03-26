@@ -8,21 +8,6 @@ const S3076 = () => {
     title: "S3076 Hotel RFID Lock",
     subtitle: "A fashionable and streamlined hotel lock with a hidden keyhole. It can be accessed with an RFID/keycard.",
     description: "The S3076 has a streamlined and fashionable design with a hidden keyhole. It is wholly made of high-strength zinc alloy + stainless steel with an acrylic inductor cover, making it strongly resistant to impact, corrosion and abrasion. This product is highly scalable. Its motherboard is highly integrated inside the lock body to facilitate installation. S3076 lock supports other management software, Fidelio/Opera, and ORBITA wireless handheld devices to realize data collection, door lock settings, data download and other functions. It adopts an American standard 5-point tongue lock body, with a combination of anti-insertion beveled latch bolt design and beveled latch bolt abnormality alarm design for double security, stability and reliability. It has functions such as door ajar alarm, low voltage alarm, channel function and all-in-one smart card." , 
-    // features: [
-    //   "LCD display show: Welcome, Room Number, Date, Time, Weekday, Battery Status, Wrong Operation Indication",
-    //   "Interface with most of the PMS system,Fidelio/Opera registered",
-    //   "CE & FCC Certified",
-    //   "Stainless steel color lasts more than 10 years",
-    //   "Stainless steel Europe Mortise Anti-panic Function",
-    //   "Inside Deadbolt,Inside handle retracts latches and deadbolt",
-
-    //   "Mifare 1K card,compatible with Mifare Energy Saver",
-    //   "Lost Guest Card suspension simply by issuing a new guest card with suspending function",
-    //   "Low battery voltage warning.(Lower than 4.8V).",
-    //   "Self Error detecting by LED and “Beep”",
-    //   "Passage Model function available",
-    //   "Can be integrated with 16 public areas such as Lift/Parking/Swimming Pool/Sauna Room/Tennis Court/Gym…etc"
-    // ],
     moreByBrand: [
       "Onity DirectKey with Serene",
       "MAD-401 and MAD-402 Series Addressable Modules",
@@ -49,11 +34,6 @@ const S3076 = () => {
             {/* Left Content */}
             <div className="lg:col-span-3">
               <p className="text-[15px] text-black mb-6">{productData.subtitle}</p>
-              
-              {/* <section className="mb-8">
-                <h2 className="font-bold text-xl text-black mb-2 border-b-2 border-gray-100 pb-1 inline-block">Product Description:</h2>
-                <p className="text-base text-black leading-relaxed mt-2">{productData.description}</p>
-              </section> */}
 
               <section className="mb-10">
                 <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
@@ -168,19 +148,19 @@ const S3076 = () => {
               <p className="font-medium text-black mb-3">Share:</p>
               <div className="flex gap-3">
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
                 </div>
               </div>
             </div>

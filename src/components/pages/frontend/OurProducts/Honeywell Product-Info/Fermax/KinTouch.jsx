@@ -49,14 +49,6 @@ const KinTouch = () => {
             </p>
 
             <section className="mb-8">
-              {/* <h2 className="font-bold text-xl mb-2 text-black">Product Description:</h2>
-              <p className="text-gray-800 text-[17px] leading-relaxed">
-                 The MARINE MEET panel is FERMAX’s vandal-proof door entry and video door entry panel. 
-                 Made of 316L stainless steel, it is 3mm thick. It is a very resistant plate due to 
-                 its high quality, both in materials and in production and assembly processes. 
-                 Its compact and sealed design guarantees protection against external agents IP54 and 
-                 a degree of resistance against impacts of IK09.
-              </p> */}
 
                <h2 className="font-bold text-xl text-black mb-2">Product Specifications:</h2>
             <ul className="list-disc ml-5 text-[17px] space-y-1 text-black">
@@ -81,29 +73,21 @@ const KinTouch = () => {
                         <td className="p-3 border-b border-r border-black text-[16px] text-gray-800">
                           {spec.value}
                         </td>
-                        {/* <td className="p-3 border-b border-r border-black text-[17px] text-black">
-                          {spec.valu}
-                        </td>
-                        <td className="p-3 border-b border-r border-black text-[17px] text-black">
-                          {spec.vale}
-                        </td> */}
                       </tr>
                     ))}
                   </tbody>
                 </table>
               </div>
             </section>
-
-            {/* <img src="" alt="" /> */}
             
              
             {/* Tags & Social */}
            <div className="flex flex-wrap gap-3 mb-8 mt-10">
-              <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
+              <span className="bg-red-500 text-white px-2 py-1 rounded">
                 FERMAX
               </span>
               
-              <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
+              <span className="bg-red-500 text-white px-2 py-1 rounded">
                 Audio-Video Intercom & PA-BGM
               </span>
             </div>
@@ -113,19 +97,19 @@ const KinTouch = () => {
               <p className="font-medium text-black mb-3">Share:</p>
               <div className="flex gap-3">
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
                 </div>
               </div>
             </div>
@@ -136,7 +120,7 @@ const KinTouch = () => {
               <aside className="lg:w-1/4 space-y-6"> 
                      <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
                         <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By FERMAX</h3>
-                        <ul className="text-[17px] space-y-4 text-gray-500 transition-colors">
+                        <ul className="text-xs space-y-4 text-gray-500 transition-colors">
                           <li className='cursor-pointer hover:text-[#f08c09]'>Onity DirectKey with Serene</li>
                           <li className='cursor-pointer hover:text-[#f08c09]'>MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs</li>
                           <li className='cursor-pointer hover:text-[#f08c09]'>INR 415 256-Channel 12 Bay RAID Rackmount Standalone</li>

@@ -7,7 +7,6 @@ const E4041 = () => {
   const productData = {
     title: "E4041 LCD Smart Electronic Hotel Lock",
     subtitle: "An elegant hotel lock with an LED screen that indicates lock status.",
-    // description: "The S3076 has a streamlined and fashionable design with a hidden keyhole. It is wholly made of high-strength zinc alloy + stainless steel with an acrylic inductor cover, making it strongly resistant to impact, corrosion and abrasion. This product is highly scalable. Its motherboard is highly integrated inside the lock body to facilitate installation. S3076 lock supports other management software, Fidelio/Opera, and ORBITA wireless handheld devices to realize data collection, door lock settings, data download and other functions. It adopts an American standard 5-point tongue lock body, with a combination of anti-insertion beveled latch bolt design and beveled latch bolt abnormality alarm design for double security, stability and reliability. It has functions such as door ajar alarm, low voltage alarm, channel function and all-in-one smart card." , 
     features: [
       "LCD display show: Welcome, Room Number, Dat, Time, Weekday, Battery Status, Wrong Operation Indication",
       "Interface with most of the PMS system,Fidelio/Opera registered",
@@ -48,11 +47,6 @@ const E4041 = () => {
             {/* Left Content */}
             <div className="lg:col-span-3">
               <p className="text-[15px] text-black mb-6">{productData.subtitle}</p>
-              
-              {/* <section className="mb-8">
-                <h2 className="font-bold text-xl text-black mb-2 border-b-2 border-gray-100 pb-1 inline-block">Product Description:</h2>
-                <p className="text-base text-black leading-relaxed mt-2">{productData.description}</p>
-              </section> */}
 
               <section className="mb-10">
                 <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
@@ -177,11 +171,11 @@ const E4041 = () => {
 
               {/* Tags & Social */}
            <div className="flex flex-wrap gap-3 mb-8 mt-10 border-b py-5 border-b-gray-400">
-              <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
+              <span className="bg-red-500 text-white px-2 py-1 rounded">
                ORBITA
               </span>
               
-              <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
+              <span className="bg-red-500 text-white px-2 py-1 rounded">
                 Hotel Locking Systems and Hotel Safes
               </span>
             </div>
@@ -191,19 +185,19 @@ const E4041 = () => {
               <p className="font-medium text-black mb-3">Share:</p>
               <div className="flex gap-3">
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
                 </div>
               </div>
             </div>

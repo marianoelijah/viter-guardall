@@ -127,7 +127,7 @@ const TollBarrier = () => {
           </section>
 
           <div className="mt-10 pt-6 border-t border-gray-200">
-             <span className="bg-orange-500 text-white text-[10px] font-bold px-2 py-1 rounded">MAGNETIC</span>
+             <span className="bg-orange-500 text-white px-2 py-1 rounded">MAGNETIC</span>
           </div>
 
           {/* Social Share Footer */}

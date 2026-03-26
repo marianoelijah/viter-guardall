@@ -45,11 +45,6 @@ const CP020X = () => {
             {/* Left Content */}
             <div className="lg:col-span-3">
               <p className="text-[15px] text-black mb-6">{productData.subtitle}</p>
-              
-              {/* <section className="mb-8">
-                <h2 className="font-bold text-xl text-black mb-2 border-b-2 border-gray-100 pb-1 inline-block">Product Description:</h2>
-                <p className="text-base text-black leading-relaxed mt-2">{productData.description}</p>
-              </section> */}
 
               <section className="mb-10">
                 <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
@@ -58,30 +53,13 @@ const CP020X = () => {
                 </ul>
               </section>
 
-                {/* Technical Spec Table */}
-              {/* <section className="overflow-x-auto">
-                <h2 className="font-bold text-xl mb-4">Technical Specification:</h2>
-                <table className="w-full text-[15px] text-black border-collapse border border-black">
-                  
-                   <tr>
-                      <td className="border border-black p-3 font-bold w-1/2">
-                          Size (mm)
-                      </td>
-                      <td colSpan="3" className="border border-black p-2">
-                         W420*H200*D370
-                      </td>
-                    </tr>
-                   
-                </table>
-              </section> */}
-
               {/* Tags & Social */}
            <div className="flex flex-wrap gap-3 mb-8 mt-10 border-b py-5 border-b-gray-400">
-              <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
+              <span className="bg-red-500 text-white px-2 py-1 rounded">
                 CASS
               </span>
               
-              <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
+              <span className="bg-red-500 text-white px-2 py-1 rounded">
                 Parking Management / Parking Guidance System
               </span>
             </div>

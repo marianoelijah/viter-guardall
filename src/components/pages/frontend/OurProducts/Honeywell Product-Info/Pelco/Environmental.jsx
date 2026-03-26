@@ -40,40 +40,6 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
               </ul>
             </section>
 
-            {/* Technical Specifications Table */}
-            {/* <section>
-              <h2 className="font-bold text-xl text-black mb-4">Technical Specification:</h2>
-              <div className="border border-black border-r overflow-hidden">
-                <table className="w-full text-left text-xs border-collapse">
-                  <tbody>
-                    {specs.map((item, idx) => (
-                      <React.Fragment key={idx}>
-                        {item.type === 'header' ? (
-                          <tr className="bg-gray-200">
-                            <th colSpan="2" className="p-2 border-b border-black border border-r text-[15px] text-black font-bold uppercase tracking-wider">
-                              {item.label}
-                            </th>
-                          </tr>
-                        ) : (
-                          <tr className={idx % 2 === 0 ? 'bg-gray-100' : 'bg-gray-50'}>
-                            <td className="p-3 border-b border-r border-black border  font-bold w-1/3 text-[15px] text-black bg-gray-50/50">
-                              {item.label}
-                            </td>
-                            <td className="p-3 border-b border-black border border-r text-black whitespace-pre-line text-[15px] hover:bg-slate-50/50 transition-colors">
-                              {item.value}
-                            </td>
-                            <td className="p-3 border-b border-black border border-r text-black whitespace-pre-line text-[15px] hover:bg-slate-50/50 transition-colors">
-                              {item.valu}
-                            </td>
-                          </tr>
-                        )}
-                      </React.Fragment>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </section> */}
-
              {/* Technical Specifications Table */}
               <div className="bg-gray-300 p-6 shadow rounded border border-r divine-y">
             <h2 className="font-bold text-black text-xl mb-4">Technical Specification</h2>
@@ -181,11 +147,11 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
 
             {/* Footer Tags & Socials */}
             <div className="flex flex-wrap gap-3 mb-8 mt-10">
-              <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
+              <span className="bg-red-500 text-white px-2 py-1 rounded">
                 PELCO
               </span>
               
-              <span className="bg-red-500 text-white text-sm px-4 py-2 rounded">
+              <span className="bg-red-500 text-white px-2 py-1 rounded">
                 CCTVs
               </span>
             </div>
@@ -195,19 +161,19 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
               <p className="font-medium text-black mb-3">Share:</p>
               <div className="flex gap-3">
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/src/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
+                  <img src="/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
                 </div>
               </div>
             </div>
