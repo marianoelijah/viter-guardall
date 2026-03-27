@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 27, 2026 at 04:07 AM
+-- Generation Time: Mar 27, 2026 at 04:53 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -881,14 +881,14 @@ INSERT INTO `security_experts` (`id`, `name`, `position`, `image_path`, `sort_or
 (2, 'Prince John Lizardo', 'Service Department Manager', '/assets/image/Who Page/Security Experts/Prince.png', 2),
 (3, 'Ramir Aguilar', 'MIS/IT Department Manager', '/assets/image/Who Page/Security Experts/Ramir.png', 3),
 (4, 'Benedick Santiago', 'Alarm Department Manager', '/assets/image/Who Page/Security Experts/Benedick.png', 4),
-(5, 'Veronica T. Reyes', 'Asset Protection Manager', '/assets/image/Who Page/Security Experts/Veronica.png', 5),
-(6, 'Liza E. Cabral', 'HR Officer/Collection Officer', '/assets/image/Who Page/Security Experts/Liza.png', 6),
-(7, 'Norman R. Pacia', 'Warehouse Officer', '/assets/image/Who Page/Security Experts/Norman.png', 7),
-(8, 'Rosendel T. Siason', 'Purchasing Officer', '/assets/image/Who Page/Security Experts/Rosendel.png', 8),
-(9, 'Marife P. Bufete T. Reyes', 'Logistic Supervisor', '/assets/image/Who Page/Security Experts/Marife.png', 9),
-(10, 'Marie R. Cleofas', 'Import Supervisor', '/assets/image/Who Page/Security Experts/Marie.png', 10),
-(11, 'Jane D. Naval', 'Sales and Marketing Associate', '/assets/image/Who Page/Security Experts/Jane.png', 11),
-(12, 'Doc Ballag', 'CCTV Manager', '/assets/image/Who Page/Security Experts/Dennis B.png', 0);
+(5, 'Veronica T. Reyes', 'Asset Protection Manager', '/assets/image/Who Page/Security Experts/Veronica.png', 7),
+(6, 'Liza E. Cabral', 'HR Officer/Collection Officer', '/assets/image/Who Page/Security Experts/Liza.png', 8),
+(7, 'Norman R. Pacia', 'Warehouse Officer', '/assets/image/Who Page/Security Experts/Norman.png', 9),
+(8, 'Rosendel T. Siason', 'Purchasing Officer', '/assets/image/Who Page/Security Experts/Rosendel.png', 10),
+(9, 'Marife P. Bufete T. Reyes', 'Logistic Supervisor', '/assets/image/Who Page/Security Experts/Marife.png', 11),
+(10, 'Marie R. Cleofas', 'Import Supervisor', '/assets/image/Who Page/Security Experts/Marie.png', 12),
+(11, 'Jane D. Naval', 'Sales and Marketing Associate', '/assets/image/Who Page/Security Experts/Jane.png', 13),
+(12, 'Dennis Ballag', 'CCTV Manager', '/assets/image/Who Page/Security Experts/Dennis B.png', 5);
 
 -- --------------------------------------------------------
 
