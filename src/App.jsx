@@ -258,7 +258,7 @@ import SP6000 from "./components/pages/frontend/OurProducts/Honeywell Product-In
 import SP5500 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/SP5500";
 import SP4000 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/SP4000";
 import SP65 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/SP65";
-import ZX82 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/Zx82";
+
 import ZX8 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/Zx8";
 import PGM82 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/PGM82";
 import PGM4 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/PGM4";
@@ -336,6 +336,7 @@ import N84B5N from "./components/pages/frontend/OurProducts/Honeywell Product-In
 import BrandDetails from "./components/pages/frontend/OurProducts/BrandDetails";
 import BrandProducts from "./components/pages/frontend/OurProducts/Reusable/BrandProducts";
 import Pro3200 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Honeywell/Pro3200";
+import ZX82 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/ZX82";
 
 
 
