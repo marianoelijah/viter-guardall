@@ -44,7 +44,7 @@ const SecureLifeCTA = () => {
             {ctaData.description}
           </p>
 
-          <button className="bg-[#4dc3e766] hover:bg-blue-500 text-white text-lg font-bold py-4 px-10 rounded-full transition-all duration-300 shadow-xl border border-white/20 uppercase tracking-wide">
+          <button className="bg-[#4dc3e766] hover:bg-blue-700 text-white text-xs font-bold py-4 px-10 rounded-full transition-all duration-300 shadow-xl border border-white/20 uppercase tracking-wide ">
             <Link to="/contacts">{ctaData.button_text}</Link>
           </button>
         </div>

@@ -56,7 +56,7 @@ const Ceia = () => {
     <div className="bg-[#f8fafc] min-h-screen py-16 px-4 sm:px-8 lg:px-16 font-figtree">
       <div className="max-w-7xl mx-auto">
         <header className="text-center mb-16">
-          <h2 className="text-lg md:text-5xl lg:text-5xl text-[#0d3874] mb-6 tracking-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-5xl text-[#0d3874] mb-6 tracking-tight">
             {products.length > 0 ? products[0].category_name : "Detection Systems"} - Ceia
           </h2>
           <div className="h-1 w-20 bg-blue-500 mx-auto rounded-full"></div>

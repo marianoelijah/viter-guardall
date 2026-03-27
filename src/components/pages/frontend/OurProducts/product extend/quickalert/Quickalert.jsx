@@ -4,6 +4,7 @@ import {
   Truck, CheckCircle, Settings, 
   Phone, Mail, MapPin 
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const QuickAlert = () => {
 
@@ -40,7 +41,7 @@ const otherServices = [
               <div className='content_wrapper mb-8 bg-slate-300 rounded shadow-lg p-6'>
                 <section className="relative h-64 md:h-80 bg-black rounded overflow-hidden shadow-xl">
                     <img 
-                       src="/src/assets/image/QUICK IMG/247365.jpg"
+                       src="/assets/image/QUICK IMG/247365.jpg"
                        alt="Control Room" 
                        className="w-full h-full object-cover opacity-60"
                        />
@@ -53,7 +54,7 @@ const otherServices = [
                   <div className='catalog_wrapper'>
                       <div className='catalog_image'>
                         <div className='catalog-image_wrapper'>
-                          <img src="/src/assets/image/QUICK IMG/quickie.jpg" alt="Quick Alert Catalog" className='catalog_img mb-4 mt-4' />
+                          <img src="/assets/image/QUICK IMG/quickie.jpg" alt="Quick Alert Catalog" className='catalog_img mb-4 mt-4' />
                         </div>
                       </div>
                   </div>
@@ -77,20 +78,20 @@ const otherServices = [
 
                     <ServiceCard 
                       title="Central Monitoring Station" 
-                      image="/src/assets/image/QUICK IMG/central.jpg"
+                      image="/assets/image/QUICK IMG/central.jpg"
                       desc="We ensure your safety and security via surveillance 24/7/365."
                       className="h-full w-full object-cover rounded-lg shadow-md" 
                     />
 
                     <ServiceCard 
                       title="Lifeline Ambulance" 
-                      image="/src/assets/image/QUICK IMG/ambulance.jpg"
+                      image="/assets/image/QUICK IMG/ambulance.jpg"
                       desc="Dedicated to providing state-of-the-art emergency medical services."
                       className="h-full w-full object-cover rounded-lg shadow-md"
                     />
                     <ServiceCard 
                       title="CMS Remote Video Monitoring" 
-                      image="/src/assets/image/QUICK IMG/cms_remote.jpg"
+                      image="/assets/image/QUICK IMG/cms_remote.jpg"
                       desc="Dedicated to providing state-of-the-art emergency medical services."
                       className="h-full w-full object-cover rounded-lg shadow-md"
                     />
@@ -117,18 +118,20 @@ const otherServices = [
                     <div className="bg-blue-900 text-white p-6 rounded text-center">
                        <h3 className="font-bold mb-5">Secure Your Piece Of Mind Today</h3>
                        <p className="text-xs mb-6 opacity-80">Contact Guard-All now for a customized security solution that protects what matters most..</p>
-                       <button className="bg-white text-blue-900 text-xs font-bold py-2 px-4 rounded uppercase tracking-wider hover:bg-gray-200 transition-colors">
-                          Contact Us Today
-                       </button>
+                       <Link to="/contacts">
+                          <button className="bg-[#1e40af] text-white px-7 py-2.5 rounded shadow-sm font-semibold tracking-wide hover:bg-red-600 active:scale-95 transition-all duration-200">
+                            CONTACT US
+                          </button>
+                       </Link>
                     </div>
                 </aside>
       </main>
 
       {/* Footer / Tags */}
       <footer className="max-w-6xl mx-auto p-4 md:p-8">
-        <div className="flex flex-wrap gap-2 mb-6 text-lg">
+        <div className="flex flex-wrap gap-2 mb-6 text-xs md:text-lg ">
           {['Access Control', 'Intrusion Control', 'Object Inspection', 'Thermal Camera','Vehicle Security'].map(tag => (
-            <span key={tag} className="bg-red-600 text-white text-[10px] px-2 py-0.5 rounded">
+            <span key={tag} className="bg-red-500 text-white px-2 py-1 rounded">
               {tag}
             </span>
           ))}

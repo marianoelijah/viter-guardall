@@ -6,9 +6,10 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const IMAGE_BASE_URL = "http://localhost:5000";
 
 const ClientCard = ({ name, logo_path }) => (
-  <div className="flex-[0_0_340px] min-w-0 pl-8 md:pl-12 group">
-    <div className="relative flex flex-col items-center justify-center p-10 bg-white rounded-3xl border border-slate-100 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/15 transition-all duration-500 transform hover:-translate-y-3 h-64">
-      <div className="w-full h-32 flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
+  // Changed flex-[0_0_340px] to percentage-based widths per breakpoint
+  <div className="flex-[0_0_100%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%] min-w-0 pl-4 md:pl-8 group">
+    <div className="relative flex flex-col items-center justify-center p-6 md:p-10 bg-white rounded-3xl border border-slate-100 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/15 transition-all duration-500 transform hover:-translate-y-3 h-56 md:h-64">
+      <div className="w-full h-28 md:h-32 flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
         <img 
           src={`${IMAGE_BASE_URL}${logo_path}`} 
           alt={name} 
@@ -16,8 +17,8 @@ const ClientCard = ({ name, logo_path }) => (
           onError={(e) => { e.target.src = "https://via.placeholder.com/150?text=Logo+Missing"; }}
         />
       </div>
-      <div className="absolute bottom-6 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 text-center px-4">
-        <span className="text-[11px] font-extrabold tracking-[0.25em] text-blue-600 uppercase block leading-tight">
+      <div className="absolute bottom-4 md:bottom-6 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 text-center px-4">
+        <span className="text-[10px] md:text-[11px] font-extrabold tracking-[0.25em] text-blue-600 uppercase block leading-tight">
           {name}
         </span>
       </div>
@@ -35,20 +36,21 @@ const ClientSection = ({ title, clients }) => {
   const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
 
   return (
-    <div className="mb-24 last:mb-0">
-      <div className="flex items-center justify-between mb-10">
-        <div className="flex items-center gap-6 flex-grow">
-          <div className="h-10 w-1 bg-[#2257a0] rounded-full"></div>
-          <h2 className="text-xl md:text-2xl font-black text-slate-800 tracking-tight uppercase">{title}</h2>
+    <div className="mb-16 md:mb-24 last:mb-0">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-6 md:mb-10 gap-4">
+        <div className="flex items-center gap-4 md:gap-6 flex-grow">
+          <div className="h-8 md:h-10 w-1 bg-[#2257a0] rounded-full"></div>
+          <h2 className="text-lg md:text-2xl font-black text-slate-800 tracking-tight uppercase truncate">{title}</h2>
           <div className="h-[1px] flex-grow bg-gradient-to-r from-slate-200 to-transparent"></div>
         </div>
-        <div className="flex gap-2 ml-4">
-          <button onClick={scrollPrev} className="p-2.5 rounded-full border border-slate-200 text-slate-400 hover:bg-[#2257a0] hover:text-white transition-all"><ChevronLeft size={18} /></button>
-          <button onClick={scrollNext} className="p-2.5 rounded-full border border-slate-200 text-slate-400 hover:bg-[#2257a0] hover:text-white transition-all"><ChevronRight size={18} /></button>
+        <div className="flex gap-2 self-end sm:self-auto">
+          <button onClick={scrollPrev} className="p-2 md:p-2.5 rounded-full border border-slate-200 text-slate-400 hover:bg-[#2257a0] hover:text-white transition-all"><ChevronLeft size={18} /></button>
+          <button onClick={scrollNext} className="p-2 md:p-2.5 rounded-full border border-slate-200 text-slate-400 hover:bg-[#2257a0] hover:text-white transition-all"><ChevronRight size={18} /></button>
         </div>
       </div>
       <div className="overflow-hidden cursor-grab" ref={emblaRef}>
-        <div className="flex -ml-8 md:-ml-12">
+        {/* Adjusted negative margins to match the padding of cards on mobile */}
+        <div className="flex -ml-4 md:-ml-8">
           {clients.map((client) => <ClientCard key={client.id} {...client} />)}
         </div>
       </div>
@@ -64,25 +66,30 @@ const GuardAllLanding = () => {
     fetch(`${IMAGE_BASE_URL}/api/clients`)
       .then(res => res.json())
       .then(data => {
-        // Automatically group by sector
         const groups = data.reduce((acc, client) => {
           (acc[client.sector] = acc[client.sector] || []).push(client);
           return acc;
         }, {});
         setGroupedClients(groups);
         setLoading(false);
+      })
+      .catch(err => {
+        console.error("Fetch error:", err);
+        setLoading(false); // prevent infinite loading state on error
       });
   }, []);
 
-  if (loading) return <div className="min-h-screen flex items-center justify-center">Loading Partners...</div>;
+  if (loading) return <div className="min-h-screen flex items-center justify-center text-slate-800 font-bold">Loading Partners...</div>;
 
   return (
-    <div className="min-h-screen bg-[#c6d3e0] py-20 px-6 md:px-12 font-sans overflow-x-hidden">
+    <div className="min-h-screen bg-[#c6d3e0] py-12 md:py-20 px-4 md:px-12 font-sans overflow-x-hidden">
       <div className="max-w-7xl mx-auto">
-        <header className="text-center mb-32 relative">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.03] text-[6rem] md:text-[12rem] font-black select-none pointer-events-none">GUARD-ALL</div>
-          <h1 className="text-5xl md:text-7xl text-[#2257a0] mb-6 tracking-tight">Our Clients</h1>
-          <p className="text-gray-600 max-w-3xl mx-auto text-xl">Trusted by world-class organizations for world-class security.</p>
+        <header className="text-center mb-16 md:mb-32 relative">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.03] text-[4rem] sm:text-[8rem] md:text-[12rem] font-black select-none pointer-events-none whitespace-nowrap">
+            GUARD-ALL
+          </div>
+          <h1 className="text-5xl md:text-7xl font-bold text-[#2257a0] mb-4 md:mb-6 tracking-tight">Our Clients</h1>
+          <p className="text-gray-600 max-w-3xl mx-auto text-lg md:text-xl">Trusted by world-class organizations for world-class security.</p>
         </header>
 
         {Object.entries(groupedClients).map(([sectorName, clients]) => (

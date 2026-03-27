@@ -3,13 +3,11 @@ import { Link } from 'react-router-dom';
 import axios from "axios";
 
 const ProductPage = () => {
-
   const allCategories = [
     {
       title: "Access Control System",
       description: "In today’s world, Access Control remains as a fundamental security feature in various properties. With Access Control, you can increase your building or facility’s door security, manage the flow of visitors within your premises, and limit their access based on identification.",
       img: "/assets/image/Our Products/access.jpg",
-      // Map brand names to logos and URLs
       brands: [
         { name: "Honeywell", logo: "/assets/image/products logo/HONEYWELL.png", path: "/products/honeywell" },
         { name: "HIRSCH", logo: "/assets/image/products logo/HIRSCH-Small.png", path: "/products/hirsch" },
@@ -130,116 +128,91 @@ const ProductPage = () => {
     }
   ];
 
-  // 1. Setup state to hold our dynamic data
- 
-  const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // 2. Fetch data from your Express backend when the component mounts
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        // Replace with your actual backend URL (e.g., http://localhost:5000)
-        const response = await axios.get('http://localhost:5000/api/categories-with-brands');
-        setCategories(response.data);
-        setLoading(false);
-      } catch (error) {
-        console.error("Error fetching product data:", error);
-        setLoading(false);
-      }
-    };
-
-    fetchData();
+    // Mimicking a slight delay for assets to be ready
+    const timer = setTimeout(() => setLoading(false), 500);
+    return () => clearTimeout(timer);
   }, []);
 
-  // 3. Simple loading state
   if (loading) {
     return (
-      <div className="flex justify-center items-center h-screen">
-        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-700"></div>
+      <div className="flex justify-center items-center h-screen bg-[#f4f7fa]">
+        <div className="animate-spin rounded-full h-20 w-20 border-b-4 border-[#2257a0]"></div>
       </div>
     );
   }
 
-
-  
   return (
-    <section className="py-20 bg-[#f4f7fa]">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-12 md:py-24 bg-[#f4f7fa] overflow-x-hidden">
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
+        
         {/* Header Section */}
-        <div className="text-center mb-16">
-           {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.03] text-[6rem] md:text-[12rem] font-black select-none pointer-events-none whitespace-nowrap">
-            GUARD-ALL
-          </div> */}
-          <h1 className="text-4xl md:text-7xl text-[#2257a0] mb-6 drop-shadow-sm tracking-tigh">Our Products</h1>
-          <p className="text-gray-600 max-w-4xl mx-auto text-xl leading-relaxed">
+        <div className="text-center mb-12 md:mb-24">
+          <h1 className="text-4xl md:text-7xl font-black text-[#2257a0] mb-6 tracking-tight">
+            Our Products
+          </h1>
+          <p className="text-gray-600 max-w-4xl mx-auto text-lg md:text-xl leading-relaxed font-medium">
             With our 40-year expertise in the industry, Guard-All has partnered with the best security product manufacturers to be their “Exclusive” or “Authorized” distributors.
           </p>
         </div>
 
-        {/* Product Category Grid */}
-        <div className="product_wrapper max-w-7xl mx-auto bg-blue-100 rounded-3xl p-10">
-          <div className='product_grid'>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          
-          {allCategories.map((cat, index) => (
-            <div 
-              key={index} 
-              className="bg-white rounded-[2.5rem] p-10 shadow-sm hover:shadow-2xl transition-all duration-500 group flex flex-col h-full border border-slate-100"
-            >
-              {/* Image Container */}
-              <div className="overflow-hidden mb-8 aspect-square lg:aspect-video">
-                <img 
-                  src={`http://localhost:5000${cat.img}`} // Add the base URL here
-                  alt={cat.title} 
-                  className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700" 
-                />
-              </div>
+        {/* Product Category Wrapper */}
+        <div className="bg-blue-100/40 rounded-[2.5rem] md:rounded-[4rem] p-4 md:p-12 border border-blue-200/30">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
+            {allCategories.map((cat, index) => (
+              <div 
+                key={index} 
+                className="bg-white rounded-[2.5rem] p-6 md:p-10 shadow-sm hover:shadow-2xl transition-all duration-500 group flex flex-col h-full border border-slate-100"
+              >
+                {/* Responsive Image Container */}
+                <div className="overflow-hidden mb-8 rounded-3xl aspect-video md:aspect-square bg-gray-200">
+                  <img 
+                    src={`http://localhost:5000${cat.img}`} 
+                    alt={cat.title} 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                    onError={(e) => { e.target.src = "https://via.placeholder.com/400x400?text=Product+Image"; }}
+                  />
+                </div>
 
-              {/* Text Content */}
-              <h3 className="text-2xl font-bold text-[#1e3a8a] mb-4 group-hover:text-blue-700 transition-colors">
-                {cat.title}
-              </h3>
-              <p className="text-gray-600 text-xl leading-relaxed mb-8 flex-grow">
-                {cat.description}
-              </p>
-
-              {/* Clickable Brands Section */}
-              <div className="mt-auto border-t border-gray-100 pt-6">
-                <p className="text-[#f97316] hover:text-[#f97316]/20 font-bold text-xl uppercase tracking-[0.2em] mb-6">
-                  CLICK TO VIEW MORE:
+                {/* Text Content */}
+                <h3 className="text-xl md:text-2xl font-bold text-[#1e3a8a] mb-4 group-hover:text-blue-600 transition-colors leading-tight">
+                  {cat.title}
+                </h3>
+                <p className="text-gray-500 text-base md:text-lg leading-relaxed mb-8 flex-grow">
+                  {cat.description}
                 </p>
 
-                {/* Changed to a grid layout: 2 columns on mobile, 3 on larger screens */}
-               {/* Brands Grid */}
-<div className="grid grid-cols-2 gap-x-6 gap-y-10 items-center justify-items-center">
-  {cat.brands.map((brand, i) => (
-    <Link 
-      key={i} 
-      to={brand.path} 
-      className="w-full flex justify-center transition-all duration-300 hover:scale-110 active:scale-95"
-    >
-      <img 
-        src={brand.logo} 
-        alt={brand.name} 
-        /* h-24 (96px) on mobile
-           lg:h-28 (112px) on desktop 
-           scale-110 manually zooms into the image to ignore some white space padding
-        */
-        className="h-24 lg:h-28 w-full object-contain transition-all duration-300 transform scale-110"
-      />
-    </Link>
-  ))}
-</div>
-              </div>
+                {/* Clickable Brands Section */}
+                <div className="mt-auto border-t border-slate-50 pt-8">
+                  <p className="text-[#f97316] font-black md:text-xl lg:text-xl text-[15px] uppercase tracking-[0.25em] mb-6 text-center md:text-left">
+                    CLICK TO VIEW MORE:
+                  </p>
 
-            </div>
-          ))}
-        </div>
+                  {/* Brand Grid: Maintains 2 columns for visibility */}
+                  <div className="gap-4 items-stretch">
+                    {cat.brands.map((brand, i) => (
+                      <Link 
+                        key={i} 
+                        to={brand.path} 
+                        className="group/logo flex items-center justify-center p-4 md:p-5 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-xl border border-transparent hover:border-blue-100 transition-all duration-300"
+                      >
+                        <img 
+                          src={brand.logo} 
+                          alt={brand.name}
+                          /* ENLARGED LOGOS: h-20 on mobile, h-24 on desktop */
+                          className="h-20 md:h-20 lg:h-24 w-full object-contain filter group-hover/logo:scale-110 transition-transform duration-300"
+                          onError={(e) => { e.target.src = `https://via.placeholder.com/150x80?text=${brand.name}`; }}
+                        />
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-        
-
       </div>
     </section>
   );

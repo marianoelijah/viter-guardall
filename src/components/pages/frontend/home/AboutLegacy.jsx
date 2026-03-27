@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const AboutLegacy = () => {
   const stats = [
@@ -41,9 +42,11 @@ const AboutLegacy = () => {
             We assure that you're getting only the best from engineering to installation down to after-sales.
           </p>
 
+          <Link to="/who-we-are">
           <button className="border-2 border-blue-900 text-blue-900 px-8 py-3 rounded hover:bg-blue-900 hover:text-white transition-colors font-semibold mb-12">
             SEE MORE SERVICES
           </button>
+          </Link>
 
           {/* Stats Grid */}
           <div className="grid grid-cols-3 gap-8 border-t border-gray-300 pt-8">

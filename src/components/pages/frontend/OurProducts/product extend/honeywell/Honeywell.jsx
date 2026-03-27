@@ -22,7 +22,9 @@ const ProductCard = ({ title, description, image, detailRoute }) => (
       </p>
       <span className='block mt-12 text-gray-500 text-sm tracking-widest'>
         <NavLink to={detailRoute} className="text-blue-500 hover:underline mt-2 block">
-          <h3 className='text-xl font-poppins hover:text-green-500 transition-colors duration-300'>View Details</h3>
+          <h3 className='text-xl font-poppins hover:text-green-500 transition-colors duration-300'>
+            View Details
+          </h3>
         </NavLink>
       </span>
     </div>
@@ -54,7 +56,7 @@ const Honeywell = () => {
     <div className='bg-[#f0f4f8] min-h-screen px-6 lg:px-12 font-figtree'> 
       <div className="max-w-7xl mx-auto">
         <header className="text-center py-16 px-6 md:px-10 lg:px-20">
-          <h2 className="text-lg md:text-5xl lg:text-5xl text-[#0d3874] mb-6 tracking-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-5xl text-[#0d3874] mb-6 tracking-tight">
             {products.length > 0 ? products[0].category_name : "Honeywell Products"} - Honeywell
           </h2>
           <div className="h-1 w-24 bg-[#2257a0] mx-auto rounded-full opacity-20"></div>

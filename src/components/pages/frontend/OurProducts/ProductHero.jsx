@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ProductHero = () => {
   return (
@@ -9,15 +10,19 @@ const ProductHero = () => {
         {/* Left Side: Video Preview Container */}
         <div className="w-full lg:w-3/5 relative group cursor-pointer">
           <div className="rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-cyan-400 to-blue-500 aspect-video flex items-center justify-center relative">
-            {/* Guard-All Logo/Video Placeholder */}
-            <div className="p-12">
-               <img 
-                src="/src/assets/image/Group-46.png"
-                alt="Guard-All Video" 
-                className="w-full h-auto drop-shadow-lg"
-              />
-            </div>
-            
+            {/* Guard-All Logo/Video Embed code*/}
+        <div className='w-full overflow-hidden rounded-[2rem] shadow-2xl border-4 border-white'>
+          <iframe
+          className="absolute top-0 left-0 w-full h-full"
+          src="https://www.youtube.com/embed/bqcRTWnevJ8"
+          title="Guard-All Electronic Security Systems Inc - Products"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        ></iframe>
+        </div>    
+        
             {/* Play Button Overlay */}
             <div className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/20 transition-all duration-300">
               <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm border-2 border-white group-hover:scale-110 transition-transform">
@@ -50,9 +55,12 @@ const ProductHero = () => {
 
           <div className="h-px bg-white/30 w-full mb-8"></div>
 
-          <button className="bg-white text-blue-900 hover:bg-gray-100 font-bold py-3 px-10 rounded-md transition-all uppercase tracking-wide">
+          <Link to="/our-products">
+           <button className="bg-white text-blue-900 hover:bg-red-500 hover:text-white font-bold py-3 px-10 rounded-full transition-all uppercase tracking-wide">
             Browse Products 
           </button>
+          </Link>
+         
         </div>
 
       </div>

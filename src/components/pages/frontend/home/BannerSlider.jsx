@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const IMAGE_BASE_URL = "http://localhost:5000";
 
@@ -37,7 +38,7 @@ const BannerSlider = () => {
   if (slides.length === 0) return null;
 
   return (
-    <div className="relative w-full min-h-[700px] md:h-[650px] lg:h-[750px] overflow-hidden bg-[#F3EFE7] font-poppins">
+    <div className="relative w-full min-h-[750px] md:h-[650px] lg:h-[750px] overflow-hidden bg-[#F3EFE7] font-poppins">
       <AnimatePresence mode="wait">
         <motion.div
           key={current}
@@ -63,8 +64,8 @@ const BannerSlider = () => {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.4 }}
             >
-              <button className="bg-[#0D47A1] text-white px-10 py-4 rounded-full sm:rounded-sm font-bold hover:bg-red-600 active:scale-95 transition-all duration-300 uppercase tracking-widest text-sm shadow-lg">
-                {slides[current].cta_text} {/* Note: updated to match DB column name */}
+              <button className="bg-[#0D47A1] text-white px-5 py-4 rounded-full sm:rounded-sm font-bold hover:bg-red-600 active:scale-95 transition-all duration-300 uppercase tracking-widest text-sm shadow-lg">
+                <Link to="/contacts">{slides[current].cta_text}</Link> {/* Note: updated to match DB column name */}
               </button>
             </motion.div>
           </div>
