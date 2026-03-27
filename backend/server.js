@@ -224,6 +224,79 @@ app.get('/api/products/brand/:brand', async (req, res) => {
   }
 });
 
+// OUR CLIENTS
+// 1. Updated API for Clients
+app.get('/api/clients', async (req, res) => {
+    try {
+        const query = "SELECT * FROM our_clients ORDER BY sector ASC";
+        // With Promise-based clients, we 'await' the result and destructure [rows]
+        const [rows] = await db.query(query); 
+        res.json(rows);
+    } catch (err) {
+        console.error("Database Error:", err);
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+});
+
+// 2. Updated API for Brand Products (if you haven't fixed this one yet)
+app.get('/api/products/brand/:brandName', async (req, res) => {
+    try {
+        const { brandName } = req.params;
+        const query = "SELECT * FROM brand_products WHERE brand_name = ?";
+        const [rows] = await db.query(query, [brandName]);
+        res.json(rows);
+    } catch (err) {
+        console.error("Database Error:", err);
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+});
+
+// 3. Updated API for Product Details
+// Use a simple named parameter. 
+// If your product path is just one level (e.g., /details/dsc-hd300), use :slug
+// If it has slashes (e.g., /details/delta/dsc-hd300), use :brand/:slug
+app.get('/api/products/details/:brand/:slug', async (req, res) => {
+    try {
+        const { brand, slug } = req.params;
+        // Reconstruct the route as it appears in your DB
+        const fullRoute = `/our-products/${brand}/${slug}`;
+        
+        console.log("Searching for route:", fullRoute); // Debugging log
+
+        const query = "SELECT * FROM brand_products WHERE detail_route = ?";
+        const [rows] = await db.query(query, [fullRoute]);
+        
+        if (rows.length === 0) {
+            return res.status(404).json({ message: "Product not found", tried: fullRoute });
+        }
+        res.json(rows[0]);
+    } catch (err) {
+        console.error("Database Error:", err);
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+});
+
+
+// CONTACTS FORM
+// POST Contact Form Submission
+app.post('/api/contact', async (req, res) => {
+    const { name, email, subject, message } = req.body;
+    
+    try {
+        // 1. Save to Database (Good for lead tracking)
+        const query = "INSERT INTO contact_inquiries (name, email, subject, message) VALUES (?, ?, ?, ?)";
+        await db.query(query, [name, email, subject, message]);
+
+        // 2. Optional: Send Email notification 
+        // (You would use 'nodemailer' here later)
+
+        res.status(200).json({ message: "Inquiry received" });
+    } catch (err) {
+        console.error("Contact Form Error:", err);
+        res.status(500).json({ error: "Failed to process inquiry" });
+    }
+});
+
 
 // --- Start Server --- //
 app.listen(PORT, () => {

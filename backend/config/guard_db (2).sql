@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 25, 2026 at 09:31 AM
+-- Generation Time: Mar 27, 2026 at 04:07 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -469,6 +469,30 @@ INSERT INTO `category_brands` (`category_id`, `brand_id`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `contact_inquiries`
+--
+
+CREATE TABLE `contact_inquiries` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `subject` varchar(255) DEFAULT NULL,
+  `message` text NOT NULL,
+  `status` enum('new','read','replied') DEFAULT 'new',
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `contact_inquiries`
+--
+
+INSERT INTO `contact_inquiries` (`id`, `name`, `email`, `subject`, `message`, `status`, `created_at`) VALUES
+(1, 'Zhanne Mariano', 'zhane.mariano@guardall.com.ph', 'Products CCTV', 'Products INQUIRY', 'new', '2026-03-27 02:24:54'),
+(2, 'Rovic ', 'rovicloterte@gmail.com', 'test', 'test', 'new', '2026-03-27 02:51:11');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `department_intros`
 --
 
@@ -598,6 +622,63 @@ INSERT INTO `home_featured_products` (`id`, `title`, `image_path`, `sort_order`)
 (7, 'Hotel Locking', '/assets/image/Our Products/hotel.jpg', 0),
 (8, 'Intrusion /Burglary Alarm Systems', '/assets/image/Our Products/intrusion.jpeg', 0),
 (9, 'Parking Management / Parking Guiding System', '/assets/image/Our Products/parking.jpeg', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `our_clients`
+--
+
+CREATE TABLE `our_clients` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `sector` varchar(100) NOT NULL,
+  `logo_path` varchar(255) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `our_clients`
+--
+
+INSERT INTO `our_clients` (`id`, `name`, `sector`, `logo_path`, `created_at`) VALUES
+(1, 'Embassy of Singapore', 'Agencies & Embassies', '/assets/image/agencies img/singapore.png', '2026-03-27 01:14:02'),
+(2, 'British Embassy Manila', 'Agencies & Embassies', '/assets/image/agencies img/british.png', '2026-03-27 01:14:02'),
+(3, 'CAA Philippines', 'Agencies & Embassies', '/assets/image/agencies img/caa.png', '2026-03-27 01:14:02'),
+(4, 'Australian Embassy', 'Agencies & Embassies', '/assets/image/agencies img/australian.png', '2026-03-27 01:14:02'),
+(5, 'Ambassade de France', 'Agencies & Embassies', '/assets/image/agencies img/ambassade.png', '2026-03-27 01:14:02'),
+(6, 'Manila Int. Airport Authority', 'Agencies & Embassies', '/assets/image/agencies img/manila.png', '2026-03-27 01:14:02'),
+(7, 'Presidential Security Group', 'Agencies & Embassies', '/assets/image/agencies img/presidential.png', '2026-03-27 01:14:02'),
+(8, 'GSIS', 'Agencies & Embassies', '/assets/image/agencies img/gsis.png', '2026-03-27 01:14:02'),
+(9, 'Samsung Electro Mechanics', 'Corporations', '/assets/image/corporations img/samsung.png', '2026-03-27 01:14:02'),
+(10, 'Coca-Cola Philippines', 'Corporations', '/assets/image/corporations img/coca-cola.png', '2026-03-27 01:14:02'),
+(11, 'Marubeni', 'Corporations', '/assets/image/corporations img/marubeni.png', '2026-03-27 01:14:02'),
+(12, 'Nestle', 'Corporations', '/assets/image/corporations img/nestle.png', '2026-03-27 01:14:02'),
+(13, 'PLDT', 'Corporations', '/assets/image/corporations img/pldt.png', '2026-03-27 01:14:02'),
+(14, 'Smart', 'Corporations', '/assets/image/corporations img/smart.png', '2026-03-27 01:14:02'),
+(15, 'NGCP', 'Corporations', '/assets/image/corporations img/ngcp.png', '2026-03-27 01:14:02'),
+(16, 'San Miguel Corporation', 'Corporations', '/assets/image/corporations img/san miguel.png', '2026-03-27 01:14:02'),
+(17, 'Egis', 'Engineering, Construction & Logistics', '/assets/image/ecl img/egis.png', '2026-03-27 01:14:02'),
+(18, 'Hanjin Heavy Industries', 'Engineering, Construction & Logistics', '/assets/image/ecl img/hanjin.png', '2026-03-27 01:14:02'),
+(19, 'ICTS', 'Engineering, Construction & Logistics', '/assets/image/ecl img/icts.png', '2026-03-27 01:14:02'),
+(20, 'Negros Navigation', 'Engineering, Construction & Logistics', '/assets/image/ecl img/negros.png', '2026-03-27 01:14:02'),
+(21, 'Holcim', 'Engineering, Construction & Logistics', '/assets/image/ecl img/holcim.png', '2026-03-27 01:14:02'),
+(22, 'DHL', 'Engineering, Construction & Logistics', '/assets/image/ecl img/dhl.png', '2026-03-27 01:14:02'),
+(23, 'Sun Life Financial', 'Finance', '/assets/image/finance img/sunlife.png', '2026-03-27 01:14:02'),
+(24, 'HSBC', 'Finance', '/assets/image/finance img/hsbc.png', '2026-03-27 01:14:02'),
+(25, 'Standard Chartered', 'Finance', '/assets/image/finance img/standard.png', '2026-03-27 01:14:02'),
+(26, 'Security Bank', 'Finance', '/assets/image/finance img/security-bank.png', '2026-03-27 01:14:02'),
+(27, 'Unilab', 'Health & Research', '/assets/image/h&r img/unilab.png', '2026-03-27 01:14:02'),
+(28, 'Zuellig Pharma', 'Health & Research', '/assets/image/h&r img/zuellig.png', '2026-03-27 01:14:02'),
+(29, 'DOH - RITM', 'Health & Research', '/assets/image/h&r img/doh.png', '2026-03-27 01:14:02'),
+(30, 'Oak Ridge National Laboratory', 'Health & Research', '/assets/image/h&r img/oak-ridge.png', '2026-03-27 01:14:02'),
+(31, 'Pacific Northwest National Lab', 'Health & Research', '/assets/image/h&r img/pacific-northwest.png', '2026-03-27 01:14:02'),
+(32, 'PICC', 'Properties', '/assets/image/properties img/picc.png', '2026-03-27 01:14:02'),
+(33, 'Solaire Resort Manila', 'Properties', '/assets/image/properties img/solaire.png', '2026-03-27 01:14:02'),
+(34, 'Tata Consultancy Services', 'Properties', '/assets/image/properties img/consultance.png', '2026-03-27 01:14:02'),
+(35, 'The Peninsula Manila', 'Properties', '/assets/image/properties img/peninsula-manila.png', '2026-03-27 01:14:02'),
+(36, 'APMC', 'Properties', '/assets/image/properties img/apmc.png', '2026-03-27 01:14:02'),
+(37, 'FIVE | NEO', 'Properties', '/assets/image/properties img/five-neo.png', '2026-03-27 01:14:02');
 
 -- --------------------------------------------------------
 
@@ -798,7 +879,7 @@ CREATE TABLE `security_experts` (
 INSERT INTO `security_experts` (`id`, `name`, `position`, `image_path`, `sort_order`) VALUES
 (1, 'Marlon V. Ramos', 'Engineering Manager', '/assets/image/Who Page/Security Experts/Marlon.png', 1),
 (2, 'Prince John Lizardo', 'Service Department Manager', '/assets/image/Who Page/Security Experts/Prince.png', 2),
-(3, 'Ramir S. Aguilar', 'MIS/IT Department Manager', '/assets/image/Who Page/Security Experts/Ramir.png', 3),
+(3, 'Ramir Aguilar', 'MIS/IT Department Manager', '/assets/image/Who Page/Security Experts/Ramir.png', 3),
 (4, 'Benedick Santiago', 'Alarm Department Manager', '/assets/image/Who Page/Security Experts/Benedick.png', 4),
 (5, 'Veronica T. Reyes', 'Asset Protection Manager', '/assets/image/Who Page/Security Experts/Veronica.png', 5),
 (6, 'Liza E. Cabral', 'HR Officer/Collection Officer', '/assets/image/Who Page/Security Experts/Liza.png', 6),
@@ -807,7 +888,7 @@ INSERT INTO `security_experts` (`id`, `name`, `position`, `image_path`, `sort_or
 (9, 'Marife P. Bufete T. Reyes', 'Logistic Supervisor', '/assets/image/Who Page/Security Experts/Marife.png', 9),
 (10, 'Marie R. Cleofas', 'Import Supervisor', '/assets/image/Who Page/Security Experts/Marie.png', 10),
 (11, 'Jane D. Naval', 'Sales and Marketing Associate', '/assets/image/Who Page/Security Experts/Jane.png', 11),
-(12, 'Dennis Ballag', 'CCTV Manager', '/assets/image/Who Page/Security Experts/Dennis B.png', 0);
+(12, 'Doc Ballag', 'CCTV Manager', '/assets/image/Who Page/Security Experts/Dennis B.png', 0);
 
 -- --------------------------------------------------------
 
@@ -884,6 +965,12 @@ ALTER TABLE `category_brands`
   ADD KEY `brand_id` (`brand_id`);
 
 --
+-- Indexes for table `contact_inquiries`
+--
+ALTER TABLE `contact_inquiries`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `department_intros`
 --
 ALTER TABLE `department_intros`
@@ -917,6 +1004,12 @@ ALTER TABLE `home_cta`
 -- Indexes for table `home_featured_products`
 --
 ALTER TABLE `home_featured_products`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `our_clients`
+--
+ALTER TABLE `our_clients`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -967,6 +1060,12 @@ ALTER TABLE `categories`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
+-- AUTO_INCREMENT for table `contact_inquiries`
+--
+ALTER TABLE `contact_inquiries`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `department_intros`
 --
 ALTER TABLE `department_intros`
@@ -1001,6 +1100,12 @@ ALTER TABLE `home_cta`
 --
 ALTER TABLE `home_featured_products`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `our_clients`
+--
+ALTER TABLE `our_clients`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `products`

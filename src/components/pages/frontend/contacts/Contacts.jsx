@@ -1,9 +1,24 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Globe } from 'lucide-react';
 
-// Header and Footer are provided by OurContacts wrapper; remove duplicate imports
+// Move static data outside the component to prevent re-renders
+const BRANCHES = {
+  makati: {
+    name: "Makati Head Office",
+    address: "Unit 708 Cattleya Building, 235 Salcedo St. Legaspi Village, Makati City",
+    embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.6493134371584!2d121.0156!3d14.5547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c908f9f8f9f8%3A0x0!2sCattleya%20Building!5e0!3m2!1sen!2sph!4v1620000000000!5m2!1sen!2sph"
+  },
+  cebu: {
+    name: "Cebu Branch",
+    address: "Unit 306 Cebu Holdings Building, Cebu Business Park, Cebu City",
+    embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.34!2d123.90!3d10.31!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a999!2sCebu%20Business%20Park!5e0!3m2!1sen!2sph!4v1620000000000!5m2!1sen!2sph"
+  }
+};
 
 const Contacts = () => {
+  // State must be INSIDE the component
+  const [activeBranch, setActiveBranch] = useState('makati');
+  const [status, setStatus] = useState(''); 
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -11,159 +26,136 @@ const Contacts = () => {
     message: ''
   });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    console.log('Form Submitted:', formData);
-  };
-
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus('sending');
+
+    try {
+      const response = await fetch('http://localhost:5000/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' }); 
+        setTimeout(() => setStatus(''), 5000); // Clear status after 5s
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      console.error('Submission error:', error);
+      setStatus('error');
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-slate-50 font-poppins selection:bg-blue-100">
+    <div className="min-h-screen bg-slate-200 font-poppins selection:bg-blue-100">
       {/* Header Section */}
       <section className="pt-20 pb-12 text-center px-6">
-        <h1 className="text-5xl md:text-6xl font-bold text-[#1e3a8a] mb-4">
-          Contact Us
-        </h1>
-        <h2 className="text-3xl md:text-4xl font-bold text-[#2257a0] mb-4">
-          Secure Your Life Today!
-        </h2>
-        <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-          Tell us what your home or property needs. Our team is ready to help you!
+        <h1 className="text-5xl md:text-6xl font-bold text-[#1e3a8a] mb-4">Contact Us</h1>
+        <h2 className="text-3xl md:text-4xl font-bold text-[#2257a0] mb-4">Secure Your Life Today!</h2>
+        <p className="text-gray-700 text-lg max-w-2xl mx-auto">
+          Tell us what your property needs. Our team is ready to help you!
         </p>
-        <button className="mt-8 bg-[#2257a0] text-white px-10 py-3 rounded-md font-semibold hover:bg-red-500 transition-all active:scale-95 shadow-lg">
-          GET IN TOUCH
-        </button>
       </section>
 
       <div className="max-w-7xl mx-auto px-6 pb-24">
-        {/* Info Cards Grid */}
+        {/* Info Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {/* Phone Card */}
-          <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center text-center group hover:shadow-xl transition-all duration-300">
+          {/* Phone */}
+          <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center group hover:shadow-xl transition-all">
             <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#2257a0] transition-colors">
               <Phone className="text-[#2257a0] group-hover:text-white" size={32} />
             </div>
-            <div className="space-y-2 text-gray-700 font-medium">
-              <p className="flex items-center gap-2 justify-center">
-                <span className="w-2 h-2 bg-[#2257a0] rounded-full"></span>
-                (02) 8817 4132
-              </p>
-              <p className="flex items-center gap-2 justify-center">
-                <span className="w-2 h-2 bg-[#2257a0] rounded-full"></span>
-                (02) 8840 5673 to 76
-              </p>
-              <p className="flex items-center gap-2 justify-center">
-                <span className="w-2 h-2 bg-[#2257a0] rounded-full"></span>
-                (+63) 998 843 9711
-              </p>
+            <div className="space-y-2 text-gray-700 font-medium text-center">
+              <p>(02) 8817 4132</p>
+              <p>(02) 8840 5673</p>
+              <p>(+63) 998 843 9711</p>
             </div>
           </div>
 
-          {/* Email/Web Card */}
-          <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center text-center group hover:shadow-xl transition-all duration-300">
+          {/* Email */}
+          <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center group hover:shadow-xl transition-all">
             <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#2257a0] transition-colors">
               <Globe className="text-[#2257a0] group-hover:text-white" size={32} />
             </div>
-            <div className="space-y-4">
-              <a href="mailto:info@guardall.com.ph" className="block text-gray-700 font-medium hover:text-[#2257a0] transition-colors">
-                info@guardall.com.ph
-              </a>
-              <a href="https://www.guardall.com.ph" target="_blank" rel="noreferrer" className="block text-gray-700 font-medium hover:text-[#2257a0] transition-colors">
-                www.guardall.com.ph
-              </a>
+            <div className="space-y-2 text-center">
+              <a href="mailto:info@guardall.com.ph" className="block text-gray-700 font-medium hover:text-[#2257a0]">info@guardall.com.ph</a>
+              <a href="https://www.guardall.com.ph" target="_blank" rel="noreferrer" className="block text-gray-700 font-medium hover:text-[#2257a0]">www.guardall.com.ph</a>
             </div>
           </div>
 
-          {/* Location Card */}
-          <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center group hover:shadow-xl transition-all duration-300">
+          {/* Location Summary */}
+          <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center group hover:shadow-xl transition-all">
             <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#2257a0] transition-colors">
               <MapPin className="text-[#2257a0] group-hover:text-white" size={32} />
             </div>
-            <div className="space-y-4 text-sm text-gray-700 text-left w-full">
-              <div className="flex gap-3">
-                <span className="w-2 h-2 bg-[#2257a0] rounded-full mt-1.5 shrink-0"></span>
-                <p><strong>Makati</strong> | Unit 708 Cattleya Building, 235 Salcedo St. Legaspi Village, Makati City, Philippines 1223</p>
-              </div>
-              <div className="flex gap-3">
-                <span className="w-2 h-2 bg-[#2257a0] rounded-full mt-1.5 shrink-0"></span>
-                <p><strong>Cebu</strong> | Unit 306 Cebu Holdings Building, Cebu Business Park, Cebu City, Philippines 6000</p>
-              </div>
+            <div className="text-sm text-gray-700 space-y-3">
+              <p><strong>Makati:</strong> Unit 708 Cattleya Bldg, Salcedo St.</p>
+              <p><strong>Cebu:</strong> Unit 306 Cebu Holdings Bldg.</p>
             </div>
           </div>
         </div>
 
-        {/* Form Section */}
-        <div className="max-w-4xl mx-auto relative">
-          {/* Blue Shadow Accent */}
-          <div className="absolute inset-0 bg-[#0097b2] translate-x-4 translate-y-4 rounded-3xl -z-10"></div>
-          
-          {/* Text Input */}
-          <div className="bg-gray-300 p-8 md:p-12 rounded-3xl shadow-sm border border-slate-100">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="relative">
-                <input 
-                  type="text" 
-                  name="name"
-                  placeholder="Your Name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2257a0] focus:border-transparent outline-none transition-all"
-                  required
-                />
+        {/* Form and Map Container */}
+        <div className="grid grid-cols-1 gap-12">
+          {/* Form Section */}
+          <div className="max-w-4xl mx-auto w-full relative">
+            <div className="absolute inset-0 bg-[#0097b2] translate-x-4 translate-y-4 rounded-3xl -z-10"></div>
+            <div className="bg-gray-300 p-8 md:p-12 rounded-3xl shadow-sm border border-slate-100">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} className="w-full px-4 py-4 rounded-lg outline-none focus:ring-2 focus:ring-[#2257a0]" required />
+                <input type="email" name="email" placeholder="Your Email" value={formData.email} onChange={handleChange} className="w-full px-4 py-4 rounded-lg outline-none focus:ring-2 focus:ring-[#2257a0]" required />
+                <input type="text" name="subject" placeholder="Subject" value={formData.subject} onChange={handleChange} className="w-full px-4 py-4 rounded-lg outline-none focus:ring-2 focus:ring-[#2257a0]" required />
+                <textarea name="message" placeholder="Message" rows="5" value={formData.message} onChange={handleChange} className="w-full px-4 py-4 rounded-lg outline-none focus:ring-2 focus:ring-[#2257a0] resize-none" required></textarea>
+                
+                {status === 'success' && <p className="text-green-600 font-bold text-center">Message sent successfully!</p>}
+                {status === 'error' && <p className="text-red-600 font-bold text-center">Error sending message. Try again.</p>}
+                
+                <button type="submit" disabled={status === 'sending'} className="w-full bg-[#1e40af] text-white py-4 font-bold rounded hover:bg-blue-800 disabled:bg-gray-400 transition-all shadow-md">
+                  {status === 'sending' ? 'SENDING...' : 'SEND MESSAGE'}
+                </button>
+              </form>
+            </div>
+          </div>
+
+          {/* Interactive Map Section */}
+          <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100 grid grid-cols-1 lg:grid-cols-3">
+            <div className="p-8 bg-slate-50 border-r border-slate-100">
+              <h3 className="text-2xl font-bold text-[#1e3a8a] mb-6">Our Locations</h3>
+              <div className="space-y-4">
+                {Object.keys(BRANCHES).map((key) => (
+                  <button
+                    key={key}
+                    onClick={() => setActiveBranch(key)}
+                    className={`w-full text-left p-4 rounded-xl transition-all ${activeBranch === key ? 'bg-[#2257a0] text-white shadow-lg' : 'bg-white text-gray-600 hover:bg-blue-50'}`}
+                  >
+                    <p className="font-bold uppercase text-sm">{BRANCHES[key].name}</p>
+                    <p className="text-xs mt-1 opacity-80">{BRANCHES[key].address}</p>
+                  </button>
+                ))}
               </div>
-              <div>
-                <input 
-                  type="email" 
-                  name="email"
-                  placeholder="Your Email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2257a0] focus:border-transparent outline-none transition-all"
-                  required
-                />
-              </div>
-              <div>
-                <input 
-                  type="text" 
-                  name="subject"
-                  placeholder="Subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2257a0] focus:border-transparent outline-none transition-all"
-                  required
-                />
-              </div>
-              <div>
-                <textarea 
-                  name="message"
-                  placeholder="Message"
-                  rows="6"
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2257a0] focus:border-transparent outline-none transition-all resize-none"
-                  required
-                ></textarea>
-              </div>
-              <button 
-                type="submit"
-                className="bg-[#1e40af] text-white px-12 py-4 rounded-lg font-bold hover:bg-blue-800 transition-all active:scale-95 shadow-md"
-              >
-                SEND MESSAGE
-              </button>
-            </form>
+            </div>
+            <div className="lg:col-span-2 h-[450px]">
+              <iframe
+                title="Office Location"
+                src={BRANCHES[activeBranch].embedUrl}
+                className="w-full h-full border-0"
+                allowFullScreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>
-      
-      
     </div>
-  
   );
 };
-
 
 export default Contacts;
