@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 27, 2026 at 04:53 AM
+-- Generation Time: Mar 28, 2026 at 05:32 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -893,6 +893,31 @@ INSERT INTO `security_experts` (`id`, `name`, `position`, `image_path`, `sort_or
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `social_platforms`
+--
+
+CREATE TABLE `social_platforms` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `icon_path` varchar(255) NOT NULL,
+  `share_template` text NOT NULL,
+  `is_active` tinyint(1) DEFAULT 1
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `social_platforms`
+--
+
+INSERT INTO `social_platforms` (`id`, `name`, `icon_path`, `share_template`, `is_active`) VALUES
+(1, 'Facebook', '/assets/image/social-logo/facebook.png', 'https://www.facebook.com/sharer/sharer.php?u={url}', 1),
+(2, 'Gmail', '/assets/image/social-logo/gmail.png', 'mailto:?subject={title}&body=I thought you might be interested in this: {url}', 1),
+(3, 'LinkedIn', '/assets/image/social-logo/linkedin.png', 'https://www.linkedin.com/sharing/share-offsite/?url={url}', 1),
+(4, 'Telegram', '/assets/image/social-logo/telegram.png', 'https://t.me/share/url?url={url}&text={title}', 1),
+(5, 'Viber', '/assets/image/social-logo/viber.png', 'viber://forward?text={title}%20{url}', 1);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `trusted_clients`
 --
 
@@ -1026,6 +1051,12 @@ ALTER TABLE `security_experts`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `social_platforms`
+--
+ALTER TABLE `social_platforms`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `trusted_clients`
 --
 ALTER TABLE `trusted_clients`
@@ -1118,6 +1149,12 @@ ALTER TABLE `products`
 --
 ALTER TABLE `security_experts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `social_platforms`
+--
+ALTER TABLE `social_platforms`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `trusted_clients`

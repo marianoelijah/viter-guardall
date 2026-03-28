@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../../../partials/Header';
 import Footer from '../../../partials/Footer';
 import { NavLink } from 'react-router-dom';
+import SocialShare from '../../Reusable/SocialShare';
 
 const Pw6101Series = () => {
   return (
@@ -110,6 +111,9 @@ const Pw6101Series = () => {
                   </table>
                 </div>
               </section>
+
+              {/* SHARE SECTION */}
+              <SocialShare title="Check out this product!" />
             </div>
 
             {/* Sidebar Section */}

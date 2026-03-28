@@ -276,6 +276,17 @@ app.get('/api/products/details/:brand/:slug', async (req, res) => {
     }
 });
 
+// SOCIAL-PLATFORMS
+app.get('/api/social-platforms', async (req, res) => {
+    try {
+        // Using [db] assuming you are using a promise-based pool/connection
+        const [rows] = await db.query("SELECT * FROM social_platforms WHERE is_active = 1");
+        res.json(rows);
+    } catch (err) {
+        console.error("❌ SQL ERROR:", err.message); // THIS LINE IS KEY
+        res.status(500).send("Database Error");
+    }
+});
 
 // CONTACTS FORM
 // POST Contact Form Submission
@@ -296,6 +307,7 @@ app.post('/api/contact', async (req, res) => {
         res.status(500).json({ error: "Failed to process inquiry" });
     }
 });
+
 
 
 // --- Start Server --- //

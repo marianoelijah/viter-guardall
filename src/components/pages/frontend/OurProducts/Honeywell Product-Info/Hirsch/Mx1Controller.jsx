@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../../../partials/Header';
 import Footer from '../../../partials/Footer';
 import { NavLink } from 'react-router-dom';
+import SocialShare from '../../Reusable/SocialShare';
 
 const Mx1Controller = () => {
   // Structured technical data matching the detailed specification table
@@ -130,26 +131,7 @@ const Mx1Controller = () => {
             </div>
 
              {/* SHARE SECTION */}
-            <div className="mt-8">
-              <p className="font-medium text-black mb-3">Share:</p>
-              <div className="flex gap-3">
-                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
-                </div>
-                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
-                </div>
-                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
-                </div>
-                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
-                </div>
-                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                  <img src="/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
-                </div>
-              </div>
-            </div>  
+           <SocialShare title="Check out this product!" />
         </main>
 
         {/* Right Column: Sidebar */}
@@ -183,9 +165,9 @@ const Mx1Controller = () => {
                    Contact Guard-All now for a customized security solution
                    that protects what matters most.
                  </p>
-              <button className="bg-blue-700 hover:bg-blue-400 text-white font-semibold px-4 py-2 rounded w-full">
-                <NavLink to="/contacts" className="w-full h-full block">
-                CONTACT US TODAY
+              <button className="bg-blue-700 hover:bg-blue-400 text-white font-semibold rounded transition-all duration-300 w-full md:w-auto px-4 py-3 md:px-6 md:py-2 lg:px-8 lg:py-3 lg:text-lg">
+                <NavLink to="/contacts" className="w-full h-full flex items-center justify-center">
+                 CONTACT US TODAY
                 </NavLink>
               </button>
             </div>

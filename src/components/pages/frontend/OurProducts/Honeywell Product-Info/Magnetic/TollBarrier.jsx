@@ -2,6 +2,7 @@ import React from 'react';
 import { Facebook, Linkedin, Mail, Send } from 'lucide-react'; // Using lucide-react for icons
 import Header from '../../../partials/Header';
 import Footer from '../../../partials/Footer';
+import SocialShare from '../../Reusable/SocialShare';
 
 const TollBarrier = () => {
   const specs = [
@@ -131,14 +132,8 @@ const TollBarrier = () => {
           </div>
 
           {/* Social Share Footer */}
-          <div className="mt-8 flex gap-2 items-center">
-            <span className="text-gray-500 text-sm mr-2">Share:</span>
-            {[Facebook, Linkedin, Mail, Send].map((Icon, i) => (
-              <div key={i} className="bg-blue-900 p-2 rounded-sm cursor-pointer hover:bg-blue-800 transition">
-                <Icon size={16} className="text-white" />
-              </div>
-            ))}
-          </div>
+          <SocialShare title="Check out this product!" />
+          
         </main>
 
         {/* Sidebar */}

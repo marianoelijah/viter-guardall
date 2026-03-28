@@ -345,6 +345,7 @@ import ZX82 from "./components/pages/frontend/OurProducts/Honeywell Product-Info
 
 
 
+
 const App = () => {
 
 
@@ -360,7 +361,7 @@ const App = () => {
 
           {/* In your Routes section: */}
             <Route path="/our-products/:brandName" element={<BrandProducts />} />
-
+            
           {/* The :slug is a variable that represents 'honeywell', 'pelco', etc. */}
             <Route path="/products/:slug" element={<BrandDetails />} />
 

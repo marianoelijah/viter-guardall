@@ -138,11 +138,11 @@ const HirschMx1Me = () => {
                    Contact Guard-All now for a customized security solution
                    that protects what matters most.
                  </p>
-              <button className="bg-blue-700 hover:bg-blue-400 text-white font-semibold px-4 py-2 rounded w-full">
-                <NavLink to="/contacts" className="w-full h-full block">
-                CONTACT US TODAY
-                </NavLink>
-              </button>
+              <button className="bg-blue-700 hover:bg-blue-400 text-white font-semibold rounded transition-all duration-300 w-full md:w-auto px-4 py-3 md:px-6 md:py-2 lg:px-8 lg:py-3 lg:text-lg">
+             <NavLink to="/contacts" className="w-full h-full flex items-center justify-center">
+              CONTACT US TODAY
+             </NavLink>
+             </button>
             </div>
             </div>
         </aside>

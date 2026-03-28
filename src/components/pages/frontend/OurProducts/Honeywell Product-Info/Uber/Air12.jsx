@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../../../partials/Header";
 import Footer from "../../../partials/Footer";
 import { NavLink } from "react-router-dom";
+import SocialShare from "../../Reusable/SocialShare";
 
 const Air12 = () => {
   
@@ -288,26 +289,7 @@ const Air12 = () => {
 
 
               {/* Share Section */}
-              <div className="mt-2">
-                <p className="font-medium text-black mb-4">Share:</p>
-              <div className="flex gap-3">
-                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                    <img src="/assets/image/social-logo/facebook.png" alt="Facebook" className="w-full h-full object-contain p-1" />
-                </div>
-                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                    <img src="/assets/image/social-logo/gmail.png" alt="Gmail" className="w-full h-full object-contain p-1" />
-                </div>
-                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                    <img src="/assets/image/social-logo/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain p-1" />
-                </div>
-                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                    <img src="/assets/image/social-logo/telegram.png" alt="Telegram" className="w-full h-full object-contain p-1" />
-                </div>
-                <div className="w-8 h-8 bg-blue-600 rounded hover:bg-[#f3760f] transition-colors duration-200">
-                    <img src="/assets/image/social-logo/viber.png" alt="Viber" className="w-full h-full object-contain p-1" />
-                </div>
-              </div>
-                </div>
+              <SocialShare title="Check out this product!" />
         </main>
 
              {/* Sidebar */}
