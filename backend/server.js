@@ -16,11 +16,19 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // --- Middlewares ---
-app.use(cors());
+// app.use(cors());
 app.use(express.json());
 
+app.use(cors({
+  origin: "*"
+}));
+
 // The '..' tells Node to go UP one folder level, out of 'backend' and into 'viter-guardall'
-app.use('/assets', express.static(path.join(__dirname, '../public/assets')));
+// This works locally, but in cloud deployment the path can break.
+// app.use('/assets', express.static(path.join(__dirname, '../public/assets')));
+
+// Safer version using path.resolve to ensure we get an absolute path
+app.use('/assets', express.static(path.resolve(__dirname, '../public/assets')));
 
 // Update your console log too so we can verify:
 console.log("New Static Path:", path.join(__dirname, '../public/assets'));
@@ -308,7 +316,10 @@ app.post('/api/contact', async (req, res) => {
     }
 });
 
-
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send("Something broke!");
+});
 
 // --- Start Server --- //
 app.listen(PORT, () => {

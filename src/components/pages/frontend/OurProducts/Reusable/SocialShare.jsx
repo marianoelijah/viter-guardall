@@ -26,7 +26,7 @@ const SocialShare = ({ title = "Check out this product from Guard-All!" }) => {
 
   return (
     <div className="mt-8 font-figtree">
-      <p className="font-medium text-[#1a365d] mb-3">Share this product:</p>
+      <p className="font-medium text-[#1a365d] mb-3">Follow Us:</p>
       <div className="flex gap-3">
         {platforms.map((social) => (
           <a

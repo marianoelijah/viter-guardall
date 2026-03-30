@@ -44,6 +44,10 @@ const Footer = () => {
                 <span className="text-sm md:text-base">(02) 8840 5673 to 76</span>
               </li>
               <li className="flex items-center gap-3">
+                <FaPhone className="text-blue-800 shrink-0" /> 
+                <span className="text-sm md:text-base">(+63) 998 843 9711</span>
+              </li>
+              <li className="flex items-center gap-3">
                 <FaEnvelope className="text-blue-800 shrink-0" /> 
                 <span className="text-sm md:text-base">info@guardall.com.ph</span>
               </li>

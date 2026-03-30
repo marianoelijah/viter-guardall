@@ -337,6 +337,7 @@ import BrandDetails from "./components/pages/frontend/OurProducts/BrandDetails";
 import BrandProducts from "./components/pages/frontend/OurProducts/Reusable/BrandProducts";
 import Pro3200 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Honeywell/Pro3200";
 import ZX82 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/ZX82";
+import AdminPanel from "./components/Admin/AdminPanel";
 
 
 
@@ -779,6 +780,9 @@ const App = () => {
 
             {/* Vesda Product Details Route */}
             <Route path="/our-products/vesda/vesda-eves" element={<VesdaEves/>} />
+
+            {/* Admin Panel Route */}
+            <Route path="/admin" element={<AdminPanel/>} />
 
           </Routes>
         </Router>
