@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaPhone, FaEnvelope, FaFacebookF, FaLinkedinIn, FaMapMarkerAlt } from "react-icons/fa";
+import SocialShare from "../OurProducts/Reusable/SocialShare";
 
 const Footer = () => {
   return (
@@ -66,14 +67,9 @@ const Footer = () => {
             </div>
             
             {/* Social Icons Container */}
-            <div className="flex gap-4 pt-2">
-              <a href="#" className="p-3 bg-blue-50 text-blue-800 rounded-full hover:bg-blue-800 hover:text-white transition-all transform hover:-translate-y-1">
-                <FaFacebookF size={20} />
-              </a>
-              <a href="#" className="p-3 bg-blue-50 text-blue-800 rounded-full hover:bg-blue-800 hover:text-white transition-all transform hover:-translate-y-1">
-                <FaLinkedinIn size={20} />
-              </a>
-            </div>
+             {/* SHARE SECTION */}
+            <SocialShare title="Check out this product!" />
+
           </div>
         </div>
 
