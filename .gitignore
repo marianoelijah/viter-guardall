@@ -13,6 +13,8 @@ backend/node_modules
 .env
 backend/.env
 
+*.sql
+
 dist
 dist-ssr
 *.local
