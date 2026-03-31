@@ -15,7 +15,8 @@ const Footer = () => {
             <img src="/assets/image/Client Logo/logo.png" alt="Guard-All Logo" className="h-12 w-auto" />
             <p className="text-gray-600 leading-relaxed text-base max-w-sm">
               Guard-All is a leading electronic security systems integrator in the Philippines, 
-              providing world-class, cost-effective solutions.
+              providing world-class, cost-effective solutions for commercial, industrial, governmental, 
+              and residential clients.
             </p>
           </div>
 
@@ -40,7 +41,7 @@ const Footer = () => {
                 <span className="text-sm md:text-base">(02) 8817 4132</span>
               </li>
               <li className="flex items-center gap-3">
-                <FaPhone className="text-blue-800 shrink-0" /> 
+                <FaPhone className="text-blue-800 shrink-0" />
                 <span className="text-sm md:text-base">(02) 8840 5673 to 76</span>
               </li>
               <li className="flex items-center gap-3">
@@ -48,7 +49,7 @@ const Footer = () => {
                 <span className="text-sm md:text-base">(+63) 998 843 9711</span>
               </li>
               <li className="flex items-center gap-3">
-                <FaEnvelope className="text-blue-800 shrink-0" /> 
+                <FaEnvelope className="text-blue-800 shrink-0" />
                 <span className="text-sm md:text-base">info@guardall.com.ph</span>
               </li>
             </ul>

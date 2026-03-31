@@ -12,7 +12,7 @@ const AdminPanel = () => {
 
   // Fetch brands so we can populate the dropdown menu
   useEffect(() => {
-    axios.get('http://localhost:5000/api/brands') // You'll need a simple GET /api/brands route
+    axios.get(`${import.meta.env.VITE_API_URL}/api/brands`) // You'll need a simple GET /api/brands route
       .then(res => setBrands(res.data))
       .catch(err => console.log(err));
   }, []);
@@ -20,7 +20,7 @@ const AdminPanel = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/add-product', formData);
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/add-product`, formData);
       alert("Product added to Guard-All Database!");
       setFormData({ brand_id: '', product_name: '', product_description: '', product_image: '' });
     } catch (err) {

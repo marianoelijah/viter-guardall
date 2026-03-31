@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const IMAGE_BASE_URL = "http://localhost:5000";
+const IMAGE_BASE_URL = import.meta.env.VITE_API_URL;
 
 const Who = () => {
   const [data, setData] = useState(null);

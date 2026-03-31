@@ -8,7 +8,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --myred: 227, 25, 55;
   --myyellow: 215, 168, 58;
   --accent: 228, 10, 19;
@@ -37,12 +37,12 @@
   --warning: 211, 180, 14;
   --info: 58, 27, 248;
   --body: 188, 188, 188;
-}
+} */
 
-@layer base {
-  /* * {
+/* @layer base {
+  * {
     @apply border border-red-500;
-  } */
+  }
   h1 {
     @apply text-[clamp(35px,_6vw,_50px)];
   }
@@ -60,9 +60,9 @@
   }
   h6 {
     @apply text-[clamp(12px,_6vw,_16px)];
-  }
+  } */
 
-  h1,
+  /* h1,
   h2,
   h3,
   h4,
@@ -81,9 +81,9 @@
   body {
     @apply leading-snug !text-body;
   }
-}
+} */
 
-@layer components {
+/* @layer components {
   .main-nav {
     @apply text-lg md:text-base font-semibold md:font-normal;
   }
@@ -146,10 +146,10 @@
 
   .menu-btn.active span:nth-child(3) {
     @apply -rotate-45 -translate-y-[2px];
-  }
+  } */
 
   /* BUTTONS--------------------------------------------- */
-  .btn {
+  /* .btn {
     @apply p-1.5 py-2 border border-transparent flex gap-2 rounded-md transition-all items-center bg-primary text-sm;
   }
   .btn:disabled {
@@ -174,11 +174,11 @@
   }
   .table-wrapper {
     @apply max-h-[69vh] overflow-y-auto overflow-x-hidden;
-  }
+  } */
 
   /* OTHER--------------------------------------------- */
 
-  .table-wrapper {
+  /* .table-wrapper {
     @apply max-h-[69vh] overflow-y-auto overflow-x-hidden;
   }
 
@@ -197,13 +197,13 @@
   .table-wrapper table td,
   .table-wrapper table th {
     @apply p-1.5 text-sm;
-  }
+  } */
 
   /* .table-wrapper table tbody tr:nth-child(odd) {
     @apply bg-[#151b25];
   } */
 
-  .table-wrapper table tbody tr {
+  /* .table-wrapper table tbody tr {
     @apply bg-primary;
   }
 
@@ -258,13 +258,13 @@
 
   .tooltip:hover::before {
     @apply opacity-100;
-  }
+  } */
 
   /* .layout-division main > div {
     @apply bg-secondary;
   } */
 
-  .input-wrap {
+  /* .input-wrap {
     @apply mb-2 relative;
   }
   .input-wrap input,
@@ -315,13 +315,13 @@
   .text-body {
     @apply text-base text-gray-700;
   }
-}
+} */
 
 
 /* width */
-.custom-scroll::-webkit-scrollbar {
+/* .custom-scroll::-webkit-scrollbar {
   width: 10px;
-}
+} */
 
 /* Track */
 /* ::-webkit-scrollbar-track {
@@ -330,18 +330,18 @@
 } */
 
 /* Handle */
-.custom-scroll::-webkit-scrollbar-thumb {
+/* .custom-scroll::-webkit-scrollbar-thumb {
   background: #00ff00;
   border-radius: 5px;
-}
+} */
 
 /* Handle on hover */
-.custom-scroll::-webkit-scrollbar-thumb:hover {
+/* .custom-scroll::-webkit-scrollbar-thumb:hover {
   background: hsl(42, 66%, 74%);
-}
+} */
 
 /* SPINNER */
-.spinner circle {
+/* .spinner circle {
   fill: none;
   stroke-width: 6;
   stroke-dasharray: 1, 200;
@@ -363,10 +363,10 @@
   100% {
     stroke-dashoffset: -110px;
   }
-}
+} */
 
 /* REMOVE ARROW UPANDDOWN */
-input::-webkit-outer-spin-button,
+/* input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
@@ -375,3 +375,4 @@ input::-webkit-inner-spin-button {
 .index {
   border: 1px solid rgba(0, 0, 0, 0.5);
 }
+ } */

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 const SocialShare = ({ title = "Check out this product from Guard-All!" }) => {
   const [platforms, setPlatforms] = useState([]);
-  const IMAGE_BASE_URL = "http://localhost:5000";
+  const IMAGE_BASE_URL = import.meta.env.VITE_API_URL;
   
   // Get current page details
   const currentUrl = encodeURIComponent(window.location.href);

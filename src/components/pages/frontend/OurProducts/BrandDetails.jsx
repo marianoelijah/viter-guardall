@@ -11,7 +11,7 @@ const BrandDetails = () => {
   useEffect(() => {
     const fetchBrandProducts = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/products-by-brand/${slug}`);
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/products-by-brand/${slug}`);
         setProducts(response.data);
         
         // Set the title based on the first product's brand name

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 // 1. Define the Backend URL
-const IMAGE_BASE_URL = "http://localhost:5000";
+const IMAGE_BASE_URL = import.meta.env.VITE_API_URL;
 
 const TrustedClients = () => {
   const [clients, setClients] = useState([]);

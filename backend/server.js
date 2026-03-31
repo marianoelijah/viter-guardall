@@ -232,6 +232,55 @@ app.get('/api/products/brand/:brand', async (req, res) => {
   }
 });
 
+// PRODUCTPAGE.JSX - GET Categories with Nested Brands (For ProductPage.jsx)
+// Example: server.js or your product route file
+app.get('/api/products', async (req, res) => {
+  try {
+    // Joining categories_array with client_brands
+    const [rows] = await db.query(`
+      SELECT 
+        c.id AS cat_id, c.title, c.description, c.img_path,
+        b.id AS brand_id, b.name AS brand_name, b.logo_path, b.link_path
+      FROM categories_array c
+      LEFT JOIN client_brands b ON c.id = b.category_id
+      ORDER BY c.id ASC
+    `);
+
+    // Transforming flat rows into the nested JSON structure your React app expects
+    const formattedData = rows.reduce((acc, row) => {
+      // Check if we already started adding this category to our list
+      let category = acc.find(item => item.id === row.cat_id);
+
+      if (!category) {
+        category = {
+          id: row.cat_id,
+          title: row.title,
+          description: row.description,
+          img: row.img_path,
+          brands: [] // Initialize empty brands array
+        };
+        acc.push(category);
+      }
+
+      // If there is a brand associated with this row, push it into the brands array
+      if (row.brand_id) {
+        category.brands.push({
+          name: row.brand_name,
+          logo: row.logo_path,
+          path: row.link_path
+        });
+      }
+
+      return acc;
+    }, []);
+
+    res.json(formattedData);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Server error fetching products" });
+  }
+});
+
 // OUR CLIENTS
 // 1. Updated API for Clients
 app.get('/api/clients', async (req, res) => {

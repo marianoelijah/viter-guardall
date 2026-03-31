@@ -8,7 +8,6 @@ const OurProductsPage = () => {
   return (
     <>
       <Header />
-      
       <ProductPage />
       <ProductHero />
       <Footer />

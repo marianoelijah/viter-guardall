@@ -16,8 +16,9 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Enable CORS for frontend (React at localhost:3000)
-app.use(cors({ origin: "http://localhost:5000" }));
+// Enable CORS for frontend (React at localhost:5000)
+
+app.use(cors({ origin: `${import.meta.env.VITE_API_URL}` || 'http://localhost:5000' }));
 
 // Parse incoming JSON bodies
 app.use(bodyParser.json());
