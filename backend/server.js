@@ -370,6 +370,17 @@ app.use((err, req, res, next) => {
   res.status(500).send("Something broke!");
 });
 
+// Serve React frontend in production
+app.use(express.static(path.resolve(__dirname, "../dist")));
+
+app.get("/{*any}", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../dist/index.html"));
+});
+
+
+
+
+
 // --- Start Server --- //
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
