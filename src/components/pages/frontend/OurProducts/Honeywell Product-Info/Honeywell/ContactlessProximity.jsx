@@ -46,12 +46,17 @@ const ContactlessProximity = () => {
         {/* Left Content Area */}
         <main className="md:w-[72%]">
           <p className="text-[15px] mb-6 text-black">
-            An easy-to-carry proximity card that utilizes RFID technology. It has a high contactless range and is designed to work with OmniProx™ readers.
+            An easy-to-carry proximity card that utilizes RFID technology. It has a high contactless 
+            range and is designed to work with OmniProx™ readers.
           </p>
 
           <h2 className="font-bold text-xl text-black mb-2">Product Description:</h2>
           <p className="text-[15px] text-black leading-relaxed mb-6">
-            Honeywell OmniClass credentials are designed to work with OmniClass readers. Built on 13.56MHz technology, the OmniClass product line is RFID based and provides excellent contactless sensing range (up to 4.5"). The OmniClass cards are laminated PVC cards that can be printed on both sides using a dye-sublimation or thermal transfer card printer.
+            Honeywell OmniClass credentials are designed to work with OmniClass readers. 
+            Built on 13.56MHz technology, the OmniClass product line is RFID based and provides 
+            excellent contactless sensing range (up to 4.5"). The OmniClass cards are laminated PVC 
+            cards that can be printed on both sides using a dye-sublimation or thermal transfer card 
+            printer.
           </p>
 
           <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>

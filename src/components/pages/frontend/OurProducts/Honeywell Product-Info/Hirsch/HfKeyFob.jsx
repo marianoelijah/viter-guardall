@@ -19,7 +19,7 @@ const HfKeyFob = () => {
     <div className="bg-gray-100 min-h-screen font-sans text-gray-800">
       {/* Blue Header Banner */}
       <header className="bg-[#7f95b8] text-white py-12 px-4 text-center">
-        <h1 className="text-5xl font-bold tracking-tight">
+        <h1 className="text-4xl font-bold tracking-tight">
           uTrust HF Key Fob
         </h1>
       </header>

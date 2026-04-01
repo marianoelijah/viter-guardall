@@ -19,7 +19,7 @@ const GovernmentReader = () => {
     <div className="bg-gray-100 min-h-screen font-sans text-black pb-12">
       {/* Blue Header Banner */}
       <header className="bg-[#7f95b8] text-white py-12 px-4 text-center">
-        <h1 className="text-3xl md:text-5xl font-bold tracking-tight max-w-4xl mx-auto">
+        <h1 className="text-4xl md:text-5xl font-bold tracking-tight max-w-4xl mx-auto">
             uTrust TS Government Readers: <br/>
           Mullion, Wall Mount, and Wall Mount Keypad
         </h1>

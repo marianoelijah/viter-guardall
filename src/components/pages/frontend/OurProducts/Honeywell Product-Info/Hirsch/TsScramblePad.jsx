@@ -21,7 +21,7 @@ const TsScramblePad = () => {
     <div className="bg-gray-100 min-h-screen font-sans text-gray-800 pb-12">
       {/* Header Banner */}
       <header className="bg-[#7f95b8] text-white py-12 px-4">
-        <h1 className="text-5xl md:text-5xl font-bold tracking-tight max-w-5xl mx-auto text-center ">
+        <h1 className="text-4xl md:text-5xl font-bold tracking-tight max-w-5xl mx-auto text-center ">
                  Hirsch TS ScramblePad SC: <br/>
             FICAM-Capable TS ScramblePad with Contact Smart Card Reader
         </h1>

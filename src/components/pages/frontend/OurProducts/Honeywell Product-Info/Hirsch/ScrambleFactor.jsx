@@ -14,7 +14,7 @@ const ScrambleFactor = () => {
     <div className="bg-gray-100 min-h-screen font-sans text-gray-800 pb-12">
       {/* Header Banner */}
       <header className="bg-[#8ba4ca] text-white py-12 px-4 text-center">
-        <h1 className="text-3xl md:text-4xl font-bold tracking-tight max-w-5xl mx-auto uppercase">
+        <h1 className="text-4xl md:text-4xl font-bold tracking-tight max-w-5xl mx-auto uppercase">
           Hirsch Scramble Factor: High-Assurance Biometrics and Multi-Factor Authentication Reader
         </h1>
       </header>

@@ -22,7 +22,7 @@ const ScramblePadReader = () => {
      <div className="bg-gray-100 min-h-screen font-sans text-gray-800 pb-12">
       {/* Blue Header Banner */}
       <header className="bg-[#8ba4ca] text-white py-12 px-4 text-center">
-        <h1 className="text-5xl font-bold tracking-tight uppercase">
+        <h1 className="text-4xl font-bold tracking-tight uppercase">
           Hirsch Scramble Pad Readers
         </h1>
       </header>

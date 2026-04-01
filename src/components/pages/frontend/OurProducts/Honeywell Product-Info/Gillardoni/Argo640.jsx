@@ -52,7 +52,7 @@ const Argo640 = () => {
      <div className="bg-slate-50 min-h-screen font-sans">
       {/* Header Banner */}
       <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
-        <h1 className="text-3xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
+        <h1 className="text-4xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
            ARGO 640: Single View Hand Baggage X-Ray Scanner
         </h1>
       </header>

@@ -63,7 +63,7 @@ const CargoDv = () => {
      <div className="bg-slate-50 min-h-screen font-sans">
       {/* Header Banner */}
       <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
-        <h1 className="text-3xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
+        <h1 className="text-4xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
           FEP CARGO DV
         </h1>
       </header>
@@ -168,7 +168,7 @@ const CargoDv = () => {
                                Contact Guard-All now for a customized security solution
                                that protects what matters most.
                              </p>
-                          <button className="bg-blue-700 hover:bg-blue-400 text-white font-semibold px-4 py-2 rounded w-full">
+                          <button className="bg-blue-700 hover:bg-blue-400 text-white font-semibold px-4 py-2 rounded">
                             <NavLink to="/contacts" className="w-full h-full block">
                             CONTACT US TODAY
                             </NavLink>

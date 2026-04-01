@@ -27,7 +27,7 @@ const AlarmExpansion = () => {
     <div className="bg-gray-200 min-h-screen font-sans text-[#333]">
       {/* Blue Header Banner */}
       <header className="bg-[#7f95b8] text-white py-14 px-6 text-center">
-        <h1 className="text-5xl md:text-5xl font-bold max-w-5xl mx-auto leading-tight">
+        <h1 className="text-4xl md:text-5xl font-bold max-w-5xl mx-auto leading-tight">
           AEB8 Alarm Expansion Board with 8 Additional Line Model Inputs
         </h1>
       </header>

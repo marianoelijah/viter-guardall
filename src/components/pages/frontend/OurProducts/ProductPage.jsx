@@ -49,7 +49,7 @@ const ProductPage = () => {
                 <img 
                   src={`${API_URL}${cat.img}`}
                   alt={cat.title} 
-                  className="w-full h-full object-cover" 
+                  className="w-full h-full object-cover"
                 />
               </div>
 
@@ -58,7 +58,7 @@ const ProductPage = () => {
 
               {/* Brands Section */}
               <div className="mt-auto border-t pt-8">
-                <p className="text-[#f97316] font-black uppercase tracking-[0.25em] mb-6 text-center">
+                <p className="text-[#f97316] text-xl lg:text-lg  font-black uppercase tracking-[0.25em] mb-6 text-center">
                   Click to view more:
                 </p>
                 <div className="grid gap-4">

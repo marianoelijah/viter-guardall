@@ -26,7 +26,7 @@ const Reb8 = () => {
     <div className="bg-slate-50 min-h-screen font-sans text-slate-900">
       {/* Product Banner */}
       <header className="bg-[#7f95b8] text-white py-14 px-6 text-center shadow-inner">
-        <h1 className="text-3xl md:text-5xl font-bold max-w-5xl mx-auto leading-tight">
+        <h1 className="text-4xl md:text-5xl font-bold max-w-5xl mx-auto leading-tight">
           REB8 Relay Expansion Board with 8 Dry Relay Outputs
         </h1>
       </header>

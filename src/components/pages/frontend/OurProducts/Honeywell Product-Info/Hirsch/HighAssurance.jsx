@@ -38,7 +38,7 @@ const HighAssurance = () => {
     <div className="bg-gray-100 min-h-screen font-sans">
       {/* Header Banner */}
       <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
-        <h1 className="text-5xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
+        <h1 className="text-4xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
           Hirsch Scramble Factor: High-Assurance Biometrics and Multi-Factor Authentication Reader
         </h1>
       </header>
