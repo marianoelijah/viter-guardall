@@ -230,7 +230,7 @@ app.get('/api/products/brand/:brand', async (req, res) => {
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
-});
+}); 
 
 // PRODUCTPAGE.JSX - GET Categories with Nested Brands (For ProductPage.jsx)
 // Example: server.js or your product route file

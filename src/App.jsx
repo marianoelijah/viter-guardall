@@ -338,6 +338,8 @@ import BrandProducts from "./components/pages/frontend/OurProducts/Reusable/Bran
 import Pro3200 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Honeywell/Pro3200";
 import ZX82 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/ZX82";
 import AdminPanel from "./components/Admin/AdminPanel";
+import Cochrane from "./components/pages/frontend/OurProducts/product extend/Cochrane/Cochrane";
+import Senstar from "./components/pages/frontend/OurProducts/product extend/senstar/Senstar";
 
 
 
@@ -780,6 +782,12 @@ const App = () => {
 
             {/* Vesda Product Details Route */}
             <Route path="/our-products/vesda/vesda-eves" element={<VesdaEves/>} />
+
+            {/* Cochrane Product Details Route */}
+            <Route path="/products/cochrane" element={<Cochrane/>} />
+
+            {/* Senstar Product Details Route */}
+            <Route path="/products/senstar" element={<Senstar/>} />
 
             {/* Admin Panel Route */}
             <Route path="/admin" element={<AdminPanel/>} />

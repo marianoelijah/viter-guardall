@@ -53,8 +53,8 @@ const ProductPage = () => {
                 />
               </div>
 
-              <h3 className="text-2xl font-bold text-[#1e3a8a] mb-4">{cat.title}</h3>
-              <p className="text-gray-500 mb-8 flex-grow">{cat.description}</p>
+              <h3 className="text-3xl font-bold text-[#1e3a8a] mb-4">{cat.title}</h3>
+              <p className="text-gray-500 mb-8 flex-grow text-xl">{cat.description}</p>
 
               {/* Brands Section */}
               <div className="mt-auto border-t pt-8">
