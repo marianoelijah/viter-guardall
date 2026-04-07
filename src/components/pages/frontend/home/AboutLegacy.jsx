@@ -52,8 +52,8 @@ const AboutLegacy = () => {
           <div className="grid grid-cols-3 gap-8 border-t border-gray-300 pt-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-left">
-                <div className="text-3xl md:text-4xl font-black text-gray-900">{stat.value}</div>
-                <div className="text-xs md:text-sm text-gray-600 mt-2 leading-tight uppercase tracking-wider font-semibold">
+                <div className="text-4xl md:text-5xl font-black text-gray-900">{stat.value}</div>
+                <div className="text-xl md:text-sm text-gray-600 mt-2 leading-tight uppercase tracking-wider font-semibold">
                   {stat.label.split(' ').map((word, i) => (
                     <span key={i} className="block">{word}</span>
                   ))}

@@ -12,7 +12,7 @@ const AdminPanel = () => {
 
   // Fetch brands so we can populate the dropdown menu
   useEffect(() => {
-    axios.get(`${import.meta.env.VITE_API_URL}/api/brands`) // You'll need a simple GET /api/brands route
+    axios.get(`${import.meta.env.VITE_API_URL}/api/brands`)
       .then(res => setBrands(res.data))
       .catch(err => console.log(err));
   }, []);
