@@ -32,10 +32,10 @@ const ProductPage = () => {
   }
 
   return (
-    <section className="py-12 md:py-24 bg-[#f4f7fa] overflow-x-hidden">
+    <section className="py-12 md:py-24 bg-[#c6d3e0] overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="text-center mb-12 md:mb-24">
-          <h1 className="text-4xl md:text-7xl font-black text-[#2257a0] mb-6 tracking-tight">
+          <h1 className="text-5xl md:text-7xl font-bold text-[#2257a0] mb-4 md:mb-6 tracking-tight">
             Our Products
           </h1>
         </div>

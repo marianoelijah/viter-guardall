@@ -88,7 +88,9 @@ const GuardAllLanding = () => {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.03] text-[4rem] sm:text-[8rem] md:text-[12rem] font-black select-none pointer-events-none whitespace-nowrap">
             GUARD-ALL
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold text-[#2257a0] mb-4 md:mb-6 tracking-tight">Our Clients</h1>
+          <h1 className="text-5xl md:text-7xl font-bold text-[#2257a0] mb-4 md:mb-6 tracking-tight">
+            Our Clients
+          </h1>
           <p className="text-gray-600 max-w-3xl mx-auto text-lg md:text-xl">Trusted by world-class organizations for world-class security.</p>
         </header>
 

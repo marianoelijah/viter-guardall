@@ -31,7 +31,9 @@ const What = () => {
         
         {/* Header Section */}
         <div className="mb-16">
-          <h2 className="text-4xl md:text-7xl font-black text-gray-900 mb-4 uppercase tracking-tight">What We Do</h2>
+          <h2 className="text-4xl md:text-7xl font-black text-gray-900 mb-4 uppercase tracking-tight">
+            What We Do
+          </h2>
           <p className="text-gray-600 text-xl max-w-4xl leading-relaxed">
             We are dedicated to deliver you a holistic approach to electronic security. 
             Our attention to service and 24/7 team will ensure that your company's 
