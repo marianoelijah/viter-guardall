@@ -27,7 +27,7 @@ const Who = () => {
     <section className="bg-white pt-16 font-poppins">
       <div className="text-center px-6 h-full">
         {/* Section Title from DB */}
-        <h1 className="text-5xl md:text-7xl text-[#2257a0] mb-6 drop-shadow-sm tracking-tigh">
+        <h1 className="text-5xl md:text-7xl font-bold text-[#2257a0] mb-4 md:mb-6 tracking-tight">
           {data.title}
         </h1>
 

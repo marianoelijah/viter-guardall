@@ -91,7 +91,9 @@ const GuardAllLanding = () => {
           <h1 className="text-5xl md:text-7xl font-bold text-[#2257a0] mb-4 md:mb-6 tracking-tight">
             Our Clients
           </h1>
-          <p className="text-gray-600 max-w-3xl mx-auto text-lg md:text-xl">Trusted by world-class organizations for world-class security.</p>
+          <p className="text-black max-w-3xl mx-auto text-xl md:text-xl">
+            We trust Guard-All because they are an exclusive distributor of world-class products to ensure our company gets world-class security
+          </p>
         </header>
 
         {Object.entries(groupedClients).map(([sectorName, clients]) => (

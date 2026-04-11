@@ -4,7 +4,7 @@ import Header from '../../../partials/Header';
 import Footer from '../../../partials/Footer';
 import SocialShare from '../../Reusable/SocialShare';
 
-const ZX8 = () => {
+const Zx8 = () => {
   const productData = {
     title: "ZX8 8-Zone Expansion Module",
     subtitle: "Connects on the keypad bus of EVO, Spectra, or MG Panels.",
@@ -180,4 +180,4 @@ const ZX8 = () => {
   );
 };
 
-export default ZX8;
+export default Zx8;

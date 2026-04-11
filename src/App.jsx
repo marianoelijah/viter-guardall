@@ -259,7 +259,7 @@ import SP5500 from "./components/pages/frontend/OurProducts/Honeywell Product-In
 import SP4000 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/SP4000";
 import SP65 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/SP65";
 
-import ZX8 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/Zx8";
+// import Zx8 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/Zx8";
 import PGM82 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/PGM82";
 import PGM4 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/PGM4";
 import RX1 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/RX1";
@@ -345,6 +345,7 @@ import Vehicle from "./components/pages/frontend/OurProducts/Honeywell Product-I
 import Floating from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Floating";
 import Fence from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Fence";
 import Buried from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Buried";
+import Zx8 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/Zx8";
 
 
 
@@ -721,7 +722,7 @@ const App = () => {
             <Route path="/our-products/paradox/sp4000-controller" element={<SP4000/>} />
             <Route path="/our-products/paradox/expandable-32-zone-control-panel" element={<SP65/>} />
             <Route path="/our-products/paradox/zx82-expansion-module" element={<ZX82/>} />
-            <Route path="/our-products/paradox/zx8-expansion-module" element={<ZX8/>} />
+            <Route path="/our-products/paradox/zx8-expansion-module" element={<Zx8/>} />
             <Route path="/our-products/paradox/pgm82-expansion-module" element={<PGM82/>} />
             <Route path="/our-products/paradox/pgm4-expansion-module" element={<PGM4/>} />
             <Route path="/our-products/paradox/rx1-wireless-receiver" element={<RX1/>} />
