@@ -19,8 +19,24 @@ const __dirname = path.dirname(__filename);
 // app.use(cors());
 app.use(express.json());
 
+// This cors is in public state for testing, but you should restrict it to your frontend URL in production
+// app.use(cors({
+//   origin: "*"
+// }));
+
+// This is the safer version for production, allowing only your frontend URL
 app.use(cors({
-  origin: "*"
+  origin: process.env.CLIENT_URL || "http://localhost:5173",
+  credentials: true
+}));
+
+app.use(cors({
+  origin: [
+    "http://localhost:5173", 
+    "http://192.168.0.57:5173", // For development
+    "http://192.168.0.57:5000"  // For production/mobile testing
+  ],
+  credentials: true
 }));
 
 // The '..' tells Node to go UP one folder level, out of 'backend' and into 'viter-guardall'
@@ -44,7 +60,7 @@ app.use("/api/products-main", productsRouter);
 // --- Primary API Routes ---
 
 // 1. Root & Test
-app.get("/", (req, res) => res.send("Guard-All Backend Running"));
+// app.get("/", (req, res) => res.send("Guard-All Backend Running"));
 app.get('/test', (req, res) => res.send("The server is alive and talking!"));
 
 // 2. GET Brands (For Admin Dropdown)
@@ -370,18 +386,23 @@ app.use((err, req, res, next) => {
   res.status(500).send("Something broke!");
 });
 
-// Serve React frontend in production
+// The Final Production Setup
 app.use(express.static(path.resolve(__dirname, "../dist")));
 
-app.get("/{*any}", (req, res) => {
+app.get(/.*/, (req, res) => {
   res.sendFile(path.resolve(__dirname, "../dist/index.html"));
 });
 
 
 
-
-
 // --- Start Server --- //
-app.listen(PORT, () => {
+
+// This is a original localhost log
+// app.listen(PORT, () => {
+//   console.log(`Server running on port ${PORT}`);
+// });
+
+// The "0.0.0.0" tells the server to listen on all available network interfaces, not just localhost.
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`Server running on port ${PORT}`);
 });
