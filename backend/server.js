@@ -397,11 +397,6 @@ app.get(/.*/, (req, res) => {
 
 // --- Start Server --- //
 
-// This is a original localhost log
-// app.listen(PORT, () => {
-//   console.log(`Server running on port ${PORT}`);
-// });
-
 // The "0.0.0.0" tells the server to listen on all available network interfaces, not just localhost.
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`Server running on port ${PORT}`);
