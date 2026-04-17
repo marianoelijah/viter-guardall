@@ -5,24 +5,24 @@ import Footer from '../../../partials/Footer';
 import SocialShare from '../../Reusable/SocialShare';
 
 
-const ClearVu = () => {
+const FiberPatrol = () => {
   const specs = [
-    { label: "Panel Width", value: "3,297 mm or 3,305 mm wide" },
-    { label: "Mesh Formation", value: "$76.2\text{ mm} \times 12.7\text{ mm}$" },
-    { label: "Wire Diameter", value: "nominal diameter of 3.0 mm to 4.0 mm (high-tensile steel)" },
-    { label: "Materials", value: "Tempered or laminated glass" },
-    { label: "Post Type: Cochrane Taper Locking Post", value: "Cochrane Taper Locking Post" },
-    { label: "Rigidity Features", value: "Enhanced structural integrity" },
-    { label: "Marine Fusion Bond", value: "Specialized bonding for marine environments" },
-    { label: "Defense Rating", value: "Meets industry standards for security and durability" }
+    { label: "Detection Range", value: "Up to 80 km (49.7 mi) per processor for fence/buried applications; up to 100 km for pipelines."},
+    { label: "Location Accuracy", value: "$\pm 4\text{ meters}$ ($13\text{ ft}$)."},
+    { label: "Channels", value: "Dual-channel processing (supports cut-immune ring configurations)."},
+    { label: "Detection Principle", value: "Phase-OTDR (Optical Time Domain Reflectometry) using a single-mode fiber." },
+    { label: "Cut-Immunity", value: "In a loop configuration, detection continues up to the point of a cable cut from both sides." },
+    { label: "Environmental", value: "Fiber is EMI/RFI and lightning immune; Processor operates at $0\text{°C}$ to $50\text{°C}$." },
+    { label: "Processor Hardware", value: "4U rack-mount unit, Windows 10 Pro 64-bit, Dual Hot-swappable Power Supplies." },
+    { label: "Power Consumption", value: "200W maximum." },
+    { label: "Integration", value: "Native integration with Senstar Symphony, plus TCP/IP, API, and optional Relay I/O." }
   ];
 
   const productFeatures = [
-    "High transparency",
-    "Minimal hardware",
-    "Acoustic control",
-    "Customizable layouts",
-    "Safety and durability"
+    "Supports virtually all fence types",
+    "If sensor cable is cut, detection continues up to cut location",
+    "Full cut-immune configuration available",
+    "Reliably detects intrusions in the presence of non-localized environmental noise"
   ];
 
   return (
@@ -32,7 +32,7 @@ const ClearVu = () => {
       {/* Header Banner */}
       <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
         <h1 className="text-3xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
-          ClearVu Invisible Wall
+          FiberPatrol FP1150
         </h1>
       </header>
 
@@ -41,13 +41,13 @@ const ClearVu = () => {
         {/* Main Content Container */}
         <main className="lg:w-3/4 bg-gray-200 p-8 shadow-sm">
             <p className="text-gray-800 text-[17px] mb-6">
-               Cochrane ClearVu Invisible Walls are primarily frameless glass wall systems that integrate clear glass panels with minimal hardware to maximize transparency and visual continuity. They are often used in commercial offices, retail spaces, healthcare environments, and luxury homes where an open, uncluttered look is desired while still providing a physical barrier.
+               FiberPatrol FP1150 is a perimeter intrusion detection system that can be fence-mounted, buried, or deployed in a wall-top configuration. It can also be used to protect data conduits and buried pipelines. Advanced adaptive signal processing along with certified SMS/VMS integration options ensure the highest level of security and performance.
             </p>
 
             <section className="mb-8">
               <h2 className="font-bold text-xl mb-2 text-black">Product Description:</h2>
               <p className="text-gray-800 text-[17px] leading-relaxed">
-                Cochrane ClearVu Invisible Walls are designed to create a seamless and open environment while providing the necessary separation and security. These walls typically consist of tempered or laminated glass panels that are held in place with minimal hardware, such as discreet clamps or channels, to maintain a clean and modern aesthetic. The glass used in ClearVu Invisible Walls is often treated with special coatings to enhance durability, reduce glare, and improve energy efficiency. These walls can be customized to fit various architectural styles and can be used for both interior and exterior applications, making them a versatile choice for creating visually stunning spaces without sacrificing functionality.
+                FiberPatrol FP1150 builds upon Senstar’s 40 years of perimeter intrusion detection experience to offer a system that detects and reports both common and sophisticated intrusion attempts almost instantly. Unlike generic AI systems that require extensive training and may fail when presented with unseen intrusion data, FiberPatrol is designed with intelligence built-in, works out of the box, and offers the highest levels of performance and system confidence.
               </p>
 
                <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
@@ -90,7 +90,7 @@ const ClearVu = () => {
                          </div>
                        </section>
                        
-            
+            {/* Tags & Social */}
         
 
             {/* SHARE SECTION */}
@@ -101,7 +101,7 @@ const ClearVu = () => {
           {/* Sidebar */}
               <aside className="lg:w-1/4 space-y-6"> 
                      <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
-                        <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By COCHRANE</h3>
+                        <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By SENSTAR</h3>
                         <ul className="text-xs space-y-4 text-gray-500 transition-colors">
                           <li className='cursor-pointer hover:text-[#f08c09]'>Onity DirectKey with Serene</li>
                           <li className='cursor-pointer hover:text-[#f08c09]'>MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs</li>
@@ -151,4 +151,4 @@ const ClearVu = () => {
   );
 };
 
-export default ClearVu;
+export default FiberPatrol;

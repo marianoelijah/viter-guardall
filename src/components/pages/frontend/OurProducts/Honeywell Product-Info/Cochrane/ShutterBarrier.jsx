@@ -5,24 +5,25 @@ import Footer from '../../../partials/Footer';
 import SocialShare from '../../Reusable/SocialShare';
 
 
-const ClearVu = () => {
+const ShutterBarrier = () => {
   const specs = [
-    { label: "Panel Width", value: "3,297 mm or 3,305 mm wide" },
-    { label: "Mesh Formation", value: "$76.2\text{ mm} \times 12.7\text{ mm}$" },
-    { label: "Wire Diameter", value: "nominal diameter of 3.0 mm to 4.0 mm (high-tensile steel)" },
-    { label: "Materials", value: "Tempered or laminated glass" },
-    { label: "Post Type: Cochrane Taper Locking Post", value: "Cochrane Taper Locking Post" },
-    { label: "Rigidity Features", value: "Enhanced structural integrity" },
-    { label: "Marine Fusion Bond", value: "Specialized bonding for marine environments" },
-    { label: "Defense Rating", value: "Meets industry standards for security and durability" }
+    { label: "Security Rating", value: "Category IV (Defence Rated)" },
+    { label: "Material", value: "High-tensile steel (Galvanized or Zincalu-Super)" },
+    { label: "Panel Type", value: "Solid steel shutters / solid steel panels" },
+    { label: "Standard Heights", value: "1.8 m, 2.1 m, 2.4 m, 3.0 m (Custom heights available)" },
+    { label: "Post System", value: "Taper Locking Post (bolted on the secure side)" },
+    { label: "Coating Options", value: "Marine Fusion Bond (Coastal), Polyester Powder Coating, or Hot-Dipped Galvanized" },
+    { label: "Ballistic Protection", value: "Customizable levels (tested against various ammunition types)" },
+    { label: "Wind Loading", value: "Engineered to withstand high wind loads despite being a solid surface" },
+    { label: "Compatible Toppings", value: "Shark Tooth, Castle Spikes, Electric Fencing, or Razor Wire" }
   ];
 
   const productFeatures = [
-    "High transparency",
-    "Minimal hardware",
-    "Acoustic control",
-    "Customizable layouts",
-    "Safety and durability"
+    "Controlled Visibility",
+    "Ballistic Shielding",
+    "Modular & Adaptable",
+    "Anti-Climb & Anti-Cut",
+    "Seamless Integration"
   ];
 
   return (
@@ -32,7 +33,7 @@ const ClearVu = () => {
       {/* Header Banner */}
       <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
         <h1 className="text-3xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
-          ClearVu Invisible Wall
+          ClearVu Shutter Barrier
         </h1>
       </header>
 
@@ -41,13 +42,13 @@ const ClearVu = () => {
         {/* Main Content Container */}
         <main className="lg:w-3/4 bg-gray-200 p-8 shadow-sm">
             <p className="text-gray-800 text-[17px] mb-6">
-               Cochrane ClearVu Invisible Walls are primarily frameless glass wall systems that integrate clear glass panels with minimal hardware to maximize transparency and visual continuity. They are often used in commercial offices, retail spaces, healthcare environments, and luxury homes where an open, uncluttered look is desired while still providing a physical barrier.
+               The ClearVu Shutter Barrier is a Category IV high-security perimeter fence. It serves as a hybrid solution for critical infrastructure that requires the strength of a defense-rated fence but must also hide sensitive operations from public view. It is particularly effective for sites that face "hostile surveillance" risks or require protection against ballistic threats.
             </p>
 
             <section className="mb-8">
               <h2 className="font-bold text-xl mb-2 text-black">Product Description:</h2>
               <p className="text-gray-800 text-[17px] leading-relaxed">
-                Cochrane ClearVu Invisible Walls are designed to create a seamless and open environment while providing the necessary separation and security. These walls typically consist of tempered or laminated glass panels that are held in place with minimal hardware, such as discreet clamps or channels, to maintain a clean and modern aesthetic. The glass used in ClearVu Invisible Walls is often treated with special coatings to enhance durability, reduce glare, and improve energy efficiency. These walls can be customized to fit various architectural styles and can be used for both interior and exterior applications, making them a versatile choice for creating visually stunning spaces without sacrificing functionality.
+                Unlike the mesh-only design of the Invisible Wall, the Shutter Barrier features solid steel shutters (slats) integrated into the security framework. These shutters can be configured to be permanent, adjustable, or even removable depending on the site’s evolving security needs. It effectively creates a "blind" that prevents outsiders from seeing layouts, personnel routines, or high-value assets within the perimeter.
               </p>
 
                <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
@@ -151,4 +152,4 @@ const ClearVu = () => {
   );
 };
 
-export default ClearVu;
+export default ShutterBarrier;

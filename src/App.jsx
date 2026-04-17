@@ -346,6 +346,10 @@ import Floating from "./components/pages/frontend/OurProducts/Honeywell Product-
 import Fence from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Fence";
 import Buried from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Buried";
 import Zx8 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/Zx8";
+import ShutterBarrier from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/ShutterBarrier";
+import ClearVu from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/ClearVu";
+import FiberPatrol from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/FiberPatrol";
+import SenstarLM100 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/SenstarLM100";
 
 
 
@@ -794,11 +798,15 @@ const App = () => {
             <Route path="/products/cochrane/razor-mesh" element={<Razor/>} />
             <Route path="/products/cochrane/vehicle-barrier" element={<Vehicle/>} />
             <Route path="/products/cochrane/floating-barrier" element={<Floating/>} />
+            <Route path="/our-products/cochrane/invisible-walls" element={<ClearVu/>} />
+            <Route path="/our-products/cochrane/shutter-barrier" element={<ShutterBarrier/>} />
 
             {/* Senstar Product Details Route */}
             <Route path="/products/senstar" element={<Senstar/>} />
             <Route path="/our-products/senstar/fence-sensor" element={<Fence/>} />
             <Route path="/our-products/senstar/buried-sensor" element={<Buried/>} />
+            <Route path="/our-products/senstar/fiber-patrol" element={<FiberPatrol/>} />
+            <Route path="/our-products/senstar/senstar-lm100" element={<SenstarLM100/>} />
 
             {/* Admin Panel Route */}
             <Route path="/admin" element={<AdminPanel/>} />
