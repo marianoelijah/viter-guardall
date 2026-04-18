@@ -90,7 +90,6 @@ const SenstarLM100 = () => {
                          </div>
                        </section>
                        
-            {/* Tags & Social */}
         
 
             {/* SHARE SECTION */}

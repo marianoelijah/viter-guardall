@@ -350,6 +350,8 @@ import ShutterBarrier from "./components/pages/frontend/OurProducts/Honeywell Pr
 import ClearVu from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/ClearVu";
 import FiberPatrol from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/FiberPatrol";
 import SenstarLM100 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/SenstarLM100";
+import FiberPatrolFP400 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/FiberPatrolFP400";
+import SmartLidar from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/SmartLidar";
 
 
 
@@ -807,6 +809,8 @@ const App = () => {
             <Route path="/our-products/senstar/buried-sensor" element={<Buried/>} />
             <Route path="/our-products/senstar/fiber-patrol" element={<FiberPatrol/>} />
             <Route path="/our-products/senstar/senstar-lm100" element={<SenstarLM100/>} />
+            <Route path="/our-products/senstar/fiberpatrol-fp400" element={<FiberPatrolFP400/>} />
+            <Route path="/our-products/senstar/smart3d-lidar" element={<SmartLidar/>} />
 
             {/* Admin Panel Route */}
             <Route path="/admin" element={<AdminPanel/>} />
