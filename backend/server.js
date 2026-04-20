@@ -28,13 +28,12 @@ app.use(cors({
 // Clean production CORS setup
 const allowedOrigins = [
   "http://localhost:5173", 
-  "https://viter-guardall.vercel.app", // Your Vercel domain
-  "https://guardall.com"              // Any other custom domains
+  "https://guardall.vercel.app",       // Add this one!
+  "https://viter-guardall.vercel.app"  // And this one just in case
 ];
 
 app.use(cors({
   origin: function (origin, callback) {
-    // Allow requests with no origin (like mobile apps or curl)
     if (!origin) return callback(null, true);
     if (allowedOrigins.indexOf(origin) === -1) {
       return callback(new Error("CORS policy blocked this origin."), false);
