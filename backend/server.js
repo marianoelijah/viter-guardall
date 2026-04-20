@@ -19,12 +19,6 @@ const __dirname = path.dirname(__filename);
 // app.use(cors());
 app.use(express.json());
 
-// This is the safer version for production, allowing only your frontend URL
-app.use(cors({
-  origin: process.env.CLIENT_URL || "http://localhost:5173",
-  credentials: true
-}));
-
 // Clean production CORS setup
 const allowedOrigins = [
   "http://localhost:5173", 
