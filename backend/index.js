@@ -20,6 +20,11 @@ const PORT = process.env.PORT || 5000;
 
 app.use(cors({ origin: `${import.meta.env.VITE_API_URL}` || 'http://localhost:5000' }));
 
+const cors = require('cors');
+app.use(cors({
+  origin: 'https://viter-guardall.vercel.app' // Allow your Vercel site to talk to Railway
+}));
+
 // Parse incoming JSON bodies
 app.use(bodyParser.json());
 
