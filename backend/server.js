@@ -19,23 +19,28 @@ const __dirname = path.dirname(__filename);
 // app.use(cors());
 app.use(express.json());
 
-// This cors is in public state for testing, but you should restrict it to your frontend URL in production
-// app.use(cors({
-//   origin: "*"
-// }));
-
 // This is the safer version for production, allowing only your frontend URL
 app.use(cors({
   origin: process.env.CLIENT_URL || "http://localhost:5173",
   credentials: true
 }));
 
+// Clean production CORS setup
+const allowedOrigins = [
+  "http://localhost:5173", 
+  "https://viter-guardall.vercel.app", // Your Vercel domain
+  "https://guardall.com"              // Any other custom domains
+];
+
 app.use(cors({
-  origin: [
-    "http://localhost:5173", 
-    "http://192.168.0.57:5173", // For development
-    "http://192.168.0.57:5000"  // For production/mobile testing
-  ],
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) === -1) {
+      return callback(new Error("CORS policy blocked this origin."), false);
+    }
+    return callback(null, true);
+  },
   credentials: true
 }));
 
@@ -387,11 +392,12 @@ app.use((err, req, res, next) => {
 });
 
 // The Final Production Setup
-app.use(express.static(path.resolve(__dirname, "../dist")));
+// You are hosting your frontend on Vercel, not inside your Railway backend. Your Railway backend should only be an API. Vercel handles the dist folder and the routing for the website itself.
+// app.use(express.static(path.resolve(__dirname, "../dist")));
 
-app.get(/.*/, (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../dist/index.html"));
-});
+// app.get(/.*/, (req, res) => {
+//   res.sendFile(path.resolve(__dirname, "../dist/index.html"));
+// });
 
 
 
