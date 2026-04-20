@@ -41,13 +41,20 @@ const SenstarLM100 = () => {
         {/* Main Content Container */}
         <main className="lg:w-3/4 bg-gray-200 p-8 shadow-sm">
             <p className="text-gray-800 text-[17px] mb-6">
-               SenstarLM100 FP1150 is a perimeter intrusion detection system that can be fence-mounted, buried, or deployed in a wall-top configuration. It can also be used to protect data conduits and buried pipelines. Advanced adaptive signal processing along with certified SMS/VMS integration options ensure the highest level of security and performance.
+               SenstarLM100 FP1150 is a perimeter intrusion detection system that can be fence-mounted, 
+               buried, or deployed in a wall-top configuration. It can also be used to protect data 
+               conduits and buried pipelines. Advanced adaptive signal processing along with certified 
+               SMS/VMS integration options ensure the highest level of security and performance.
             </p>
 
             <section className="mb-8">
               <h2 className="font-bold text-xl mb-2 text-black">Product Description:</h2>
               <p className="text-gray-800 text-[17px] leading-relaxed">
-                SenstarLM100 FP1150 builds upon Senstar’s 40 years of perimeter intrusion detection experience to offer a system that detects and reports both common and sophisticated intrusion attempts almost instantly. Unlike generic AI systems that require extensive training and may fail when presented with unseen intrusion data, SenstarLM100 is designed with intelligence built-in, works out of the box, and offers the highest levels of performance and system confidence.
+                SenstarLM100 FP1150 builds upon Senstar’s 40 years of perimeter intrusion detection experience 
+                to offer a system that detects and reports both common and sophisticated intrusion attempts 
+                almost instantly. Unlike generic AI systems that require extensive training and may fail when 
+                presented with unseen intrusion data, SenstarLM100 is designed with intelligence built-in, 
+                works out of the box, and offers the highest levels of performance and system confidence.
               </p>
 
                <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>

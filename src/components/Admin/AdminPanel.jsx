@@ -59,7 +59,7 @@ const AdminPanel = () => {
 
         {/* Product Description */}
         <div>
-          <label className="block font-bold">Description</label>
+          <label className="block font-bold">Product Description</label>
           <textarea 
             className="w-full p-3 border rounded h-32"
             value={formData.product_description}

@@ -235,9 +235,6 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
 
                 </div>
             
-
-           
-
                {/* SHARE SECTION */}
             <SocialShare title="Check out this product!" />
 
@@ -299,13 +296,12 @@ const FiberPatrolFP400 = () => {
     description: "FiberPatrol FP400 is a zone-reporting fence-mounted fiber optic intrusion detection sensor that detects intruders climbing, cutting or lifting the fence fabric. The fiber optic sensor cable is completely immune to EMI and lightning and is intrinsically safe in explosive atmospheres, making it ideal for sites like electrical substations, pipeline valve and pump stations, oil and gas well-pads, and other critical infrastructure sites.",
     features: [
       "The FP400 supports up to 20 km (12.4 mi) of fiber-optic lead-in cable between the processor and the start of the detection zones, enabling the processor to be installed away from the perimeter in a secure area",
-      "The FP400 works with chain-link, standard welded mesh, expanded metal mesh and palisade fences. Each FP400 processor supports four zones of detection",
+      "The FP400 works with chain-link, standard welded mesh, expanded metal mesh and a palisade fences. Each FP400 processor supports four zones of detection",
       "The FP400 uses the same configuration and integration software as other Senstar products, reducing training requirements while increasing operational efficiencies.",
       "FP400 sensor cable can be installed on swinging gates to provide detection, and the gate area itself can be configured as an independent detection zone.",
-      "With built-in Ethernet, on-board relay outputs, auxiliary inputs, and support for RS-422 and fiber optic communication cards, the FP400 can work with virtually any security system."
+      "With built-in Ethernet, on-board relay outputs, auxiliary inputs, and support for RS-422 and fiber optic communication cards, the FP400 can work with virtually any security system.",
+      "The FP400 is designed to operate in harsh outdoor environments, with an operating temperature range of 40°C to +70°C (-40°F to +158°F) and an IP30 rating (or IP67 when used with the optional Field Enclosure Kit). The sensor cable is UV-resistant and can be armored for high-damage areas.",
     ],
-
-   
 
     sidebarItems: [
       "Onity DirectKey with Serene",
