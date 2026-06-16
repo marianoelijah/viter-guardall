@@ -35,7 +35,7 @@ const SocialShare = ({ title = "Check out this product from Guard-All!" }) => {
             target="_blank"
             rel="noopener noreferrer"
             title={`Share on ${social.name}`}
-            className="w-10 h-10 bg-[#0d3874] rounded-lg flex items-center justify-center hover:bg-[#f3760f] transition-all duration-300 transform hover:scale-110 shadow-md"
+            className="w-10 h-10 bg-[#0d3874] rounded-lg flex items-center justify-center hover:bg-[#ff5f31] transition-all duration-300 transform hover:scale-110 shadow-md"
           >
             <img 
               src={`${IMAGE_BASE_URL}${social.icon_path}`} 

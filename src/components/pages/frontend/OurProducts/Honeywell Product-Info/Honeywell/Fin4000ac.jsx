@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import SocialShare from "@/components/pages/frontend/OurProducts/Reusable/SocialShare";
 
 
+
 const Fin4000ac = () => {
   return (
     <>
@@ -28,7 +29,7 @@ const Fin4000ac = () => {
             {/* LEFT CONTENT */}
             <div className="lg:col-span-2 bg-gray-300 p-8 rounded shadow-sm">
 
-              <p className="text-black font-bold mb-6">
+              <p className="text-[15px] font-bold mb-6">
                 A slender, compact fingerprint device that can provide a high level of
                 security for your property and can effectively identify fake fingerprints.
               </p>
@@ -94,8 +95,8 @@ const Fin4000ac = () => {
 
               {/* TAGS */}
               <div className="mt-8 flex gap-3 mb-5">
-                <span className="rounded text-white bg-red-500 px-2 py-1 font-bold">Honeywell</span>
-                <span className="rounded text-white bg-red-500 px-2 py-1 font-bold">Access Control</span>
+                <span className="rounded text-white bg-[#ff5f31]  px-2 py-1 font-bold">Honeywell</span>
+                <span className="rounded text-white bg-[#ff5f31] px-2 py-1 font-bold">Access Control</span>
               </div>
 
               <hr className="border-gray-400 my-6" />
@@ -107,36 +108,53 @@ const Fin4000ac = () => {
 
             {/* RIGHT SIDEBAR */}
             <div className="space-y-6">
+                {/* MORE BY SECTION */}
               <div className="bg-gray-300 p-6 rounded shadow-sm border border-gray-400">
                 <h3 className="font-bold text-black text-xl mb-4 border-b border-black pb-2 uppercase">More By Honeywell</h3>
-                <ul className="text-sm space-y-4 text-gray-700">
-                  <li className='cursor-pointer hover:text-[#f3760f] transition-colors'>Onity DirectKey with Serene</li>
-                  <li className='cursor-pointer hover:text-[#f3760f] transition-colors'>MAD-401 and MAD-402 Series Modules</li>
-                  <li className='cursor-pointer hover:text-[#f3760f] transition-colors'>INR 415 256-Channel RAID Standalone</li>
-                  <li className='cursor-pointer hover:text-[#f3760f] transition-colors'>GNR 340 100-Channel Tower NVR</li>
+                <ul className="space-y-4 text-gray-700">
+                  <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
+                  <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>Onity DirectKey with Serene </li>
+                  </NavLink>
+                  <NavLink to="/our-products/detnov/addressable-sounder" className='block'>
+                    <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>MAD-401 and MAD-402 Series Modules</li>
+                  </NavLink>
+                  <NavLink to="/our-products/acti/bay-raid-backmount-standalone" className='block'>
+                    <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>INR 415 256-Channel RAID Standalone</li>
+                  </NavLink>
+                  <NavLink to="/our-products/acti/channel-tower-strandalone" className='block'>
+                    <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>GNR 340 100-Channel Tower NVR</li>
+                  </NavLink>
+                  <NavLink to="/our-products/acti/bay-raid-backmount-standalone" className='block'>
+                  <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>INR 415 256-Channel RAID Standalone</li>
+                  </NavLink>
+                  <NavLink to="/our-products/acti/channel-tower-strandalone" className='block'>
+                    <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>GNR 340 100-Channel Tower NVR</li>
+                  </NavLink>
                 </ul>
               </div>
 
               {/* CTA Card */}
-              <div
-                className="bg-blue-600 text-white p-6 rounded shadow-md overflow-hidden relative min-h-[220px] flex items-center"
-                style={{
-                  backgroundImage: `linear-gradient(rgba(13, 56, 116, 0.85), rgba(13, 56, 116, 0.85)), url('/src/assets/image/Our Products/quickalert.jpg')`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                }}
-              >
-                <div className="relative z-10 w-full text-center">
-                  <h3 className="text-xl font-bold mb-3 uppercase tracking-tight">Secure Your Peace Of Mind</h3>
-                  <p className="text-sm mb-6 opacity-90">Contact Guard-All now for a customized security solution.</p>
-                  <NavLink 
-                    to="/contacts" 
-                    className="inline-block bg-[#f3760f] hover:bg-white hover:text-[#0d3874] text-white font-bold py-3 px-6 rounded transition-all duration-300 w-full"
-                  >
-                    CONTACT US TODAY
-                  </NavLink>
-                </div>
-              </div>
+<div 
+  className="relative min-h-[240px] overflow-hidden rounded-2xl p-8 text-white shadow-md bg-cover bg-center bg-blend-multiply bg-blue-900/85"
+  style={{ backgroundImage: "url('/dist/assets/image/Our Products/quickalert.jpg')" }}
+>
+  <div className="relative z-10 max-w-3xl">
+    <h3 className="mb-4 text-2xl font-bold leading-tight tracking-wide">
+      Secure Your Peace Of Mind Today
+    </h3>
+    
+    <p className="mb-6 text-sm md:text-base text-gray-200 font-medium leading-relaxed">
+      Contact Guard-All now for a customized security solution that protects what matters most.
+    </p>
+
+    <NavLink 
+      to="/contacts" 
+      className="inline-block w-full rounded-xl bg-[#0f3e90] px-6 py-3 text-center text-sm font-semibold tracking-wider text-white transition-colors hover:bg-[#ff5f31] sm:w-auto"
+    >
+      CONTACT US TODAY
+    </NavLink>
+  </div>
+</div>
             </div>
 
           </div>

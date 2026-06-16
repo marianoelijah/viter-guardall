@@ -307,12 +307,12 @@ const Serene = () => {
                          <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
                        <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By ONITY</h3>
                        <ul className="text-xs space-y-4 text-gray-500 transition-colors">
-                         <li className='cursor-pointer hover:text-[#f08c09]'>Onity DirectKey with Serene</li>
-                         <li className='cursor-pointer hover:text-[#f08c09]'>MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs</li>
-                         <li className='cursor-pointer hover:text-[#f08c09]'>INR 415 256-Channel 12 Bay RAID Rackmount Standalone</li>
-                         <li className='cursor-pointer hover:text-[#f08c09]'>GNR 340 100-Channel Tower Standalone</li>
-                         <li className='cursor-pointer hover:text-[#f08c09]'>ENR 130 16-Channel Desktop Standalone NVR - No HDD Included</li>
-                         <li className='cursor-pointer hover:text-[#f08c09]'>Z86 Outdoor Network Dome Camera with Night Vision</li>
+                         <li className='cursor-pointer hover:text-[#ff5f31]'>Onity DirectKey with Serene</li>
+                         <li className='cursor-pointer hover:text-[#ff5f31]'>MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs</li>
+                         <li className='cursor-pointer hover:text-[#ff5f31]'>INR 415 256-Channel 12 Bay RAID Rackmount Standalone</li>
+                         <li className='cursor-pointer hover:text-[#ff5f31]'>GNR 340 100-Channel Tower Standalone</li>
+                         <li className='cursor-pointer hover:text-[#ff5f31]'>ENR 130 16-Channel Desktop Standalone NVR - No HDD Included</li>
+                         <li className='cursor-pointer hover:text-[#ff5f31]'>Z86 Outdoor Network Dome Camera with Night Vision</li>
                        </ul>
                      </div>
            

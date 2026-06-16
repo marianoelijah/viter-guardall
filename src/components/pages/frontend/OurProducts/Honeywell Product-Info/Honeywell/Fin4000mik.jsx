@@ -6,9 +6,8 @@ import SocialShare from "../../Reusable/SocialShare";
 
 const Fin4000mik = () => {
   return (
-    <>
-     <Header />
     <div className="min-h-screen bg-gray-100">
+      <Header />
 
       {/* HEADER */}
       <div className="bg-[#7f95b8] py-16 text-center">
@@ -27,7 +26,7 @@ const Fin4000mik = () => {
           {/* LEFT SECTION */}
           <div className="lg:col-span-2 bg-gray-300 p-8 rounded shadow-sm">
 
-            <p className="text-black mb-6">
+            <p className="text-black text-[17px] mb-6">
               A standard fingerprint device with touch keypads and color LCD displays.
               It can accurately identify wet and dry fingerprints.
             </p>
@@ -36,7 +35,7 @@ const Fin4000mik = () => {
               Product Description:
             </h2>
 
-            <p className="text-black leading-relaxed mb-6">
+            <p className="text-black text-[17px] leading-relaxed mb-6">
               Equipped with powerful hardware and industry-leading algorithms,
               Honeywell HON-FIN4000 Series standard fingerprint device –
               HON-FIN4000MIK-100K provides instant comparison and authentication
@@ -45,7 +44,7 @@ const Fin4000mik = () => {
               to meet diverse customer requirements.
             </p>
 
-            <h2 className="font-semibold text-black text-lg mb-3">
+            <h2 className="font-semibold text-black text-[17px] mb-3">
               Product Features:
             </h2>
 
@@ -107,66 +106,74 @@ const Fin4000mik = () => {
               </table>
             </div>
 
-           {/* TAGS */}
-              <div className="mt-8 flex gap-3 mb-5 p-4 rounded">
-            <p className="rounded text-white border bg-red-500 px-2 py-1">Honeywell</p>
-            <p className="rounded text-white border bg-red-500 px-2 py-1">Access Control System</p>
-             </div> 
+            {/* TAGS */}
+            <div className="mt-8 flex gap-3 mb-5 p-4 rounded">
+              <p className="rounded text-white border bg-[#ff5f31] px-2 py-1">Honeywell</p>
+              <p className="rounded text-white border bg-[#ff5f31] px-2 py-1">Access Control System</p>
+            </div> 
 
-           {/* SHARE SOCIAL */}
+            {/* SHARE SOCIAL */}
             <SocialShare title="Check out this product!" />
           </div>
 
-          {/* Sidebar */}
+          {/* RIGHT SIDEBAR SECTION */}
           <div className="space-y-6">
 
-            <div className="bg-gray-300 p-6 rounded shadow-sm">
-              <h3 className="font-semibold text-black text-xl mb-4">
-               More By Honeywell
-              </h3>
-              <ul className="text-xs space-y-4 text-gray-500 transition-colors">
-              <li className='cursor-pointer hover:text-[#f08c09]'>Onity DirectKey with Serene</li>
-              <li className='cursor-pointer hover:text-[#f08c09]'>MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs</li>
-              <li className='cursor-pointer hover:text-[#f08c09]'>INR 415 256-Channel 12 Bay RAID Rackmount Standalone</li>
-              <li className='cursor-pointer hover:text-[#f08c09]'>GNR 340 100-Channel Tower Standalone</li>
-              <li className='cursor-pointer hover:text-[#f08c09]'>ENR 130 16-Channel Desktop Standalone NVR - No HDD Included</li>
-              <li className='cursor-pointer hover:text-[#f08c09]'>Z86 Outdoor Network Dome Camera with Night Vision</li>
-            </ul>
-            </div>
-
-           <div
-              className="bg-blue-600 text-white p-6 rounded shadow-md overflow-hidden relative min-h-[200px]"
-              style={{
-                backgroundImage: `linear-gradient(rgba(30, 64, 175, 0.8), rgba(30, 64, 175, 0.8)), url('/src/assets/image/Our Products/quickalert.jpg')`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-              }}
-            >
-              <div className="relative z-10 px-4 max-w-3xl">
-                 <h3 className="text-xl font-semibold mb-3">
-                   Secure Your Piece Of Mind Today
-                 </h3>
-                 <p className="text-lg mb-4">
-                   Contact Guard-All now for a customized security solution
-                   that protects what matters most.
-                 </p>
-              <button className="bg-blue-700 hover:bg-blue-400 text-white font-semibold px-4 py-2 rounded w-full ">
-                <NavLink to="/contacts" className="w-full h-full block">
-                CONTACT US TODAY
+            {/* More By Honeywell Card */}
+            <div className="bg-gray-300 p-6 rounded shadow-sm border border-gray-400">
+              <h3 className="font-bold text-black text-xl mb-4 border-b border-black pb-2 uppercase">More By Honeywell</h3>
+              <ul className="space-y-4 text-gray-700">
+                <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
+                  <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>Onity DirectKey with Serene </li>
                 </NavLink>
-              </button>
+                <NavLink to="/our-products/detnov/addressable-sounder" className='block'>
+                  <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>MAD-401 and MAD-402 Series Modules</li>
+                </NavLink>
+                <NavLink to="/our-products/acti/bay-raid-backmount-standalone" className='block'>
+                  <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>INR 415 256-Channel RAID Standalone</li>
+                </NavLink>
+                <NavLink to="/our-products/acti/channel-tower-strandalone" className='block'>
+                  <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>GNR 340 100-Channel Tower NVR</li>
+                </NavLink>
+                <NavLink to="/our-products/acti/bay-raid-backmount-standalone" className='block'>
+                  <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>INR 415 256-Channel RAID Standalone</li>
+                </NavLink>
+                <NavLink to="/our-products/acti/channel-tower-strandalone" className='block'>
+                  <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>GNR 340 100-Channel Tower NVR</li>
+                </NavLink>
+              </ul>
             </div>
 
+            {/* Cleaned & Balanced Reference CTA Card */}
+            <div 
+              className="relative min-h-[240px] overflow-hidden rounded-2xl p-8 text-white shadow-md bg-cover bg-center bg-blend-multiply bg-blue-900/85"
+              style={{ backgroundImage: "url('/assets/image/Our%20Products/quickalert.jpg')" }}
+            >
+              <div className="relative z-10 max-w-3xl">
+                <h3 className="mb-4 text-2xl font-semibold leading-tight tracking-wide">
+                  Secure Your Peace Of Mind Today
+                </h3>
+                
+                <p className="mb-6 text-sm md:text-base text-gray-200 font-medium leading-relaxed">
+                  Contact Guard-All now for a customized security solution that protects what matters most.
+                </p>
+
+                <NavLink 
+                  to="/contacts" 
+                  className="inline-block w-full rounded-lg bg-[#1a4ca1] px-6 py-3 text-center text-sm font-semibold tracking-wider text-white transition-colors hover:bg-blue-800"
+                >
+                  CONTACT US TODAY
+                </NavLink>
               </div>
+            </div>
 
-          </div>
+          </div> {/* Closes Sidebar */}
 
-        </div>
-      </div>
+        </div> {/* Closes Wrapper Grid */}
+      </div> {/* Closes Container */}
 
+      <Footer />
     </div>
-    <Footer />
-     </>
   );
 };
 

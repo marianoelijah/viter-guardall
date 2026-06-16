@@ -1,4 +1,5 @@
 import express from "express";
+import 'dotenv/config'; // Loads environment variables from .env file into process.env
 import cors from "cors";
 import db from "./config/db.js";
 import path from 'path';
@@ -20,17 +21,20 @@ const __dirname = path.dirname(__filename);
 app.use(express.json());
 
 // Clean production CORS setup
+// Remove the old app.use(cors(...)) blocks and replace with ONLY this:
 const allowedOrigins = [
   "http://localhost:5173", 
-  "https://guardall.vercel.app",       // Add this one!
-  "https://viter-guardall.vercel.app"  // And this one just in case
+  "https://guardall.vercel.app", 
+  "https://viter-guardall.vercel.app"
 ];
 
 app.use(cors({
   origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl requests)
     if (!origin) return callback(null, true);
     if (allowedOrigins.indexOf(origin) === -1) {
-      return callback(new Error("CORS policy blocked this origin."), false);
+      const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
+      return callback(new Error(msg), false);
     }
     return callback(null, true);
   },

@@ -76,7 +76,7 @@ const OurProducts = () => {
           </Swiper>
         </div>
 
-        <Link to="/our-products" className="inline-block mt-8 bg-blue-800 text-white px-10 py-3 rounded-md lg:rounded font-bold uppercase tracking-widest hover:bg-blue-700 transition-colors shadow-lg">
+        <Link to="/our-products" className="inline-block mt-8 bg-blue-800 text-white px-10 py-3 rounded-md lg:rounded font-bold uppercase tracking-widest hover:bg-[#ff5f31] transition-colors shadow-lg">
           Browse Products
         </Link>
       </div>

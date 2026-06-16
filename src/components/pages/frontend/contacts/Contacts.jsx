@@ -97,7 +97,7 @@ const Contacts = () => {
               <MapPin className="text-[#2257a0] group-hover:text-white" size={32} />
             </div>
             <div className="text-sm text-gray-700 space-y-3">
-              <p><strong>Makati:</strong>Makati | Unit 708 Cattleya Building, 235 Salcedo St. Legaspi Village, Makati City, Philippines 1223</p>
+              <p><strong>Makati:</strong> Makati | Unit 708 Cattleya Building, 235 Salcedo St. Legaspi Village, Makati City, Philippines 1223</p>
               <p><strong>Cebu:</strong> Cebu | Unit 306 Cebu Holdings Building, Cebu Business Park, Cebu City, Philippines 6000</p>
             </div>
           </div>

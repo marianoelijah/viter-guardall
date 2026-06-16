@@ -37,7 +37,7 @@ const Header = () => {
         {/* Desktop CTA */}
         <div className="hidden md:block">
           <Link to="/contacts">
-            <button className="bg-[#1e40af] text-white px-7 py-2.5 rounded shadow-sm font-semibold tracking-wide hover:bg-red-600 active:scale-95 transition-all duration-200">
+            <button className="bg-[#1e40af] text-white px-7 py-2.5 rounded shadow-sm font-semibold tracking-wide hover:bg-[#ff5f31] active:scale-95 transition-all duration-200">
               CONTACT US
             </button>
           </Link>

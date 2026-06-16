@@ -38,12 +38,12 @@ const Founders = () => {
         {/* Left Side: Portraits Grid */}
         <div className="w-full lg:w-3/5 grid grid-cols-1 sm:grid-cols-2 gap-8">
           {founders.map((person) => (
-            <div key={person.id} className="flex flex-col">
-              <div className="rounded-xl overflow-hidden shadow-xl mb-6 aspect-[4/5]">
+            <div key={person.id} className="flex flex-col group cursor-pointer">
+              <div className="relative overflow-hidden rounded-lg shadow-md aspect-[4/5] mb-4">
                 <img 
-                  src={`${IMAGE_BASE_URL}${person.image_path}`} 
+                  src={`${IMAGE_BASE_URL}${person.image_path}`}
                   alt={person.name} 
-                  className="w-full h-full object-cover transition-all duration-700"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
               <div className="flex items-center gap-2">

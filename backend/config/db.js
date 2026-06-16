@@ -1,18 +1,22 @@
-import mysql from "mysql2/promise"; // Notice the /promise here
+import mysql from "mysql2/promise";
 import dotenv from "dotenv";
 
+// Load environment variables immediately
 dotenv.config();
 
-// Create the connection using the promise-based library
-const db = mysql.createConnection({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME,
-  port: process.env.DB_PORT
+// Create a connection pool instead of a single connection
+const db = mysql.createPool({
+  // Checks for Railway variables first; falls back to local XAMPP defaults if not found
+  host: process.env.MYSQLHOST || process.env.DB_HOST || 'localhost',     
+  user: process.env.MYSQLUSER || process.env.DB_USER || 'root',
+  password: process.env.MYSQLPASSWORD !== undefined ? process.env.MYSQLPASSWORD : (process.env.DB_PASSWORD || ''),
+  database: process.env.MYSQLDATABASE || process.env.DB_NAME,
+  port: process.env.MYSQLPORT || 3306,
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0
 });
 
-// Optional: A quick console log to confirm it's ready
-console.log("✅ MySQL Connected (Promise-based)");
+console.log("✅ MySQL Pool Initialized");
 
 export default db;
