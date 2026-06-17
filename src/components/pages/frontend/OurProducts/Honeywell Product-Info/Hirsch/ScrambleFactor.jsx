@@ -14,7 +14,7 @@ const ScrambleFactor = () => {
     <div className="bg-gray-100 min-h-screen font-sans text-gray-800 pb-12">
       {/* Header Banner */}
       <header className="bg-[#8ba4ca] text-white py-12 px-4 text-center">
-        <h1 className="text-4xl md:text-4xl font-bold tracking-tight max-w-5xl mx-auto uppercase">
+        <h1 className="text-5xl md:text-5xl font-bold max-w-5xl mx-auto leading-tight">
           Hirsch Scramble Factor: High-Assurance Biometrics and Multi-Factor Authentication Reader
         </h1>
       </header>
@@ -99,8 +99,8 @@ const ScrambleFactor = () => {
 
           {/* Tags */}
           <div className="flex gap-2 mt-8">
-            <span className="bg-[#ff6b35] text-white px-2 py-1 tracking-wider">Hirsch</span>
-            <span className="bg-[#ff6b35] text-white px-2 py-1 tracking-wider">Access Control System</span>
+            <span className="bg-[#ff5f31] text-white px-2 py-1 tracking-wider">Hirsch</span>
+            <span className="bg-[#ff5f31] text-white px-2 py-1 tracking-wider">Access Control System</span>
           </div>
 
           {/* Share Section */}
@@ -117,31 +117,56 @@ const ScrambleFactor = () => {
         </main>
 
         {/* Sidebar */}
-        <aside className="lg:w-1/4 space-y-6">
-          <div className="bg-gray-50 p-4 border border-gray-200">
-            <h3 className="text-[11px] font-semibold text-gray-400 uppercase mb-4 border-b pb-1">More By HIRSCH</h3>
-            <ul className="text-xs space-y-4 text-gray-400">
-              <li>Onity DirectKey with Serene</li>
-              <li>MAD-401 and MAD-402 Series Addressable Modules</li>
-              <li>INR 415 256-Channel 12 Bay RAID Rackmount</li>
-              <li>GNR 340 100-Channel Tower Standalone</li>
-              <li>ENR 130 16-Channel Desktop Standalone NVR</li>
-              <li>Z86 Outdoor Network Dome Camera</li>
-            </ul>
-          </div>
+         <aside className="lg:w-1/4 space-y-6">
+                                 <div className="bg-gray-300 p-6 rounded shadow-sm border border-gray-400">
+                                   <h3 className="font-bold text-black text-xl mb-4 border-b border-black pb-2 uppercase">More By HIRSCH</h3>
+                                   <ul className="space-y-4 text-gray-700">
+                                     <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
+                                     <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>Onity DirectKey with Serene </li>
+                                     </NavLink>
+                                     <NavLink to="/our-products/detnov/addressable-sounder" className='block'>
+                                       <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>MAD-401 and MAD-402 Series Modules</li>
+                                     </NavLink>
+                                     <NavLink to="/our-products/acti/bay-raid-backmount-standalone" className='block'>
+                                       <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>INR 415 256-Channel RAID Standalone</li>
+                                     </NavLink>
+                                     <NavLink to="/our-products/acti/channel-tower-strandalone" className='block'>
+                                       <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>GNR 340 100-Channel Tower NVR</li>
+                                     </NavLink>
+                                     <NavLink to="/our-products/acti/bay-raid-backmount-standalone" className='block'>
+                                     <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>INR 415 256-Channel RAID Standalone</li>
+                                     </NavLink>
+                                     <NavLink to="/our-products/acti/channel-tower-strandalone" className='block'>
+                                       <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>GNR 340 100-Channel Tower NVR</li>
+                                     </NavLink>
+                                   </ul>
+                                 </div>
+          
 
-          <div className="bg-[#1e4e8c] text-white p-6">
-            <h3 className="text-xl font-bold mb-4 leading-tight">Secure Your Piece Of Mind Today</h3>
-            <p className="text-xs mb-6 opacity-90 leading-relaxed">
-              Contact Guard-All now for a customized security solution that protects what matters most.
-            </p>
-           <button className="bg-blue-700 hover:bg-blue-400 text-white font-semibold rounded transition-all duration-300 w-full md:w-auto px-4 py-3 md:px-6 md:py-2 lg:px-8 lg:py-3 lg:text-lg">
-              <NavLink to="/contacts" className="w-full h-full flex items-center justify-center">
+           {/* Contact Card */}
+           <div 
+            className="relative min-h-[240px] overflow-hidden rounded-2xl p-8 text-white shadow-md bg-cover bg-center bg-blend-multiply bg-blue-900/85"
+            style={{ backgroundImage: "url('/dist/assets/image/Our Products/quickalert.jpg')" }}
+          >
+            <div className="relative z-10 max-w-3xl">
+              <h3 className="mb-4 text-2xl font-bold leading-tight tracking-wide">
+                Secure Your Peace Of Mind Today
+              </h3>
+              
+              <p className="mb-6 text-sm md:text-base text-gray-200 font-medium leading-relaxed">
+                Contact Guard-All now for a customized security solution that protects what matters most.
+              </p>
+          
+              <NavLink 
+                to="/contacts" 
+                className="inline-block w-full rounded-xl bg-[#0f3e90] px-6 py-3 text-center text-sm font-semibold tracking-wider text-white transition-colors hover:bg-[#ff5f31] sm:w-auto"
+              >
                 CONTACT US TODAY
               </NavLink>
-            </button>
+            </div>
           </div>
         </aside>
+        
       </div>
     </div>
   );

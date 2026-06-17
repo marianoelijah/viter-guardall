@@ -39,18 +39,18 @@ const SecurityExperts = () => {
         <div className="flex flex-col lg:flex-row justify-between items-start gap-8 mb-16">
           <div className="lg:w-1/3">
             <div className="flex items-center gap-4 mb-4">
-              <h2 className="text-4xl font-bold text-blue-900 leading-tight">
+              <h2 className="text-[3rem] font-bold text-blue-900 leading-tight">
                 Meet Our <br /> Security Experts
               </h2>
-              <div className="bg-orange-500 p-2 rounded-full text-white shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="bg-[#ff5f31] p-2 rounded-full text-white shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                 </svg>
               </div>
             </div>
           </div>
           
-          <div className="lg:w-2/3 border-l-4 border-orange-500 pl-6">
+          <div className="lg:w-2/3 border-l-4 border-[#ff5f31] pl-6">
             <h3 className="text-xl font-bold text-blue-900 uppercase mb-2">{intro.dept_name}</h3>
             <p className="text-gray-600 text-xl leading-relaxed">
               {intro.description}
@@ -72,7 +72,7 @@ const SecurityExperts = () => {
               </div>
 
               <div className="flex items-start gap-2">
-                <div className="mt-1.5 w-0 h-0 border-t-[5px] border-t-transparent border-l-[8px] border-l-orange-500 border-b-[5px] border-b-transparent shrink-0"></div>
+                <div className="mt-1.5 w-0 h-0 border-t-[5px] border-t-transparent border-l-[8px] border-l-[#ff5f31] border-b-[5px] border-b-transparent shrink-0"></div>
                 <div>
                   <h4 className="text-xl font-bold text-blue-900 group-hover:text-blue-700 transition-colors">
                     {expert.name}
