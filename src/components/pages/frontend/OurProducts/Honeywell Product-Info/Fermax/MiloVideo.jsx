@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import Header from '../../../partials/Header';
 import Footer from '../../../partials/Footer';
 import SocialShare from '../../Reusable/SocialShare';
+import React from 'react';
 
 
 const MiloVideo = () => {
@@ -42,7 +43,7 @@ const MiloVideo = () => {
      <div className="bg-slate-50 min-h-screen font-sans">
       {/* Header Banner */}
       <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
-        <h1 className="text-3xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
+        <h1 className="text-5xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
           1W MILO VIDEO PANEL WITH PROX MEET
         </h1>
       </header>
@@ -90,11 +91,11 @@ const MiloVideo = () => {
              
             {/* Tags & Social */}
            <div className="flex flex-wrap gap-3 mb-8 mt-10">
-              <span className="bg-red-500 text-white px-2 py-1 rounded">
+              <span className="bg-[#FF5F31] text-white px-2 py-1 rounded">
                 FERMAX
               </span>
               
-              <span className="bg-red-500 text-white px-2 py-1 rounded">
+              <span className="bg-[#FF5F31] text-white px-2 py-1 rounded">
                 Audio-Video Intercom & PA-BGM
               </span>
             </div>
@@ -108,14 +109,26 @@ const MiloVideo = () => {
               <aside className="lg:w-1/4 space-y-6"> 
                      <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
                         <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By FERMAX</h3>
-                        <ul className="text-xs space-y-4 text-gray-500 transition-colors">
-                          <li className='cursor-pointer hover:text-[#f08c09]'>Onity DirectKey with Serene</li>
-                          <li className='cursor-pointer hover:text-[#f08c09]'>MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs</li>
-                          <li className='cursor-pointer hover:text-[#f08c09]'>INR 415 256-Channel 12 Bay RAID Rackmount Standalone</li>
-                          <li className='cursor-pointer hover:text-[#f08c09]'>GNR 340 100-Channel Tower Standalone</li>
-                          <li className='cursor-pointer hover:text-[#f08c09]'>ENR 130 16-Channel Desktop Standalone NVR - No HDD Included</li>
-                          <li className='cursor-pointer hover:text-[#f08c09]'>Z86 Outdoor Network Dome Camera with Night Vision</li>
-                        </ul>
+                        <ul className="space-y-4 text-gray-700">
+                <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
+                  <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>Onity DirectKey with Serene</li>
+                </NavLink>
+                <NavLink to="/our-products/detnov/addressable-sounder" className='block'>
+                  <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>MAD-401 and MAD-402 Series Modules</li>
+                </NavLink>
+                <NavLink to="/our-products/acti/bay-raid-backmount-standalone" className='block'>
+                  <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>INR 415 256-Channel RAID Standalone</li>
+                </NavLink>
+                <NavLink to="/our-products/acti/channel-tower-strandalone" className='block'>
+                  <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>GNR 340 100-Channel Tower NVR</li>
+                </NavLink>
+                <NavLink to="/our-products/acti/bay-raid-backmount-standalone" className='block'>
+                  <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>INR 415 256-Channel RAID Standalone</li>
+                </NavLink>
+                <NavLink to="/our-products/acti/channel-tower-strandalone" className='block'>
+                  <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>GNR 340 100-Channel Tower NVR</li>
+                </NavLink>
+              </ul>
                       </div>
                       
             
