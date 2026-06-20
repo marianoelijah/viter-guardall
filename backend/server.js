@@ -227,14 +227,14 @@ app.get('/api/security-experts', async (req, res) => {
 });
 
 // GET Engineering Dept Intro
-app.get('/api/dept-intro', async (req, res) => {
-  try {
-    const [rows] = await db.query("SELECT * FROM department_intros WHERE dept_name = 'Engineering Department' LIMIT 1");
-    res.json(rows[0]);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-});
+// app.get('/api/dept-intro', async (req, res) => {
+//   try {
+//     const [rows] = await db.query("SELECT * FROM department_intros WHERE dept_name = 'Engineering Department' LIMIT 1");
+//     res.json(rows[0]);
+//   } catch (err) {
+//     res.status(500).json({ error: err.message });
+//   }
+// });
 
 // OUR PRODUCTS 
 // THIS ARE THE PRODUCTS BRANDS
@@ -361,6 +361,18 @@ app.get('/api/social-platforms', async (req, res) => {
         console.error("❌ SQL ERROR:", err.message); // THIS LINE IS KEY
         res.status(500).send("Database Error");
     }
+});
+
+// SLIDESHOW  FOR SECURITY EXPERTS HEADINGS
+app.get('/api/dept-intro', async (req, res) => {
+  try {
+    // 1. Removed "WHERE dept_name = ..." and "LIMIT 1" to pull all 3 departments
+    // 2. Uses your existing async/await architecture matching the rest of the file
+    const [rows] = await db.query('SELECT * FROM department_intros');
+    res.json(rows); // Sends back the entire array of rows to your frontend
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 });
 
 // CONTACTS FORM

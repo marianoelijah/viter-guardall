@@ -114,7 +114,7 @@ const NE5100EDSIR1 = () => {
      <div className="bg-slate-50 min-h-screen font-sans">
       {/* Header Banner */}
       <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
-        <h1 className="text-3xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
+        <h1 className="text-5xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
            NE5100ED-SIR1-F2.8 Network Camera
         </h1>
       </header>
@@ -172,11 +172,11 @@ const NE5100EDSIR1 = () => {
              
             {/* Tags & Social */}
            <div className="flex flex-wrap gap-3 mb-8 mt-10">
-              <span className="bg-red-500 text-white px-2 py-1 rounded">
+              <span className="bg-[#FF5F31] text-white px-2 py-1 rounded">
                 WEBGATE
               </span>
               
-              <span className="bg-red-500 text-white px-2 py-1 rounded">
+              <span className="bg-[#FF5F31] text-white px-2 py-1 rounded">
                 CCTVs
               </span>
             </div>

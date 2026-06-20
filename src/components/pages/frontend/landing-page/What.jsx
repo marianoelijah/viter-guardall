@@ -46,7 +46,7 @@ const What = () => {
           {services.map((service, index) => (
             <div key={index} className="flex flex-col items-start group">
               {/* Icon Circle */}
-              <div className="w-16 h-16 bg-[#1e40af] hover:bg-red-500 rounded-full flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-[#1e40af] hover:bg-[#ff5f31] rounded-full flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform duration-300">
                 {service.icon}
               </div>
 

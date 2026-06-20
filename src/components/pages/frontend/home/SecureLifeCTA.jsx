@@ -25,7 +25,7 @@ const SecureLifeCTA = () => {
   if (loading || !ctaData) return null;
 
   return (
-    <section className="px-6 py-12 font-poppins">
+    <section className="px-6 py-12 font-poppins bg-[#b0acac]">
       <div 
         className="max-w-7xl mx-auto rounded-2xl overflow-hidden relative min-h-[400px] flex items-center justify-center text-center"
         style={{
@@ -44,7 +44,7 @@ const SecureLifeCTA = () => {
             {ctaData.description}
           </p>
 
-          <button className="bg-[#4dc3e766] hover:bg-blue-700 text-white text-sm md:text-sm font-bold py-4 px-10 rounded-full transition-all duration-300 shadow-xl border border-white/20 uppercase tracking-wide ">
+          <button className="bg-[#110d7366] hover:bg-[#ff5f31] text-white text-sm md:text-sm font-bold py-4 px-10 rounded-full transition-all duration-300 shadow-xl border border-white/20 uppercase tracking-wide ">
             <Link to="/contacts">{ctaData.button_text}</Link>
           </button>
         </div>

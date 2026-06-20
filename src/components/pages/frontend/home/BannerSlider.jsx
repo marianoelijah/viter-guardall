@@ -64,7 +64,7 @@ const BannerSlider = () => {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.4 }}
             >
-              <button className="bg-[#0D47A1] text-white px-5 py-4 rounded-full sm:rounded-sm font-bold hover:bg-red-600 active:scale-95 transition-all duration-300 uppercase tracking-widest text-sm shadow-lg">
+              <button className="bg-[#0D47A1] text-white px-5 py-4 rounded-full sm:rounded-sm font-bold hover:bg-[#ff5f31] active:scale-95 transition-all duration-300 uppercase tracking-widest text-sm shadow-lg">
                 <Link to="/contacts">{slides[current].cta_text}</Link> {/* Note: updated to match DB column name */}
               </button>
             </motion.div>

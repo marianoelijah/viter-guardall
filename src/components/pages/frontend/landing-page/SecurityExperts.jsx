@@ -4,7 +4,8 @@ const IMAGE_BASE_URL = import.meta.env.VITE_API_URL;
 
 const SecurityExperts = () => {
   const [experts, setExperts] = useState([]);
-  const [intro, setIntro] = useState(null);
+  const [intros, setIntros] = useState([]); // Changed to support an array of intros
+  const [currentSlide, setCurrentSlide] = useState(0); // Track the slideshow index
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -17,9 +18,10 @@ const SecurityExperts = () => {
         
         const expertsData = await expertsRes.json();
         const introData = await introRes.json();
-        
+   
         setExperts(expertsData);
-        setIntro(introData);
+        // Ensure intros is stored as an array even if database returns single row
+        setIntros(Array.isArray(introData) ? introData : [introData]);
         setLoading(false);
       } catch (error) {
         console.error("Error fetching experts:", error);
@@ -29,13 +31,24 @@ const SecurityExperts = () => {
     fetchExpertData();
   }, []);
 
-  if (loading || !intro) return null;
+  // Autoplay slideshow effect (rotates every 5 seconds)
+  useEffect(() => {
+    if (intros.length <= 1) return;
+    
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % intros.length);
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, [intros]);
+
+  if (loading || intros.length === 0) return null;
 
   return (
     <section className="py-20 px-6 bg-white font-poppins">
       <div className="max-w-7xl mx-auto">
         
-        {/* Header & Department Intro */}
+        {/* Header & Department Intro Slideshow Section */}
         <div className="flex flex-col lg:flex-row justify-between items-start gap-8 mb-16">
           <div className="lg:w-1/3">
             <div className="flex items-center gap-4 mb-4">
@@ -50,11 +63,32 @@ const SecurityExperts = () => {
             </div>
           </div>
           
-          <div className="lg:w-2/3 border-l-4 border-[#ff5f31] pl-6">
-            <h3 className="text-xl font-bold text-blue-900 uppercase mb-2">{intro.dept_name}</h3>
-            <p className="text-gray-600 text-xl leading-relaxed">
-              {intro.description}
-            </p>
+          {/* Active Slide Content */}
+          <div className="lg:w-2/3 w-full flex flex-col justify-between min-h-[180px]">
+            <div className="border-l-4 border-[#ff5f31] pl-6 transition-all duration-500 ease-in-out">
+              <h3 className="text-xl font-bold text-blue-900 uppercase mb-2">
+                {intros[currentSlide]?.dept_name}
+              </h3>
+              <p className="text-gray-600 text-xl leading-relaxed">
+                {intros[currentSlide]?.description}
+              </p>
+            </div>
+
+            {/* Slideshow Dots Navigation */}
+            {intros.length > 1 && (
+              <div className="flex items-center justify-center lg:justify-start gap-2 mt-6 pl-6">
+                {intros.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`h-3 rounded-full transition-all duration-300 ${
+                      currentSlide === index ? 'w-6 bg-[#ff5f31]' : 'w-3 bg-[#ff5f31]/30'
+                    }`}
+                    aria-label={`Go to slide ${index + 1}`}
+                  />
+                ))}
+              </div>
+            )}
           </div>
         </div>
 
