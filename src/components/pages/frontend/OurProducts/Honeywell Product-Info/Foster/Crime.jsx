@@ -153,7 +153,7 @@ const Crime = () => {
                      </div>
            
                         {/* Contact Card */}
-                       <div
+             <div
                 className="relative min-h-[240px] overflow-hidden rounded-xl p-8 text-white shadow-md bg-cover bg-center bg-blend-multiply bg-blue-900/85"
                   style={{ backgroundImage: "url('/dist/assets/image/Our Products/quickalert.jpg')" }}
                 >
@@ -174,6 +174,7 @@ const Crime = () => {
                     </NavLink>
                   </div>
              </div>
+
           </div>
 
           </div>

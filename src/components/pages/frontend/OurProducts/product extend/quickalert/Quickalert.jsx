@@ -4,7 +4,7 @@ import {
   Truck, CheckCircle, Settings, 
   Phone, Mail, MapPin 
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const QuickAlert = () => {
 
@@ -103,6 +103,7 @@ const otherServices = [
         </div>
               {/* Sidebar */}
                 <aside className="space-y-6">
+
                     <div className="bg-gray-50 p-5 rounded border border-gray-200">
                       <h3 className="font-bold text-gray-800 border-b pb-2 mb-4">Other Services</h3>
                       <ul className="space-y-3">
@@ -115,15 +116,29 @@ const otherServices = [
                       </ul>
                     </div>
 
-                    <div className="bg-blue-900 text-white p-6 rounded text-center">
-                       <h3 className="font-bold mb-5">Secure Your Piece Of Mind Today</h3>
-                       <p className="text-xs mb-6 opacity-80">Contact Guard-All now for a customized security solution that protects what matters most..</p>
-                       <Link to="/contacts">
-                          <button className="bg-[#1e40af] text-white px-7 py-2.5 rounded shadow-sm font-semibold tracking-wide hover:bg-red-600 active:scale-95 transition-all duration-200">
-                            CONTACT US
-                          </button>
-                       </Link>
-                    </div>
+
+                    {/* Contact Card */}
+                    <div
+                className="relative min-h-[240px] overflow-hidden rounded-xl p-8 text-white shadow-md bg-cover bg-center bg-blend-multiply bg-blue-900/85"
+                  style={{ backgroundImage: "url('/dist/assets/image/Our Products/quickalert.jpg')" }}
+                >
+                  <div className="relative z-10">
+                     <h3 className="mb-4 text-2xl font-bold leading-tight tracking-wide">
+                        Secure Your Peace Of Mind Today
+                     </h3>
+                                         
+                      <p className="mb-6 text-sm text-gray-200 font-medium leading-relaxed">
+                        Contact Guard-All now for a customized security solution that protects what matters most.
+                      </p>
+                           
+                    <NavLink 
+                       to="/contacts" 
+                       className="inline-block w-full rounded-xl bg-[#0f3e90] px-6 py-3 text-center text-sm font-semibold tracking-wider text-white transition-colors hover:bg-[#ff5f31] sm:w-auto"
+                    >
+                      CONTACT US TODAY
+                    </NavLink>
+                  </div>
+             </div>
                 </aside>
       </main>
 
@@ -131,7 +146,7 @@ const otherServices = [
       <footer className="max-w-6xl mx-auto p-4 md:p-8">
         <div className="flex flex-wrap gap-2 mb-6 text-xs md:text-lg ">
           {['Access Control', 'Intrusion Control', 'Object Inspection', 'Thermal Camera','Vehicle Security'].map(tag => (
-            <span key={tag} className="bg-red-500 text-white px-2 py-1 rounded">
+            <span key={tag} className="bg-[#ff5f31] text-white px-2 py-1 rounded">
               {tag}
             </span>
           ))}
