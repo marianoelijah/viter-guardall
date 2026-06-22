@@ -33,7 +33,7 @@ const ProductHero = () => {
   </div>
   
   {/* Decorative blue accent behind the video */}
-  <div className="absolute -left-4 -top-4 w-full h-full bg-cyan-400/20 -z-10 rounded-2xl"></div>
+  <div className="absolute -left-4 -top-4 w-full h-full bg-cyan-500/20 -z-10 rounded-2xl"></div>
 </div>
 
         {/* Right Side: Text Content */}
@@ -57,7 +57,7 @@ const ProductHero = () => {
           <div className="h-px bg-white/30 w-full mb-8"></div>
 
           <Link to="/our-products">
-           <button className="bg-white text-blue-900 hover:bg-red-500 hover:text-white font-bold py-3 px-10 rounded-full transition-all uppercase tracking-wide">
+           <button className="bg-white text-blue-900 hover:bg-[#ff5f31] hover:text-white font-bold py-3 px-10 rounded-full transition-all uppercase tracking-wide">
             Browse Products 
           </button>
           </Link>
