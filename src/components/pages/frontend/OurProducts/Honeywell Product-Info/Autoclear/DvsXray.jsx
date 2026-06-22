@@ -4,6 +4,7 @@ import Footer from '../../../partials/Footer';
 import { NavLink } from 'react-router-dom';
 import SocialShare from '../../Reusable/SocialShare';
 
+
 // Shared Layout Component to maintain design consistency across all products
 const ProductLayout = ({ title, subtitle, description, features, specs, sidebarItems }) => {
   return (
@@ -245,11 +246,11 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
 
             {/* Footer Tags & Socials */}
             <div className="flex flex-wrap gap-3 mb-8 mt-10">
-              <span className="bg-red-500 text-white px-2 py-1 rounded">
+              <span className="bg-[#ff5f31] text-white px-2 py-1 rounded">
                 AUTOCLEAR
               </span>
               
-              <span className="bg-red-500 text-white px-2 py-1 rounded">
+              <span className="bg-[#ff5f31] text-white px-2 py-1 rounded">
                 Detection Systems
               </span>
             </div>
@@ -263,40 +264,50 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
           <aside className="lg:col-span-1 space-y-8">
              <div className="bg-gray-300 p-4 border border-black  border-r mb-6">
             <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By AUTOCLEAR</h3>
-            <ul className="text-xl space-y-4 text-gray-500 transition-colors">
-              <li className='cursor-pointer hover:text-[#f08c09]'>Onity DirectKey with Serene</li>
-              <li className='cursor-pointer hover:text-[#f08c09]'>MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs</li>
-              <li className='cursor-pointer hover:text-[#f08c09]'>INR 415 256-Channel 12 Bay RAID Rackmount Standalone</li>
-              <li className='cursor-pointer hover:text-[#f08c09]'>GNR 340 100-Channel Tower Standalone</li>
-              <li className='cursor-pointer hover:text-[#f08c09]'>ENR 130 16-Channel Desktop Standalone NVR - No HDD Included</li>
-              <li className='cursor-pointer hover:text-[#f08c09]'>Z86 Outdoor Network Dome Camera with Night Vision</li>
+           <ul className="space-y-4 text-gray-800 font-medium">
+              <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
+                <li className='cursor-pointer hover:text-[#ff5f31] transition-colors break-words'>Onity DirectKey with Serene</li>
+              </NavLink>
+              <NavLink to="/our-products/detnov/addressable-sounder" className='block'>
+                <li className='cursor-pointer hover:text-[#ff5f31] transition-colors break-words'>MAD-401 and MAD-402 Series Modules</li>
+              </NavLink>
+              <NavLink to="/our-products/acti/bay-raid-backmount-standalone" className='block'>
+                <li className='cursor-pointer hover:text-[#ff5f31] transition-colors break-words'>INR 415 256-Channel RAID Standalone</li>
+              </NavLink>
+              <NavLink to="/our-products/acti/channel-tower-strandalone" className='block'>
+                <li className='cursor-pointer hover:text-[#ff5f31] transition-colors break-words'>GNR 340 100-Channel Tower NVR</li>
+              </NavLink>
+              <NavLink to="/our-products/acti/bay-raid-backmount-standalone" className='block'>
+                <li className='cursor-pointer hover:text-[#ff5f31] transition-colors break-words'>INR 415 256-Channel RAID Standalone</li>
+              </NavLink>
+              <NavLink to="/our-products/acti/channel-tower-strandalone" className='block'>
+                <li className='cursor-pointer hover:text-[#ff5f31] transition-colors break-words'>GNR 340 100-Channel Tower NVR</li>
+              </NavLink>
             </ul>
           </div>
 
             {/* Blue CTA Card */}
-             <div
-              className="bg-blue-600 text-white p-6 rounded shadow-md overflow-hidden relative min-h-[200px]"
-              style={{
-                backgroundImage: `linear-gradient(rgba(30, 64, 175, 0.8), rgba(30, 64, 175, 0.8)), url('/src/assets/image/Our Products/quickalert.jpg')`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-              }}
-            >
-              <div className="relative z-10 px-4 max-w-3xl">
-                 <h3 className="text-xl font-semibold mb-3">
-                   Secure Your Piece Of Mind Today
-                 </h3>
-                 <p className="text-lg mb-4">
-                   Contact Guard-All now for a customized security solution
-                   that protects what matters most.
-                 </p>
-              <button className="bg-blue-700 hover:bg-blue-400 text-white font-semibold px-4 py-2 rounded w-full">
-                <NavLink to="/contacts" className="w-full h-full block">
-                CONTACT US TODAY
-                </NavLink>
-              </button>
-            </div>
-            </div>
+              <div 
+                className="relative min-h-[240px] overflow-hidden rounded-xl p-8 text-white shadow-md bg-cover bg-center bg-blend-multiply bg-blue-900/85"
+                  style={{ backgroundImage: "url('/dist/assets/image/Our Products/quickalert.jpg')" }}
+                >
+                  <div className="relative z-10">
+                     <h3 className="mb-4 text-2xl font-bold leading-tight tracking-wide">
+                        Secure Your Peace Of Mind Today
+                     </h3>
+                                         
+                      <p className="mb-6 text-sm text-gray-200 font-medium leading-relaxed">
+                        Contact Guard-All now for a customized security solution that protects what matters most.
+                      </p>
+                           
+                    <NavLink 
+                       to="/contacts" 
+                       className="inline-block w-full rounded-xl bg-[#0f3e90] px-6 py-3 text-center text-sm font-semibold tracking-wider text-white transition-colors hover:bg-[#ff5f31] sm:w-auto"
+                    >
+                      CONTACT US TODAY
+                    </NavLink>
+                  </div>
+             </div>
           </aside>
         </div>
       </main>
@@ -318,33 +329,7 @@ const DvsXray = () => {
       "Ideal for inspecting oversized and out-of-gauge objects"
     ],
 
-    // specs: [
-    // //   { type: 'header', label: 'Connections' },
-    //   { label: 'Resolution (MP)', value: '2 MP / 3 MP / 5 MP' },
-    //   { label: 'Image Sensor', value: '1/2.8” progressive scan CMOS', valu: "1/1.8” progressive scan CMOS" },
-    //   { label: 'Dynamic Range', value: 'WDR Off: Up to 83 dB WDR On (IEC 62676):  Up to 126 dB (dual exposure, 30 fps) Up to 144 dB (triple exposure, 20 fps or less) Up to 106dB (dual exposure, 30 fps) Up to 136dB (triple exposure, 20 fps or less) Up to 130dB (dual exposure, 30 fps) WDR On:  Up to 130 dB (dual exposure, 30 fps) Up to 150 dB (triple exposure, 20 fps or less) Up to 120dB (dual exposure, 30 fps) Up to 144dB (triple exposure, 20 fps or less) Up to 144 dB (dual exposure, 20 fps or less)' },
-    //   { label: 'Image Rate', value: '(50 Hz/60 Hz): 50 fps/60 fps in High Frame RateMode1, otherwise 25 fps/30 fps', valu: '(50 Hz/60 Hz): 25 fps/30 fps' },
-
-    //   { label: 'Operating Temperature Range', value: '-10°C to +55°C (-14°F to 131°F)', valu: "-30°C to +65°C (-22°F to 149°F) with IEEE 802.3af Class 3 (13W PoE)" },
-    //   { label: 'Xray', value: 'Indoor Dome: IEC  60529 IP54, IEC/EN 62262 IK11 (IK10 Surface Mount w/IR)', valu: "Outdoor Dome:IEC 60529 IP66, IP67, IP68 (2m depth for 2 hours), IPX9K, NEMA 4X, IEC 60068-2 Shock & Vibration, NEMA TS2 Sec 2.2.7-2.2.9, IK11" },
-    //   { type: 'header', label: 'AUDIO, POWER, STORAGE' },
-    //   { label: 'Audio Compression Method', value: 'G.711 pcm 8 Khz, Opus' },
-      
-    //   { label: 'Audio Input/Output', value: 'Line level input and output' },
-    //   { label: 'External I/O Terminals', value: '1 x Relay In, 1 x Relay Out, 1 x 12 VDC out at 50 mA' },
-    //   { label: 'PoE Power Source', value: 'IEEE 802.3af Class 3'},
-    //   { label: 'Onboard Storage', value: '	Two microSD/microSDHC/microSDXC slots – video speed class card required. Class V10 or better recommended.'},
-    // //   { type: 'header', label: 'Learn more at www.pelcom.com ' }
-    // ],
-
-    sidebarItems: [
-      "Onity DirectKey with Serene",
-      "MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs",
-      "INR 415 256-Channel 12 Bay RAID Backmount Standalone",
-      "GNR 340 100-Channel Tower Standalone",
-      "ENR 130 16-Channel Desktop Standalone NVR- No HDD Included",
-      "Z86 Outdoor Network Dome Camera with Night Vision"
-    ]
+   
   };
 
   return <ProductLayout {...data} />;

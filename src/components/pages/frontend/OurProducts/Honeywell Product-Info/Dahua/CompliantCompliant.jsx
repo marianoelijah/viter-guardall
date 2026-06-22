@@ -12,7 +12,7 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
     <div className="bg-gray-100 min-h-screen font-sans text-slate-800">
       {/* Banner Header */}
       <header className="bg-[#7f95b8] text-white py-14 px-4 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold max-w-5xl mx-auto leading-tight">
+        <h1 className="text-5xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
           {title}
         </h1>
       </header>
@@ -217,11 +217,11 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
 
             {/* Footer Tags & Socials */}
             <div className="flex flex-wrap gap-3 mb-8 mt-10">
-              <span className="bg-red-500 text-white px-2 py-1 rounded">
+              <span className="bg-[#ff5f31] text-white px-2 py-1 rounded">
                 DAHUA
               </span>
               
-              <span className="bg-red-500 text-white px-2 py-1 rounded">
+              <span className="bg-[#ff5f31] text-white px-2 py-1 rounded">
                 CCTVs
               </span>
             </div>
@@ -235,40 +235,51 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
           <aside className="lg:col-span-1 space-y-8">
              <div className="bg-gray-300 p-4 border border-black  border-r mb-6">
             <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By DAHUA</h3>
-            <ul className="text-xs space-y-4 text-gray-500 transition-colors">
-              <li className='cursor-pointer hover:text-[#f08c09]'>Onity DirectKey with Serene</li>
-              <li className='cursor-pointer hover:text-[#f08c09]'>MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs</li>
-              <li className='cursor-pointer hover:text-[#f08c09]'>INR 415 256-Channel 12 Bay RAID Rackmount Standalone</li>
-              <li className='cursor-pointer hover:text-[#f08c09]'>GNR 340 100-Channel Tower Standalone</li>
-              <li className='cursor-pointer hover:text-[#f08c09]'>ENR 130 16-Channel Desktop Standalone NVR - No HDD Included</li>
-              <li className='cursor-pointer hover:text-[#f08c09]'>Z86 Outdoor Network Dome Camera with Night Vision</li>
-            </ul>
+            <ul className="space-y-4 text-gray-700">
+                <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
+                  <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>Onity DirectKey with Serene</li>
+                </NavLink>
+                <NavLink to="/our-products/detnov/addressable-sounder" className='block'>
+                  <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>MAD-401 and MAD-402 Series Modules</li>
+                </NavLink>
+                <NavLink to="/our-products/acti/bay-raid-backmount-standalone" className='block'>
+                  <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>INR 415 256-Channel RAID Standalone</li>
+                </NavLink>
+                <NavLink to="/our-products/acti/channel-tower-strandalone" className='block'>
+                  <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>GNR 340 100-Channel Tower NVR</li>
+                </NavLink>
+                <NavLink to="/our-products/acti/bay-raid-backmount-standalone" className='block'>
+                  <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>INR 415 256-Channel RAID Standalone</li>
+                </NavLink>
+                <NavLink to="/our-products/acti/channel-tower-strandalone" className='block'>
+                  <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>GNR 340 100-Channel Tower NVR</li>
+                </NavLink>
+             </ul>
           </div>
 
             {/* Blue CTA Card */}
-             <div
-              className="bg-blue-600 text-white p-6 rounded shadow-md overflow-hidden relative min-h-[200px]"
-              style={{
-                backgroundImage: `linear-gradient(rgba(30, 64, 175, 0.8), rgba(30, 64, 175, 0.8)), url('/src/assets/image/Our Products/quickalert.jpg')`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-              }}
+             <div 
+              className="relative min-h-[240px] overflow-hidden rounded-2xl p-8 text-white shadow-md bg-cover bg-center bg-blend-multiply bg-blue-900/85"
+              style={{ backgroundImage: "url('/dist/assets/image/Our Products/quickalert.jpg')" }}
             >
               <div className="relative z-10 max-w-3xl">
-                 <h3 className="text-xl font-semibold mb-3">
-                   Secure Your Piece Of Mind Today
-                 </h3>
-                 <p className="text-lg mb-4">
-                   Contact Guard-All now for a customized security solution
-                   that protects what matters most.
-                 </p>
-              <button className="bg-blue-700 hover:bg-blue-400 text-white font-semibold px-4 py-2 rounded w-full">
-                <NavLink to="/contacts" className="w-full h-full block">
-                CONTACT US TODAY
+                <h3 className="mb-4 text-2xl font-bold leading-tight tracking-wide">
+                  Secure Your Peace Of Mind Today
+                </h3>
+                
+                <p className="mb-6 text-sm md:text-base text-gray-200 font-medium leading-relaxed">
+                  Contact Guard-All now for a customized security solution that protects what matters most.
+                </p>
+
+                <NavLink 
+                  to="/contacts" 
+                  className="inline-block w-full rounded-xl bg-[#0f3e90] px-6 py-3 text-center text-sm font-semibold tracking-wider text-white transition-colors hover:bg-[#ff5f31] sm:w-auto"
+                >
+                  CONTACT US TODAY
                 </NavLink>
-              </button>
+              </div>
             </div>
-            </div>
+
           </aside>
         </div>
       </main>
