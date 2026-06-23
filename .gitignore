@@ -11,6 +11,8 @@ node_modules
 backend/node_modules
 
 *.sql
+backend/.env
+backend/backup.sql
 
 
 *.local
