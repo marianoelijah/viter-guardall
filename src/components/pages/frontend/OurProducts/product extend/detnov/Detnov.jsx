@@ -14,7 +14,7 @@ const ProductCard = ({ title, description, image, detailRoute }) => (
       />
     </div>
     <div className="flex-grow">
-      <h3 className="text-[#1a365d] font-semibold text-lg uppercase mb-3 leading-tight tracking-wide min-h-[4rem]">
+      <h3 className="text-[#1a365d] font-semibold text-xl uppercase mb-3 leading-tight tracking-wide min-h-[4rem]">
         {title}
       </h3>
       <p className="text-gray-600 text-xl leading-relaxed line-clamp-3">

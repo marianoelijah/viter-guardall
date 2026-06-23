@@ -14,7 +14,7 @@ const ProductCard = ({ title, description, image, detailRoute }) => (
       />
     </div>
     <div className="flex-grow px-2">
-      <h3 className="text-[#1a365d] font-bold text-sm uppercase mb-3 leading-tight group-hover:text-blue-600 transition-colors min-h-[2.5rem]">
+      <h3 className="text-[#1a365d] font-bold text-xl uppercase mb-3 leading-tight group-hover:text-blue-600 transition-colors min-h-[2.5rem]">
         {title}
       </h3>
       <p className="text-gray-600 text-xl leading-relaxed line-clamp-3">

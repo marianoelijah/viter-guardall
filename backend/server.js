@@ -17,23 +17,22 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // --- Middlewares ---
-// app.use(cors());
 app.use(express.json());
 
-// Clean production CORS setup
-// Remove the old app.use(cors(...)) blocks and replace with ONLY this:
+// Dynamic CORS Configuration
 const allowedOrigins = [
   "http://localhost:5173", 
   "https://guardall.vercel.app", 
   "https://viter-guardall.vercel.app"
+  // 💡 Add your exact live production Vercel URL below if it differs from these
 ];
 
 app.use(cors({
   origin: function (origin, callback) {
-    // Allow requests with no origin (like mobile apps or curl requests)
+    // Allow requests with no origin (like mobile apps or server-to-server testing tools)
     if (!origin) return callback(null, true);
     if (allowedOrigins.indexOf(origin) === -1) {
-      const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
+      const msg = `The CORS policy for this site does not allow access from the specified Origin: ${origin}`;
       return callback(new Error(msg), false);
     }
     return callback(null, true);
@@ -41,19 +40,11 @@ app.use(cors({
   credentials: true
 }));
 
-// The '..' tells Node to go UP one folder level, out of 'backend' and into 'viter-guardall'
-// This works locally, but in cloud deployment the path can break.
-// app.use('/assets', express.static(path.join(__dirname, '../public/assets')));
-
-// Safer version using path.resolve to ensure we get an absolute path
-app.use('/assets', express.static(path.resolve(__dirname, '../public/assets')));
-
-// Update your console log too so we can verify:
-console.log("New Static Path:", path.join(__dirname, '../public/assets'));
-
-// --- LOGGING FOR DEBUGGING ---
-// Add this temporary line right after the app.use above:
-// console.log("Checking Static Path:", path.resolve('public/assets'));
+// --- Static Asset Serving ---
+// Bulletproof absolute path routing for Render environments
+const staticAssetsPath = path.resolve(__dirname, '../public/assets');
+app.use('/assets', express.static(staticAssetsPath));
+console.log("Production Static Path Configured To:", staticAssetsPath);
 
 // --- Mount Imported Router Files ---
 app.use("/api/products-legacy", productRoutes);
@@ -61,8 +52,8 @@ app.use("/api/products-main", productsRouter);
 
 // --- Primary API Routes ---
 
-// 1. Root & Test
-// app.get("/", (req, res) => res.send("Guard-All Backend Running"));
+// 1. Root Health Check (Crucial for Render deployment logs)
+app.get('/', (req, res) => res.status(200).send("Guard-All Backend API is fully operational."));
 app.get('/test', (req, res) => res.send("The server is alive and talking!"));
 
 // 2. GET Brands (For Admin Dropdown)
@@ -143,7 +134,6 @@ app.post('/api/add-product', async (req, res) => {
   }
 });
 
-
 // GET Home Banners
 app.get('/api/home-banners', async (req, res) => {
   try {
@@ -177,15 +167,13 @@ app.get('/api/home-featured-products', async (req, res) => {
 // GET Home CTA Data
 app.get('/api/home-cta', async (req, res) => {
   try {
-    // We select the one with section_name 'secure_life'
     const [rows] = await db.query("SELECT * FROM home_cta WHERE section_name = 'secure_life' LIMIT 1");
-    res.json(rows[0]); // Send just the single object
+    res.json(rows[0]); 
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
 
-// WHO-WE-ARE SECTIONS
 // GET Who We Are content
 app.get('/api/who-we-are', async (req, res) => {
   try {
@@ -226,19 +214,6 @@ app.get('/api/security-experts', async (req, res) => {
   }
 });
 
-// GET Engineering Dept Intro
-// app.get('/api/dept-intro', async (req, res) => {
-//   try {
-//     const [rows] = await db.query("SELECT * FROM department_intros WHERE dept_name = 'Engineering Department' LIMIT 1");
-//     res.json(rows[0]);
-//   } catch (err) {
-//     res.status(500).json({ error: err.message });
-//   }
-// });
-
-// OUR PRODUCTS 
-// THIS ARE THE PRODUCTS BRANDS
-
 // GET products by brand
 app.get('/api/products/brand/:brand', async (req, res) => {
   try {
@@ -250,11 +225,9 @@ app.get('/api/products/brand/:brand', async (req, res) => {
   }
 }); 
 
-// PRODUCTPAGE.JSX - GET Categories with Nested Brands (For ProductPage.jsx)
-// Example: server.js or your product route file
+// PRODUCTPAGE.JSX - GET Categories with Nested Brands 
 app.get('/api/products', async (req, res) => {
   try {
-    // Joining categories_array with client_brands
     const [rows] = await db.query(`
       SELECT 
         c.id AS cat_id, c.title, c.description, c.img_path,
@@ -264,23 +237,19 @@ app.get('/api/products', async (req, res) => {
       ORDER BY c.id ASC
     `);
 
-    // Transforming flat rows into the nested JSON structure your React app expects
     const formattedData = rows.reduce((acc, row) => {
-      // Check if we already started adding this category to our list
       let category = acc.find(item => item.id === row.cat_id);
-
       if (!category) {
         category = {
           id: row.cat_id,
           title: row.title,
           description: row.description,
           img: row.img_path,
-          brands: [] // Initialize empty brands array
+          brands: [] 
         };
         acc.push(category);
       }
 
-      // If there is a brand associated with this row, push it into the brands array
       if (row.brand_id) {
         category.brands.push({
           name: row.brand_name,
@@ -288,7 +257,6 @@ app.get('/api/products', async (req, res) => {
           path: row.link_path
         });
       }
-
       return acc;
     }, []);
 
@@ -299,12 +267,10 @@ app.get('/api/products', async (req, res) => {
   }
 });
 
-// OUR CLIENTS
-// 1. Updated API for Clients
+// GET Our Clients
 app.get('/api/clients', async (req, res) => {
     try {
         const query = "SELECT * FROM our_clients ORDER BY sector ASC";
-        // With Promise-based clients, we 'await' the result and destructure [rows]
         const [rows] = await db.query(query); 
         res.json(rows);
     } catch (err) {
@@ -313,31 +279,12 @@ app.get('/api/clients', async (req, res) => {
     }
 });
 
-// 2. Updated API for Brand Products (if you haven't fixed this one yet)
-app.get('/api/products/brand/:brandName', async (req, res) => {
-    try {
-        const { brandName } = req.params;
-        const query = "SELECT * FROM brand_products WHERE brand_name = ?";
-        const [rows] = await db.query(query, [brandName]);
-        res.json(rows);
-    } catch (err) {
-        console.error("Database Error:", err);
-        res.status(500).json({ error: "Internal Server Error" });
-    }
-});
-
-// 3. Updated API for Product Details
-// Use a simple named parameter. 
-// If your product path is just one level (e.g., /details/dsc-hd300), use :slug
-// If it has slashes (e.g., /details/delta/dsc-hd300), use :brand/:slug
+// GET Product Details via Route Match
 app.get('/api/products/details/:brand/:slug', async (req, res) => {
     try {
         const { brand, slug } = req.params;
-        // Reconstruct the route as it appears in your DB
         const fullRoute = `/our-products/${brand}/${slug}`;
         
-        console.log("Searching for route:", fullRoute); // Debugging log
-
         const query = "SELECT * FROM brand_products WHERE detail_route = ?";
         const [rows] = await db.query(query, [fullRoute]);
         
@@ -354,65 +301,44 @@ app.get('/api/products/details/:brand/:slug', async (req, res) => {
 // SOCIAL-PLATFORMS
 app.get('/api/social-platforms', async (req, res) => {
     try {
-        // Using [db] assuming you are using a promise-based pool/connection
         const [rows] = await db.query("SELECT * FROM social_platforms WHERE is_active = 1");
         res.json(rows);
     } catch (err) {
-        console.error("❌ SQL ERROR:", err.message); // THIS LINE IS KEY
+        console.error("❌ SQL ERROR:", err.message);
         res.status(500).send("Database Error");
     }
 });
 
-// SLIDESHOW  FOR SECURITY EXPERTS HEADINGS
+// SLIDESHOW HEADINGS FOR SECURITY EXPERTS 
 app.get('/api/dept-intro', async (req, res) => {
   try {
-    // 1. Removed "WHERE dept_name = ..." and "LIMIT 1" to pull all 3 departments
-    // 2. Uses your existing async/await architecture matching the rest of the file
     const [rows] = await db.query('SELECT * FROM department_intros');
-    res.json(rows); // Sends back the entire array of rows to your frontend
+    res.json(rows); 
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
 
-// CONTACTS FORM
 // POST Contact Form Submission
 app.post('/api/contact', async (req, res) => {
     const { name, email, subject, message } = req.body;
-    
     try {
-        // 1. Save to Database (Good for lead tracking)
         const query = "INSERT INTO contact_inquiries (name, email, subject, message) VALUES (?, ?, ?, ?)";
         await db.query(query, [name, email, subject, message]);
-
-        // 2. Optional: Send Email notification 
-        // (You would use 'nodemailer' here later)
-
-        res.status(200).json({ message: "Inquiry received" });
+        res.status(200).json({ message: "Inquiry received successfully." });
     } catch (err) {
         console.error("Contact Form Error:", err);
         res.status(500).json({ error: "Failed to process inquiry" });
     }
 });
 
+// Global Error Handler
 app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).send("Something broke!");
+  console.error("Unhandle Error Context:", err.stack);
+  res.status(500).json({ error: "Internal Server Middleware Catch!", message: err.message });
 });
 
-// The Final Production Setup
-// You are hosting your frontend on Vercel, not inside your Railway backend. Your Railway backend should only be an API. Vercel handles the dist folder and the routing for the website itself.
-// app.use(express.static(path.resolve(__dirname, "../dist")));
-
-// app.get(/.*/, (req, res) => {
-//   res.sendFile(path.resolve(__dirname, "../dist/index.html"));
-// });
-
-
-
-// --- Start Server --- //
-
-// The "0.0.0.0" tells the server to listen on all available network interfaces, not just localhost.
+// --- Start Server ---
 app.listen(PORT, "0.0.0.0", () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`Server running safely on port ${PORT}`);
 });
