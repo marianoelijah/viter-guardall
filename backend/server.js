@@ -4,7 +4,6 @@ import cors from "cors";
 import db from "./config/db.js";
 import path from 'path';
 import { fileURLToPath } from 'url';
-import cors from 'cors';
 
 // Route Imports
 import productRoutes from "./routes/productRoutes.js";
