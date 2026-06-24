@@ -4,6 +4,7 @@ import cors from "cors";
 import db from "./config/db.js";
 import path from 'path';
 import { fileURLToPath } from 'url';
+import cors from 'cors';
 
 // Route Imports
 import productRoutes from "./routes/productRoutes.js";
@@ -18,6 +19,12 @@ const __dirname = path.dirname(__filename);
 
 // --- Middlewares ---
 app.use(express.json());
+
+// Allow your specific live Vercel URL to access this API
+app.use(cors({
+  origin: 'https://viter-guardall.vercel.app',
+  credentials: true
+}));
 
 // Dynamic CORS Configuration
 const allowedOrigins = [
