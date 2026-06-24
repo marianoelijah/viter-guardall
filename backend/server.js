@@ -26,6 +26,9 @@ app.use(cors({
   credentials: true
 }));
 
+app.use(cors());
+app.use(express.json());
+
 // Dynamic CORS Configuration
 const allowedOrigins = [
   "http://localhost:5173", 

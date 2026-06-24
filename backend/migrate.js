@@ -28,7 +28,13 @@ async function migrate() {
     
     console.log("🎉 SUCCESS! Your local tables have been migrated to the cloud.");
   } catch (err) {
-    console.error("❌ Migration failed:", err.message);
+    // 💡 If the table already exists, log a warning instead of crashing the deployment process
+    if (err.code === 'ER_TABLE_EXISTS_ERROR' || err.message.includes('already exists')) {
+      console.log("⚠️ Tables already exist in Aiven Cloud. Skipping schema re-injection!");
+    } else {
+      console.error("❌ Migration failed:", err.message);
+      process.exit(1); // Only crash for severe connection errors
+    }
   } finally {
     await connection.end();
   }
