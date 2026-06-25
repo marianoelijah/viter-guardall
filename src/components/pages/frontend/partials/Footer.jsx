@@ -7,20 +7,27 @@ import SocialShare from "../OurProducts/Reusable/SocialShare";
 const IMAGE_BASE_URL = import.meta.env.VITE_API_URL; 
 
 const Footer = () => {
-  const [contactInfo, setContactInfo] = useState([]);
+ const [contactInfo, setContactInfo] = useState([]);
   const [offices, setOffices] = useState([]);
 
   // Fetch dynamic footer elements from your Express backend
   useEffect(() => {
     fetch(`${IMAGE_BASE_URL}/api/footer-contact`)
       .then((res) => res.json())
-      .then((data) => setContactInfo(data))
-      .catch((err) => console.error("Error fetching contact info:", err));
+      // Fallback to empty array if response is malformed or an error object
+      .then((data) => setContactInfo(Array.isArray(data) ? data : []))
+      .catch((err) => {
+        console.error("Error fetching contact info:", err);
+        setContactInfo([]);
+      });
 
     fetch(`${IMAGE_BASE_URL}/api/footer-offices`)
       .then((res) => res.json())
-      .then((data) => setOffices(data))
-      .catch((err) => console.error("Error fetching offices:", err));
+      .then((data) => setOffices(Array.isArray(data) ? data : []))
+      .catch((err) => {
+        console.error("Error fetching offices:", err);
+        setOffices([]);
+      });
   }, []);
 
   return (

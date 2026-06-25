@@ -344,7 +344,9 @@ app.post('/api/contact', async (req, res) => {
 // 1. GET Footer Contact Info
 app.get('/api/footer-contact', async (req, res) => {
   try {
-    const [rows] = await db.query('SELECT id, type, value FROM contact_info');
+    const result = await db.query('SELECT id, type, value FROM contact_info');
+    // If result is wrapped in an execution metadata array, extract the first element
+    const rows = Array.isArray(result[0]) ? result[0] : result;
     res.json(rows);
   } catch (err) {
     console.error("Error fetching footer contact:", err);
@@ -355,7 +357,8 @@ app.get('/api/footer-contact', async (req, res) => {
 // 2. GET Footer Office Addresses
 app.get('/api/footer-offices', async (req, res) => {
   try {
-    const [rows] = await db.query('SELECT id, city, address, map_link FROM offices');
+    const result = await db.query('SELECT id, city, address, map_link FROM offices');
+    const rows = Array.isArray(result[0]) ? result[0] : result;
     res.json(rows);
   } catch (err) {
     console.error("Error fetching footer offices:", err);
