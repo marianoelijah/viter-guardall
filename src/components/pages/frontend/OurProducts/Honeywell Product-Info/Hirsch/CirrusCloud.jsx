@@ -26,7 +26,7 @@ const CirrusCloud = () => {
      <div className="bg-gray-100 min-h-screen font-sans">
       {/* Blue Header Banner */}
       <header className="bg-[#7f95b8] py-12 text-center shadow-md">
-        <h1 className="text-5xl md:text-5xl font-bold max-w-5xl mx-auto leading-tight">Cirrus Cloud Access Control</h1>
+        <h1 className="text-5xl md:text-5xl font-bold max-w-5xl mx-auto leading-tight text-white">Cirrus Cloud Access Control</h1>
       </header>
 
       {/* Main Content Container */}
