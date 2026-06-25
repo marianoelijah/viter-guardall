@@ -341,6 +341,28 @@ app.post('/api/contact', async (req, res) => {
     }
 });
 
+// 1. GET Footer Contact Info
+app.get('/api/footer-contact', async (req, res) => {
+  try {
+    const [rows] = await db.query('SELECT id, type, value FROM contact_info');
+    res.json(rows);
+  } catch (err) {
+    console.error("Error fetching footer contact:", err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// 2. GET Footer Office Addresses
+app.get('/api/footer-offices', async (req, res) => {
+  try {
+    const [rows] = await db.query('SELECT id, city, address, map_link FROM offices');
+    res.json(rows);
+  } catch (err) {
+    console.error("Error fetching footer offices:", err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // Global Error Handler
 app.use((err, req, res, next) => {
   console.error("Unhandle Error Context:", err.stack);

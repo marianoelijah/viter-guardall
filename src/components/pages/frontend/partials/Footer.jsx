@@ -1,16 +1,36 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { FaPhone, FaEnvelope, FaFacebookF, FaLinkedinIn, FaMapMarkerAlt } from "react-icons/fa";
+import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import SocialShare from "../OurProducts/Reusable/SocialShare";
 
+// Dynamically reference your base environment endpoint
+const IMAGE_BASE_URL = import.meta.env.VITE_API_URL; 
+
 const Footer = () => {
+  const [contactInfo, setContactInfo] = useState([]);
+  const [offices, setOffices] = useState([]);
+
+  // Fetch dynamic footer elements from your Express backend
+  useEffect(() => {
+    fetch(`${IMAGE_BASE_URL}/api/footer-contact`)
+      .then((res) => res.json())
+      .then((data) => setContactInfo(data))
+      .catch((err) => console.error("Error fetching contact info:", err));
+
+    fetch(`${IMAGE_BASE_URL}/api/footer-offices`)
+      .then((res) => res.json())
+      .then((data) => setOffices(data))
+      .catch((err) => console.error("Error fetching offices:", err));
+  }, []);
+
   return (
     <footer className="bg-white text-gray-800 border-t border-gray-200 font-poppins">
       <div className="max-w-7xl mx-auto px-6 py-12">
         
-        {/* Main Grid: 1 col on mobile, 2 on tablet, 4 on desktop */}
+        {/* Main Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 sm:gap-10">
           
-          {/* Logo & Description - Centered on mobile */}
+          {/* Logo & Description */}
           <div className="flex flex-col items-center sm:items-start text-center sm:text-left space-y-4">
             <img src="/assets/image/Client Logo/logo.png" alt="Guard-All Logo" className="h-12 w-auto" />
             <p className="text-gray-600 leading-relaxed text-lg max-w-sm">
@@ -20,7 +40,7 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Company Links - Centered on mobile */}
+          {/* Company Links */}
           <div className="text-center sm:text-left">
             <h3 className="text-blue-800 font-bold uppercase tracking-wider mb-6 text-lg">Company</h3>
             <ul className="space-y-3 text-gray-600">
@@ -32,47 +52,60 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact Info - Centered on mobile */}
+          {/* Contact Info - Live & Clickable */}
           <div className="text-center sm:text-left">
             <h3 className="text-blue-800 font-bold uppercase tracking-wider mb-6 text-lg">Contact Us</h3>
             <ul className="space-y-4 text-gray-600 inline-block sm:block text-left">
-              <li className="flex items-center gap-3">
-                <FaPhone className="text-blue-800 shrink-0" /> 
-                <span className="text-lg md:text-base">(02) 8817 4132</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <FaPhone className="text-blue-800 shrink-0" />
-                <span className="text-lg md:text-base">(02) 8840 5673 to 76</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <FaPhone className="text-blue-800 shrink-0" /> 
-                <span className="text-lg md:text-base">(+63) 998 843 9711</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <FaEnvelope className="text-blue-800 shrink-0" />
-                <span className="text-lg md:text-base">info@guardall.com.ph</span>
-              </li>
+              {contactInfo.map((info) => {
+                const isPhone = info.type === "phone";
+                const href = isPhone 
+                  ? `tel:${info.value.replace(/\s+/g, "")}` 
+                  : `mailto:${info.value}`;
+
+                return (
+                  <li key={info.id} className="flex items-center gap-3">
+                    {isPhone ? (
+                      <FaPhone className="text-blue-800 shrink-0" />
+                    ) : (
+                      <FaEnvelope className="text-blue-800 shrink-0" />
+                    )}
+                    <a 
+                      href={href} 
+                      className="text-lg md:text-base hover:text-blue-600 transition-colors"
+                    >
+                      {info.value}
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
-          {/* Offices & Social - Centered on mobile */}
+          {/* Offices & Social - External Geolocation Hyperlinks */}
           <div className="flex flex-col items-center sm:items-start text-center sm:text-left space-y-6">
             <div>
               <h3 className="text-blue-800 font-bold uppercase tracking-wider mb-4 text-lg">Offices</h3>
               <div className="space-y-4 text-sm text-gray-600 inline-block sm:block text-left">
-                <div className="flex gap-3">
-                  <FaMapMarkerAlt className="text-blue-800 shrink-0 mt-1 text-lg" />
-                  <p><strong>Makati:</strong> Unit 708 Cattleya Bldg, 235 Salcedo St.</p>
-                </div>
-                <div className="flex gap-3">
-                  <FaMapMarkerAlt className="text-blue-800 shrink-0 mt-1 text-lg" />
-                  <p><strong>Cebu:</strong> Unit 306 Cebu Holdings Bldg, Business Park</p>
-                </div>
+                {offices.map((office) => (
+                  <div key={office.id} className="flex gap-3">
+                    <FaMapMarkerAlt className="text-blue-800 shrink-0 mt-1 text-lg" />
+                    <p>
+                      <strong className="text-gray-800">{office.city}:</strong> |{" "}
+                      <a 
+                        href={office.map_link} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="hover:text-blue-600 hover:underline transition-colors"
+                      >
+                        {office.address}
+                      </a>
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
             
-            {/* Social Icons Container */}
-             {/* SHARE SECTION */}
+            {/* SHARE SECTION */}
             <SocialShare title="Check out this product!" />
 
           </div>
