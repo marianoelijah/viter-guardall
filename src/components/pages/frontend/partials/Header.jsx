@@ -19,11 +19,12 @@ const Header = () => {
         
         {/* Logo */}
         <Link to="/" className="flex items-center hover:opacity-90 transition">
-          <img 
-            src="/assets/image/Client Logo/logo.png" 
-            alt="Guard-All" 
-            className="h-10 md:h-12 w-auto object-contain" 
-          />
+        <img 
+          src="/assets/image/Client Logo/logo.png"
+          alt="Guard-All" 
+          // Changed h-10 md:h-12 to explicit width utilities
+          className="w-36 md:w-48 h-auto object-contain" 
+           />
         </Link>
 
         {/* Desktop Navigation */}
