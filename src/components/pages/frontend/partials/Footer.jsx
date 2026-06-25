@@ -12,23 +12,31 @@ const Footer = () => {
 
   // Fetch dynamic footer elements from your Express backend
   useEffect(() => {
-    fetch(`${IMAGE_BASE_URL}/api/footer-contact`)
-      .then((res) => res.json())
-      // Fallback to empty array if response is malformed or an error object
-      .then((data) => setContactInfo(Array.isArray(data) ? data : []))
-      .catch((err) => {
-        console.error("Error fetching contact info:", err);
-        setContactInfo([]);
-      });
+  // Pulling contact records
+  fetch(`${IMAGE_BASE_URL}/api/footer-contact`)
+    .then((res) => {
+      if (!res.ok) throw new Error(`HTTP Error Status: ${res.status}`);
+      return res.json();
+    })
+    .then((data) => setContactInfo(Array.isArray(data) ? data : []))
+    .catch((err) => {
+      console.error("❌ Footer contact error detail:", err);
+      setContactInfo([]);
+    });
 
-    fetch(`${IMAGE_BASE_URL}/api/footer-offices`)
-      .then((res) => res.json())
-      .then((data) => setOffices(Array.isArray(data) ? data : []))
-      .catch((err) => {
-        console.error("Error fetching offices:", err);
-        setOffices([]);
-      });
-  }, []);
+  // Pulling office records
+  fetch(`${IMAGE_BASE_URL}/api/footer-offices`)
+    .then((res) => {
+      if (!res.ok) throw new Error(`HTTP Error Status: ${res.status}`);
+      return res.json();
+    })
+    .then((data) => setOffices(Array.isArray(data) ? data : []))
+    .catch((err) => {
+      console.error("❌ Footer office error detail:", err);
+      setOffices([]);
+    });
+}, []);
+
 
   return (
     <footer className="bg-white text-gray-800 border-t border-gray-200 font-poppins">

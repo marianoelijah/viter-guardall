@@ -1,43 +1,67 @@
-import fs from 'fs';
-import path from 'path';
 import mysql from 'mysql2/promise';
-import 'dotenv/config';
+import dotenv from 'dotenv';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
 
-async function migrate() {
-  console.log("⏳ Connecting to Aiven Cloud Database using .env credentials...");
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+// Load environment variables from your existing .env file
+dotenv.config({ path: join(__dirname, '.env') });
+
+async function runMigration() {
+  console.log("⏳ Connecting to database cluster...");
   
   const connection = await mysql.createConnection({
     host: process.env.DB_HOST,
-    port: parseInt(process.env.DB_PORT) || 17452,
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
-    multipleStatements: true
+    port: process.env.DB_PORT,
   });
 
   try {
-    console.log("✅ Connected! Disabling strict primary key requirement for this session...");
-    await connection.query("SET SESSION sql_require_primary_key = 0;");
+    console.log("🚀 Creating 'contact_info' table...");
+    await connection.query(`
+      CREATE TABLE IF NOT EXISTS contact_info (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        type VARCHAR(20) NOT NULL,
+        value VARCHAR(255) NOT NULL
+      );
+    `);
 
-    console.log("📖 Reading backup.sql file...");
-    const sqlPath = path.resolve('backup.sql');
-    const sql = fs.readFileSync(sqlPath, 'utf8');
+    console.log("🌱 Seeding 'contact_info' records...");
+    await connection.query(`
+      INSERT INTO contact_info (type, value) VALUES
+      ('phone', '(02) 8817 4132'),
+      ('phone', '(02) 8840 5673 to 76'),
+      ('phone', '(+63) 998 843 9711'),
+      ('email', 'info@guardall.com.ph');
+    `);
 
-    console.log("🚀 Injecting tables into Aiven Cloud...");
-    await connection.query(sql);
-    
-    console.log("🎉 SUCCESS! Your local tables have been migrated to the cloud.");
-  } catch (err) {
-    // 💡 If the table already exists, log a warning instead of crashing the deployment process
-    if (err.code === 'ER_TABLE_EXISTS_ERROR' || err.message.includes('already exists')) {
-      console.log("⚠️ Tables already exist in Aiven Cloud. Skipping schema re-injection!");
-    } else {
-      console.error("❌ Migration failed:", err.message);
-      process.exit(1); // Only crash for severe connection errors
-    }
+    console.log("🚀 Creating 'offices' table...");
+    await connection.query(`
+      CREATE TABLE IF NOT EXISTS offices (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        city VARCHAR(50) NOT NULL,
+        address TEXT NOT NULL,
+        map_link TEXT NOT NULL
+      );
+    `);
+
+    console.log("🌱 Seeding 'offices' records...");
+    await connection.query(`
+      INSERT INTO offices (city, address, map_link) VALUES
+      ('Makati', 'Unit 708 Cattleya Building, 235 Salcedo St. Legaspi Village, Makati City, Philippines 1223', 'https://maps.google.com'),
+      ('Cebu', 'Unit 306 Cebu Holdings Building, Cebu Business Park, Cebu City, Philippines 6000', 'https://maps.google.com');
+    `);
+
+    console.log("🎉 Success! Cloud database tables created and seeded successfully.");
+  } catch (error) {
+    console.error("❌ Migration failed:", error.message);
   } finally {
     await connection.end();
   }
 }
 
-migrate();
+runMigration();
