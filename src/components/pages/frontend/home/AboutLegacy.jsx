@@ -1,11 +1,53 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
+// A reusable counter component that counts up when visible
+const AnimatedCounter = ({ target, duration = 2000 }) => {
+  const [count, setCount] = useState(0);
+  const elementRef = useRef(null);
+  const hasAnimated = useRef(false); // Prevents re-triggering animations on every scroll
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated.current) {
+          hasAnimated.current = true; // Lock the animation so it only runs once
+          let start = 0;
+          const end = parseInt(target, 10);
+          if (start === end) return;
+
+          // Calculate how fast to increment based on duration
+          const totalMiliseconds = duration;
+          const incrementTime = Math.max(Math.floor(totalMiliseconds / end), 10);
+          
+          const timer = setInterval(() => {
+            start += 1;
+            setCount(start);
+            if (start === end) {
+              clearInterval(timer);
+            }
+          }, incrementTime);
+        }
+      },
+      { threshold: 0.1 } // Triggers when 10% of the element is visible
+    );
+
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [target, duration]);
+
+  return <span ref={elementRef}>{count}</span>;
+};
+
 const AboutLegacy = () => {
+  // Keeping target values as integers for the counter logic
   const stats = [
-    { label: "Satisfied Customers", value: "500+" },
-    { label: "Years Experience", value: "40+" },
-    { label: "Projects Completed", value: "400+" },
+    { label: "Satisfied Customers", value: 500, suffix: "+" },
+    { label: "Years Experience", value: 40, suffix: "+" },
+    { label: "Projects Completed", value: 400, suffix: "+" },
   ];
 
   return (
@@ -43,17 +85,18 @@ const AboutLegacy = () => {
           </p>
 
           <Link to="/who-we-are">
-          <button className="border-2 border-blue-900 text-blue-900 px-8 py-3 rounded hover:bg-blue-900 hover:text-white transition-colors font-semibold mb-12">
-            SEE MORE SERVICES
-          </button>
+            <button className="border-2 border-blue-900 text-blue-900 px-8 py-3 rounded hover:bg-blue-900 hover:text-white transition-colors font-semibold mb-12">
+              SEE MORE SERVICES
+            </button>
           </Link>
 
           {/* Stats Grid */}
           <div className="grid grid-cols-3 gap-8 border-t border-gray-300 pt-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-left">
-                <div className="text-5xl md:text-5xl font-black text-gray-900 gap-3">
-                  {stat.value}
+                <div className="text-5xl md:text-5xl font-black text-gray-900 tabular-nums">
+                  <AnimatedCounter target={stat.value} duration={1500} />
+                  {stat.suffix}
                 </div>
                 <div className="text-lg md:text-sm text-gray-600 mt-2 leading-tight uppercase tracking-wider font-semibold">
                   {stat.label.split(' ').map((word, i) => (
@@ -68,4 +111,5 @@ const AboutLegacy = () => {
     </section>
   );
 };
+
 export default AboutLegacy;
