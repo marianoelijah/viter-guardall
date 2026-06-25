@@ -344,25 +344,22 @@ app.post('/api/contact', async (req, res) => {
 // 1. GET Footer Contact Info
 app.get('/api/footer-contact', async (req, res) => {
   try {
-    const result = await db.query('SELECT id, type, value FROM contact_info');
-    // If result is wrapped in an execution metadata array, extract the first element
-    const rows = Array.isArray(result[0]) ? result[0] : result;
+    const [rows] = await db.query('SELECT id, type, value FROM contact_info');
     res.json(rows);
   } catch (err) {
-    console.error("Error fetching footer contact:", err);
-    res.status(500).json({ error: err.message });
+    console.error("❌ Error fetching footer contact:", err.message);
+    res.status(500).json({ error: "Database Error", message: err.message });
   }
 });
 
 // 2. GET Footer Office Addresses
 app.get('/api/footer-offices', async (req, res) => {
   try {
-    const result = await db.query('SELECT id, city, address, map_link FROM offices');
-    const rows = Array.isArray(result[0]) ? result[0] : result;
+    const [rows] = await db.query('SELECT id, city, address, map_link FROM offices');
     res.json(rows);
   } catch (err) {
-    console.error("Error fetching footer offices:", err);
-    res.status(500).json({ error: err.message });
+    console.error("❌ Error fetching footer offices:", err.message);
+    res.status(500).json({ error: "Database Error", message: err.message });
   }
 });
 
