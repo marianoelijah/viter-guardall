@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../../../partials/Header';
 import Footer from '../../../partials/Footer';
 import { NavLink } from 'react-router-dom';
+import React from 'react';
 
 
 const HirschMx1Me = () => {
@@ -136,26 +137,26 @@ const HirschMx1Me = () => {
 
             {/* Blue CTA Card */}
          <div 
-           className="relative min-h-[240px] overflow-hidden rounded-2xl p-8 text-white shadow-md bg-cover bg-center bg-blend-multiply bg-blue-900/85"
-           style={{ backgroundImage: "url('/dist/assets/image/Our Products/quickalert.jpg')" }}
-         >
-           <div className="relative z-10 max-w-3xl">
-             <h3 className="mb-4 text-2xl font-bold leading-tight tracking-wide">
-               Secure Your Peace Of Mind Today
-             </h3>
-             
-             <p className="mb-6 text-sm md:text-base text-gray-200 font-medium leading-relaxed">
-               Contact Guard-All now for a customized security solution that protects what matters most.
-             </p>
-         
-             <NavLink 
-               to="/contacts" 
-               className="inline-block w-full rounded-xl bg-[#0f3e90] px-5 py-2 text-center text-sm font-semibold tracking-wider text-white transition-colors hover:bg-[#ff5f31] sm:w-auto"
-             >
-               CONTACT US TODAY
-             </NavLink>
-           </div>
-         </div>
+              className="relative min-h-[240px] overflow-hidden rounded-2xl p-8 text-white shadow-md bg-cover bg-center bg-blend-multiply bg-blue-900/85"
+              style={{ backgroundImage: "url('/assets/image/Our%20Products/quickalert.jpg')" }}
+            >
+              <div className="relative z-10 max-w-3xl">
+                <h3 className="mb-4 text-2xl font-bold leading-tight tracking-wide">
+                  Secure Your Peace Of Mind Today
+                </h3>
+                
+                <p className="mb-6 text-sm md:text-base text-gray-200 font-medium leading-relaxed">
+                  Contact Guard-All now for a customized security solution that protects what matters most.
+                </p>
+
+                <NavLink 
+                  to="/contacts" 
+                  className="inline-block w-full rounded-xl bg-[#0f3e90] px-6 py-3 text-center text-sm font-semibold tracking-wider text-white transition-colors hover:bg-[#ff5f31] sm:w-auto"
+                >
+                  CONTACT US TODAY
+                </NavLink>
+              </div>
+            </div>
         </aside>
       </div>
     </div>

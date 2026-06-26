@@ -3,6 +3,7 @@ import Header from '../../../partials/Header';
 import Footer from '../../../partials/Footer';
 import { NavLink } from 'react-router-dom';
 import SocialShare from '../../Reusable/SocialShare';
+import React from 'react';
 
 // Shared Layout Component to maintain design consistency across all products
 const ProductLayout = ({ title, subtitle, description, features, specs, sidebarItems }) => {
@@ -143,27 +144,27 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
           </div>
 
             {/* Blue CTA Card */}
-             <div
-                            className="relative min-h-[240px] overflow-hidden rounded-xl p-8 text-white shadow-md bg-cover bg-center bg-blend-multiply bg-blue-900/85"
-                             style={{ backgroundImage: "url('/dist/assets/image/Our Products/quickalert.jpg')" }}
-                              >
-                            <div className="relative z-10">
-                                <h3 className="mb-4 text-2xl font-bold leading-tight tracking-wide">
-                                  Secure Your Peace Of Mind Today
-                                </h3>
-                                                                                       
-                                  <p className="mb-6 text-sm text-gray-200 font-medium leading-relaxed">
-                                    Contact Guard-All now for a customized security solution that protects what matters most.
-                                  </p>
-                                                                         
-                                <NavLink 
-                                    to="/contacts" 
-                                      className="inline-block w-full rounded-xl bg-[#0f3e90] px-6 py-3 text-center text-sm font-semibold tracking-wider text-white transition-colors hover:bg-[#ff5f31] sm:w-auto"
-                                     >
-                                  CONTACT US TODAY
-                                </NavLink>
-                            </div>
-                      </div>
+             <div 
+              className="relative min-h-[240px] overflow-hidden rounded-2xl p-8 text-white shadow-md bg-cover bg-center bg-blend-multiply bg-blue-900/85"
+              style={{ backgroundImage: "url('/assets/image/Our%20Products/quickalert.jpg')" }}
+            >
+              <div className="relative z-10 max-w-3xl">
+                <h3 className="mb-4 text-2xl font-bold leading-tight tracking-wide">
+                  Secure Your Peace Of Mind Today
+                </h3>
+                
+                <p className="mb-6 text-sm md:text-base text-gray-200 font-medium leading-relaxed">
+                  Contact Guard-All now for a customized security solution that protects what matters most.
+                </p>
+
+                <NavLink 
+                  to="/contacts" 
+                  className="inline-block w-full rounded-xl bg-[#0f3e90] px-6 py-3 text-center text-sm font-semibold tracking-wider text-white transition-colors hover:bg-[#ff5f31] sm:w-auto"
+                >
+                  CONTACT US TODAY
+                </NavLink>
+              </div>
+            </div>
           </aside>
         </div>
       </main>
@@ -181,15 +182,6 @@ const DSC2000 = () => {
     subtitle: "Designed for remote locations, this barricade can be easily transported while still protecting areas.",
     description: 
     "Because each module weighs only 1100 pounds (500 kg) and is easy to install, the DSC2000 barricade is perfect for remote locations and developing country installations. It fits in a small shipping package or air cargo container for convenient air transport. Modules can even be carried in the back of a pick-up truck. With its extremely shallow foundation and aesthetic design, the DSC2000 is a major breakthrough in high duty, anti-terrorist barricades. It obviates the concerns of interference with buried pipes, power lines and fiber optic communication lines. The DSC2000 is perfect for high water table locations and areas with corrosive soils. The ten-inch shallow foundation also reduces installation complexity, time, materials and corresponding costs. Delta’s fastest, smallest and shallowest foundation barricade was created especially for high speed applications and ease of installation. It is K12 crash certified with no penetration, meaning it will stop a 15,000 pound (66.7kN) vehicle traveling 50 mph (80 kph) dead in its tracks.",
-    
-    // features: [
-    //   "Very low operating costs thanks to efficient and long-lived MHTM drive",
-    //   "High level of functionality for numerous applications",
-    //   "Ease-of-use and optimum accessibility thanks to well thought-out design",
-    //   "Legal security with Declarations of Conformity and Performance",
-    //   "Acclaimed design: German Design Award 2014 and Red Dot Design Award 2012",
-    //   "Designed for 10 million opening and closing actions"
-    // ],
 
     sidebarItems: [
       "Onity DirectKey with Serene",

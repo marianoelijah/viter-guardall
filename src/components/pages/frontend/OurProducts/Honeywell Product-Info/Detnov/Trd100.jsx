@@ -3,6 +3,7 @@ import Header from '../../../partials/Header';
 import Footer from '../../../partials/Footer';
 import { NavLink } from 'react-router-dom';
 import SocialShare from '../../Reusable/SocialShare';
+import React from 'react';
 
 
 const ProductLayout = ({ title, subtitle, description, features, specs, sidebarItems }) => {
@@ -107,27 +108,27 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
           </div>
 
             {/* Blue CTA Card */}
-              <div
-                className="relative min-h-[240px] overflow-hidden rounded-xl p-8 text-white shadow-md bg-cover bg-center bg-blend-multiply bg-blue-900/85"
-                  style={{ backgroundImage: "url('/dist/assets/image/Our Products/quickalert.jpg')" }}
+               <div 
+              className="relative min-h-[240px] overflow-hidden rounded-2xl p-8 text-white shadow-md bg-cover bg-center bg-blend-multiply bg-blue-900/85"
+              style={{ backgroundImage: "url('/assets/image/Our%20Products/quickalert.jpg')" }}
+            >
+              <div className="relative z-10 max-w-3xl">
+                <h3 className="mb-4 text-2xl font-bold leading-tight tracking-wide">
+                  Secure Your Peace Of Mind Today
+                </h3>
+                
+                <p className="mb-6 text-sm md:text-base text-gray-200 font-medium leading-relaxed">
+                  Contact Guard-All now for a customized security solution that protects what matters most.
+                </p>
+
+                <NavLink 
+                  to="/contacts" 
+                  className="inline-block w-full rounded-xl bg-[#0f3e90] px-6 py-3 text-center text-sm font-semibold tracking-wider text-white transition-colors hover:bg-[#ff5f31] sm:w-auto"
                 >
-                  <div className="relative z-10">
-                     <h3 className="mb-4 text-2xl font-bold leading-tight tracking-wide">
-                        Secure Your Peace Of Mind Today
-                     </h3>
-                                         
-                      <p className="mb-6 text-sm text-gray-200 font-medium leading-relaxed">
-                        Contact Guard-All now for a customized security solution that protects what matters most.
-                      </p>
-                           
-                    <NavLink 
-                       to="/contacts" 
-                       className="inline-block w-full rounded-xl bg-[#0f3e90] px-6 py-3 text-center text-sm font-semibold tracking-wider text-white transition-colors hover:bg-[#ff5f31] sm:w-auto"
-                    >
-                      CONTACT US TODAY
-                    </NavLink>
-                  </div>
-             </div>
+                  CONTACT US TODAY
+                </NavLink>
+              </div>
+            </div>
           </aside>
         </div>
       </main>
@@ -144,16 +145,7 @@ const Trd100 = () => {
     title: "TRD-100 Expansion Card of 4 Free Voltage Relay Output",
     subtitle: "An expansion card designed to increase the number of relay outputs of DETNOV’s fire control panels",
     description: "The TRD-100 expansion card has been designed to increase the number of relay outputs of Detnov’s CCD-100 range of conventional fire control panels. The TRD-100 card provides 4 free contact relay outputs with their three corresponding contacts (common, normally opened, normally closed), which may be used to carry out activations by zone in a conventional system.",
-    // features: [
-    //   "Excellent low light performance",
-    //   "True Wide Dynamic Range",
-    //   "30 fps @ 1080p, 20 FPS @ 5 MP ",
-    //   "Built-in IR illumination up to 30 M ",
-    //   "Remote zoom and focus varifocal lens",
-    //   "H.265 and H.264 encoding with Pelco Smart Compression",
-    //   "IP66 for Trd100 ruggedness",
-    //   "TBuilt-in MicroSD / SDHC / SDXC Card Slot for On-board Storage, 256 GB tested",
-    // ],
+
 
     specs: [
       { type: 'header', label: 'RELAY OUTPUT' },
@@ -163,15 +155,6 @@ const Trd100 = () => {
       { label: 'Operating temperature', value: 'From -5°C to +40°C' },
       { label: 'Relative humidity', value: '95% without condensation' },
     ],
-
-    // sidebarItems: [
-    //   "Onity DirectKey with Serene",
-    //   "MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs",
-    //   "INR 415 256-Channel 12 Bay RAID Backmount Standalone",
-    //   "GNR 340 100-Channel Tower Standalone",
-    //   "ENR 130 16-Channel Desktop Standalone NVR- No HDD Included",
-    //   "Z86 Outdoor Network Dome Camera with Night Vision"
-    // ]
   };
 
   return <ProductLayout {...data} />;

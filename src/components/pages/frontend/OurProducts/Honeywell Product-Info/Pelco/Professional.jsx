@@ -3,6 +3,7 @@ import Header from '../../../partials/Header';
 import Footer from '../../../partials/Footer';
 import { NavLink } from 'react-router-dom';
 import SocialShare from '../../Reusable/SocialShare';
+import React from 'react';
 
 
 // Shared Layout Component to maintain design consistency across all products
@@ -200,26 +201,26 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
 
             {/* Blue CTA Card */}
                       <div 
-                           className="relative min-h-[240px] overflow-hidden rounded-2xl p-8 text-white shadow-md bg-cover bg-center bg-blend-multiply bg-blue-900/85"
-                           style={{ backgroundImage: "url('/dist/assets/image/Our Products/quickalert.jpg')" }}
-                         >
-                           <div className="relative z-10 max-w-3xl">
-                             <h3 className="mb-4 text-2xl font-bold leading-tight tracking-wide">
-                               Secure Your Peace Of Mind Today
-                             </h3>
-                             
-                             <p className="mb-6 text-sm md:text-base text-gray-200 font-medium leading-relaxed">
-                               Contact Guard-All now for a customized security solution that protects what matters most.
-                             </p>
-             
-                             <NavLink 
-                               to="/contacts" 
-                               className="inline-block w-full rounded-xl bg-[#0f3e90] px-6 py-3 text-center text-sm font-semibold tracking-wider text-white transition-colors hover:bg-[#ff5f31] sm:w-auto"
-                             >
-                               CONTACT US TODAY
-                             </NavLink>
-                           </div>
-                         </div>
+              className="relative min-h-[240px] overflow-hidden rounded-2xl p-8 text-white shadow-md bg-cover bg-center bg-blend-multiply bg-blue-900/85"
+              style={{ backgroundImage: "url('/assets/image/Our%20Products/quickalert.jpg')" }}
+            >
+              <div className="relative z-10 max-w-3xl">
+                <h3 className="mb-4 text-2xl font-bold leading-tight tracking-wide">
+                  Secure Your Peace Of Mind Today
+                </h3>
+                
+                <p className="mb-6 text-sm md:text-base text-gray-200 font-medium leading-relaxed">
+                  Contact Guard-All now for a customized security solution that protects what matters most.
+                </p>
+
+                <NavLink 
+                  to="/contacts" 
+                  className="inline-block w-full rounded-xl bg-[#0f3e90] px-6 py-3 text-center text-sm font-semibold tracking-wider text-white transition-colors hover:bg-[#ff5f31] sm:w-auto"
+                >
+                  CONTACT US TODAY
+                </NavLink>
+              </div>
+            </div>
 
           </aside>
         </div>
@@ -245,25 +246,6 @@ const Professional = () => {
       "Protect against cyber attacks ",
       "Integrates with your ONVIF-conformant VMS ",
     ],
-
-    // specs: [
-    // //   { type: 'header', label: 'Connections' },
-    //   { label: 'Resolution (MP)', value: '2 MP / 3 MP / 5 MP' },
-    //   { label: 'Image Sensor', value: '1/2.8” progressive scan CMOS', valu: "1/1.8” progressive scan CMOS" },
-    //   { label: 'Dynamic Range', value: 'WDR Off: Up to 83 dB WDR On (IEC 62676):  Up to 126 dB (dual exposure, 30 fps) Up to 144 dB (triple exposure, 20 fps or less) Up to 106dB (dual exposure, 30 fps) Up to 136dB (triple exposure, 20 fps or less) Up to 130dB (dual exposure, 30 fps) WDR On:  Up to 130 dB (dual exposure, 30 fps) Up to 150 dB (triple exposure, 20 fps or less) Up to 120dB (dual exposure, 30 fps) Up to 144dB (triple exposure, 20 fps or less) Up to 144 dB (dual exposure, 20 fps or less)' },
-    //   { label: 'Image Rate', value: '(50 Hz/60 Hz): 50 fps/60 fps in High Frame RateMode1, otherwise 25 fps/30 fps', valu: '(50 Hz/60 Hz): 25 fps/30 fps' },
-
-    //   { label: 'Operating Temperature Range', value: '-10°C to +55°C (-14°F to 131°F)', valu: "-30°C to +65°C (-22°F to 149°F) with IEEE 802.3af Class 3 (13W PoE)" },
-    //   { label: 'Environmental', value: 'Indoor Dome: IEC  60529 IP54, IEC/EN 62262 IK11 (IK10 Surface Mount w/IR)', valu: "Outdoor Dome:IEC 60529 IP66, IP67, IP68 (2m depth for 2 hours), IPX9K, NEMA 4X, IEC 60068-2 Shock & Vibration, NEMA TS2 Sec 2.2.7-2.2.9, IK11" },
-    //   { type: 'header', label: 'AUDIO, POWER, STORAGE' },
-    //   { label: 'Audio Compression Method', value: 'G.711 pcm 8 Khz, Opus' },
-      
-    //   { label: 'Audio Input/Output', value: 'Line level input and output' },
-    //   { label: 'External I/O Terminals', value: '1 x Relay In, 1 x Relay Out, 1 x 12 VDC out at 50 mA' },
-    //   { label: 'PoE Power Source', value: 'IEEE 802.3af Class 3'},
-    //   { label: 'Onboard Storage', value: '	Two microSD/microSDHC/microSDXC slots – video speed class card required. Class V10 or better recommended.'},
-    // //   { type: 'header', label: 'Learn more at www.pelcom.com ' }
-    // ],
 
     sidebarItems: [
       "Onity DirectKey with Serene",

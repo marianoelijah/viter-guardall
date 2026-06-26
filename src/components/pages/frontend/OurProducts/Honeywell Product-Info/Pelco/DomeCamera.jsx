@@ -3,6 +3,7 @@ import Header from '../../../partials/Header';
 import Footer from '../../../partials/Footer';
 import { NavLink } from 'react-router-dom';
 import SocialShare from '../../Reusable/SocialShare';
+import React from 'react';
 
 
 // Shared Layout Component to maintain design consistency across all products
@@ -121,7 +122,7 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
             {/* Blue CTA Card */}
              <div 
               className="relative min-h-[240px] overflow-hidden rounded-2xl p-8 text-white shadow-md bg-cover bg-center bg-blend-multiply bg-blue-900/85"
-              style={{ backgroundImage: "url('/dist/assets/image/Our Products/quickalert.jpg')" }}
+              style={{ backgroundImage: "url('/assets/image/Our%20Products/quickalert.jpg')" }}
             >
               <div className="relative z-10 max-w-3xl">
                 <h3 className="mb-4 text-2xl font-bold leading-tight tracking-wide">
@@ -140,7 +141,6 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
                 </NavLink>
               </div>
             </div>
-            
           </aside>
         </div>
       </main>
@@ -183,7 +183,6 @@ const DomeCamera = () => {
       { label: 'External I/O Terminals', value: 'Alarm In, Alarm Out', valu: "Alarm In, Alarm Out" },
       { label: 'PoE Power Source', value: 'IEEE 802.3af Class 3 compliant, 12VDC Aux', valu: "IEEE 802.3af Class 3 compliant, 12VDC Aux" },
       { label: 'Onboard Storage', value: 'microSD/microSDHC/microSDXC slot – video speed class card required. Class V10 or better recommended. 1 TB card tested.', valu: "microSD/microSDHC/microSDXC slot – video speed class card required. Class V10 or better recommended. 1 TB card tested." },
-    //   { type: 'header', label: 'Learn more at www.pelcom.com ' }
     ],
 
     sidebarItems: [

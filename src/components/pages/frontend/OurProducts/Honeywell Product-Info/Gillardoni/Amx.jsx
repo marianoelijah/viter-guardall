@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import Header from '../../../partials/Header';
 import Footer from '../../../partials/Footer';
 import SocialShare from '../../Reusable/SocialShare';
+import React from 'react';
 
 
 
@@ -170,7 +171,7 @@ const Amx = () => {
                       {/* Contact Card */}
                      <div 
               className="relative min-h-[240px] overflow-hidden rounded-2xl p-8 text-white shadow-md bg-cover bg-center bg-blend-multiply bg-blue-900/85"
-              style={{ backgroundImage: "url('/dist/assets/image/Our Products/quickalert.jpg')" }}
+              style={{ backgroundImage: "url('/assets/image/Our%20Products/quickalert.jpg')" }}
             >
               <div className="relative z-10 max-w-3xl">
                 <h3 className="mb-4 text-2xl font-bold leading-tight tracking-wide">

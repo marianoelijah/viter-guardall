@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import Header from '../../../partials/Header';
 import Footer from '../../../partials/Footer';
 import SocialShare from '../../Reusable/SocialShare';
+import React from 'react';
 
 const CardSafe = () => {
   const productData = {
@@ -222,27 +223,27 @@ const CardSafe = () => {
                      </div>
            
                         {/* Contact Card */}
-                                   <div
-                                       className="relative min-h-[240px] overflow-hidden rounded-xl p-8 text-white shadow-md bg-cover bg-center bg-blend-multiply bg-blue-900/85"
-                                         style={{ backgroundImage: "url('/dist/assets/image/Our Products/quickalert.jpg')" }}
-                                       >
-                                         <div className="relative z-10">
-                                            <h3 className="mb-4 text-2xl font-bold leading-tight tracking-wide">
-                                               Secure Your Peace Of Mind Today
-                                            </h3>
-                                                                
-                                             <p className="mb-6 text-sm text-gray-200 font-medium leading-relaxed">
-                                               Contact Guard-All now for a customized security solution that protects what matters most.
-                                             </p>
-                                                  
-                                           <NavLink 
-                                              to="/contacts" 
-                                              className="inline-block w-full rounded-xl bg-[#0f3e90] px-6 py-3 text-center text-sm font-semibold tracking-wider text-white transition-colors hover:bg-[#ff5f31] sm:w-auto"
-                                           >
-                                             CONTACT US TODAY
-                                           </NavLink>
-                                         </div>
-                                    </div>
+           <div 
+              className="relative min-h-[240px] overflow-hidden rounded-2xl p-8 text-white shadow-md bg-cover bg-center bg-blend-multiply bg-blue-900/85"
+              style={{ backgroundImage: "url('/assets/image/Our%20Products/quickalert.jpg')" }}
+            >
+              <div className="relative z-10 max-w-3xl">
+                <h3 className="mb-4 text-2xl font-bold leading-tight tracking-wide">
+                  Secure Your Peace Of Mind Today
+                </h3>
+                
+                <p className="mb-6 text-sm md:text-base text-gray-200 font-medium leading-relaxed">
+                  Contact Guard-All now for a customized security solution that protects what matters most.
+                </p>
+
+                <NavLink 
+                  to="/contacts" 
+                  className="inline-block w-full rounded-xl bg-[#0f3e90] px-6 py-3 text-center text-sm font-semibold tracking-wider text-white transition-colors hover:bg-[#ff5f31] sm:w-auto"
+                >
+                  CONTACT US TODAY
+                </NavLink>
+              </div>
+            </div>
                      </div>
 
           </div>
