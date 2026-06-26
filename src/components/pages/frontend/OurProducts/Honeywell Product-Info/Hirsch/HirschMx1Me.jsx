@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../../../partials/Header';
 import Footer from '../../../partials/Footer';
 import { NavLink } from 'react-router-dom';
-import React from 'react';
+
 
 
 const HirschMx1Me = () => {

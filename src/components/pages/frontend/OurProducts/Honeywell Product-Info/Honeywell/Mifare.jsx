@@ -4,7 +4,7 @@ import Header from '../../../partials/Header';
 import Footer from '../../../partials/Footer';
 import SocialShare from '../../Reusable/SocialShare';
 import { NavLink } from 'react-router-dom';
-import React from 'react';
+
 
 const Mifare = () => {
   const productFeatures = [

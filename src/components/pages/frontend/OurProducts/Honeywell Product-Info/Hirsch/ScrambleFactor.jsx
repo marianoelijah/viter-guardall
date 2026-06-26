@@ -1,7 +1,7 @@
 import React from 'react';
 import { Facebook, Linkedin, Mail, MessageCircle, Share2 } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
-import React from 'react';
+
 
 const ScrambleFactor = () => {
   const productFeatures = [

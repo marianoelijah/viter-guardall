@@ -4,7 +4,7 @@ import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import SocialShare from "../OurProducts/Reusable/SocialShare";
 
 // Dynamically reference your base environment endpoint
-const IMAGE_BASE_URL = import.meta.env.VITE_API_URL; 
+export const IMAGE_BASE_URL = import.meta.env.VITE_API_URL; 
 
 const Footer = () => {
  const [contactInfo, setContactInfo] = useState([]);

@@ -3,7 +3,6 @@ import Header from '../../../partials/Header';
 import Footer from '../../../partials/Footer';
 import { NavLink } from 'react-router-dom';
 import SocialShare from '../../Reusable/SocialShare';
-import React from 'react';
 
 // Shared Layout Component to maintain design consistency across all products
 const ProductLayout = ({ title, subtitle, description, features, specs, sidebarItems }) => {

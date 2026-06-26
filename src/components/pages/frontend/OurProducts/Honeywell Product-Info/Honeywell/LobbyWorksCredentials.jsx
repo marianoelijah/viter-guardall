@@ -3,7 +3,6 @@ import Header from "../../../partials/Header";
 import Footer from "../../../partials/Footer";
 import { NavLink } from "react-router-dom";
 import SocialShare from "../../Reusable/SocialShare";
-import React from "react";
 
 const LobbyWorksCredentials = () => {
   return (

@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Phone, Mail, MapPin, Globe } from 'lucide-react';
+import { IMAGE_BASE_URL } from '../partials/Footer';
+import { FaMapMarkerAlt } from 'react-icons/fa';
 
 // Move static data outside the component to prevent re-renders
 const BRANCHES = {
@@ -25,6 +27,8 @@ const Contacts = () => {
     subject: '',
     message: ''
   });
+  const [contactInfo, setContactInfo] = useState([]);
+  const [offices, setOffices] = useState([]);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -54,12 +58,40 @@ const Contacts = () => {
     }
   };
 
+  // Fetch dynamic footer elements from your Express backend
+  useEffect(() => {
+  // Pulling contact records
+  fetch(`${IMAGE_BASE_URL}/api/footer-contact`)
+    .then((res) => {
+      if (!res.ok) throw new Error(`HTTP Error Status: ${res.status}`);
+      return res.json();
+    })
+    .then((data) => setContactInfo(Array.isArray(data) ? data : []))
+    .catch((err) => {
+      console.error("❌ Footer contact error detail:", err);
+      setContactInfo([]);
+    });
+
+  // Pulling office records
+  fetch(`${IMAGE_BASE_URL}/api/footer-offices`)
+    .then((res) => {
+      if (!res.ok) throw new Error(`HTTP Error Status: ${res.status}`);
+      return res.json();
+    })
+    .then((data) => setOffices(Array.isArray(data) ? data : []))
+    .catch((err) => {
+      console.error("❌ Footer office error detail:", err);
+      setOffices([]);
+    });
+}, []);
+
+
   return (
     <div className="min-h-screen bg-slate-200 font-poppins selection:bg-blue-100">
       {/* Header Section */}
       <section className="pt-20 pb-12 text-center px-6">
-        <h1 className="text-5xl md:text-6xl font-bold text-[#1e3a8a] mb-4">Contact Us</h1>
-        <h2 className="text-3xl md:text-4xl font-bold text-[#2257a0] mb-4">Secure Your Life Today!</h2>
+        <h1 className="text-5xl md:text-7xl text-[#2257a0] mb-6 drop-shadow-sm tracking-tigh">Contact Us</h1>
+        <h2 className="text-5xl md:text-6xl drop-shadow-sm tracking-tigh text-[#2257a0] mb-4">Secure Your Life Today!</h2>
         <p className="text-gray-700 text-lg max-w-2xl mx-auto">
           Tell us what your property needs. Our team is ready to help you!
         </p>
@@ -96,10 +128,32 @@ const Contacts = () => {
             <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#2257a0] transition-colors">
               <MapPin className="text-[#2257a0] group-hover:text-white" size={32} />
             </div>
-            <div className="text-sm text-gray-700 space-y-3">
+
+            {/* <div className="text-sm text-gray-700 space-y-3">
               <p><strong>Makati:</strong> Makati | Unit 708 Cattleya Building, 235 Salcedo St. Legaspi Village, Makati City, Philippines 1223</p>
               <p><strong>Cebu:</strong> Cebu | Unit 306 Cebu Holdings Building, Cebu Business Park, Cebu City, Philippines 6000</p>
-            </div>
+            </div> */}
+
+            {/* Offices & Social - External Geolocation Hyperlinks */}
+            <div className="space-y-4 text-sm text-gray-600 inline-block sm:block text-left">
+                {offices.map((office) => (
+                  <div key={office.id} className="flex gap-3">
+                    <FaMapMarkerAlt className="text-blue-800 shrink-0 mt-1 text-lg" />
+                        <p>
+                        <strong className="text-gray-800">{office.city}:</strong> |{" "}
+                        <a 
+                          href={office.map_link} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="hover:text-blue-600 hover:underline transition-colors"
+                        >
+                          {office.address}
+                          </a>
+                        </p>
+                  </div>
+                ))}
+              </div>
+
           </div>
         </div>
 
