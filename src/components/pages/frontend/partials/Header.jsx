@@ -23,7 +23,7 @@ const Header = () => {
           src="/assets/image/Client Logo/logo.png"
           alt="Guard-All" 
           // Changed h-10 md:h-12 to explicit width utilities
-          className="w-36 md:w-48 h-auto object-contain" 
+          className="w-36 md:w-48 h-12 object-contain" 
            />
         </Link>
 
