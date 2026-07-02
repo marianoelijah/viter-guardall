@@ -352,6 +352,8 @@ import FiberPatrol from "./components/pages/frontend/OurProducts/Honeywell Produ
 import SenstarLM100 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/SenstarLM100";
 import FiberPatrolFP400 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/FiberPatrolFP400";
 import SmartLidar from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/SmartLidar";
+import PNMC16013RVQ from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hanwha/PNMC16013RVQ";
+import HanwhaPage from "./components/pages/frontend/OurProducts/product extend/hanwha/HanwhaPage";
 
 
 
@@ -401,6 +403,7 @@ const App = () => {
             <Route path="/products/hikvision" element={<HikvisionPage />} />
             <Route path="/products/dahua" element={<DahuaPage />} />
             <Route path="/products/acti" element={<ActiPage />} />
+            <Route path="/products/hanwha" element={<HanwhaPage />} />
 
              {/* Detection Systems */}
             <Route path="/products/gilardoni" element={<GilardoniPage />} />
@@ -624,6 +627,9 @@ const App = () => {
              <Route path="/our-products/dahua/dh-lr2110" element={<UnmanagedSwitch/>} />
              <Route path="/our-products/dahua/dh-is4210" element={<IndustrialSwitch/>} />
              <Route path="/our-products/dahua/n84b5n" element={<N84B5N/>} />
+
+              {/* Hanwha-Vision Product Details Route */}
+              <Route path="/our-products/hanwha/PNMC16013RVQ" element={<PNMC16013RVQ/>} />
 
 
 

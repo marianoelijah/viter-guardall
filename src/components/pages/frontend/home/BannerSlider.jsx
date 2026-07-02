@@ -29,16 +29,39 @@ const BannerSlider = () => {
   useEffect(() => {
     if (slides.length === 0) return;
     const timer = setInterval(() => {
-      setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+      handleNext();
     }, 6000);
     return () => clearInterval(timer);
   }, [slides]);
+
+  // Navigation handlers
+  const handleNext = () => {
+    setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+  };
+
+  const handlePrev = () => {
+    setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+  };
+
+  // Helper function to resolve dynamic paths based on slide ID
+  const getSlideLink = (id) => {
+    switch (id) {
+      case 1:
+        return "/who-we-are";
+      case 2:
+        return "/contacts";
+      case 3:
+        return "/our-products";
+      default:
+        return "/what-we-do"; // Default fallback route
+    }
+  };
 
   if (loading) return <div className="h-[700px] bg-[#F3EFE7] flex items-center justify-center">Loading...</div>;
   if (slides.length === 0) return null;
 
   return (
-    <div className="relative w-full min-h-[750px] md:h-[650px] lg:h-[750px] overflow-hidden bg-[#F3EFE7] font-poppins">
+    <div className="relative w-full min-h-[750px] md:h-[650px] lg:h-[750px] overflow-hidden bg-[#F3EFE7] font-poppins group">
       <AnimatePresence mode="wait">
         <motion.div
           key={current}
@@ -65,7 +88,9 @@ const BannerSlider = () => {
               transition={{ delay: 0.4 }}
             >
               <button className="bg-[#0D47A1] text-white px-5 py-4 rounded-full sm:rounded-sm font-bold hover:bg-[#ff5f31] active:scale-95 transition-all duration-300 uppercase tracking-widest text-sm shadow-lg">
-                <Link to="/contacts">{slides[current].cta_text}</Link> {/* Note: updated to match DB column name */}
+                <Link to={getSlideLink(slides[current].id)}>
+                  {slides[current].cta_text}
+                </Link>
               </button>
             </motion.div>
           </div>
@@ -78,7 +103,7 @@ const BannerSlider = () => {
               className="relative w-[70%] md:w-[85%] aspect-square rounded-3xl overflow-hidden shadow-2xl border-[6px] md:border-[12px] border-white z-10"
             >
               <img 
-                src={`${IMAGE_BASE_URL}${slides[current].image_path}`} // Note: updated to match DB column name
+                src={`${IMAGE_BASE_URL}${slides[current].image_path}`} 
                 alt="Security Services" 
                 className="w-full h-full object-cover"
               />
@@ -94,6 +119,28 @@ const BannerSlider = () => {
         </motion.div>
       </AnimatePresence>
 
+      {/* Left Arrow */}
+      <button 
+        onClick={handlePrev}
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-white/80 hover:bg-[#0D47A1] hover:text-white text-gray-800 p-3 rounded-full shadow-md transition-all duration-300 opacity-0 group-hover:opacity-100 hidden md:block"
+        aria-label="Previous Slide"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-6 h-6">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+        </svg>
+      </button>
+
+      {/* Right Arrow */}
+      <button 
+        onClick={handleNext}
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-white/80 hover:bg-[#0D47A1] hover:text-white text-gray-800 p-3 rounded-full shadow-md transition-all duration-300 opacity-0 group-hover:opacity-100 hidden md:block"
+        aria-label="Next Slide"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-6 h-6">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+        </svg>
+      </button>
+
       {/* Navigation Indicators */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-4 z-30">
         {slides.map((_, idx) => (
@@ -103,6 +150,7 @@ const BannerSlider = () => {
             className={`h-1.5 transition-all duration-500 rounded-full ${
               current === idx ? "w-12 bg-[#0D47A1]" : "w-6 bg-gray-300 hover:bg-gray-400"
             }`}
+            aria-label={`Go to slide ${idx + 1}`}
           />
         ))}
       </div>

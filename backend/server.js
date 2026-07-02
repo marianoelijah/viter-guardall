@@ -234,6 +234,7 @@ app.get('/api/products/brand/:brand', async (req, res) => {
   }
 }); 
 
+
 // PRODUCTPAGE.JSX - GET Categories with Nested Brands 
 app.get('/api/products', async (req, res) => {
   try {
@@ -368,6 +369,10 @@ app.use((err, req, res, next) => {
   console.error("Unhandle Error Context:", err.stack);
   res.status(500).json({ error: "Internal Server Middleware Catch!", message: err.message });
 });
+
+
+
+
 
 // --- Start Server ---
 app.listen(PORT, "0.0.0.0", () => {
