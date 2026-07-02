@@ -50,10 +50,28 @@ app.use(cors({
 }));
 
 // --- Static Asset Serving ---
+// Original code in handling static assets for production
 // Bulletproof absolute path routing for Render environments
 const staticAssetsPath = path.resolve(__dirname, '../public/assets');
 app.use('/assets', express.static(staticAssetsPath));
 console.log("Production Static Path Configured To:", staticAssetsPath);
+
+
+// --- Static Asset Serving (Multi-Folder Strategy) ---
+// This is the updated approach to ensure that static assets are served correctly from multiple potential locations, 
+// especially in production environments like Render or Vercel. It first checks the primary public folder and then falls back to the dist folder if necessary.
+// 1. Primary path (e.g., public assets)
+const publicAssetsPath = path.resolve(__dirname, '../public/assets');
+app.use('/assets', express.static(publicAssetsPath));
+
+// 2. Fallback path (e.g., dist assets)
+const distAssetsPath = path.resolve(__dirname, '../dist/assets');
+app.use('/assets', express.static(distAssetsPath));
+
+console.log("🚀 Static Paths Configured Successfully:");
+console.log("   -> Primary:", publicAssetsPath);
+console.log("   -> Fallback:", distAssetsPath);
+
 
 // --- Mount Imported Router Files ---
 app.use("/api/products-legacy", productRoutes);
@@ -227,12 +245,17 @@ app.get('/api/security-experts', async (req, res) => {
 app.get('/api/products/brand/:brand', async (req, res) => {
   try {
     const { brand } = req.params;
-    const [rows] = await db.query('SELECT * FROM brand_products WHERE brand_name = ?', [brand]);
+    const [rows] = await db.query(
+      'SELECT * FROM brand_products WHERE LOWER(brand_name) = LOWER(?) ORDER BY id ASC',
+      [brand]
+    );
     res.json(rows);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 }); 
+
+
 
 
 // PRODUCTPAGE.JSX - GET Categories with Nested Brands 

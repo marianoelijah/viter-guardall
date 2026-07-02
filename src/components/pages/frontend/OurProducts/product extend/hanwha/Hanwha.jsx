@@ -7,10 +7,13 @@ const ProductCard = ({ title, description, image, detailRoute }) => (
   <div className="bg-white border border-gray-200 rounded-xl p-5 flex flex-col h-full transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl cursor-pointer group">
     <div className="bg-gray-50 border border-gray-100 rounded-lg p-6 mb-5 flex items-center justify-center h-64 overflow-hidden">
       <img 
-        src={`${IMAGE_BASE_URL}${image}`} 
+        src={image ? `${IMAGE_BASE_URL}${image}` : "/assets/image/image-not-found.svg"} 
         alt={title} 
         className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-110" 
-        onError={(e) => { e.target.src = "https://via.placeholder.com/300?text=Image+Not+Found"; }}
+        onError={(e) => {
+          e.target.onerror = null;
+          e.target.src = "/assets/image/image-not-found.svg";
+        }}
       />
     </div>
     <div className="flex-grow">
@@ -37,20 +40,20 @@ const Hanwha = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-  const fetchHanwhaProducts = async () => {
-    try {
-      // Must match 'Hanwha' exactly as saved in the brand_products table
-      const response = await fetch(`${IMAGE_BASE_URL}/api/products/brand/Hanwha`);
-      const data = await response.json();
-      setProducts(data);
-      setLoading(false);
-    } catch (error) {
-      console.error("Error fetching Hanwha products:", error);
-      setLoading(false);
-    }
-  };
-  fetchHanwhaProducts();
-}, []);
+    const fetchHanwhaProducts = async () => {
+      try {
+        const response = await fetch(`${IMAGE_BASE_URL}/api/products/brand/Hanwha`);
+        const data = await response.json();
+        setProducts(Array.isArray(data) ? data : []);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching Hanwha products:", error);
+        setProducts([]);
+        setLoading(false);
+      }
+    };
+    fetchHanwhaProducts();
+  }, []);
 
   if (loading) return <div className="min-h-screen flex items-center justify-center font-figtree text-[#0d3874]">Loading Hanwha Catalog...</div>;
 

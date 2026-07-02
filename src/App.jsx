@@ -353,7 +353,14 @@ import SenstarLM100 from "./components/pages/frontend/OurProducts/Honeywell Prod
 import FiberPatrolFP400 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/FiberPatrolFP400";
 import SmartLidar from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/SmartLidar";
 import PNMC16013RVQ from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hanwha/PNMC16013RVQ";
+import PNM9085RQZ1 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hanwha/PNM9085RQZ1";
+import PNMC34404RQPZ from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hanwha/PNMC34404RQPZ";
+import TNPA7430RW from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hanwha/TNPA7430RW";
+import XNP9300RW from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hanwha/XNP9300RW";
+import XNVA8084RS from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hanwha/XNVA8084RS";
 import HanwhaPage from "./components/pages/frontend/OurProducts/product extend/hanwha/HanwhaPage";
+
+
 
 
 
@@ -630,6 +637,12 @@ const App = () => {
 
               {/* Hanwha-Vision Product Details Route */}
               <Route path="/our-products/hanwha/PNMC16013RVQ" element={<PNMC16013RVQ/>} />
+              <Route path="/our-products/hanwha/PNM9085RQZ1" element={<PNM9085RQZ1/>} />
+              <Route path="/our-products/hanwha/PNMC34404RQPZ" element={<PNMC34404RQPZ/>} />
+              <Route path="/our-products/hanwha/TNPA7430RW" element={<TNPA7430RW/>} />
+              <Route path="/our-products/hanwha/XNP9300RW" element={<XNP9300RW/>} />
+              <Route path="/our-products/hanwha/XNVA8084RS" element={<XNVA8084RS/>} />
+              
 
 
 

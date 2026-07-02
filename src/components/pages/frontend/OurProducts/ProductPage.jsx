@@ -20,15 +20,12 @@ const ProductPage = () => {
         const { data } = await axios.get(`${API_URL}/api/products`);
         setCategories(data);
         setLoading(false);
-
       } catch (err) {
         console.error("Error fetching products:", err);
         setLoading(false);
       }
     };
-
     fetchProducts();
-
   }, []);
 
 
@@ -38,9 +35,7 @@ const ProductPage = () => {
       <div className="flex justify-center items-center h-screen bg-[#f4f7fa]">
         <div className="animate-spin rounded-full h-20 w-20 border-b-4 border-[#2257a0]"></div>
       </div>
-
     );
-
   }
 
 
@@ -59,8 +54,12 @@ const ProductPage = () => {
         </div>
 
 
+        {/* Change this line  */}
+        {/* This is a stretch product card  */}
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10"> */}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
+        {/* This is not using a stretch product card  */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 items-start">
           {categories.map((cat) => (
             <div key={cat.id} className="bg-white rounded-[2.5rem] p-8 shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col">
               {/* Product Image */}
