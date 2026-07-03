@@ -359,6 +359,7 @@ import TNPA7430RW from "./components/pages/frontend/OurProducts/Honeywell Produc
 import XNP9300RW from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hanwha/XNP9300RW";
 import XNVA8084RS from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hanwha/XNVA8084RS";
 import HanwhaPage from "./components/pages/frontend/OurProducts/product extend/hanwha/HanwhaPage";
+import DeantasPage from "./components/pages/frontend/OurProducts/product extend/deantas/DeantasPage";
 
 
 
@@ -429,6 +430,7 @@ const App = () => {
              {/* Hotel Locking Systems and Hotel Safes */}
             <Route path="/products/onity" element={<OnityPage />} />
             <Route path="/products/orbita" element={<OrbitaPage />} />
+            <Route path="/products/deantas" element={<DeantasPage />} />
 
               {/* Intrusion / Burglary Alarm Systems */}  
             <Route path="/products/paradox" element={<ParadoxPage />} />
@@ -829,6 +831,16 @@ const App = () => {
             <Route path="/our-products/senstar/senstar-lm100" element={<SenstarLM100/>} />
             <Route path="/our-products/senstar/fiberpatrol-fp400" element={<FiberPatrolFP400/>} />
             <Route path="/our-products/senstar/smart3d-lidar" element={<SmartLidar/>} />
+
+            {/* Deantas Product Details Route */}
+
+            {/* <Route path="/our-products/deantas/" element={<DSCHD300/>} />
+            <Route path="/our-products/deantas/" element={<DSC2000/>} />
+            <Route path="/our-products/deantas/" element={<DSC550/>} />
+            <Route path="/our-products/deantas/" element={<DSC501/>} />
+            <Route path="/our-products/deantas/" element={<DSC800/>} />
+            <Route path="/our-products/deantas/" element={<DSC720/>} />
+            <Route path="/our-products/deantas/" element={<DSC305/>} /> */}
 
             {/* Admin Panel Route */}
             <Route path="/admin" element={<AdminPanel/>} />

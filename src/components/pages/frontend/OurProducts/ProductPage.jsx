@@ -60,11 +60,12 @@ const ProductPage = () => {
         {/* Change this line  */}
         {/* This is a stretch product card  */}
         {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10"> */}
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 items-start"></div> */}
 
         {/* This is not using a stretch product card  */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
           {categories.map((cat) => (
-            <div key={cat.id} className="bg-white rounded-[2.5rem] p-8 shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col">
+            <div key={cat.id} className="bg-white rounded-[2.5rem] p-8 shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col h-full justify-between">
               
               {/* Product Image */}
               {/* <div className="overflow-hidden mb-8 rounded-3xl aspect-video bg-gray-200">
@@ -76,20 +77,17 @@ const ProductPage = () => {
               </div> */}
 
               {/* Product Image */}
-<div className="overflow-hidden mb-8 rounded-3xl aspect-video bg-gray-200">
-  <img
-    src={`${API_URL}${cat.image_path || cat.img_path || cat.img || '/assets/image/Our Products/Deantas.jpeg'}`}
-    alt={cat.title}
-    className="w-full h-full object-cover"
-    onError={(e) => { 
-      // Ultimate safety net: If the file physically isn't on the server asset folder, use a placeholder
-      e.target.src = "https://via.placeholder.com/600x400?text=Image+Not+Found"; 
-    }}
-  />
-</div>
-
-
-
+            <div className="overflow-hidden mb-8 rounded-xl aspect-video bg-gray-200">
+              <img
+                src={`${API_URL}${cat.image_path || cat.img_path || cat.img || '/assets/image/Our Products/Deantas.jpeg'}`}
+                alt={cat.title}
+                className="w-full h-full object-cover"
+                onError={(e) => { 
+                // Ultimate safety net: If the file physically isn't on the server asset folder, use a placeholder
+                e.target.src = "https://via.placeholder.com/600x400?text=Image+Not+Found"; 
+              }}
+             />
+            </div>
               <h3 className="text-3xl font-bold text-[#1e3a8a] mb-4">{cat.title}</h3>
               <p className="text-gray-500 mb-8 flex-grow text-xl">{cat.description}</p>
 
@@ -101,17 +99,17 @@ const ProductPage = () => {
                 <p className="text-[#f97316] text-xl lg:text-lg  font-black uppercase tracking-[0.25em] mb-6 text-center">
                   Click to view more:
                 </p>
-                <div className="grid gap-4">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                   {cat.brands && cat.brands.map((brand, i) => (
                     <Link
                       key={i}
                       to={brand.path}
-                      className="p-4 bg-slate-50 rounded-2xl border border-transparent hover:border-blue-100 transition-all"
+                      className="p-2 bg-slate-50 rounded-2xl border border-transparent hover:border-blue-100 transition-all flex items-center justify-center min-h-[70px]"
                     >
                       <img
                         src={`${API_URL}${brand.logo}`}
                         alt={brand.name}
-                        className="h-16 w-full object-contain"
+                        className="max-h-12 w-full object-contain"
                       />
                     </Link>
                   ))}
