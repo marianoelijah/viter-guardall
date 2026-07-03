@@ -18,6 +18,9 @@ const ProductPage = () => {
       try {
         // This endpoint calls the backend route we created
         const { data } = await axios.get(`${API_URL}/api/products`);
+        // --- ADD THESE TWO TEMPORARY LINES FOR TESTING ---
+        console.log("Original API Data Sample:", data[0]); 
+        // -------------------------------------------------
         setCategories(data);
         setLoading(false);
       } catch (err) {
@@ -62,14 +65,28 @@ const ProductPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 items-start">
           {categories.map((cat) => (
             <div key={cat.id} className="bg-white rounded-[2.5rem] p-8 shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col">
+              
               {/* Product Image */}
-              <div className="overflow-hidden mb-8 rounded-3xl aspect-video bg-gray-200">
+              {/* <div className="overflow-hidden mb-8 rounded-3xl aspect-video bg-gray-200">
                 <img
                   src={`${API_URL}${cat.img}`}
                   alt={cat.title}
                   className="w-full h-full object-cover"
                 />
-              </div>
+              </div> */}
+
+              {/* Product Image */}
+<div className="overflow-hidden mb-8 rounded-3xl aspect-video bg-gray-200">
+  <img
+    src={`${API_URL}${cat.image_path || cat.img_path || cat.img || '/assets/image/Our Products/Deantas.jpeg'}`}
+    alt={cat.title}
+    className="w-full h-full object-cover"
+    onError={(e) => { 
+      // Ultimate safety net: If the file physically isn't on the server asset folder, use a placeholder
+      e.target.src = "https://via.placeholder.com/600x400?text=Image+Not+Found"; 
+    }}
+  />
+</div>
 
 
 
