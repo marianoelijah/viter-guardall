@@ -259,6 +259,49 @@ app.get('/api/products/brand/:brand', async (req, res) => {
 
 
 // PRODUCTPAGE.JSX - GET Categories with Nested Brands 
+// This route is commented out because we have a more optimized version above.
+// app.get('/api/products', async (req, res) => {
+//   try {
+//     const [rows] = await db.query(`
+//       SELECT 
+//         c.id AS cat_id, c.title, c.description, c.img_path,
+//         b.id AS brand_id, b.name AS brand_name, b.logo_path, b.link_path
+//       FROM categories_array c
+//       LEFT JOIN client_brands b ON c.id = b.category_id
+//       ORDER BY c.id ASC
+//     `);
+
+//     const formattedData = rows.reduce((acc, row) => {
+//       let category = acc.find(item => item.id === row.cat_id);
+//       if (!category) {
+//         category = {
+//           id: row.cat_id,
+//           title: row.title,
+//           description: row.description,
+//           img: row.img_path,
+//           brands: [] 
+//         };
+//         acc.push(category);
+//       }
+
+//       if (row.brand_id) {
+//         category.brands.push({
+//           name: row.brand_name,
+//           logo: row.logo_path,
+//           path: row.link_path
+//         });
+//       }
+//       return acc;
+//     }, []);
+
+//     res.json(formattedData);
+//   } catch (error) {
+//     console.error(error);
+//     res.status(500).json({ message: "Server error fetching products" });
+//   }
+// });
+
+// PRODUCTPAGE.JSX - GET Categories with Nested Brands 
 app.get('/api/products', async (req, res) => {
   try {
     const [rows] = await db.query(`
@@ -267,7 +310,7 @@ app.get('/api/products', async (req, res) => {
         b.id AS brand_id, b.name AS brand_name, b.logo_path, b.link_path
       FROM categories_array c
       LEFT JOIN client_brands b ON c.id = b.category_id
-      ORDER BY c.id ASC
+      ORDER BY c.id ASC, b.display_order ASC
     `);
 
     const formattedData = rows.reduce((acc, row) => {
