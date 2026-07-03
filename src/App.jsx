@@ -339,7 +339,7 @@ import Pro3200 from "./components/pages/frontend/OurProducts/Honeywell Product-I
 import ZX82 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/ZX82";
 import AdminPanel from "./components/Admin/AdminPanel";
 import Cochrane from "./components/pages/frontend/OurProducts/product extend/Cochrane/Cochrane";
-import Senstar from "./components/pages/frontend/OurProducts/product extend/senstar/Senstar";
+
 import Razor from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Razor";
 import Vehicle from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Vehicle";
 import Floating from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Floating";
@@ -823,7 +823,6 @@ const App = () => {
             <Route path="/our-products/cochrane/shutter-barrier" element={<ShutterBarrier/>} />
 
             {/* Senstar Product Details Route */}
-            <Route path="/products/senstar" element={<Senstar/>} />
             <Route path="/our-products/senstar/fence-sensor" element={<Fence/>} />
             <Route path="/our-products/senstar/buried-sensor" element={<Buried/>} />
             <Route path="/our-products/senstar/fiber-patrol" element={<FiberPatrol/>} />

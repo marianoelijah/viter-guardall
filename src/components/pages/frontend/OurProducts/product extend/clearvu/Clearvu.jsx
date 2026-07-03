@@ -33,26 +33,26 @@ const ProductCard = ({ title, description, image, detailRoute }) => (
   </div>
 );
 
-const Senstar = () => {
+const Clearvu = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchSenstarProducts = async () => {
+    const fetchClearvuProducts = async () => {
       try {
-        const response = await fetch(`${IMAGE_BASE_URL}/api/products/brand/Senstar`);
+        const response = await fetch(`${IMAGE_BASE_URL}/api/products/brand/Clearvu`);
         const data = await response.json();
         setProducts(data);
         setLoading(false);
       } catch (error) {
-        console.error("Error fetching Senstar products:", error);
+        console.error("Error fetching Clearvu products:", error);
         setLoading(false);
       }
     };
-    fetchSenstarProducts();
+    fetchClearvuProducts();
   }, []);
 
-  if (loading) return <div className="min-h-screen flex items-center justify-center font-figtree text-[#0d3874]">Loading Senstar...</div>;
+  if (loading) return <div className="min-h-screen flex items-center justify-center font-figtree text-[#0d3874]">Loading Clearvu...</div>;
 
   return (
     <>
@@ -61,7 +61,7 @@ const Senstar = () => {
       <div className="max-w-7xl mx-auto">
         <header className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-5xl text-[#0d3874] mb-6 tracking-tight">
-            {products.length > 0 ? products[0].category_name : ""}
+            {products.length > 0 ? products[0].category_name : "Barriers"}
           </h2>
           <div className="h-1 w-24 bg-[#2257a0] mx-auto rounded-full opacity-20"></div>
         </header>
@@ -73,8 +73,7 @@ const Senstar = () => {
               title={item.title}
               description={item.description}
               image={item.image_path}
-              detailRoute={item.detail_route}
-            />
+              detailRoute={item.detail_route} />
           ))}
         </div>
       </div>
@@ -84,4 +83,4 @@ const Senstar = () => {
   );
 };
 
-export default Senstar;
+export default Clearvu;
