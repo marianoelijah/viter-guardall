@@ -46,7 +46,7 @@ const ProductPage = () => {
   return (
 
     <section className="py-12 md:py-24 bg-[#c6d3e0] overflow-x-hidden">
-      <div className="max-w-7xl mx-auto px-4 md:px-8">
+      <div className="max-w-8xl mx-20 px-4 md:px-8">
         <div className="text-center mb-12 md:mb-24 relative">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-10 text-[4rem] sm:text-[8rem] md:text-[12rem] font-black select-none pointer-events-none whitespace-nowrap">
             GUARD-ALL
@@ -65,7 +65,7 @@ const ProductPage = () => {
         {/* This is not using a stretch product card  */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
           {categories.map((cat) => (
-            <div key={cat.id} className="bg-white rounded-[2.5rem] p-8 shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col h-full justify-between">
+            <div key={cat.id} className="bg-white rounded-[2.5rem] p-8 shadow-sm transition-all duration-500 flex flex-col h-full justify-between ease-in-out hover:-translate-y-2 hover:shadow-2xl cursor-pointer group">
               
               {/* Product Image */}
               {/* <div className="overflow-hidden mb-8 rounded-3xl aspect-video bg-gray-200">
@@ -89,7 +89,7 @@ const ProductPage = () => {
              />
             </div>
               <h3 className="text-3xl font-bold text-[#1e3a8a] mb-4">{cat.title}</h3>
-              <p className="text-gray-500 mb-8 flex-grow text-xl">{cat.description}</p>
+              <p className="text-gray-500 text-xl leading-relaxed">{cat.description}</p>
 
 
 
@@ -99,17 +99,17 @@ const ProductPage = () => {
                 <p className="text-[#f97316] text-xl lg:text-lg  font-black uppercase tracking-[0.25em] mb-6 text-center">
                   Click to view more:
                 </p>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 ">
                   {cat.brands && cat.brands.map((brand, i) => (
                     <Link
                       key={i}
                       to={brand.path}
-                      className="p-2 bg-slate-50 rounded-2xl border border-transparent hover:border-blue-100 transition-all flex items-center justify-center min-h-[70px]"
+                      className="p-2 bg-slate-50 rounded-2xl border border-transparent hover:border-blue-100 flex items-center justify-center min-h-[70px] transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-2xl cursor-pointer group"
                     >
                       <img
                         src={`${API_URL}${brand.logo}`}
                         alt={brand.name}
-                        className="max-h-12 w-full object-contain"
+                        className="max-h-30 w-full object-contain "
                       />
                     </Link>
                   ))}
