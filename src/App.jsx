@@ -360,6 +360,12 @@ import XNP9300RW from "./components/pages/frontend/OurProducts/Honeywell Product
 import XNVA8084RS from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hanwha/XNVA8084RS";
 import HanwhaPage from "./components/pages/frontend/OurProducts/product extend/hanwha/HanwhaPage";
 import DeantasPage from "./components/pages/frontend/OurProducts/product extend/deantas/DeantasPage";
+import T39 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Deantas/T39";
+import T21 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Deantas/T21";
+import T11 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Deantas/T11";
+import S87 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Deantas/S87";
+import S58 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Deantas/S58";
+import G11S from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Deantas/G11S";
 
 
 
@@ -834,13 +840,13 @@ const App = () => {
 
             {/* Deantas Product Details Route */}
 
-            {/* <Route path="/our-products/deantas/" element={<DSCHD300/>} />
-            <Route path="/our-products/deantas/" element={<DSC2000/>} />
-            <Route path="/our-products/deantas/" element={<DSC550/>} />
-            <Route path="/our-products/deantas/" element={<DSC501/>} />
-            <Route path="/our-products/deantas/" element={<DSC800/>} />
-            <Route path="/our-products/deantas/" element={<DSC720/>} />
-            <Route path="/our-products/deantas/" element={<DSC305/>} /> */}
+            <Route path="/our-products/deantas/t39" element={<T39/>} />
+            <Route path="/our-products/deantas/t21" element={<T21/>} />
+            <Route path="/our-products/deantas/t11" element={<T11/>} />
+            <Route path="/our-products/deantas/s87" element={<S87/>} />
+            <Route path="/our-products/deantas/s58" element={<S58/>} />
+            <Route path="/our-products/deantas/g11s" element={<G11S/>} />
+
 
             {/* Admin Panel Route */}
             <Route path="/admin" element={<AdminPanel/>} />
