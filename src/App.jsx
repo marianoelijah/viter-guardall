@@ -366,6 +366,7 @@ import T11 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/
 import S87 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Deantas/S87";
 import S58 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Deantas/S58";
 import G11S from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Deantas/G11S";
+import Senstar from "./components/pages/frontend/OurProducts/product extend/senstar/Senstar";
 
 
 
@@ -824,6 +825,7 @@ const App = () => {
 
             {/* Cochrane Product Details Route */}
             <Route path="/products/cochrane" element={<Cochrane/>} />
+            
             <Route path="/products/cochrane/razor-mesh" element={<Razor/>} />
             <Route path="/products/cochrane/vehicle-barrier" element={<Vehicle/>} />
             <Route path="/products/cochrane/floating-barrier" element={<Floating/>} />
@@ -831,6 +833,7 @@ const App = () => {
             <Route path="/our-products/cochrane/shutter-barrier" element={<ShutterBarrier/>} />
 
             {/* Senstar Product Details Route */}
+            <Route path="/products/senstar" element={<Senstar/>} />
             <Route path="/our-products/senstar/fence-sensor" element={<Fence/>} />
             <Route path="/our-products/senstar/buried-sensor" element={<Buried/>} />
             <Route path="/our-products/senstar/fiber-patrol" element={<FiberPatrol/>} />
