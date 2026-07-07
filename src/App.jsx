@@ -367,6 +367,15 @@ import S87 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/
 import S58 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Deantas/S58";
 import G11S from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Deantas/G11S";
 import Senstar from "./components/pages/frontend/OurProducts/product extend/senstar/Senstar";
+import Dnake from "./components/pages/frontend/OurProducts/product extend/dnake/Dnake";
+import Commercial from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dnake/Commercial";
+import Residential from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dnake/Residential";
+import Retrofit from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dnake/Retrofit";
+import Sensegiz from "./components/pages/frontend/OurProducts/product extend/sensegiz/Sensegiz";
+import Coin from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Sensegiz/Coin";
+import Ptz from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Sensegiz/Ptz";
+import Mesh from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Sensegiz/Mesh";
+import Gateway from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Sensegiz/Gateway";
 
 
 
@@ -842,13 +851,26 @@ const App = () => {
             <Route path="/our-products/senstar/smart3d-lidar" element={<SmartLidar/>} />
 
             {/* Deantas Product Details Route */}
-
             <Route path="/our-products/deantas/t39" element={<T39/>} />
             <Route path="/our-products/deantas/t21" element={<T21/>} />
             <Route path="/our-products/deantas/t11" element={<T11/>} />
             <Route path="/our-products/deantas/s87" element={<S87/>} />
             <Route path="/our-products/deantas/s58" element={<S58/>} />
             <Route path="/our-products/deantas/g11s" element={<G11S/>} />
+
+            {/* Dnake Product Details Route */}
+            <Route path="/products/dnake" element={<Dnake/>} />
+            <Route path="/our-products/dnake/access-control" element={<AccessControl/>} />
+            <Route path="/our-products/dnake/commercial" element={<Commercial/>} />
+            <Route path="/our-products/dnake/residential" element={<Residential/>} />
+            <Route path="/our-products/dnake/retrofit" element={<Retrofit/>} />
+
+            {/* Sensegiz Product Details Route */}
+             <Route path="/products/sensegiz" element={<Sensegiz/>} />
+            <Route path="/our-products/sensegiz/coin-sensor" element={<Coin/>} />
+            <Route path="/our-products/sensegiz/ptz-camera" element={<Ptz/>} />
+            <Route path="/our-products/sensegiz/wireless-auto-mesh" element={<Mesh/>} />
+            <Route path="/our-products/sensegiz/gateway" element={<Gateway/>} />
 
 
             {/* Admin Panel Route */}
