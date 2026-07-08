@@ -9,10 +9,10 @@ const ProductCard = ({ title, description, image, detailRoute }) => (
   <div className="bg-white border border-gray-200 rounded-xl p-5 flex flex-col h-full transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl cursor-pointer group">
     <div className="bg-gray-50 border border-gray-100 rounded-lg p-6 mb-5 flex items-center justify-center h-64 overflow-hidden">
       <img 
-        src={`${IMAGE_BASE_URL}${image}`} 
+        src={image ? image : "/assets/image/image-not-found.svg"} 
         alt={title} 
         className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-110" 
-        onError={(e) => { e.target.src = "https://via.placeholder.com/300?text=Image+Not+Found"; }}
+        onError={(e) => { e.target.src = "/assets/image/image-not-found.svg"; }}
       />
     </div>
     <div className="flex-grow">
