@@ -377,6 +377,7 @@ import Ptz from "./components/pages/frontend/OurProducts/Honeywell Product-Info/
 import Mesh from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Sensegiz/Mesh";
 import Gateway from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Sensegiz/Gateway";
 import Deantas from "./components/pages/frontend/OurProducts/product extend/deantas/Deantas";
+import SmartHome from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dnake/SmartHome";
 
 
 
@@ -860,19 +861,20 @@ const App = () => {
             <Route path="/our-products/deantas/s58" element={<S58/>} />
             <Route path="/our-products/deantas/g11s" element={<G11S/>} />
 
-            {/* Dnake Product Details Route */}
-            <Route path="/products/dnake" element={<Dnake/>} />
-            <Route path="/our-products/dnake/access-control" element={<AccessControl/>} />
-            <Route path="/our-products/dnake/commercial" element={<Commercial/>} />
-            <Route path="/our-products/dnake/residential" element={<Residential/>} />
-            <Route path="/our-products/dnake/retrofit" element={<Retrofit/>} />
-
             {/* Sensegiz Product Details Route */}
              <Route path="/products/sensegiz" element={<Sensegiz/>} />
             <Route path="/our-products/sensegiz/coin-sensor" element={<Coin/>} />
             <Route path="/our-products/sensegiz/ptz-camera" element={<Ptz/>} />
             <Route path="/our-products/sensegiz/wireless-auto-mesh" element={<Mesh/>} />
             <Route path="/our-products/sensegiz/gateway" element={<Gateway/>} />
+
+            {/* Dnake Product Details Route */}
+            <Route path="/products/dnake" element={<Dnake/>} />
+            <Route path="/our-products/dnake/access-control" element={<AccessControl/>} />
+            <Route path="/our-products/dnake/commercial" element={<Commercial/>} />
+            <Route path="/our-products/dnake/residential" element={<Residential/>} />
+            <Route path="/our-products/dnake/retrofit" element={<Retrofit/>} />
+            <Route path="/our-products/dnake/smart-home" element={<SmartHome/>} />
 
 
             {/* Admin Panel Route */}
