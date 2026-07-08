@@ -376,6 +376,7 @@ import Coin from "./components/pages/frontend/OurProducts/Honeywell Product-Info
 import Ptz from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Sensegiz/Ptz";
 import Mesh from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Sensegiz/Mesh";
 import Gateway from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Sensegiz/Gateway";
+import Deantas from "./components/pages/frontend/OurProducts/product extend/deantas/Deantas";
 
 
 
@@ -851,6 +852,7 @@ const App = () => {
             <Route path="/our-products/senstar/smart3d-lidar" element={<SmartLidar/>} />
 
             {/* Deantas Product Details Route */}
+             <Route path="/products/deantas" element={<Deantas/>} />
             <Route path="/our-products/deantas/t39" element={<T39/>} />
             <Route path="/our-products/deantas/t21" element={<T21/>} />
             <Route path="/our-products/deantas/t11" element={<T11/>} />
