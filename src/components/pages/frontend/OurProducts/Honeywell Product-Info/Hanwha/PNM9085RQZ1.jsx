@@ -6,11 +6,11 @@ import SocialShare from '../../Reusable/SocialShare';
 
 const PNM9085RQZ1 = () => {
   const productFeatures = [
-    "",
-    "",
-    "",
-    "",
-    ""
+    "Multi-Sensor 20MP Resolution",
+    "Motorized PTRZ Support",
+    "Rotational Smart IR Illumination",
+    "Vandal and Weatherproof Design",
+    "Massive Local Edge Storage"
   ];
 
   // Helper for the complex 7-column table
@@ -27,7 +27,7 @@ const PNM9085RQZ1 = () => {
         {/* Blue Header Banner */}
         <header className="bg-[#8ba4ca] text-white py-12 px-4 text-center">
           <h1 className="text-5xl font-bold tracking-tight">
-            PNM-9085RQZ1 
+            5MP x 4CH IR PTRZ Multi-Directional Camera
           </h1>
         </header>
 
@@ -41,7 +41,7 @@ const PNM9085RQZ1 = () => {
             <section className="mb-8">
               <h2 className="font-bold text-xl text-black mb-2">Product Description:</h2>
               <p className="text-[15px] text-black leading-relaxed mb-4">
-                    
+                 The PNM-9085RQZ1 is a high-performance, 20-megapixel multi-sensor network dome camera designed for comprehensive, large-scale outdoor surveillance deployments. Utilizing four independent 5MP image sensors running through a single IP address, this camera eliminates the need for multiple independent devices by capturing distinct view angles simultaneously.
               </p>
 
               <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
@@ -67,7 +67,7 @@ const PNM9085RQZ1 = () => {
           {/* Sidebar */}
           <aside className="lg:w-1/4 space-y-6">
             <div className="bg-gray-300 p-6 rounded shadow-sm border border-gray-400">
-              <h3 className="font-bold text-black text-xl mb-4 border-b border-black pb-2 uppercase">More By HANWHA</h3>
+              <h3 className="font-semibold text-xl mb-4 border-b border-black pb-2 ">More By HANWHA</h3>
               <ul className="space-y-4 text-gray-700">
                 <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
                   <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>Onity DirectKey with Serene </li>

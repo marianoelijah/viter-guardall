@@ -7,7 +7,7 @@ import SocialShare from '../../Reusable/SocialShare';
 
 
 // Shared Layout Component to maintain design consistency across all products
-const ProductLayout = ({ title, subtitle, description, features, specs, sidebarItems }) => {
+const ProductLayout = ({ title, subtitle, description, features }) => {
   return (
     <>
     <Header />
@@ -63,7 +63,7 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
           {/* Sidebar */}
           <aside className="lg:col-span-1 space-y-8">
              <div className="bg-gray-300 p-4 border border-black  border-r mb-6">
-            <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By HANWHA VISION</h3>
+            <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By HANWHA</h3>
                        <ul className="space-y-4 text-gray-700">
                           <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
                             <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>Onity DirectKey with Serene</li>
@@ -122,25 +122,18 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
 // Example Usage for the Hirsch M64 Controller
 const PNMC16013RVQ = () => {
   const data = {
-    title: "PNM-C16013RVQ 4CH mini AI Camera",
-    description: "The Hanwha Vision PNM-C16013RVQ is a compact 4-channel AI-powered multi-directional dome camera designed for advanced surveillance, offering object classification, loitering detection, and enhanced cybersecurity in a smaller, discreet form factor. It’s ideal for both indoor and outdoor environments such as banks, schools, hospitals, and retail spaces. ",
+    title: "4CH mini AI Camera / 4MP x 4 AI IR Mini Multi-directional Dome Camera",
+    description: "The PNM-C16013RVQ is an extremely compact, lightweight, and high-performance multi-directional AI network dome camera designed for comprehensive 360° surveillance in both indoor and outdoor environments. Equipped with four independent 4MP image sensors, it allows operators to securely monitor four different directions simultaneously from a single IP address.",
     features: [
       "4CH AI Analytics",
       "Loitering & Line Crossing Detection",
       "Cybersecurity",
-      "Durability",
+      "Intelligent AI Behavior Detection",
       "IR Night Vision",
     ],
 
 
-    sidebarItems: [
-      "Onity DirectKey with Serene",
-      "MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs",
-      "INR 415 256-Channel 12 Bay RAID Backmount Standalone",
-      "GNR 340 100-Channel Tower Standalone",
-      "ENR 130 16-Channel Desktop Standalone NVR- No HDD Included",
-      "Z86 Outdoor Network Dome Camera with Night Vision"
-    ]
+
   };
 
   return <ProductLayout {...data} />;

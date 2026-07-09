@@ -7,7 +7,7 @@ import SocialShare from '../../Reusable/SocialShare';
 
 
 // Shared Layout Component to maintain design consistency across all products
-const ProductLayout = ({ title, subtitle, description, features, specs, sidebarItems }) => {
+const ProductLayout = ({ title, subtitle, description, productFeatures }) => {
   return (
     <>
     <Header />
@@ -32,6 +32,13 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
               <p className="text-[15px] text-black leading-relaxed whitespace-pre-line">
                 {description}
               </p>
+
+                <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
+              <ul className="list-disc ml-5 text-[15px] text-black space-y-1">
+                {productFeatures.map((feature, index) => (
+                  <li key={index}>{feature}</li>
+                ))}
+              </ul>
             </section>
             
 
@@ -51,7 +58,7 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
           <aside className="lg:col-span-1 space-y-8">
              <div className="bg-gray-300 p-4 border border-black  border-r mb-6">
             <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By DEANTAS</h3>
-             <ul className="space-y-4 text-gray-800 font-medium">
+             <ul className="space-y-4 text-gray-800">
                 <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
                   <li className='cursor-pointer hover:text-[#ff5f31] transition-colors break-words'>Onity DirectKey with Serene</li>
                 </NavLink>
@@ -108,13 +115,21 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
 // Example Usage for the Hirsch M64 Controller
 const T39 = () => {
   const data = {
-    title: "T39 Deantas Smart Lock",
-    subtitle: "T39 Deantas Smart Lock is a state-of-the-art access control solution designed for modern security needs. With its sleek design and advanced features, it provides both convenience and security for residential and commercial properties.",
+    title: "DEANTAS T39 Q235 Steel High-Security Smart Lock",
+    subtitle: "A highly customizable electronic lock that brings modern smart functionality to classic, traditional aesthetics.",
     description: 
-    "The T39 Deantas Smart Lock is a state-of-the-art access control solution designed for modern security needs. With its sleek design and advanced features, it provides both convenience and security for residential and commercial properties. The lock supports multiple access methods, including keycards, mobile apps, and traditional keys, ensuring flexibility for users. Its robust construction and tamper-resistant design make it a reliable choice for safeguarding your premises.",
-  };
+    "An industrial-grade security smart lock utilizing structural Q235 carbon steel to deliver superior physical protection for commercial or residential doors",
+  };s
 
-  return <ProductLayout {...data} />;
+
+
+  const productFeatures = [
+    "Engineered with heavy-duty structural steel to deter forced entry",
+    "Full compatibility with IoT management backends for hotels, apartments, and offices.",
+    "Wide operational environment tolerance (-20°C to 70°C)."
+  ];
+
+  return <ProductLayout {...data} productFeatures={productFeatures} />;
 };
 
 export default T39;

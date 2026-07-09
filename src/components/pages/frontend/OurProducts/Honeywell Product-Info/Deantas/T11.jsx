@@ -7,7 +7,7 @@ import SocialShare from '../../Reusable/SocialShare';
 
 
 // Shared Layout Component to maintain design consistency across all products
-const ProductLayout = ({ title, subtitle, description, features, specs, sidebarItems }) => {
+const ProductLayout = ({ title, subtitle, description, productFeatures }) => {
   return (
     <>
     <Header />
@@ -32,6 +32,13 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
               <p className="text-[15px] text-black leading-relaxed whitespace-pre-line">
                 {description}
               </p>
+
+                <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
+              <ul className="list-disc ml-5 text-[15px] text-black space-y-1">
+                {productFeatures.map((feature, index) => (
+                  <li key={index}>{feature}</li>
+                ))}
+              </ul>
             </section>
             
 
@@ -110,13 +117,19 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
 // Example Usage for the Hirsch M64 Controller
 const T11 = () => {
   const data = {
-    title: "T11 Deantas Smart Lock",
-    subtitle: "T11 Deantas Smart Lock is a state-of-the-art access control solution designed for modern security needs. With its sleek design and advanced features, it provides both convenience and security for residential and commercial properties.",
+    title: "DEANTAS T11 Heavy-Duty Stainless Steel Smart Lock",
+    subtitle: "Robust Security for High-Traffic Entryways",
     description:
-    "The T11 Deantas Smart Lock is a state-of-the-art access control solution designed for modern security needs. With its sleek design and advanced features, it provides both convenience and security for residential and commercial properties. The lock supports multiple access methods, including keycards, mobile apps, and traditional keys, ensuring flexibility for users. Its robust construction and tamper-resistant design make it a reliable choice for safeguarding your premises.",
+    "A highly versatile and robust stainless steel electronic lock offering maximum resistance to wear and tear across a broad range of standard door sizes.",
   };
 
-  return <ProductLayout {...data} />;
+  const productFeatures = [
+    "High-durability stainless steel chassis ideal for high-traffic entryways.",
+    "Flexible cross-compatibility with standard architectural doors.",
+    "Ultra-low standby static current (< 20μA)."
+  ];
+
+  return <ProductLayout {...data} productFeatures={productFeatures} />;
 };
 
 export default T11;

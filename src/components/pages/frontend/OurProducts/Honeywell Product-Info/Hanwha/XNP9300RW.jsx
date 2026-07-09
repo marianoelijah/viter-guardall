@@ -63,7 +63,7 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
           {/* Sidebar */}
           <aside className="lg:col-span-1 space-y-8">
              <div className="bg-gray-300 p-4 border border-black  border-r mb-6">
-            <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By HANWHA VISION</h3>
+            <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By HANWHA</h3>
                        <ul className="space-y-4 text-gray-700">
                           <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
                             <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>Onity DirectKey with Serene</li>
@@ -122,25 +122,14 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
 // Example Usage for the Hirsch M64 Controller
 const XNP9300RW = () => {
   const data = {
-    title: "XNP-9300RW 4CH mini AI Camera",
-    description: "The Hanwha Vision XNP-9300RW is a compact 4-channel AI-powered multi-directional dome camera designed for advanced surveillance, offering object classification, loitering detection, and enhanced cybersecurity in a smaller, discreet form factor. It’s ideal for both indoor and outdoor environments such as banks, schools, hospitals, and retail spaces. ",
+    title: "4K 30x IR PTZ with built-in wiper / 4K Network 30x IR Wiper PTZ Camera  ",
+    description: "The XNP-9300RW is an outdoor-ready, ultra-high-definition 4K network pan-tilt-zoom (PTZ) dome camera featuring a high-performance 30x optical zoom lens. Part of Hanwha Vision’s PTZ PLUS lineup, this camera is engineered with a significantly more compact and lightweight form factor that simplifies installation and cabling requirements.",
     features: [
-      "4CH AI Analytics",
-      "Loitering & Line Crossing Detection",
-      "Cybersecurity",
-      "Durability",
-      "IR Night Vision",
+      "Wisenet PTZ Plus design(compact, lighter, simple cabling)",
+      "Target lock tracking",
+      "DIS built-in Gyro sensor",
+      "SFP-supported by injector",
     ],
-
-
-    sidebarItems: [
-      "Onity DirectKey with Serene",
-      "MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs",
-      "INR 415 256-Channel 12 Bay RAID Backmount Standalone",
-      "GNR 340 100-Channel Tower Standalone",
-      "ENR 130 16-Channel Desktop Standalone NVR- No HDD Included",
-      "Z86 Outdoor Network Dome Camera with Night Vision"
-    ]
   };
 
   return <ProductLayout {...data} />;

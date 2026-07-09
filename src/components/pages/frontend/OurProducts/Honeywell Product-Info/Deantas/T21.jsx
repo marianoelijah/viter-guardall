@@ -7,7 +7,7 @@ import SocialShare from '../../Reusable/SocialShare';
 
 
 // Shared Layout Component to maintain design consistency across all products
-const ProductLayout = ({ title, subtitle, description, features, specs, sidebarItems }) => {
+const ProductLayout = ({ title, subtitle, description, productFeatures }) => {
   return (
     <>
     <Header />
@@ -32,6 +32,13 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
               <p className="text-[15px] text-black leading-relaxed whitespace-pre-line">
                 {description}
               </p>
+
+                <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
+              <ul className="list-disc ml-5 text-[15px] text-black space-y-1">
+                {productFeatures.map((feature, index) => (
+                  <li key={index}>{feature}</li>
+                ))}
+              </ul>
             </section>
             
 
@@ -110,13 +117,19 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
 // Example Usage for the Hirsch M64 Controller
 const T21 = () => {
   const data = {
-    title: "T21 Deantas Smart Lock",
-    subtitle: "The T21 Deantas Smart Lock is a state-of-the-art access control solution designed for modern security needs. With its sleek design and advanced features, it provides both convenience and security for residential and commercial properties. The lock supports multiple access methods, including keycards, mobile apps, and traditional keys, ensuring flexibility for users. Its robust construction and tamper-resistant design make it a reliable choice for safeguarding your premises.",
+    title: "DEANTAS T21 Composite Stainless Steel Smart Door Lock",
+    subtitle: "Durable and Versatile Smart Lock for Residential and Commercial Use",
     description:
-    "The T21 Deantas Smart Lock is a state-of-the-art access control solution designed for modern security needs. With its sleek design and advanced features, it provides both convenience and security for residential and commercial properties. The lock supports multiple access methods, including keycards, mobile apps, and traditional keys, ensuring flexibility for users. Its robust construction and tamper-resistant design make it a reliable choice for safeguarding your premises.",
+    "A reliable and secure smart lock that blends the rugged strength of a stainless steel frame with lightweight, high-impact ABS components.",
   };
 
-  return <ProductLayout {...data} />;
+  const productFeatures = [
+    "Hybrid material construction optimized for efficiency and strength.",
+    "Seamless integration with mobile apps, tenant systems, and backup physical keys.",
+    "Fast biometric fingerprint authentication (< 0.1% rejection rate)."
+  ];
+
+  return <ProductLayout {...data} productFeatures={productFeatures} />;
 };
 
 export default T21;

@@ -17,10 +17,10 @@ const ProductCard = ({ title, description, image, detailRoute }) => (
       />
     </div>
     <div className="flex-grow">
-      <h3 className="text-[#1a365d] font-semibold text-xl uppercase mb-3 leading-tight tracking-wide min-h-[3.5rem]">
+      <h3 className="text-[#1a365d] font-semibold text-xl uppercase mb-3 leading-tight tracking-wide min-h-[3rem]">
         {title}
       </h3>
-      <p className="text-gray-600 text-xl leading-relaxed line-clamp-3">
+      <p className="text-gray-600 text-lg leading-relaxed line-clamp-3">
         {description}
       </p>
       <span className='block mt-12 text-gray-500 text-sm tracking-widest'>

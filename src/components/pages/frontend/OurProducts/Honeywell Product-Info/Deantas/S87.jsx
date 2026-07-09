@@ -7,7 +7,7 @@ import SocialShare from '../../Reusable/SocialShare';
 
 
 // Shared Layout Component to maintain design consistency across all products
-const ProductLayout = ({ title, subtitle, description, features, specs, sidebarItems }) => {
+const ProductLayout = ({ title, subtitle, description, productFeatures = [] }) => {
   return (
     <>
     <Header />
@@ -32,6 +32,13 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
               <p className="text-[15px] text-black leading-relaxed whitespace-pre-line">
                 {description}
               </p>
+
+               <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
+              <ul className="list-disc ml-5 text-[15px] text-black space-y-1">
+                {productFeatures.map((feature, index) => (
+                  <li key={index}>{feature}</li>
+                ))}
+              </ul>
             </section>
             
 
@@ -111,12 +118,20 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
 const S87 = () => {
   const data = {
     title: "S87 Deantas Smart Lock",
-    subtitle: "S87 Deantas Smart Lock is a state-of-the-art access control solution designed for modern security needs. With its sleek design and advanced features, it provides both convenience and security for residential and commercial properties.",
+    subtitle: "A modern smart access solution for secure, flexible entry control.",
     description:
     "The S87 Deantas Smart Lock is a state-of-the-art access control solution designed for modern security needs. With its sleek design and advanced features, it provides both convenience and security for residential and commercial properties. The lock supports multiple access methods, including keycards, mobile apps, and traditional keys, ensuring flexibility for users. Its robust construction and tamper-resistant design make it a reliable choice for safeguarding your premises.",
   };
 
-  return <ProductLayout {...data} />;
+  const productFeatures = [
+    "Multi-Sensor 20MP Resolution",
+    "Motorized PTRZ Support",
+    "Rotational Smart IR Illumination",
+    "Vandal and Weatherproof Design",
+    "Massive Local Edge Storage"
+  ];
+
+  return <ProductLayout {...data} productFeatures={productFeatures} />;
 };
 
 export default S87;
