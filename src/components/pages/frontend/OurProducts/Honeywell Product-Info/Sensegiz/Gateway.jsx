@@ -8,16 +8,16 @@ import SocialShare from '../../Reusable/SocialShare';
 
 const Gateway = () => {
   const specs = [
-    { label: "", value: ""},
-    { label: "", value: ""},
-    { label: "", value: ""},
-    { label: "", value: "" },
-    { label: "", value: "" },
-    { label: "", value: "" },
-    { label: "", value: "" },
-    { label: "", value: "" },
-    { label: "", value: "" }
+    { label: "Module Operating Temperature", value: "-40 -85 °C" },
+    { label: "BLE Frequency", value: "2.402 GHz to 2.480 GHz" },
+    { label: "BLE Data Rate", value: "1 Mbps"},
+    { label: "BLE section Microcontroller Core", value: "Powerful ARM Cortex-M3" },
+    { label: "Wifi Section Microcontroller Core", value: "ARM Cortex-M4" },
+    { label: "Normal Operation", value: "1.8 to 3.8 V" },
+    { label: "External Regulator Mode", value: "1.7 to 1.95 V" }
   ];
+
+
 
   return (
     <>
@@ -26,7 +26,7 @@ const Gateway = () => {
       {/* Header Banner */}
       <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
         <h1 className="text-5xl md:text-5xl font-bold max-w-5xl mx-auto leading-tight">
-          Gateway 
+          Wi-Fi and Ethernet Gateway
         </h1>
       </header>
 
@@ -35,16 +35,28 @@ const Gateway = () => {
         {/* Main Content Container */}
         <main className="lg:w-3/4 bg-gray-200 p-8 shadow-sm">
             <p className="text-gray-800 text-[17px] mb-6">
-                The Gateway
+                The Gateway is a Wi-Fi and Ethernet enabled device that acts as a bridge between the COINs and the cloud. It collects data from
             </p>
 
             <section className="mb-8">
-              <h2 className="font-bold text-xl mb-2 text-black">Product Description:</h2>
-              <p className="text-gray-800 text-[17px] leading-relaxed">
-                The Gateway 
+              <h2 className="font-bold text-xl mb-3 text-black">Product Description:</h2>
+              <p className="text-gray-800 text-[17px] leading-relaxed mb-4">
+                The SenseGiz Gateways transfer data from the COINS to our cloud platform. The Gateway has two aspects: Wifi or Ethernet,
+                which transfers data to the cloud and the BLE module which connects to the COINS in mesh.
               </p>
 
+              <h2 className="font-bold text-xl mb-2 text-black">Product Features:</h2>
+              <ul className="list-disc ml-5 text-[17px] text-gray-800 space-y-1">
+                <li>Module Operating Temperature: -40 - 85 °C</li>
+                <li>For Wifi + BLE gateway, on the BLE side, the gateway is a part of the low power, point to point mesh network</li>
+                <li>The Ethernet module is used if the facility does not have WI-FI, does not permit or restrict the use of WI-FI</li>
+                <li>Our WI-FI / Ethernet Gateway can store data on your cloud server using out platform</li>
+                <li>One Gateway can support a mesh network of up to 80 COIN units</li>
+                <li>Multiple Gateways could be used to create a large network and all such Gateways can be linked to a cental cloud.</li>
+              </ul>
+              
             </section>
+
 
             {/* Technical Specifications Table */}
                        <section>

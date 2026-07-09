@@ -8,15 +8,23 @@ import SocialShare from '../../Reusable/SocialShare';
 
 const Coin = () => {
   const specs = [
-    { label: "", value: ""},
-    { label: "", value: ""},
-    { label: "", value: ""},
-    { label: "", value: "" },
-    { label: "", value: "" },
-    { label: "", value: "" },
-    { label: "", value: "" },
-    { label: "", value: "" },
-    { label: "", value: "" }
+    { label: "Temperature", value: "Operating range of -55C to +125C with an accuracy of ±0.5C" },
+    { label: "Humidity", value: "Operating range of 0 to 100% RH with an accuracy of ±5% RH" },
+    { label: "Accelerometer", value: "Acceleration range configurable up to  ±2 / ±4 / ±8 / ±16 g. Max output data rate up to 26.67 kHz with a bandwidth of 6.3kHz" },
+    { label: "Gyroscope", value: "Angular rate range configurable up to  ±125 / ±250 / ±500 / ±2000 dps." },
+    { label: "Processor", value: "48 MHz ARM Cortex M3" },
+    { label: "Memory", value: "128 KB Flash, 28 KB RAM, amd 512 KB External Memory" },
+    { label: "Wireless Protocol", value: "Proprietary mesh network layered on top of Bluetooth 5" },
+    { label: "Data Transfer Rate", value: "1 Mbps" },
+    { label: "Antenna Gain", value: "2.0 dBi" },
+    { label: "Range", value: " Effective line of sight range between 150 ft to 300 ft per node, which scales upward as more mesh nodes are added." },
+    { label: "Dimensions", value: "39.2 mm in diameter, 14 mm in height" },
+    { label: "Weight", value: "20 grams" },
+    { label: "Operating Voltage", value: "1.9V to 3.6V" },
+    { label: "Casing Protection", value: "IP67 rated (water and dust resistant)" },
+    { label: "Security", value: "Integrated AES-128 hardware security encryption module" },
+    { label: "Certifications", value: "FCC, CE, TELEC, and RoHS certified" },
+    { label: "Mounting Options", value: "Supports 3M VHB adhesive tape, Neodymium magnets, cable ties or screws" },
   ];
 
   return (
@@ -26,7 +34,7 @@ const Coin = () => {
       {/* Header Banner */}
       <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
         <h1 className="text-5xl md:text-5xl font-bold max-w-5xl mx-auto leading-tight">
-          Coin Sensors
+          Coin Sensor
         </h1>
       </header>
 
@@ -35,13 +43,17 @@ const Coin = () => {
         {/* Main Content Container */}
         <main className="lg:w-3/4 bg-gray-200 p-8 shadow-sm">
             <p className="text-gray-800 text-[17px] mb-6">
-                The Coin Sensor is 
+                COIN is a multifunctional Bluetooth enabled product that comes in various form factors and can be used across multiple use cases. 
+                The COIN comes with 4 sensors onboard and can capture critical data like temperature, humidity, motion and vibration. 
+                COINs form an intelligent mesh network to collect and pass on critical information to the cloud via the Gateway.
             </p>
 
             <section className="mb-8">
               <h2 className="font-bold text-xl mb-2 text-black">Product Description:</h2>
               <p className="text-gray-800 text-[17px] leading-relaxed">
-                The Coin Sensor is 
+                The COIN is also used to detect illegal intrusions across the perimeter. Our proprietary mesh network is self-healing which helps in data transmission
+                even if there is a damage to a COIN within the mesh network. Most variants of COIN are battery powered and helps in hassle
+                free installation and are easy for a non-technical person to deploy.
               </p>
 
             </section>

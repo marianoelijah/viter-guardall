@@ -8,15 +8,15 @@ import SocialShare from '../../Reusable/SocialShare';
 
 const Mesh = () => {
   const specs = [
-    { label: "", value: ""},
-    { label: "", value: ""},
-    { label: "", value: ""},
-    { label: "", value: "" },
-    { label: "", value: "" },
-    { label: "", value: "" },
-    { label: "", value: "" },
-    { label: "", value: "" },
-    { label: "", value: "" }
+    { label: "Processor & Memory", value: "48 MHz ARM Cortex-M3; 128 KB Flash, 28 KB RAM, 512 KB External Memory" },
+    { label: "Communication Protocol", value: "Proprietary point-to-point mesh network layered on top of Bluetooth 5 / 24 GHz wireless network" },
+    { label: "Data Transfer Rate", value: "1 Mbps" },
+    { label: "Antenna Specifications", value: "2.4 - 2.5 GHz Frequency, 2.0 dBi gain" },
+    { label: "Wireless Node Range", value: "150 ft to 300 ft per node line of sight" },
+    { label: "Battery Life", value: "Up to 2 years depending on usage" },
+    { label: "Onboard Sensors", value: "Temperature, Humidity, Accelerometer, Gyroscope" },
+    { label: "Accelerometer Config", value: "Configurable up to ±2 / ±4 / ±8 / ±16 g" },
+    { label: "Security Encryption", value: "Integrated AES-128 hardware security module" }
   ];
 
   return (
@@ -35,15 +35,28 @@ const Mesh = () => {
         {/* Main Content Container */}
         <main className="lg:w-3/4 bg-gray-200 p-8 shadow-sm">
             <p className="text-gray-800 text-[17px] mb-6">
-                The Wireless Auto-Mesh is 
+               A Proprietary Mesh Network of Sensors for End-to-End IoT Solutions
+              (Alternatively used for security: AI-Based Perimeter Intrusion Detection System) 
             </p>
 
             <section className="mb-8">
               <h2 className="font-bold text-xl mb-2 text-black">Product Description:</h2>
               <p className="text-gray-800 text-[17px] leading-relaxed">
-                The Wireless Auto-Mesh is 
+                The SenseGiz Wireless Auto-Mesh is a self-learning, self healing point to point mesh network composed of tiny, low power sensor nodes called COINS.
+                It is engineered to deliver hassle-free tracking, environmental monitoring, and perimeter security without the need for complex wiring infrastructure.
+                The network is designed to be highly resilient; if an individual node is compromised or damaged, 
+                the network automatically self-hops to reroute data transmissions through neighboring nodes, ensuring uninterrupted connectivity and data flow to the cloud.
               </p>
 
+               <h2 className="font-bold text-xl mb-2 text-black">Product Features:</h2>
+              <ul className="list-disc ml-5 text-[17px] text-gray-800 space-y-1">
+                <li>Automatically reroutes data payloads seamlessly even if individual nodes or COINS within the mesh are damaged.</li>
+                <li>Embedded Intelligence on every node allows for real-time edge proccessing to filter out environmental noise and accurately recognize distinct activities.</li>
+                <li>Each node tracks structural vibration, motion, temperature, and humidity simultaneously.</li>
+                <li>Mostly battery-powered and compact, allowing non-technical personnel to install and scale up the network quickly across large environments.</li>
+                <li>Network coverages naturally grows and strengthens as more nodes are integrated into the mesh layout</li>
+                <li>Allows users to easily push software enhancements and access operational data globally via an intuitive cloud dashboard.</li>
+              </ul>
             </section>
 
             {/* Technical Specifications Table */}

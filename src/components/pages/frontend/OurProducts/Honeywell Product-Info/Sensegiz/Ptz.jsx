@@ -8,15 +8,15 @@ import SocialShare from '../../Reusable/SocialShare';
 
 const Ptz = () => {
   const specs = [
-    { label: "", value: ""},
-    { label: "", value: ""},
-    { label: "", value: ""},
-    { label: "", value: "" },
-    { label: "", value: "" },
-    { label: "", value: "" },
-    { label: "", value: "" },
-    { label: "", value: "" },
-    { label: "", value: "" }
+    { label: "System Architecture", value: "All-in-one integrated architecture combining AI Video Analytics, GUI, and Control Software"},
+    { label: "Tracking Mechanism", value: "Automated PTZ control (Smooth Real-time Pan, Tilt, and Zoom lock-on tracking)"},
+    { label: "Detection Precision", value: "1-meter precision positioning data coordination with sensor nodes"},
+    { label: "Analytic Capabilities", value: "Day/Night Person Tracking, Vehicle Detection, Fire & Smoke Detection, Drone/Airspace Awareness" },
+    { label: "Integration Support", value: "Multi-sensor cross-compatibility (PTZ cameras, fixed cameras, UGS sensors, radar, and UAV feeds)" },
+    { label: "Detection Coverage", value: "Advanced AI algorithms identify threats and analytics for up to 80m beyond the fence boundary" },
+    { label: "Alert Infrastructure", value: "Real-time continuous desktop alerts, localized loud sirens, control room alarms, and instant WhatsApp mobile updates" },
+    { label: "Data & Evidence Retention", value: "Secure local/cloud data logging with time-stamped video and complete tracking sequence capture" },
+    { label: "Weather Resistance", value: "All-weather operational performance (tested under high-moisture, heavy rain, snow, and extreme climate changes)" }
   ];
 
   return (
@@ -26,7 +26,7 @@ const Ptz = () => {
       {/* Header Banner */}
       <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
         <h1 className="text-5xl md:text-5xl font-bold max-w-5xl mx-auto leading-tight">
-          Ptz Camera
+          SenseGiz AI-Driven PTZ Camera Surveillance System
         </h1>
       </header>
 
@@ -35,15 +35,27 @@ const Ptz = () => {
         {/* Main Content Container */}
         <main className="lg:w-3/4 bg-gray-200 p-8 shadow-sm">
             <p className="text-gray-800 text-[17px] mb-6">
-                The Ptz  
+                Intelligent Auto Tracking & Vision Analytics for Perimeter Security
             </p>
 
             <section className="mb-8">
               <h2 className="font-bold text-xl mb-2 text-black">Product Description:</h2>
-              <p className="text-gray-800 text-[17px] leading-relaxed">
-                The Ptz 
+              <p className="text-gray-800 text-[17px] leading-relaxed mb-3">
+                The SenseGiz AI-Driven PTZ Camera Surveillance System is a highly scalable, automated security monitoring solution
+                that integrates computer vision with physical security architecture. Designed to operate in sync with the wireless COIN 
+                mesh sensor network, the camera acts as an immediate visual validator. When a boundary breach or structural tampering is detected
+                by a sensor node, the system uses automated controls to instantly pan, tilt, and focus the nearest PTZ camera on the precise location of the event.
               </p>
 
+               <h2 className="font-bold text-xl mb-2 text-black">Product Features:</h2>
+              <ul className="list-disc ml-5 text-[17px] text-gray-800 space-y-1">
+                <li>AI-Powered Object & Human Tracking</li>
+                <li>Sensor-Triggered Auto-Focusing</li>
+                <li>Day & Night Advanced Analytics</li>
+                <li>Fire, Smoke, & Aerial Threat Detection</li>
+                <li>Reduced Operator Fatigue</li>
+                <li>Simultaneous Event Management</li>
+              </ul>
             </section>
 
             {/* Technical Specifications Table */}
