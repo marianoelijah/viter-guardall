@@ -8,17 +8,19 @@ import SocialShare from '../../Reusable/SocialShare';
 
 const Residential = () => {
   const productData = {
-    title: "",
-    subtitle: "",
-    description: "",
+    title: "Residential",
+    subtitle: "2-Wire Intercom Solution for Apartment Retrofit",
+    description: "Stay in contact with your home and take security to next level.",
     features: [
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
+      "Real-time Monitoring",
+      "Superior Performance",
+      "High Degree of Customization",
+      "Cutting-Edge Technology",
+      "Strong Compatibility",
+      "Touchless entry through advanced facial recognition",
+      "Remote door unlokcing and real time calling via the DNAKE mobile application",
+      "Fully integrated with home security alarms and community wide notification",
+      "Open standard SIP protocol allows for seamless third pary ecosystem integration."
     ],
   };
 
@@ -37,12 +39,75 @@ const Residential = () => {
             
             {/* Left Content */}
             <div className="lg:col-span-3">
+
+               <p className="text-[17px] text-gray-680 leading-relaxed whitespace-pre-line">
+                {productData.subtitle}
+              </p>
+
+              <section className="mb-8">
+              <h2 className="font-bold text-xl text-black mb-2">Product Description:</h2>
+              <p className="text-[17px] text-gray-680 leading-relaxed whitespace-pre-line">
+                {productData.description}
+              </p>
+            </section>
+            
               <section className="mb-10">
                 <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1 list-disc text-black ml-5 text-[15px]">
                   {productData.features.map((f, i) => <li key={i}>{f}</li>)}
                 </ul>
               </section>
+
+                {/* Technical Specifications Table */}
+              <div className="bg-gray-300 p-6 shadow rounded border border-r divine-y">
+            <h2 className="font-bold text-black text-xl mb-4">Technical Specification</h2>
+
+            <table className="w-full border text-[15px] text-black">
+              <tbody>
+
+                <tr className="bg-gray-300 ">
+                  <td colSpan="5" className="border-r border-black border p-2 font-bold">
+                   CONNECTIONS
+                  </td>
+                </tr>
+
+                <tr className="bg-gray-300 ">
+                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                    Connectivity
+                  </td>
+                  <td colSpan="3" className="border border-r border-black  p-2">
+                    Full IP/Ethernet infrastructure
+                  </td>
+                </tr>
+                <tr className="bg-gray-300 ">
+                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                   Network Prtocol
+                  </td>
+                  <td colSpan="3" className="border border-r border-black  p-2">
+                   SIP 2.0 compliant
+                  </td>
+                </tr>
+                <tr className="bg-gray-300 ">
+                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                   Scale Capacity
+                  </td>
+                  <td colSpan="3" className="border border-r border-black  p-2">
+                   Optimized for largee footprints ranging from 1,000 to 2,000 households
+                  </td>
+                </tr>
+
+                <tr className="bg-gray-300 ">
+                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                   Hardware Display Compatibility
+                  </td>
+                  <td colSpan="3" className="border border-r border-black  p-2">
+                    Works with 7-inch to 10.1 inch Android or Linux indoor monitors
+                  </td>
+                </tr>
+               
+              </tbody>
+            </table>
+                </div>
 
               {/* Tags & Social */}
            <div className="flex flex-wrap gap-3 mb-8 mt-10 border-b py-5 border-b-gray-400">

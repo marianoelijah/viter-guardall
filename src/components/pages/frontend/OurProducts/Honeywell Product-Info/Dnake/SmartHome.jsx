@@ -8,17 +8,13 @@ import SocialShare from '../../Reusable/SocialShare';
 
 const SmartHome = () => {
   const productData = {
-    title: "Smart Home Solutions",
-    subtitle: "Intelligent Security for Your Home",
-    description: "Discover our range of smart home security solutions designed to provide you with peace of mind and convenience.",
+    title: "Smart Home",
+    subtitle: "Home security system and smart intercom in one",
+    description: "A comprehensive automated living platform that integrated home security, environment control, and intercom systems into a single centalized smart ecosystem.",
     features: [
-      "Advanced motion detection",
-      "24/7 monitoring",
-      "Mobile app integration",
-      "Voice control compatibility",
-      "Energy-efficient design",
-      "Easy installation",
-      "Customizable settings"
+      "Unified smart touch panels that manage both video intercom capabilities and residential automation",
+      "Deep ecosystem pairing with globally recognized protocols like KNX for lighting, climate, and energy automation.",
+      "Real-time security sensor alerting and system diagnostics."
     ],
   };
 
@@ -37,12 +33,60 @@ const SmartHome = () => {
             
             {/* Left Content */}
             <div className="lg:col-span-3">
+
+               <p className="text-[17px] text-gray-680 leading-relaxed whitespace-pre-line mb-3">
+                {productData.subtitle}
+              </p>
+
+              <section className="mb-8">
+              <h2 className="font-bold text-xl text-black mb-2">Product Description:</h2>
+              <p className="text-[17px] text-gray-680 leading-relaxed whitespace-pre-line">
+                {productData.description}
+              </p>
+            </section>
+
               <section className="mb-10">
                 <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1 list-disc text-black ml-5 text-[15px]">
                   {productData.features.map((f, i) => <li key={i}>{f}</li>)}
                 </ul>
               </section>
+
+                {/* Technical Specifications Table */}
+              <div className="bg-gray-300 p-6 shadow rounded border border-r divine-y">
+            <h2 className="font-bold text-black text-xl mb-4">Technical Specification</h2>
+
+            <table className="w-full border text-[15px] text-black">
+              <tbody>
+
+                <tr className="bg-gray-300 ">
+                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                    Hardware Options
+                  </td>
+                  <td colSpan="3" className="border border-r border-black  p-2">
+                    4-inch, 8-inch, and 10.1-inch IPS LCD Capacitive Touch Smart Panels
+                  </td>
+                </tr>
+                <tr className="bg-gray-300 ">
+                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                    Automation Standards
+                  </td>
+                  <td colSpan="3" className="border border-r border-black  p-2">
+                    Native KNX integrations and wireless environments communication
+                  </td>
+                </tr>
+                <tr className="bg-gray-300 ">
+                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                    Operating Systems
+                  </td>
+                  <td colSpan="3" className="border border-r border-black  p-2">
+                    Linux or Android platforms
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+                </div>
 
               {/* Tags & Social */}
            <div className="flex flex-wrap gap-3 mb-8 mt-10 border-b py-5 border-b-gray-400">

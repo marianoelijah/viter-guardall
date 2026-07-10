@@ -8,17 +8,13 @@ import SocialShare from '../../Reusable/SocialShare';
 
 const Retrofit = () => {
   const productData = {
-    title: "",
-    subtitle: "",
-    description: "",
+    title: "Retrofit (2-Wire)",
+    subtitle: "Get the benefits of IP intercom system over 2 wires with no replacements done.",
+    description: "An Advanced 2-wire IP video intercom upgrade kit designed for legacy installations. It delivers modern IP communication and smart video capabilities directly over pre-existing cables, eliminating the need for invasive rewiring or infrastructure overhauls.",
     features: [
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
+      "Applies IP network technology to older 2-wire configurations without structural cable replacements.",
+      "Delivers high-definition video and crystal clear digitak audio over long, single cable distances.",
+      "Supports mobile app remote monitoring, cloud control, and call-forwarding."
     ],
   };
 
@@ -37,12 +33,65 @@ const Retrofit = () => {
             
             {/* Left Content */}
             <div className="lg:col-span-3">
+              
+              <p className="text-[17px] text-gray-680 leading-relaxed whitespace-pre-line">
+                {productData.subtitle}
+              </p>
+
+              <section className="mb-8">
+              <h2 className="font-bold text-xl text-black mb-2">Product Description:</h2>
+              <p className="text-[17px] text-gray-680 leading-relaxed whitespace-pre-line">
+                {productData.description}
+              </p>
+            </section>
+            
               <section className="mb-10">
                 <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1 list-disc text-black ml-5 text-[15px]">
                   {productData.features.map((f, i) => <li key={i}>{f}</li>)}
                 </ul>
               </section>
+
+              {/* Technical Specifications Table */}
+              <div className="bg-gray-300 p-6 shadow rounded border border-r divine-y">
+            <h2 className="font-bold text-black text-xl mb-4">Technical Specification</h2>
+
+            <table className="w-full border text-[15px] text-black">
+              <tbody>
+
+                <tr className="bg-gray-300 ">
+                  <td colSpan="5" className="border-r border-black border p-2 font-bold">
+                   CONNECTIONS
+                  </td>
+                </tr>
+
+                <tr className="bg-gray-300 ">
+                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                   Connectivity
+                  </td>
+                  <td colSpan="3" className="border border-r border-black  p-2">
+                    2-Wire bus technology paired with Ethernet converters
+                  </td>
+                </tr>
+                <tr className="bg-gray-300 ">
+                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                   Video Quality
+                  </td>
+                  <td colSpan="3" className="border border-r border-black  p-2">
+                   High Definition video capture
+                  </td>
+                </tr>
+                <tr className="bg-gray-300 ">
+                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                   Operating Infrastructure
+                  </td>
+                  <td colSpan="3" className="border border-r border-black  p-2">
+                   Works natively with DNAKE 2-wire hardware components (e.g., 4'3" or 7" Linux/Android monitors and door panels).
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+                </div>
 
               {/* Tags & Social */}
            <div className="flex flex-wrap gap-3 mb-8 mt-10 border-b py-5 border-b-gray-400">

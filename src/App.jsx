@@ -378,6 +378,9 @@ import Mesh from "./components/pages/frontend/OurProducts/Honeywell Product-Info
 import Gateway from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Sensegiz/Gateway";
 import Deantas from "./components/pages/frontend/OurProducts/product extend/deantas/Deantas";
 import SmartHome from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dnake/SmartHome";
+import TestimonialPage from "./components/pages/frontend/testimonials/TestimonialPage";
+import IntercomAccessControl from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dnake/IntercomAccessControl";
+
 
 
 
@@ -409,9 +412,10 @@ const App = () => {
             <Route path="/products/:slug" element={<BrandDetails />} />
 
             <Route path="/our-clients" element={<OurClientsPage />} />
+            <Route path="/testimonials" element={<TestimonialPage />} />
             <Route path="/contacts" element={<OurContacts />} />
 
-             {/* Product Brand Section */}
+            {/* Product Brand Section */}
             {/* Access Control System */}
             <Route path="/products/honeywell" element={<HoneywellPage />} />
             <Route path="/products/hirsch" element={<HirschPage />} />
@@ -870,7 +874,8 @@ const App = () => {
 
             {/* Dnake Product Details Route */}
             <Route path="/products/dnake" element={<Dnake/>} />
-            <Route path="/our-products/dnake/access-control" element={<AccessControl/>} />
+            <Route path="/our-products/dnake/access-control" element={<IntercomAccessControl/>} />
+            <Route path="/our-products/dnake/intercom-access-control" element={<IntercomAccessControl/>} />
             <Route path="/our-products/dnake/commercial" element={<Commercial/>} />
             <Route path="/our-products/dnake/residential" element={<Residential/>} />
             <Route path="/our-products/dnake/retrofit" element={<Retrofit/>} />
