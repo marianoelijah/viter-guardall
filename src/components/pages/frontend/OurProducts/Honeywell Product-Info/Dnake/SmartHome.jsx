@@ -4,8 +4,6 @@ import Header from '../../../partials/Header';
 import Footer from '../../../partials/Footer';
 import SocialShare from '../../Reusable/SocialShare';
 
-
-
 const SmartHome = () => {
   const productData = {
     title: "Smart Home",
