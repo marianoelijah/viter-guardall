@@ -123,6 +123,7 @@ const ProductLayout = ({ title, subtitle, description, features }) => {
 const PNMC16013RVQ = () => {
   const data = {
     title: "4CH mini AI Camera / 4MP x 4 AI IR Mini Multi-directional Dome Camera",
+    subtitle: "",
     description: "The PNM-C16013RVQ is an extremely compact, lightweight, and high-performance multi-directional AI network dome camera designed for comprehensive 360° surveillance in both indoor and outdoor environments. Equipped with four independent 4MP image sensors, it allows operators to securely monitor four different directions simultaneously from a single IP address.",
     features: [
       "4CH AI Analytics",

@@ -123,6 +123,7 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
 const PNMC34404RQPZ = () => {
   const data = {
     title: "4K 4Ch PTRZ + 2MP 40x PTZ AI Camera / 4K x 4 AI IR PTRZ + 2MP 40x PTZ Multi-directional Dome",
+    subtitle: "",
     description: "The PNM-C34404RQPZ is a highly innovative multi-directional network outdoor camera that integrates quad-sensor wide area surveillance with a high-speed PTZ camera into a single physical housing. This advanced unit deploys four independent 4K/8MP sensors with motorized PTRZ mechanics, allowing installers to remotely adjust the pan, tilt, rotation, and zoom to map out a seamless 360° field of view over a single IP address.",
     features: [
       "Intelligent AI Behavior Filtering",

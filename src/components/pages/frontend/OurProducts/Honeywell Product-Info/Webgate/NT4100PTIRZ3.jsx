@@ -114,7 +114,7 @@ const   NT4100PTIRZ3 = () => {
      <div className="bg-slate-50 min-h-screen font-sans">
       {/* Header Banner */}
       <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
-        <h1 className="text-5xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
+        <h1 className="text-3xl md:text-5xl lg:text-5xl font-bold max-w-4xl mx-auto leading-tight">
            NT4100PT-IR-Z3.7W Intelligent Network Camera
         </h1>
       </header>
@@ -124,7 +124,8 @@ const   NT4100PTIRZ3 = () => {
         {/* Main Content Container */}
         <main className="lg:w-3/4 bg-gray-200 p-8 shadow-sm">
             <p className="text-gray-800 text-[17px] mb-6">
-             A high-security pan-tilt-zoom camera with 37x Optical Zoom. It has reliable results even in low-light environments. 
+             A high-security pan-tilt-zoom camera with 37x Optical Zoom. 
+             It has reliable results even in low-light environments. 
             </p>
 
             <section className="mb-8">

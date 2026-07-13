@@ -589,11 +589,12 @@ const App = () => {
             <Route path="/our-products/webgate/nk1080d-ir30-af" element={<NK1080DIR30/>} />
             <Route path="/our-products/webgate/nk1080d-f2" element={<NK1080DF2/>} />
             <Route path="/our-products/webgate/ne5100vd-sir2" element={<NE5100VDSIR2/>} />
-            <Route path="/our-products/webgate/ne5100vd-sir1" element={<NE5100VDSIR1/>} />
+            <Route path="/our-products/webgate/ne5100ed-sir1" element={<NE5100VDSIR1/>} />
             <Route path="/our-products/webgate/ne2100ed-sir2" element={<NE5100EDSIR1/>} />
             <Route path="/our-products/webgate/ne2100ed-sir2" element={<NE2100EDSIR2/>} />
             <Route path="/our-products/webgate/nk1080bl-ir48" element={<NK1080BLIR48/>} />
             <Route path="/our-products/webgate/nk5100bl" element={<NK5100BLIR42/>} />
+            
 
             {/* Pelco Product Details Route */}
             <Route path="/our-products/pelco/ulisee-enhanced" element={<Ulisee/>} />

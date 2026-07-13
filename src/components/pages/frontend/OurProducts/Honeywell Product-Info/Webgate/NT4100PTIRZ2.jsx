@@ -114,7 +114,7 @@ const   NT4100PTIRZ2 = () => {
      <div className="bg-slate-50 min-h-screen font-sans">
       {/* Header Banner */}
       <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
-        <h1 className="text-5xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
+        <h1 className="text-3xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
            NT4100PT-IR-Z2.5W Intelligent Network Camera
         </h1>
       </header>

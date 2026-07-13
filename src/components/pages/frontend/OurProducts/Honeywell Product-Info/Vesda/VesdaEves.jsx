@@ -13,7 +13,7 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
     <div className="bg-gray-100 min-h-screen font-sans text-slate-800">
       {/* Banner Header */}
       <header className="bg-[#7f95b8] text-white py-14 px-4 text-center">
-        <h1 className="text-5xl md:text-5xl font-bold max-w-5xl mx-auto leading-tight">
+        <h1 className="text-4xl md:text-5xl font-bold max-w-5xl mx-auto leading-tight">
           {title}
         </h1>
       </header>

@@ -5,43 +5,45 @@ const testimonials = [
     id: 1,
     name: "Test",
     role: "Test",
-    // image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80",
-    // quote: "Switching to Guard-All was the best decision we made this year. Their real-time monitoring and threat detection gave our team complete peace of mind. Absolute lifesaver.",
-    rating: 3,
+    image: "test",
+    quote: "placeholder",
+    rating: 5,
     projectTitle: "SouthLinks",
-    // projectImages: [
-    //   "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80",
-    //   "",
-    //   "",
-    //   ""
-    // ]
+    projectImages: [
+      "",
+      "",
+      "",
+      ""
+    ]
   },
-  // {
-  //   id: 2,
-  //   name: "Marcus Chen",
-  //   role: "Head of IT, Sentinel Logistics",
-  //   image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80",
-  //   quote: "The integration was flawless. Guard-All's system caught three major vulnerabilities within the first week. Their support team is incredibly responsive and knowledgeable.",
-  //   rating: 5,
-  //   projectTitle: "Sentinel Fleet Edge Protection",
-  //   projectImages: [
-  //     "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
-  //     "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
-  //   ]
-  // },
-  // {
-  //   id: 3,
-  //   name: "Elena Rostova",
-  //   role: "Founder, SecureSphere",
-  //   image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&h=150&q=80",
-  //   quote: "Incredibly intuitive dashboard. We can monitor all our endpoints from a single screen. Guard-All delivers enterprise-grade protection without the enterprise complexity.",
-  //   rating: 5,
-  //   projectTitle: "SecureSphere Global Threat Matrix",
-  //   projectImages: [
-  //     "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
-  //     "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
-  //   ]
-  // },
+  {
+    id: 2,
+    name: "test",
+    role: "placeholder",
+    image: "test",
+    quote: "placeholder",
+    rating: 4,
+    projectTitle: "test",
+    projectImages: [
+      "",
+      ""
+    ]
+  },
+  {
+    id: 3,
+    name: "test",
+    role: "test",
+    image: "test",
+    quote: "placeholder",
+    rating: 3,
+    projectTitle: "",
+    projectImages: [
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
   // {
   //   id: 4,
   //   name: "Sarah Jenkins",
@@ -87,19 +89,21 @@ export default function Testimonials() {
   const [activeProject, setActiveProject] = useState(null);
 
   return (
-    <section className="bg-slate-800 py-16 sm:py-24 border-t border-slate-800 relative">
+    <section className="bg-slate-500 py-16 sm:py-24 border-t border-slate-800 relative">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-500 uppercase tracking-wider md:text-2xl">
-            TRUSTED PROTECTION 
+          <h2 className="text-xl font-semibold leading-7 text-[#184c9b] uppercase tracking-wider md:text-2xl">
+            Trusted Protection
           </h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            What Our Clients Say About GUARD-ALL
+            FAQS ABOUT GUARD-ALL
           </p>
           <p className="mt-4 text-xl leading-8 text-slate-200">
-            Don’t just take our word for it. Click on any client testimonial card below to view our completed project files and deployment galleries.
+            Don’t just take our word for it. 
+            See on any client testimonial card below to view our completed project files 
+            and deployment galleries
           </p>
         </div>
 
@@ -122,11 +126,11 @@ export default function Testimonials() {
                     ))}
                   </div>
                   <span className="text-xs text-blue-400 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center gap-1">
-                    View Project 
+                    View Projects
                     <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
                   </span>
                 </div>
-
+                
                 {/* Review Text */}
                 <blockquote className="text-lg font-medium leading-7 text-slate-200 group-hover:text-white transition-colors">
                   “{testimonial.quote}”

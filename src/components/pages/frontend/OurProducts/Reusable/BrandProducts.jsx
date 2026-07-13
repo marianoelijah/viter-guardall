@@ -7,7 +7,7 @@ const ProductCard = ({ title, description, image, detailRoute }) => (
   <div className="group bg-white border border-gray-200 rounded-xl p-5 flex flex-col h-full transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-2xl cursor-pointer">
     <div className="bg-gray-50 border border-gray-100 rounded-lg p-6 mb-5 flex items-center justify-center h-64 overflow-hidden">
       <img 
-        src={`${IMAGE_BASE_URL}${image}`} 
+        src={`${IMAGE_BASE_URL}${image}`}
         alt={title} 
         className="max-h-full max-w-full object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-110" 
       />

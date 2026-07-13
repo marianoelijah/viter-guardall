@@ -85,15 +85,15 @@ const GuardAllLanding = () => {
     <div className="min-h-screen bg-[#c6d3e0] py-12 md:py-20 px-4 md:px-12 font-sans overflow-x-hidden">
       <div className="max-w-7xl mx-auto">
         <header className="text-center mb-16 md:mb-32 relative">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-10 text-[4rem] sm:text-[8rem] md:text-[12rem] font-black select-none pointer-events-none whitespace-nowrap">
+          {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-10 text-[4rem] sm:text-[8rem] md:text-[12rem] font-black select-none pointer-events-none whitespace-nowrap">
             GUARD-ALL
-          </div>
+          </div> */}
           <h1 className="text-5xl md:text-7xl font-bold text-[#2257a0] mb-4 md:mb-6 tracking-tight">
             Our Clients
           </h1>
           <p className="text-black max-w-3xl mx-auto text-xl md:text-2xl">
             We trust Guard-All because they are an exclusive system integrators of world-class
-            products to ensure our company gets world-class security
+            products to ensure our company gets world-class security.
           </p>
         </header>
 

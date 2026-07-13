@@ -94,7 +94,7 @@ const SmartHome = () => {
             </div>
 
             {/* SHARE SECTION */}
-             <SocialShare title="Check out this product!" />
+             <SocialShare title="Check out this product!"/>
 
             </div>
 

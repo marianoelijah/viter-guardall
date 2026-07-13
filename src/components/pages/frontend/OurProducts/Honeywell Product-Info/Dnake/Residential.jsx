@@ -45,14 +45,18 @@ const Residential = () => {
               </p>
 
               <section className="mb-8">
-              <h2 className="font-bold text-xl text-black mb-2">Product Description:</h2>
+              <h2 className="font-bold text-xl text-black mb-2">
+                Product Description:
+              </h2>
               <p className="text-[17px] text-gray-680 leading-relaxed whitespace-pre-line">
                 {productData.description}
               </p>
             </section>
             
               <section className="mb-10">
-                <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
+                <h2 className="font-bold text-xl text-black mb-2">
+                  Product Features:
+                </h2>
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1 list-disc text-black ml-5 text-[15px]">
                   {productData.features.map((f, i) => <li key={i}>{f}</li>)}
                 </ul>

@@ -35,7 +35,8 @@ const Fence = () => {
         {/* Main Content Container */}
         <main className="lg:w-3/4 bg-gray-200 p-8 shadow-sm">
             <p className="text-gray-800 text-[17px] mb-6">
-                The Fence Sensor is a high-security perimeter protection system designed to provide an effective physical barrier against unauthorized access. It features a robust construction with sharp blades that can deter and prevent intruders from breaching the perimeter. The Fence Sensor is commonly used in various applications, including industrial facilities, correctional institutions, military installations, and critical infrastructure sites, where enhanced security measures are required to safeguard against potential threats.
+                The Fence Sensor is a high-security perimeter protection system designed to provide an effective physical barrier against unauthorized access. 
+                It features a robust construction with sharp blades that can deter and prevent intruders from breaching the perimeter. The Fence Sensor is commonly used in various applications, including industrial facilities, correctional institutions, military installations, and critical infrastructure sites, where enhanced security measures are required to safeguard against potential threats.
             </p>
 
             <section className="mb-8">
@@ -141,7 +142,7 @@ const Fence = () => {
                   CONTACT US TODAY
                 </NavLink>
               </div>
-            </div>
+                   </div>
             
                 </aside>
 

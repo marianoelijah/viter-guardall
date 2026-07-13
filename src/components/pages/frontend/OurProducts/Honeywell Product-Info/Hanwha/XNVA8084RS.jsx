@@ -123,6 +123,7 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
 const XNVA8084RS = () => {
   const data = {
     title: "5MP Stainless Steel AI IR Vandal Dome",
+    subtitle: "",
     description: "The XNV-A8084RS is a premium, highly specialized 5-megapixel network dome security camera built on Hanwha Vision's cutting-edge Wisenet 9 system-on-chip (SoC) architecture. Designed explicitly for highly demanding or specialized environments, it features a heavy-duty stainless steel (STS316L) body and a durable nylon dome bubble. This heavy ruggedization enables the camera to seamlessly resist structural yellowing from sun exposure, corrosive marine salt, or harsh sanitizing chemicals.",
     features: [
       "IP68, IK10, NSF/ANSI 169 Rated",

@@ -20,11 +20,11 @@ const ProductCard = ({ title, description, image, detailRoute }) => (
       <h3 className="text-[#1a365d] font-semibold text-xl uppercase mb-3 leading-tight tracking-wide min-h-[3rem]">
         {title}
       </h3>
-      <p className="text-gray-600 text-xl leading-relaxed">
+      <p className="text-gray-600 text-xl leading-relaxed line-clamp-3">
         {description}
       </p>
-      <span className='tex-classic block mt-12 text-gray-500 text-sm tracking-widest'>
-        <NavLink to={detailRoute} className="text-blue-500 hover:underline mt-2 block">
+      <span className='block mt-12 text-gray-500 text-sm tracking-widest'>
+        <NavLink to={detailRoute} className="text-[#184c9b] hover:underline mt-2 block">
           <h3 className='text-xl font-poppins hover:text-green-500 transition-colors duration-300'>
             View Details
           </h3>

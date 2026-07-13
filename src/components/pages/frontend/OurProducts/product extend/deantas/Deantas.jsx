@@ -25,7 +25,7 @@ const ProductCard = ({ title, description, image, detailRoute }) => (
         {description}
       </p>
       <span className='block mt-12 text-gray-500 text-sm tracking-widest'>
-        <NavLink to={detailRoute} className="text-blue-500 hover:underline mt-2 block">
+        <NavLink to={detailRoute} className="text-[#184c9b] hover:underline mt-2 block">
           <h3 className='text-xl font-poppins hover:text-green-500 transition-colors duration-300'>
             View Details
           </h3>

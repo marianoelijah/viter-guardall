@@ -32,7 +32,7 @@ const FiberPatrol = () => {
      <div className="bg-slate-50 min-h-screen font-sans">
       {/* Header Banner */}
       <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
-        <h1 className="text-5xl md:text-5xl font-bold max-w-5xl mx-auto leading-tight">
+        <h1 className="text-4xl md:text-5xl font-bold max-w-5xl mx-auto leading-tight">
           FiberPatrol FP1150
         </h1>
       </header>
