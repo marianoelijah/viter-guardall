@@ -72,9 +72,9 @@ const Mag = () => {
           ))}
         </div>
 
-        <footer className="mt-20 pt-10 border-t border-gray-300 text-center text-gray-500 text-sm tracking-widest uppercase">
+        {/* <footer className="mt-20 pt-10 border-t border-gray-300 text-center text-gray-500 text-sm tracking-widest uppercase">
           MAG Security Solutions | Innovative Door Access
-        </footer>
+        </footer> */}
       </div>
     </div>
   );

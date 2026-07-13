@@ -3,18 +3,18 @@ import React, { useState } from 'react';
 const testimonials = [
   {
     id: 1,
-    name: "Andrea",
-    role: "Manager",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80",
-    quote: "Switching to Guard-All was the best decision we made this year. Their real-time monitoring and threat detection gave our team complete peace of mind. Absolute lifesaver.",
-    rating: 5,
+    name: "Test",
+    role: "Test",
+    // image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80",
+    // quote: "Switching to Guard-All was the best decision we made this year. Their real-time monitoring and threat detection gave our team complete peace of mind. Absolute lifesaver.",
+    rating: 3,
     projectTitle: "SouthLinks",
-    projectImages: [
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80"
-    ]
+    // projectImages: [
+    //   "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80",
+    //   "",
+    //   "",
+    //   ""
+    // ]
   },
   // {
   //   id: 2,
@@ -87,19 +87,19 @@ export default function Testimonials() {
   const [activeProject, setActiveProject] = useState(null);
 
   return (
-    <section className="bg-slate-900 py-16 sm:py-24 border-t border-slate-800 relative">
+    <section className="bg-slate-800 py-16 sm:py-24 border-t border-slate-800 relative">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-500 uppercase tracking-wider">
-            Trusted Protection
+          <h2 className="text-base font-semibold leading-7 text-blue-500 uppercase tracking-wider md:text-2xl">
+            TRUSTED PROTECTION 
           </h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            What Our Clients Say About Guard-All
+            What Our Clients Say About GUARD-ALL
           </p>
-          <p className="mt-4 text-lg leading-8 text-slate-400">
-            Don’t just take our word for it. Click on any client testimonial card below to view their completed project files and deployment galleries.
+          <p className="mt-4 text-xl leading-8 text-slate-200">
+            Don’t just take our word for it. Click on any client testimonial card below to view our completed project files and deployment galleries.
           </p>
         </div>
 

@@ -20,10 +20,10 @@ const ProductCard = ({ title, description, image, detailRoute }) => (
       <h3 className="text-[#1a365d] font-semibold text-xl uppercase mb-3 leading-tight tracking-wide min-h-[3rem]">
         {title}
       </h3>
-      <p className="text-gray-600 text-lg leading-relaxed line-clamp-3">
+      <p className="text-gray-600 text-xl leading-relaxed">
         {description}
       </p>
-      <span className='block mt-12 text-gray-500 text-sm tracking-widest'>
+      <span className='tex-classic block mt-12 text-gray-500 text-sm tracking-widest'>
         <NavLink to={detailRoute} className="text-blue-500 hover:underline mt-2 block">
           <h3 className='text-xl font-poppins hover:text-green-500 transition-colors duration-300'>
             View Details
@@ -58,15 +58,17 @@ const Hanwha = () => {
   if (loading) return <div className="min-h-screen flex items-center justify-center font-figtree text-[#0d3874]">Loading Hanwha Catalog...</div>;
 
   return (
-    <div className="bg-[#e9eff6] min-h-screen py-16 px-6 lg:px-12 font-figtree">
+    <div className="bg-[#e9eff6] min-h-screen px-6 lg:px-12">
       <div className="max-w-7xl mx-auto">
-        <header className="text-center mb-16">
+
+        <header className="text-center py-16 px-6 md:px-10 lg:px-20">
           <h2 className="text-4xl md:text-5xl lg:text-5xl font-medium text-[#0d3874] mb-6 tracking-tight">
             {products.length > 0 ? products[0].category_name : "CCTVs"} – Hanwha
           </h2>
           <div className="h-1 w-24 bg-[#2257a0] mx-auto rounded-full opacity-20"></div>
         </header>
 
+         {/* Grid Layout - Standardized gap and size */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.map((item) => (
             <ProductCard

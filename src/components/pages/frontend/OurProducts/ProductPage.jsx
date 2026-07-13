@@ -46,12 +46,12 @@ const ProductPage = () => {
   return (
 
     <section className="py-12 md:py-24 bg-[#c6d3e0] overflow-x-hidden">
-      <div className="max-w-8xl mx-20 px-4 md:px-8">
+      <div className="max-w-8xl mx-15 md:mx-20 px-4 md:px-8">
         <div className="text-center mb-12 md:mb-24 relative">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-10 text-[4rem] sm:text-[8rem] md:text-[12rem] font-black select-none pointer-events-none whitespace-nowrap">
             GUARD-ALL
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold text-[#2257a0] mb-4 md:mb-6 tracking-tight">
+          <h1 className="text-5xl  md:text-7xl font-bold text-[#2257a0] mb-4 md:mb-6 tracking-tight">
              Our Products
           </h1>
         </div>
