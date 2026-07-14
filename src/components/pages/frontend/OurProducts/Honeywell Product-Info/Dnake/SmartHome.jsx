@@ -8,7 +8,7 @@ const SmartHome = () => {
   const productData = {
     title: "Smart Home",
     subtitle: "Home security system and smart intercom in one",
-    description: "A comprehensive automated living platform that integrated home security, environment control, and intercom systems into a single centalized smart ecosystem.",
+    description: "DNAKE smart intercoms for smart homes are designed to seamlessly integrate with home automation systems, offering convenience, security, and modern living features. They combine advanced access control with video communication and IoT compatibility, making them a central hub for connected households.",
     features: [
       "Unified smart touch panels that manage both video intercom capabilities and residential automation",
       "Deep ecosystem pairing with globally recognized protocols like KNX for lighting, climate, and energy automation.",

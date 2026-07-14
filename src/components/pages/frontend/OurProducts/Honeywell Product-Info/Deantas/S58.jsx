@@ -40,6 +40,57 @@ const ProductLayout = ({ title, subtitle, description, productFeatures = [] }) =
                 ))}
               </ul>
             </section>
+
+              {/* Technical Specifications Table */}
+              <div className="bg-gray-300 p-6 shadow rounded border border-r divine-y">
+            <h2 className="font-semibold text-black text-xl mb-4">Technical Specification</h2>
+
+            <table className="border text-[15px] w-full">
+              <tbody>
+                <tr className="bg-gray-300 font-bold w-1/2">
+                  <td colSpan="1" className="border-r border-black border p-2 text-black">
+                    Available Colors
+                  </td>
+                  <td colSpan="5" className="border border-r border-black p-2">
+                     Yellow Bronze, Satin Black, Brushed Silver, Cyan Bronze, Red Bronze
+                  </td>
+                </tr> 
+                <tr className="bg-gray-300 font-bold">
+                  <td colSpan="1" className="border-r border-black border text-black p-2 ">
+                     Material
+                  </td>
+                  <td colSpan="5" className="border border-r border-black p-2 ">
+                    Aluminium Alloy + ABS
+                  </td>
+                </tr>
+                <tr className="bg-gray-300 font-bold">
+                  <td colSpan="1" className="border-r border-black border text-black p-2 ">
+                    Lock Body Options
+                  </td>
+                  <td colSpan="5" className="border border-r border-black p-2 ">
+                    60/85 or 70
+                  </td>
+                </tr>
+                <tr className="bg-gray-300 font-bold">
+                  <td colSpan="1" className="border-r border-black border text-black p-2 ">
+                    Door Thickness Compatibility
+                  </td>
+                  <td colSpan="5" className="border border-r border-black p-2 ">
+                    35 – 80mm
+                  </td>
+                </tr> 
+                <tr className="bg-gray-300 font-bold">
+                  <td colSpan="1" className="border-r border-black border text-black p-2 ">
+                    Dimensions
+                  </td>
+                  <td colSpan="5" className="border border-r border-black p-2 ">
+                    Rosette width/diameter of 56.5mm; Handle projection 58mm
+                  </td>
+                </tr> 
+              </tbody>
+            </table>
+
+             </div>
             
 
             {/* Footer Tags & Socials */}
@@ -117,10 +168,10 @@ const ProductLayout = ({ title, subtitle, description, productFeatures = [] }) =
 // Example Usage for the Hirsch M64 Controller
 const S58 = () => {
   const data = {
-    title: "DEANTAS S58 Multi-Finish Classic Smart Door Lock",
-    subtitle: "A highly customizable electronic lock that brings modern smart functionality to classic, traditional aesthetics.",
+    title: "DEANTAS Smart Lock S58",
+    subtitle: "Sleek Circular Split Smart Handle",
     description:
-    "A highly customizable electronic lock that brings modern smart functionality to classic, traditional aesthetics with a massive variety of metallic and antique finishes.",
+    "Offering unmatched minimalist charm, the S58 split smart lock features circular roses for both the contactless reader and the smooth, rounded lever. Available in five rich, eye-catching finishes, this lock is designed to complement any interior designer's vision while keeping security simple and keyless.",
   };
 
     const productFeatures = [

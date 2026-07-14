@@ -7,7 +7,7 @@ import SocialShare from '../../Reusable/SocialShare';
 
 
 // Shared Layout Component to maintain design consistency across all products
-const ProductLayout = ({ title, subtitle, description, productFeatures }) => {
+const ProductLayout = ({ title, subtitle, description }) => {
   return (
     <>
     <Header />
@@ -25,22 +25,66 @@ const ProductLayout = ({ title, subtitle, description, productFeatures }) => {
           
           {/* Main Product Info */}
           <div className="lg:col-span-3">
-            <p className="text-[15px]  text-black mb-6">{subtitle}</p>
+            <p className="text-lg  text-black mb-6">{subtitle}</p>
 
             <section className="mb-8">
               <h2 className="font-bold text-xl text-black mb-2">Product Description:</h2>
-              <p className="text-[15px] text-black leading-relaxed whitespace-pre-line">
+              <p className="text-lg text-black leading-relaxed whitespace-pre-line">
                 {description}
               </p>
-
-                <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
-              <ul className="list-disc ml-5 text-[15px] text-black space-y-1">
-                {productFeatures.map((feature, index) => (
-                  <li key={index}>{feature}</li>
-                ))}
-              </ul>
             </section>
-            
+
+             {/* Technical Specifications Table */}
+              <div className="bg-gray-300 p-6 shadow rounded border border-r divine-y">
+            <h2 className="font-semibold text-black text-xl mb-4">Technical Specification</h2>
+
+            <table className="border text-[15px] w-full">
+              <tbody>
+                <tr className="bg-gray-300 font-bold w-1/2">
+                  <td colSpan="1" className="border-r border-black border p-2 text-black">
+                    Available Colors
+                  </td>
+                  <td colSpan="5" className="border border-r border-black p-2">
+                     Coffee gold, brushed silver
+                  </td>
+                </tr> 
+                <tr className="bg-gray-300 font-bold">
+                  <td colSpan="1" className="border-r border-black border text-black p-2 ">
+                     Material
+                  </td>
+                  <td colSpan="5" className="border border-r border-black p-2 ">
+                     Q235 (steel) + ABS
+                  </td>
+                </tr>
+                <tr className="bg-gray-300 font-bold">
+                  <td colSpan="1" className="border-r border-black border text-black p-2 ">
+                    Lock Body Options
+                  </td>
+                  <td colSpan="5" className="border border-r border-black p-2 ">
+                    60/80 or 70 (mortise size)
+                  </td>
+                </tr>
+                <tr className="bg-gray-300 font-bold">
+                  <td colSpan="1" className="border-r border-black border text-black p-2 ">
+                    Door Thickness Compatibility
+                  </td>
+                  <td colSpan="5" className="border border-r border-black p-2 ">
+                    35 - 80 mm
+                  </td>
+                </tr> 
+                <tr className="bg-gray-300 font-bold">
+                  <td colSpan="1" className="border-r border-black border text-black p-2 ">
+                    Dimensions
+                  </td>
+                  <td colSpan="5" className="border border-r border-black p-2 ">
+                    300mm (Height) x 56.5mm (Width)
+                  </td>
+                </tr> 
+              </tbody>
+            </table>
+
+             </div>
+             
 
             {/* Footer Tags & Socials */}
             <div className="flex flex-wrap gap-3 mb-8 mt-10">
@@ -115,21 +159,13 @@ const ProductLayout = ({ title, subtitle, description, productFeatures }) => {
 // Example Usage for the Hirsch M64 Controller
 const T39 = () => {
   const data = {
-    title: "DEANTAS T39 Q235 Steel High-Security Smart Lock",
-    subtitle: "A highly customizable electronic lock that brings modern smart functionality to classic, traditional aesthetics.",
+    title: "DEANTAS Smart Lock T39",
+    subtitle: "Slim & Modern Keyless Entry Mortise Lock",
     description: 
-    "An industrial-grade security smart lock utilizing structural Q235 carbon steel to deliver superior physical protection for commercial or residential doors",
-  };s
+    "The T39 blends a sleek, ultra-modern rectangular profile with premium brushed finishes. Equipped with a contactless RFID card sensor embedded seamlessly in the top glossy black accent piece, this lock offers a sophisticated, secure keyless entry experience ideal for contemporary homes and professional offices.",
+  };
 
-
-
-  const productFeatures = [
-    "Engineered with heavy-duty structural steel to deter forced entry",
-    "Full compatibility with IoT management backends for hotels, apartments, and offices.",
-    "Wide operational environment tolerance (-20°C to 70°C)."
-  ];
-
-  return <ProductLayout {...data} productFeatures={productFeatures} />;
+  return <ProductLayout {...data}  />;
 };
 
 export default T39;

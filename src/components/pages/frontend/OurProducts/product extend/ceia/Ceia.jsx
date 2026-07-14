@@ -7,7 +7,8 @@ const ProductCard = ({ title, description, image, detailRoute }) => (
   <div className="group bg-white border border-gray-200 rounded-xl p-4 flex flex-col h-full transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2 hover:border-blue-300 cursor-pointer">
     <div className="bg-white rounded-lg p-4 mb-4 flex items-center justify-center h-48 overflow-hidden">
       <img 
-        src={`${IMAGE_BASE_URL}${image}`} 
+        // src={`${IMAGE_BASE_URL}${image}`} 
+        src={image ? image : "/assets/image/image-not-found.svg"} 
         alt={title} 
         className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-110" 
         onError={(e) => { e.target.src = "https://via.placeholder.com/300?text=Image+Not+Found"; }}

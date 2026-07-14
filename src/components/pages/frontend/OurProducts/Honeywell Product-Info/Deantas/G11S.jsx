@@ -40,6 +40,50 @@ const ProductLayout = ({ title, subtitle, description, productFeatures = [] }) =
                 ))}
               </ul>
             </section>
+
+               {/* Technical Specifications Table */}
+              <div className="bg-gray-300 p-6 shadow rounded border border-r divine-y">
+            <h2 className="font-semibold text-black text-xl mb-4">Technical Specification</h2>
+
+            <table className="border text-[15px] w-full">
+              <tbody>
+                <tr className="bg-gray-300 font-bold w-1/2">
+                  <td colSpan="1" className="border-r border-black border p-2 text-black">
+                    Available Colors
+                  </td>
+                  <td colSpan="5" className="border border-r border-black p-2">
+                    Black
+                  </td>
+                </tr> 
+                <tr className="bg-gray-300 font-bold">
+                  <td colSpan="1" className="border-r border-black border text-black p-2 ">
+                     Material
+                  </td>
+                  <td colSpan="5" className="border border-r border-black p-2 ">
+                    Coated Aluminium Alloy
+                  </td>
+                </tr>
+                
+                <tr className="bg-gray-300 font-bold">
+                  <td colSpan="1" className="border-r border-black border text-black p-2 ">
+                    Dimensions
+                  </td>
+                  <td colSpan="5" className="border border-r border-black p-2 ">
+                    190mm x 70mm x 30mm
+                  </td>
+                </tr> 
+                 <tr className="bg-gray-300 font-bold">
+                  <td colSpan="1" className="border-r border-black border text-black p-2 ">
+                    Access/Unlock Functions
+                  </td>
+                  <td colSpan="5" className="border border-r border-black p-2 ">
+                    Fingerprint, Password, Card, Mechanical Key
+                  </td>
+                </tr> 
+              </tbody>
+            </table>
+
+             </div>
             
 
             {/* Footer Tags & Socials */}
@@ -117,10 +161,10 @@ const ProductLayout = ({ title, subtitle, description, productFeatures = [] }) =
 // Example Usage for the Hirsch M64 Controller
 const G11S = () => {
   const data = {
-    title: "DEANTAS G11S Framed Glass Door Smart Lock",
-    subtitle: "Specialized Smart Lock for Modern Glass Entryways",
+    title: "DEANTAS Glass Door Lock G11S",
+    subtitle: "Multi-Access Smart Lock for Frameless Glass Doors",
     description:
-    "A specialized smart locking solution engineered specifically for modern glass entryways, featuring a lightweight coated alloy chassis.",
+    "Designed specifically for commercial offices and modern retail spaces, the G11S is an elegant, non-intrusive smart lock for glass doors. Featuring an integrated touchscreen keypad, a high-speed fingerprint sensor, and card verification, it provides robust office access control without requiring complicated drilling or glass modification.",
   };
 
   const productFeatures = [

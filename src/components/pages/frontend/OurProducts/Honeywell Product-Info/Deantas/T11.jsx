@@ -40,6 +40,57 @@ const ProductLayout = ({ title, subtitle, description, productFeatures }) => {
                 ))}
               </ul>
             </section>
+
+             {/* Technical Specifications Table */}
+              <div className="bg-gray-300 p-6 shadow rounded border border-r divine-y">
+            <h2 className="font-semibold text-black text-xl mb-4">Technical Specification</h2>
+
+            <table className="border text-[15px] w-full">
+              <tbody>
+                <tr className="bg-gray-300 font-bold w-1/2">
+                  <td colSpan="1" className="border-r border-black border p-2 text-black">
+                    Available Colors
+                  </td>
+                  <td colSpan="5" className="border border-r border-black p-2">
+                     Brushed Gold, Galaxy Gray, Matt Black, Brushed Silver
+                  </td>
+                </tr> 
+                <tr className="bg-gray-300 font-bold">
+                  <td colSpan="1" className="border-r border-black border text-black p-2 ">
+                     Material
+                  </td>
+                  <td colSpan="5" className="border border-r border-black p-2 ">
+                     Stainless Steel + ABS
+                  </td>
+                </tr>
+                <tr className="bg-gray-300 font-bold">
+                  <td colSpan="1" className="border-r border-black border text-black p-2 ">
+                    Lock Body Options
+                  </td>
+                  <td colSpan="5" className="border border-r border-black p-2 ">
+                    60/85 or 70 (mortise size)
+                  </td>
+                </tr>
+                <tr className="bg-gray-300 font-bold">
+                  <td colSpan="1" className="border-r border-black border text-black p-2 ">
+                    Door Thickness Compatibility
+                  </td>
+                  <td colSpan="5" className="border border-r border-black p-2 ">
+                    35 - 80 mm
+                  </td>
+                </tr> 
+                <tr className="bg-gray-300 font-bold">
+                  <td colSpan="1" className="border-r border-black border text-black p-2 ">
+                    Dimensions
+                  </td>
+                  <td colSpan="5" className="border border-r border-black p-2 ">
+                    309mm (Exterior Height) / 292mm (Interior Height) x 78mm (Width)
+                  </td>
+                </tr> 
+              </tbody>
+            </table>
+
+             </div>
             
 
             {/* Footer Tags & Socials */}
@@ -117,10 +168,10 @@ const ProductLayout = ({ title, subtitle, description, productFeatures }) => {
 // Example Usage for the Hirsch M64 Controller
 const T11 = () => {
   const data = {
-    title: "DEANTAS T11 Heavy-Duty Stainless Steel Smart Lock",
-    subtitle: "Robust Security for High-Traffic Entryways",
+    title: "DEANTAS Smart Lock T11",
+    subtitle: "Premium Hospitality & Residential RFID Door Lock",
     description:
-    "A highly versatile and robust stainless steel electronic lock offering maximum resistance to wear and tear across a broad range of standard door sizes.",
+    "Combining elegant dual-tone design aesthetics with quick-response induction tech, the T11 is a high-performance electronic lock suited for premium residential and hospitality settings. It features low-latency contactless swiping and highly optimized standby battery consumption.",
   };
 
   const productFeatures = [

@@ -10,7 +10,7 @@ const Retrofit = () => {
   const productData = {
     title: "Retrofit (2-Wire)",
     subtitle: "Get the benefits of IP intercom system over 2 wires with no replacements done.",
-    description: "An Advanced 2-wire IP video intercom upgrade kit designed for legacy installations. It delivers modern IP communication and smart video capabilities directly over pre-existing cables, eliminating the need for invasive rewiring or infrastructure overhauls.",
+    description: "DNAKE’s retrofit smart intercom solutions are designed to upgrade older analog or 2-wire systems into modern IP-based video intercoms without replacing existing cabling, making them ideal for residential apartments and houses. They provide HD video, mobile app integration, and flexible access control while keeping installation simple. ",
     features: [
       "Applies IP network technology to older 2-wire configurations without structural cable replacements.",
       "Delivers high-definition video and crystal clear digitak audio over long, single cable distances.",

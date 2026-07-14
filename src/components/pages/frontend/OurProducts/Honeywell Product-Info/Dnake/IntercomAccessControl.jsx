@@ -10,7 +10,7 @@ const IntercomAccessControl = () => {
   const productData = {
     title: "Access Control",
     subtitle: "One system for doors, elevators, and total security",
-    description: "Highly scalable and adaptive physical entry management solutions built with modular authentication chooices and real-time perimeter monitoring.",
+    description: "DNAKE smart intercoms with access control are designed to provide secure, flexible, and modern entry management for residential, commercial, and smart home environments. They combine biometric authentication, mobile integration, and cloud-based management to ensure both convenience and safety.",
     features: [
       "Granular, role-based permission settings to effeciently could entry across complex facilities",
       "Flexible authentication via facial metrics, IC/ID cards, PINs, or smartphones",

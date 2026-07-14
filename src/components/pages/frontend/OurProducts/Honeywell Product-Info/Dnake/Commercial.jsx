@@ -10,7 +10,7 @@ const Commercial = () => {
   const productData = {
     title: "Commercial",
     subtitle: "Create safer, more secure workplaces with a complete intercom solution",
-    description: "A corporate and public space communication platform built to minimize operational risk and manage high volumes of visitor traffic. It delivers cohesive entry control for multi-tenants office layouts and large commercial complexes.",
+    description: "DNAKE smart intercoms for commercial applications are built to handle high-traffic environments like office buildings, retail spaces, hotels, and industrial facilities. They combine robust access control, advanced video communication, and centralized management to ensure both convenience and security at scale.",
     features: [
       "Centralized management utilizing dedicated on premises software setups for local area networks (LANs)",
       "Cloud-enabled architecture via the DNAKE Cloud Platform for anytime, anywhere administrative control",

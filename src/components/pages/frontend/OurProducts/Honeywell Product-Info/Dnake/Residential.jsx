@@ -10,7 +10,7 @@ const Residential = () => {
   const productData = {
     title: "Residential",
     subtitle: "2-Wire Intercom Solution for Apartment Retrofit",
-    description: "Stay in contact with your home and take security to next level.",
+    description: "DNAKE smart intercoms for residential use combine advanced security features like facial recognition, QR code access, and mobile app integration, making them ideal for modern homes and apartments. They eliminate the need for physical keys, streamline visitor management, and provide remote access control.",
     features: [
       "Real-time Monitoring",
       "Superior Performance",

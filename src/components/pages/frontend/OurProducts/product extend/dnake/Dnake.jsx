@@ -6,8 +6,8 @@ import Footer from '../../../partials/Footer';
 const IMAGE_BASE_URL = import.meta.env.VITE_API_URL;
 
 const ProductCard = ({ title, description, image, detailRoute }) => (
-  <div className="group bg-white border border-gray-200 rounded-xl p-4 flex flex-col h-full transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2 hover:border-blue-300 cursor-pointer">
-    <div className="bg-white rounded-lg p-4 mb-4 flex items-center justify-center h-48 overflow-hidden">
+  <div className="bg-white border border-gray-200 rounded-xl p-5 flex flex-col h-full transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl cursor-pointer group">
+    <div className="bg-gray-50 border border-gray-100 rounded-lg p-6 mb-5 flex items-center justify-center h-64 overflow-hidden">
       <img 
         // src={`${IMAGE_BASE_URL}${image}`} 
         src={image ? image : "/assets/image/image-not-found.svg"} 
@@ -16,11 +16,11 @@ const ProductCard = ({ title, description, image, detailRoute }) => (
         onError={(e) => { e.target.src = "https://via.placeholder.com/300?text=Image+Not+Found"; }}
       />
     </div>
-    <div className="flex-grow px-2">
-      <h3 className="text-[#1a365d] font-bold text-xl uppercase mb-3 leading-tight group-hover:text-blue-600 transition-colors">
+    <div className="flex-grow">
+      <h3 className="text-[#1a365d] font-semibold text-xl uppercase mb-3 leading-tight tracking-wide min-h-[3rem]">
         {title}
       </h3>
-      <p className="text-gray-600 text-xl leading-relaxed">
+      <p className="text-gray-600 text-xl leading-relaxed line-clamp-3">
         {description}
       </p>
       <span className='block mt-12 text-gray-500 text-sm tracking-widest'>
