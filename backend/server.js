@@ -19,18 +19,20 @@ const __dirname = path.dirname(__filename);
 // --- Middlewares ---
 app.use(express.json());
 
-// Allow your specific live Vercel URL to access this API
+// 1st CORS declaration (Only Vercel)
 app.use(cors({
   origin: 'https://viter-guardall.vercel.app',
   credentials: true
 }));
 
+// 2nd CORS declaration (Allows everything!)
 app.use(cors());
 app.use(express.json());
 
 // Dynamic CORS Configuration
 const allowedOrigins = [
   "http://localhost:5173", 
+  "http://localhost:5174", // Added this to support your local dev environment!
   "https://guardall.vercel.app", 
   "https://viter-guardall.vercel.app"
   // 💡 Add your exact live production Vercel URL below if it differs from these

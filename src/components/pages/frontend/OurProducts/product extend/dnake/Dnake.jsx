@@ -64,7 +64,7 @@ const Dnake = () => {
       <div className="max-w-7xl mx-auto">
         <header className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-5xl text-[#0d3874] mb-6 tracking-tight">
-            {products.length > 0 ? products[0].category_name : "Smart Intercom Solutions"} – Dnake
+            {products.length > 0 ? products[0].category_name : "Intercom & PA-BGM"} – Dnake
           </h2>
           <div className="h-1 w-24 bg-[#2257a0] mx-auto rounded-full opacity-20"></div>
         </header>

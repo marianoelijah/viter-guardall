@@ -57,24 +57,10 @@ const ProductPage = () => {
         </div>
 
 
-        {/* Change this line  */}
-        {/* This is a stretch product card  */}
-        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10"> */}
-        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 items-start"></div> */}
-
         {/* This is not using a stretch product card  */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
           {categories.map((cat) => (
             <div key={cat.id} className="bg-white rounded-[2.5rem] p-8 shadow-sm transition-all duration-500 flex flex-col h-full justify-between ease-in-out hover:-translate-y-2 hover:shadow-2xl cursor-pointer group">
-              
-              {/* Product Image */}
-              {/* <div className="overflow-hidden mb-8 rounded-3xl aspect-video bg-gray-200">
-                <img
-                  src={`${API_URL}${cat.img}`}
-                  alt={cat.title}
-                  className="w-full h-full object-cover"
-                />
-              </div> */}
 
               {/* Product Image */}
             <div className="overflow-hidden mb-8 rounded-xl aspect-video bg-gray-200">
@@ -83,7 +69,6 @@ const ProductPage = () => {
                 alt={cat.title}
                 className="w-full h-full object-cover"
                 onError={(e) => { 
-                // Ultimate safety net: If the file physically isn't on the server asset folder, use a placeholder
                 e.target.src = "https://via.placeholder.com/600x400?text=Image+Not+Found"; 
               }}
              />
@@ -94,12 +79,13 @@ const ProductPage = () => {
 
 
               {/* Brands Section */}
-
               <div className="mt-auto border-t pt-8">
-                <p className="text-[#f97316] text-xl lg:text-lg  font-black uppercase tracking-[0.25em] mb-6 text-center">
+                <p className="text-[#ff5f31] text-xl lg:text-lg  font-black uppercase tracking-[0.25em] mb-6 text-center">
                   Click to view more:
                 </p>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 ">
+                {/* Supplier Brands */}  {/* sm:grid-cols-3 - this is way too small to see on laptop view */} 
+                <div className="grid grid-cols-2 sm:grid-cols-2 gap-3">
+
                   {cat.brands && cat.brands.map((brand, i) => (
                     <Link
                       key={i}
@@ -109,7 +95,7 @@ const ProductPage = () => {
                       <img
                         src={`${API_URL}${brand.logo}`}
                         alt={brand.name}
-                        className="max-h-30 w-full object-contain "
+                        className="max-h-30 w-full object-contain"
                       />
                     </Link>
                   ))}

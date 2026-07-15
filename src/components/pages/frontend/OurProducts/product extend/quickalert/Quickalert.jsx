@@ -1,10 +1,5 @@
 import React from 'react';
-import { 
-  Users, Search, PenTool, 
-  Truck, CheckCircle, Settings, 
-  Phone, Mail, MapPin 
-} from 'lucide-react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const QuickAlert = () => {
 
@@ -33,7 +28,7 @@ const QuickAlert = () => {
       </header>
 
       {/* CHANGED: Switched to lg:grid-cols-5 to allow better flex ratio for sidebar */}
-      <main className="max-w-6xl mx-auto p-4 md:p-8 grid grid-cols-1 lg:grid-cols-5 gap-8">  
+      <main className="max-w-7xl mx-auto p-4 md:p-8 grid grid-cols-1 lg:grid-cols-5 gap-8">  
         
         {/* Main Content Area (3/5 width) */}
         <div className="lg:col-span-3 space-y-8">
@@ -109,7 +104,7 @@ const QuickAlert = () => {
         </div>
         
         {/* Sidebar Area (2/5 width) - Wider & roomier */}
-        <aside className="lg:col-span-2 space-y-6">
+        <aside className="lg:col-span-2 space-y-6 mx-5 ">
           <div className="bg-gray-50 p-6 rounded-lg border border-gray-200 shadow-sm">
             <h3 className="font-bold text-xl text-gray-800 border-b pb-3 mb-4">
               Other Services
