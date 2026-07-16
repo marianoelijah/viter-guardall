@@ -380,6 +380,7 @@ import Deantas from "./components/pages/frontend/OurProducts/product extend/dean
 import SmartHome from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dnake/SmartHome";
 import TestimonialPage from "./components/pages/frontend/testimonials/TestimonialPage";
 import IntercomAccessControl from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dnake/IntercomAccessControl";
+import WirelessDoorbell from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dnake/WirelessDoorbell";
 
 
 
@@ -881,6 +882,8 @@ const App = () => {
             <Route path="/our-products/dnake/residential" element={<Residential/>} />
             <Route path="/our-products/dnake/retrofit" element={<Retrofit/>} />
             <Route path="/our-products/dnake/smart-home" element={<SmartHome/>} />
+            <Route path="/our-products/dnake/wireless-doorbell" element={<WirelessDoorbell/>} />
+            
 
 
             {/* Admin Panel Route */}

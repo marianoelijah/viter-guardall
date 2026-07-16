@@ -54,7 +54,11 @@ const ProductPage = () => {
           <h1 className="text-5xl  md:text-7xl font-bold text-[#2257a0] mb-4 md:mb-6 tracking-tight">
              Our Products
           </h1>
+          <p className="text-3xl  md:text-xl font-semibold text-[#04080e] mb-4 md:mb-6 tracking-tight">
+             With our 40-year expertise in the industry, Guard-All has partnered with the best security product manufacturers to be their “Exclusive” or “Authorized” distributors.
+          </p>
         </div>
+        
 
 
         {/* This is not using a stretch product card  */}
@@ -67,7 +71,7 @@ const ProductPage = () => {
               <img
                 src={`${API_URL}${cat.image_path || cat.img_path || cat.img || '/assets/image/Our Products/Deantas.jpeg'}`}
                 alt={cat.title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover mix-blend-multiply transition-transform duration-500 group-hover:scale-110"
                 onError={(e) => { 
                 e.target.src = "https://via.placeholder.com/600x400?text=Image+Not+Found"; 
               }}
