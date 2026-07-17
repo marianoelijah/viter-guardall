@@ -101,8 +101,8 @@ export default function Testimonials() {
             FAQS ABOUT GUARD-ALL
           </p>
           <p className="mt-4 text-xl leading-8 text-slate-200">
-            Don’t just take our word for it. 
-            See on any client testimonial card below to view our completed project files 
+            Don’t just take our word for it.
+            See on any client testimonial card below to view our completed project files
             and deployment galleries
           </p>
         </div>
@@ -126,8 +126,8 @@ export default function Testimonials() {
                     ))}
                   </div>
                   <span className="text-xs text-blue-400 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center gap-1">
-                    View Projects
-                    <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+                      View Projects of Guard-All
+                     <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
                   </span>
                 </div>
                 

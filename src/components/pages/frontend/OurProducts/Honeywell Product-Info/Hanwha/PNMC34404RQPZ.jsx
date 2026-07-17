@@ -42,6 +42,294 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
                 ))}
               </ul>
             </section>
+
+               {/* Technical Specifications Table */}
+          <div className="bg-gray-300 p-6 shadow rounded border border-r divine-y">
+            <h2 className="font-bold text-black text-xl mb-4">Technical Specification</h2>
+
+            <table className="w-full border text-[15px] text-black border-black">
+              <tbody>
+
+            <tr>
+              <td colSpan={5} className="bg-gray-100 p-4 text-xl text-black font-bold align-middle border-b border-r border-black">
+                VIDEO
+              </td>
+            </tr>    
+
+          {/* Imaging Device */}
+            <tr>
+              <td rowSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+                Imaging Device
+              </td>
+              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">
+                Size
+              </td>
+              <td className="p-4 text-black border-black border align-middle border-b ">
+                1/2.8"
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                Type
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                CMOS
+              </td>
+            </tr>
+
+          
+            <tr>
+              <td className="bg-gray-50 p-4 font-normal text-gray-600 align-middle border-b border-r border-black">
+                Resolution
+              </td>
+              <td colSpan={2} className="p-4 text-black border-black border align-middle border-b  leading-relaxed ">
+                3840x2160, 1920x1080, 1280x1024, 1280x960, 1280x720, 1024x768, 800x600, 800x448, 720x576, 720x480, 640x480, 640x360, 320x240
+              </td>
+            </tr>
+
+           
+            <tr>
+              <td rowSpan={2} className="bg-gray-200 p-4 font-normal text-gray-600 align-middle border-b border-r border-black">
+                Max. Framerate
+              </td>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                 H.265/H.264
+              </td>
+              <td className="p-4 text-black border-black border align-middle border-b ">
+                15fps/15fps(60Hz/50Hz)
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                MJPEG
+              </td>
+              <td className="p-4 text-black border-black border align-middle border-b ">
+                15fps(@8MP Max. 5fps)
+              </td>
+            </tr>
+
+            <tr>
+              <td rowSpan={2} className="bg-gray-200 p-4 font-normal text-gray-600 align-middle border-b border-r border-black">
+                Min. Illumination (Lux)
+              </td>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                 Color(1/30sec, 30IRE)
+              </td>
+              <td className="p-4 text-black border-black border align-middle border-b ">
+                 0.1
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                BW(1/30sec, 30IRE)
+              </td>
+              <td className="p-4 text-black border-black border align-middle border-b ">
+                0.01
+              </td>
+            </tr>
+
+            
+            {/* LENS */}
+
+            <tr>
+              <td colSpan={5} className="bg-gray-100 p-4 text-xl text-black font-bold align-middle border-b border-r border-black">
+                LENS
+              </td>
+            </tr>   
+
+             <tr>
+              <td colSpan={2} className="bg-gray-300 p-4 font-normal text-gray-600 align-middle border-b border-r border-black">
+                Focal Length (mm)
+              </td>
+              <td colSpan={3} className="p-4 text-black border-black border align-middle border-b  leading-relaxed ">
+                 3.3~5.7
+              </td>
+            </tr>
+
+            <tr>
+              <td rowSpan={2} className="bg-gray-50 p-4 font-normal text-gray-600 align-middle border-b border-r border-black">
+                Zoom Ratio
+              </td>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                Optical
+              </td>
+              <td className="p-4 text-black border-black border align-middle border-b ">
+                1.7x
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                Digital
+              </td>
+              <td className="p-4 text-black border-black border align-middle border-b ">
+                -
+              </td>
+            </tr>
+
+              <tr>
+              <td rowSpan={2} className="bg-gray-50 p-4 font-normal text-gray-600 align-middle border-b border-r border-black">
+                Max Aperture Ratio (F number)
+              </td>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                Wide
+              </td>
+              <td className="p-4 text-black border-black border align-middle border-b ">
+                1.5
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                Tele
+              </td>
+              <td className="p-4 text-black border-black border align-middle border-b ">
+                1.9
+              </td>
+            </tr>
+
+             {/*  Angular Field of View */}
+            <tr>
+              <td rowSpan={3} className="bg-gray-50 p-4 font-normal text-gray-600 align-middle border-b border-r border-black">
+                Angular Field of View
+              </td>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                Horizontal
+              </td>
+              <td className="p-4 text-black border-black border align-middle border-b ">
+                109°~56°
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                Vertical
+              </td>
+              <td className="p-4 text-black border-black border align-middle border-b ">
+                55°~31°
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                Diagonal
+              </td>
+              <td className="p-4 text-black border-black border align-middle border-b ">
+                136°~65°
+              </td>
+            </tr>
+
+            <tr>
+              <td colSpan={2} className="p-4 text-gray-600  align-middle border-b border-r border-black">
+                Min. Object Distance
+              </td>
+              <td colSpan={3} className="p-4 text-black border-black border align-middle border-b ">
+                1.3m(4.27ft)
+              </td>
+            </tr>
+
+            <tr>
+              <td colSpan={2} className="p-4 bg-gray-50 text-gray-600 align-middle border-b border-r border-black">
+                Focus Control
+              </td>
+              <td colSpan={3} className="p-4 text-black border-black border align-middle border-b ">
+                Simple focus
+              </td>
+            </tr>
+
+            <tr>
+              <td colSpan={2} className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                Lens Type
+              </td>
+              <td colSpan={3} className="p-4 text-black border-black border align-middle border-b ">
+                Fixed iris
+              </td>
+            </tr>
+
+            <tr>
+              <td colSpan={5} className="bg-gray-100 p-4 text-xl text-black font-bold align-middle border-b border-r border-black">
+                ENVIRONMENTAL & ELECTRICAL
+              </td>
+            </tr>
+
+               {/*  OPERATING CONDITION */}
+            <tr>
+              <td rowSpan={3} className="bg-gray-50 p-4 font-normal text-gray-600 align-middle border-b border-r border-black">
+                Operating Condition
+              </td>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                Temperature
+              </td>
+              <td className="p-4 text-black border-black border align-middle border-b ">
+               -40°C~+50°C(-40°F~+122°F)
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                Humidity
+              </td>
+              <td className="p-4 text-black border-black border align-middle border-b ">
+                0~90% RH(non-condensing)
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                Others
+              </td>
+              <td className="p-4 text-black border-black border align-middle border-b ">
+                +74°C(+165°F)(Max) based on NEMA-TS 2(2.2.7), Start up should be done at above -30°C
+              </td>
+            </tr>
+
+             <tr>
+              <td rowSpan={2} className="bg-gray-50 p-4 font-normal text-gray-600 align-middle border-b border-r border-black">
+                Storage Condition
+              </td>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                Temperature
+              </td>
+              <td className="p-4 text-black border-black border align-middle border-b ">
+                -50°C~+60°C(-58°F~+140°F)
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                Humidity
+              </td>
+              <td className="p-4 text-black border-black border align-middle border-b ">
+                0~90% RH(non-condensing)
+              </td>
+            </tr>
+
+             <tr>
+              <td colSpan={2} className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                EPA(Effective Projected Area)
+              </td>
+              <td colSpan={3} className="p-4 text-black border-black border align-middle border-b ">
+                0.075
+              </td>
+            </tr>
+
+             <tr>
+              <td colSpan={2} className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                Input Voltage
+              </td>
+              <td colSpan={3} className="p-4 text-black border-black border align-middle border-b ">
+                PoE++(IEEE802.3bt type4, Class8)
+              </td>
+            </tr>
+
+            <tr>
+              <td rowSpan={2} className="bg-gray-50 p-4 font-normal text-gray-600 align-middle border-b border-r border-black">
+                Power Consumption
+              </td>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                PoE
+              </td>
+              <td className="p-4 text-black border-black border align-middle border-b ">
+                Max. 64W, typical 45W
+              </td>
+            </tr>
+           
+              </tbody>
+            </table>
+          </div>
             
 
             {/* Footer Tags & Socials */}
