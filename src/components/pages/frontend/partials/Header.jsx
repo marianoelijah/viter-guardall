@@ -1,30 +1,84 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react"; // Added useEffect here
 import { Link, NavLink } from "react-router-dom";
-import { Menu, X } from "lucide-react"; // Install lucide-react or use SVG icons
+import { Menu, X, Sun, Moon } from "lucide-react"; 
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  
+  // Initialize state based on what's already saved in localStorage or system preferences
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    return localStorage.getItem("theme") === "dark" || 
+      (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches);
+  });
+
+  // Effect to update the actual HTML class when state changes
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  }, [isDarkMode]);
 
   // Shared classes for nav links
   const linkStyles = ({ isActive }) =>
     `relative py-1 transition-all duration-300 font-medium hover:text-blue-700 ${
-      isActive ? "text-blue-700 md:after:w-full" : "text-gray-700 md:after:w-0"
+      isActive ? "text-blue-700 md:after:w-full" : "text-gray-700 dark:text-gray-300 md:after:w-0"
     } md:after:content-[''] md:after:absolute md:after:left-0 md:after:bottom-0 md:after:h-[2px] md:after:bg-blue-700 md:after:transition-all md:after:duration-300 md:hover:after:w-full`;
 
   const toggleMenu = () => setIsOpen(!isOpen);
+  // const toggleTheme = () => setIsDarkMode(!isDarkMode);
+
+  // Reusable Light/Dark Mode Switch Component matching your reference image
+  // const ThemeToggle = () => (
+  //   <div className="flex items-center space-x-3 select-none">
+  //     {/* Sun Icon */}
+  //     <Sun 
+  //       size={22} 
+  //       className={`transition-colors duration-300 ${isDarkMode ? "text-gray-400" : "text-amber-500"}`} 
+  //     />
+      
+  //     {/* Pill Toggle Switch */}
+  //     <button
+  //       onClick={toggleTheme}
+  //       className={`relative inline-flex h-6 w-12 items-center rounded-full border transition-all duration-300 focus:outline-none ${
+  //         isDarkMode 
+  //           ? "bg-[#1e1e2d] border-indigo-500/30 shadow-[0_0_8px_rgba(99,102,241,0.2)]" 
+  //           : "bg-[#f4f4f0] border-amber-500/20 shadow-[0_0_8px_rgba(245,158,11,0.1)]"
+  //       }`}
+  //       aria-label="Toggle Dark Mode"
+  //     >
+  //       <span
+  //         className={`inline-block h-4 w-4 transform rounded-full transition-all duration-300 ease-in-out ${
+  //           isDarkMode 
+  //             ? "translate-x-6 bg-indigo-400 shadow-[0_0_6px_#818cf8]" 
+  //             : "translate-x-1 bg-amber-600"
+  //         }`}
+  //       />
+  //     </button>
+
+  //     {/* Moon Icon */}
+  //     <Moon 
+  //       size={22} 
+  //       className={`transition-colors duration-300 ${isDarkMode ? "text-indigo-400 drop-shadow-[0_0_4px_rgba(129,140,248,0.6)]" : "text-gray-400"}`} 
+  //     />
+  //   </div>
+  // );
 
   return (
-    <header className="w-full bg-white shadow-md sticky top-0 z-50 font-poppins">
+    // Added 'dark:bg-[#121214]' to the header background wrapper so you can see it work instantly!
+    <header className="w-full bg-white dark:bg-[#121214] shadow-md sticky top-0 z-50 font-poppins transition-colors duration-300">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         
         {/* Logo */}
         <Link to="/" className="flex items-center hover:opacity-90 transition">
-        <img 
-          src="/assets/image/Client Logo/logo.png"
-          alt="Guard-All" 
-          // Changed h-10 md:h-12 md:w-48 to explicit width utilities
-          className="h-12 object-contain"
-           />
+          <img 
+            src="/assets/image/Client Logo/logo.png"
+            alt="Guard-All" 
+            className="h-12 object-contain"
+          />
         </Link>
 
         {/* Desktop Navigation */}
@@ -36,8 +90,10 @@ const Header = () => {
           <NavLink to="/testimonials" className={linkStyles}>Testimonials</NavLink>
         </nav>
 
-        {/* Desktop CTA */}
-        <div className="hidden md:block">
+        {/* Desktop CTA & Theme Switcher */}
+        <div className="hidden md:flex items-center space-x-6">
+          {/* <ThemeToggle /> */}
+          
           <Link to="/contacts">
             <button className="bg-[#1e40af] text-white px-7 py-2.5 rounded shadow-sm font-semibold tracking-wide hover:bg-[#ff5f31] active:scale-95 transition-all duration-200">
               CONTACT US
@@ -45,14 +101,18 @@ const Header = () => {
           </Link>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button 
-          className="md:hidden text-gray-700 focus:outline-none" 
-          onClick={toggleMenu}
-          aria-label="Toggle Menu"
-        >
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+        {/* Mobile Action Container */}
+        <div className="flex items-center space-x-4 md:hidden">
+          {/* <ThemeToggle /> */}
+          
+          <button 
+            className="text-gray-700 dark:text-gray-300 focus:outline-none" 
+            onClick={toggleMenu}
+            aria-label="Toggle Menu"
+          >
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Sidebar Overlay */}
@@ -62,9 +122,9 @@ const Header = () => {
       />
 
       {/* Mobile Navigation Menu */}
-      <nav className={`fixed top-0 right-0 h-full w-[70%] max-w-sm bg-white shadow-xl transform transition-transform duration-300 ease-in-out z-[60] md:hidden ${isOpen ? "translate-x-0" : "translate-x-full"}`}>
-        <div className="flex flex-col p-8 space-y-6 text-xl">
-          <button onClick={toggleMenu} className="self-end mb-4"><X size={32} /></button>
+      <nav className={`fixed top-0 right-0 h-full w-[70%] max-w-sm bg-white dark:bg-[#121214] shadow-xl transform transition-transform duration-300 ease-in-out z-[60] md:hidden ${isOpen ? "translate-x-0" : "translate-x-full"}`}>
+        <div className="flex flex-col p-8 space-y-6 text-xl h-full">
+          <button onClick={toggleMenu} className="self-end mb-4 text-gray-700 dark:text-gray-300"><X size={32} /></button>
           
           <NavLink to="/" onClick={toggleMenu} className={linkStyles}>Home</NavLink>
           <NavLink to="/who-we-are" onClick={toggleMenu} className={linkStyles}>Who We Are</NavLink>

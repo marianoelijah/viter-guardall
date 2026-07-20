@@ -394,8 +394,8 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
 // Example Usage for the Hirsch M64 Controller
 const TNPA7430RW = () => {
   const data = {
-    title: "4MP AI Ruggedized PTZ Camera / 4MP AI PTZ Camera",
-    subtitle: "",
+    title: "TNP-A7430RW",
+    subtitle: "4MP AI Ruggedized PTZ Camera / 4MP AI PTZ Camera",
     description: "The TNP-A7430RW is a mission-critical, high-performance 4MP outdoor positioning PTZ camera engineered to withstand the world's most demanding environments. Built on Hanwha Vision's advanced Wisenet 9 system-on-chip (SoC) architecture, it features a dual NPU configuration that splits heavy image processing from artificial intelligence calculations to provide continuous, high-efficiency security monitoring.",
     features: [
       "4MP Image Resolution",

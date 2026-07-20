@@ -370,15 +370,19 @@ const ProductLayout = ({ title, subtitle, description, features }) => {
 // Example Usage for the Hirsch M64 Controller
 const PNMC16013RVQ = () => {
   const data = {
-    title: "4CH mini AI Camera / 4MP x 4 AI IR Mini Multi-directional Dome Camera",
-    subtitle: "",
+    title: "PNM-C16013RVQ",
+    subtitle: "4CH mini AI Camera / 4MP x 4 AI IR Mini Multi-directional Dome Camera",
     description: "The PNM-C16013RVQ is an extremely compact, lightweight, and high-performance multi-directional AI network dome camera designed for comprehensive 360° surveillance in both indoor and outdoor environments. Equipped with four independent 4MP image sensors, it allows operators to securely monitor four different directions simultaneously from a single IP address.",
     features: [
-      "4CH AI Analytics",
-      "Loitering & Line Crossing Detection",
-      "Cybersecurity",
-      "Intelligent AI Behavior Detection",
-      "IR Night Vision",
+      "4CH AI based Analytics events - classified object (Person/Face/Vehicle/License plate)",
+      "AI based loitering detection and line crossing detection",
+      "AI based WiseNRII, Auto prefer shutter control, WiseStream111",
+      "IR viewable lenght 20m (65.6 ft)",
+      "Supports hallway mode",
+      "15fps@4MP",
+      "3.19MM Fixed lens",
+      "Next level cybersecurity (TPM 2.0, FIPS 140-2 certified)",
+      "Reinforced duravility (IP66, NEMA4X, IK09)",
     ],
 
 

@@ -494,9 +494,9 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
 // Example Usage for the Hirsch M64 Controller
 const XNVA8084RS = () => {
   const data = {
-    title: "5MP Stainless Steel AI IR Vandal Dome",
-    subtitle: "",
-    description: "The XNV-A8084RS is a premium, highly specialized 5-megapixel network dome security camera built on Hanwha Vision's cutting-edge Wisenet 9 system-on-chip (SoC) architecture. Designed explicitly for highly demanding or specialized environments, it features a heavy-duty stainless steel (STS316L) body and a durable nylon dome bubble. This heavy ruggedization enables the camera to seamlessly resist structural yellowing from sun exposure, corrosive marine salt, or harsh sanitizing chemicals.",
+    title: "XNV-A8084RS",
+    subtitle: "5MP Stainless Steel AI IR Vandal Dome",
+    description: "The XNV-A8084RS is a premium, highly specialized 5-megapixel network dome security camera built on Hanwha Vision's cutting-edge Wisenet 9 system-on-chip (SoC) architecture. Designed explicitly for highly demanding or specialized environments, it features a heavy-duty stainless steel (STS316L) body and a durable nylon dome bubble. This heavy ruggedization enables the camera to seamlessly resist structural yellowing from sun exposure, corrosive marine salt, or harsh sanitizing chemicals. The Hanwha Vision XNV-A8084RS is a 5MP stainless steel AI-powered IR vandal dome camera, engineered for environments requiring maximum durability, hygiene, and advanced analytics. It’s ideal for food processing plants, marine applications, and industrial sites where corrosion resistance and ruggedness are critical.",
     features: [
       "IP68, IK10, NSF/ANSI 169 Rated",
       "Dual NPU for AI-based Image Enhancement",

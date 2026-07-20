@@ -16,14 +16,14 @@ const ProductCard = ({ title, description, image, detailRoute }) => (
         }}
       />
     </div>
-    <div className="flex-grow">
+    <div className="flex-grow px-2">
       <h3 className="text-[#1a365d] font-semibold text-xl uppercase mb-3 leading-tight tracking-wide min-h-[3rem]">
         {title}
       </h3>
       <p className="text-gray-600 text-xl leading-relaxed line-clamp-3">
         {description}
       </p>
-      <span className='block mt-12 text-gray-500 text-sm tracking-widest'>
+      <span className='block mt-12 text-gray-500 text-sm tracking-widest '>
         <NavLink to={detailRoute} className="text-[#184c9b] hover:underline mt-2 block">
           <h3 className='text-xl font-poppins hover:text-[#ff5f31] transition-colors duration-300'>
             View Details
@@ -55,7 +55,7 @@ const Hanwha = () => {
     fetchHanwhaProducts();
   }, []);
 
-  if (loading) return <div className="min-h-screen flex items-center justify-center font-figtree text-[#0d3874]">Loading Hanwha Catalog...</div>;
+  if (loading) return <div className="min-h-screen flex items-center justify-center font-figtree text-[#0d3874]">Loading Hanwha Vision Catalog...</div>;
 
   return (
     <div className="bg-[#e9eff6] min-h-screen px-6 lg:px-12">
@@ -63,7 +63,7 @@ const Hanwha = () => {
 
         <header className="text-center py-16 px-6 md:px-10 lg:px-20">
           <h2 className="text-4xl md:text-5xl lg:text-5xl font-medium text-[#0d3874] mb-6 tracking-tight">
-            {products.length > 0 ? products[0].category_name : "CCTVs"} – Hanwha
+            {products.length > 0 ? products[0].category_name : "CCTVs"} – Hanwha Vision
           </h2>
           <div className="h-1 w-24 bg-[#2257a0] mx-auto rounded-full opacity-20"></div>
         </header>

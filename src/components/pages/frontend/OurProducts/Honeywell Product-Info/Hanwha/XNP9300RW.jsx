@@ -437,8 +437,8 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
 // Example Usage for the Hirsch M64 Controller
 const XNP9300RW = () => {
   const data = {
-    title: "4K 30x IR PTZ with built-in wiper / 4K Network 30x IR Wiper PTZ Camera ",
-    subtitle: "",
+    title: "XNP-9300RW",
+    subtitle: "4K 30x IR PTZ with built-in wiper",
     description: "The XNP-9300RW is an outdoor-ready, ultra-high-definition 4K network pan-tilt-zoom (PTZ) dome camera featuring a high-performance 30x optical zoom lens. Part of Hanwha Vision’s PTZ PLUS lineup, this camera is engineered with a significantly more compact and lightweight form factor that simplifies installation and cabling requirements.",
     features: [
       "Wisenet PTZ Plus design(compact, lighter, simple cabling)",

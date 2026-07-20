@@ -6,18 +6,13 @@ import SocialShare from '../../Reusable/SocialShare';
 
 const PNM9085RQZ1 = () => {
   const productFeatures = [
-    "Multi-Sensor 20MP Resolution",
     "Motorized PTRZ Support",
-    "Rotational Smart IR Illumination",
-    "Vandal and Weatherproof Design",
-    "Massive Local Edge Storage"
-  ];
-
-  // Helper for the complex 7-column table
-  const models = [
-    "OmniClass 2k & 16k Bits PVC Cards", "OmniClass + HID Prox Cards", 
-    "OmniClass Embeddable", "OmniClass Embeddable +", 
-    "OmniClass + Wiegand Cards", "OmniClass Key Fobs", "OmniClass Stickers"
+    "Maximum 30fps@5MP (H.265, H.264)",
+    "413 -9.4mm(2.3x) motorized varifocal lens",
+    "IR viewable lenght : 30m (98.43ft)",
+    "H.265, H.264, MJPEG codec, Multi streaming",
+    "Video analytics, WiseStream111",
+    "IP66, IK10, NEMA4X"
   ];
 
   return (
@@ -27,7 +22,7 @@ const PNM9085RQZ1 = () => {
         {/* Blue Header Banner */}
         <header className="bg-[#8ba4ca] text-white py-12 px-4 text-center">
           <h1 className="text-5xl font-bold tracking-tight">
-            5MP x 4CH IR PTRZ Multi-Directional Camera
+            PNM-9085RQZ1
           </h1>
         </header>
 
@@ -35,13 +30,18 @@ const PNM9085RQZ1 = () => {
           {/* Main Content */}
           <main className="lg:w-3/4 bg-gray-300 p-8 shadow-sm">
             <p className="text-[15px] text-black mb-6">
-                The PNM-9085RQZ1 is a multi-technology credential that combines OmniClass® and HID Prox technologies in a single card. It is designed for use in access control systems, providing enhanced security and flexibility. The credential is available in various formats, including cards, key fobs, and stickers, making it suitable for a wide range of applications.
+                
             </p>
 
             <section className="mb-8">
               <h2 className="font-bold text-xl text-black mb-2">Product Description:</h2>
               <p className="text-[15px] text-black leading-relaxed mb-4">
-                 The PNM-9085RQZ1 is a high-performance, 20-megapixel multi-sensor network dome camera designed for comprehensive, large-scale outdoor surveillance deployments. Utilizing four independent 5MP image sensors running through a single IP address, this camera eliminates the need for multiple independent devices by capturing distinct view angles simultaneously.
+                 The PNM-9085RQZ1 is a multi-technology credential that combines OmniClass® and HID Prox technologies in a single card. 
+                 It is designed for use in access control systems, providing enhanced security and flexibility. 
+                 The credential is available in various formats, including cards, key fobs, and stickers, making it suitable for a wide range of applications. 
+                 The PNM-9085RQZ1 is a high-performance, 20-megapixel multi-sensor network dome camera designed for comprehensive, large-scale outdoor surveillance deployments. 
+                 Utilizing four independent 5MP image sensors running through a single IP address, 
+                 this camera eliminates the need for multiple independent devices by capturing distinct view angles simultaneously.
               </p>
 
               <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>

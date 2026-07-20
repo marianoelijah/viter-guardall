@@ -410,15 +410,19 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
 // Example Usage for the Hirsch M64 Controller
 const PNMC34404RQPZ = () => {
   const data = {
-    title: "4K 4Ch PTRZ + 2MP 40x PTZ AI Camera / 4K x 4 AI IR PTRZ + 2MP 40x PTZ Multi-directional Dome",
-    subtitle: "",
+    title: "PNM-C34404RQPZ",
+    subtitle: "4K 4Ch PTRZ + 2MP 40x PTZ AI Camera",
     description: "The PNM-C34404RQPZ is a highly innovative multi-directional network outdoor camera that integrates quad-sensor wide area surveillance with a high-speed PTZ camera into a single physical housing. This advanced unit deploys four independent 4K/8MP sensors with motorized PTRZ mechanics, allowing installers to remotely adjust the pan, tilt, rotation, and zoom to map out a seamless 360° field of view over a single IP address.",
     features: [
-      "Intelligent AI Behavior Filtering",
-      "AI Smart Zoom & Advanced Handover",
-      "AI-Enhanced Compression & Quality",
-      "Enterprise-Level Cybersecurity",
-      "AI-Engine-Based 360° Analytics",
+      "360 Analytics events based on AI engine: Classified object (Person/Face/Vehicle/License plate)",
+      "360 Attributes search (Vehicle type: Car/Bus/Truck/Motorcycle/Bicycle)",
+      "AI based loitering detection and line crossing detection",
+      "AI based smart zoom and advanced hand over",
+      "PTRZ remote adjustmend",
+      "New design",
+      "Expansion of alarm/audio faetures",
+      "Next level cysersecurity (TPM 2.0 with FIPS 140-2 level2)",
+      "Reinforced durability (IP66, IK19, NEMA4X)"
     ],
   };
 
