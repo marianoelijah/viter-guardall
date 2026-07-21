@@ -1,7 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { Phone, Mail, MapPin, Globe } from 'lucide-react';
-import { IMAGE_BASE_URL } from '../partials/Footer';
 import { FaMapMarkerAlt } from 'react-icons/fa';
+
+const getApiBaseUrl = () => {
+  if (import.meta.env.VITE_API_URL) return import.meta.env.VITE_API_URL;
+  if (import.meta.env.DEV) return 'http://localhost:5000';
+  return typeof window !== 'undefined' ? window.location.origin : '';
+};
+
+const API_BASE_URL = getApiBaseUrl();
+const buildApiUrl = (path) => `${API_BASE_URL.replace(/\/$/, '')}${path}`;
 
 // Move static data outside the component to prevent re-renders
 const BRANCHES = {
@@ -39,7 +47,7 @@ const Contacts = () => {
     setStatus('sending');
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/contact`, {
+      const response = await fetch(buildApiUrl('/api/contact'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -50,6 +58,8 @@ const Contacts = () => {
         setFormData({ name: '', email: '', subject: '', message: '' }); 
         setTimeout(() => setStatus(''), 5000); // Clear status after 5s
       } else {
+        const errorText = await response.text();
+        console.error('Contact submission failed:', response.status, errorText);
         setStatus('error');
       }
     } catch (error) {
@@ -60,30 +70,30 @@ const Contacts = () => {
 
   // Fetch dynamic footer elements from your Express backend
   useEffect(() => {
-  // Pulling contact records
-  fetch(`${IMAGE_BASE_URL}/api/footer-contact`)
-    .then((res) => {
-      if (!res.ok) throw new Error(`HTTP Error Status: ${res.status}`);
-      return res.json();
-    })
-    .then((data) => setContactInfo(Array.isArray(data) ? data : []))
-    .catch((err) => {
-      console.error("❌ Footer contact error detail:", err);
-      setContactInfo([]);
-    });
+    // Pulling contact records
+    fetch(buildApiUrl('/api/footer-contact'))
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP Error Status: ${res.status}`);
+        return res.json();
+      })
+      .then((data) => setContactInfo(Array.isArray(data) ? data : []))
+      .catch((err) => {
+        console.error("❌ Footer contact error detail:", err);
+        setContactInfo([]);
+      });
 
-  // Pulling office records
-  fetch(`${IMAGE_BASE_URL}/api/footer-offices`)
-    .then((res) => {
-      if (!res.ok) throw new Error(`HTTP Error Status: ${res.status}`);
-      return res.json();
-    })
-    .then((data) => setOffices(Array.isArray(data) ? data : []))
-    .catch((err) => {
-      console.error("❌ Footer office error detail:", err);
-      setOffices([]);
-    });
-}, []);
+    // Pulling office records
+    fetch(buildApiUrl('/api/footer-offices'))
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP Error Status: ${res.status}`);
+        return res.json();
+      })
+      .then((data) => setOffices(Array.isArray(data) ? data : []))
+      .catch((err) => {
+        console.error("❌ Footer office error detail:", err);
+        setOffices([]);
+      });
+  }, []);
 
 
   return (
@@ -93,7 +103,7 @@ const Contacts = () => {
         <h1 className="text-5xl md:text-7xl text-[#2257a0] mb-6 drop-shadow-sm tracking-tigh">Contact Us</h1>
         <h2 className="text-5xl md:text-6xl drop-shadow-sm tracking-tigh text-[#2257a0] mb-4">Secure Your Life Today!</h2>
         <p className="text-gray-700 text-lg max-w-2xl mx-auto">
-          Tell us what your property needs. Our team is ready to help you!
+          Tell us what your property needs. Our team is ready to help and support you!
         </p>
       </section>
 
@@ -160,20 +170,21 @@ const Contacts = () => {
         {/* Form and Map Container */}
         <div className="grid grid-cols-1 gap-12">
           {/* Form Section */}
+
           <div className="max-w-4xl mx-auto w-full relative">
             <div className="absolute inset-0 bg-[#0097b2] translate-x-4 translate-y-4 rounded-3xl -z-10"></div>
-            <div className="bg-gray-300 p-8 md:p-12 rounded-3xl shadow-sm border border-slate-100">
+            <div className="bg-gray-100 p-8 md:p-12 rounded-3xl shadow-lg border border-black">
               <form onSubmit={handleSubmit} className="space-y-6">
-                <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} className="w-full px-4 py-4 rounded-lg outline-none focus:ring-2 focus:ring-[#2257a0]" required />
-                <input type="email" name="email" placeholder="Your Email" value={formData.email} onChange={handleChange} className="w-full px-4 py-4 rounded-lg outline-none focus:ring-2 focus:ring-[#2257a0]" required />
-                <input type="text" name="subject" placeholder="Subject" value={formData.subject} onChange={handleChange} className="w-full px-4 py-4 rounded-lg outline-none focus:ring-2 focus:ring-[#2257a0]" required />
-                <textarea name="message" placeholder="Message" rows="5" value={formData.message} onChange={handleChange} className="w-full px-4 py-4 rounded-lg outline-none focus:ring-2 focus:ring-[#2257a0] resize-none" required></textarea>
+                <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} className="w-full px-4 py-4 rounded-lg outline-none focus:ring-2 focus:ring-[#2257a0]  border border-black" required />
+                <input type="email" name="email" placeholder="Your Email" value={formData.email} onChange={handleChange} className="w-full px-4 py-4 rounded-lg outline-none focus:ring-2 focus:ring-[#2257a0]  border border-black" required />
+                <input type="text" name="subject" placeholder="Subject" value={formData.subject} onChange={handleChange} className="w-full px-4 py-4 rounded-lg outline-none focus:ring-2 focus:ring-[#2257a0]  border border-black" required />
+                <textarea name="message" placeholder="Message" rows="5" value={formData.message} onChange={handleChange} className="w-full px-4 py-4 rounded-lg outline-none focus:ring-2 focus:ring-[#2257a0]  border border-black resize-none" required></textarea>
                 
                 {status === 'success' && <p className="text-green-600 font-bold text-center">Message sent successfully!</p>}
                 {status === 'error' && <p className="text-red-600 font-bold text-center">Error sending message. Try again.</p>}
                 
-                <button type="submit" disabled={status === 'sending'} className="w-full bg-[#1e40af] text-white py-4 font-bold rounded hover:bg-blue-800 disabled:bg-gray-400 transition-all shadow-md">
-                  {status === 'sending' ? 'SENDING...' : 'SEND MESSAGE'}
+                <button type="submit" disabled={status === 'sending'} className="w-auto px-20 bg-[#1435a0] hover:bg-[#ff5f31] text-white py-4 font-bold rounded disabled:bg-gray-400 transition-all shadow-md">
+                  {status === 'sending' ? 'SENDING...' : 'SEND US A MESSAGE NOW'}
                 </button>
               </form>
             </div>

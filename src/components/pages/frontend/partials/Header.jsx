@@ -82,7 +82,7 @@ const Header = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8 lg:space-x-10 text-lg">
+        <nav className="hidden md:flex items-center space-x-8 lg:space-x-10 text-lg md:text-sm lg:text-xl">
           <NavLink to="/" className={linkStyles}>Home</NavLink>
           <NavLink to="/who-we-are" className={linkStyles}>Who We Are</NavLink>
           <NavLink to="/our-products" className={linkStyles}>Our Products</NavLink>

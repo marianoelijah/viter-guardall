@@ -381,6 +381,10 @@ import SmartHome from "./components/pages/frontend/OurProducts/Honeywell Product
 import TestimonialPage from "./components/pages/frontend/testimonials/TestimonialPage";
 import IntercomAccessControl from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dnake/IntercomAccessControl";
 import WirelessDoorbell from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dnake/WirelessDoorbell";
+import N82B2P from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/N82B2P";
+import OutdoorNetwork from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/OutdoorNetwork";
+import StraightNetwork from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/StraightNetwork";
+import N43CL62 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/N43CL62";
 
 
 
@@ -660,6 +664,14 @@ const App = () => {
              <Route path="/our-products/dahua/dh-lr2110" element={<UnmanagedSwitch/>} />
              <Route path="/our-products/dahua/dh-is4210" element={<IndustrialSwitch/>} />
              <Route path="/our-products/dahua/n84b5n" element={<N84B5N/>} />
+
+             <Route path="/our-products/dahua/n82b2p" element={<N82B2P/>} />
+             <Route path="/our-products/dahua/outdoor-network" element={<OutdoorNetwork/>} />
+             <Route path="/our-products/dahua/n43cj6z" element={<StraightNetwork/>} />
+             <Route path="/our-products/dahua/n43cl62" element={<N43CL62/>} />
+
+
+
 
               {/* Hanwha-Vision Product Details Route */}
               <Route path="/our-products/hanwha/PNMC16013RVQ" element={<PNMC16013RVQ/>} />
