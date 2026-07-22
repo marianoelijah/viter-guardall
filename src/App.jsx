@@ -385,6 +385,9 @@ import N82B2P from "./components/pages/frontend/OurProducts/Honeywell Product-In
 import OutdoorNetwork from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/OutdoorNetwork";
 import StraightNetwork from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/StraightNetwork";
 import N43CL62 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/N43CL62";
+import N22AL12 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/N22AL12";
+import N43CF6Z from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/N43CF6Z";
+import N43BX8Z from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/N43BX8Z";
 
 
 
@@ -669,6 +672,10 @@ const App = () => {
              <Route path="/our-products/dahua/outdoor-network" element={<OutdoorNetwork/>} />
              <Route path="/our-products/dahua/n43cj6z" element={<StraightNetwork/>} />
              <Route path="/our-products/dahua/n43cl62" element={<N43CL62/>} />
+             <Route path="/our-products/dahua/n22al12" element={<N22AL12/>} />
+             <Route path="/our-products/dahua/n43cf6z" element={<N43CF6Z/>} />
+             <Route path="/our-products/dahua/n43bx8z" element={<N43BX8Z />} />
+
 
 
 
