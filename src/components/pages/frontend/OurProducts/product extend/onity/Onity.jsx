@@ -17,7 +17,7 @@ const ProductCard = ({ title, description, image, detailRoute }) => (
       <h3 className="text-[#1a365d] font-semibold text-xl uppercase mb-3 leading-tight tracking-wide min-h-[3.5rem]">
         {title}
       </h3>
-      <p className="text-gray-600 text-xl leading-relaxed line-clamp-3">
+      <p className="text-gray-600 text-xl leading-relaxed">
         {description}
       </p>
       <span className='block mt-12 text-gray-500 text-sm tracking-widest'>
