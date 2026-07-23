@@ -6,21 +6,21 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   
   // Initialize state based on what's already saved in localStorage or system preferences
-  const [isDarkMode, setIsDarkMode] = useState(() => {
-    return localStorage.getItem("theme") === "dark" || 
-      (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches);
-  });
+  // const [isDarkMode, setIsDarkMode] = useState(() => {
+  //   return localStorage.getItem("theme") === "dark" || 
+  //     (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches);
+  // });
 
   // Effect to update the actual HTML class when state changes
-  useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
-  }, [isDarkMode]);
+  // useEffect(() => {
+  //   if (isDarkMode) {
+  //     document.documentElement.classList.add("dark");
+  //     localStorage.setItem("theme", "dark");
+  //   } else {
+  //     document.documentElement.classList.remove("dark");
+  //     localStorage.setItem("theme", "light");
+  //   }
+  // }, [isDarkMode]);
 
   // Shared classes for nav links
   const linkStyles = ({ isActive }) =>

@@ -27,7 +27,7 @@ const ProWatch = () => {
 
           {/* LEFT CONTENT */}
           <div className="lg:col-span-2">
-            <div className="bg-gray-100 rounded-xl shadow-sm p-8">
+            <div className="bg-gray-200 rounded-xl shadow-sm p-8">
 
               <p className="text-black text-[15px] mb-6">
                 A comprehensive security system that helps secure people, property, and assets.
@@ -59,8 +59,8 @@ const ProWatch = () => {
           <div className="space-y-6">
 
             {/* MORE BY SECTION */}
-             <div className="bg-gray-300 p-6 rounded shadow-sm border border-gray-400">
-                <h3 className="font-bold text-black text-xl mb-4 border-b border-black pb-2 uppercase">More By Honeywell</h3>
+             <div className="bg-gray-200 p-6 rounded shadow-sm border border-gray-400">
+                <h3 className="font-bold text-black text-xl mb-4 border-b border-black pb-2">More By HONEYWELL</h3>
                 <ul className="space-y-4 text-gray-700">
                   <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
                   <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>Onity DirectKey with Serene </li>

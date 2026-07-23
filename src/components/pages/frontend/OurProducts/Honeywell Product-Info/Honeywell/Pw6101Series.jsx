@@ -18,8 +18,8 @@ const Pw6101Series = () => {
           <div className="bg-[#7f95b8] py-20">
             <div className="container mx-auto px-6">
                <h1 className="text-white text-4xl md:text-5xl font-bold text-center">
-              PW6101 Series
-            </h1>
+                 PW6101 Series
+               </h1>
             <p className="mt-2 text-xl opacity-90 font-light italic">
               Single Door PoE Intelligent Controller and Reader Module
             </p>
@@ -122,8 +122,8 @@ const Pw6101Series = () => {
             <aside className="lg:w-1/3 space-y-8">
             
               <div className="space-y-6">
-              <div className="bg-gray-300 p-6 rounded shadow-sm border border-gray-400">
-                <h3 className="font-bold text-black text-xl mb-4 border-b border-black pb-2 uppercase">More By Honeywell</h3>
+              <div className="bg-gray-200 p-6 rounded shadow-sm border border-gray-400">
+                <h3 className="font-bold text-black text-xl mb-4 border-b border-black pb-2">More By Honeywell</h3>
                 <ul className="space-y-4 text-gray-700">
                   <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
                   <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>Onity DirectKey with Serene </li>

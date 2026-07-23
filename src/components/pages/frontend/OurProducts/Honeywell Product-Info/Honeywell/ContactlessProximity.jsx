@@ -113,7 +113,7 @@ const ContactlessProximity = () => {
         {/* Right Sidebar */}
         <aside className="md:w-[28%]">
           <div className="bg-gray-300 p-6 rounded shadow-sm border border-gray-400 mb-5">
-                <h3 className="font-bold text-black text-xl mb-4 border-b border-black pb-2">More By Honeywell</h3>
+                <h3 className="font-bold text-black text-xl mb-4 border-b border-black pb-2">More By HONEYWELL</h3>
                 <ul className="space-y-4 text-gray-700">
                   <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
                   <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>Onity DirectKey with Serene </li>
@@ -158,7 +158,6 @@ const ContactlessProximity = () => {
                 </NavLink>
               </div>
             </div>
-
         </aside>
 
       </div>

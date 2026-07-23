@@ -29,26 +29,28 @@ const AdminPanel = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-10 bg-white shadow-xl rounded-2xl mt-10">
+    <div className="max-w-2xl mx-auto p-10 bg-slate-300 shadow-xl rounded-2xl mt-10">
       <h2 className="text-3xl font-bold mb-6 text-blue-900">Add New Product</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
-        
+
+        {/* Add New Brand */}
+
         {/* Brand Selection */}
         <div>
-          <label className="block font-bold">Select Brand</label>
-          <select 
+          <label className="block font-bold">Select Brand:</label>
+          <select
             className="w-full p-3 border rounded"
             onChange={(e) => setFormData({...formData, brand_id: e.target.value})}
             required
           >
-            <option value="">-- Choose Brand --</option>
+            <option value="">-- Choose  Brand --</option>
             {brands.map(b => <option key={b.id} value={b.id}>{b.name}</option>)}
           </select>
         </div>
 
         {/* Product Name */}
         <div>
-          <label className="block font-bold">Product Name</label>
+          <label className="block font-bold">Product Name:</label>
           <input 
             type="text" className="w-full p-3 border rounded"
             value={formData.product_name}
@@ -59,7 +61,7 @@ const AdminPanel = () => {
 
         {/* Product Description */}
         <div>
-          <label className="block font-bold">Product Description</label>
+          <label className="block font-bold">Product Description:</label>
           <textarea 
             className="w-full p-3 border rounded h-32"
             value={formData.product_description}
@@ -70,7 +72,7 @@ const AdminPanel = () => {
 
         {/* Image Path */}
         <div>
-          <label className="block font-bold">Image URL / Path</label>
+          <label className="block font-bold">Image URL / Path:</label>
           <input 
             type="text" className="w-full p-3 border rounded"
             value={formData.product_image}
@@ -79,9 +81,10 @@ const AdminPanel = () => {
           />
         </div>
 
-        <button type="submit" className="w-full bg-orange-500 text-white font-bold py-4 rounded-xl hover:bg-orange-600 transition">
+        <button type="submit" className="border w-25 px-2 bg-[#1964d3] hover:bg-[#ff5f31] text-white hover:text-black font-bold py-4 rounded-xl transition">
           Save Product to Database
         </button>
+        
       </form>
     </div>
   );

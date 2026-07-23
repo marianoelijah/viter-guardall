@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../../../partials/Header";
 import Footer from "../../../partials/Footer";
 import SocialShare from "../../Reusable/SocialShare";
+import { NavLink } from "react-router-dom";
 
 const OmniProxProduct = () => {
   return (

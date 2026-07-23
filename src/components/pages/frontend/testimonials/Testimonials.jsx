@@ -16,15 +16,15 @@ const testimonials = [
     name: "Brad",
     role: "Top",
     image: "https://via.placeholder.com/150",
-    // quote: "Exceptional quality and professional installation team.",
+    // quote: "Exceptional quality and professional installation team",
     rating: 5,
-    projectTitle: "HEIGHT REALTY, INC. / SOUTHLINKS",
+    projectTitle: "HEIGHT REALTY, INC. SOUTHLINKS",
     projectImages: [
       "/assets/image/Testimony/Southlinks/gardhouse.jpg",
       "/assets/image/Testimony/Southlinks/gardhouse2.jpg",
       "/assets/image/Testimony/Southlinks/gardhouse3.jpg"
     ],
-    projectDescription: "Supply and Installation of Beam Barrier and Bollards CP-B101."
+    projectDescription: "Supply and Installation of Beam Barriers and Bollards CP-B101."
   },
   {
     id: 2,

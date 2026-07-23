@@ -128,9 +128,9 @@ const Crime = () => {
             </div>
 
             {/* Right Column: Sidebar */}
-                     <div className="lg:col-span-1 space-y-8">
-                         <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
-                       <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By FOSTER + FREEMAN</h3>
+          <div className="lg:col-span-1 space-y-8">
+            <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
+                <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By FOSTER + FREEMAN</h3>
             <ul className="space-y-4 text-gray-800 font-medium">
               <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
                 <li className='cursor-pointer hover:text-[#ff5f31] transition-colors break-words'>Onity DirectKey with Serene</li>
@@ -151,7 +151,7 @@ const Crime = () => {
                 <li className='cursor-pointer hover:text-[#ff5f31] transition-colors break-words'>GNR 340 100-Channel Tower NVR</li>
               </NavLink>
             </ul>
-                     </div>
+            </div>
            
                         {/* Contact Card */}
              <div 
