@@ -397,6 +397,52 @@ app.get('/api/dept-intro', async (req, res) => {
   }
 });
 
+// This added is for a dynamic backend testimony section
+// GET Testimonials / Case Studies
+app.get('/api/testimonials', async (req, res) => {
+  try {
+    const query = `
+      SELECT 
+        id, 
+        name, 
+        role, 
+        image_url AS image, 
+        quote, 
+        rating, 
+        project_title AS projectTitle, 
+        project_description AS projectDescription, 
+        project_images AS projectImages 
+      FROM testimonials 
+      ORDER BY id ASC
+    `;
+    const [rows] = await db.query(query);
+
+    // Safely format project_images for React (Handles JSON string or array)
+    const formattedRows = rows.map(item => {
+      let images = [];
+      if (typeof item.projectImages === 'string') {
+        try {
+          images = JSON.parse(item.projectImages);
+        } catch {
+          images = item.projectImages.split(',').map(s => s.trim());
+        }
+      } else if (Array.isArray(item.projectImages)) {
+        images = item.projectImages;
+      }
+
+      return {
+        ...item,
+        projectImages: images
+      };
+    });
+
+    res.json(formattedRows);
+  } catch (err) {
+    console.error("❌ Error fetching testimonials:", err.message);
+    res.status(500).json({ error: "Database Error", message: err.message });
+  }
+});
+
 // POST Contact Form Submission
 app.post('/api/contact', async (req, res) => {
     const { name, email, subject, message } = req.body;

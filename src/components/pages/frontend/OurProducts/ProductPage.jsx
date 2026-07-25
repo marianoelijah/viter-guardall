@@ -2,15 +2,12 @@ import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import axios from "axios";
 
-
 const API_URL = import.meta.env.VITE_API_URL;
 
 const ProductPage = () => {
 
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
-
-
 
   useEffect(() => {
 
@@ -31,8 +28,6 @@ const ProductPage = () => {
     fetchProducts();
   }, []);
 
-
-
   if (loading) {
     return (
       <div className="flex justify-center items-center h-screen bg-[#f4f7fa]">
@@ -40,8 +35,6 @@ const ProductPage = () => {
       </div>
     );
   }
-
-
 
   return (
 

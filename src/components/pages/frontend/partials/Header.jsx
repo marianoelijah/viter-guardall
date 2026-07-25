@@ -1,26 +1,9 @@
 import React, { useState, useEffect } from "react"; // Added useEffect here
 import { Link, NavLink } from "react-router-dom";
-import { Menu, X, Sun, Moon } from "lucide-react"; 
+import { Menu, X } from "lucide-react";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  
-  // Initialize state based on what's already saved in localStorage or system preferences
-  // const [isDarkMode, setIsDarkMode] = useState(() => {
-  //   return localStorage.getItem("theme") === "dark" || 
-  //     (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches);
-  // });
-
-  // Effect to update the actual HTML class when state changes
-  // useEffect(() => {
-  //   if (isDarkMode) {
-  //     document.documentElement.classList.add("dark");
-  //     localStorage.setItem("theme", "dark");
-  //   } else {
-  //     document.documentElement.classList.remove("dark");
-  //     localStorage.setItem("theme", "light");
-  //   }
-  // }, [isDarkMode]);
 
   // Shared classes for nav links
   const linkStyles = ({ isActive }) =>
@@ -29,43 +12,6 @@ const Header = () => {
     } md:after:content-[''] md:after:absolute md:after:left-0 md:after:bottom-0 md:after:h-[2px] md:after:bg-blue-700 md:after:transition-all md:after:duration-300 md:hover:after:w-full`;
 
   const toggleMenu = () => setIsOpen(!isOpen);
-  // const toggleTheme = () => setIsDarkMode(!isDarkMode);
-
-  // Reusable Light/Dark Mode Switch Component matching your reference image
-  // const ThemeToggle = () => (
-  //   <div className="flex items-center space-x-3 select-none">
-  //     {/* Sun Icon */}
-  //     <Sun 
-  //       size={22} 
-  //       className={`transition-colors duration-300 ${isDarkMode ? "text-gray-400" : "text-amber-500"}`} 
-  //     />
-      
-  //     {/* Pill Toggle Switch */}
-  //     <button
-  //       onClick={toggleTheme}
-  //       className={`relative inline-flex h-6 w-12 items-center rounded-full border transition-all duration-300 focus:outline-none ${
-  //         isDarkMode 
-  //           ? "bg-[#1e1e2d] border-indigo-500/30 shadow-[0_0_8px_rgba(99,102,241,0.2)]" 
-  //           : "bg-[#f4f4f0] border-amber-500/20 shadow-[0_0_8px_rgba(245,158,11,0.1)]"
-  //       }`}
-  //       aria-label="Toggle Dark Mode"
-  //     >
-  //       <span
-  //         className={`inline-block h-4 w-4 transform rounded-full transition-all duration-300 ease-in-out ${
-  //           isDarkMode 
-  //             ? "translate-x-6 bg-indigo-400 shadow-[0_0_6px_#818cf8]" 
-  //             : "translate-x-1 bg-amber-600"
-  //         }`}
-  //       />
-  //     </button>
-
-  //     {/* Moon Icon */}
-  //     <Moon 
-  //       size={22} 
-  //       className={`transition-colors duration-300 ${isDarkMode ? "text-indigo-400 drop-shadow-[0_0_4px_rgba(129,140,248,0.6)]" : "text-gray-400"}`} 
-  //     />
-  //   </div>
-  // );
 
   return (
     // Added 'dark:bg-[#121214]' to the header background wrapper so you can see it work instantly!
