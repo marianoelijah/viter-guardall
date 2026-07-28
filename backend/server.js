@@ -409,17 +409,53 @@ app.get('/api/testimonials', async (req, res) => {
 // });
 
 // POST Contact Form Submission
-app.post('/api/contact', async (req, res) => {
-    const { name, email, subject, message } = req.body;
-    try {
-        // Pass 'new' into status column so Aiven MySQL won't reject it
-        const query = "INSERT INTO contact_inquiries (name, email, subject, message, status) VALUES (?, ?, ?, ?, 'new')";
-        await db.query(query, [name, email, subject, message]);
+// app.post('/api/contact', async (req, res) => {
+//     const { name, email, subject, message } = req.body;
+//     try {
+//         // Pass 'new' into status column so Aiven MySQL won't reject it
+//         const query = "INSERT INTO contact_inquiries (name, email, subject, message, status) VALUES (?, ?, ?, ?, 'new')";
+//         await db.query(query, [name, email, subject, message]);
         
-        res.status(200).json({ message: "Inquiry received successfully." });
+//         res.status(200).json({ message: "Inquiry received successfully." });
+//     } catch (err) {
+//         console.error("Contact Form Error:", err);
+//         res.status(500).json({ error: "Failed to process inquiry" });
+//     }
+// });
+
+app.post('/api/contact', async (req, res) => {
+    console.log("📩 Incoming Contact:", req.body);
+
+    const { name, email, subject, message } = req.body;
+
+    try {
+        const query = `
+            INSERT INTO contact_inquiries
+            (name, email, subject, message, status)
+            VALUES (?, ?, ?, ?, 'new')
+        `;
+
+        const [result] = await db.query(query, [
+            name,
+            email,
+            subject,
+            message
+        ]);
+
+        console.log("✅ Insert Success:", result);
+
+        res.status(200).json({
+            success: true,
+            insertId: result.insertId
+        });
+
     } catch (err) {
-        console.error("Contact Form Error:", err);
-        res.status(500).json({ error: "Failed to process inquiry" });
+        console.error("❌ SQL ERROR:", err);
+
+        res.status(500).json({
+            success: false,
+            error: err.message
+        });
     }
 });
 

@@ -45,6 +45,10 @@ const Contacts = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('sending');
+    window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 
     try {
       const response = await fetch(buildApiUrl('/api/contact'), {
@@ -100,8 +104,12 @@ const Contacts = () => {
     <div className="min-h-screen bg-slate-200 font-poppins selection:bg-blue-100">
       {/* Header Section */}
       <section className="pt-20 pb-12 text-center px-6">
-        <h1 className="text-5xl md:text-7xl text-[#2257a0] mb-6 drop-shadow-sm tracking-tigh">Contact Us</h1>
-        <h2 className="text-5xl md:text-6xl drop-shadow-sm tracking-tigh text-[#2257a0] mb-4">Secure Your Life Today!</h2>
+        <h1 className="text-5xl md:text-7xl text-[#2257a0] mb-6 drop-shadow-sm tracking-tigh">
+          Contact Us
+        </h1>
+        <h2 className="text-5xl md:text-6xl drop-shadow-sm tracking-tigh text-[#2257a0] mb-4">
+          Secure Your Life Today!
+        </h2>
         <p className="text-gray-700 text-lg max-w-2xl mx-auto">
           Tell us what your property needs. Our team is ready to help and support you!
         </p>
@@ -139,10 +147,7 @@ const Contacts = () => {
               <MapPin className="text-[#2257a0] group-hover:text-white" size={32} />
             </div>
 
-            {/* <div className="text-sm text-gray-700 space-y-3">
-              <p><strong>Makati:</strong> Makati | Unit 708 Cattleya Building, 235 Salcedo St. Legaspi Village, Makati City, Philippines 1223</p>
-              <p><strong>Cebu:</strong> Cebu | Unit 306 Cebu Holdings Building, Cebu Business Park, Cebu City, Philippines 6000</p>
-            </div> */}
+           
 
             {/* Offices & Social - External Geolocation Hyperlinks */}
             <div className="space-y-4 text-sm text-gray-600 inline-block sm:block text-left">
@@ -180,12 +185,44 @@ const Contacts = () => {
                 <input type="text" name="subject" placeholder="Subject" value={formData.subject} onChange={handleChange} className="w-full px-4 py-4 rounded-lg outline-none focus:ring-2 focus:ring-[#2257a0]  border border-black" required />
                 <textarea name="message" placeholder="Message" rows="5" value={formData.message} onChange={handleChange} className="w-full px-4 py-4 rounded-lg outline-none focus:ring-2 focus:ring-[#2257a0]  border border-black resize-none" required></textarea>
                 
-                {status === 'success' && <p className="text-green-600 font-bold text-center">Message sent successfully!</p>}
-                {status === 'error' && <p className="text-red-600 font-bold text-center">Error sending message. Try again.</p>}
+                {/* Improve the Success Message */}
+                {status === "success" && (
+                  <div className="rounded-xl border border-green-300 bg-green-50 p-4 text-center animate-pulse">
+                    <h3 className="text-lg font-bold text-green-700">
+                      ✅ Inquiry Sent Successfully!
+                    </h3>
+
+                    <p className="mt-1 text-sm text-green-700">
+                      Thank you for contacting <strong>Guard-All Electronic Security Systems, Inc.</strong>
+                    </p>
+
+                    <p className="text-sm text-green-700">
+                       Our team will review your inquiry and get back to you as soon as possible.
+                    </p>
+                  </div>
+                )}
+
+                {/* Improve the Error Message */}
+                {status === "error" && (
+                  <div className="rounded-xl border border-red-300 bg-red-50 p-4 text-center">
+                    <h3 className="text-lg font-bold text-red-700">
+                      ❌ Unable to Send Inquiry
+                    </h3>
+
+                    <p className="text-sm text-red-700">
+                      Something went wrong while submitting your request.
+                    </p>
+
+                    <p className="text-sm text-red-700">
+                      Please try again in a few moments.
+                    </p>
+                  </div>
+                 )}
                 
                 <button type="submit" disabled={status === 'sending'} className="w-auto px-20 bg-[#1435a0] hover:bg-[#ff5f31] text-white py-4 font-bold rounded disabled:bg-gray-400 transition-all shadow-md">
-                  {status === 'sending' ? 'SENDING...' : 'SEND US A MESSAGE NOW'}
+                  {status === 'sending' ? 'Sending Your Inquiry...' : 'SEND US A MESSAGE NOW'}
                 </button>
+
               </form>
             </div>
           </div>
