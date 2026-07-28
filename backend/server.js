@@ -19,52 +19,35 @@ const __dirname = path.dirname(__filename);
 // --- Middlewares ---
 app.use(express.json());
 
-// 1st CORS declaration (Only Vercel)
-app.use(cors({
-  origin: 'https://viter-guardall.vercel.app',
-  credentials: true
-}));
-
-// 2nd CORS declaration (Allows everything!)
-app.use(cors());
-app.use(express.json());
-
 // Dynamic CORS Configuration
 const allowedOrigins = [
-  "http://localhost:5173", 
-  "http://localhost:5174", // Added this to support your local dev environment!
-  "https://guardall.vercel.app", 
+  "http://localhost:5173",
+  "http://localhost:5174",
+  "https://guardall.vercel.app",
   "https://viter-guardall.vercel.app",
-  'https://viter-guardall.onrender.com'
-  // 💡 Add your exact live production Vercel URL below if it differs from these
+  "https://viter-guardall.onrender.com",
 ];
 
-app.use(cors({
-  origin: function (origin, callback) {
-    // Allow requests with no origin (like mobile apps, curl, or Postman)
-    if (!origin) return callback(null, true);
-    
-    if (allowedOrigins.indexOf(origin) !== -1 || process.env.NODE_ENV !== 'production') {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  credentials: true
-}));
+app.use(
+  cors({
+    origin(origin, callback) {
+      // Allow requests from Postman, curl, etc.
+      if (!origin) {
+        return callback(null, true);
+      }
 
-// app.use(cors({
-//   origin: function (origin, callback) {
-//     // Allow requests with no origin (like mobile apps or server-to-server testing tools)
-//     if (!origin) return callback(null, true);
-//     if (allowedOrigins.indexOf(origin) === -1) {
-//       const msg = `The CORS policy for this site does not allow access from the specified Origin: ${origin}`;
-//       return callback(new Error(msg), false);
-//     }
-//     return callback(null, true);
-//   },
-//   credentials: true
-// }));
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+
+      return callback(new Error(`CORS blocked: ${origin}`));
+    },
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
+
 
 // --- Static Asset Serving ---
 // Original code in handling static assets for production
@@ -271,52 +254,6 @@ app.get('/api/products/brand/:brand', async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 }); 
-
-
-
-
-// PRODUCTPAGE.JSX - GET Categories with Nested Brands 
-// This route is commented out because we have a more optimized version above.
-// app.get('/api/products', async (req, res) => {
-//   try {
-//     const [rows] = await db.query(`
-//       SELECT 
-//         c.id AS cat_id, c.title, c.description, c.img_path,
-//         b.id AS brand_id, b.name AS brand_name, b.logo_path, b.link_path
-//       FROM categories_array c
-//       LEFT JOIN client_brands b ON c.id = b.category_id
-//       ORDER BY c.id ASC
-//     `);
-
-//     const formattedData = rows.reduce((acc, row) => {
-//       let category = acc.find(item => item.id === row.cat_id);
-//       if (!category) {
-//         category = {
-//           id: row.cat_id,
-//           title: row.title,
-//           description: row.description,
-//           img: row.img_path,
-//           brands: [] 
-//         };
-//         acc.push(category);
-//       }
-
-//       if (row.brand_id) {
-//         category.brands.push({
-//           name: row.brand_name,
-//           logo: row.logo_path,
-//           path: row.link_path
-//         });
-//       }
-//       return acc;
-//     }, []);
-
-//     res.json(formattedData);
-//   } catch (error) {
-//     console.error(error);
-//     res.status(500).json({ message: "Server error fetching products" });
-//   }
-// });
 
 // PRODUCTPAGE.JSX - GET Categories with Nested Brands 
 app.get('/api/products', async (req, res) => {
