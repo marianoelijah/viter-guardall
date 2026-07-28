@@ -184,10 +184,13 @@ export default function Testimonials() {
             </button>
 
             <div className="border-b border-slate-800 pb-6 mb-6">
-              <span className="text-xs uppercase font-bold tracking-widest text-blue-500">Case Gallery</span>
+              <span className="text-xs uppercase font-bold tracking-widest text-blue-500">
+                Case Gallery
+              </span>
               <h3 className="text-2xl font-bold text-white mt-1">{activeProject.projectTitle}</h3>
               <p className="text-slate-400 text-sm mt-1">
-                Project Contact: {activeProject.name} {activeProject.role ? `— ${activeProject.role}` : ''}
+                Project Contact: 
+              {activeProject.name} {activeProject.role ? `— ${activeProject.role}` : ''}
               </p>
             </div>
 
@@ -219,7 +222,9 @@ export default function Testimonials() {
             {/* Description */}
             {activeProject.projectDescription && (
               <div className="mt-6 border-t border-slate-800/60 pt-4">
-                <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider">Project Description</h4>
+                <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider">
+                  Project Description
+                </h4>
                 <p className="text-slate-200 text-sm mt-2 font-medium leading-relaxed">
                   {activeProject.projectDescription}
                 </p>

@@ -84,9 +84,6 @@ const Buried = () => {
                          </div>
                        </section>
                        
-           
-        
-
             {/* SHARE SECTION */}
              <SocialShare title="Check out this product!" />
 
@@ -121,7 +118,7 @@ const Buried = () => {
             
             
                       {/* Contact Card */}
-                      <div 
+          <div 
               className="relative min-h-[240px] overflow-hidden rounded-2xl p-8 text-white shadow-md bg-cover bg-center bg-blend-multiply bg-blue-900/85"
               style={{ backgroundImage: "url('/assets/image/Our%20Products/quickalert.jpg')" }}
             >
@@ -141,7 +138,7 @@ const Buried = () => {
                   CONTACT US TODAY
                 </NavLink>
               </div>
-            </div>
+          </div>
             
                 </aside>
 

@@ -48,7 +48,7 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="flex flex-col items-center sm:items-start text-center sm:text-left space-y-4">
             <img src="/assets/image/Client Logo/logo.png" alt="Guard-All Logo" className="h-12 w-auto" />
-            <p className="text-gray-600 leading-relaxed text-lg max-w-sm">
+            <p className="text-gray-600 leading-relaxed text-xl max-w-sm">
               Guard-All is a leading electronic security systems integrator in the Philippines, 
               providing world-class, cost-effective solutions for commercial, industrial, governmental, 
               and residential clients.
@@ -57,7 +57,7 @@ const Footer = () => {
 
           {/* Company Links */}
           <div className="text-center sm:text-left">
-            <h3 className="text-blue-800 font-bold uppercase tracking-wider mb-6 text-lg">Company</h3>
+            <h3 className="text-blue-800 font-bold uppercase tracking-wider mb-6 text-xl">Company</h3>
             <ul className="space-y-3 text-gray-600">
               <li><Link to="/" className="hover:text-blue-600 transition-colors block py-1 sm:py-0 text-lg">Home</Link></li>
               <li><Link to="/who-we-are" className="hover:text-blue-600 transition-colors block py-1 sm:py-0 text-lg">Who We Are</Link></li>
@@ -69,7 +69,7 @@ const Footer = () => {
 
           {/* Contact Info - Live & Clickable */}
           <div className="text-center sm:text-left">
-            <h3 className="text-blue-800 font-bold uppercase tracking-wider mb-6 text-lg">Contact Us</h3>
+            <h3 className="text-blue-800 font-bold uppercase tracking-wider mb-6 text-xl">Contact Us</h3>
             <ul className="space-y-4 text-gray-600 inline-block sm:block text-left">
               {contactInfo.map((info) => {
                 const isPhone = info.type === "phone";
@@ -99,7 +99,7 @@ const Footer = () => {
           {/* Offices & Social - External Geolocation Hyperlinks */}
           <div className="flex flex-col items-center sm:items-start text-center sm:text-left space-y-6">
             <div>
-              <h3 className="text-blue-800 font-bold uppercase tracking-wider mb-4 text-lg">Offices</h3>
+              <h3 className="text-blue-800 font-bold uppercase tracking-wider mb-4 text-xl">Offices</h3>
               <div className="space-y-4 text-sm text-gray-600 inline-block sm:block text-left">
                 {offices.map((office) => (
                   <div key={office.id} className="flex gap-3">

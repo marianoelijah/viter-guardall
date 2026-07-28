@@ -39,6 +39,15 @@ const allowedOrigins = [
 ];
 
 app.use(cors({
+  origin: [
+    'http://localhost:5173', 
+    'http://localhost:3000', 
+    'https://viter-guardall.onrender.com'
+  ], // Add any frontend URLs here
+  credentials: true
+}));
+
+app.use(cors({
   origin: function (origin, callback) {
     // Allow requests with no origin (like mobile apps or server-to-server testing tools)
     if (!origin) return callback(null, true);
@@ -444,11 +453,26 @@ app.get('/api/testimonials', async (req, res) => {
 });
 
 // POST Contact Form Submission
+// app.post('/api/contact', async (req, res) => {
+//     const { name, email, subject, message } = req.body;
+//     try {
+//         const query = "INSERT INTO contact_inquiries (name, email, subject, message) VALUES (?, ?, ?, ?)";
+//         await db.query(query, [name, email, subject, message]);
+//         res.status(200).json({ message: "Inquiry received successfully." });
+//     } catch (err) {
+//         console.error("Contact Form Error:", err);
+//         res.status(500).json({ error: "Failed to process inquiry" });
+//     }
+// });
+
+// POST Contact Form Submission
 app.post('/api/contact', async (req, res) => {
     const { name, email, subject, message } = req.body;
     try {
-        const query = "INSERT INTO contact_inquiries (name, email, subject, message) VALUES (?, ?, ?, ?)";
+        // Pass 'new' into status column so Aiven MySQL won't reject it
+        const query = "INSERT INTO contact_inquiries (name, email, subject, message, status) VALUES (?, ?, ?, ?, 'new')";
         await db.query(query, [name, email, subject, message]);
+        
         res.status(200).json({ message: "Inquiry received successfully." });
     } catch (err) {
         console.error("Contact Form Error:", err);

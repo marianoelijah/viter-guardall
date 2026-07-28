@@ -21,7 +21,7 @@ const QuickAlert = () => {
   return (
     <div className="bg-gray-100 min-h-screen font-sans">
       {/* Header Banner */}
-      <header className="bg-blue-100 text-white text-center py-6 shadow-md">
+      <header className="bg-blue-200 text-white text-center py-6 shadow-md">
         <h1 className="text-4xl md:text-7xl text-[#2257a0] mb-6 drop-shadow-sm tracking-tight">
           QUICKALERT
         </h1>
@@ -63,10 +63,13 @@ const QuickAlert = () => {
                     <h2 className="text-red-600 font-bold mx-auto mb-5">
                       Standpoint
                     </h2>
-                    <p className="text-gray-700 text-xl leading-relaxed">
-                        Quick Alert is a full service Central Monitoring Station (CMS) devoted to monitoring a range of alarms including; intrusion, fire and panic alarms. QuickAlert is a wholly owned subsidiary of Guard-All Electronic Security Systems, Inc. QuickAlert uses state-of-the-art equipment to monitor our clients’ premises 24-hours a day nationwide from our headquarters in Makati.
+                    <p className="text-black text-xl leading-relaxed">
+                        Quick Alert is a full service Central Monitoring Station (CMS) devoted to monitoring a range of alarms including; 
+                        intrusion, fire and panic alarms. QuickAlert is a wholly owned subsidiary of Guard-All Electronic Security Systems, Inc. 
+                        QuickAlert uses state-of-the-art equipment to monitor our clients’ premises 24-hours a day 
+                        nationwide from our headquarters in Makati.
                     </p>
-                    <ul className="mt-4 space-y-1 text-lg text-gray-600 list-disc list-inside">
+                    <ul className="mt-4 space-y-1 text-lg text-black list-disc list-inside">
                        <li>Central Monitoring Station</li>
                        <li>Lifeline Ambulance Service</li>
                        <li>CMS Remote Video Monitoring</li>
