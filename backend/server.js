@@ -34,31 +34,37 @@ const allowedOrigins = [
   "http://localhost:5173", 
   "http://localhost:5174", // Added this to support your local dev environment!
   "https://guardall.vercel.app", 
-  "https://viter-guardall.vercel.app"
+  "https://viter-guardall.vercel.app",
+  'https://viter-guardall.onrender.com'
   // 💡 Add your exact live production Vercel URL below if it differs from these
 ];
 
 app.use(cors({
-  origin: [
-    'http://localhost:5173', 
-    'http://localhost:3000', 
-    'https://viter-guardall.onrender.com'
-  ], // Add any frontend URLs here
-  credentials: true
-}));
-
-app.use(cors({
   origin: function (origin, callback) {
-    // Allow requests with no origin (like mobile apps or server-to-server testing tools)
+    // Allow requests with no origin (like mobile apps, curl, or Postman)
     if (!origin) return callback(null, true);
-    if (allowedOrigins.indexOf(origin) === -1) {
-      const msg = `The CORS policy for this site does not allow access from the specified Origin: ${origin}`;
-      return callback(new Error(msg), false);
+    
+    if (allowedOrigins.indexOf(origin) !== -1 || process.env.NODE_ENV !== 'production') {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
     }
-    return callback(null, true);
   },
   credentials: true
 }));
+
+// app.use(cors({
+//   origin: function (origin, callback) {
+//     // Allow requests with no origin (like mobile apps or server-to-server testing tools)
+//     if (!origin) return callback(null, true);
+//     if (allowedOrigins.indexOf(origin) === -1) {
+//       const msg = `The CORS policy for this site does not allow access from the specified Origin: ${origin}`;
+//       return callback(new Error(msg), false);
+//     }
+//     return callback(null, true);
+//   },
+//   credentials: true
+// }));
 
 // --- Static Asset Serving ---
 // Original code in handling static assets for production
