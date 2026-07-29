@@ -58,13 +58,13 @@ export default function Testimonials() {
         
         {/* Header */}
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-sm font-semibold leading-7 text-blue-400 uppercase tracking-widest">
+          <h2 className="text-4xl font-semibold leading-7 text-blue-400 uppercase tracking-widest">
             Trusted Protection
           </h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-5xl">
             Client Case Studies & Proof of Work
           </p>
-          <p className="mt-4 text-base leading-7 text-slate-400">
+          <p className="mt-4 text-xl leading-7 text-slate-400">
             Click on any client card below to inspect project details, hardware setups, and deployment outcomes.
           </p>
         </div>
@@ -102,7 +102,7 @@ export default function Testimonials() {
               onClick={() => window.location.reload()} 
               className="mt-3 text-xs bg-red-900/50 hover:bg-red-800/60 text-red-200 px-3 py-1.5 rounded-lg border border-red-700/50 transition-colors"
             >
-              Retry
+              Not Responding, Please Try Again
             </button>
           </div>
         )}
@@ -110,7 +110,9 @@ export default function Testimonials() {
         {/* Empty State */}
         {!loading && !error && testimonials.length === 0 && (
           <div className="mt-12 text-center rounded-xl border border-dashed border-slate-800 p-12 max-w-lg mx-auto">
-            <p className="text-slate-400 text-sm">No project testimonials found in database.</p>
+            <p className="text-slate-400 text-sm">
+              No project testimonials found in database.
+            </p>
           </div>
         )}
 
