@@ -111,7 +111,7 @@ export default function Testimonials() {
         {!loading && !error && testimonials.length === 0 && (
           <div className="mt-12 text-center rounded-xl border border-dashed border-slate-800 p-12 max-w-lg mx-auto">
             <p className="text-slate-400 text-sm">
-              No project testimonials found in database.
+              No testimonials available at the moment. Please check back later.
             </p>
           </div>
         )}

@@ -38,7 +38,7 @@ const IntercomAccessControl = () => {
                 {productData.subtitle}
               </p>
 
-              <section className="mb-8">
+            <section className="mb-8">
               <h2 className="font-bold text-xl text-black mb-2">Product Description:</h2>
               <p className="text-[17px] text-gray-680 leading-relaxed whitespace-pre-line">
                 {productData.description}
