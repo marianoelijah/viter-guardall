@@ -1,29 +1,23 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import Header from '../../../partials/Header';
-import Footer from '../../../partials/Footer';
-import SocialShare from '../../Reusable/SocialShare';
+import Header from '../../../../partials/Header';
+import Footer from '../../../../partials/Footer';
+import SocialShare from '../../../Reusable/SocialShare';
 
 
 
-const FiberPatrol = () => {
-  const specs = [
-    { label: "Detection Range", value: "Up to 80 km (49.7 mi) per processor for fence/buried applications; up to 100 km for pipelines."},
-    { label: "Location Accuracy", value: "$\pm 4\text{ meters}$ ($13\text{ ft}$)."},
-    { label: "Channels", value: "Dual-channel processing (supports cut-immune ring configurations)."},
-    { label: "Detection Principle", value: "Phase-OTDR (Optical Time Domain Reflectometry) using a single-mode fiber." },
-    { label: "Cut-Immunity", value: "In a loop configuration, detection continues up to the point of a cable cut from both sides." },
-    { label: "Environmental", value: "Fiber is EMI/RFI and lightning immune; Processor operates at $0\text{°C}$ to $50\text{°C}$." },
-    { label: "Processor Hardware", value: "4U rack-mount unit, Windows 10 Pro 64-bit, Dual Hot-swappable Power Supplies." },
-    { label: "Power Consumption", value: "200W maximum." },
-    { label: "Integration", value: "Native integration with Senstar Symphony, plus TCP/IP, API, and optional Relay I/O." }
-  ];
-
+const FlexZone = () => {
+  
   const productFeatures = [
-    "Supports virtually all fence types",
-    "If sensor cable is cut, detection continues up to cut location",
-    "Full cut-immune configuration available",
-    "Reliably detects intrusions in the presence of non-localized environmental noise"
+    "Enhance your Existing Fence",
+    "Reduced Infrastructure Costs",
+    "Common Platform",
+    "Environmentally Derived Adaptive Processing Technology (EDAPT)",
+    "Networking and Integration",
+    "Gate Protection",
+    "Sensor Fusion Ready",
+    "Certification from the UK's National Protective Security Authority (NPSA)"
+
   ];
 
   return (
@@ -33,7 +27,7 @@ const FiberPatrol = () => {
       {/* Header Banner */}
       <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
         <h1 className="text-4xl md:text-5xl font-bold max-w-5xl mx-auto leading-tight">
-          FiberPatrol FP1150
+          FlexZone
         </h1>
       </header>
 
@@ -42,13 +36,15 @@ const FiberPatrol = () => {
         {/* Main Content Container */}
         <main className="lg:w-3/4 bg-gray-200 p-8 shadow-sm">
             <p className="text-gray-800 text-[17px] mb-6">
-               FiberPatrol FP1150 is a perimeter intrusion detection system that can be fence-mounted, buried, or deployed in a wall-top configuration. It can also be used to protect data conduits and buried pipelines. Advanced adaptive signal processing along with certified SMS/VMS integration options ensure the highest level of security and performance.
+               Locating Fence-Mounted Intrusion Detection Sensor
             </p>
 
             <section className="mb-8">
               <h2 className="font-bold text-xl mb-2 text-black">Product Description:</h2>
               <p className="text-gray-800 text-[17px] leading-relaxed">
-                FiberPatrol FP1150 builds upon Senstar’s 40 years of perimeter intrusion detection experience to offer a system that detects and reports both common and sophisticated intrusion attempts almost instantly. Unlike generic AI systems that require extensive training and may fail when presented with unseen intrusion data, FiberPatrol is designed with intelligence built-in, works out of the box, and offers the highest levels of performance and system confidence.
+                FlexZone detects and locates any attempt to cut, climb or otherwiaw break through the fence.
+                It accurately locates intrusions even when there are multiple simultaneous intrusions and
+                in the presence of background environmental noise.
               </p>
 
                <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
@@ -60,36 +56,38 @@ const FiberPatrol = () => {
 
             </section>
 
-            {/* Technical Specifications Table */}
-                       <section>
-                         <h2 className="font-bold text-xl text-black mb-4">Technical Specification:</h2>
-                         <div className="border border-gray-500 overflow-hidden">
-                           <table className="w-full text-left text-xs border-collapse">
-                             <tbody>
-                               {specs.map((item, idx) => (
-                                 <React.Fragment key={idx}>
-                                   {item.type === 'header' ? (
-                                     <tr className="bg-gray-200">
-                                       <th colSpan="2" className="p-2 border-b border-gray-500 text-[15px] text-black font-bold uppercase tracking-wider">
-                                         {item.label}
-                                       </th>
-                                     </tr>
-                                   ) : (
-                                     <tr className={idx % 2 === 0 ? 'bg-gray-100' : 'bg-gray-50'}>
-                                       <td className="p-3 border-b border-r border-gray-500 font-bold w-1/3 text-[15px] text-black bg-gray-50/50">
-                                         {item.label}
-                                       </td>
-                                       <td className="p-3 border-b border-gray-500 text-gray-800 whitespace-pre-line text-[15px] hover:bg-slate-50/50 transition-colors">
-                                         {item.value}
-                                       </td>
-                                     </tr>
-                                   )}
-                                 </React.Fragment>
-                               ))}
-                             </tbody>
-                           </table>
-                         </div>
-                       </section>
+            {/* Technical Specifications*/}
+                  <div className="bg-gray-300 p-6 shadow rounded border border-r divine-y">
+            <h2 className="font-semibold text-black text-xl mb-4">Technical Specification</h2>
+
+            <table className="border text-[15px] w-full">
+              <tbody>
+                <tr className="bg-gray-300 font-bold w-1/2">
+                  <td colSpan="5" className="border-r border-black border p-2 text-black">
+                   
+                  </td>
+                  
+                </tr> 
+                <tr className="bg-gray-300 font-bold">
+                  <td colSpan="5" className="border border-r border-black p-2 ">
+                    
+                  </td>
+                </tr>
+                
+                <tr className="bg-gray-300 font-bold">
+                  <td colSpan="5" className="border border-r border-black p-2 ">
+                   
+                  </td>
+                </tr> 
+                 <tr className="bg-gray-300 font-bold">
+                  <td colSpan="5" className="border border-r border-black p-2 ">
+                   
+                  </td>
+                </tr> 
+              </tbody>
+            </table>
+
+             </div>     
                        
 
             {/* SHARE SECTION */}
@@ -97,7 +95,7 @@ const FiberPatrol = () => {
 
         </main>
 
-          {/* Sidebar */}
+           {/* Sidebar */}
               <aside className="lg:w-1/4 space-y-6"> 
                      <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
                         <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By SENSTAR</h3>
@@ -125,8 +123,8 @@ const FiberPatrol = () => {
                       
             
             
-                      {/* Contact Card */}
-                    <div 
+            {/* Contact Card */}
+                     <div 
               className="relative min-h-[240px] overflow-hidden rounded-2xl p-8 text-white shadow-md bg-cover bg-center bg-blend-multiply bg-blue-900/85"
               style={{ backgroundImage: "url('/assets/image/Our%20Products/quickalert.jpg')" }}
             >
@@ -146,11 +144,9 @@ const FiberPatrol = () => {
                   CONTACT US TODAY
                 </NavLink>
               </div>
-            </div>
+                      </div>
             
-                </aside>
-
-         
+              </aside>
 
         </div>
     </div>
@@ -160,4 +156,4 @@ const FiberPatrol = () => {
   );
 };
 
-export default FiberPatrol;
+export default FlexZone;

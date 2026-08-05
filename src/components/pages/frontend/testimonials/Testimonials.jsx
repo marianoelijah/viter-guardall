@@ -58,14 +58,22 @@ export default function Testimonials() {
         
         {/* Header */}
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-4xl font-semibold leading-7 text-blue-400 uppercase tracking-widest">
-            Trusted Protection
+          <h2 className="text-2xl font-semibold leading-7 text-blue-400 uppercase tracking-widest">
+            Trusted by Clients, Proven by Results
           </h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-5xl">
-            Client Case Studies & Proof of Work
+          <p className="mt-2 text-2xl font-bold tracking-tight text-white sm:text-5xl">
+             Client Case Studies & <br/>
+              Testimonials
           </p>
           <p className="mt-4 text-xl leading-7 text-slate-400">
-            Click on any client card below to inspect project details, hardware setups, and deployment outcomes.
+            Click on any client card below to inspect project details, 
+            hardware setups, and deployment outcomes.
+          </p>
+          <p>
+            <span className="text-sm text-slate-500">
+              Note: Some images may be hosted on Google Drive. If you encounter any issues, <br/>
+                   please contact us for assistance or alternative access to the project visuals.
+            </span>
           </p>
         </div>
 

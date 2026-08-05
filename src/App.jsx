@@ -343,15 +343,11 @@ import Cochrane from "./components/pages/frontend/OurProducts/product extend/Coc
 import Razor from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Razor";
 import Vehicle from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Vehicle";
 import Floating from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Floating";
-import Fence from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Fence";
-import Buried from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Buried";
+
 import Zx8 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/Zx8";
 import ShutterBarrier from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/ShutterBarrier";
 import ClearVu from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/ClearVu";
-import FiberPatrol from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/FiberPatrol";
-import SenstarLM100 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/SenstarLM100";
-import FiberPatrolFP400 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/FiberPatrolFP400";
-import SmartLidar from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/SmartLidar";
+
 import PNMC16013RVQ from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hanwha/PNMC16013RVQ";
 import PNM9085RQZ1 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hanwha/PNM9085RQZ1";
 import PNMC34404RQPZ from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hanwha/PNMC34404RQPZ";
@@ -388,6 +384,14 @@ import N43CL62 from "./components/pages/frontend/OurProducts/Honeywell Product-I
 import N22AL12 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/N22AL12";
 import N43CF6Z from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/N43CF6Z";
 import N43BX8Z from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/N43BX8Z";
+import AdminDashboard from "./components/Admin/AdminDashboard";
+import ProtectedRoute from "./components/Admin/ProtectedRoute";
+import AdminLogin from "./components/Admin/AdminLogin";
+import FiberPatrol from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Fence-Sensors/FiberPatrol";
+import Fence from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Fence-Sensors/Fence";
+import SenstarLM100 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Fence-Sensors/SenstarLM100";
+import FiberPatrolFP400 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Fence-Sensors/FiberPatrolFP400";
+import FlexZone from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Fence-Sensors/FlexZone";
 
 
 
@@ -409,6 +413,7 @@ const App = () => {
       <StoreProvider>
         <Router>
           <Routes>
+            {/* Public Website Routes */}
             <Route path="/" element={<Home />} />
             <Route path="/who-we-are" element={<WhoWeArePage />} />
             <Route path="/our-products" element={<OurProductsPage />} />
@@ -423,7 +428,17 @@ const App = () => {
             <Route path="/testimonials" element={<TestimonialPage />} />
             <Route path="/contacts" element={<OurContacts />} />
 
-            {/* Product Brand Section */}
+            {/* Admin Panel Route */}
+           <Route path="/admin-panel" element={<AdminPanel/>} />
+           <Route path="/admin/login" element={<AdminLogin />} />
+
+           {/* Admin Protected Routes */}
+           <Route element={<ProtectedRoute />}>
+              <Route path="/admin/dashboard" element={<AdminDashboard />} />
+           </Route>
+
+
+          {/* Product Brand Section */}
             {/* Access Control System */}
             <Route path="/products/honeywell" element={<HoneywellPage />} />
             <Route path="/products/hirsch" element={<HirschPage />} />
@@ -677,9 +692,6 @@ const App = () => {
              <Route path="/our-products/dahua/n43bx8z" element={<N43BX8Z />} />
 
 
-
-
-
               {/* Hanwha-Vision Product Details Route */}
               <Route path="/our-products/hanwha/PNMC16013RVQ" element={<PNMC16013RVQ/>} />
               <Route path="/our-products/hanwha/PNM9085RQZ1" element={<PNM9085RQZ1/>} />
@@ -688,8 +700,6 @@ const App = () => {
               <Route path="/our-products/hanwha/XNP9300RW" element={<XNP9300RW/>} />
               <Route path="/our-products/hanwha/XNVA8084RS" element={<XNVA8084RS/>} />
               
-
-
 
              {/* Gilardoni Product Details Route */}
              <Route path="/our-products/gilardoni/cargo" element={<Cargo/>} />
@@ -870,11 +880,16 @@ const App = () => {
 
             {/* Senstar Product Details Route */}
             <Route path="/products/senstar" element={<Senstar/>} />
-            <Route path="/our-products/senstar/fence-sensor" element={<Fence/>} />
+
+            {/* Fence Sensors Product Details Route */}
+            <Route path="/our-products/senstar/fence-sensors/fence" element={<Fence/>} />
+            <Route path="/our-products/senstar/fence-sensors/fiber-patrol" element={<FiberPatrol/>} />
+            <Route path="/our-products/senstar/fence-sensors/senstar-lm100" element={<SenstarLM100/>} />
+            <Route path="/our-products/senstar/fence-sensors/fiberpatrol-fp400" element={<FiberPatrolFP400/>} />
+            <Route path="/our-products/senstar/fence-sensors/flexzone" element={<FlexZone/>} />
+
+            {/* Buried Sensors Product Details Route */}
             <Route path="/our-products/senstar/buried-sensor" element={<Buried/>} />
-            <Route path="/our-products/senstar/fiber-patrol" element={<FiberPatrol/>} />
-            <Route path="/our-products/senstar/senstar-lm100" element={<SenstarLM100/>} />
-            <Route path="/our-products/senstar/fiberpatrol-fp400" element={<FiberPatrolFP400/>} />
             <Route path="/our-products/senstar/smart3d-lidar" element={<SmartLidar/>} />
 
             {/* Deantas Product Details Route */}
@@ -904,9 +919,6 @@ const App = () => {
             <Route path="/our-products/dnake/wireless-doorbell" element={<WirelessDoorbell/>} />
             
 
-
-            {/* Admin Panel Route */}
-            <Route path="/admin" element={<AdminPanel/>} />
 
           </Routes>
         </Router>

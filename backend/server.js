@@ -5,9 +5,12 @@ import db from "./config/db.js";
 import path from 'path';
 import { fileURLToPath } from 'url';
 
+
 // Route Imports
 import productRoutes from "./routes/productRoutes.js";
 import productsRouter from "./routes/products.js";
+import adminRoutes from './routes/adminRoutes.js';
+import inquiryRoutes from './routes/inquiryRoutes.js';
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -17,7 +20,17 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // --- Middlewares ---
+app.use(cors());
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use('/api/admin', adminRoutes);
+app.use('/api/inquiries', inquiryRoutes);
+
+// Middleware to attach pool to every incoming request
+app.use((req, res, next) => {
+  req.db = db;
+  next();
+});
 
 // Dynamic CORS Configuration
 const allowedOrigins = [
@@ -27,6 +40,14 @@ const allowedOrigins = [
   "https://viter-guardall.vercel.app",
   "https://viter-guardall.onrender.com",
 ];
+
+// 2. Enable CORS for local dev & production
+app.use(cors({
+  origin: ['http://localhost:5173', 'http://127.0.0.1:5173', 'https://viter-guardall.vercel.app'],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 app.use(
   cors({
@@ -76,6 +97,8 @@ console.log("   -> Fallback:", distAssetsPath);
 // --- Mount Imported Router Files ---
 app.use("/api/products-legacy", productRoutes);
 app.use("/api/products-main", productsRouter);
+app.use('/api/inquiries', inquiryRoutes);
+app.use('/api/admin', adminRoutes);
 
 // --- Primary API Routes ---
 

@@ -1,22 +1,29 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import Header from '../../../partials/Header';
-import Footer from '../../../partials/Footer';
-import SocialShare from '../../Reusable/SocialShare';
+import Header from '../../../../partials/Header';
+import Footer from '../../../../partials/Footer';
+import SocialShare from '../../../Reusable/SocialShare';
 
 
 
-const Buried = () => {
+const FiberPatrol = () => {
   const specs = [
-    { label: "Detection Principle", value: "Volumetric (Electromagnetic/Radio Frequency)"},
-    { label: "Location Accuracy", value: "$\pm$ 1m (3.3 ft)"},
-    { label: "Max Range per Processor", value: "800m (2,625 ft) (400m per side)"},
-    { label: "Detection Field Size", value: "Typically 1m high x 3m wide" },
-    { label: "Software Zones", value: "Up to 50 distinct zones per processor" },
-    { label: "Probability of Detection (Pd)", value: "99% for a 35kg (77 lb) upright human" },
-    { label: "Operating Temp", value: "-40°C to 70°C" },
-    { label: "Power Consumption", value: "9W (12 to 48 VDC)" },
-    { label: "Enclosure Rating", value: "IP66 / NEMA 4X (Aluminum)" }
+    { label: "Detection Range", value: "Up to 80 km (49.7 mi) per processor for fence/buried applications; up to 100 km for pipelines."},
+    { label: "Location Accuracy", value: "$\pm 4\text{ meters}$ ($13\text{ ft}$)."},
+    { label: "Channels", value: "Dual-channel processing (supports cut-immune ring configurations)."},
+    { label: "Detection Principle", value: "Phase-OTDR (Optical Time Domain Reflectometry) using a single-mode fiber." },
+    { label: "Cut-Immunity", value: "In a loop configuration, detection continues up to the point of a cable cut from both sides." },
+    { label: "Environmental", value: "Fiber is EMI/RFI and lightning immune; Processor operates at $0\text{°C}$ to $50\text{°C}$." },
+    { label: "Processor Hardware", value: "4U rack-mount unit, Windows 10 Pro 64-bit, Dual Hot-swappable Power Supplies." },
+    { label: "Power Consumption", value: "200W maximum." },
+    { label: "Integration", value: "Native integration with Senstar Symphony, plus TCP/IP, API, and optional Relay I/O." }
+  ];
+
+  const productFeatures = [
+    "Supports virtually all fence types",
+    "If sensor cable is cut, detection continues up to cut location",
+    "Full cut-immune configuration available",
+    "Reliably detects intrusions in the presence of non-localized environmental noise"
   ];
 
   return (
@@ -25,8 +32,8 @@ const Buried = () => {
      <div className="bg-slate-50 min-h-screen font-sans">
       {/* Header Banner */}
       <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
-        <h1 className="text-5xl md:text-5xl font-bold max-w-5xl mx-auto leading-tight">
-          Buried Sensors
+        <h1 className="text-4xl md:text-5xl font-bold max-w-5xl mx-auto leading-tight">
+          FiberPatrol FP1150
         </h1>
       </header>
 
@@ -35,21 +42,21 @@ const Buried = () => {
         {/* Main Content Container */}
         <main className="lg:w-3/4 bg-gray-200 p-8 shadow-sm">
             <p className="text-gray-800 text-[17px] mb-6">
-                The Buried Sensor is a high-security perimeter protection system designed to provide an effective physical barrier against unauthorized access. It features a robust construction with sharp blades that can deter and prevent intruders from breaching the perimeter. The Buried Sensor is commonly used in various applications, including industrial facilities, correctional institutions, military installations, and critical infrastructure sites, where enhanced security measures are required to safeguard against potential threats.
+               FiberPatrol FP1150 is a perimeter intrusion detection system that can be fence-mounted, buried, or deployed in a wall-top configuration. It can also be used to protect data conduits and buried pipelines. Advanced adaptive signal processing along with certified SMS/VMS integration options ensure the highest level of security and performance.
             </p>
 
             <section className="mb-8">
               <h2 className="font-bold text-xl mb-2 text-black">Product Description:</h2>
               <p className="text-gray-800 text-[17px] leading-relaxed">
-                The Buried Sensor is engineered to provide a formidable physical deterrent against unauthorized access. 
-                It consists of a series of sharp blades that are strategically positioned to create a barrier that 
-                is difficult to climb over or cut through. The blades are typically made of high-quality steel and are
-                designed to withstand harsh weather conditions and resist tampering. The Buried Sensor can be installed
-                on top of existing Burieds, walls, or other structures, enhancing the overall security of the perimeter. 
-                It is commonly used in high-security environments where preventing unauthorized entry is crucial, 
-                such as industrial facilities, correctional institutions, military installations, and critical infrastructure 
-                sites.
+                FiberPatrol FP1150 builds upon Senstar’s 40 years of perimeter intrusion detection experience to offer a system that detects and reports both common and sophisticated intrusion attempts almost instantly. Unlike generic AI systems that require extensive training and may fail when presented with unseen intrusion data, FiberPatrol is designed with intelligence built-in, works out of the box, and offers the highest levels of performance and system confidence.
               </p>
+
+               <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
+            <ul className="list-disc ml-5 text-[17px] space-y-1 text-black">
+              {productFeatures.map((feature, index) => (
+                <li key={index}>{feature}</li>
+              ))}
+            </ul>
 
             </section>
 
@@ -84,6 +91,7 @@ const Buried = () => {
                          </div>
                        </section>
                        
+
             {/* SHARE SECTION */}
              <SocialShare title="Check out this product!" />
 
@@ -118,7 +126,7 @@ const Buried = () => {
             
             
                       {/* Contact Card */}
-          <div 
+                    <div 
               className="relative min-h-[240px] overflow-hidden rounded-2xl p-8 text-white shadow-md bg-cover bg-center bg-blend-multiply bg-blue-900/85"
               style={{ backgroundImage: "url('/assets/image/Our%20Products/quickalert.jpg')" }}
             >
@@ -138,7 +146,7 @@ const Buried = () => {
                   CONTACT US TODAY
                 </NavLink>
               </div>
-          </div>
+            </div>
             
                 </aside>
 
@@ -152,4 +160,4 @@ const Buried = () => {
   );
 };
 
-export default Buried;
+export default FiberPatrol;

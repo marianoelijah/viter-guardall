@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from '../../../partials/Header';
-import Footer from '../../../partials/Footer';
+import Header from '../../../../partials/Header';
+import Footer from '../../../../partials/Footer';
 import { NavLink } from 'react-router-dom';
-import SocialShare from '../../Reusable/SocialShare';
+import SocialShare from '../../../Reusable/SocialShare';
 
 
 // Shared Layout Component to maintain design consistency across all products
