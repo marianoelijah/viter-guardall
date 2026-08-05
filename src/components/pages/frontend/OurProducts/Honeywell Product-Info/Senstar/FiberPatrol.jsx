@@ -7,17 +7,7 @@ import SocialShare from '../../Reusable/SocialShare';
 
 
 const FiberPatrol = () => {
-  const specs = [
-    { label: "Detection Range", value: "Up to 80 km (49.7 mi) per processor for fence/buried applications; up to 100 km for pipelines."},
-    { label: "Location Accuracy", value: "$\pm 4\text{ meters}$ ($13\text{ ft}$)."},
-    { label: "Channels", value: "Dual-channel processing (supports cut-immune ring configurations)."},
-    { label: "Detection Principle", value: "Phase-OTDR (Optical Time Domain Reflectometry) using a single-mode fiber." },
-    { label: "Cut-Immunity", value: "In a loop configuration, detection continues up to the point of a cable cut from both sides." },
-    { label: "Environmental", value: "Fiber is EMI/RFI and lightning immune; Processor operates at $0\text{°C}$ to $50\text{°C}$." },
-    { label: "Processor Hardware", value: "4U rack-mount unit, Windows 10 Pro 64-bit, Dual Hot-swappable Power Supplies." },
-    { label: "Power Consumption", value: "200W maximum." },
-    { label: "Integration", value: "Native integration with Senstar Symphony, plus TCP/IP, API, and optional Relay I/O." }
-  ];
+  
 
   const productFeatures = [
     "Supports virtually all fence types",
@@ -42,7 +32,10 @@ const FiberPatrol = () => {
         {/* Main Content Container */}
         <main className="lg:w-3/4 bg-gray-200 p-8 shadow-sm">
             <p className="text-gray-800 text-[17px] mb-6">
-               FiberPatrol FP1150 is a perimeter intrusion detection system that can be fence-mounted, buried, or deployed in a wall-top configuration. It can also be used to protect data conduits and buried pipelines. Advanced adaptive signal processing along with certified SMS/VMS integration options ensure the highest level of security and performance.
+               FiberPatrol FP1150 is a perimeter intrusion detection system that can be fence-mounted, 
+               buried, or deployed in a wall-top configuration. It can also be used to protect data conduits 
+               and buried pipelines. Advanced adaptive signal processing along with certified SMS/VMS 
+               integration options ensure the highest level of security and performance.
             </p>
 
             <section className="mb-8">
@@ -61,35 +54,101 @@ const FiberPatrol = () => {
             </section>
 
             {/* Technical Specifications Table */}
-                       <section>
-                         <h2 className="font-bold text-xl text-black mb-4">Technical Specification:</h2>
-                         <div className="border border-gray-500 overflow-hidden">
-                           <table className="w-full text-left text-xs border-collapse">
-                             <tbody>
-                               {specs.map((item, idx) => (
-                                 <React.Fragment key={idx}>
-                                   {item.type === 'header' ? (
-                                     <tr className="bg-gray-200">
-                                       <th colSpan="2" className="p-2 border-b border-gray-500 text-[15px] text-black font-bold uppercase tracking-wider">
-                                         {item.label}
-                                       </th>
-                                     </tr>
-                                   ) : (
-                                     <tr className={idx % 2 === 0 ? 'bg-gray-100' : 'bg-gray-50'}>
-                                       <td className="p-3 border-b border-r border-gray-500 font-bold w-1/3 text-[15px] text-black bg-gray-50/50">
-                                         {item.label}
-                                       </td>
-                                       <td className="p-3 border-b border-gray-500 text-gray-800 whitespace-pre-line text-[15px] hover:bg-slate-50/50 transition-colors">
-                                         {item.value}
-                                       </td>
-                                     </tr>
-                                   )}
-                                 </React.Fragment>
-                               ))}
-                             </tbody>
-                           </table>
-                         </div>
-                       </section>
+              <div className="bg-gray-300 p-6 shadow rounded border border-r divine-y">
+            <h2 className="font-semibold text-black text-xl mb-4">Reliable Performance</h2>
+
+            <table className="border text-[17px] w-full">
+              <tbody>
+                <tr className="bg-gray-300 font-bold w-1/2">
+                  <td colSpan="5" className="border-r border-black border p-2 text-black">
+                   Detection Capabilities:
+                  </td>
+                </tr> 
+                <tr className="bg-gray-300 font-bold w-1/2">
+                  <td colSpan="5" className="border-r border-black border p-2 text-gray-700">
+                   Detects and locates perimeter intrusions over distances of up to 80 km (49.7 ml) per processor
+                  </td>
+                </tr> 
+                <tr className="bg-gray-300 font-bold">
+                  <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
+                      Pinpoints intrusions with a +/-4 m (13 ft) accuracy
+                  </td>
+                </tr>
+                <tr className="bg-gray-300 font-bold">
+                  <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
+                    Flexible, software-based zoning
+                  </td>
+                </tr> 
+                 <tr className="bg-gray-300 font-bold">
+                  <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
+                      Accurately detects and locates multiple simultaneous intrusions
+                  </td>
+                </tr> 
+                 <tr className="bg-gray-300 font-bold">
+                  <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
+                      Reports alarms by zone number, cable distance and/or GPS coordinates
+                  </td>
+                </tr> 
+
+                <tr className="bg-gray-300 font-bold w-1/2">
+                  <td colSpan="5" className="border-r border-black border p-2 text-black">
+                    Performance Features:
+                  </td>
+                </tr> 
+                <tr className="bg-gray-300 font-bold">
+                  <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
+                   Supports virtually all fence types
+                  </td>
+                </tr>
+                <tr className="bg-gray-300 font-bold">
+                  <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
+                   Is sensors cable is cuts, detection continues up to cut location
+                  </td>
+                </tr> 
+                <tr className="bg-gray-300 font-bold">
+                  <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
+                    Full cut-immune configuration available
+                  </td>
+                </tr> 
+                <tr className="bg-gray-300 font-bold">
+                  <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
+                    Reliably detects intrusions in the presence of non-localized environmental noise
+                  </td>
+                </tr> 
+
+                <tr className="bg-gray-300 font-bold w-1/2">
+                  <td colSpan="5" className="border-r border-black border p-2 text-black">
+                    Fiber Optic Benefits:
+                  </td>
+                </tr> 
+                <tr className="bg-gray-300 font-bold">
+                  <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
+                    No powered or conductive items required in the field
+                  </td>
+                </tr> 
+                <tr className="bg-gray-300 font-bold">
+                  <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
+                    Immune to EMI and lightning, intrinsically safe in explosive atmospheres
+                  </td>
+                </tr> 
+                <tr className="bg-gray-300 font-bold">
+                  <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
+                    Long sensor cable service life (25+ years)
+                  </td>
+                </tr> 
+                <tr className="bg-gray-300 font-bold">
+                  <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
+                    Unused fibers can be reused for other applications
+                  </td>
+                </tr> 
+                <tr className="bg-gray-300 font-bold">
+                  <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
+                   Possible to use sensor cable with fire ratings such as LSZH, fire retardant and fire resistant.
+                  </td>
+                </tr> 
+              </tbody>
+            </table>
+          </div> 
                        
 
             {/* SHARE SECTION */}

@@ -56,7 +56,7 @@ const FlexZone = () => {
 
             {/* Technical Specifications*/}
           <div className="bg-gray-300 p-6 shadow rounded border border-r divine-y">
-            <h2 className="font-semibold text-black text-xl mb-4">Technical Specifications</h2>
+            <h2 className="font-semibold text-black text-xl mb-4">Reliable Performance:</h2>
 
             <table className="border text-[17px] w-full">
               <tbody>
