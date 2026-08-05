@@ -387,11 +387,12 @@ import N43BX8Z from "./components/pages/frontend/OurProducts/Honeywell Product-I
 import AdminDashboard from "./components/Admin/AdminDashboard";
 import ProtectedRoute from "./components/Admin/ProtectedRoute";
 import AdminLogin from "./components/Admin/AdminLogin";
-import FiberPatrol from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Fence-Sensors/FiberPatrol";
-import Fence from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Fence-Sensors/Fence";
-import SenstarLM100 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Fence-Sensors/SenstarLM100";
-import FiberPatrolFP400 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Fence-Sensors/FiberPatrolFP400";
-import FlexZone from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Fence-Sensors/FlexZone";
+import Fence from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Fence";
+import FiberPatrol from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/FiberPatrol";
+import SenstarLM100 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/SenstarLM100";
+import FiberPatrolFP400 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/FiberPatrolFP400";
+import FlexZone from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/FlexZone";
+
 
 
 
@@ -882,11 +883,11 @@ const App = () => {
             <Route path="/products/senstar" element={<Senstar/>} />
 
             {/* Fence Sensors Product Details Route */}
-            <Route path="/our-products/senstar/fence-sensors/fence" element={<Fence/>} />
-            <Route path="/our-products/senstar/fence-sensors/fiber-patrol" element={<FiberPatrol/>} />
-            <Route path="/our-products/senstar/fence-sensors/senstar-lm100" element={<SenstarLM100/>} />
-            <Route path="/our-products/senstar/fence-sensors/fiberpatrol-fp400" element={<FiberPatrolFP400/>} />
-            <Route path="/our-products/senstar/fence-sensors/flexzone" element={<FlexZone/>} />
+            <Route path="/our-products/senstar/fence" element={<Fence/>} />
+            <Route path="/our-products/senstar/fiber-patrol" element={<FiberPatrol/>} />
+            <Route path="/our-products/senstar/senstar-lm100" element={<SenstarLM100/>} />
+            <Route path="/our-products/senstar/fiberpatrol-fp400" element={<FiberPatrolFP400/>} />
+            <Route path="/our-products/senstar/flexzone" element={<FlexZone/>} />
 
             {/* Buried Sensors Product Details Route */}
             <Route path="/our-products/senstar/buried-sensor" element={<Buried/>} />
