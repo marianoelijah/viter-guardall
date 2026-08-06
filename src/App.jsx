@@ -387,14 +387,21 @@ import N43BX8Z from "./components/pages/frontend/OurProducts/Honeywell Product-I
 import AdminDashboard from "./components/Admin/AdminDashboard";
 import ProtectedRoute from "./components/Admin/ProtectedRoute";
 import AdminLogin from "./components/Admin/AdminLogin";
-import Fence from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Fence";
-import FiberPatrol from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/FiberPatrol";
-import SenstarLM100 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/SenstarLM100";
-import FiberPatrolFP400 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/FiberPatrolFP400";
-import FlexZone from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/FlexZone";
-import Buried from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Buried";
-import SmartLidar from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/SmartLidar";
-import OmniTrax from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/OmniTrax";
+
+
+import Fence from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Fence Sensor/Fence";
+import FiberPatrol from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Fence Sensor/FiberPatrol";
+import SenstarLM100 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Fence Sensor/SenstarLM100";
+import FiberPatrolFP400 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Fence Sensor/FiberPatrolFP400";
+import FlexZone from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Fence Sensor/FlexZone";
+import SmartLidar from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/LiDAR/SmartLidar";
+import Buried from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Buried Sensor/Buried";
+import OmniTrax from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Buried Sensor/OmniTrax";
+import SenstarMultisensor from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Multi Sensor/SenstarMultisensor";
+import Ultrawave from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Above Ground/UltraWave";
+import DataConduit from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Buried Sensor/DataConduit";
+import PipelineTPI from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Buried Sensor/PipelineTPI";
+
 
 
 
@@ -884,18 +891,29 @@ const App = () => {
 
             {/* Senstar Product Details Route */}
             <Route path="/products/senstar" element={<Senstar/>} />
-
+            
             {/* Fence Sensors Product Details Route */}
-            <Route path="/our-products/senstar/fence-sensor" element={<Fence/>} />
-            <Route path="/our-products/senstar/fiber-patrol" element={<FiberPatrol/>} />
-            <Route path="/our-products/senstar/senstar-lm100" element={<SenstarLM100/>} />
-            <Route path="/our-products/senstar/fiberpatrol-fp400" element={<FiberPatrolFP400/>} />
-            <Route path="/our-products/senstar/flexzone" element={<FlexZone/>} />
+            <Route path="/our-products/senstar/fence-sensor/fence" element={<Fence/>} />
+            <Route path="/our-products/senstar/fence-sensor/fiber-patrol" element={<FiberPatrol/>} />
+            <Route path="/our-products/senstar/fence-sensor/senstar-lm100" element={<SenstarLM100/>} />
+            <Route path="/our-products/senstar/fence-sensor/fiberpatrol-fp400" element={<FiberPatrolFP400/>} />
+            <Route path="/our-products/senstar/fence-sensor/flexzone" element={<FlexZone/>} />
+
+            {/* MultiSensor Details Route */}
+            <Route path="/our-products/senstar/multi-sensor/senstar-multi-sensor" element={<SenstarMultisensor/>} />
 
             {/* Buried Sensors Product Details Route */}
-            <Route path="/our-products/senstar/buried-sensor" element={<Buried/>} />
-            <Route path="/our-products/senstar/smart3d-lidar" element={<SmartLidar/>} />
-            <Route path="/our-products/senstar/omnitrax" element={<OmniTrax/>} />
+            <Route path="/our-products/senstar/buried-sensor/buried" element={<Buried/>} />
+            <Route path="/our-products/senstar/buried-sensor/omnitrax" element={<OmniTrax/>} />
+            <Route path="/our-products/senstar/buried-sensor/data-conduit-protection" element={<DataConduit/>} />
+            <Route path="/our-products/senstar/buried-sensor/pipeline-tpi-detection" element={<PipelineTPI/>} />
+
+            {/* LiDAR Sensors Details Route */}
+            <Route path="/our-products/senstar/lidar/smart3d-lidar" element={<SmartLidar/>} />
+
+            {/* Above-Ground Sensor Details Route */}
+            <Route path="/our-products/senstar/above-ground/ultrawave" element={<Ultrawave/>} />
+
 
             {/* Deantas Product Details Route */}
              <Route path="/products/deantas" element={<Deantas/>} />

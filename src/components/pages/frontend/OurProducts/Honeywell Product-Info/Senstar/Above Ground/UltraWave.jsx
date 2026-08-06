@@ -1,22 +1,22 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import Header from '../../../partials/Header';
-import Footer from '../../../partials/Footer';
-import SocialShare from '../../Reusable/SocialShare';
+import Header from '../../../../partials/Header';
+import Footer from '../../../../partials/Footer';
+import SocialShare from '../../../Reusable/SocialShare';
 
 
 
-const FlexZone = () => {
+const Ultrawave = () => {
   
   const productFeatures = [
-    "Enhance your Existing Fence",
-    "Reduced Infrastructure Costs",
-    "Common Platform",
-    "Environmentally Derived Adaptive Processing Technology (EDAPT)",
-    "Networking and Integration",
-    "Gate Protection",
-    "Sensor Fusion Ready",
-    "Certification from the UK's National Protective Security Authority (NPSA)"
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
   ];
 
   return (
@@ -26,7 +26,7 @@ const FlexZone = () => {
       {/* Header Banner */}
       <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
         <h1 className="text-4xl md:text-5xl font-bold max-w-5xl mx-auto leading-tight">
-          FlexZone
+          Ultrawave
         </h1>
       </header>
 
@@ -35,15 +35,13 @@ const FlexZone = () => {
         {/* Main Content Container */}
         <main className="lg:w-3/4 bg-gray-200 p-8 shadow-sm">
             <p className="text-gray-800 text-[17px] mb-6">
-               Locating Fence-Mounted Intrusion Detection Sensor
+               
             </p>
 
             <section className="mb-8">
               <h2 className="font-bold text-xl mb-2 text-black">Product Description:</h2>
               <p className="text-gray-800 text-[17px] leading-relaxed">
-                FlexZone detects and locates any attempt to cut, climb or otherwiaw break through the fence.
-                It accurately locates intrusions even when there are multiple simultaneous intrusions and
-                in the presence of background environmental noise.
+                
               </p>
 
                <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
@@ -62,71 +60,69 @@ const FlexZone = () => {
               <tbody>
                 <tr className="bg-gray-300 font-bold w-1/2">
                   <td colSpan="5" className="border-r border-black border p-2 text-black">
-                   Detection Capabilities:
+                   
                   </td>
                 </tr> 
                 <tr className="bg-gray-300 font-bold w-1/2">
                   <td colSpan="5" className="border-r border-black border p-2 text-gray-700">
-                   Detects and locates perimeter intrusions over distances of up to 600 m (1968ft) per processor
+                   
                   </td>
                 </tr> 
                 <tr className="bg-gray-300 font-bold">
                   <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
-                    Pinpoints intrusions with +3 m (+10 ft) accuracy
+                    
                   </td>
                 </tr>
                 <tr className="bg-gray-300 font-bold">
                   <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
-                   Flexible, software based zoning (up to 60 distinct zones per processor)
+                   
                   </td>
                 </tr> 
                  <tr className="bg-gray-300 font-bold">
                   <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
-                   Sensor Fusion Engine ready
+                  
                   </td>
                 </tr> 
 
                 <tr className="bg-gray-300 font-bold w-1/2">
                   <td colSpan="5" className="border-r border-black border p-2 text-black">
-                    Performance Features:
+                    
                   </td>
                 </tr> 
                 <tr className="bg-gray-300 font-bold">
                   <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
-                   Accurately locates intrusions even when there are multiple simultaneous intrusion
-                   and in the presence of background environmental noise
+                  
                   </td>
                 </tr>
                 <tr className="bg-gray-300 font-bold">
                   <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
-                   Differentiates between point disturbances caused by real intrusions and spatially distributed
-                   disturbances such as wind and rain
+                  
                   </td>
                 </tr> 
                 <tr className="bg-gray-300 font-bold">
                   <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
-                    Continues protection even in the event of a cable cut
+                   
                   </td>
                 </tr> 
 
                 <tr className="bg-gray-300 font-bold w-1/2">
                   <td colSpan="5" className="border-r border-black border p-2 text-black">
-                    Easy and Affordable:
+                   
                   </td>
                 </tr> 
                 <tr className="bg-gray-300 font-bold">
                   <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
-                    Sensor cable attaches directly to a variety of fence types
+                    
                   </td>
                 </tr> 
                 <tr className="bg-gray-300 font-bold">
                   <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
-                    Processor unit is outdoor rated and can be mounted on a fence post or other surface
+                    
                   </td>
                 </tr> 
                 <tr className="bg-gray-300 font-bold">
                   <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
-                    Affordable for sites of all sizes
+                    
                   </td>
                 </tr> 
               </tbody>
@@ -200,4 +196,4 @@ const FlexZone = () => {
   );
 };
 
-export default FlexZone;
+export default Ultrawave;

@@ -1,28 +1,21 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import Header from '../../../partials/Header';
-import Footer from '../../../partials/Footer';
-import SocialShare from '../../Reusable/SocialShare';
+import Header from '../../../../partials/Header';
+import Footer from '../../../../partials/Footer';
+import SocialShare from '../../../Reusable/SocialShare';
 
 
 const SenstarLM100 = () => {
-  const specs = [
-    { label: "Sensing Technology", value: "MEMS-based 3-axis accelerometer in every luminaire (detects climb/cut/lift)."},
-    { label: "Light Output", value: "53 lux per luminaire at ground level (~163 lumens)."},
-    { label: "Color Temperature", value: "6500K (Nominal White); Dark Sky compliant warm-white options available."},
-    { label: "Power Consumption", value: "2.5W per luminaire (up to 95% more efficient than traditional security lights)." },
-    { label: "Input Voltage", value: "12 to 48 VDC." },
-    { label: "Communication", value: "2.4 GHz AES-128 encrypted wireless mesh between luminaires; RS-485 to Gateway." },
-    { label: "Wireless Range", value: "Up to 30 m (100 ft) between individual luminaires." },
-    { label: "Operating Temperature", value: "$-40\text{°C}$ to $+70\text{°C}$ (extremely rugged for cold or desert climates)." },
-    { label: "Deterrence Modes", value: "Programmable: Always On, Dim-to-Bright on alarm, or Strobe Mode on alarm." }
-  ];
+  
 
   const productFeatures = [
-    "Supports virtually all fence types",
-    "If sensor cable is cut, detection continues up to cut location",
-    "Full cut-immune configuration available",
-    "Reliably detects intrusions in the presence of non-localized environmental noise"
+    "Actively Deter Intrusions",
+    "Lower Electricity and Maintenance Costs",
+    "Minimize Light Pollution",
+    "Networking and Integration",
+    "Works with Any Fence",
+    "Gate Protection",
+    "Common Platform"
   ];
 
   return (
@@ -32,7 +25,7 @@ const SenstarLM100 = () => {
       {/* Header Banner */}
       <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
         <h1 className="text-5xl md:text-5xl font-bold max-w-5xl mx-auto leading-tight">
-          SenstarLM100 FP1150
+          Senstar LM100 
         </h1>
       </header>
 
@@ -41,7 +34,7 @@ const SenstarLM100 = () => {
         {/* Main Content Container */}
         <main className="lg:w-3/4 bg-gray-200 p-8 shadow-sm">
             <p className="text-gray-800 text-[17px] mb-6">
-               SenstarLM100 FP1150 is a perimeter intrusion detection system that can be fence-mounted, 
+               Senstar LM100  is a perimeter intrusion detection system that can be fence-mounted, 
                buried, or deployed in a wall-top configuration. It can also be used to protect data 
                conduits and buried pipelines. Advanced adaptive signal processing along with certified 
                SMS/VMS integration options ensure the highest level of security and performance.
@@ -50,7 +43,7 @@ const SenstarLM100 = () => {
             <section className="mb-8">
               <h2 className="font-bold text-xl mb-2 text-black">Product Description:</h2>
               <p className="text-gray-800 text-[17px] leading-relaxed">
-                SenstarLM100 FP1150 builds upon Senstar’s 40 years of perimeter intrusion detection experience 
+                Senstar LM100  builds upon Senstar’s 40 years of perimeter intrusion detection experience 
                 to offer a system that detects and reports both common and sophisticated intrusion attempts 
                 almost instantly. Unlike generic AI systems that require extensive training and may fail when 
                 presented with unseen intrusion data, SenstarLM100 is designed with intelligence built-in, 
@@ -67,38 +60,79 @@ const SenstarLM100 = () => {
             </section>
 
             {/* Technical Specifications Table */}
-                       <section>
-                         <h2 className="font-bold text-xl text-black mb-4">Technical Specification:</h2>
-                         <div className="border border-gray-500 overflow-hidden">
-                           <table className="w-full text-left text-xs border-collapse">
-                             <tbody>
-                               {specs.map((item, idx) => (
-                                 <React.Fragment key={idx}>
-                                   {item.type === 'header' ? (
-                                     <tr className="bg-gray-200">
-                                       <th colSpan="2" className="p-2 border-b border-gray-500 text-[15px] text-black font-bold uppercase tracking-wider">
-                                         {item.label}
-                                       </th>
-                                     </tr>
-                                   ) : (
-                                     <tr className={idx % 2 === 0 ? 'bg-gray-100' : 'bg-gray-50'}>
-                                       <td className="p-3 border-b border-r border-gray-500 font-bold w-1/3 text-[15px] text-black bg-gray-50/50">
-                                         {item.label}
-                                       </td>
-                                       <td className="p-3 border-b border-gray-500 text-gray-800 whitespace-pre-line text-[15px] hover:bg-slate-50/50 transition-colors">
-                                         {item.value}
-                                       </td>
-                                     </tr>
-                                   )}
-                                 </React.Fragment>
-                               ))}
-                             </tbody>
-                           </table>
-                         </div>
-                       </section>
+              <div className="bg-gray-300 p-6 shadow rounded border border-r divine-y">
+            <h2 className="font-bold text-black text-xl mb-4">Reliable Performance:</h2>
+
+            <table className="w-full border text-[17px]">
+              <tbody>
+                {/* HEADER*/}
+                <tr className="bg-gray-300 ">
+                  <td colSpan="5" className="border-r border-black border p-2 font-bold w-1/2 uppercase text-black">
+                    Intrusion Detection
+                  </td>
+                </tr>
+
+                <tr className="bg-gray-200 ">
+                  <td colSpan="5" className="border-r border-black border p-2 font-bold text-gray-700">
+                   Built-in accelerometer detects attempts to cut, climb or lift the fence fabric
+                  </td>
+                </tr>
+                <tr className="bg-gray-200 ">
+                  <td colSpan="5" className="border-r border-black border p-2 font-bold text-gray-700">
+                    Reports intrusion attempt location to the site's security system
+                  </td>
+                </tr>
+                <tr className="bg-gray-200 ">
+                  <td colSpan="5" className="border-r border-black border p-2 font-bold text-gray-700">
+                    Can activate other detergent systems like intercoms or other security lights
+                  </td>
+                </tr>
+               
+
+                {/* HEADER*/}
+                <tr className="bg-gray-300 ">
+                  <td colSpan="5" className="border-r border-black border p-2 font-bold uppercase text-black">
+                     High Performance Lightning
+                  </td>
+                </tr>
+                <tr className="bg-gray-200 ">
+                  <td colSpan="5" className="border-r border-black border p-2 font-bold text-gray-700">
+                     53 lux per luminaire (163 lumens) with 50,000 hour minimum life expectancy
+                  </td>
+                </tr>
+                <tr className="bg-gray-200 ">
+                  <td colSpan="5" className="border-r border-black border p-2 font-bold text-gray-700">
+                     Instant-on or strobe lighting at intrusion attempt location can deter potential intruders
+                  </td>
+                </tr>
+
+                {/* HEADER*/}
+                <tr className="bg-gray-300 ">
+                  <td colSpan="5" className="border-r border-black border p-2 font-bold uppercase text-black">
+                    Environmentally Friendly
+                  </td>
+                </tr>
+
+                <tr className="bg-gray-200 ">
+                   <td colSpan="5" className="border-r border-black border p-2 font-bold text-gray-700">
+                     Directed illumination minimizes light pollution
+                  </td>
+                </tr>
+                <tr className="bg-gray-200 ">
+                   <td colSpan="5" className="border-r border-black border p-2 font-bold text-gray-700">
+                     Ultra-low power LEDs reduce power consumption by up 95%
+                  </td>
+                </tr>
+                <tr className="bg-gray-200 ">
+                   <td colSpan="5" className="border-r border-black border p-2 font-bold text-gray-700">
+                     International Dark Sky Association (IDA) approved option with warm-white LEDs
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
                        
         
-
             {/* SHARE SECTION */}
              <SocialShare title="Check out this product!" />
 

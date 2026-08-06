@@ -1,22 +1,22 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import Header from '../../../partials/Header';
-import Footer from '../../../partials/Footer';
-import SocialShare from '../../Reusable/SocialShare';
+import Header from '../../../../partials/Header';
+import Footer from '../../../../partials/Footer';
+import SocialShare from '../../../Reusable/SocialShare';
 
 
 
-const Buried = () => {
+
+const Fence = () => {
   const specs = [
-    { label: "Detection Principle", value: "Volumetric (Electromagnetic/Radio Frequency)"},
-    { label: "Location Accuracy", value: "$\pm$ 1m (3.3 ft)"},
-    { label: "Max Range per Processor", value: "800m (2,625 ft) (400m per side)"},
-    { label: "Detection Field Size", value: "Typically 1m high x 3m wide" },
-    { label: "Software Zones", value: "Up to 50 distinct zones per processor" },
-    { label: "Probability of Detection (Pd)", value: "99% for a 35kg (77 lb) upright human" },
-    { label: "Operating Temp", value: "-40°C to 70°C" },
-    { label: "Power Consumption", value: "9W (12 to 48 VDC)" },
-    { label: "Enclosure Rating", value: "IP66 / NEMA 4X (Aluminum)" }
+    { label: "Detection Accuracy", value: "$\pm$ 3m (10 ft) pinpoint location"},
+    { label: "Max Cable Length", value: "Up to 600m (1,968 ft) per processor"},
+    { label: "Software Zones", value: "Up to 60 distinct zones (assignable via software)"},
+    { label: "Intrusion types", value: "Detects cutting, climbing, lifting, or tampering" },
+    { label: "Power Consumption", value: "2.0W (Base) / 2.5W (with comms card)" },
+    { label: "Operating Temperature", value: "-40°C to +70°C (-40°F to 158°F)" },
+    { label: "Enclosure Rating", value: "IP66 / NEMA 4X (Rugged all-weather)" },
+    { label: "Cable Diameter", value: "7mm (0.27 in) UV-resistant HDPE jacket" }
   ];
 
   return (
@@ -26,7 +26,7 @@ const Buried = () => {
       {/* Header Banner */}
       <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
         <h1 className="text-5xl md:text-5xl font-bold max-w-5xl mx-auto leading-tight">
-          Buried Sensors
+          Fence Sensors
         </h1>
       </header>
 
@@ -35,17 +35,19 @@ const Buried = () => {
         {/* Main Content Container */}
         <main className="lg:w-3/4 bg-gray-200 p-8 shadow-sm">
             <p className="text-gray-800 text-[17px] mb-6">
-                The Buried Sensor is a high-security perimeter protection system designed to provide an effective physical barrier against unauthorized access. It features a robust construction with sharp blades that can deter and prevent intruders from breaching the perimeter. The Buried Sensor is commonly used in various applications, including industrial facilities, correctional institutions, military installations, and critical infrastructure sites, where enhanced security measures are required to safeguard against potential threats.
+              The Fence Sensor detect and locate intruders at the fence line, before they get inside a property.
+              Senstar offers a range of fence sensors and other types of sensors and solutions to meet the
+              requirements for sites of all sizes.
             </p>
 
             <section className="mb-8">
               <h2 className="font-bold text-xl mb-2 text-black">Product Description:</h2>
               <p className="text-gray-800 text-[17px] leading-relaxed">
-                The Buried Sensor is engineered to provide a formidable physical deterrent against unauthorized access. 
+                The Fence Sensor is engineered to provide a formidable physical deterrent against unauthorized access. 
                 It consists of a series of sharp blades that are strategically positioned to create a barrier that 
                 is difficult to climb over or cut through. The blades are typically made of high-quality steel and are
-                designed to withstand harsh weather conditions and resist tampering. The Buried Sensor can be installed
-                on top of existing Burieds, walls, or other structures, enhancing the overall security of the perimeter. 
+                designed to withstand harsh weather conditions and resist tampering. The Fence Sensor can be installed
+                on top of existing fences, walls, or other structures, enhancing the overall security of the perimeter. 
                 It is commonly used in high-security environments where preventing unauthorized entry is crucial, 
                 such as industrial facilities, correctional institutions, military installations, and critical infrastructure 
                 sites.
@@ -84,6 +86,9 @@ const Buried = () => {
                          </div>
                        </section>
                        
+            {/* Tags & Social */}
+        
+
             {/* SHARE SECTION */}
              <SocialShare title="Check out this product!" />
 
@@ -118,7 +123,7 @@ const Buried = () => {
             
             
                       {/* Contact Card */}
-          <div 
+                     <div 
               className="relative min-h-[240px] overflow-hidden rounded-2xl p-8 text-white shadow-md bg-cover bg-center bg-blend-multiply bg-blue-900/85"
               style={{ backgroundImage: "url('/assets/image/Our%20Products/quickalert.jpg')" }}
             >
@@ -138,7 +143,7 @@ const Buried = () => {
                   CONTACT US TODAY
                 </NavLink>
               </div>
-          </div>
+                   </div>
             
                 </aside>
 
@@ -152,4 +157,4 @@ const Buried = () => {
   );
 };
 
-export default Buried;
+export default Fence;

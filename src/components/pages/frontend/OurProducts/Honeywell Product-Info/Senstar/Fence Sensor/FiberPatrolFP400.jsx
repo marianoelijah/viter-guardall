@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from '../../../partials/Header';
-import Footer from '../../../partials/Footer';
+import Header from '../../../../partials/Header';
+import Footer from '../../../../partials/Footer';
 import { NavLink } from 'react-router-dom';
-import SocialShare from '../../Reusable/SocialShare';
+import SocialShare from '../../../Reusable/SocialShare';
 
 
 // Shared Layout Component to maintain design consistency across all products
@@ -44,7 +44,7 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
 
              {/* Technical Specifications Table */}
               <div className="bg-gray-300 p-6 shadow rounded border border-r divine-y">
-            <h2 className="font-bold text-black text-xl mb-4">Technical Specification</h2>
+            <h2 className="font-bold text-black text-xl mb-4">Reliable Performance:</h2>
 
             <table className="w-full border text-[15px] text-black">
               <tbody>
