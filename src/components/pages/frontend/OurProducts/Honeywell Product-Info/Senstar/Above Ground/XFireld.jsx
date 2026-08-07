@@ -4,14 +4,17 @@ import Header from '../../../../partials/Header';
 import Footer from '../../../../partials/Footer';
 import SocialShare from '../../../Reusable/SocialShare';
 
-const Ultrawave = () => {
+
+
+const XField = () => {
   
   const productFeatures = [
-    "Flexible Deployment Options",
-    "Common Platform",
-    "Anti-Spoofing",
-    "Reduced Infrastructure Requirements",
-    "Networking and Integration"
+    "Tall Height, Narrow Width",
+    "Visual Deterrent + Invisible Detection",
+    "Low Nuisance Alarm Rate",
+    "Mechanical Design",
+    "Networking and Integration",
+    "Common Platform"
   ];
 
   return (
@@ -21,7 +24,7 @@ const Ultrawave = () => {
       {/* Header Banner */}
       <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
         <h1 className="text-4xl md:text-5xl font-bold max-w-5xl mx-auto leading-tight">
-          Ultrawave
+          XField
         </h1>
       </header>
 
@@ -30,16 +33,17 @@ const Ultrawave = () => {
         {/* Main Content Container */}
         <main className="lg:w-3/4 bg-gray-200 p-8 shadow-sm">
             <p className="text-gray-800 text-[17px] mb-6">
-               Mirowave Intrusion Detection Sensor
+               Terrain-Following Volumetric Sensor
             </p>
 
             <section className="mb-8">
               <h2 className="font-bold text-xl mb-2 text-black">Product Description:</h2>
               <p className="text-gray-800 text-[17px] leading-relaxed">
-                UltraWave is a volumetric, fully digital, bi-static microwave sensor that generates an invisible field of
-                energy between a transmitter (Tx) and receiver (Rx). When an intruder enters the field, an alarm is 
-                generated. UltraWave is ideal for providing perimeter security as well as protecting gates and sally
-                ports.
+                XField is a terrain-following volumetric sensor that generates an invisible field of energy around
+                parallel sets of wires. When an intruder enters the field, an alarm is generated. XField is designed
+                for high-security environments and can be used in free-standing, fence mounted, roof and wall 
+                applications. In particular, XField has been a popular choice for nuclear power facilities 
+                due to its adjustable height capabilities.
               </p>
 
                <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
@@ -61,64 +65,63 @@ const Ultrawave = () => {
                     Detection Capabilities:
                   </td>
                 </tr> 
-                <tr className="bg-gray-300 font-bold w-1/2">
+                <tr className="bg-gray-300 font-bold">
                   <td colSpan="5" className="border-r border-black border p-2 text-gray-700">
-                   Zone lengths 5 to 200 m (16 to 656 ft)
+                    Detection height for free standing and wall applications: 6.1 m (20 ft)
                   </td>
                 </tr> 
                 <tr className="bg-gray-300 font-bold">
                   <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
-                    Stackable for increased detection zone height
+                    Detection heigh for fence insallations: 7.3 m (24 ft)
                   </td>
                 </tr>
                 <tr className="bg-gray-300 font-bold">
                   <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
-                   Reliable detection in all weather conditions, including rain, fog and snow.
+                    Zone lenght: - 150 m ( 500 ft )
                   </td>
                 </tr> 
 
                 <tr className="bg-gray-300 font-bold">
                   <td colSpan="5" className="border border-r border-black p-2 text-black uppercase">
-                    All Digital Processing:
+                    Flxible Deployments Options
                   </td>
                 </tr> 
                 <tr className="bg-gray-300 font-bold w-1/2">
                   <td colSpan="5" className="border-r border-black border p-2 text-gray-700">
-                    Reduces nuisance alarms by distinguishing valid targets from environment effects
+                    Supports free-standing, fence-mounted,  roof and wall aplications
                   </td>
                 </tr> 
                 <tr className="bg-gray-300 font-bold">
                   <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
-                   Stable operation over temperature changes and equipment aging
+                    Tall, narrow, well-contained detection zone allows the sensor to be installed in a 
+                    wide variety of applications and minimizes nuisance alarms caused by nearby moving objects.
                   </td>
                 </tr>
                 <tr className="bg-gray-300 font-bold">
                   <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
-                  Automatic Gain Control commpensates for varrying path loss due to Tx-Rx separation
-                  and weather conditions
+                  Meets U.S. Nuckear TRegulatory Commission (NRC) Regulatory Guide 5.44 requirements
                   </td>
                 </tr> 
 
 
                 <tr className="bg-gray-300 font-bold w-1/2">
                   <td colSpan="5" className="border-r border-black border p-2 text-black">
-                    Flexible Deployment Options
+                    Easy Installation and Maintenance
                   </td>
                 </tr> 
                 <tr className="bg-gray-300 font-bold">
                   <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
-                    Provide Intrusion detection around an entire perimeter
+                    Durable design simplifies installation and maintenance
                   </td>
                 </tr> 
                 <tr className="bg-gray-300 font-bold">
                   <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
-                     Gap fill areas where another system acts as the main sensor
+                     Local or remote configuration and diagnostics
                   </td>
                 </tr> 
                 <tr className="bg-gray-300 font-bold">
                   <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
-                    Configurable frequency channels enable multiple units to operate in close proximity to each other,
-                    including applications where multiple units are stacked together.
+                    Corrosion-resistant hardware
                   </td>
                 </tr> 
               </tbody>
@@ -192,4 +195,4 @@ const Ultrawave = () => {
   );
 };
 
-export default Ultrawave;
+export default XField;

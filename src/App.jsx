@@ -401,6 +401,7 @@ import SenstarMultisensor from "./components/pages/frontend/OurProducts/Honeywel
 import Ultrawave from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Above Ground/UltraWave";
 import DataConduit from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Buried Sensor/DataConduit";
 import PipelineTPI from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Buried Sensor/PipelineTPI";
+import XField from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Above Ground/XFireld";
 
 
 
@@ -913,6 +914,7 @@ const App = () => {
 
             {/* Above-Ground Sensor Details Route */}
             <Route path="/our-products/senstar/above-ground/ultrawave" element={<Ultrawave/>} />
+            <Route path="/our-products/senstar/above-ground/xfield" element={<XField/>} />
 
 
             {/* Deantas Product Details Route */}
