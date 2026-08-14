@@ -6,24 +6,15 @@ import SocialShare from '../../Reusable/SocialShare';
 
 
 
-const Vehicle = () => {
-  const specs = [
-    { label: "Crash Rating Standard", value: "ASTM F2656 (M30/M50) or PAS 68 / IWA 14-1"},
-    { label: "Impact Performance", value: "Rated to stop a 7,500kg (15,000 lb) vehicle at 50mph (80kph)"},
-    { label: "Barrier Type", value: "Fixed (Passive) or Rising/Sliding (Active)"},
-    { label: "Material", value: "Reinforced High-Tensile Steel with internal structural bracing1500 MPa to 1600 MPa" },
-    { label: "Finish", value: "Hot-Dip Galvanized, Marine Fusion Bond, or Powder Coated" },
-    { label: "Integration", value: "Direct compatibility with ClearVu High Security panels" },
-    { label: "Foundation Depth", value: "Standard: 1.2m – 1.5m" },
-    { label: "Operating System", value: "Hydraulic or Electro-Mechanical (for Active versions)" },
-    { label: "Emergency Fast Operation", value: "Optional EFO (Raises in < 2 seconds)" }
-  ];
 
+
+const ShutterBarrier = () => {
   const productFeatures = [
-    "Hostile Vehicle Mitigation (HVM)",
-    "Visual Continuity",
-    "Corrosion Resistance",
-    "Modular Scalability"
+    "Solid Shutters",
+    "Adapable & Removable",
+    "Ballistic Shielding",
+    "Custom Engineering",
+    "Global Manufacturing"
   ];
 
   return (
@@ -33,7 +24,7 @@ const Vehicle = () => {
       {/* Header Banner */}
       <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
         <h1 className="text-5xl md:text-5xl font-bold max-w-5xl mx-auto leading-tight">
-          Vehicle Barrier
+          ClearVu Shutter Barrier
         </h1>
       </header>
 
@@ -42,13 +33,17 @@ const Vehicle = () => {
         {/* Main Content Container */}
         <main className="lg:w-3/4 bg-gray-200 p-8 shadow-sm">
             <p className="text-gray-800 text-[17px] mb-6">
-                The Vehicle Barrier is Designed to integrate seamlessly with high-security fencing, these barriers provide a robust physical deterrent for critical infrastructure, combining structural strength with a clean, low-profile aesthetic.
+               Controlled Visibility with Extreme Protection - a removable shutter-based barrier for 
+               sites requiring concealment and defense-grade perimeter security.
             </p>
 
             <section className="mb-8">
               <h2 className="font-bold text-xl mb-2 text-black">Product Description:</h2>
               <p className="text-gray-800 text-[17px] leading-relaxed">
-               The Cochrane AVB is a passive (fixed) or active (movable) barrier system. It is primarily used to protect critical national infrastructure, data centers, and government buildings. Its unique selling point is the "Integrated Security" design—it doesn't just sit in front of the fence; it is often built into the fence structure to provide a unified aesthetic and physical defense.
+                The Shutter Barrier uses solid steal shutters to conceal activities when needed. It is designed for critical infrastructure
+                (energy production, petrochemical facilities, seaports, government sites). Provides ballistic shielding
+                and intruder resistance. Adaptable and removable, allowing facilities to install or remove shutters
+                depending on operational needs.
               </p>
 
                <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
@@ -61,37 +56,82 @@ const Vehicle = () => {
             </section>
 
             {/* Technical Specifications Table */}
-                       <section>
-                         <h2 className="font-bold text-xl text-black mb-4">Technical Specification:</h2>
-                         <div className="border border-gray-500 overflow-hidden">
-                           <table className="w-full text-left text-xs border-collapse">
-                             <tbody>
-                               {specs.map((item, idx) => (
-                                 <React.Fragment key={idx}>
-                                   {item.type === 'header' ? (
-                                     <tr className="bg-gray-200">
-                                       <th colSpan="2" className="p-2 border-b border-gray-500 text-[15px] text-black font-bold uppercase tracking-wider">
-                                         {item.label}
-                                       </th>
-                                     </tr>
-                                   ) : (
-                                     <tr className={idx % 2 === 0 ? 'bg-gray-100' : 'bg-gray-50'}>
-                                       <td className="p-3 border-b border-r border-gray-500 font-bold w-1/3 text-[15px] text-black bg-gray-50/50">
-                                         {item.label}
-                                       </td>
-                                       <td className="p-3 border-b border-gray-500 text-gray-800 whitespace-pre-line text-[15px] hover:bg-slate-50/50 transition-colors">
-                                         {item.value}
-                                       </td>
-                                     </tr>
-                                   )}
-                                 </React.Fragment>
-                               ))}
-                             </tbody>
-                           </table>
-                         </div>
-                       </section>
+            <div className="bg-gray-300 p-6 shadow rounded border border-r divine-y">
+            <h2 className="font-semibold text-black text-xl mb-4">Reliable Performance:</h2>
+
+            <table className="border text-[17px] w-full">
+              <tbody>
+                <tr className="bg-gray-300 font-bold w-1/2">
+                  <td colSpan="2" className="border-r border-black border p-2 text-black">
+                    Fence Types
+                  </td>
+                  <td colSpan="3" className="border-r border-black border p-2 text-black">
+                    Category IV perimeter fence
+                  </td>
+                </tr> 
+                <tr className="bg-gray-300 font-bold w-1/2">
+                  <td colSpan="2" className="border-r border-black border p-2 text-black">
+                    Panel Material
+                  </td>
+                  <td colSpan="3" className="border-r border-black border p-2 text-black">
+                    Solid Steel Shutters
+                  </td>
+                </tr> 
+                <tr className="bg-gray-300 font-bold">
+                   <td colSpan="2" className="border-r border-black border p-2 text-black">
+                    Visibility Control
+                  </td>
+                  <td colSpan="3" className="border-r border-black border p-2 text-black">
+                    Concealable or open depending on shutter installation
+                  </td>
+                </tr>
+                <tr className="bg-gray-300 font-bold">
+                   <td colSpan="2" className="border-r border-black border p-2 text-black">
+                    Ballistic Rating
+                  </td>
+                  <td colSpan="3" className="border-r border-black border p-2 text-black">
+                    Defence-rated Type 4
+                  </td>
+                </tr> 
+                
+
+                <tr className="bg-gray-300 font-bold w-1/2">
+                   <td colSpan="2" className="border-r border-black border p-2 text-black">
+                    Adaptability
+                  </td>
+                  <td colSpan="3" className="border-r border-black border p-2 text-black">
+                    Removable, light, durable, easy to store
+                  </td>
+                </tr> 
+                <tr className="bg-gray-300 font-bold">
+                   <td colSpan="2" className="border-r border-black border p-2 text-black">
+                    Manufacturing Locations
+                  </td>
+                  <td colSpan="3" className="border-r border-black border p-2 text-black">
+                    South Africa, USA, UK
+                  </td>
+                </tr>
+                <tr className="bg-gray-300 font-bold">
+                   <td colSpan="2" className="border-r border-black border p-2 text-black">
+                    Enhancements
+                  </td>
+                  <td colSpan="3" className="border-r border-black border p-2 text-black">
+                    Spike toppings, integrations with other ClearVu systems
+                  </td>
+                </tr> 
+                <tr className="bg-gray-300 font-bold">
+                   <td colSpan="2" className="border-r border-black border p-2 text-black">
+                    Applications
+                  </td>
+                  <td colSpan="3" className="border-r border-black border p-2 text-black">
+                    Energy plants, petrochemical sites, seaports, government facilities.
+                  </td>
+                </tr> 
+              </tbody>
+            </table>
+          </div> 
                        
-            {/* Tags & Social */}
+            
         
 
             {/* SHARE SECTION */}
@@ -103,7 +143,7 @@ const Vehicle = () => {
               <aside className="lg:w-1/4 space-y-6"> 
                      <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
                         <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By COCHRANE</h3>
-                        <ul className="space-y-4 text-gray-800 font-medium">
+                         <ul className="space-y-4 text-gray-800 font-medium">
                             <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
                               <li className='cursor-pointer hover:text-[#ff5f31] transition-colors break-words'>Onity DirectKey with Serene</li>
                             </NavLink>
@@ -127,11 +167,11 @@ const Vehicle = () => {
                       
             
             
-                      {/* Contact Card */}
-                      <div 
+          {/* Contact Card */}
+          <div 
               className="relative min-h-[240px] overflow-hidden rounded-2xl p-8 text-white shadow-md bg-cover bg-center bg-blend-multiply bg-blue-900/85"
               style={{ backgroundImage: "url('/assets/image/Our%20Products/quickalert.jpg')" }}
-            >
+             >
               <div className="relative z-10 max-w-3xl">
                 <h3 className="mb-4 text-2xl font-bold leading-tight tracking-wide">
                   Secure Your Peace Of Mind Today
@@ -162,4 +202,4 @@ const Vehicle = () => {
   );
 };
 
-export default Vehicle;
+export default ShutterBarrier;

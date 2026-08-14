@@ -25,6 +25,7 @@ export default function Testimonials() {
       try {
         setLoading(true);
         setError(null);
+        
 
         // Uses Axios + API_URL from .env just like ProductPage.jsx
         const { data } = await axios.get(`${API_URL}/api/testimonials`);

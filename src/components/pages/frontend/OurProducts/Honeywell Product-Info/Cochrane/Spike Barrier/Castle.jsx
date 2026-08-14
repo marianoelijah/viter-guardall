@@ -1,30 +1,27 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import Header from '../../../partials/Header';
-import Footer from '../../../partials/Footer';
-import SocialShare from '../../Reusable/SocialShare';
+import Header from '@/components/pages/frontend/partials/Header';
+import Footer from '@/components/pages/frontend/partials/Footer';
+import SocialShare from '../../../Reusable/SocialShare';
 
 
-
-
-const ClearVu = () => {
+const Castle = () => {
   const specs = [
-    { label: "Panel Width", value: "3,297 mm or 3,305 mm wide" },
-    { label: "Mesh Formation", value: "$76.2\text{ mm} \times 12.7\text{ mm}$" },
-    { label: "Wire Diameter", value: "nominal diameter of 3.0 mm to 4.0 mm (high-tensile steel)" },
-    { label: "Materials", value: "Tempered or laminated glass" },
-    { label: "Post Type: Cochrane Taper Locking Post", value: "Cochrane Taper Locking Post" },
-    { label: "Rigidity Features", value: "Enhanced structural integrity" },
-    { label: "Marine Fusion Bond", value: "Specialized bonding for marine environments" },
-    { label: "Defense Rating", value: "Meets industry standards for security and durability" }
+    { label: "Material", value: "High-toughened steel"},
+    { label: "Design", value: "Ornamental spiker set at equal intervals"},
+    { label: "Installation", value: "New or existing fences/walls"},
+    { label: "Fixings", value: "Anti-vandal bolts" },
+    { label: "Finishes", value: "Custom castings/coating for climate adaptation" },
+    { label: "Applications", value: "Retail, heritage sites, highways, school, estates" },
   ];
 
   const productFeatures = [
-    "High transparency",
-    "Minimal hardware",
-    "Acoustic control",
-    "Customizable layouts",
-    "Safety and durability"
+    "Follows the contours of the perimeter",
+    "Boasts a neat and attractive appearance",
+    "Simple to install on new or existing fences",
+    "Provide a Low-Cost solution for effective intrusion deterrent",
+    "Tough Design",
+    "Easy to Install"
   ];
 
   return (
@@ -34,7 +31,7 @@ const ClearVu = () => {
       {/* Header Banner */}
       <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
         <h1 className="text-5xl md:text-5xl font-bold max-w-5xl mx-auto leading-tight">
-          ClearVu Invisible Wall
+          Castle Spike Barrier
         </h1>
       </header>
 
@@ -43,13 +40,18 @@ const ClearVu = () => {
         {/* Main Content Container */}
         <main className="lg:w-3/4 bg-gray-200 p-8 shadow-sm">
             <p className="text-gray-800 text-[17px] mb-6">
-               Cochrane ClearVu Invisible Walls are primarily frameless glass wall systems that integrate clear glass panels with minimal hardware to maximize transparency and visual continuity. They are often used in commercial offices, retail spaces, healthcare environments, and luxury homes where an open, uncluttered look is desired while still providing a physical barrier.
+                The Castle Spike fence toppings are easy to install and are suitable for use
+                in any environment.
             </p>
 
             <section className="mb-8">
               <h2 className="font-bold text-xl mb-2 text-black">Product Description:</h2>
               <p className="text-gray-800 text-[17px] leading-relaxed">
-                Cochrane ClearVu Invisible Walls are designed to create a seamless and open environment while providing the necessary separation and security. These walls typically consist of tempered or laminated glass panels that are held in place with minimal hardware, such as discreet clamps or channels, to maintain a clean and modern aesthetic. The glass used in ClearVu Invisible Walls is often treated with special coatings to enhance durability, reduce glare, and improve energy efficiency. These walls can be customized to fit various architectural styles and can be used for both interior and exterior applications, making them a versatile choice for creating visually stunning spaces without sacrificing functionality.
+                The Castle Spike, a popular solution among Cochrane Global's barrier additions range,
+                is an ornamental fencing topping option that acts as an effective intrusion deterrent,
+                commonl found a top ClearVu fence panels. As a decorative gate spikes addition, it 
+                offers a neat and less aggressive appearance, yet still bears the anti-climb attributes
+                required to protect key assets.
               </p>
 
                <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
@@ -93,8 +95,6 @@ const ClearVu = () => {
                        </section>
                        
             
-        
-
             {/* SHARE SECTION */}
              <SocialShare title="Check out this product!" />
 
@@ -129,10 +129,10 @@ const ClearVu = () => {
             
             
                       {/* Contact Card */}
-          <div 
+                      <div 
               className="relative min-h-[240px] overflow-hidden rounded-2xl p-8 text-white shadow-md bg-cover bg-center bg-blend-multiply bg-blue-900/85"
               style={{ backgroundImage: "url('/assets/image/Our%20Products/quickalert.jpg')" }}
-             >
+            >
               <div className="relative z-10 max-w-3xl">
                 <h3 className="mb-4 text-2xl font-bold leading-tight tracking-wide">
                   Secure Your Peace Of Mind Today
@@ -163,4 +163,4 @@ const ClearVu = () => {
   );
 };
 
-export default ClearVu;
+export default Castle;

@@ -238,7 +238,7 @@ import AuditTrail from "./components/pages/frontend/OurProducts/Honeywell Produc
 import OpeningOption from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Onity/OpeningOption";
 import Os100 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Onity/Os100";
 import AccessSolution from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Onity/AccessSolution";
-import Orbita from "./components/pages/frontend/OurProducts/product extend/orbita/Orbita";
+
 import OBT2043MB from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Orbita/OBT2043MB";
 import OBT4135MG from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Orbita/OBT4135MG";
 import OBT2042MJ from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Orbita/OBT2042MJ";
@@ -259,7 +259,7 @@ import SP5500 from "./components/pages/frontend/OurProducts/Honeywell Product-In
 import SP4000 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/SP4000";
 import SP65 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/SP65";
 
-// import Zx8 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/Zx8";
+
 import PGM82 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/PGM82";
 import PGM4 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/PGM4";
 import RX1 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/RX1";
@@ -339,14 +339,7 @@ import Pro3200 from "./components/pages/frontend/OurProducts/Honeywell Product-I
 import ZX82 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/ZX82";
 import AdminPanel from "./components/Admin/AdminPanel";
 import Cochrane from "./components/pages/frontend/OurProducts/product extend/Cochrane/Cochrane";
-
-import Razor from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Razor";
-import Vehicle from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Vehicle";
-import Floating from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Floating";
-
 import Zx8 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/Zx8";
-import ShutterBarrier from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/ShutterBarrier";
-import ClearVu from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/ClearVu";
 
 import PNMC16013RVQ from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hanwha/PNMC16013RVQ";
 import PNM9085RQZ1 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hanwha/PNM9085RQZ1";
@@ -388,7 +381,6 @@ import AdminDashboard from "./components/Admin/AdminDashboard";
 import ProtectedRoute from "./components/Admin/ProtectedRoute";
 import AdminLogin from "./components/Admin/AdminLogin";
 
-
 import Fence from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Fence Sensor/Fence";
 import FiberPatrol from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Fence Sensor/FiberPatrol";
 import SenstarLM100 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Fence Sensor/SenstarLM100";
@@ -402,13 +394,24 @@ import Ultrawave from "./components/pages/frontend/OurProducts/Honeywell Product
 import DataConduit from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Buried Sensor/DataConduit";
 import PipelineTPI from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Buried Sensor/PipelineTPI";
 import XField from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Above Ground/XFireld";
+import InvisibleWall from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/ClearVu Invisible Wall/InvisibleWall";
+import ShadowWall from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/ClearVu Invisible Wall/ShadowWall";
+import Reinforced from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/ClearVu Invisible Wall/Reinforced";
 
+import Curve from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/ClearVu Invisible Wall/Curve";
+import ElectricSmart from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Razor Barriers/ElectricSmart";
+import Decorative from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/ClearVu Invisible Wall/Decorative";
+import RazorMesh from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Razor Barriers/RazorMesh";
 
-
-
-
-
-
+import RDBarrier from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Razor Barriers/RDBarrier";
+import Floating from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Water Barrier/Floating";
+import Vehicle from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Vehicle Barrier/Vehicle";
+import Rocket from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Military Defence/Rocket";
+import Drone from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Military Defence/Drone";
+import Razor from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Razor Barriers/Razor";
+import Castle from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Spike Barrier/Castle";
+import Rack from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Spike Barrier/Rack";
+import Tooth from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Spike Barrier/Tooth";
 
 
 
@@ -417,7 +420,6 @@ import XField from "./components/pages/frontend/OurProducts/Honeywell Product-In
 
 
 const App = () => {
-
 
   const queryClient = new QueryClient();
   return (
@@ -883,12 +885,35 @@ const App = () => {
 
             {/* Cochrane Product Details Route */}
             <Route path="/products/cochrane" element={<Cochrane/>} />
-            
-            <Route path="/products/cochrane/razor-mesh" element={<Razor/>} />
-            <Route path="/products/cochrane/vehicle-barrier" element={<Vehicle/>} />
-            <Route path="/products/cochrane/floating-barrier" element={<Floating/>} />
-            <Route path="/our-products/cochrane/invisible-walls" element={<ClearVu/>} />
-            <Route path="/our-products/cochrane/shutter-barrier" element={<ShutterBarrier/>} />
+
+            {/* ClearVu Invisible Wall Product Details Route */}
+            <Route path="/our-products/cochrane/clearvu-invisible-wall/invisible-wall" element={<InvisibleWall/>} />
+            {/* <Route path="/products/cochrane/clearvu-invisible-wall/shutter-barrier" element={<ShutterBarrier/>} /> */}
+            <Route path="/our-products/cochrane/clearvu-invisible-wall/shadow-wall" element={<ShadowWall/>} />
+            <Route path="/our-products/cochrane/clearvu-invisible-wall/reinforced" element={<Reinforced/>} />
+            <Route path="/our-products/cochrane/clearvu-invisible-wall/decorative" element={<Decorative/>} />
+            <Route path="/our-products/cochrane/clearvu-invisible-wall/curve" element={<Curve/>} />
+
+            {/* ClearVu Razor Barriers Product Details Route */}
+            <Route path="/our-products/cochrane/razor-barriers/razor-barrier" element={<Razor/>} />
+            <Route path="/our-products/cochrane/razor-barriers/electric-smart-coil" element={<ElectricSmart/>} />
+            <Route path="/our-products/cochrane/razor-barriers/razor-mesh" element={<RazorMesh/>} />
+            <Route path="/our-products/cochrane/razor-barriers/rapid-deploment-barrier" element={<RDBarrier/>} />
+
+            {/* Cochrane Water Barrier Product Details Route */}
+            <Route path="/our-products/cochrane/water-barrier/marine-floating-barrier" element={<Floating/>} />
+
+            {/* Cochrane Vehicle Barrier Product Details Route */}
+            <Route path="/our-products/cochrane/vehicle-barrier/anti-vehicle-barrier" element={<Vehicle/>} />
+
+            {/* Cochrane Military and Defence Product Details Route */}
+            <Route path="/our-products/cochrane/military-defence/anti-rocket-barrier" element={<Rocket/>} />
+            <Route path="/our-products/cochrane/military-defence/anti-drone-barrier" element={<Drone/>} />
+
+            {/* Cochrane Barrier Aditions Product Details Route */}
+            <Route path="/our-products/cochrane/spike-barrier/castle-spike-barrier" element={<Castle/>} />
+            <Route path="/our-products/cochrane/spike-barrier/spike-rack-barrier" element={<Rack/>} />
+            <Route path="/our-products/cochrane/spike-barrier/shark-tooth-barrier" element={<Tooth/>} />
 
             {/* Senstar Product Details Route */}
             <Route path="/products/senstar" element={<Senstar/>} />

@@ -1,21 +1,20 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import Header from '../../../../partials/Header';
-import Footer from '../../../../partials/Footer';
+import Header from '@/components/pages/frontend/partials/Header';
+import Footer from '@/components/pages/frontend/partials/Footer';
 import SocialShare from '../../../Reusable/SocialShare';
 
 
 
-const PipelineTPI = () => {
-  
+const ElectricSmart = () => {
   const productFeatures = [
-    "Pipeline Protection",
-    "Detection and Ranging of Simultaneous Intrusions",
-    "Continued Detection and Ranging After Cable Cut",
-    "Digging and Tunneling Detection",
-    "Fence and Wall Protection",
-    "Sensor Cables",
-    "Common Platform"
+    "ElectricSmartd Panels",
+    "Anti-Climb & Anti-Cut",
+    "Architectural Harmony",
+    "Weather Resistance",
+    "Customization Options",
+    "Secure Fixing",
+    "Integration Ready"
   ];
 
   return (
@@ -24,8 +23,8 @@ const PipelineTPI = () => {
      <div className="bg-slate-50 min-h-screen font-sans">
       {/* Header Banner */}
       <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold max-w-5xl mx-auto leading-tight">
-          FiberPatrol FP1150 for Pipeline TPI Detection
+        <h1 className="text-5xl md:text-5xl font-bold max-w-5xl mx-auto leading-tight">
+         Electric Smart Coil
         </h1>
       </header>
 
@@ -34,128 +33,111 @@ const PipelineTPI = () => {
         {/* Main Content Container */}
         <main className="lg:w-3/4 bg-gray-200 p-8 shadow-sm">
             <p className="text-gray-800 text-[17px] mb-6">
-               Point-locating Buried Fiber Optic Sensor for Pipeline TPI Detection
+              The Electric Smart Coil delivers a non-lethal shock to stop trespassers in their tracks.
+              the open architecture of our design allows the electric smart coil to be seamlessly
+              integrated into your existing security apparatus.
             </p>
 
             <section className="mb-8">
               <h2 className="font-bold text-xl mb-2 text-black">Product Description:</h2>
               <p className="text-gray-800 text-[17px] leading-relaxed">
-                The FP1150 is designed specially to detect third-party interference (TPI) activities that
-                threaten pipelines; machine or manual digging, heavy machinery operating in the 
-                nearby vicinity-even people walking within the protected area if so configured.
+               Design as a covert detection system to be elavated on existing ClearVu security barrierss, the
+               Electric Smart Coil barrier addition creates an electric fencing solution to protet key infrastructure,
+               residential and commercial properties from unauthorised intrusion. It bears all the unique features
+               of the Cochrane smart coil barbed wire fence design, but combined with the additional,
+               'active' deterrent of an energiser delivering up to 7000 volts of electrical current.
               </p>
 
                <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
-              <ul className="list-disc ml-5 text-[17px] space-y-1 text-black">
-                {productFeatures.map((feature, index) => (
-                  <li key={index}>{feature}</li>
-                ))}
-              </ul>
+            <ul className="list-disc ml-5 text-[17px] space-y-1 text-black">
+              {productFeatures.map((feature, index) => (
+                <li key={index}>{feature}</li>
+              ))}
+            </ul>
+
             </section>
 
-            {/* Technical Specifications*/}
-          <div className="bg-gray-300 p-6 shadow rounded border border-r divine-y">
-            <h2 className="font-semibold text-black text-xl mb-4">Reliable Performance:</h2>
+            {/* Technical Specifications Table */}
+            <div className="bg-gray-300 p-6 shadow rounded border border-r divine-y">
+            <h2 className="font-semibold text-black text-xl mb-4">Technical Specifications:</h2>
 
             <table className="border text-[17px] w-full">
               <tbody>
                 <tr className="bg-gray-300 font-bold w-1/2">
-                  <td colSpan="5" className="border-r border-black border p-2 text-black uppercase">
-                   Detection Capabilities:
+                  <td colSpan="2" className="border-r border-black border p-2 text-black">
+                    Voltage Output
+                  </td>
+                  <td colSpan="3" className="border-r border-black border p-2 text-black">
+                    Up to 7,000 volts (non-lethal shock)
                   </td>
                 </tr> 
                 <tr className="bg-gray-300 font-bold w-1/2">
-                  <td colSpan="5" className="border-r border-black border p-2 text-gray-700">
-                    Sensor cable lenght up to 100 km (62.1 ml) per sensor unit
+                  <td colSpan="2" className="border-r border-black border p-2 text-black">
+                   Material
+                  </td>
+                  <td colSpan="3" className="border-r border-black border p-2 text-black">
+                    Cochrane Ripper Blade razor wire
                   </td>
                 </tr> 
                 <tr className="bg-gray-300 font-bold">
-                  <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
-                    Pinpoint intrusion locations with a ±4 m (±13 ft) accuracy
+                   <td colSpan="2" className="border-r border-black border p-2 text-black">
+                    Detection
+                  </td>
+                  <td colSpan="3" className="border-r border-black border p-2 text-black">
+                    Pre-intrusion detection (cutting/scalling attempts)
                   </td>
                 </tr>
                 <tr className="bg-gray-300 font-bold">
-                  <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
-                   Accurately locate multiple simultaneous intrusion events
+                   <td colSpan="2" className="border-r border-black border p-2 text-black">
+                    Integration
+                  </td>
+                  <td colSpan="3" className="border-r border-black border p-2 text-black">
+                    ClearVu fences, Razor Barriers, alarm systems
                   </td>
                 </tr> 
-                 <tr className="bg-gray-300 font-bold">
-                  <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
-                    Cut immune sensor cable configuration
-                  </td>
-                </tr> 
-                <tr className="bg-gray-300 font-bold w-1/2">
-                  <td colSpan="5" className="border-r border-black border p-2 text-gray-700">
-                    May be installed above-ground for fence and wall protection over the first
-                    40 km (24.8 ml) of each sensor channel.
-                  </td>
-                </tr> 
+                
 
-                <tr className="bg-gray-300 font-bold">
-                  <td colSpan="5" className="border border-r border-black p-2 text-black uppercase">
-                    Detect and Locate Intrusions:
-                  </td>
-                </tr>
-                <tr className="bg-gray-300 font-bold">
-                  <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
-                   Walking or running intruders
-                  </td>
-                </tr> 
-                <tr className="bg-gray-300 font-bold">
-                  <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
-                   Surface digging, manual and machine
-                  </td>
-                </tr>
                 <tr className="bg-gray-300 font-bold w-1/2">
-                  <td colSpan="5" className="border-r border-black border p-2 text-gray-700">
-                   Mobing vehicles
+                   <td colSpan="2" className="border-r border-black border p-2 text-black">
+                    Power Options
+                  </td>
+                  <td colSpan="3" className="border-r border-black border p-2 text-black">
+                    Standard energiser, solar energy
                   </td>
                 </tr> 
                 <tr className="bg-gray-300 font-bold">
-                  <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
-                    Heavy vehicle engine running
+                   <td colSpan="2" className="border-r border-black border p-2 text-black">
+                    Compliance
                   </td>
-                </tr> 
-                <tr className="bg-gray-300 font-bold">
-                  <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
-                    Tunneling activities
+                  <td colSpan="3" className="border-r border-black border p-2 text-black">
+                    Meets international safety standards
                   </td>
-                </tr> 
-
+                </tr>
                 <tr className="bg-gray-300 font-bold">
-                  <td colSpan="5" className="border border-r border-black p-2 text-black uppercase">
-                    Fiber Optic Benefits:
+                   <td colSpan="2" className="border-r border-black border p-2 text-black">
+                    Applications
                   </td>
-                </tr> 
-                <tr className="bg-gray-300 font-bold">
-                  <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
-                    EMI and lightning immune
-                  </td>
-                </tr> 
-                <tr className="bg-gray-300 font-bold">
-                  <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
-                    No powered or conductive in-field components
-                  </td>
-                </tr> 
-                <tr className="bg-gray-300 font-bold">
-                  <td colSpan="5" className="border border-r border-black p-2 text-gray-700">
-                    25-years+ service life
+                  <td colSpan="3" className="border-r border-black border p-2 text-black">
+                    Critical Infrastructure, Industrial, Commercial, residential
                   </td>
                 </tr> 
               </tbody>
             </table>
-          </div>     
+          </div> 
                        
+            
+        
 
             {/* SHARE SECTION */}
              <SocialShare title="Check out this product!" />
+
         </main>
 
-           {/* Sidebar */}
+          {/* Sidebar */}
               <aside className="lg:w-1/4 space-y-6"> 
                      <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
-                        <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By SENSTAR</h3>
-                        <ul className="space-y-4 text-gray-800 font-medium">
+                        <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By COCHRANE</h3>
+                         <ul className="space-y-4 text-gray-800 font-medium">
                             <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
                               <li className='cursor-pointer hover:text-[#ff5f31] transition-colors break-words'>Onity DirectKey with Serene</li>
                             </NavLink>
@@ -179,11 +161,11 @@ const PipelineTPI = () => {
                       
             
             
-            {/* Contact Card */}
-                     <div 
+          {/* Contact Card */}
+          <div 
               className="relative min-h-[240px] overflow-hidden rounded-2xl p-8 text-white shadow-md bg-cover bg-center bg-blend-multiply bg-blue-900/85"
               style={{ backgroundImage: "url('/assets/image/Our%20Products/quickalert.jpg')" }}
-            >
+             >
               <div className="relative z-10 max-w-3xl">
                 <h3 className="mb-4 text-2xl font-bold leading-tight tracking-wide">
                   Secure Your Peace Of Mind Today
@@ -200,9 +182,11 @@ const PipelineTPI = () => {
                   CONTACT US TODAY
                 </NavLink>
               </div>
-                      </div>
+            </div>
             
-              </aside>
+                </aside>
+
+         
 
         </div>
     </div>
@@ -212,4 +196,4 @@ const PipelineTPI = () => {
   );
 };
 
-export default PipelineTPI;
+export default ElectricSmart;

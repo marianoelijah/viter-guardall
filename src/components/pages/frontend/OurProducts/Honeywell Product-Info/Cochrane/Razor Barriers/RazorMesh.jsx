@@ -1,31 +1,29 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import Header from '../../../partials/Header';
-import Footer from '../../../partials/Footer';
-import SocialShare from '../../Reusable/SocialShare';
+import Header from '@/components/pages/frontend/partials/Header';
+import Footer from '@/components/pages/frontend/partials/Footer';
+import SocialShare from '../../../Reusable/SocialShare';
 
 
-
-
-const ShutterBarrier = () => {
+const RazorMesh = () => {
   const specs = [
-    { label: "Security Rating", value: "Category IV (Defence Rated)" },
-    { label: "Material", value: "High-tensile steel (Galvanized or Zincalu-Super)" },
-    { label: "Panel Type", value: "Solid steel shutters / solid steel panels" },
-    { label: "Standard Heights", value: "1.8 m, 2.1 m, 2.4 m, 3.0 m (Custom heights available)" },
-    { label: "Post System", value: "Taper Locking Post (bolted on the secure side)" },
-    { label: "Coating Options", value: "Marine Fusion Bond (Coastal), Polyester Powder Coating, or Hot-Dipped Galvanized" },
-    { label: "Ballistic Protection", value: "Customizable levels (tested against various ammunition types)" },
-    { label: "Wind Loading", value: "Engineered to withstand high wind loads despite being a solid surface" },
-    { label: "Compatible Toppings", value: "Shark Tooth, Castle Spikes, Electric Fencing, or Razor Wire" }
+    { label: "Material", value: "Cochrane Ripper Blade razor wire"},
+    { label: "Panel Type", value: "Rigid woven mesh"},
+    { label: "Climb resistance", value: "No footholds or handholds"},
+    { label: "Cut Resistance", value: "High – resists bolt cutters and saws" },
+    { label: "Coating", value: "Galvanized + optional protective coating" },
+    { label: "Integration", value: "ClearVu fences, Smart Coil, Electric Smart Coil" },
+    { label: "Applications", value: "Military bases, prisons, industrial plants, border security" },
   ];
 
   const productFeatures = [
-    "Controlled Visibility",
-    "Ballistic Shielding",
-    "Modular & Adaptable",
-    "Anti-Climb & Anti-Cut",
-    "Seamless Integration"
+    "Ripper Blade Razor Wire",
+    "Rigid Mesh Panels",
+    "Anti-Climb Design",
+    "Cut Resistance",
+    "Integration Options",
+    "Weather Protection",
+    "Rapid Deployment",
   ];
 
   return (
@@ -35,7 +33,7 @@ const ShutterBarrier = () => {
       {/* Header Banner */}
       <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
         <h1 className="text-5xl md:text-5xl font-bold max-w-5xl mx-auto leading-tight">
-          ClearVu Shutter Barrier
+          Razor Mesh
         </h1>
       </header>
 
@@ -44,13 +42,18 @@ const ShutterBarrier = () => {
         {/* Main Content Container */}
         <main className="lg:w-3/4 bg-gray-200 p-8 shadow-sm">
             <p className="text-gray-800 text-[17px] mb-6">
-               The ClearVu Shutter Barrier is a Category IV high-security perimeter fence. It serves as a hybrid solution for critical infrastructure that requires the strength of a defense-rated fence but must also hide sensitive operations from public view. It is particularly effective for sites that face "hostile surveillance" risks or require protection against ballistic threats.
+                Impenetrable Razor Mesh Security - a rigid, high-strength razor barrier
+                for maximum perimeter defense.
             </p>
 
             <section className="mb-8">
               <h2 className="font-bold text-xl mb-2 text-black">Product Description:</h2>
               <p className="text-gray-800 text-[17px] leading-relaxed">
-                Unlike the mesh-only design of the Invisible Wall, the Shutter Barrier features solid steel shutters (slats) integrated into the security framework. These shutters can be configured to be permanent, adjustable, or even removable depending on the site’s evolving security needs. It effectively creates a "blind" that prevents outsiders from seeing layouts, personnel routines, or high-value assets within the perimeter.
+                Constructed from Cochrane Ripper Blade razor wire woven into a mesh panel. Provides 
+                extreme cut resistance and anti-climb deterrence. Designed for long-term perimeter protection
+                in high-risk environments. It is used in military bases, prisons, industrial plants. Offers 
+                a cost effective solution compared to electrifiad systems, while still delivering formidable 
+                deterrence.
               </p>
 
                <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
@@ -92,8 +95,6 @@ const ShutterBarrier = () => {
                            </table>
                          </div>
                        </section>
-                       
-            
         
 
             {/* SHARE SECTION */}
@@ -129,8 +130,8 @@ const ShutterBarrier = () => {
                       
             
             
-                      {/* Contact Card */}
-                       <div 
+         {/* Contact Card */}
+            <div 
               className="relative min-h-[240px] overflow-hidden rounded-2xl p-8 text-white shadow-md bg-cover bg-center bg-blend-multiply bg-blue-900/85"
               style={{ backgroundImage: "url('/assets/image/Our%20Products/quickalert.jpg')" }}
             >
@@ -164,4 +165,4 @@ const ShutterBarrier = () => {
   );
 };
 
-export default ShutterBarrier;
+export default RazorMesh;
