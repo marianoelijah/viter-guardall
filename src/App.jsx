@@ -405,13 +405,17 @@ import RazorMesh from "./components/pages/frontend/OurProducts/Honeywell Product
 
 import RDBarrier from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Razor Barriers/RDBarrier";
 import Floating from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Water Barrier/Floating";
-import Vehicle from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Vehicle Barrier/Vehicle";
+
 import Rocket from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Military Defence/Rocket";
 import Drone from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Military Defence/Drone";
-import Razor from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Razor Barriers/Razor";
 import Castle from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Spike Barrier/Castle";
 import Rack from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Spike Barrier/Rack";
 import Tooth from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Spike Barrier/Tooth";
+import Razor from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Razor Barriers/Razor";
+import Cass from "./components/pages/frontend/OurProducts/product extend/cass/Cass";
+import Vehicle from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Vehicle Barrier/Vehicle";
+import ShutterBarrier from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/ClearVu Invisible Wall/ShutterBarrier";
+
 
 
 
@@ -840,6 +844,8 @@ const App = () => {
 
 
             {/* Cass Product Details Route */}
+            <Route path="/products/cass" element={<Cass/>} />
+
             <Route path="/our-products/cass/gate-barrier" element={<CP020X/>} />
             <Route path="/our-products/cass/token-acceptor" element={<CP555/>} />
             <Route path="/our-products/cass/ticket-scanner" element={<CP505/>} />
@@ -888,23 +894,23 @@ const App = () => {
 
             {/* ClearVu Invisible Wall Product Details Route */}
             <Route path="/our-products/cochrane/clearvu-invisible-wall/invisible-wall" element={<InvisibleWall/>} />
-            {/* <Route path="/products/cochrane/clearvu-invisible-wall/shutter-barrier" element={<ShutterBarrier/>} /> */}
+            <Route path="/our-products/cochrane/shutter-barrier" element={<ShutterBarrier/>} />
             <Route path="/our-products/cochrane/clearvu-invisible-wall/shadow-wall" element={<ShadowWall/>} />
             <Route path="/our-products/cochrane/clearvu-invisible-wall/reinforced" element={<Reinforced/>} />
             <Route path="/our-products/cochrane/clearvu-invisible-wall/decorative" element={<Decorative/>} />
             <Route path="/our-products/cochrane/clearvu-invisible-wall/curve" element={<Curve/>} />
 
             {/* ClearVu Razor Barriers Product Details Route */}
-            <Route path="/our-products/cochrane/razor-barriers/razor-barrier" element={<Razor/>} />
+            <Route path="/our-products/cochrane/razor-barrier/razor-barrier" element={<Razor/>} />
             <Route path="/our-products/cochrane/razor-barriers/electric-smart-coil" element={<ElectricSmart/>} />
-            <Route path="/our-products/cochrane/razor-barriers/razor-mesh" element={<RazorMesh/>} />
+            <Route path="/our-products/cochrane/razor-barrier/razor-mesh" element={<RazorMesh/>} />
             <Route path="/our-products/cochrane/razor-barriers/rapid-deploment-barrier" element={<RDBarrier/>} />
 
             {/* Cochrane Water Barrier Product Details Route */}
             <Route path="/our-products/cochrane/water-barrier/marine-floating-barrier" element={<Floating/>} />
 
             {/* Cochrane Vehicle Barrier Product Details Route */}
-            <Route path="/our-products/cochrane/vehicle-barrier/anti-vehicle-barrier" element={<Vehicle/>} />
+            <Route path="/products/cochrane/vehicle-barrier" element={<Vehicle/>} />
 
             {/* Cochrane Military and Defence Product Details Route */}
             <Route path="/our-products/cochrane/military-defence/anti-rocket-barrier" element={<Rocket/>} />
