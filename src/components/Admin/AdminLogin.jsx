@@ -27,6 +27,7 @@ export default function AdminLogin() {
       }
 
       // Save JWT token in Local Storage
+      // This is for the login dashboard for the owner of the website
       localStorage.setItem('guardall_token', data.token);
       localStorage.setItem('guardall_admin', JSON.stringify(data.admin));
 

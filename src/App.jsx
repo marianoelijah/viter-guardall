@@ -415,7 +415,7 @@ import Razor from "./components/pages/frontend/OurProducts/Honeywell Product-Inf
 import Cass from "./components/pages/frontend/OurProducts/product extend/cass/Cass";
 import Vehicle from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Vehicle Barrier/Vehicle";
 import ShutterBarrier from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/ClearVu Invisible Wall/ShutterBarrier";
-
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 
 
@@ -430,6 +430,10 @@ const App = () => {
     <QueryClientProvider client={queryClient}>
       <StoreProvider>
         <Router>
+
+          {/* SpeedInsights should be outside Routes */}
+      <SpeedInsights />
+
           <Routes>
             {/* Public Website Routes */}
             <Route path="/" element={<Home />} />
@@ -455,6 +459,7 @@ const App = () => {
               <Route path="/admin/dashboard" element={<AdminDashboard />} />
            </Route>
 
+           
 
           {/* Product Brand Section */}
             {/* Access Control System */}
