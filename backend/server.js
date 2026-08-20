@@ -39,6 +39,8 @@ const allowedOrigins = [
   "https://guardall.vercel.app",
   "https://viter-guardall.vercel.app",
   "https://viter-guardall.onrender.com",
+  "https://guardall.com.ph",
+  "https://www.guardall.com.ph"
 ];
 
 // 2. Enable CORS for local dev & production
