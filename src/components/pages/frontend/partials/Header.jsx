@@ -33,7 +33,7 @@ const Header = () => {
           <NavLink to="/who-we-are" className={linkStyles}>Who We Are</NavLink>
           <NavLink to="/our-products" className={linkStyles}>Our Products</NavLink>
           <NavLink to="/our-clients" className={linkStyles}>Our Clients</NavLink>
-          <NavLink to="/testimonials" className={linkStyles}>Testimonials</NavLink>
+          {/* <NavLink to="/testimonials" className={linkStyles}>Testimonials</NavLink> */}
         </nav>
 
         {/* Desktop CTA & Theme Switcher */}
@@ -76,7 +76,7 @@ const Header = () => {
           <NavLink to="/who-we-are" onClick={toggleMenu} className={linkStyles}>Who We Are</NavLink>
           <NavLink to="/our-products" onClick={toggleMenu} className={linkStyles}>Our Products</NavLink>
           <NavLink to="/our-clients" onClick={toggleMenu} className={linkStyles}>Our Clients</NavLink>
-          <NavLink to="/testimonials" onClick={toggleMenu} className={linkStyles}>Testimonials</NavLink>
+          {/* <NavLink to="/testimonials" onClick={toggleMenu} className={linkStyles}>Testimonials</NavLink> */}
           
           <Link to="/contacts" onClick={toggleMenu} className="pt-4">
             <button className="w-full bg-[#1e40af] text-white py-3 rounded font-bold">
