@@ -9,7 +9,7 @@ const AdminPanel = () => {
     product_description: '',
     product_image: '',
     product_details: "",
-    product_price: ''
+    
   });
   const [loading, setLoading] = useState(false);
 
@@ -35,7 +35,7 @@ const AdminPanel = () => {
         product_description: '',
         product_image: '',
         product_details: '',
-        product_price: ''
+        
       });
     } catch (err) {
       console.error('Submission error:', err);

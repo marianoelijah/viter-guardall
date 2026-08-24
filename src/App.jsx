@@ -367,7 +367,7 @@ import Mesh from "./components/pages/frontend/OurProducts/Honeywell Product-Info
 import Gateway from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Sensegiz/Gateway";
 import Deantas from "./components/pages/frontend/OurProducts/product extend/deantas/Deantas";
 import SmartHome from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dnake/SmartHome";
-import TestimonialPage from "./components/pages/frontend/testimonials/TestimonialPage";
+// import TestimonialPage from "./components/pages/frontend/testimonials/TestimonialPage";
 import IntercomAccessControl from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dnake/IntercomAccessControl";
 import WirelessDoorbell from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dnake/WirelessDoorbell";
 import N82B2P from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dahua/N82B2P";
@@ -397,15 +397,12 @@ import XField from "./components/pages/frontend/OurProducts/Honeywell Product-In
 import InvisibleWall from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/ClearVu Invisible Wall/InvisibleWall";
 import ShadowWall from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/ClearVu Invisible Wall/ShadowWall";
 import Reinforced from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/ClearVu Invisible Wall/Reinforced";
-
 import Curve from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/ClearVu Invisible Wall/Curve";
 import ElectricSmart from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Razor Barriers/ElectricSmart";
 import Decorative from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/ClearVu Invisible Wall/Decorative";
 import RazorMesh from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Razor Barriers/RazorMesh";
-
 import RDBarrier from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Razor Barriers/RDBarrier";
 import Floating from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Water Barrier/Floating";
-
 import Rocket from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Military Defence/Rocket";
 import Drone from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Military Defence/Drone";
 import Castle from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Spike Barrier/Castle";
@@ -416,9 +413,7 @@ import Cass from "./components/pages/frontend/OurProducts/product extend/cass/Ca
 import Vehicle from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/Vehicle Barrier/Vehicle";
 import ShutterBarrier from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/ClearVu Invisible Wall/ShutterBarrier";
 import { SpeedInsights } from "@vercel/speed-insights/react"
-
-
-
+import { Analytics } from "@vercel/analytics/react"
 
 
 
@@ -431,8 +426,9 @@ const App = () => {
       <StoreProvider>
         <Router>
 
-          {/* SpeedInsights should be outside Routes */}
+          {/* Performances should be outside Routes */}
       <SpeedInsights />
+      <Analytics />
 
           <Routes>
             {/* Public Website Routes */}
@@ -447,7 +443,7 @@ const App = () => {
             <Route path="/products/:slug" element={<BrandDetails />} />
 
             <Route path="/our-clients" element={<OurClientsPage />} />
-            <Route path="/testimonials" element={<TestimonialPage />} />
+            {/* <Route path="/testimonials" element={<TestimonialPage />} /> */}
             <Route path="/contacts" element={<OurContacts />} />
 
             {/* Admin Panel Route */}
@@ -460,7 +456,6 @@ const App = () => {
            </Route>
 
            
-
           {/* Product Brand Section */}
             {/* Access Control System */}
             <Route path="/products/honeywell" element={<HoneywellPage />} />
@@ -641,7 +636,6 @@ const App = () => {
             <Route path="/our-products/webgate/nk1080bl-ir48" element={<NK1080BLIR48/>} />
             <Route path="/our-products/webgate/nk5100bl" element={<NK5100BLIR42/>} />
             
-
             {/* Pelco Product Details Route */}
             <Route path="/our-products/pelco/ulisee-enhanced" element={<Ulisee/>} />
             <Route path="/our-products/pelco/spectra-enhanced" element={<Spectra/>} />
@@ -713,7 +707,6 @@ const App = () => {
              <Route path="/our-products/dahua/n22al12" element={<N22AL12/>} />
              <Route path="/our-products/dahua/n43cf6z" element={<N43CF6Z/>} />
              <Route path="/our-products/dahua/n43bx8z" element={<N43BX8Z />} />
-
 
               {/* Hanwha-Vision Product Details Route */}
               <Route path="/our-products/hanwha/PNMC16013RVQ" element={<PNMC16013RVQ/>} />
