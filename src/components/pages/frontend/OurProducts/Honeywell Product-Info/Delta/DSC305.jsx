@@ -5,9 +5,8 @@ import { NavLink } from 'react-router-dom';
 import SocialShare from '../../Reusable/SocialShare';
 
 
+const DSC305 = () => {
 
-// Shared Layout Component to maintain design consistency across all products
-const ProductLayout = ({ title, subtitle, description, features, specs, sidebarItems }) => {
   return (
     <>
     <Header />
@@ -15,7 +14,8 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
       {/* Banner Header */}
       <header className="bg-[#7f95b8] text-white py-14 px-4 text-center">
         <h1 className="text-5xl md:text-5xl font-bold max-w-5xl mx-auto leading-tight">
-          {title}
+           DSC 305 Medium Security Chrome Bollard
+          
         </h1>
       </header>
 
@@ -25,12 +25,19 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
           
           {/* Main Product Info */}
           <div className="lg:col-span-3">
-            <p className="text-[15px]  text-black mb-6">{subtitle}</p>
+            <p className="text-[15px]  text-black mb-6">
+              Made with steel, these bollards are designed to control entry and exit of vehicles in restricted areas.
+            </p>
 
             <section className="mb-8">
               <h2 className="font-bold text-xl text-black mb-2">Product Description:</h2>
               <p className="text-[15px] text-black leading-relaxed whitespace-pre-line">
-                {description}
+                The Model DSC305-PE Bollard System (“DSC305”) is designed to provide positive control of automobiles and 
+                trucks into and out of restricted areas. Precision steel bollards raised and lowered by a quiet pneumatic 
+                source are used as a primary bulwark against unauthorized or wayward vehicles and can stop aggravated or
+                accidental vehicle attacks. The DSC305 was designed for medium threat security applications and is engineered 
+                to stop and destroy light duty trucks and high speed passenger cars. The DSC305 can be a standalone traffic
+                controller for a single lane traffic-way, or it can be arrayed to control multiple lanes of bi-directional traffic.
               </p>
             </section>
 
@@ -166,6 +173,7 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
                 </NavLink>
               </div>
             </div>
+
           </aside>
         </div>
       </main>
@@ -174,27 +182,6 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
     </>
     
   );
-};
-
-// Example Usage for the Hirsch M64 Controller
-const DSC305 = () => {
-  const data = {
-    title: "DSC 305 Medium Security Chrome Bollard",
-    subtitle: "Made with steel, these bollards are designed to control entry and exit of vehicles in restricted areas.",
-    description: 
-    "The Model DSC305-PE Bollard System (“DSC305”) is designed to provide positive control of automobiles and trucks into and out of restricted areas. Precision steel bollards raised and lowered by a quiet pneumatic source are used as a primary bulwark against unauthorized or wayward vehicles and can stop aggravated or accidental vehicle attacks. The DSC305 was designed for medium threat security applications and is engineered to stop and destroy light duty trucks and high speed passenger cars. The DSC305 can be a standalone traffic controller for a single lane traffic-way, or it can be arrayed to control multiple lanes of bi-directional traffic.",
-
-    sidebarItems: [
-      "Onity DirectKey with Serene",
-      "MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs",
-      "INR 415 256-Channel 12 Bay RAID Backmount Standalone",
-      "GNR 340 100-Channel Tower Standalone",
-      "ENR 130 16-Channel Desktop Standalone NVR- No HDD Included",
-      "Z86 Outdoor Network Dome Camera with Night Vision"
-    ]
-  };
-
-  return <ProductLayout {...data} />;
 };
 
 export default DSC305;

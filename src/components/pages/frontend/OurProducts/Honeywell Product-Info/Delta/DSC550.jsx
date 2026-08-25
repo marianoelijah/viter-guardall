@@ -5,16 +5,24 @@ import { NavLink } from 'react-router-dom';
 import SocialShare from '../../Reusable/SocialShare';
 
 
-// Shared Layout Component to maintain design consistency across all products
-const ProductLayout = ({ title, subtitle, description, features, specs, sidebarItems }) => {
+const DSC550 = () => {
+    const productFeatures = [
+    "Certified M50 / P1 (ASTM F2656-20): stops a 15,000 lb vehicle at 50 mph / 80 kph.",
+    "Shallow foundation depth of -24 iches (=610 mm) - ideal for sites with buried utilites, high water table or limited excavation",
+    "Open-frame design with a counted-balance mechanism - no springs or extra mechanical assists, reducing maintenance",
+    "Available in widths from 10' to 16' clear opening - adaptable for various access-point geometries",
+    "Rapid operation: Emergency Fast Operate (EFO) as low as -0.75 seconds (hydraulic version) for urgent deployment"
+  ];
+
   return (
     <>
     <Header />
+
     <div className="bg-gray-100 min-h-screen font-sans text-slate-800">
       {/* Banner Header */}
       <header className="bg-[#7f95b8] text-white py-14 px-4 text-center">
         <h1 className="text-5xl md:text-5xl font-bold max-w-5xl mx-auto leading-tight">
-          {title}
+          DSC 550 Open Frame Wedge Barricade
         </h1>
       </header>
 
@@ -24,14 +32,31 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
           
           {/* Main Product Info */}
           <div className="lg:col-span-3">
-            <p className="text-[15px]  text-black mb-6">{subtitle}</p>
+            <p className="text-[15px]  text-black mb-6">
+              An open frame barricade ideal for underground utilities, buried pipes, and other obstructions.
+            </p>
 
             <section className="mb-8">
               <h2 className="font-bold text-xl text-black mb-2">Product Description:</h2>
               <p className="text-[15px] text-black leading-relaxed whitespace-pre-line">
-                {description}
+                The new Delta DSC550 open frame barricade marks the latest accomplishment from Delta Scientific Corporation. 
+                The DSC550’s shallow 24” foundation is ideal for applications where underground utilities, buried pipes and 
+                other obstructions may present a challenge. The open frame format provides a unique counter-balance design 
+                with no springs or other mechanical assists that need extra maintenance. Crash tested to the newest, more 
+                stringent ASTM F2656-20 M50 standard, the DSC550 achieved a P1 rating with negative penetration. With an 
+                EFO speed of 1.5 seconds for the electro-mechanical version and .75 seconds for the hydraulic version, you 
+                can be assured that the DSC550 will perform under a high duress situation. Easy installation, high performance, 
+                and low maintenance coupled with the intuitive touch screen panel with data-logging and custom programming makes 
+                the Delta DSC550 the one to beat!
               </p>
             </section>
+
+            <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
+            <ul className="list-disc ml-5 text-[17px] space-y-1 text-black">
+              {productFeatures.map((feature, index) => (
+                <li key={index}>{feature}</li>
+              ))}
+            </ul>
 
              {/* Technical Specifications Table */}
               <div className="bg-gray-300 p-6 shadow rounded border border-r divine-y">
@@ -140,10 +165,10 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
                 <NavLink to="/our-products/acti/channel-tower-strandalone" className='block'>
                   <li className='cursor-pointer hover:text-[#ff5f31] transition-colors break-words'>GNR 340 100-Channel Tower NVR</li>
                 </NavLink>
-            </ul>
-          </div>
+              </ul>
+            </div>
 
-            {/* Blue CTA Card */}
+        {/* Blue CTA Card */}
             <div 
               className="relative min-h-[240px] overflow-hidden rounded-2xl p-8 text-white shadow-md bg-cover bg-center bg-blend-multiply bg-blue-900/85"
               style={{ backgroundImage: "url('/assets/image/Our%20Products/quickalert.jpg')" }}
@@ -166,34 +191,20 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
               </div>
             </div>
           </aside>
+
         </div>
       </main>
     </div>
+
     <Footer />
     </>
     
   );
-};
+}
 
-// Example Usage for the Hirsch M64 Controller
-const DSC550 = () => {
-  const data = {
-    title: "DSC 550 Open Frame Wedge Barricade",
-    subtitle: "An open frame barricade ideal for underground utilities, buried pipes, and other obstructions.",
-    description: 
-    "The new Delta DSC550 open frame barricade marks the latest accomplishment from Delta Scientific Corporation. The DSC550’s shallow 24” foundation is ideal for applications where underground utilities, buried pipes and other obstructions may present a challenge. The open frame format provides a unique counter-balance design with no springs or other mechanical assists that need extra maintenance. Crash tested to the newest, more stringent ASTM F2656-20 M50 standard, the DSC550 achieved a P1 rating with negative penetration. With an EFO speed of 1.5 seconds for the electro-mechanical version and .75 seconds for the hydraulic version, you can be assured that the DSC550 will perform under a high duress situation. Easy installation, high performance, and low maintenance coupled with the intuitive touch screen panel with data-logging and custom programming makes the Delta DSC550 the one to beat!",
 
-    sidebarItems: [
-      "Onity DirectKey with Serene",
-      "MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs",
-      "INR 415 256-Channel 12 Bay RAID Backmount Standalone",
-      "GNR 340 100-Channel Tower Standalone",
-      "ENR 130 16-Channel Desktop Standalone NVR- No HDD Included",
-      "Z86 Outdoor Network Dome Camera with Night Vision"
-    ]
-  };
 
-  return <ProductLayout {...data} />;
-};
+
+
 
 export default DSC550;

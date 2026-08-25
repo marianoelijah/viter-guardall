@@ -5,8 +5,15 @@ import { NavLink } from 'react-router-dom';
 import SocialShare from '../../Reusable/SocialShare';
 
 
-// Shared Layout Component to maintain design consistency across all products
-const ProductLayout = ({ title, subtitle, description, features, specs, sidebarItems }) => {
+const DSC501 = () => {
+  const productFeatures = [
+    "Certified K12/L3 and tested up to K54, stopping a 65,000 ib truck at 50 mph",
+    "Shallow-foundation design: only 18 inches (466 cm) deep - ideal for sites with buried utilities, high water tables or corrosive soils",
+    "Fully operational after impact: barrier remained functional and the foundation undamanaged, offering second-stike capability.",
+    "Flush when lowered - ramp plate level with roadway and no trip hazards in access lanes",
+    "Designed for critical high-security and anti-terror applications: embassies, military bases, major infrastructure."
+  ]
+
   return (
     <>
     <Header />
@@ -14,7 +21,7 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
       {/* Banner Header */}
       <header className="bg-[#7f95b8] text-white py-14 px-4 text-center">
         <h1 className="text-5xl md:text-5xl font-bold max-w-5xl mx-auto leading-tight">
-          {title}
+          DSC 501 Wedge Barricade
         </h1>
       </header>
 
@@ -24,14 +31,33 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
           
           {/* Main Product Info */}
           <div className="lg:col-span-3">
-            <p className="text-[15px]  text-black mb-6">{subtitle}</p>
+            <p className="text-[15px]  text-black mb-6">
+              A high-security barricade suitable for high water table locations and areas with corrosive soils.
+            </p>
 
             <section className="mb-8">
               <h2 className="font-bold text-xl text-black mb-2">Product Description:</h2>
               <p className="text-[15px] text-black leading-relaxed whitespace-pre-line">
-                {description}
+                This high security barricade was designed for the U.S. Navy and has also been selected for use at U.S. Embassies. 
+                Set in a foundation only 18 inches (46 cm) deep, the Delta DSC501 is able to survive and operate after a 1.2 million 
+                foot pound impact. Upon extracting the truck after its crash test, the barricade was fully functional and performed 
+                a resounding 27,000 cycles with no wear! With its shallow foundation and aesthetic design, it is a major breakthrough 
+                in high duty, anti-terrorist barricades. It obviates the concerns of interference with buried pipes, power lines and 
+                fiber optic communication lines. The shallow foundation also reduces installation complexity, time, materials and 
+                corresponding costs. The DSC501 is suitable for high water table locations and areas with corrosive soils. 
+                Front face warning lights warn drivers that the barricade is in the “up” position. There is also an open area on the 
+                front for signage. Diagonal yellow and white stripes are standard and optional colors and graphics are available. 
+                The open channel construction even lets you specify hot dip galvanizing.
               </p>
             </section>
+
+
+            <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
+            <ul className="list-disc ml-5 text-[17px] space-y-1 text-black">
+              {productFeatures.map((feature, index) => (
+                <li key={index}>{feature}</li>
+              ))}
+            </ul>
 
              {/* Technical Specifications Table */}
               <div className="bg-gray-300 p-6 shadow rounded border border-r divine-y">
@@ -165,6 +191,7 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
                 </NavLink>
               </div>
             </div>
+
           </aside>
         </div>
       </main>
@@ -173,27 +200,9 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
     </>
     
   );
-};
 
-// Example Usage for the Hirsch M64 Controller
-const DSC501 = () => {
-  const data = {
-    title: "DSC 501 Wedge Barricade",
-    subtitle: "A high-security barricade suitable for high water table locations and areas with corrosive soils.",
-    description: 
-    "This high security barricade was designed for the U.S. Navy and has also been selected for use at U.S. Embassies. Set in a foundation only 18 inches (46 cm) deep, the Delta DSC501 is able to survive and operate after a 1.2 million foot pound impact. Upon extracting the truck after its crash test, the barricade was fully functional and performed a resounding 27,000 cycles with no wear! With its shallow foundation and aesthetic design, it is a major breakthrough in high duty, anti-terrorist barricades. It obviates the concerns of interference with buried pipes, power lines and fiber optic communication lines. The shallow foundation also reduces installation complexity, time, materials and corresponding costs. The DSC501 is suitable for high water table locations and areas with corrosive soils. Front face warning lights warn drivers that the barricade is in the “up” position. There is also an open area on the front for signage. Diagonal yellow and white stripes are standard and optional colors and graphics are available. The open channel construction even lets you specify hot dip galvanizing.",
 
-    sidebarItems: [
-      "Onity DirectKey with Serene",
-      "MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs",
-      "INR 415 256-Channel 12 Bay RAID Backmount Standalone",
-      "GNR 340 100-Channel Tower Standalone",
-      "ENR 130 16-Channel Desktop Standalone NVR- No HDD Included",
-      "Z86 Outdoor Network Dome Camera with Night Vision"
-    ]
-  };
 
-  return <ProductLayout {...data} />;
 };
 
 export default DSC501;

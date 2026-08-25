@@ -4,8 +4,15 @@ import Footer from '../../../partials/Footer';
 import { NavLink } from 'react-router-dom';
 import SocialShare from '../../Reusable/SocialShare';
 
-// Shared Layout Component to maintain design consistency across all products
-const ProductLayout = ({ title, subtitle, description, features, specs, sidebarItems }) => {
+const DSC2000 = () => {
+  const productFeatures = [
+    "K12/L3 certified: stops a 15,000 lb (=66.7 kN) vehicke at 50 mph (80 kph) with zero penetration",
+    "Extremely shallow foundation (-10-11 inches/25-28 cm) - ideal for installations where utilities, high water table or corrosive soils are concerns.",
+    "Modular, lightweight design - each module weighs approx 1,100 lb (500 kg) and can be handled manually or shipped easily, making it suitable for remote or constrained sites",
+    "Fast deployment & multi hit capable - designed for high speed operation; test array deployed in -0.382 seconds and remained operational after impact",
+    "Flush when lowered & minimal trip hazard - clear passage when barrier is down; strong aesthetic integration for high-security, high-visibility sites."
+  ];
+
   return (
     <>
     <Header />
@@ -13,7 +20,7 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
       {/* Banner Header */}
       <header className="bg-[#7f95b8] text-white py-14 px-4 text-center">
         <h1 className="text-5xl md:text-5xl font-bold max-w-5xl mx-auto leading-tight">
-          {title}
+          DSC 2000 Modular Wedge Barricade
         </h1>
       </header>
 
@@ -23,14 +30,32 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
           
           {/* Main Product Info */}
           <div className="lg:col-span-3">
-            <p className="text-[15px]  text-black mb-6">{subtitle}</p>
+            <p className="text-[15px]  text-black mb-6">
+              Designed for remote locations, this barricade can be easily transported while still protecting areas.
+            </p>
 
             <section className="mb-8">
               <h2 className="font-bold text-xl text-black mb-2">Product Description:</h2>
               <p className="text-[15px] text-black leading-relaxed whitespace-pre-line">
-                {description}
+                Because each module weighs only 1100 pounds (500 kg) and is easy to install, the DSC2000 barricade is 
+                perfect for remote locations and developing country installations. It fits in a small shipping package 
+                or air cargo container for convenient air transport. Modules can even be carried in the back of a pick-up 
+                truck. With its extremely shallow foundation and aesthetic design, the DSC2000 is a major breakthrough in 
+                high duty, anti-terrorist barricades. It obviates the concerns of interference with buried pipes, power 
+                lines and fiber optic communication lines. The DSC2000 is perfect for high water table locations and areas 
+                with corrosive soils. The ten-inch shallow foundation also reduces installation complexity, time, materials 
+                and corresponding costs. Delta’s fastest, smallest and shallowest foundation barricade was created especially 
+                for high speed applications and ease of installation. It is K12 crash certified with no penetration, meaning 
+                it will stop a 15,000 pound (66.7kN) vehicle traveling 50 mph (80 kph) dead in its tracks.
               </p>
             </section>
+
+            <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
+            <ul className="list-disc ml-5 text-[17px] space-y-1 text-black">
+              {productFeatures.map((feature, index) => (
+                <li key={index}>{feature}</li>
+              ))}
+            </ul>
 
              {/* Technical Specifications Table */}
               <div className="bg-gray-300 p-6 shadow rounded border border-r divine-y">
@@ -172,27 +197,6 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
     </>
     
   );
-};
-
-// Example Usage for the Hirsch M64 Controller
-const DSC2000 = () => {
-  const data = {
-    title: "DSC 2000 Modular Wedge Barricade",
-    subtitle: "Designed for remote locations, this barricade can be easily transported while still protecting areas.",
-    description: 
-    "Because each module weighs only 1100 pounds (500 kg) and is easy to install, the DSC2000 barricade is perfect for remote locations and developing country installations. It fits in a small shipping package or air cargo container for convenient air transport. Modules can even be carried in the back of a pick-up truck. With its extremely shallow foundation and aesthetic design, the DSC2000 is a major breakthrough in high duty, anti-terrorist barricades. It obviates the concerns of interference with buried pipes, power lines and fiber optic communication lines. The DSC2000 is perfect for high water table locations and areas with corrosive soils. The ten-inch shallow foundation also reduces installation complexity, time, materials and corresponding costs. Delta’s fastest, smallest and shallowest foundation barricade was created especially for high speed applications and ease of installation. It is K12 crash certified with no penetration, meaning it will stop a 15,000 pound (66.7kN) vehicle traveling 50 mph (80 kph) dead in its tracks.",
-
-    sidebarItems: [
-      "Onity DirectKey with Serene",
-      "MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs",
-      "INR 415 256-Channel 12 Bay RAID Backmount Standalone",
-      "GNR 340 100-Channel Tower Standalone",
-      "ENR 130 16-Channel Desktop Standalone NVR- No HDD Included",
-      "Z86 Outdoor Network Dome Camera with Night Vision"
-    ]
-  };
-
-  return <ProductLayout {...data} />;
 };
 
 export default DSC2000;

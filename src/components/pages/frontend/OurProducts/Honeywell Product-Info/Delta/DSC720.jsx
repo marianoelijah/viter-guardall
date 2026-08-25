@@ -5,8 +5,15 @@ import { NavLink } from 'react-router-dom';
 import SocialShare from '../../Reusable/SocialShare';
 
 
-// Shared Layout Component to maintain design consistency across all products
-const ProductLayout = ({ title, subtitle, description, features, specs, sidebarItems }) => {
+const DSC720 = () => {
+  const productFeatures = [
+    "Certified K12 (ASTM M50/P1): tested to stop a 15,000 lb vehicle at 50 mph",
+    "Compact crash-rated design: approx 35' tall (89 cm) and 15.1' diameter with decorative sleeves",
+    "Flexible deployment formats: available as fixed post or power operated (hydraulic, pneumatic, electromechanical, manual) with matching architectural covers" ,
+    "Designed for high-risk such as federal facilities, embassies, and other high-security perimeters.",
+    "Aesthetically customizable: painted steel, brushed stainless sleeve or aluminum decorative castings to blend into architectural environments"
+  ];
+
   return (
     <>
     <Header />
@@ -14,7 +21,7 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
       {/* Banner Header */}
       <header className="bg-[#7f95b8] text-white py-14 px-4 text-center">
         <h1 className="text-5xl md:text-5xl font-bold max-w-5xl mx-auto leading-tight">
-          {title}
+          DSC 720 High Security Bollard
         </h1>
       </header>
 
@@ -24,14 +31,30 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
           
           {/* Main Product Info */}
           <div className="lg:col-span-3">
-            <p className="text-[15px]  text-black mb-6">{subtitle}</p>
+            <p className="text-[15px]  text-black mb-6">
+              Designed for high-security properties, this bollard can stop and destroy much larger vehicles at high velocities. 
+            </p>
 
             <section className="mb-8">
               <h2 className="font-bold text-xl text-black mb-2">Product Description:</h2>
               <p className="text-[15px] text-black leading-relaxed whitespace-pre-line">
-                {description}
+                The DSC720 is Delta’s highest crash rated bollard tested with a 15,000 lb vehicle at 50 mph and achieving K-12 bollards 
+                crash rating. This high security bollard will stop and destroy much larger vehicles than those tested at very high velocities. 
+                Applications include Federal and DOD facilities, embassies and high profile, high-risk clients. The DSC720 high security 
+                barricade bollards are 35 inches (89 CM) tall and 15.1 inches wide without the casting. The DSC720 series is available as a 
+                painted steel tube or supplied with a brushed stainless steel sleeve or decorative aluminum castings using Delta’s standard 
+                or custom design for a specific project. The DSC720 bollards are available with Hydraulic Power (HPU), Delta’s All Weather 
+                Pneumatic, Electromechanical,Manual and as Fixed Posts all with matching sleeves or covers. Consult Delta’s sales department
+                for application recommendations.
               </p>
             </section>
+
+             <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
+            <ul className="list-disc ml-5 text-[17px] space-y-1 text-black">
+              {productFeatures.map((feature, index) => (
+                <li key={index}>{feature}</li>
+              ))}
+            </ul>
 
              {/* Technical Specifications Table */}
               <div className="bg-gray-300 p-6 shadow rounded border border-r divine-y">
@@ -176,24 +199,14 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
 };
 
 // Example Usage for the Hirsch M64 Controller
-const DSC720 = () => {
+
   const data = {
-    title: "DSC 720 High Security Bollard",
-    subtitle: "Designed for high-security properties, this bollard can stop and destroy much larger vehicles at high velocities. ",
+    title: "",
+    subtitle: "",
     description: 
-    "The DSC720 is Delta’s highest crash rated bollard tested with a 15,000 lb vehicle at 50 mph and achieving K-12 bollards crash rating. This high security bollard will stop and destroy much larger vehicles than those tested at very high velocities. Applications include Federal and DOD facilities, embassies and high profile, high-risk clients. The DSC720 high security barricade bollards are 35 inches (89 CM) tall and 15.1 inches wide without the casting. The DSC720 series is available as a painted steel tube or supplied with a brushed stainless steel sleeve or decorative aluminum castings using Delta’s standard or custom design for a specific project. The DSC720 bollards are available with Hydraulic Power (HPU), Delta’s All Weather Pneumatic, Electromechanical,Manual and as Fixed Posts all with matching sleeves or covers. Consult Delta’s sales department for application recommendations.",
+    "",
 
-    sidebarItems: [
-      "Onity DirectKey with Serene",
-      "MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs",
-      "INR 415 256-Channel 12 Bay RAID Backmount Standalone",
-      "GNR 340 100-Channel Tower Standalone",
-      "ENR 130 16-Channel Desktop Standalone NVR- No HDD Included",
-      "Z86 Outdoor Network Dome Camera with Night Vision"
-    ]
+
   };
-
-  return <ProductLayout {...data} />;
-};
 
 export default DSC720;
