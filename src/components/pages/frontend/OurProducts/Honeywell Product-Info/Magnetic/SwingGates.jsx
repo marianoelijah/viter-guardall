@@ -52,10 +52,10 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
                   <td colSpan="1" className="border-r border-black border text-black p-2 ">
                   </td>
                   <td colSpan="2" className="border border-r border-black p-2 text-black">
-                    MPR 112 (Standard)
+                    MPW 112 (Standard)
                   </td>
                   <td colSpan="2" className="border border-r border-black p-2 text-black">
-                    MPR 112 (Wide Lane)
+                    MPW 112 (Wide Lane)
                   </td>
                 </tr>
                 <tr className="bg-gray-300 font-bold">
@@ -63,7 +63,7 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
                     Passage width
                   </td>
                   <td colSpan="2" className="border border-r border-black p-2 text-gray-700">
-                    520 mm
+                    600 mm
                   </td>
                   <td colSpan="3" className="border border-r border-black p-2 text-gray-700">
                     990 mm
@@ -86,8 +86,11 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
                   <td colSpan="1" className="border-r border-black border text-black p-2 ">
                     Drive technology
                   </td>
-                  <td colSpan="5" className="border-black  p-2 border text-gray-700">
-                    MHTM
+                   <td colSpan="2" className="border-black  p-2 border text-gray-700">
+                    MHTM™
+                  </td>
+                  <td colSpan="3" className="border-black  p-2 border text-gray-700">
+                    MHTM™
                   </td>
                 </tr>
                 
@@ -95,8 +98,11 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
                   <td colSpan="1" className="border-r border-black border text-black p-2 ">
                     Voltage
                   </td>
-                  <td colSpan="5" className="border-black  p-2 border text-gray-700">
-                    110 – 240 VAC, 50/60 Hz
+                  <td colSpan="2" className="border-black  p-2 border text-gray-700">
+                    110 – 240 VAC, 50/60 Hz 
+                  </td>
+                  <td colSpan="3" className="border-black  p-2 border text-gray-700">
+                    110 – 240 VAC, 50/60 Hz 
                   </td>
                 </tr>
 
@@ -104,8 +110,11 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
                   <td colSpan="1" className="border-r border-black border text-black p-2 ">
                     Power Consumption
                   </td>
-                  <td colSpan="5" className="border-black  p-2 border text-gray-700">
-                     Maximum 120W
+                  <td colSpan="2" className="border-black  p-2 border text-gray-700">
+                   
+                  </td>
+                  <td colSpan="3" className="border-black  p-2 border text-gray-700">
+                    
                   </td>
                 </tr>
 
@@ -113,8 +122,11 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
                   <td colSpan="1" className="border-r border-black border text-black p-2 ">
                     Duty cycle
                   </td>
-                  <td colSpan="5" className="border-black  p-2 border text-gray-700">
-                     100 %
+                   <td colSpan="2" className="border-black  p-2 border text-gray-700">
+                     
+                  </td>
+                  <td colSpan="3" className="border-black  p-2 border text-gray-700">
+                    
                   </td>
                 </tr>
 
@@ -122,8 +134,11 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
                   <td colSpan="1" className="border-r border-black border text-black p-2 ">
                       Housing dimensions (L x W x H)
                   </td>
-                  <td colSpan="5" className="border-black  p-2 border text-gray-700">
-                     1750 x 150 x 1045 mm
+                   <td colSpan="2" className="border-black  p-2 border text-gray-700">
+                     
+                  </td>
+                  <td colSpan="3" className="border-black  p-2 border text-gray-700">
+                     
                   </td>
                 </tr>
 
@@ -131,8 +146,11 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
                   <td colSpan="1" className="border-r border-black border text-black p-2 ">
                     Housing Material
                   </td>
-                  <td colSpan="5" className="border-black  p-2 border text-gray-700">
-                    Stainless steel 304/316
+                   <td colSpan="2" className="border-black  p-2 border text-gray-700">
+                    
+                  </td>
+                  <td colSpan="3" className="border-black  p-2 border text-gray-700">
+                    z
                   </td>
                 </tr>
 
@@ -243,11 +261,11 @@ const SwingGates = () => {
     subtitle: "Allows rapid separation of visitors, designed with enlarged widths to allow transport of people and materials.",
     description: "For access control, steering visitors, and passage into secured areas – MPW swing gates are the ideal solution for the rapid separation and control of persons. Variants with enlarged passage widths also make the MPW suitable for wheelchairs, prams, and the transport of materials. Passage fundamentally takes place without contact. Photoelectric switches in the housings reliably detect users and open the gates before they come into contact with them. The barriers close automatically after passage.",
     features: [
-      "Short opening times of 0.6 seconds for a high throughflow frequency",
-      "Sleek design and comfortable non-contact passage",
-      "Simple integration of all common access control systems",
-      "Automatic opening if power fails",
-      "Wide variants suitable for wheelchairs and bicycles",
+      "High visitor throughput thanks to rapid opening times and preset travel functions",
+      "Open-gate mode for extra throughput acceleration",
+      "For maximum security requirements in monitored and unmonitored areas",
+      "Low impact forces for maximum personal safety",
+      "Freely turning on power outages",
       "Designed for 10 million opening and closing actions"
     ],
 

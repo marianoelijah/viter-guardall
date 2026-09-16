@@ -414,6 +414,7 @@ import Vehicle from "./components/pages/frontend/OurProducts/Honeywell Product-I
 import ShutterBarrier from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Cochrane/ClearVu Invisible Wall/ShutterBarrier";
 import { SpeedInsights } from "@vercel/speed-insights/react"
 import { Analytics } from "@vercel/analytics/react"
+import MPT from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Magnetic/MPT";
 
 
 
@@ -428,6 +429,9 @@ const App = () => {
 
           {/* Performances should be outside Routes */}
       <SpeedInsights />
+      
+          {/* This would be seen in the Vercel dashboard */}
+          
       <Analytics />
 
           <Routes>
@@ -861,6 +865,8 @@ const App = () => {
             <Route path="/our-products/magnetic/mpw-swing-gates" element={<SwingGates/>} />
             <Route path="/our-products/magnetic/retractable-gates" element={<RetractableGates/>} />
             <Route path="/our-products/magnetic/pedestrian-passageway-with-wing-gates" element={<MWingPedestrian/>} />
+
+            <Route path="/our-products/magnetic/mpt-turnstiles" element={<MPT/>} />
 
             {/* Leda Product Details Route */}
             <Route path="/our-products/leda/urban-square-light" element={<UrbanSquare/>} />

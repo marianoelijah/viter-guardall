@@ -67,7 +67,7 @@ export default function Testimonials() {
               Testimonials
           </p>
           <p className="mt-4 text-xl leading-7 text-slate-400">
-            Click on any client card below to inspect project details, 
+            Click on any client card below to inspect project details,
             hardware setups, and deployment outcomes.
           </p>
           <p>
@@ -96,6 +96,7 @@ export default function Testimonials() {
                   <div className="space-y-2 flex-1">
                     <div className="h-3 bg-slate-700/50 rounded w-1/2"></div>
                     <div className="h-3 bg-slate-700/50 rounded w-1/3"></div>
+                    <></>
                   </div>
                 </div>
               </div>
@@ -111,7 +112,8 @@ export default function Testimonials() {
               onClick={() => window.location.reload()} 
               className="mt-3 text-xs bg-red-900/50 hover:bg-red-800/60 text-red-200 px-3 py-1.5 rounded-lg border border-red-700/50 transition-colors"
             >
-              Not Responding, Please Try Again
+              Not Responding, Please Try Again <br/>
+              Refresh the site or contact support if the issue persists.
             </button>
           </div>
         )}

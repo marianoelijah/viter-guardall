@@ -65,6 +65,14 @@ export default function AdminDashboard() {
     );
   };
 
+  const renderStatusBagde = (status) => {
+    const statusMap = {
+      new: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',
+      in_discussion: 'bg-amber-500/10 text-amber-400 border-amber-500/20',
+      default: 'bg-gray-500/10 text-gray-400 border-gray-500/20'
+    }
+  }
+
   return (
     <div className="min-h-screen bg-gray-950 text-gray-100 p-6 flex flex-col">
       {/* Top Header */}

@@ -23,18 +23,18 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
           
           {/* Main Product Info */}
           <div className="lg:col-span-3">
-            <p className="text-[15px]  text-black mb-6">{subtitle}</p>
+            <p className="text-[17px]  text-black mb-6">{subtitle}</p>
 
             <section className="mb-8">
               <h2 className="font-bold text-xl text-black mb-2">Product Description:</h2>
-              <p className="text-[15px] text-black leading-relaxed whitespace-pre-line">
+              <p className="text-[17px] text-black leading-relaxed whitespace-pre-line">
                 {description}
               </p>
             </section>
 
             <section className="mb-10">
               <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
-              <ul className="list-disc ml-5 text-[15px] text-black space-y-1">
+              <ul className="list-disc ml-5 text-[17px] text-black space-y-1">
                 {features.map((feature, idx) => (
                   <li key={idx}>{feature}</li>
                 ))}
@@ -291,25 +291,18 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
 // Example Usage for the Hirsch M64 Controller
 const Turnstiles = () => {
   const data = {
-    title: "MPP Turnstiles",
+    title: "MPP Motorized pivot-arm Turnstiles",
     subtitle: "This passageway is ideal for division and management of large number of people  such as public pools or sports stadiums.",
     description: "At swimming pools, sports stadiums or public toilets – MPP turnstiles are the ideal choice wherever large numbers of people must be reliably individualized and managed. The robust housings and stainless steel barrier arms not only withstand improper use, but are also suitable for outdoor applications (option). MPP turnstiles offer versatile operation: a large number of people can easily be managed with one of the many applications available while bi-directional operation permits a single turnstile to act as both entrance and exit. And MPP turnstiles are ideally equipped for emergencies: The barrier allows free passage if there",
     features: [
-      "Robust turnstiles for high throughput frequencies",
-      "Optional drop-arm mechanism permits passage in case of power cut or alarm",
+      "Rugged and reliable turnstiles for high throughput",
+      "Optional drop-arm mechanism permits passage in case of power failure or alarm",
       "High-quality stainless steel housing for indoor or outdoor use",
-      "Simple integration of all common access control systems",
+      "Simple integration of most access control systems",
       "Designed for 10 million throughput cycles"
     ],
 
-    sidebarItems: [
-      "Onity DirectKey with Serene",
-      "MAD-401 and MAD-402 Series Addressable Modules 1 & 2 Technical Inputs",
-      "INR 415 256-Channel 12 Bay RAID Backmount Standalone",
-      "GNR 340 100-Channel Tower Standalone",
-      "ENR 130 16-Channel Desktop Standalone NVR- No HDD Included",
-      "Z86 Outdoor Network Dome Camera with Night Vision"
-    ]
+    
   };
 
   return <ProductLayout {...data} />;

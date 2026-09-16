@@ -15,7 +15,7 @@ const CP020X = () => {
       "1.8 sec – 6.0 sec for intensive use",
       "Can accommodate arm up to 6 meters",
       "Electronic running time control",
-      "Emergency release",
+      "Emergency release",    
       "Detachable arm mechanism",
       "Aluminum profile boom with red reflective sticker",
       "Galvanized and passivated mechanical parts"

@@ -17,6 +17,7 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
         <h1 className="text-5xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
           {title}
         </h1>
+        
       </header>
 
       {/* Content Container */}

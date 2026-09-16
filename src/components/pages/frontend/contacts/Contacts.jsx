@@ -86,6 +86,7 @@ const Contacts = () => {
         setContactInfo([]);
       });
 
+
     // Pulling office records
     fetch(buildApiUrl('/api/footer-offices'))
       .then((res) => {
