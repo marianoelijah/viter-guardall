@@ -129,7 +129,7 @@ const Footer = () => {
         {/* Copyright Section */}
         <div className="border-t border-gray-100 mt-12 pt-8 text-center px-4">
           <p className="text-xs sm:text-sm text-gray-500 leading-loose">
-            &copy; {new Date().getFullYear()} <span className="font-semibold text-blue-800">Guard-All Security Systems Inc.</span><br className="sm:hidden" /> All Rights Reserved.
+            &copy; {new Date().getFullYear()} <span className="font-semibold text-blue-800">Guard-All Electronic Security Systems Inc.</span><br className="sm:hidden" /> All Rights Reserved.
           </p>
         </div>
       </div>

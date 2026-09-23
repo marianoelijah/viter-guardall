@@ -12,16 +12,17 @@ const API_BASE_URL = getApiBaseUrl();
 const buildApiUrl = (path) => `${API_BASE_URL.replace(/\/$/, '')}${path}`;
 
 // Move static data outside the component to prevent re-renders
+// Static branch data with forced pinpoint markers
 const BRANCHES = {
   makati: {
     name: "Makati Head Office",
     address: "Unit 708 Cattleya Building, 235 Salcedo St. Legaspi Village, Makati City",
-    embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.6493134371584!2d121.0156!3d14.5547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c908f9f8f9f8%3A0x0!2sCattleya%20Building!5e0!3m2!1sen!2sph!4v1620000000000!5m2!1sen!2sph"
+    embedUrl: "https://maps.google.com/maps?q=14.55243,121.01582+(Guard-All%20Makati%20Head%20Office)&t=&z=18&ie=UTF8&iwloc=B&output=embed"
   },
   cebu: {
     name: "Cebu Branch",
     address: "Unit 306 Cebu Holdings Building, Cebu Business Park, Cebu City",
-    embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.34!2d123.90!3d10.31!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a999!2sCebu%20Business%20Park!5e0!3m2!1sen!2sph!4v1620000000000!5m2!1sen!2sph"
+    embedUrl: "https://maps.google.com/maps?q=10.3168,123.9038+(Guard-All%20Cebu%20Branch)&t=&z=17&ie=UTF8&iwloc=B&output=embed"
   }
 };
 
@@ -124,7 +125,7 @@ const Contacts = () => {
             <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#2257a0] transition-colors">
               <Phone className="text-[#2257a0] group-hover:text-white" size={32} />
             </div>
-            <div className="space-y-2 text-gray-700 font-medium text-center">
+            <div className="space-y-2 text-gray-700 font-medium text-center hover:text-[#2257a0] transition-colors">
               <p>(02) 8817 4132</p>
               <p>(02) 8840 5673</p>
               <p>(+63) 998 843 9711</p>
@@ -221,7 +222,7 @@ const Contacts = () => {
                  )}
                 
                 <button type="submit" disabled={status === 'sending'} className="w-auto px-20 bg-[#1435a0] hover:bg-[#ff5f31] text-white py-4 font-bold rounded disabled:bg-gray-400 transition-all shadow-md">
-                  {status === 'sending' ? 'Sending Your Inquiry...' : 'SEND US A MESSAGE NOW'}
+                  {status === 'sending' ? 'Sending Your Inquiry...' : 'SEND US A MESSAGE NOW'  }
                 </button>
 
               </form>
@@ -239,8 +240,8 @@ const Contacts = () => {
                     onClick={() => setActiveBranch(key)}
                     className={`w-full text-left p-4 rounded-xl transition-all ${activeBranch === key ? 'bg-[#2257a0] text-white shadow-lg' : 'bg-white text-gray-600 hover:bg-blue-50'}`}
                   >
-                    <p className="font-bold uppercase text-sm">{BRANCHES[key].name}</p>
-                    <p className="text-xs mt-1 opacity-80">{BRANCHES[key].address}</p>
+                    <p className="font-bold uppercase text-xl">{BRANCHES[key].name}</p>
+                    <p className="text-lg mt-1 opacity-80">{BRANCHES[key].address}</p>
                   </button>
                 ))}
               </div>

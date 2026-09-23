@@ -415,6 +415,7 @@ import ShutterBarrier from "./components/pages/frontend/OurProducts/Honeywell Pr
 import { SpeedInsights } from "@vercel/speed-insights/react"
 import { Analytics } from "@vercel/analytics/react"
 import MPT from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Magnetic/MPT";
+// import TestimonialPage from "./components/pages/frontend/testimonials/TestimonialPage";
 
 
 

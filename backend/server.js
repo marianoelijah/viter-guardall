@@ -39,6 +39,7 @@ const allowedOrigins = [
   "https://guardall.vercel.app",
   "https://viter-guardall.vercel.app",
   "https://viter-guardall.onrender.com",
+  "https://new.guardall.com.ph",
   "https://guardall.com.ph",
   "https://www.guardall.com.ph"
 ];
