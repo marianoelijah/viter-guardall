@@ -54,12 +54,14 @@ const SecurityExperts = () => {
           <div className="lg:w-1/3">
             <div className="flex items-center gap-4 mb-4">
               <h2 className="text-[3rem] font-bold text-blue-900 leading-tight">
-                Meet Our <br /> Security Experts
+                Meet Our <br /> 
+                Security Experts
               </h2>
               <div className="bg-[#ff5f31] p-2 rounded-full text-white shrink-0">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                 </svg>
+
               </div>
             </div>
           </div>
