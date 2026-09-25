@@ -91,9 +91,9 @@ const GuardAllLanding = () => {
           <h1 className="text-5xl md:text-7xl font-bold text-[#2257a0] mb-4 md:mb-6 tracking-tight">
             Our Clients
           </h1>
-          <p className="text-black max-w-3xl mx-auto text-xl md:text-2xl">
-            We trust Guard-All because they are an exclusive system integrators of world-class
-            products to ensure our company gets world-class security.
+          <p className="text-3xl  md:text-xl font-semibold text-[#04080e] mb-4 md:mb-6 tracking-tight">
+            We trust Guard-All because they are an exclusive system integrators < br/>
+            of world-class products to ensure our company gets world-class security.
           </p>
         </header>
 

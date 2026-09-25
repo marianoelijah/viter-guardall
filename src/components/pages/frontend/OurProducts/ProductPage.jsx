@@ -48,7 +48,8 @@ const ProductPage = () => {
              Our Products
           </h1>
           <p className="text-3xl  md:text-xl font-semibold text-[#04080e] mb-4 md:mb-6 tracking-tight">
-             With our 40-year expertise in the industry, Guard-All has partnered with the best security product manufacturers to be their “Exclusive” or “Authorized” distributors.
+             With our 40-year expertise in the industry, Guard-All has partnered with the best security product manufacturers < br/>
+             to be their “Exclusive” or “Authorized” distributors.
           </p>
         </div>
         
