@@ -7,6 +7,7 @@ const SecurityExperts = () => {
   const [intros, setIntros] = useState([]); // Changed to support an array of intros
   const [currentSlide, setCurrentSlide] = useState(0); // Track the slideshow index
   const [loading, setLoading] = useState(true);
+  
 
   useEffect(() => {
     const fetchExpertData = async () => {

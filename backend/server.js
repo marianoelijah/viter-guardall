@@ -41,7 +41,7 @@ const allowedOrigins = [
   "https://viter-guardall.onrender.com",
   "https://new.guardall.com.ph",
   "https://guardall.com.ph",
-  "https://www.guardall.com.ph"
+  "https://www.guardall.com.ph"  
 ];
 
 // 2. Enable CORS for local dev & production
