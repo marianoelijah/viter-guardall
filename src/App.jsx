@@ -415,6 +415,7 @@ import ShutterBarrier from "./components/pages/frontend/OurProducts/Honeywell Pr
 import { SpeedInsights } from "@vercel/speed-insights/react"
 import { Analytics } from "@vercel/analytics/react"
 import MPT from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Magnetic/MPT";
+import AnalogicPage from "./components/pages/frontend/OurProducts/product extend/analogic/AnalogicPage";
 // import TestimonialPage from "./components/pages/frontend/testimonials/TestimonialPage";
 
 
@@ -485,6 +486,7 @@ const App = () => {
             <Route path="/products/gilardoni" element={<GilardoniPage />} />
             <Route path="/products/ceia" element={<CeiaPage />} />
             <Route path="/products/autoclear" element={<AutoclearPage />} />
+            <Route path="/products/analogic" element={<AnalogicPage />} />
 
              {/* Fire Alarm */}
             <Route path="/products/detnov" element={<DetnovPage />} />

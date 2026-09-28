@@ -112,7 +112,7 @@ const Contacts = () => {
         <h2 className="text-5xl md:text-6xl drop-shadow-sm tracking-tigh text-[#2257a0] mb-4">
           Secure Your Life Today!
         </h2>
-        <p className="text-gray-700 text-lg max-w-2xl mx-auto">
+        <p className="text-3xl  md:text-xl font-semibold text-[#04080e] mb-4 md:mb-6 tracking-tight">
           Tell us what your property needs. Our team is ready to help and support you!
         </p>
       </section>
