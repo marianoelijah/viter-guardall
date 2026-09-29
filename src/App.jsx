@@ -1,4 +1,4 @@
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes, useLocation } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Home from "./components/pages/frontend/home/Home";
 import { StoreProvider } from "./components/store/storeContext";
@@ -416,10 +416,20 @@ import { SpeedInsights } from "@vercel/speed-insights/react"
 import { Analytics } from "@vercel/analytics/react"
 import MPT from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Magnetic/MPT";
 import AnalogicPage from "./components/pages/frontend/OurProducts/product extend/analogic/AnalogicPage";
+import { useEffect } from "react";
+import SeleCT from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Analogic/SeleCT";
 // import TestimonialPage from "./components/pages/frontend/testimonials/TestimonialPage";
 
 
+ const ScrollToTop = () => {
+  const { pathname } = useLocation();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
 
 const App = () => {
 
@@ -428,13 +438,14 @@ const App = () => {
     <QueryClientProvider client={queryClient}>
       <StoreProvider>
         <Router>
+          {/* This will prevent the page view in the middle instead at the Start of the Page.*/}
+        <ScrollToTop />
 
           {/* Performances should be outside Routes */}
-      <SpeedInsights />
+        <SpeedInsights />
       
           {/* This would be seen in the Vercel dashboard */}
-          
-      <Analytics />
+        <Analytics />
 
           <Routes>
             {/* Public Website Routes */}
@@ -761,6 +772,10 @@ const App = () => {
             <Route path="/our-products/autoclear/series-trace-detector" element={<E5000/>} />
             <Route path="/our-products/autoclear/e3500-trace-detector" element={<E3500/>} />
             <Route path="/our-products/autoclear/compact-tree-detector" element={<Clx/>} />
+
+            {/* Analogic Product Details Route */}
+            <Route path="/our-products/analogic/select-hold-baggage-air-cargo-security-system" element={<SeleCT/>} />
+
 
             {/* Detnov Product Details Route */}
             <Route path="/our-products/detnov/technical-inputs" element={<Technical/>} />
