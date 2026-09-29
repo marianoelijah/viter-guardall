@@ -18,7 +18,7 @@ const ClientCard = ({ name, logo_path }) => (
         />
       </div>
       <div className="absolute bottom-4 md:bottom-6 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 text-center px-4">
-        <span className="text-[10px] md:text-[11px] font-extrabold tracking-[0.25em] text-blue-600 uppercase block leading-tight">
+        <span className="text-xl md:text-xl font-extrabold tracking-[0.25em] text-blue-600 uppercase block leading-tight">
           {name}
         </span>
       </div>
@@ -91,7 +91,7 @@ const GuardAllLanding = () => {
           <h1 className="text-5xl md:text-7xl font-bold text-[#2257a0] mb-4 md:mb-6 tracking-tight">
             Our Clients
           </h1>
-          <p className="text-3xl  md:text-xl font-semibold text-[#04080e] mb-4 md:mb-6 tracking-tight">
+          <p className="text-2xl md:text-3xl font-semibold text-[#ff5f31] hover:text-black mb-4 md:mb-6 tracking-tight">
             We trust Guard-All because they are an exclusive system integrators < br/>
             of world-class products to ensure our company gets world-class security.
           </p>

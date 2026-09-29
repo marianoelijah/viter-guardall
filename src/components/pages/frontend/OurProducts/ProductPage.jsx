@@ -44,10 +44,10 @@ const ProductPage = () => {
           {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-10 text-[4rem] sm:text-[8rem] md:text-[12rem] font-black select-none pointer-events-none whitespace-nowrap">
             GUARD-ALL
           </div> */}
-          <h1 className="text-5xl  md:text-7xl font-bold text-[#2257a0] mb-4 md:mb-6 tracking-tight">
+          <h1 className="text-5xl md:text-7xl font-bold text-[#2257a0] mb-4 md:mb-6 tracking-tight">
              Our Products
           </h1>
-          <p className="text-3xl  md:text-xl font-semibold text-[#04080e] mb-4 md:mb-6 tracking-tight">
+          <p className="text-2xl md:text-3xl font-semibold text-[#ff5f31] hover:text-black  mb-4 md:mb-6 tracking-tight">
              With our 40-year expertise in the industry, Guard-All has partnered with the best security product manufacturers < br/>
              to be their “Exclusive” or “Authorized” distributors.
           </p>
@@ -72,13 +72,13 @@ const ProductPage = () => {
              />
             </div>
               <h3 className="text-3xl font-bold text-[#1e3a8a] mb-4">{cat.title}</h3>
-              <p className="text-gray-500 text-xl leading-relaxed">{cat.description}</p>
+              <p className="text-gray-500 text-xl md:text-2xl leading-relaxed">{cat.description}</p>
 
 
 
               {/* Brands Section */}
               <div className="mt-auto border-t pt-8">
-                <p className="text-[#ff5f31] text-xl lg:text-lg  font-black uppercase tracking-[0.25em] mb-6 text-center">
+                <p className="text-[#ff5f31] text-xl md:text-2xl  font-black uppercase tracking-[0.25em] mb-6 text-center">
                   Click to view more:
                 </p>
                 {/* Supplier Brands */}  {/* sm:grid-cols-3 - this is way too small to see on laptop view */} 

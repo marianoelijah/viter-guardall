@@ -48,9 +48,11 @@ const Who = () => {
             <div className="border-b border-white/30 md:border-b-0 pb-8 md:pb-0">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-orange-500 border-b-[8px] border-b-transparent"></div>
-                <h3 className="text-2xl font-bold uppercase tracking-wide">Our Mission</h3>
+                <h3 className="text-2xl md:text-3xl font-bold uppercase tracking-wide">
+                  Our Mission
+                </h3>
               </div>
-              <p className="text-lg font-light leading-relaxed max-w-md">
+              <p className="text-lg md:text-xl font-light leading-relaxed max-w-md">
                 {data.mission_text}
               </p>
               <div className="h-px bg-white/30 mt-8 w-full"></div>
@@ -60,9 +62,11 @@ const Who = () => {
             <div className="pb-8 md:pb-0">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-orange-500 border-b-[8px] border-b-transparent"></div>
-                <h3 className="text-2xl font-bold uppercase tracking-wide">Our Vision</h3>
+                <h3 className="text-2xl md:text-3xl font-bold uppercase tracking-wide">
+                  Our Vision
+                </h3>
               </div>
-              <p className="text-lg font-light leading-relaxed max-w-md">
+              <p className="text-lg md:text-xl font-light leading-relaxed max-w-md">
                 {data.vision_text}
               </p>
               <div className="h-px bg-white/30 mt-8 w-full"></div>

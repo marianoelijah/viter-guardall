@@ -70,10 +70,10 @@ const SecurityExperts = () => {
           {/* Active Slide Content */}
           <div className="lg:w-2/3 w-full flex flex-col justify-between min-h-[180px]">
             <div className="border-l-4 border-[#ff5f31] pl-6 transition-all duration-500 ease-in-out">
-              <h3 className="text-xl font-bold text-blue-900 uppercase mb-2">
+              <h3 className="text-2xl md:text-2xl font-bold text-blue-900 uppercase mb-2">
                 {intros[currentSlide]?.dept_name}
               </h3>
-              <p className="text-gray-600 text-xl leading-relaxed">
+              <p className="text-xl md:text-xl text-gray-600  leading-relaxed">
                 {intros[currentSlide]?.description}
               </p>
             </div>
@@ -112,10 +112,10 @@ const SecurityExperts = () => {
               <div className="flex items-start gap-2">
                 <div className="mt-1.5 w-0 h-0 border-t-[5px] border-t-transparent border-l-[8px] border-l-[#ff5f31] border-b-[5px] border-b-transparent shrink-0"></div>
                 <div>
-                  <h4 className="text-xl font-bold text-blue-900 group-hover:text-blue-700 transition-colors">
+                  <h4 className="text-2xl md:text-2xl font-bold text-blue-900 hover:text-[#ff5f31] transition-colors">
                     {expert.name}
                   </h4>
-                  <p className="text-blue-500 text-sm font-medium mt-1 uppercase tracking-wider">
+                  <p className="text-lg md:text-lg text-blue-700 hover:text-[#ff5f31] font-medium mt-1 uppercase tracking-wider">
                     {expert.position}
                   </p>
                 </div>

@@ -69,59 +69,59 @@ const SeleCT = () => {
                   </td>
             </tr>
             <tr>
-              <td rowSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td rowSpan={2} className=" font-bold border-r border-black border p-4 text-black align-middle">
                 Dimensions
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">
+              <td  className=" w-1/5 p-4 text-black align-middle border-b border-r border-black ">
                 L
               </td>
-              <td className="p-4 text-black border-black border align-middle border-b ">
+              <td colSpan="2" className="p-4 text-black border-black border align-middle border-b ">
                 W
               </td>
             </tr>
             <tr>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-4 text-black align-middle border-b border-r border-black">
                 5,143 mm (202.5 in)
               </td>
-              <td className="p-4 text-black border align-middle border-b border-black">
+              <td colSpan="2" className="border-r border-black border p-4 text-black align-middle">
                 2,200 mm (86.6 in)
               </td>
             </tr>
 
             <tr>
-              <td rowSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td rowSpan={2} className=" font-bold border-r border-black border p-4 text-black align-middle">
                 Tunnel Size
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">
+              <td  className="w-1/5 p-4 text-black align-middle border-b border-r border-black ">
                 H
               </td>
-              <td className="p-4 text-black border-black border align-middle border-b ">
+              <td colSpan="2" className="p-4 text-black border-black border align-middle border-b ">
                 W
               </td>
             </tr>
             <tr>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-4 text-black align-middle border-b border-r border-black">
                 2,260 mm (89.0 in)
               </td>
-              <td className="p-4 text-black border align-middle border-b border-black">
+              <td colSpan="2" className="p-4 text-black border align-middle border-b border-black">
                 1020 mm (40.2 in)
               </td>
             </tr>
 
             <tr>
-              <td rowSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td rowSpan={2} className=" font-bold border-r border-black border p-4 text-black align-middle">
                 Weight
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">
+              <td  className="border-r border-black border p-4 text-black align-middle">
               </td>
-              <td className="p-4 text-black border-black border align-middle border-b ">
+              <td colSpan="2" className="border-r border-black border p-4 text-black align-middle">
               </td>
             </tr>
             <tr>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="border-r border-black border p-4 text-black align-middle">
                 810 mm (31.9 in)
               </td>
-              <td className="p-4 text-black border align-middle border-b border-black">
+              <td colSpan="2" className="border-r border-black border p-4 text-black align-middle">
                 6,000 kg (13,228 lbs)
               </td>
             </tr>
@@ -246,11 +246,11 @@ const SeleCT = () => {
             {/* Footer Tags & Socials */}
             <div className="flex flex-wrap gap-3 mb-8 mt-10">
               <span className="bg-[#FF5F31] text-white px-2 py-1 rounded">
-                
+                ANALOGIC
               </span>
-              
-              <span className="bg-[#FF5F31] text-white px-2 py-1 rounded">
                 
+              <span className="bg-[#FF5F31] text-white px-2 py-1 rounded">
+                Detection Systems
               </span>
             </div>
 

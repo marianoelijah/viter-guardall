@@ -34,7 +34,7 @@ const TrustedClients = () => {
   return (
     <div className="bg-[#0a0a0a] py-16 overflow-hidden border-t border-white/5 font-poppins">
       <div className="container mx-auto px-4 mb-10 text-center">
-        <h2 className="text-blue-500 text-4xl font-black mb-6 tracking-tight">
+        <h2 className="text-[#1161da] text-4xl md:text-5xl font-black mb-6 tracking-tight">
           Our Trusted Clients
         </h2>
       </div>
@@ -69,7 +69,7 @@ const TrustedClients = () => {
               <img
                 src={`${IMAGE_BASE_URL}${client.logo_path}`}
                 alt={`${client.name} logo`}
-                className="h-10 md:h-14 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity duration-300"
+                className="h-10 md:h-14 w-auto opacity-100 hover:opacity-70 ease-in-out hover:-translate-y-2 hover:shadow-2xl cursor-pointer"
               />
             </div>
           ))}
@@ -78,9 +78,9 @@ const TrustedClients = () => {
 
       {/* Optional: Simple Indicator */}
       <div className="flex justify-center mt-8">
-        <div className="h-1 w-16 bg-blue-500/20 rounded-full overflow-hidden">
+        <div className="h-1 w-16 bg-blue-500/30 rounded-full overflow-hidden">
             <motion.div 
-                className="h-full bg-blue-500"
+                className="h-full bg-[#0D47A1]"
                 animate={{ x: ["-100%", "100%"] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
             />

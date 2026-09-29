@@ -122,7 +122,7 @@ const BannerSlider = () => {
       {/* Left Arrow */}
       <button 
         onClick={handlePrev}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-white/80 hover:bg-[#0D47A1] hover:text-white text-gray-800 p-3 rounded-full shadow-md transition-all duration-300 opacity-0 group-hover:opacity-100 hidden md:block"
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-[#0D47A1] hover:bg-[#ff5f31] hover:text-black text-white p-3 rounded-full shadow-md transition-all duration-300 opacity-80 group-hover:opacity-100 block md:block"
         aria-label="Previous Slide"
       >
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-6 h-6">
@@ -133,7 +133,7 @@ const BannerSlider = () => {
       {/* Right Arrow */}
       <button 
         onClick={handleNext}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-white/80 hover:bg-[#0D47A1] hover:text-white text-gray-800 p-3 rounded-full shadow-md transition-all duration-300 opacity-0 group-hover:opacity-100 hidden md:block"
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-[#0D47A1] hover:bg-[#ff5f31] hover:text-black text-white p-3 rounded-full shadow-md transition-all duration-300 opacity-80 group-hover:opacity-100 block md:block"
         aria-label="Next Slide"
       >
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-6 h-6">

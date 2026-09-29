@@ -33,10 +33,10 @@ const OurProducts = () => {
   return (
     <section className="py-20 bg-white font-poppins">
       <div className="max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-5xl md:text-7xl text-[#2257a0] mb-6 drop-shadow-sm tracking-tigh">
+        <h2 className="text-5xl md:text-6xl tracking-tight text-[#2257a0] mb-6 drop-shadow-sm tracking-tigh">
           Our Products
         </h2>
-        <p className="text-gray-600 max-w-3xl mx-auto mb-12 text-xl leading-relaxed">
+        <p className="text-black md:text:4xl text-xl max-w-3xl mx-auto mb-12  leading-relaxed">
           Guard-All offers a comprehensive range of state-of-the-art electronic security products tailored to meet diverse security needs.
         </p>
 

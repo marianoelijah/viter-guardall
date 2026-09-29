@@ -48,9 +48,13 @@ const Founders = () => {
               </div>
               <div className="flex items-center gap-2">
                  <div className="w-0 h-0 border-t-[6px] border-t-transparent border-l-[10px] border-l-orange-500 border-b-[6px] border-b-transparent"></div>
-                 <h4 className="text-2xl font-bold text-blue-900 leading-none">{person.name}</h4>
+                 <h4 className="text-2xl md:text-2xl font-bold text-blue-900 leading-none">
+                  {person.name}
+                 </h4>
               </div>
-              <p className="text-blue-500 font-medium mt-2 ml-4">{person.position}</p>
+              <p className="text-xl md:text-xl text-blue-500 font-medium mt-2 ml-4">
+                {person.position}
+              </p>
             </div>
           ))}
         </div>

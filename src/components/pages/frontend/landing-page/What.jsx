@@ -34,7 +34,7 @@ const What = () => {
           <h2 className="text-4xl md:text-7xl font-black text-gray-900 mb-4 uppercase tracking-tight">
             What We Do
           </h2>
-          <p className="text-gray-600 text-xl max-w-4xl leading-relaxed">
+          <p className="text-gray-800 text-xl md:text-2xl max-w-4xl leading-relaxed">
             We are dedicated to deliver you a holistic approach to electronic security. 
             Our attention to service and 24/7 team will ensure that your company's 
             security gets the attention it needs.
@@ -51,11 +51,11 @@ const What = () => {
               </div>
 
               {/* Text Content */}
-              <h3 className="text-xl font-bold text-gray-900 mb-4 tracking-tight uppercase min-h-[56px] flex items-center">
+              <h3 className="text-2xl md:text-2xl font-bold text-gray-900 mb-4 tracking-tight uppercase min-h-[56px] flex items-center">
                 {service.title}
               </h3>
               
-              <p className="text-gray-600 leading-relaxed text-base">
+              <p className="text-xl md:text-xl text-gray-800 leading-relaxed">
                 {service.description}
               </p>
             </div>

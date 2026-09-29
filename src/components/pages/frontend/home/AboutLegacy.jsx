@@ -78,7 +78,7 @@ const AboutLegacy = () => {
             <span className="text-blue-900">of Protecting Properties</span>
           </h2>
           
-          <p className="text-gray-600 leading-relaxed mb-8 text-lg md:text-lg">
+          <p className="text-xl md:text-xl text-gray-800 leading-relaxed mb-8">
             From a security systems integrator to one of the Philippines' most trusted solutions provider. 
             Guard-All's legacy is built on trust and dedication to protect the lives of our fellow Filipinos. 
             We assure that you're getting only the best from engineering to installation down to after-sales.
@@ -94,7 +94,7 @@ const AboutLegacy = () => {
           <div className="grid grid-cols-3 gap-8 border-t border-gray-300 pt-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-left">
-                <div className="text-5xl md:text-5xl font-black text-gray-900 tabular-nums">
+                <div className="text-4xl md:text-5xl font-black text-gray-900 tabular-nums">
                   <AnimatedCounter target={stat.value} duration={1500} />
                   {stat.suffix}
                 </div>

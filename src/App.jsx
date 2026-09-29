@@ -774,7 +774,7 @@ const App = () => {
             <Route path="/our-products/autoclear/compact-tree-detector" element={<Clx/>} />
 
             {/* Analogic Product Details Route */}
-            <Route path="/our-products/analogic/select-hold-baggage-air-cargo-security-system" element={<SeleCT/>} />
+            <Route path="/our-products/analogic/select" element={<SeleCT/>} />
 
 
             {/* Detnov Product Details Route */}
