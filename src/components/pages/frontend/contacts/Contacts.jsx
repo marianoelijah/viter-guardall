@@ -106,13 +106,13 @@ const Contacts = () => {
     <div className="min-h-screen bg-slate-200 font-poppins selection:bg-blue-100">
       {/* Header Section */}
       <section className="pt-20 pb-12 text-center px-6">
-        <h1 className="text-5xl md:text-7xl text-[#2257a0] mb-6 drop-shadow-sm tracking-tigh">
+        <h1 className="text-5xl md:text-6xl text-[#2257a0] mb-6 drop-shadow-sm tracking-tigh">
           Contact Us
         </h1>
-        <h2 className="text-5xl md:text-6xl drop-shadow-sm tracking-tigh text-[#2257a0] mb-4">
+        <h2 className="text-4xl md:text-5xl drop-shadow-sm tracking-tigh text-[#1e3a8a] mb-4">
           Secure Your Life Today!
         </h2>
-        <p className="text-3xl  md:text-xl font-semibold text-[#04080e] mb-4 md:mb-6 tracking-tight">
+        <p className="text-2xl  md:text-3xl font-semibold text-[#ff5f31] hover:text-black mb-4 md:mb-6 tracking-tight">
           Tell us what your property needs. Our team is ready to help and support you!
         </p>
       </section>
@@ -125,7 +125,7 @@ const Contacts = () => {
             <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#2257a0] transition-colors">
               <Phone className="text-[#2257a0] group-hover:text-white" size={32} />
             </div>
-            <div className="space-y-2 text-gray-700 font-medium text-center hover:text-[#2257a0] transition-colors">
+            <div className="text-lg md:text-xl space-y-2 text-gray-900 font-medium text-center hover:text-[#2257a0] transition-colors">
               <p>(02) 8817 4132</p>
               <p>(02) 8840 5673</p>
               <p>(+63) 998 843 9711</p>
@@ -137,9 +137,9 @@ const Contacts = () => {
             <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#2257a0] transition-colors">
               <Globe className="text-[#2257a0] group-hover:text-white" size={32} />
             </div>
-            <div className="space-y-2 text-center">
-              <a href="mailto:info@guardall.com.ph" className="block text-gray-700 font-medium hover:text-[#2257a0]">info@guardall.com.ph</a>
-              <a href="https://www.guardall.com.ph" target="_blank" rel="noreferrer" className="block text-gray-700 font-medium hover:text-[#2257a0]">www.guardall.com.ph</a>
+            <div className="text-lg md:text-xl space-y-2 text-center">
+              <a href="mailto:info@guardall.com.ph" className="block text-gray-900 font-medium hover:text-[#2257a0]">info@guardall.com.ph</a>
+              <a href="https://www.guardall.com.ph" target="_blank" rel="noreferrer" className="block text-gray-900 font-medium hover:text-[#2257a0]">www.guardall.com.ph</a>
             </div>
           </div>
 
@@ -154,15 +154,15 @@ const Contacts = () => {
             {/* Offices & Social - External Geolocation Hyperlinks */}
             <div className="space-y-4 text-sm text-gray-600 inline-block sm:block text-left">
                 {offices.map((office) => (
-                  <div key={office.id} className="flex gap-3">
-                    <FaMapMarkerAlt className="text-blue-800 shrink-0 mt-1 text-lg" />
+                  <div key={office.id} className="md:text-xl text-lg flex gap-3">
+                    <FaMapMarkerAlt className="text-xl text-[#1435a0] shrink-0 mt-1" />
                         <p>
-                        <strong className="text-gray-800">{office.city}:</strong> |{" "}
+                        <strong className="text-gray-900 hover:text-[#1435a0]">{office.city}:</strong> |{" "}
                         <a 
                           href={office.map_link} 
                           target="_blank" 
                           rel="noopener noreferrer" 
-                          className="hover:text-blue-600 hover:underline transition-colors"
+                          className="text-xs md:text-lg hover:text-[#1435a0] hover:underline transition-colors"
                         >
                           {office.address}
                           </a>
@@ -221,7 +221,7 @@ const Contacts = () => {
                   </div>
                  )}
                 
-                <button type="submit" disabled={status === 'sending'} className="w-auto px-20 bg-[#1435a0] hover:bg-[#ff5f31] text-white py-4 font-bold rounded disabled:bg-gray-400 transition-all shadow-md">
+                <button type="submit" disabled={status === 'sending'} className="w-auto bg-[#1435a0] hover:bg-[#ff5f31] text-white py-2 px-5 md:py-4 md:px-15 justicy-center text-align text-center font-bold rounded disabled:bg-gray-400 transition-all shadow-md">
                   {status === 'sending' ? 'Sending Your Inquiry...' : 'SEND US A MESSAGE NOW'  }
                 </button>
 
@@ -232,16 +232,18 @@ const Contacts = () => {
           {/* Interactive Map Section */}
           <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100 grid grid-cols-1 lg:grid-cols-3">
             <div className="p-8 bg-slate-50 border-r border-slate-100">
-              <h3 className="text-2xl font-bold text-[#1e3a8a] mb-6">Our Locations</h3>
+              <h3 className="text-2xl md:text-3xl font-bold text-[#1e3a8a] mb-6">
+                Our Locations
+              </h3>
               <div className="space-y-4">
                 {Object.keys(BRANCHES).map((key) => (
                   <button
                     key={key}
                     onClick={() => setActiveBranch(key)}
-                    className={`w-full text-left p-4 rounded-xl transition-all ${activeBranch === key ? 'bg-[#2257a0] text-white shadow-lg' : 'bg-white text-gray-600 hover:bg-blue-50'}`}
+                    className={`w-full text-left p-4 rounded-xl transition-all ${activeBranch === key ? 'bg-[#1e3a8a] text-white shadow-lg' : 'bg-white text-gray-600 hover:bg-blue-50'}`}
                   >
-                    <p className="font-bold uppercase text-lg">{BRANCHES[key].name}</p>
-                    <p className="text-xs mt-1 opacity-80">{BRANCHES[key].address}</p>
+                    <p className="text-lg md:text-xs font-bold uppercase">{BRANCHES[key].name}</p>
+                    <p className="text-xs md:text-xs mt-1 opacity-80">{BRANCHES[key].address}</p>
                   </button>
                 ))}
               </div>
