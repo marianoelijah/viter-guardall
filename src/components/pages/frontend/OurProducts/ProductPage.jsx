@@ -47,7 +47,7 @@ const ProductPage = () => {
           <h1 className="text-5xl md:text-7xl font-bold text-[#2257a0] mb-4 md:mb-6 tracking-tight">
              Our Products
           </h1>
-          <p className="text-2xl md:text-2xl font-semibold text-[#ff5f31] hover:text-black  mb-4 md:mb-6 tracking-tight">
+          <p className="text-xl md:text-2xl font-semibold text-[#ff5f31] hover:text-black  mb-4 md:mb-6 tracking-tight">
              With our 40-year expertise in the industry, Guard-All has partnered with the best security product manufacturers < br/>
              to be their “Exclusive” or “Authorized” distributors.
           </p>

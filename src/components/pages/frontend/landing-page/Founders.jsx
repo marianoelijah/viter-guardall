@@ -48,11 +48,11 @@ const Founders = () => {
               </div>
               <div className="flex items-center gap-2">
                  <div className="w-0 h-0 border-t-[6px] border-t-transparent border-l-[10px] border-l-orange-500 border-b-[6px] border-b-transparent"></div>
-                 <h4 className="text-2xl md:text-2xl font-bold text-blue-900 leading-none">
+                 <h4 className="text-2xl md:text-2xl font-bold text-blue-900 hover:text-[#ff5f31] leading-none">
                   {person.name}
                  </h4>
               </div>
-              <p className="text-xl md:text-xl text-blue-500 font-medium mt-2 ml-4">
+              <p className="text-[16px] md:text-[17px] text-blue-700 hover:text-[#ff5f31] font-medium mt-2 ml-4 uppercase">
                 {person.position}
               </p>
             </div>
@@ -80,7 +80,7 @@ const Founders = () => {
             
             <div className="flex gap-4">
               <div className="mt-2 w-0 h-0 border-t-[6px] border-t-transparent border-l-[10px] border-l-orange-500 border-b-[6px] border-b-transparent shrink-0"></div>
-              <p className="text-gray-600 text-lg leading-relaxed italic">
+              <p className="text-gray-900 hover:text-[#ff5f31] text-lg leading-relaxed italic">
                 {message.long_message}
               </p>
             </div>

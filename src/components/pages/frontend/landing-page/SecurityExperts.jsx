@@ -115,7 +115,7 @@ const SecurityExperts = () => {
                   <h4 className="text-2xl md:text-2xl font-bold text-blue-900 hover:text-[#ff5f31] transition-colors">
                     {expert.name}
                   </h4>
-                  <p className="text-lg md:text-lg text-blue-700 hover:text-[#ff5f31] font-medium mt-1 uppercase tracking-wider">
+                  <p className="text-[16px] md:text-[17px] text-blue-700 hover:text-[#ff5f31] font-medium mt-1 uppercase tracking-wider">
                     {expert.position}
                   </p>
                 </div>
