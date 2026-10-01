@@ -417,7 +417,11 @@ import { Analytics } from "@vercel/analytics/react"
 import MPT from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Magnetic/MPT";
 import AnalogicPage from "./components/pages/frontend/OurProducts/product extend/analogic/AnalogicPage";
 import { useEffect } from "react";
+import ConneCT from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Analogic/ConneCT";
 import SeleCT from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Analogic/SeleCT";
+import Express from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Analogic/eXpress";
+
+
 // import TestimonialPage from "./components/pages/frontend/testimonials/TestimonialPage";
 
 
@@ -774,7 +778,9 @@ const App = () => {
             <Route path="/our-products/autoclear/compact-tree-detector" element={<Clx/>} />
 
             {/* Analogic Product Details Route */}
-            <Route path="/our-products/analogic/select" element={<SeleCT/>} />
+            <Route path="/our-products/analogic/connect-aviation-security-checkpoint-system" element={<ConneCT/>} />
+            <Route path="/our-products/analogic/select-hold-baggage-and-air-cargo-security-system" element={<SeleCT/>} />
+            <Route path="/our-products/analogic/express-automated-tray-return-system" element={<Express/>} />
 
 
             {/* Detnov Product Details Route */}

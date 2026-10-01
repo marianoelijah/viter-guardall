@@ -106,13 +106,13 @@ const Contacts = () => {
     <div className="min-h-screen bg-slate-200 font-poppins selection:bg-blue-100">
       {/* Header Section */}
       <section className="pt-20 pb-12 text-center px-6">
-        <h1 className="text-5xl md:text-6xl text-[#2257a0] mb-6 drop-shadow-sm tracking-tigh">
+        <h1 className="text-4xl md:text-7xl font-bold text-[#2257a0] mb-4 md:mb-6 tracking-tight">
           Contact Us
         </h1>
-        <h2 className="text-4xl md:text-5xl drop-shadow-sm tracking-tigh text-[#1e3a8a] mb-4">
+        <h2 className="text-3xl md:text-5xl font-bold text-[#2257a0] mb-4 md:mb-6 tracking-tight">
           Secure Your Life Today!
         </h2>
-        <p className="text-2xl  md:text-3xl font-semibold text-[#ff5f31] hover:text-black mb-4 md:mb-6 tracking-tight">
+        <p className="text-xl  md:text-2xl font-semibold text-[#ff5f31] hover:text-black mb-4 md:mb-6 tracking-tight">
           Tell us what your property needs. Our team is ready to help and support you!
         </p>
       </section>

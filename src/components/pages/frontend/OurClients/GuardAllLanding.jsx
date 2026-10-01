@@ -18,7 +18,7 @@ const ClientCard = ({ name, logo_path }) => (
         />
       </div>
       <div className="absolute bottom-4 md:bottom-6 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 text-center px-4">
-        <span className="text-xl md:text-xl font-extrabold tracking-[0.25em] text-blue-600 uppercase block leading-tight">
+        <span className="text-xl md:text-lg font-extrabold tracking-[0.25em] text-blue-600 uppercase block leading-tight">
           {name}
         </span>
       </div>
@@ -85,13 +85,11 @@ const GuardAllLanding = () => {
     <div className="min-h-screen bg-[#c6d3e0] py-12 md:py-20 px-4 md:px-12 font-sans overflow-x-hidden">
       <div className="max-w-7xl mx-auto">
         <header className="text-center mb-16 md:mb-32 relative">
-          {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-10 text-[4rem] sm:text-[8rem] md:text-[12rem] font-black select-none pointer-events-none whitespace-nowrap">
-            GUARD-ALL
-          </div> */}
+          
           <h1 className="text-5xl md:text-7xl font-bold text-[#2257a0] mb-4 md:mb-6 tracking-tight">
             Our Clients
           </h1>
-          <p className="text-2xl md:text-3xl font-semibold text-[#ff5f31] hover:text-black mb-4 md:mb-6 tracking-tight">
+          <p className="text-2xl md:text-2xl font-semibold text-[#ff5f31] hover:text-black mb-4 md:mb-6 tracking-tight">
             We trust Guard-All because they are an exclusive system integrators < br/>
             of world-class products to ensure our company gets world-class security.
           </p>

@@ -65,17 +65,17 @@ const SeleCT = () => {
         <tbody>
             <tr className="bg-gray-300 ">
                   <td colSpan="5" className="border-r border-black border p-2 font-bold w-1/2 text-center">
-                    PHYSICAL SPECIFICATIONS
+                   PHYSICAL SPECIFICATIONS
                   </td>
             </tr>
             <tr>
               <td rowSpan={2} className=" font-bold border-r border-black border p-4 text-black align-middle">
                 Dimensions
               </td>
-              <td  className=" w-1/5 p-4 text-black align-middle border-b border-r border-black ">
+              <td className=" w-1/5 p-4 text-black align-middle border-b border-r border-black ">
                 L
               </td>
-              <td colSpan="2" className="p-4 text-black border-black border align-middle border-b ">
+              <td colSpan="3" className="p-4 text-black border-black border align-middle border-b ">
                 W
               </td>
             </tr>
@@ -83,7 +83,7 @@ const SeleCT = () => {
               <td className="p-4 text-black align-middle border-b border-r border-black">
                 5,143 mm (202.5 in)
               </td>
-              <td colSpan="2" className="border-r border-black border p-4 text-black align-middle">
+              <td colSpan="3" className="border-r border-black border p-4 text-black align-middle">
                 2,200 mm (86.6 in)
               </td>
             </tr>
@@ -92,19 +92,19 @@ const SeleCT = () => {
               <td rowSpan={2} className=" font-bold border-r border-black border p-4 text-black align-middle">
                 Tunnel Size
               </td>
-              <td  className="w-1/5 p-4 text-black align-middle border-b border-r border-black ">
-                H
+              <td className="w-1/5 p-4 text-black align-middle border-b border-r border-black ">
+               H
               </td>
-              <td colSpan="2" className="p-4 text-black border-black border align-middle border-b ">
-                W
+              <td colSpan="3" className="p-4 text-black border-black border align-middle border-b ">
+               W
               </td>
             </tr>
             <tr>
               <td className="p-4 text-black align-middle border-b border-r border-black">
                 2,260 mm (89.0 in)
               </td>
-              <td colSpan="2" className="p-4 text-black border align-middle border-b border-black">
-                1020 mm (40.2 in)
+              <td colSpan="3" className="p-4 text-black border align-middle border-b border-black">
+                1020 mm (31.9 in)
               </td>
             </tr>
 
@@ -114,42 +114,44 @@ const SeleCT = () => {
               </td>
               <td  className="border-r border-black border p-4 text-black align-middle">
               </td>
-              <td colSpan="2" className="border-r border-black border p-4 text-black align-middle">
+              <td colSpan="3" className="border-r border-black border p-4 text-black align-middle">
+               6,000 kg (13,228 lbs)
               </td>
             </tr>
+
             <tr>
               <td className="border-r border-black border p-4 text-black align-middle">
-                810 mm (31.9 in)
+                
               </td>
-              <td colSpan="2" className="border-r border-black border p-4 text-black align-middle">
-                6,000 kg (13,228 lbs)
+              <td colSpan="3" className="border-r border-black border p-4 text-black align-middle">
+                
               </td>
             </tr>
 
                <tr className="bg-gray-300 ">
                   <td colSpan="5" className="border-r border-black border p-2 font-bold w-1/2 text-center">
-                     ENVIRONMENT & POWER    
+                      ENVIRONMENT & POWER
                    </td>
                </tr>
                 <tr className="bg-gray-300 ">
                   <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    Operating Temp
+                    Operating Temperature
                   </td>
                   <td colSpan="3" className="border border-r border-black  p-2">
-                   0 to 40 C (32-104 F)
+                    0 to 40 C (32-104 F)
                   </td>
                 </tr>
                 <tr className="bg-gray-300 ">
                   <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    Operating Humidity
+                   Operating Humidity
                   </td>
                   <td colSpan="3" className="border border-r border-black  p-2">
-                    10 to 90%, non-condensing
+                    10 t0 90%, non-condensing
                   </td>
                 </tr>
                 <tr className="bg-gray-300 ">
                   <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    Storage Temp
+                    Storage Temperature
                   </td>
                   <td colSpan="3" className="border border-r border-black  p-2">
                     -20 to 50 C (0-120 F)
@@ -173,15 +175,15 @@ const SeleCT = () => {
                 </tr>
                 <tr className="bg-gray-300 ">
                   <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    Input Voltage
+                   Input Voltage
                   </td>
                   <td colSpan="3" className="border border-r border-black  p-2">
-                    400/480 VAC
+                    400 / 480 VAC
                   </td>
                 </tr>
                 <tr className="bg-gray-300 ">
                   <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    X-ray Power
+                   X-ray Power
                   </td>
                   <td colSpan="3" className="border border-r border-black  p-2">
                     180 kV, 15mA
@@ -215,7 +217,7 @@ const SeleCT = () => {
                     Conveyor Speed
                   </td>
                   <td colSpan="3" className="border border-r border-black  p-2">
-                    0.5 m/s and /or 0.3 m/s
+                    0.5 m/s and/or 0.3 m/s
                   </td>
                 </tr>
                
@@ -228,14 +230,14 @@ const SeleCT = () => {
                   </td>
                 </tr>
                 <tr className="bg-gray-300 ">
-                  <td colSpan="1" className="border-r border-black border p-2 font-bold">
+                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
                    Operational Throughput
                   </td>
                   <td colSpan="2" className="border border-r border-black  p-2">
-                   1,800 BPH (high-speed)
+                   1,800 BPH (high speed)
                   </td>
                   <td colSpan="2" className="border border-r border-black  p-2">
-                   1,000 BPH (performance model)
+                   1,000 BPH (performance mode)
                   </td>
                 </tr>
               </tbody>

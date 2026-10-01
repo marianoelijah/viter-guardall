@@ -5,13 +5,14 @@ import { NavLink } from 'react-router-dom';
 import SocialShare from '../../Reusable/SocialShare';
 
 
-const eXpress = () => {
+const Express = () => {
   const productFeatures = [
-    "",
-    "",
-    "",
-    "",
-    "",
+    "Modular design supports airports checkpoint of any size and length",
+    "Configurable features maximize operational throughput",
+    "Design to optimize ConneCT performance",
+    "Plug and play architecture facilitates fast installation",
+    "Easy to service and maintain with minimal downtime",
+    "Flexible accomodates hardware and software upgrades"
   ]
      
 
@@ -22,7 +23,7 @@ const eXpress = () => {
       {/* Banner Header */}
       <header className="bg-[#7f95b8] text-white py-14 px-4 text-center">
         <h1 className="text-5xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
-          
+          eXpress Automated Tray Return System
         </h1>
         
       </header>
@@ -34,15 +35,25 @@ const eXpress = () => {
           {/* Main Product Info */}
           <div className="lg:col-span-3">
             <p className="text-[17px]  text-black mb-6">
-                
+                The Analogic eXpress lane is a fully automated bag handling system that efficiently and reliably processes bags 
+                through the ConneCT Checkpoint Explosive Detection System (EDS CB), and automatically return trays
+                to the divest position.
             </p>
 
             <section className="mb-8">
                 
               <h2 className="font-bold text-xl text-black mb-2">Product Description:</h2>
-              <p className="text-[17px] text-gray-680 leading-relaxed whitespace-pre-line">
-                
+              <p className="text-[17px] text-gray-900 leading-relaxed whitespace-pre-line mb-3">
+                The eXpress lane is designed for any airport that needs the quality, reliability, and throughput
+                of a state of the art automated lane and tray return system.
               </p>
+              <p className="text-[17px] text-gray-900 leading-relaxed whitespace-pre-line">
+                Developed by Analogic, the eXpress lane's modular design permits flexible configurations to
+                optimized the needs of individual airports and checkpoints. The modular architecture of the 
+                eXpress lane permits hardware and software upgrades to facilitate advances in screening
+                and handling capabilities.
+              </p>
+
 
                <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
             <ul className="list-disc ml-5 text-[17px] space-y-1 text-black">
@@ -63,239 +74,92 @@ const eXpress = () => {
               <tbody>
                 <tr className="bg-gray-300 ">
                   <td colSpan="5" className="border-r border-black border p-2 font-bold w-1/2 text-center">
-                   
+                    PHYSICAL SPECIFICATIONS
                   </td>
                 </tr>
-                <tr className="bg-gray-300 ">
+                <tr className="bg-gray-300 ">  
                   <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
-                    
+                    Lane Throughput
                   </td>
                   <td colSpan="3" className="border border-r border-black  p-2">
-                    
+                    500 bins/hr
                   </td>
                 </tr>
                 <tr className="bg-gray-300 ">
                   <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                   
+                    AVG Installation Time
                   </td>
                   <td colSpan="3" className="border border-r border-black  p-2">
-                    
+                    16 hours
                   </td>
                 </tr>
                 <tr className="bg-gray-300 ">
                   <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                   
+                   Maximum Load
                   </td>
                   <td colSpan="3" className="border border-r border-black  p-2">
-                    
+                    23 kg (50 lb) per bag/bin
                   </td>
                 </tr>
                 <tr className="bg-gray-300 ">
                   <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                   
+                   Dimensions
                   </td>
                   <td colSpan="3" className="border border-r border-black  p-2">
-                 
+                   L: 12 to 21 m (472-827 in) / W: 0.8 to 1.8 m (30.8-70.7 in)
                   </td>
                 </tr>
-                 <tr className="bg-gray-300 ">
+                <tr className="bg-gray-300 ">
                   <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                   
+                   Nominal Belt Height
                   </td>
                   <td colSpan="3" className="border border-r border-black  p-2">
+                   0.84 m (33.1 in)
                    </td>
                 </tr>
                 <tr className="bg-gray-300 ">
                   <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    
+                    Power Consumption
                   </td>
                   <td colSpan="3" className="border border-r border-black  p-2">
-                   
-                  </td>
-                </tr>
-
-                <tr className="bg-gray-300 ">
-                  <td colSpan="5" className="border-r border-black border p-2 font-bold w-1/2 text-center">
-                    
+                    800W
                   </td>
                 </tr>
 
                 <tr className="bg-gray-300 ">
                   <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    
+                    Power Requirements
                   </td>
                   <td colSpan="3" className="border border-r border-black  p-2">
-                    
+                    100-240VAC, 47-63Hz
                   </td>
                 </tr>
                
                 <tr className="bg-gray-300 ">
                   <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                   
+                   Full Load Current
                   </td>
                   <td colSpan="3" className="border border-r border-black  p-2">
-                    
+                    7A (est.)
                   </td>
                 </tr>
                 <tr className="bg-gray-300 ">
                   <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                   
+                   Facility Circuit
                   </td>
                   <td colSpan="3" className="border border-r border-black  p-2">
-                  
+                   20A
                   </td>
                 </tr>
                  <tr className="bg-gray-300 ">
                   <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    
+                    Operating Noise Level
                   </td>
                   <td colSpan="3" className="border border-r border-black  p-2">
-                    
-                  </td>
-                </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                    
+                    70dB
                   </td>
                 </tr>
 
-                <tr className="bg-gray-300 ">
-                  <td colSpan="5" className="border-r border-black border p-2 font-bold w-1/2 text-center">
-                     ILLUMINATOR
-                  </td>
-                </tr>
-
-                 
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                    
-                  </td>
-                </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                   
-                  </td>
-                </tr>
-
-                <tr className="bg-gray-300 ">
-                  <td colSpan="5" className="border-r border-black border p-2 font-bold w-1/2 text-center">
-                    
-                  </td>
-                </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                    
-                  </td>
-                </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                   
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                    
-                  </td>
-                </tr>
-                 <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                    
-                  </td>
-                </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                    
-                  </td>
-                </tr>
-                 <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                    
-                  </td>
-                </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                    
-                  </td>
-                </tr>
-                  <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                    
-                  </td>
-                </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                   
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                    
-                  </td>
-                </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                   
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                    
-                  </td>
-                </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                    
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                    
-                  </td>
-                </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                  
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                    
-                  </td>
-                </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                   
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                    
-                  </td>
-                </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
-                  
-                  </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
-                   
-                  </td>
-                </tr>
-                
               </tbody>
             </table>
 
@@ -307,11 +171,11 @@ const eXpress = () => {
             {/* Footer Tags & Socials */}
             <div className="flex flex-wrap gap-3 mb-8 mt-10">
               <span className="bg-[#FF5F31] text-white px-2 py-1 rounded">
-                
+                Analogic
               </span>
-              
+               
               <span className="bg-[#FF5F31] text-white px-2 py-1 rounded">
-                
+                DETECTION SYSTEMS
               </span>
             </div>
 
@@ -378,4 +242,4 @@ const eXpress = () => {
   );
 };
 
-export default eXpress;
+export default Express;
