@@ -420,6 +420,7 @@ import { useEffect } from "react";
 import ConneCT from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Analogic/ConneCT";
 import SeleCT from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Analogic/SeleCT";
 import Express from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Analogic/eXpress";
+import GiantFencePage from "./components/pages/frontend/OurProducts/product extend/giantfence/GiantFencePage";
 
 
 // import TestimonialPage from "./components/pages/frontend/testimonials/TestimonialPage";
@@ -986,11 +987,13 @@ const App = () => {
             <Route path="/our-products/deantas/g11s" element={<G11S/>} />
 
             {/* Sensegiz Product Details Route */}
-             <Route path="/products/sensegiz" element={<Sensegiz/>} />
+            <Route path="/products/sensegiz" element={<Sensegiz/>} />
             <Route path="/our-products/sensegiz/coin-sensor" element={<Coin/>} />
             <Route path="/our-products/sensegiz/ptz-camera" element={<Ptz/>} />
             <Route path="/our-products/sensegiz/wireless-auto-mesh" element={<Mesh/>} />
             <Route path="/our-products/sensegiz/gateway" element={<Gateway/>} />
+
+             <Route path="/products/giant-fence" element={<GiantFencePage/>} />
 
             {/* Dnake Product Details Route */}
             <Route path="/products/dnake" element={<Dnake/>} />
