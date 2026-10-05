@@ -421,6 +421,8 @@ import ConneCT from "./components/pages/frontend/OurProducts/Honeywell Product-I
 import SeleCT from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Analogic/SeleCT";
 import Express from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Analogic/eXpress";
 import GiantFencePage from "./components/pages/frontend/OurProducts/product extend/giantfence/GiantFencePage";
+import VivotekPage from "./components/pages/frontend/OurProducts/product extend/vivotek/VivotekPage";
+import GrundigPage from "./components/pages/frontend/OurProducts/product extend/grundig/GrundigPage";
 
 
 // import TestimonialPage from "./components/pages/frontend/testimonials/TestimonialPage";
@@ -494,10 +496,12 @@ const App = () => {
             <Route path="/products/webgate" element={<WebgatePage />} />
             <Route path="/products/pelco" element={<PelcoPage />} />
             <Route path="/products/hikvision" element={<HikvisionPage />} />
-            <Route path="/products/dahua" element={<DahuaPage />} />
+            <Route path="/products/dahua" element={<DahuaPage />} />  
             <Route path="/products/acti" element={<ActiPage />} />
             <Route path="/products/hanwha" element={<HanwhaPage />} />
-
+            <Route path="/products/vivotek" element={<VivotekPage />} />
+            <Route path="/products/grundig" element={<GrundigPage /> } />
+ 
              {/* Detection Systems */}
             <Route path="/products/gilardoni" element={<GilardoniPage />} />
             <Route path="/products/ceia" element={<CeiaPage />} />
