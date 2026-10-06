@@ -742,6 +742,9 @@ const App = () => {
               <Route path="/our-products/hanwha/TNPA7430RW" element={<TNPA7430RW/>} />
               <Route path="/our-products/hanwha/XNP9300RW" element={<XNP9300RW/>} />
               <Route path="/our-products/hanwha/XNVA8084RS" element={<XNVA8084RS/>} />
+
+              {/* Vivotek Product Details Route */}
+              {/* <Route path="/our-products/vivotek/fe9191" element={<FE9191/>} /> */}
               
 
              {/* Gilardoni Product Details Route */}
