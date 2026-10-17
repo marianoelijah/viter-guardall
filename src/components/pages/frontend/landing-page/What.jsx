@@ -26,15 +26,15 @@ const What = () => {
   ];
 
   return (
-    <section className="bg-gray-50 py-20 px-6">
+    <section className="bg-gray-50 dark:bg-[#121214] py-20 px-6 font-poppins transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
         
         {/* Header Section */}
         <div className="mb-16">
-          <h2 className="text-4xl md:text-7xl font-black text-gray-900 mb-4 uppercase tracking-tight">
+          <h2 className="text-4xl md:text-7xl font-black text-gray-900 dark:text-white mb-4 uppercase tracking-tight">
             What We Do
           </h2>
-          <p className="text-gray-800 text-xl md:text-2xl max-w-4xl leading-relaxed">
+          <p className="text-gray-800 dark:text-gray-300 text-xl md:text-2xl max-w-4xl leading-relaxed">
             We are dedicated to deliver you a holistic approach to electronic security. 
             Our attention to service and 24/7 team will ensure that your company's 
             security gets the attention it needs.
@@ -46,16 +46,16 @@ const What = () => {
           {services.map((service, index) => (
             <div key={index} className="flex flex-col items-start group">
               {/* Icon Circle */}
-              <div className="w-16 h-16 bg-[#1e40af] hover:bg-[#ff5f31] rounded-full flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-[#1e40af] dark:bg-blue-600 hover:bg-[#ff5f31] dark:hover:bg-[#ff5f31] rounded-full flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-all duration-300">
                 {service.icon}
               </div>
 
               {/* Text Content */}
-              <h3 className="text-2xl md:text-2xl font-bold text-gray-900 mb-4 tracking-tight uppercase min-h-[56px] flex items-center">
+              <h3 className="text-2xl md:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4 tracking-tight uppercase min-h-[56px] flex items-center">
                 {service.title}
               </h3>
               
-              <p className="text-xl md:text-xl text-gray-800 leading-relaxed">
+              <p className="text-xl md:text-xl text-gray-800 dark:text-gray-400 leading-relaxed">
                 {service.description}
               </p>
             </div>

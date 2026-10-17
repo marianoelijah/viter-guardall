@@ -423,6 +423,38 @@ import Express from "./components/pages/frontend/OurProducts/Honeywell Product-I
 import GiantFencePage from "./components/pages/frontend/OurProducts/product extend/giantfence/GiantFencePage";
 import VivotekPage from "./components/pages/frontend/OurProducts/product extend/vivotek/VivotekPage";
 import GrundigPage from "./components/pages/frontend/OurProducts/product extend/grundig/GrundigPage";
+import IB939EHTV from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Vivotek/IB939EHTV";
+import IB9380HTVV2 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Vivotek/IB9380HTVV2";
+
+import IB9389EHVV3 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Vivotek/IB9389EHVV3";
+import FD830HV from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Vivotek/FD830HV";
+import FD839EHTVV2 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Vivotek/FD839EHTVV2";
+import FD939EHTV from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Vivotek/FD939EHTV";
+import FD9391EHTVV2 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Vivotek/FD9391EHTVV2";
+import SD834EHL from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Vivotek/SD834EHL";
+import SD9161HV2 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Vivotek/SD9161HV2";
+import SD9387EHL from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Vivotek/SD9387EHL";
+import SD9394EHL from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Vivotek/SD9394EHL";
+import ND9326P from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Vivotek/ND9326P";
+import ND9426PL from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Vivotek/ND9426PL";
+import ND9442P from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Vivotek/ND9442P";
+import ND9542P from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Vivotek/ND9542P";
+import IB9391EHTVV2 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Vivotek/IB9391EHTVV2";
+import GUCIAP8616Q from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Grundig/GUCIAP8616Q";
+import GUCIAP8634T from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Grundig/GUCIAP8634T";
+import GUCIAP8744P from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Grundig/GUCIAP8744P";
+import GUCIAT4634T from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Grundig/GUCIAT4634T";
+import GURNAC5108N from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Grundig/GURNAC5108N";
+import GUCIAT4634V from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Grundig/GUCIAT4634V";
+import GUCIAT8634T from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Grundig/GUCIAT8634T";
+import GUCIAT8634V from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Grundig/GUCIAT8634V";
+import GUCIBP8634T from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Grundig/GUCIBP8634T";
+import GUCIAP12616F from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Grundig/GUCIAP12616F";
+import GUCIAC4614E from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Grundig/GUCIAC4614E";
+import GUCIAC4614T from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Grundig/GUCIAC4614T";
+import GUCIAC5637T from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Grundig/GUCIAC5637T";
+import GUCIAP4634V from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Grundig/GUCIAP4634V";
+
 
 
 // import TestimonialPage from "./components/pages/frontend/testimonials/TestimonialPage";
@@ -743,9 +775,50 @@ const App = () => {
               <Route path="/our-products/hanwha/XNP9300RW" element={<XNP9300RW/>} />
               <Route path="/our-products/hanwha/XNVA8084RS" element={<XNVA8084RS/>} />
 
-              {/* Vivotek Product Details Route */}
-              {/* <Route path="/our-products/vivotek/fe9191" element={<FE9191/>} /> */}
-              
+            {/* Vivotek Product Details Route */}
+
+              {/* BULLET */}
+              <Route path="/our-products/vivotek/ib939-ehtv" element={<IB939EHTV/>} />
+              <Route path="/our-products/vivotek/ib9380-htvv2" element={<IB9380HTVV2/>} />
+              <Route path="/our-products/vivotek/ib9389-ehvv3" element={<IB9389EHVV3/>} />
+              <Route path="/our-products/vivotek/ib9391-ehtv-v2" element={<IB9391EHTVV2/>} />
+
+              {/* DOME */}
+              <Route path="/our-products/vivotek/fd830-hv" element={<FD830HV/>} />
+              <Route path="/our-products/vivotek/fd839ehtv-v2" element={<FD839EHTVV2/>} />
+              <Route path="/our-products/vivotek/fd939eh-tv" element={<FD939EHTV/>} />
+              <Route path="/our-products/vivotek/fd9391ehtv-v2" element={<FD9391EHTVV2/>} />
+
+              {/* PTZ */}
+              <Route path="/our-products/vivotek/sd834-ehl" element={<SD834EHL/>} />
+              <Route path="/our-products/vivotek/sd9161-h-v2" element={<SD9161HV2/>} />
+              <Route path="/our-products/vivotek/sd9387-ehl" element={<SD9387EHL/>} />
+              <Route path="/our-products/vivotek/sd9394-ehl" element={<SD9394EHL/>} />
+
+              {/* NVR */}
+              <Route path="/our-products/vivotek/nd9326p" element={<ND9326P/>} />
+              <Route path="/our-products/vivotek/nd9426pl" element={<ND9426PL/>} />
+              <Route path="/our-products/vivotek/nd9442p" element={<ND9442P/>} />
+              <Route path="/our-products/vivotek/nd9542p" element={<ND9542P/>} />
+
+          {/* Grundig Product Details Route */}
+             <Route path="/our-products/grundig/gu-ci-ap8616q" element={<GUCIAP8616Q/>} />
+             <Route path="/our-products/grundig/gu-ci-ap8634t" element={<GUCIAP8634T/>} />
+             <Route path="/our-products/grundig/gu-ci-ap8744p" element={<GUCIAP8744P/>} />
+             <Route path="/our-products/grundig/gu-ci-at4634t" element={<GUCIAT4634T/>} />
+             <Route path="/our-products/grundig/gu-rn-ac5108n" element={<GURNAC5108N/>} />
+
+             <Route path="/our-products/grundig/gu-ci-at4634v" element={<GUCIAT4634V/>} />
+             <Route path="/our-products/grundig/gu-ci-at8634t" element={<GUCIAT8634T/>} />
+             <Route path="/our-products/grundig/gu-ci-at8634v" element={<GUCIAT8634V/>} />
+             <Route path="/our-products/grundig/gu-ci-bp8634t" element={<GUCIBP8634T/>} />
+             <Route path="/our-products/grundig/gu-ci-ap12616f" element={<GUCIAP12616F/>} />
+             
+             <Route path="/our-products/grundig/gu-ci-ac4614e" element={<GUCIAC4614E/>} />
+             <Route path="/our-products/grundig/gu-ci-ac4614t" element={<GUCIAC4614T/>} />
+             <Route path="/our-products/grundig/gu-ci-ac5637t" element={<GUCIAC5637T/>} />
+             <Route path="/our-products/grundig/gu-ci-ap4634v" element={<GUCIAP4634V/>} />
+
 
              {/* Gilardoni Product Details Route */}
              <Route path="/our-products/gilardoni/cargo" element={<Cargo/>} />

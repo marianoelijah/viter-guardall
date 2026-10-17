@@ -28,15 +28,21 @@ const OurProducts = () => {
     fetchFeaturedProducts();
   }, []);
 
-  if (loading) return <div className="py-20 text-center">Loading Products...</div>;
+  if (loading) {
+    return (
+      <div className="py-20 text-center text-gray-700 dark:text-gray-300 bg-white dark:bg-[#121214] transition-colors duration-300">
+        Loading Products...
+      </div>
+    );
+  }
 
   return (
-    <section className="py-20 bg-white font-poppins">
+    <section className="py-20 bg-white dark:bg-[#121214] font-poppins transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-5xl md:text-6xl tracking-tight text-[#2257a0] mb-6 drop-shadow-sm tracking-tigh">
+        <h2 className="text-5xl md:text-6xl tracking-tight text-[#2257a0] dark:text-blue-400 mb-6 drop-shadow-sm">
           Our Products
         </h2>
-        <p className="text-black md:text:4xl text-xl max-w-3xl mx-auto mb-12  leading-relaxed">
+        <p className="text-black dark:text-gray-300 md:text-2xl text-xl max-w-3xl mx-auto mb-12 leading-relaxed">
           Guard-All offers a comprehensive range of state-of-the-art electronic security products tailored to meet diverse security needs.
         </p>
 
@@ -60,14 +66,14 @@ const OurProducts = () => {
             {products.map((item, index) => (
               <SwiperSlide key={item.id || index}>
                 <div className="flex flex-col items-center">
-                  <div className="w-full aspect-[4/3] rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 mb-4">
+                  <div className="w-full aspect-[4/3] rounded-xl overflow-hidden shadow-md hover:shadow-xl dark:shadow-gray-900/50 transition-shadow duration-300 mb-4 bg-gray-100 dark:bg-gray-800">
                     <img 
                       src={`${IMAGE_BASE_URL}${item.image_path}`} 
                       alt={item.title} 
                       className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
                     />
                   </div>
-                  <h3 className="text-lg font-bold text-gray-800 leading-tight h-12 flex items-center justify-center">
+                  <h3 className="text-lg font-bold text-gray-800 dark:text-gray-200 leading-tight h-12 flex items-center justify-center">
                     {item.title}
                   </h3>
                 </div>
@@ -76,7 +82,7 @@ const OurProducts = () => {
           </Swiper>
         </div>
 
-        <Link to="/our-products" className="inline-block mt-8 bg-blue-800 text-white px-10 py-3 rounded-md lg:rounded font-bold uppercase tracking-widest hover:bg-[#ff5f31] transition-colors shadow-lg">
+        <Link to="/our-products" className="inline-block mt-8 bg-blue-800 dark:bg-blue-600 text-white px-10 py-3 rounded-md lg:rounded font-bold uppercase tracking-widest hover:bg-[#ff5f31] dark:hover:bg-[#ff5f31] transition-colors shadow-lg">
           Browse Products
         </Link>
       </div>

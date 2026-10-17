@@ -1,0 +1,634 @@
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import Header from '../../../partials/Header';
+import Footer from '../../../partials/Footer';
+import SocialShare from '../../Reusable/SocialShare';
+
+const   GUCIAP4634V = () => {
+  const productFeatures = [
+    "High Frame Recording: 50/60 fps",
+    "Built-in Speaker",
+    "Built-in microphone",
+    "2-Axis Adjustment"
+  ];
+
+  return (
+    <>
+      <Header />
+      <div className="bg-gray-100 min-h-screen font-sans text-gray-800">
+        {/* Blue Header Banner */}
+        <header className="bg-[#8ba4ca] text-white py-12 px-4 text-center">
+          <h1 className="text-5xl font-bold tracking-tight">
+            GU-CI-AP4634V
+          </h1>
+        </header>
+
+        <div className="max-w-7xl mx-auto px-4 py-8 flex flex-col lg:flex-row gap-8">
+          {/* Main Content */}
+          <main className="lg:w-3/4 bg-gray-300 p-8 shadow-sm">
+            <p className="text-[15px] text-black mb-6">
+              Equipped with flexible pan and tilt speed control (pan range 0° to 350° at 0.6°/s to 54°/s; tilt speed 0.06°/s to 52°/s), it allows operators precise control over the viewing field. Deep learning algorithms power intelligent Object Classification to distinguish humans and vehicles, reducing false alarms. The camera features Smart Dual Light technology combining IR LEDs and white light LEDs, high frame rate recording (up to 50/60 fps), and two-way audio support with a built-in microphone and speaker. It is NDAA compliant, IP66-rated, and IK10 vandal-proof certified.
+            </p>
+
+            <section className="mb-8">
+              <h2 className="font-bold text-xl text-black mb-2">Product Description:</h2>
+              <p className="text-[15px] text-black leading-relaxed mb-4">
+               The GRUNDIG GU-CI-AP4634V is a 4 MP mini PTZ Dome IP Camera featuring a 2.8~12 mm motorized autofocus lens. Designed for demanding surveillance tasks, it utilizes a 1/1.8" progressive scan sensor and Ultra Low Light technology to provide light sensitivity down to 0.001 lux (color) and exceptional image quality in low-light environments.
+              </p>
+
+              <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
+              <ul className="list-disc ml-5 text-[15px] text-black space-y-1">
+                {productFeatures.map((feature, index) => (
+                  <li key={index}>{feature}</li>
+                ))}
+              </ul>
+            </section>
+
+        {/* Technical Specifications Table */}
+        <div className="bg-gray-300 p-6 shadow rounded border border-r divine-y">
+            <h2 className="font-bold text-black text-xl mb-4">Technical Specification</h2>
+
+            <table className="w-full border text-[15px] text-black border-black">
+              <tbody>
+
+            <tr>
+              <td colSpan={5} className="bg-gray-100 p-4 text-xl text-black font-bold align-middle border-b border-r border-black">
+                CAMERA
+              </td>
+            </tr>    
+            
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                Image Sensor
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                1/2. 8” progressive Scan CMOS
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                Video Resolution
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                  2560 x 1440
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                Sensitivity Colour
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                0.001 Lux @ F1.6 (AGC ON)
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                Sensitivity B/W
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                0 Lux LED IR on
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                Shutter Speed
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                1/5 - 1/20000 s
+              </td>
+            </tr>
+             <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                Slow Shutter
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                Support
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                White Balance
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                Auto, Manual
+              </td>
+            </tr>
+
+            <tr>
+              <td colSpan={5} className="bg-gray-100 p-4 text-xl text-black font-bold align-middle border-b border-r border-black">
+                LENS
+              </td>
+            </tr>    
+            
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                Lens Focal Length
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                 2.8 ~ 12 mm motorized, autofocus
+              </td>
+            </tr>
+             <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                I-ris F-Number
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                 F1.3
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                Lens Drive Type
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                Auto Iris (DC)
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                Field of View
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                 115° ~ 48° (horizontal), 59° ~ 27° (vertical), 141° ~ 55° (diagonal)
+              </td>
+            </tr>
+
+            <tr>
+              <td colSpan={5} className="bg-gray-100 p-4 text-xl text-black font-bold align-middle border-b border-r border-black">
+                ILLUMINATOR
+              </td>
+            </tr> 
+
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                Max. IR Distance
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                Up to 20 m
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                White light Distance
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                Up to 20 m
+              </td>
+            </tr>
+           
+
+            <tr>
+              <td colSpan={5} className="bg-gray-100 p-4 text-xl text-black font-bold align-middle border-b border-r border-black">
+                VIDEO
+              </td>
+            </tr> 
+
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                 Col/B&W:
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                  Auto, IR-cut filter removable (ICR)
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+               Wide Dynamic Range:
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                 120 dB
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+               Image Enhancement:
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                 BLC, 3D DNR, Defog, HLC
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                Image Settings
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                  Rotate mode, Saturation, Brightness, Contrast, Sharpness and white balance adjustable by client 
+                  software or web browser
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                 Day/Night Switch
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                 Support auto, scheduled, day, night
+              </td>
+            </tr>
+
+            <tr>
+              <td colSpan={5} className="bg-gray-100 p-4 text-xl text-black font-bold align-middle border-b border-r border-black">
+                AUDIO
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                  Audio Detection
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                   Detects unusual noises: dogs barking, babies crying, gunshots, sudden sound increase and decrease
+              </td>
+            </tr>
+
+            <tr>
+              <td colSpan={5} className="bg-gray-100 p-4 text-xl text-black font-bold align-middle border-b border-r border-black">
+                FRAME RATE
+              </td>
+            </tr> 
+
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                Main Stream
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                50 Hz: 50 fps* (2560 × 1440, 2304 x 1296, 1920 × 1080, 1280 × 720) 
+                60 Hz: 60 fps* (2560 × 1440, 2304 x 1296, 1920 × 1080, 1280 × 720)
+                (* 50-60 fps only when WDR & Intelligent Functions disabled)
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                Sub Stream
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                  50 Hz: 25 fps (1280 x 720, 640 x 480, 320 x 240)
+                  60 Hz: 30 fps (1280 x 720, 640 x 480, 320 x 240)
+              </td>
+            </tr>
+             <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                3rd Stream
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                  50 Hz: 25 fps (640 x 480, 320 x 240)
+                  60 Hz: 30 fps (640 x 480, 320 x 240)
+              </td>
+            </tr>
+
+            <tr>
+              <td colSpan={5} className="bg-gray-100 p-4 text-xl text-black font-bold align-middle border-b border-r border-black">
+                NETWORK
+              </td>
+            </tr> 
+
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                Functions:
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                One-key reset, anti-flicker, three streams, mirror, password protection, privacy mask, IP-address filter
+              </td>
+            </tr>
+             <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                Video Compression
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                  H.264, H.264+, H.265, H.265+ , MJPEG
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                Bit Rate
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                 16 Kbps to 8 Mbps
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+               SD Memory
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                Built-in Micro SD up to 512 GB, NAS (Support NFS, SMB/CIFS)
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+               Network Protocol
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                  TCP/IP, HTTP, HTTPS, FTP, DHCP, DNS, DDNS, RTP, RTSP, NTP, UPnP, SMTP, SNMP, 802.1X, IPv4/IPv6, PPPoE
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                 Cyber Security
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                 Different password levels, password protection, complicated password, HTTPS encryption, 
+                 digest authentication for HTTP/HTTPS , IP address filter, WSSE and digest authentication for 
+                 ONVIF, RTP/RTSP over HTTPS, control timeout settings, security audit log, TLS 1.0, TLS 1.1 & TLS 
+                 1.2, TLS 1.2 with updated cipher suites including AES 256 encryption, Brute Force Delay 
+                 Protection, Signed Firmware
+              </td>
+            </tr>
+
+            <tr>
+              <td colSpan={5} className="bg-gray-100 p-4 text-xl text-black font-bold align-middle border-b border-r border-black">
+                Pan Tilt Zoom
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                 Number of Privacy Zones
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                 6 zones, rectangle
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                 Number of Preset
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                 255
+              </td>
+            </tr> 
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                 Pan Speed
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                  Configurable from 0.6°/sec to 54°/sec
+              </td>
+            </tr> 
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                 Tilt Speed
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                  Configurable from 0.06°/sec to 52°/sec
+              </td>
+            </tr> 
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                 Rang Panning
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                  0° ~ 350° limited rotation
+              </td>
+            </tr> 
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                 Range Tilting
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                 0° ~ 80°
+              </td>
+            </tr> 
+
+            <tr>
+              <td colSpan={5} className="bg-gray-100 p-4 text-xl text-black font-bold align-middle border-b border-r border-black">
+                I/O Interface
+              </td>
+            </tr> 
+
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                Audio Input/Output:
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                 Built-in microphone & built-in speaker
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                Network Interface
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                1x 10, 100 Base T (Ethernet), TX (RJ-45)
+              </td>
+            </tr>
+
+            <tr>
+              <td colSpan={5} className="bg-gray-100 p-4 text-xl text-black font-bold align-middle border-b border-r border-black">
+                Intelligent Functions
+              </td>
+            </tr>
+
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                Motion Detection
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                 On, Off, Area Setting, Sensitivity
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                People & Vehicle Detection
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                Adjustable whether people, motorized or non-motorized vehicles should be detected.
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                 Intrusion Detection
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                 People, motorized vehicles or non-motorized vehicles, enter, exit or drive over a predefined 
+                 virtual area, up to 4 rules are supported
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                 Line Crossing
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                  People, motorized vehicles or non-motorized vehicles cross a pre-defined virtual line, up to 4 
+                  rules are supported
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                 Object Removal:
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                  Detects objects left over or lost in the pre-defined region such. In this case an alarm notification 
+                  or signal will be sent automatically and in real time.
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                 Object Counting
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                  Entrance and Exit object number is accounted and showed on screen in real time
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                 Face Detection
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                  Human face appears in the image can be detected and trigger event action
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                 License Plate Recognition
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                   Detects and recognizes car number plates. (Data- import- export function, actions can be 
+                   triggered via the allowed, blocked and other list, only supported with insert SD-Card).
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                 Heat Map
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                Visualizes the number of people in the surveillance area over a period of time with a simple and 
+                     user-friendly color scheme
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                 Queue Length Detection:
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                Counts people in a predefined area and measures service time. The area, the maximum number 
+                   of people in it and the maximum service time can be set
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                 Crowd Density Detection
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                Counts people in a predefined area. The area, the maximum number of people in it can be set
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                 Limits of intelligent functions:
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                   Only one of the AI functions can be selected at a time
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                 Event Source:
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                 Video Tampering, network disconnected, IP address, motion, various AI functions,
+                 sudden audio increase-decrease.
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                 Event Action
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                  Send e-mail, trigger alarm output, push notification for GSVM App and C-WERK, upload to 
+                  FTP/Cloud, trigger HDD recording and/or image capture, show message on screen, PTZ linkage, 
+                  voice prompt, buzzer
+              </td>
+            </tr>
+
+            <tr>
+              <td colSpan={5} className="bg-gray-100 p-4 text-xl text-black font-bold align-middle border-b border-r border-black">
+                Environmental
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                Operating Temperature
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                -30 °C ~ 60 °C (-22 °F ~ 140 °F)
+              </td>
+            </tr>
+            <tr>
+              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+                Humidity
+              </td>
+              <td className="p-4 text-black border align-middle border-b border-black">
+                Less than 90%, non condensing
+              </td>
+            </tr>
+
+              </tbody>
+            </table>
+        </div>
+
+
+            {/* Footer Tags */}
+            <div className="mt-8 flex gap-3 mb-5 p-4 rounded">
+              <p className="text-white border bg-[#ff5f31] px-2 py-1 rounded">Grundig</p>
+              <p className="text-white border bg-[#ff5f31] px-2 py-1 rounded">CCTVs</p>
+            </div> 
+
+            {/* Share Section */}
+            <SocialShare title="Check out this product!" />
+          </main>
+
+          {/* Sidebar */}
+          <aside className="lg:w-1/4 space-y-6">
+            <div className="bg-gray-300 p-6 rounded shadow-sm border border-gray-400">
+              <h3 className="font-semibold text-xl mb-4 border-b border-black pb-2 ">More By GRUNDIG</h3>
+              <ul className="space-y-4 text-gray-700">
+                <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
+                  <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>Onity DirectKey with Serene </li>
+                </NavLink>
+                <NavLink to="/our-products/detnov/addressable-sounder" className='block'>
+                  <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>MAD-401 and MAD-402 Series Modules</li>
+                </NavLink>
+                <NavLink to="/our-products/acti/bay-raid-backmount-standalone" className='block'>
+                  <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>INR 415 256-Channel RAID Standalone</li>
+                </NavLink>
+                <NavLink to="/our-products/acti/channel-tower-strandalone" className='block'>
+                  <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>GNR 340 100-Channel Tower NVR</li>
+                </NavLink>
+                <NavLink to="/our-products/acti/bay-raid-backmount-standalone" className='block'>
+                  <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>INR 415 256-Channel RAID Standalone</li>
+                </NavLink>
+                <NavLink to="/our-products/acti/channel-tower-strandalone" className='block'>
+                  <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>GNR 340 100-Channel Tower NVR</li>
+                </NavLink>
+              </ul>
+            </div>
+
+            {/* Perfected Matching CTA Card */}
+            <div 
+              className="relative min-h-[240px] overflow-hidden rounded-2xl p-8 text-white shadow-md bg-cover bg-center bg-blend-multiply bg-blue-900/85"
+              style={{ backgroundImage: "url('/assets/image/Our%20Products/quickalert.jpg')" }}
+            >
+              <div className="relative z-10 max-w-3xl">
+                <h3 className="mb-4 text-2xl font-bold leading-tight tracking-wide">
+                  Secure Your Peace Of Mind Today
+                </h3>
+                
+                <p className="mb-6 text-sm md:text-base text-gray-200 font-medium leading-relaxed">
+                  Contact Guard-All now for a customized security solution that protects what matters most.
+                </p>
+
+                <NavLink 
+                  to="/contacts" 
+                  className="inline-block w-full rounded-xl bg-[#0f3e90] px-6 py-3 text-center text-sm font-semibold tracking-wider text-white transition-colors hover:bg-[#ff5f31] sm:w-auto"
+                >
+                  CONTACT US TODAY
+                </NavLink>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default  GUCIAP4634V;

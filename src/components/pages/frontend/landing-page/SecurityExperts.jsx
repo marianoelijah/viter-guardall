@@ -4,10 +4,9 @@ const IMAGE_BASE_URL = import.meta.env.VITE_API_URL;
 
 const SecurityExperts = () => {
   const [experts, setExperts] = useState([]);
-  const [intros, setIntros] = useState([]); // Changed to support an array of intros
-  const [currentSlide, setCurrentSlide] = useState(0); // Track the slideshow index
+  const [intros, setIntros] = useState([]);
+  const [currentSlide, setCurrentSlide] = useState(0);
   const [loading, setLoading] = useState(true);
-  
 
   useEffect(() => {
     const fetchExpertData = async () => {
@@ -21,7 +20,6 @@ const SecurityExperts = () => {
         const introData = await introRes.json();
    
         setExperts(expertsData);
-        // Ensure intros is stored as an array even if database returns single row
         setIntros(Array.isArray(introData) ? introData : [introData]);
         setLoading(false);
       } catch (error) {
@@ -46,23 +44,22 @@ const SecurityExperts = () => {
   if (loading || intros.length === 0) return null;
 
   return (
-    <section className="py-20 px-6 bg-white font-poppins">
+    <section className="py-20 px-6 bg-white dark:bg-[#121214] font-poppins transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
         
         {/* Header & Department Intro Slideshow Section */}
         <div className="flex flex-col lg:flex-row justify-between items-start gap-8 mb-16">
           <div className="lg:w-1/3">
             <div className="flex items-center gap-4 mb-4">
-              <h2 className="text-[3rem] font-bold text-blue-900 leading-tight">
+              <h2 className="text-[3rem] font-bold text-blue-900 dark:text-blue-400 leading-tight">
                 Meet Our <br /> 
                 Security Experts
               </h2>
               
-              <div className="bg-[#ff5f31] p-2 rounded-full text-white shrink-0">
+              <div className="bg-[#ff5f31] p-2 rounded-full text-white shrink-0 shadow-md">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                 </svg>
-
               </div>
             </div>
           </div>
@@ -70,10 +67,10 @@ const SecurityExperts = () => {
           {/* Active Slide Content */}
           <div className="lg:w-2/3 w-full flex flex-col justify-between min-h-[180px]">
             <div className="border-l-4 border-[#ff5f31] pl-6 transition-all duration-500 ease-in-out">
-              <h3 className="text-2xl md:text-2xl font-bold text-blue-900 uppercase mb-2">
+              <h3 className="text-2xl md:text-2xl font-bold text-blue-900 dark:text-blue-400 uppercase mb-2">
                 {intros[currentSlide]?.dept_name}
               </h3>
-              <p className="text-xl md:text-xl text-gray-600  leading-relaxed">
+              <p className="text-xl md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
                 {intros[currentSlide]?.description}
               </p>
             </div>
@@ -86,7 +83,7 @@ const SecurityExperts = () => {
                     key={index}
                     onClick={() => setCurrentSlide(index)}
                     className={`h-3 rounded-full transition-all duration-300 ${
-                      currentSlide === index ? 'w-6 bg-[#ff5f31]' : 'w-3 bg-[#ff5f31]/30'
+                      currentSlide === index ? 'w-6 bg-[#ff5f31]' : 'w-3 bg-[#ff5f31]/30 dark:bg-[#ff5f31]/50'
                     }`}
                     aria-label={`Go to slide ${index + 1}`}
                   />
@@ -100,22 +97,22 @@ const SecurityExperts = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-12">
           {experts.map((expert) => (
             <div key={expert.id} className="group cursor-pointer">
-              <div className="relative overflow-hidden rounded-lg shadow-md aspect-[4/5] mb-4">
+              <div className="relative overflow-hidden rounded-lg shadow-md dark:shadow-gray-900/50 aspect-[4/5] mb-4 bg-gray-100 dark:bg-gray-800">
                 <img 
                   src={`${IMAGE_BASE_URL}${expert.image_path}`} 
                   alt={expert.name} 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-blue-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-blue-900/10 dark:bg-blue-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
 
               <div className="flex items-start gap-2">
                 <div className="mt-1.5 w-0 h-0 border-t-[5px] border-t-transparent border-l-[8px] border-l-[#ff5f31] border-b-[5px] border-b-transparent shrink-0"></div>
                 <div>
-                  <h4 className="text-2xl md:text-2xl font-bold text-blue-900 hover:text-[#ff5f31] transition-colors">
+                  <h4 className="text-2xl md:text-2xl font-bold text-blue-900 dark:text-blue-400 hover:text-[#ff5f31] dark:hover:text-[#ff5f31] transition-colors">
                     {expert.name}
                   </h4>
-                  <p className="text-[16px] md:text-[17px] text-blue-700 hover:text-[#ff5f31] font-medium mt-1 uppercase tracking-wider">
+                  <p className="text-[16px] md:text-[17px] text-blue-700 dark:text-blue-300 hover:text-[#ff5f31] dark:hover:text-[#ff5f31] font-medium mt-1 uppercase tracking-wider transition-colors">
                     {expert.position}
                   </p>
                 </div>

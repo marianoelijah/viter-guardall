@@ -21,18 +21,24 @@ const Who = () => {
     fetchData();
   }, []);
 
-  if (loading || !data) return <div className="py-20 text-center">Loading...</div>;
+  if (loading || !data) {
+    return (
+      <div className="py-20 text-center bg-white dark:bg-[#121214] text-gray-800 dark:text-gray-200 transition-colors duration-300">
+        Loading...
+      </div>
+    );
+  }
 
   return (
-    <section className="bg-white pt-16 font-poppins">
+    <section className="bg-white dark:bg-[#121214] pt-16 font-poppins transition-colors duration-300">
       <div className="text-center px-6 h-full">
         {/* Section Title from DB */}
-        <h1 className="text-5xl md:text-7xl font-bold text-[#2257a0] mb-4 md:mb-6 tracking-tight">
+        <h1 className="text-5xl md:text-7xl font-bold text-[#2257a0] dark:text-blue-400 mb-4 md:mb-6 tracking-tight">
           {data.title}
         </h1>
 
         {/* Mission & Vision Blue Bar */}
-        <div className="bg-[#1e40af] text-white py-16 px-8 md:px-16 text-left width-full rounded-lg shadow-lg">
+        <div className="bg-[#1e40af] dark:bg-[#1e293b] text-white py-16 px-8 md:px-16 text-left w-full rounded-lg shadow-lg border border-transparent dark:border-gray-800 transition-colors duration-300">
           <div className="w-full rounded-t-lg overflow-hidden shadow-lg">
             {/* Image from DB */}
             <img 
@@ -48,28 +54,28 @@ const Who = () => {
             <div className="border-b border-white/30 md:border-b-0 pb-8 md:pb-0">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-orange-500 border-b-[8px] border-b-transparent"></div>
-                <h3 className="text-2xl md:text-3xl font-bold uppercase tracking-wide">
+                <h3 className="text-2xl md:text-3xl font-bold uppercase tracking-wide text-white dark:text-gray-100">
                   Our Mission
                 </h3>
               </div>
-              <p className="text-lg md:text-xl font-light leading-relaxed max-w-md">
+              <p className="text-lg md:text-xl font-light leading-relaxed max-w-md text-white/90 dark:text-gray-300">
                 {data.mission_text}
               </p>
-              <div className="h-px bg-white/30 mt-8 w-full"></div>
+              <div className="h-px bg-white/30 dark:bg-gray-700 mt-8 w-full"></div>
             </div>
 
             {/* Our Vision from DB */}
             <div className="pb-8 md:pb-0">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-orange-500 border-b-[8px] border-b-transparent"></div>
-                <h3 className="text-2xl md:text-3xl font-bold uppercase tracking-wide">
+                <h3 className="text-2xl md:text-3xl font-bold uppercase tracking-wide text-white dark:text-gray-100">
                   Our Vision
                 </h3>
               </div>
-              <p className="text-lg md:text-xl font-light leading-relaxed max-w-md">
+              <p className="text-lg md:text-xl font-light leading-relaxed max-w-md text-white/90 dark:text-gray-300">
                 {data.vision_text}
               </p>
-              <div className="h-px bg-white/30 mt-8 w-full"></div>
+              <div className="h-px bg-white/30 dark:bg-gray-700 mt-8 w-full"></div>
             </div>
 
           </div>

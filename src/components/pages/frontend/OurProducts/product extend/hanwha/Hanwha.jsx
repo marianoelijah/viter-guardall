@@ -4,28 +4,33 @@ import { NavLink } from 'react-router-dom';
 const IMAGE_BASE_URL = import.meta.env.VITE_API_URL;
 
 const ProductCard = ({ title, description, image, detailRoute }) => (
-  <div className="bg-white border border-gray-200 rounded-xl p-5 flex flex-col h-full transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl cursor-pointer group">
-    <div className="bg-gray-50 border border-gray-100 rounded-lg p-6 mb-5 flex items-center justify-center h-64 overflow-hidden">
+  <div className="bg-white dark:bg-[#1e1e22] border border-gray-200 dark:border-gray-800 rounded-xl p-5 flex flex-col h-full transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl dark:hover:shadow-gray-900/50 cursor-pointer group">
+    {/* Product Image Container */}
+    <div className="bg-gray-50 dark:bg-gray-800/80 border border-gray-100 dark:border-gray-700/50 rounded-lg p-6 mb-5 flex items-center justify-center h-64 overflow-hidden">
       <img 
         src={image ? `${IMAGE_BASE_URL}${image}` : "/assets/image/image-not-found.svg"} 
         alt={title} 
-        className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-110" 
+        className="max-h-full max-w-full object-contain filter dark:brightness-105 transition-transform duration-500 group-hover:scale-110" 
         onError={(e) => {
           e.target.onerror = null;
           e.target.src = "/assets/image/image-not-found.svg";
         }}
       />
     </div>
-    <div className="flex-grow px-2">
-      <h3 className="text-[#1a365d] font-semibold text-xl uppercase mb-3 leading-tight tracking-wide min-h-[3rem]">
-        {title}
-      </h3>
-      <p className="text-gray-600 text-xl leading-relaxed">
-        {description}
-      </p>
-      <span className='block mt-12 text-gray-500 text-sm tracking-widest '>
-        <NavLink to={detailRoute} className="text-[#184c9b] hover:underline mt-2 block">
-          <h3 className='text-xl font-poppins hover:text-[#ff5f31] transition-colors duration-300'>
+
+    <div className="flex-grow flex flex-col justify-between px-2">
+      <div>
+        <h3 className="text-[#1a365d] dark:text-blue-400 font-semibold text-xl uppercase mb-3 leading-tight tracking-wide min-h-[3rem] transition-colors">
+          {title}
+        </h3>
+        <p className="text-gray-600 dark:text-gray-300 text-xl leading-relaxed">
+          {description}
+        </p>
+      </div>
+
+      <span className="block mt-12 text-gray-500 dark:text-gray-400 text-sm tracking-widest">
+        <NavLink to={detailRoute} className="text-[#184c9b] dark:text-blue-400 hover:underline mt-2 block">
+          <h3 className="text-xl font-poppins hover:text-[#ff5f31] dark:hover:text-[#ff5f31] transition-colors duration-300">
             View Details
           </h3>
         </NavLink>
@@ -35,7 +40,6 @@ const ProductCard = ({ title, description, image, detailRoute }) => (
 );
 
 const Hanwha = () => {
-    
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -55,20 +59,24 @@ const Hanwha = () => {
     fetchHanwhaProducts();
   }, []);
 
-  if (loading) return <div className="min-h-screen flex items-center justify-center font-figtree text-[#0d3874]">Loading Hanwha Vision Catalog...</div>;
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-[#e9eff6] dark:bg-[#121214] text-[#0d3874] dark:text-blue-400 font-figtree transition-colors duration-300">
+        Loading Hanwha Vision Catalog...
+      </div>
+    );
+  }
 
   return (
-    <div className="bg-[#e9eff6] min-h-screen px-6 lg:px-12">
+    <div className="bg-[#e9eff6] dark:bg-[#121214] min-h-screen px-6 lg:px-12 font-figtree transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
-
         <header className="text-center py-16 px-6 md:px-10 lg:px-20">
-          <h2 className="text-4xl md:text-5xl lg:text-5xl font-medium text-[#0d3874] mb-6 tracking-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-5xl font-medium text-[#0d3874] dark:text-blue-400 mb-6 tracking-tight transition-colors">
             {products.length > 0 ? products[0].category_name : "CCTVs"} – Hanwha Vision
           </h2>
-          <div className="h-1 w-24 bg-[#2257a0] mx-auto rounded-full opacity-20"></div>
+          <div className="h-1 w-24 bg-[#2257a0] dark:bg-blue-400 mx-auto rounded-full opacity-20"></div>
         </header>
 
-         {/* Grid Layout - Standardized gap and size */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.map((item) => (
             <ProductCard

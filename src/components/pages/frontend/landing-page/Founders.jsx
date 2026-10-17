@@ -32,14 +32,14 @@ const Founders = () => {
   if (loading || !message) return null;
 
   return (
-    <section className="py-20 px-6 bg-gradient-to-br from-blue-50/50 to-white font-poppins">
+    <section className="py-20 px-6 bg-gradient-to-br from-blue-50/50 to-white dark:from-[#18181b] dark:to-[#121214] font-poppins transition-colors duration-300">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
         
         {/* Left Side: Portraits Grid */}
         <div className="w-full lg:w-3/5 grid grid-cols-1 sm:grid-cols-2 gap-8">
           {founders.map((person) => (
             <div key={person.id} className="flex flex-col group cursor-pointer">
-              <div className="relative overflow-hidden rounded-lg shadow-md aspect-[4/5] mb-4">
+              <div className="relative overflow-hidden rounded-lg shadow-md dark:shadow-gray-900/50 aspect-[4/5] mb-4 bg-gray-100 dark:bg-gray-800">
                 <img 
                   src={`${IMAGE_BASE_URL}${person.image_path}`}
                   alt={person.name} 
@@ -48,11 +48,11 @@ const Founders = () => {
               </div>
               <div className="flex items-center gap-2">
                  <div className="w-0 h-0 border-t-[6px] border-t-transparent border-l-[10px] border-l-orange-500 border-b-[6px] border-b-transparent"></div>
-                 <h4 className="text-2xl md:text-2xl font-bold text-blue-900 hover:text-[#ff5f31] leading-none">
+                 <h4 className="text-2xl md:text-2xl font-bold text-blue-900 dark:text-blue-400 hover:text-[#ff5f31] dark:hover:text-[#ff5f31] leading-none transition-colors">
                   {person.name}
                  </h4>
               </div>
-              <p className="text-[16px] md:text-[17px] text-blue-700 hover:text-[#ff5f31] font-medium mt-2 ml-4 uppercase">
+              <p className="text-[16px] md:text-[17px] text-blue-700 dark:text-blue-300 hover:text-[#ff5f31] dark:hover:text-[#ff5f31] font-medium mt-2 ml-4 uppercase transition-colors">
                 {person.position}
               </p>
             </div>
@@ -62,10 +62,10 @@ const Founders = () => {
         {/* Right Side: Message Content */}
         <div className="w-full lg:w-2/5">
           <div className="flex justify-between items-start mb-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-blue-900 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-bold text-blue-900 dark:text-blue-400 leading-tight">
               A Message from <br /> our Founders
             </h2>
-            <div className="bg-orange-500 p-3 rounded-full text-white">
+            <div className="bg-orange-500 p-3 rounded-full text-white shadow-md">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
               </svg>
@@ -74,13 +74,13 @@ const Founders = () => {
 
           <div className="space-y-6">
             <span className="text-6xl text-orange-500 font-serif leading-none">“</span>
-            <p className="text-3xl font-bold text-blue-900 leading-snug -mt-8">
+            <p className="text-3xl font-bold text-blue-900 dark:text-gray-100 leading-snug -mt-8">
               {message.short_quote}
             </p>
             
             <div className="flex gap-4">
               <div className="mt-2 w-0 h-0 border-t-[6px] border-t-transparent border-l-[10px] border-l-orange-500 border-b-[6px] border-b-transparent shrink-0"></div>
-              <p className="text-gray-900 hover:text-[#ff5f31] text-lg leading-relaxed italic">
+              <p className="text-gray-900 dark:text-gray-300 hover:text-[#ff5f31] dark:hover:text-[#ff5f31] text-lg leading-relaxed italic transition-colors">
                 {message.long_message}
               </p>
             </div>

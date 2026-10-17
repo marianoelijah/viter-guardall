@@ -7,39 +7,38 @@ import SocialShare from "../OurProducts/Reusable/SocialShare";
 export const IMAGE_BASE_URL = import.meta.env.VITE_API_URL; 
 
 const Footer = () => {
- const [contactInfo, setContactInfo] = useState([]);
+  const [contactInfo, setContactInfo] = useState([]);
   const [offices, setOffices] = useState([]);
 
   // Fetch dynamic footer elements from your Express backend
   useEffect(() => {
-  // Pulling contact records
-  fetch(`${IMAGE_BASE_URL}/api/footer-contact`)
-    .then((res) => {
-      if (!res.ok) throw new Error(`HTTP Error Status: ${res.status}`);
-      return res.json();
-    })
-    .then((data) => setContactInfo(Array.isArray(data) ? data : []))
-    .catch((err) => {
-      console.error("❌ Footer contact error detail:", err);
-      setContactInfo([]);
-    });
+    // Pulling contact records
+    fetch(`${IMAGE_BASE_URL}/api/footer-contact`)
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP Error Status: ${res.status}`);
+        return res.json();
+      })
+      .then((data) => setContactInfo(Array.isArray(data) ? data : []))
+      .catch((err) => {
+        console.error("❌ Footer contact error detail:", err);
+        setContactInfo([]);
+      });
 
-  // Pulling office records
-  fetch(`${IMAGE_BASE_URL}/api/footer-offices`)
-    .then((res) => {
-      if (!res.ok) throw new Error(`HTTP Error Status: ${res.status}`);
-      return res.json();
-    })
-    .then((data) => setOffices(Array.isArray(data) ? data : []))
-    .catch((err) => {
-      console.error("❌ Footer office error detail:", err);
-      setOffices([]);
-    });
-}, []);
-
+    // Pulling office records
+    fetch(`${IMAGE_BASE_URL}/api/footer-offices`)
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP Error Status: ${res.status}`);
+        return res.json();
+      })
+      .then((data) => setOffices(Array.isArray(data) ? data : []))
+      .catch((err) => {
+        console.error("❌ Footer office error detail:", err);
+        setOffices([]);
+      });
+  }, []);
 
   return (
-    <footer className="bg-white text-gray-800 border-t border-gray-200 font-poppins">
+    <footer className="bg-white dark:bg-[#121214] text-gray-800 dark:text-gray-200 border-t border-gray-200 dark:border-gray-800 font-poppins transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6 py-12">
         
         {/* Main Grid */}
@@ -48,7 +47,7 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="flex flex-col items-center sm:items-start text-center sm:text-left space-y-4">
             <img src="/assets/image/Client Logo/logo.png" alt="Guard-All Logo" className="h-12 w-auto" />
-            <p className="text-xl md:text-xl text-gray-800 hover:text-[#ff5f31] leading-relaxed max-w-sm">
+            <p className="text-xl md:text-xl text-gray-800 dark:text-gray-300 hover:text-[#ff5f31] dark:hover:text-[#ff5f31] leading-relaxed max-w-sm transition-colors">
               Guard-All is a leading electronic security systems integrator in the Philippines, 
               providing world-class, cost-effective solutions for commercial, industrial, governmental, 
               and residential clients.
@@ -57,30 +56,30 @@ const Footer = () => {
 
           {/* Company Links */}
           <div className="text-center sm:text-left">
-            <h3 className="text-blue-800 font-bold uppercase tracking-wider mb-6 text-xl">Company</h3>
-            <ul className="space-y-3 text-gray-600">
+            <h3 className="text-blue-800 dark:text-blue-400 font-bold uppercase tracking-wider mb-6 text-xl">Company</h3>
+            <ul className="space-y-3 text-gray-600 dark:text-gray-400">
               <li>
-                <Link to="/" className="text-xl md:text-xl hover:text-[#ff5f31] transition-colors block py-1 sm:py-0">Home</Link>
+                <Link to="/" className="text-xl md:text-xl hover:text-[#ff5f31] dark:hover:text-[#ff5f31] transition-colors block py-1 sm:py-0">Home</Link>
               </li>
               <li>
-                <Link to="/who-we-are" className="text-xl md:text-xl hover:text-[#ff5f31] transition-colors block py-1 sm:py-0">Who We Are</Link>
+                <Link to="/who-we-are" className="text-xl md:text-xl hover:text-[#ff5f31] dark:hover:text-[#ff5f31] transition-colors block py-1 sm:py-0">Who We Are</Link>
               </li>
               <li>
-                <Link to="/products" className="text-xl md:text-xl hover:text-[#ff5f31] transition-colors block py-1 sm:py-0">Our Products</Link>
+                <Link to="/products" className="text-xl md:text-xl hover:text-[#ff5f31] dark:hover:text-[#ff5f31] transition-colors block py-1 sm:py-0">Our Products</Link>
               </li>
               <li>
-                <Link to="/clients" className="text-xl md:text-xl hover:text-[#ff5f31] transition-colors block py-1 sm:py-0">Our Clients</Link>
+                <Link to="/clients" className="text-xl md:text-xl hover:text-[#ff5f31] dark:hover:text-[#ff5f31] transition-colors block py-1 sm:py-0">Our Clients</Link>
               </li>
               <li>
-                <Link to="/contact" className="text-xl md:text-xl hover:text-[#ff5f31] transition-colors block py-1 sm:py-0">Contact Us</Link>
+                <Link to="/contact" className="text-xl md:text-xl hover:text-[#ff5f31] dark:hover:text-[#ff5f31] transition-colors block py-1 sm:py-0">Contact Us</Link>
               </li>
             </ul>
           </div>
 
           {/* Contact Info - Live & Clickable */}
           <div className="text-center sm:text-left">
-            <h3 className="text-blue-800 font-bold uppercase tracking-wider mb-6 text-xl">Contact Us</h3>
-            <ul className="space-y-4 text-gray-600 inline-block sm:block text-left">
+            <h3 className="text-blue-800 dark:text-blue-400 font-bold uppercase tracking-wider mb-6 text-xl">Contact Us</h3>
+            <ul className="space-y-4 text-gray-600 dark:text-gray-400 inline-block sm:block text-left">
               {contactInfo.map((info) => {
                 const isPhone = info.type === "phone";
                 const href = isPhone 
@@ -90,13 +89,13 @@ const Footer = () => {
                 return (
                   <li key={info.id} className="flex items-center gap-3">
                     {isPhone ? (
-                      <FaPhone className="text-blue-800 shrink-0" />
+                      <FaPhone className="text-blue-800 dark:text-blue-400 shrink-0" />
                     ) : (
-                      <FaEnvelope className="text-blue-800 shrink-0" />
+                      <FaEnvelope className="text-blue-800 dark:text-blue-400 shrink-0" />
                     )}
                     <a 
                       href={href} 
-                      className="text-xl md:text-xl hover:text-[#ff5f31] transition-colors"
+                      className="text-xl md:text-xl hover:text-[#ff5f31] dark:hover:text-[#ff5f31] transition-colors"
                     >
                       {info.value}
                     </a>
@@ -109,20 +108,20 @@ const Footer = () => {
           {/* Offices & Social - External Geolocation Hyperlinks */}
           <div className="flex flex-col items-center sm:items-start text-center sm:text-left space-y-6">
             <div>
-              <h3 className="text-blue-800 font-bold uppercase tracking-wider mb-4 text-xl">
+              <h3 className="text-blue-800 dark:text-blue-400 font-bold uppercase tracking-wider mb-4 text-xl">
                 Offices
               </h3>
-              <div className="space-y-4 text-xl md:text-xl text-gray-600 inline-block sm:block text-left">
+              <div className="space-y-4 text-xl md:text-xl text-gray-600 dark:text-gray-400 inline-block sm:block text-left">
                 {offices.map((office) => (
                   <div key={office.id} className="flex gap-3">
-                    <FaMapMarkerAlt className="text-blue-800 shrink-0 mt-1 text-lg" />
+                    <FaMapMarkerAlt className="text-blue-800 dark:text-blue-400 shrink-0 mt-1 text-lg" />
                     <p>
-                      <strong className="text-gray-800">{office.city}:</strong> |{" "}
+                      <strong className="text-gray-800 dark:text-gray-200">{office.city}:</strong> |{" "}
                       <a 
                         href={office.map_link} 
                         target="_blank" 
                         rel="noopener noreferrer" 
-                        className="text-xl md:text-lg hover:text-[#ff5f31] hover:underline transition-colors"
+                        className="text-xl md:text-lg hover:text-[#ff5f31] dark:hover:text-[#ff5f31] hover:underline transition-colors"
                       >
                         {office.address}
                       </a>
@@ -139,9 +138,9 @@ const Footer = () => {
         </div>
 
         {/* Copyright Section */}
-        <div className="border-t border-gray-100 mt-12 pt-8 text-center px-4">
-          <p className="text-xs sm:text-sm text-gray-500 leading-loose">
-            &copy; {new Date().getFullYear()} <span className="text-sm md:text-xl font-semibold text-blue-800">
+        <div className="border-t border-gray-100 dark:border-gray-800 mt-12 pt-8 text-center px-4">
+          <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 leading-loose">
+            &copy; {new Date().getFullYear()} <span className="text-sm md:text-xl font-semibold text-blue-800 dark:text-blue-400">
               Guard-All Electronic Security Systems Inc.</span>
             <br className="sm:hidden" /> All Rights Reserved.
           </p>

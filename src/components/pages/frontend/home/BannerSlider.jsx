@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom';
 const IMAGE_BASE_URL = import.meta.env.VITE_API_URL;
 
 const BannerSlider = () => {
-  const [slides, setSlides] = useState([]); // Start with an empty array
+  const [slides, setSlides] = useState([]);
   const [current, setCurrent] = useState(0);
   const [loading, setLoading] = useState(true);
 
-  // 1. Fetch data from your new API route
+  // 1. Fetch data from API route
   useEffect(() => {
     const fetchBanners = async () => {
       try {
@@ -25,7 +25,7 @@ const BannerSlider = () => {
     fetchBanners();
   }, []);
 
-  // 2. Auto-play timer (only starts once slides are loaded)
+  // 2. Auto-play timer
   useEffect(() => {
     if (slides.length === 0) return;
     const timer = setInterval(() => {
@@ -53,15 +53,22 @@ const BannerSlider = () => {
       case 3:
         return "/our-products";
       default:
-        return "/what-we-do"; // Default fallback route
+        return "/what-we-do";
     }
   };
 
-  if (loading) return <div className="h-[700px] bg-[#F3EFE7] flex items-center justify-center">Loading...</div>;
+  if (loading) {
+    return (
+      <div className="h-[700px] bg-[#F3EFE7] dark:bg-[#121214] text-gray-800 dark:text-gray-200 flex items-center justify-center transition-colors duration-300">
+        Loading...
+      </div>
+    );
+  }
+
   if (slides.length === 0) return null;
 
   return (
-    <div className="relative w-full min-h-[750px] md:h-[650px] lg:h-[750px] overflow-hidden bg-[#F3EFE7] font-poppins group">
+    <div className="relative w-full min-h-[750px] md:h-[650px] lg:h-[750px] overflow-hidden bg-[#F3EFE7] dark:bg-[#121214] font-poppins group transition-colors duration-300">
       <AnimatePresence mode="wait">
         <motion.div
           key={current}
@@ -77,7 +84,7 @@ const BannerSlider = () => {
               initial={{ x: -30, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-4xl sm:text-5xl lg:text-7xl font-bold text-[#111] leading-[1.1] max-w-2xl"
+              className="text-4xl sm:text-5xl lg:text-7xl font-bold text-[#111] dark:text-white leading-[1.1] max-w-2xl"
             >
               {slides[current].title}
             </motion.h1>
@@ -87,11 +94,11 @@ const BannerSlider = () => {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.4 }}
             >
-              <button className="bg-[#0D47A1] text-white px-5 py-4 rounded-full sm:rounded-sm font-bold hover:bg-[#ff5f31] active:scale-95 transition-all duration-300 uppercase tracking-widest text-sm shadow-lg">
-                <Link to={getSlideLink(slides[current].id)}>
+              <Link to={getSlideLink(slides[current].id)}>
+                <button className="bg-[#0D47A1] dark:bg-blue-600 text-white px-5 py-4 rounded-full sm:rounded-sm font-bold hover:bg-[#ff5f31] dark:hover:bg-[#ff5f31] active:scale-95 transition-all duration-300 uppercase tracking-widest text-sm shadow-lg">
                   {slides[current].cta_text}
-                </Link>
-              </button>
+                </button>
+              </Link>
             </motion.div>
           </div>
 
@@ -100,7 +107,7 @@ const BannerSlider = () => {
             <motion.div 
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              className="relative w-[70%] md:w-[85%] aspect-square rounded-3xl overflow-hidden shadow-2xl border-[6px] md:border-[12px] border-white z-10"
+              className="relative w-[70%] md:w-[85%] aspect-square rounded-3xl overflow-hidden shadow-2xl border-[6px] md:border-[12px] border-white dark:border-gray-800 z-10"
             >
               <img 
                 src={`${IMAGE_BASE_URL}${slides[current].image_path}`} 
@@ -109,11 +116,11 @@ const BannerSlider = () => {
               />
             </motion.div>
 
-            {/* Floating Badge (Conditional based on DB value) */}
+            {/* Floating Badge */}
             {slides[current].has_badge === 1 && (
-               <div className="hidden lg:block">
-                  {/* ... (Keep your existing Badge UI code here) ... */}
-               </div>
+              <div className="hidden lg:block">
+                {/* Custom badge elements will render here */}
+              </div>
             )}
           </div>
         </motion.div>
@@ -122,7 +129,7 @@ const BannerSlider = () => {
       {/* Left Arrow */}
       <button 
         onClick={handlePrev}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-[#0D47A1] hover:bg-[#ff5f31] hover:text-black text-white p-3 rounded-full shadow-md transition-all duration-300 opacity-80 group-hover:opacity-100 block md:block"
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-[#0D47A1] dark:bg-blue-600 hover:bg-[#ff5f31] dark:hover:bg-[#ff5f31] hover:text-black text-white p-3 rounded-full shadow-md transition-all duration-300 opacity-80 group-hover:opacity-100 block md:block"
         aria-label="Previous Slide"
       >
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-6 h-6">
@@ -133,7 +140,7 @@ const BannerSlider = () => {
       {/* Right Arrow */}
       <button 
         onClick={handleNext}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-[#0D47A1] hover:bg-[#ff5f31] hover:text-black text-white p-3 rounded-full shadow-md transition-all duration-300 opacity-80 group-hover:opacity-100 block md:block"
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-[#0D47A1] dark:bg-blue-600 hover:bg-[#ff5f31] dark:hover:bg-[#ff5f31] hover:text-black text-white p-3 rounded-full shadow-md transition-all duration-300 opacity-80 group-hover:opacity-100 block md:block"
         aria-label="Next Slide"
       >
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-6 h-6">
@@ -148,7 +155,9 @@ const BannerSlider = () => {
             key={idx}
             onClick={() => setCurrent(idx)}
             className={`h-1.5 transition-all duration-500 rounded-full ${
-              current === idx ? "w-12 bg-[#0D47A1]" : "w-6 bg-gray-300 hover:bg-gray-400"
+              current === idx 
+                ? "w-12 bg-[#0D47A1] dark:bg-blue-400" 
+                : "w-6 bg-gray-300 dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-600"
             }`}
             aria-label={`Go to slide ${idx + 1}`}
           />
