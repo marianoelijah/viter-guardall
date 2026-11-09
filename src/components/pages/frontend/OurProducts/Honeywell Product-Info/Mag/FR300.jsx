@@ -18,9 +18,9 @@ const FR300 = () => {
   return (
     <>
     <Header />
-    <div className="bg-gray-100 min-h-screen font-sans text-gray-800">
+    <div className="bg-gray-100 dark:bg-[#121214] min-h-screen font-sans text-slate-800 dark:text-gray-200 transition-colors duration-300">
       {/* Blue Header Banner */}
-      <header className="bg-[#7f95b8] text-white py-12 px-4 text-center">
+      <header className="bg-[#7f95b8] dark:bg-blue-950/70 text-white py-14 px-4 text-center transition-colors duration-300">
         <h1 className="text-3xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
            FR300 Face Recognition Reader
         </h1>
@@ -28,13 +28,13 @@ const FR300 = () => {
 
       <div className="max-w-6xl mx-auto px-4 py-8 flex flex-col lg:flex-row gap-8">
         {/* Main Content Area */}
-        <main className="lg:w-3/4 bg-gray-200 p-8 shadow-sm">
+        <main className="max-w-6xl mx-auto bg-gray-200 dark:bg-[#1e1e22] border border-transparent dark:border-gray-800 transition-colors shadow-lg my-10 p-8 md:p-12 lg:w-3/4">
           <p className="text-[17px] leading-relaxed mb-6">
          A mid-level face recognition reader suitable for door access and pedestrian access.
           </p>
 
           <section className="mb-8">
-            <h2 className="font-bold text-xl text-black mb-2">Product Description:</h2>
+            <h2 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold dark:text-blue-400 transition-colorsfont-bold text-xl mb-2 text-black">Product Description:</h2>
             <div className="text-[17px] leading-relaxed space-y-4 mb-6">
               <p>
                   MAG FR300 face recognition reader is a dynamic face recognition reader built with an 
@@ -46,7 +46,7 @@ const FR300 = () => {
               </p>
             </div>
 
-            <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
+            <h2 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold dark:text-blue-400 transition-colorsfont-bold text-xl mb-2 text-black">Product Features:</h2>
             <ul className="list-disc ml-5 text-[17px] space-y-1">
               {productFeatures.map((feature, index) => (
                 <li key={index}>{feature}</li>
@@ -56,200 +56,200 @@ const FR300 = () => {
 
           {/* Technical Specifications Table */}
           <section className="mt-10 overflow-x-auto">
-            <h2 className="font-bold text-xl text-black mb-4">Technical Specification:</h2>
+            <h2 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold dark:text-blue-400 transition-colorsfont-bold text-xl mb-2 text-black">Technical Specification:</h2>
             <table className="w-full border-collapse border border-gray-500 text-[11px]">
         
          {/* 1  */}
               <tbody>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                      User ID/ Face Capacity
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                     10,000
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                    Event Record Capacity
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                    1,000,000
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                      Access Mode
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                      Dynamic Face Recognition, PINFace Recognition + PIN
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                     Face Recognition Mode
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                     1:1, 1:N
                   </td>
                 </tr>
                  <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                    Validation Display
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                    Name & Number
                   </td>
                 </tr>
                  <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                     Real Time Face Detection
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                      0.2sec
                   </td>
                 </tr>
                  <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                    Intelligent Function
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                      Infrared Live Person Identification Detection
                   </td>
                 </tr>
                  <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                     Facial Scanning Range
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                     Purely Dynamic Face Recognition: 0.5-3mInfrared Live movement detection: 0.5-1.5m
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                    Dual Camera
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                      ColorSense camera and IRSense camera
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                      Dual Light
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                     Smart LED light and infrared light
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                      Display Screen
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                     5 inch smart touch screen
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                      Operating System
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                      LINUX
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                     False Rejection Rate (FRR)
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                    = 0.1%
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                      False Approval Rate (FAR)
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                    = 0.001%
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                      Relay Output
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                    Lock Relay OutputAlarm Relay Output
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                      Relay Input
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                     Door Sensor
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                     U-Disk Output
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                     Yes
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                      Push Button Input
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                       Yes
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                     Communication Interface
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                      RS485, RS232,TCP/IP
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                     External Wiegand Port
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                   Yes, WG26/34 Output/Input
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                     Power Supply
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                    DC 12V,1A
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                    Working Temperature
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                    -15°C to 60°C
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                     Casing
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                     Aluminium Alloy
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                     Dimension (L x W x H)
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                    110mm x 20mm x 185mm
                   </td>
                 </tr>
@@ -258,194 +258,194 @@ const FR300 = () => {
         {/* 2  */}
                <tbody>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                      User ID/ Face Capacity
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                     10,000
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                    Event Record Capacity
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                    1,000,000
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                      Access Mode
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                      Dynamic Face Recognition, PINFace Recognition + PIN
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                     Face Recognition Mode
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                     1:1, 1:N
                   </td>
                 </tr>
                  <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                    Validation Display
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                    Name & Number
                   </td>
                 </tr>
                  <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                     Real Time Face Detection
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                      0.2sec
                   </td>
                 </tr>
                  <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                    Intelligent Function
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                      Infrared Live Person Identification Detection
                   </td>
                 </tr>
                  <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                     Facial Scanning Range
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                     Purely Dynamic Face Recognition: 0.5-3mInfrared Live movement detection: 0.5-1.5m
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                    Dual Camera
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                      ColorSense camera and IRSense camera
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                      Dual Light
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                     Smart LED light and infrared light
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                      Display Screen
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                     5 inch smart touch screen
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                      Operating System
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                      LINUX
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                     False Rejection Rate (FRR)
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                    = 0.1%
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                      False Approval Rate (FAR)
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                    = 0.001%
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                      Relay Output
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                    Lock Relay OutputAlarm Relay Output
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                      Relay Input
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                     Door Sensor
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                     U-Disk Output
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                     Yes
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                      Push Button Input
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                       Yes
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                     Communication Interface
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                      RS485, RS232,TCP/IP
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                     External Wiegand Port
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                   Yes, WG26/34 Output/Input
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                     Power Supply
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                    DC 12V,1A
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                    Working Temperature
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                    -15°C to 60°C
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                     Casing
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                     Aluminium Alloy
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-500 p-2 font-bold bg-gray-100 text-[17px]">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                     Dimension (L x W x H)
                   </td>
-                  <td className="border border-gray-500 text-gray-700 text-[15px] p-2 break-all">
+                  <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                    110mm x 20mm x 185mm
                   </td>
                 </tr>
@@ -466,9 +466,9 @@ const FR300 = () => {
 
         {/* Sidebar */}
         <aside className="lg:w-1/4 space-y-6">
-         <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
-            <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By MAG</h3>
-           <ul className="space-y-4 text-gray-700">
+         <div className="bg-gray-300 dark:bg-[#1e1e22] p-6 rounded shadow-sm border border-gray-400 dark:border-gray-800 transition-colors duration-300">
+            <h3 className="font-bold text-black dark:text-blue-400 text-xl mb-4 border-b border-black dark:border-gray-700 pb-2 transition-colors">More By MAG</h3>
+           <ul className="space-y-4 text-gray-700 dark:text-gray-300">
                 <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
                   <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>Onity DirectKey with Serene</li>
                 </NavLink>

@@ -52,9 +52,9 @@ const KeysManagement = () => {
   return (
     <>
     <Header />
-    <div className="bg-gray-100 min-h-screen font-sans text-gray-800">
+    <div className="bg-gray-100 dark:bg-[#121214] min-h-screen font-sans text-slate-800 dark:text-gray-200 transition-colors duration-300">
       {/* Blue Header Banner */}
-      <header className="bg-[#7f95b8] text-white py-12 px-4 text-center">
+      <header className="bg-[#7f95b8] dark:bg-blue-950/70 text-white py-14 px-4 text-center transition-colors duration-300">
         <h1 className="text-5xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
            iKLAS Keys Management System
         </h1>
@@ -62,13 +62,13 @@ const KeysManagement = () => {
 
       <div className="max-w-6xl mx-auto px-4 py-8 flex flex-col lg:flex-row gap-8">
         {/* Main Content Area */}
-        <main className="lg:w-3/4 bg-gray-200 p-8 shadow-sm">
+        <main className="max-w-6xl mx-auto bg-gray-200 dark:bg-[#1e1e22] border border-transparent dark:border-gray-800 transition-colors shadow-lg my-10 p-8 md:p-12">
           <p className="text-[17px] leading-relaxed mb-6">
              A key management system that protects the keys and tracks them to ensure it is properly returned.
           </p>
 
           <section className="mb-8">
-            <h2 className="font-bold text-xl text-black mb-2">Product Description:</h2>
+            <h2 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">Product Description:</h2>
             <div className="text-[17px] leading-relaxed space-y-4 mb-6">
               <p>
                Intelligent Key Lock Application System (iKLAS), is a solution that helps businesses
@@ -82,7 +82,7 @@ const KeysManagement = () => {
               </p>
             </div>
 
-            <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
+            <h2 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">Product Features:</h2>
             <ul className="list-disc ml-5 text-[17px] space-y-1">
               {productFeatures.map((feature, index) => (
                 <li key={index}>{feature}</li>
@@ -91,41 +91,41 @@ const KeysManagement = () => {
           </section>
 
            {/* Technical Specifications Table */}
-            <section>
-            <h2 className="font-bold text-xl text-black mb-4">Technical Specification:</h2>
-            <div className="overflow-x-auto border border-black">
-              <table className="w-full text-xs text-left">
-                <thead className="bg-gray-100 border-b border-black text-black pb-4">
+        <section>
+          <h2 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">Technical Specification:</h2>
+            <div className="border border-gray-500 dark:border-gray-700 overflow-hidden rounded-sm">
+              <table className="w-full border-collapse border border-gray-500 text-[11px]">
+                <thead className="divide-y divide-gray-800 p-2.5 font-bold  tracking-widest text-gray-800 dark:text-blue-400 text-[17px] border-b border-gray-500 dark:border-gray-700">
                   <tr>
-                    <th className="p-2 border-r text-black text-[17px] border-black w-1/4">
+                    <th className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                        iKLAS EKMS Model
                     </th>
-                    <th className="p-2 border-r border-black text-[17px]">
+                    <th className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                         Number of Keys
                     </th>
-                    <th className="p-2 border-r border-black text-[17px]">
+                    <th className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                         Width
                     </th>
-                    <th className="p-2 border-r border-black text-[17px]">
+                    <th className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                         Height
                     </th>
-                    <th className="p-2 border-r border-black text-[17px]">
+                    <th className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                         Depth
                     </th>
-                    <th className="p-2 text-[17px]">
+                    <th className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                         Weight
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   {techSpecs.map((spec, index) => (
-                    <tr key={index} className={index % 2 === 0 ? 'bg-gray-200' : 'bg-gray-50'}>
-                      <td className="p-2 border-r border-black text-black font-semibold text-[17px]">{spec.ekms}</td>
-                      <td className="p-2 border-r border-black text-gray-700 text-[17px]">{spec.keys}</td>
-                      <td className="p-2 border-r border-black text-gray-700 text-[17px]">{spec.width}</td>
-                      <td className="p-2 border-r border-black text-gray-700 text-[17px]">{spec.height}</td>
-                      <td className="p-2 border-r border-black text-gray-700 text-[17px]">{spec.depth}</td>
-                      <td className="p-2 text-gray-700 text-[17px]">{spec.weight}</td>
+                    <tr key={index} className={index % 2 === 0 ? 'bg-gray-00' : 'bg-gray-00'}>
+                      <td className="p-2 border-r border-black font-semibold text-[17px] uppercase text-gray-800 dark:text-gray-200 leading-normal">{spec.ekms}</td>
+                      <td className="p-2 border-r border-black font-semibold text-[17px] uppercase text-gray-800 dark:text-gray-200 leading-normal">{spec.keys}</td>
+                      <td className="p-2 border-r border-black font-semibold text-[17px] uppercase text-gray-800 dark:text-gray-200 leading-normal">{spec.width}</td>
+                      <td className="p-2 border-r border-black font-semibold text-[17px] uppercase text-gray-800 dark:text-gray-200 leading-normal">{spec.height}</td>
+                      <td className="p-2 border-r border-black font-semibold text-[17px] uppercase text-gray-800 dark:text-gray-200 leading-normal">{spec.depth}</td>
+                      <td className="p-2 border-r border-black font-semibold text-[17px] uppercase text-gray-800 dark:text-gray-200 leading-normal">{spec.weight}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -145,9 +145,9 @@ const KeysManagement = () => {
 
         {/* Sidebar */}
         <aside className="lg:w-1/4 space-y-6">
-         <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
-            <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By UBERGARD</h3>
-           <ul className="space-y-4 text-gray-700">
+         <div className="bg-gray-300 dark:bg-[#1e1e22] p-6 rounded shadow-sm border border-gray-400 dark:border-gray-800 transition-colors duration-300">
+            <h3 className="font-bold text-black dark:text-blue-400 text-xl mb-4 border-b border-black dark:border-gray-700 pb-2 transition-colors">More By UBERGARD</h3>
+           <ul className="space-y-4 text-gray-700 dark:text-gray-300">
                 <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
                   <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>Onity DirectKey with Serene</li>
                 </NavLink>

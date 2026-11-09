@@ -16,9 +16,9 @@ const   GUCIAT4634T = () => {
   return (
     <>
       <Header />
-      <div className="bg-gray-100 min-h-screen font-sans text-gray-800">
+      <div className="bg-gray-200 dark:bg-[#121214] min-h-screen font-sans text-[#333] dark:text-gray-200 transition-colors duration-300">
         {/* Blue Header Banner */}
-        <header className="bg-[#8ba4ca] text-white py-12 px-4 text-center">
+        <header className="bg-[#7f95b8] dark:bg-blue-950/70 text-white py-14 px-6 text-center transition-colors duration-300">
           <h1 className="text-5xl font-bold tracking-tight">
             GU-CI-AT4634T
           </h1>
@@ -26,19 +26,19 @@ const   GUCIAT4634T = () => {
 
         <div className="max-w-7xl mx-auto px-4 py-8 flex flex-col lg:flex-row gap-8">
           {/* Main Content */}
-          <main className="lg:w-3/4 bg-gray-300 p-8 shadow-sm">
-            <p className="text-[15px] text-black mb-6">
+          <main className="lg:w-3/4 bg-gray-100 dark:bg-[#1e1e22] p-6 md:p-8 rounded-xl border border-transparent dark:border-gray-800 shadow-md transition-colors duration-300">
+            <p className="text-[17px] text-gray-680 leading-relaxed whitespace-pre-line mb-3">
               The Grundig GU-CI-AT4634T is a 4 MP Bullet IP-Camera featuring a 2.8~12 mm varifocal lens from Grundig’s SMART-PRO product line. Engineered for high surveillance efficiency in demanding lighting conditions, it combines ultra-low light capabilities, deep learning object classification, and active deterrence features in an IP67-rated weather-resistant housing.
             </p>
 
             <section className="mb-8">
-              <h2 className="font-bold text-xl text-black mb-2">Product Description:</h2>
-              <p className="text-[15px] text-black leading-relaxed mb-4">
+              <h2 className="font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">Product Description:</h2>
+              <p className="text-[17px] text-gray-680 leading-relaxed whitespace-pre-line mb-3">
                 The SMART-PRO product line offers versatile solutions with unique and unparalleled features.
               </p>
 
-              <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
-              <ul className="list-disc ml-5 text-[15px] text-black space-y-1">
+              <h2 className="font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">Product Features:</h2>
+              <ul className="list-disc ml-5 text-[17px] text-gray-800 dark:text-gray-300 space-y-1 transition-colors">
                 {productFeatures.map((feature, index) => (
                   <li key={index}>{feature}</li>
                 ))}
@@ -46,252 +46,252 @@ const   GUCIAT4634T = () => {
             </section>
 
             {/* Technical Specifications Table */}
-           <div className="bg-gray-300 p-6 shadow rounded border border-r divine-y">
-            <h2 className="font-bold text-black text-xl mb-4">Technical Specification</h2>
+           <div className="p-6 shadow rounded border border-r divine-y">
+            <h2 className="font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">Technical Specification</h2>
 
             <table className="w-full border text-[15px] text-black border-black">
               <tbody>
 
             <tr>
-              <td colSpan={5} className="bg-gray-100 p-4 text-xl text-black font-bold align-middle border-b border-r border-black">
+              <td colSpan={5} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 CAMERA
               </td>
             </tr>    
             
             <tr>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Image Sensor
               </td>
-              <td className="p-4 text-black border align-middle border-b border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 1/1.8” progressive Scan CMOS
               </td>
             </tr>
             <tr>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Video Resolution 
               </td>
-              <td className="p-4 text-black border align-middle border-b border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 2688 × 1520
               </td>
             </tr>
             <tr>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Sensitivity Colour
               </td>
-              <td className="p-4 text-black border align-middle border-b border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 0.0007 Lux @ F1.2 (AGC ON)
               </td>
             </tr>
             <tr>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Sensitivity B/W
               </td>
-              <td className="p-4 text-black border align-middle border-b border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 0 Lux LED IR on
               </td>
             </tr>
             <tr>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Shutter Speed
               </td>
-              <td className="p-4 text-black border align-middle border-b border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 1/5 - 1/20000 s
               </td>
             </tr>
             <tr>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Slow Shutter
               </td>
-              <td className="p-4 text-black border align-middle border-b border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Support
               </td>
             </tr>
             <tr>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 White Balance
               </td>
-              <td className="p-4 text-black border align-middle border-b border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Auto Manual
               </td>
             </tr>
 
             <tr>
-              <td colSpan={5} className="bg-gray-100 p-4 text-xl text-black font-bold align-middle border-b border-r border-black">
+              <td colSpan={5} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 LENS
               </td>
             </tr>    
             
             <tr>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Lens Focal Length
               </td>
-              <td className="p-4 text-black border align-middle border-b border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 2.8 ~ 12 mm motorized, autofocus
               </td>
             </tr>
              <tr>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 I-ris F-Number
               </td>
-              <td className="p-4 text-black border align-middle border-b border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 F1.2
               </td>
             </tr>
             <tr>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Lens Drive Type
               </td>
-              <td className="p-4 text-black border align-middle border-b border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Fixed-Iris
               </td>
             </tr>
             <tr>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Focus Adjustment
               </td>
-              <td className="p-4 text-black border align-middle border-b border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Auto- Focus, Manual - Focus
               </td>
             </tr>
             <tr>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Optical Zoom Ratio:
               </td>
-              <td className="p-4 text-black border align-middle border-b border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 4x
               </td>
             </tr>
             <tr>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Field of View
               </td>
-              <td className="p-4 text-black border align-middle border-b border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 113° ~ 48° (horizontal), 59° ~ 27° (vertical), 139° ~ 55° (diagonal)
               </td>
             </tr>
 
             <tr>
-              <td colSpan={5} className="bg-gray-100 p-4 text-xl text-black font-bold align-middle border-b border-r border-black">
+              <td colSpan={5} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 ILLUMINATOR
               </td>
             </tr> 
 
             <tr>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Max. IR Distance
               </td>
-              <td className="p-4 text-black border align-middle border-b border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Up to 50 m
               </td>
             </tr>
             <tr>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 White Light Distance
               </td>
-              <td className="p-4 text-black border align-middle border-b border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Up to 30 m
               </td>
             </tr>
             <tr>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 White LED
               </td>
-              <td className="p-4 text-black border align-middle border-b border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 yes
               </td>
             </tr>
            
 
              <tr>
-              <td colSpan={5} className="bg-gray-100 p-4 text-xl text-black font-bold align-middle border-b border-r border-black">
+              <td colSpan={5} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 VIDEO
               </td>
             </tr> 
 
             <tr>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                Col/B&W:
               </td>
-              <td className="p-4 text-black border align-middle border-b border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Auto , Color , B&W, IR-cut filter removable (ICR)
               </td>
             </tr>
             <tr>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                Wide Dynamic Range:
               </td>
-              <td className="p-4 text-black border align-middle border-b border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                120 db
               </td>
             </tr>
             <tr>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                Image Enhancement:
               </td>
-              <td className="p-4 text-black border align-middle border-b border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                BLC, 3D DNR, Defog, HLC
               </td>
             </tr>
              <tr>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                Image Settings
               </td>
-              <td className="p-4 text-black border align-middle border-b border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
               Corridor mode, Saturation, Brightness, Contrast, Sharpness and white balance adjustable by client software or web browser
               </td>
             </tr>
             <tr>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                Day/Night Switch:
               </td>
-              <td className="p-4 text-black border align-middle border-b border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Support auto, scheduled, day, night
               </td>
             </tr>
             <tr>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                Privacy zones:
               </td>
-              <td className="p-4 text-black border align-middle border-b border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 6 zones, rectangle
               </td>
             </tr>
 
             <tr>
-              <td colSpan={5} className="bg-gray-100 p-4 text-xl text-black font-bold align-middle border-b border-r border-black">
+              <td colSpan={5} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 AUDIO
               </td>
             </tr> 
 
             <tr>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                Audio Compression
               </td>
-              <td className="p-4 text-black border align-middle border-b border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 G.711
               </td>
             </tr>
             
 
             <tr>
-              <td colSpan={5} className="bg-gray-100 p-4 text-xl text-black font-bold align-middle border-b border-r border-black">
+              <td colSpan={5} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 GENERAL
               </td>
             </tr> 
 
             <tr>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Log File Support
               </td>
-              <td className="p-4 text-black border align-middle border-b border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Events, macros, changes, activities per user (not erasable by resetting the camera to factory settings)
               </td>
             </tr>
              <tr>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 DRI Range
               </td>
-              <td className="p-4 text-black border align-middle border-b border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                Tele: Detection: 128.7 m, Observation: 51.5 m, Recognition: 25.7 m, Identification: 12.9 m
                Wide: Detection: 60.4 m, Observation: 24.2 m, Recognition: 12.1 m, Identification: 6 m
                DORI (Detect, Observe, Recognize and Identify) is a standard system (EN-62676-4) for defining
@@ -300,10 +300,10 @@ const   GUCIAT4634T = () => {
               </td>
             </tr>
             <tr>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Accessories included:
               </td>
-              <td className="p-4 text-black border align-middle border-b border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Junction box
               </td>
             </tr>
@@ -328,9 +328,9 @@ const   GUCIAT4634T = () => {
 
           {/* Sidebar */}
           <aside className="lg:w-1/4 space-y-6">
-            <div className="bg-gray-300 p-6 rounded shadow-sm border border-gray-400">
-              <h3 className="font-semibold text-xl mb-4 border-b border-black pb-2 ">More By GRUNDIG</h3>
-              <ul className="space-y-4 text-gray-700">
+            <div className="bg-gray-300 dark:bg-[#1e1e22] p-6 rounded-xl shadow-sm border border-gray-400 dark:border-gray-800 transition-colors duration-300">
+              <h3 className="font-bold text-black dark:text-blue-400 text-xl mb-4 border-b border-black dark:border-gray-700 pb-2 transition-colors">More By GRUNDIG</h3>
+              <ul className="space-y-4 text-gray-700 dark:text-gray-300">
                 <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
                   <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>Onity DirectKey with Serene </li>
                 </NavLink>

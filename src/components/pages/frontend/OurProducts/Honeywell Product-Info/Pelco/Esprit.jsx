@@ -21,9 +21,9 @@ const Esprit = () => {
   return (
     <>
     <Header />
-     <div className="bg-slate-50 min-h-screen font-sans">
+     <div className="bg-gray-200 dark:bg-[#121214] min-h-screen font-sans text-[#333] dark:text-gray-200 transition-colors duration-300">
       {/* Header Banner */}
-      <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
+      <header className="bg-[#7f95b8] text-white py-12 px-6 text-centerbg-[#7f95b8] dark:bg-blue-950/70 text-center transition-colors duration-300">
         <h1 className="text-3xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
           Esprit Anti-Corrosion Bispectral PTZ
         </h1>
@@ -32,14 +32,14 @@ const Esprit = () => {
       
       <div className="max-w-6xl mx-auto px-4 py-8 flex flex-col lg:flex-row gap-8">
         {/* Main Content Container */}
-        <main className="lg:w-3/4 bg-gray-200 p-8 shadow-sm">
-            <p className="text-5xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
+        <main className="lg:w-3/4 lg:col-span-8 bg-gray-100 dark:bg-[#1e1e22] p-6 md:p-8 rounded-xl border border-transparent dark:border-gray-800 shadow-md transition-colors duration-300">
+            <p className="text-5xl md:text-[17px]  max-w-4xl mx-auto leading-tight mb-5">
               Designed for environments with harsh conditions,, this corrosion-resistant camera provides visual and thermal imaging to secure a property.
             </p>
 
             <section className="mb-8">
-              <h2 className="font-bold text-xl mb-2 text-black">Product Description:</h2>
-              <p className="text-gray-800 text-[17px] leading-relaxed">
+              <h2 className="font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">Product Description:</h2>
+              <p className="text-5xl md:text-[17px]  max-w-4xl mx-auto leading-tight mb-5">
               Securing rugged environments means accounting for intense snowfall, to harsh corrosion and 
               challenging lighting conditions. The Esprit Anti-Corrosion Bispectral PTZ is a corrosion-resistant 
               camera that combines visual and thermal imaging into a single device to enhance operational awareness.
@@ -50,8 +50,8 @@ const Esprit = () => {
               highly corrosive industries.
               </p>
 
-               <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
-            <ul className="list-disc ml-5 text-[17px] space-y-1 text-black">
+               <h2 className="font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">Product Features:</h2>
+            <ul className="list-disc ml-5 text-[17px] text-gray-800 dark:text-gray-300 space-y-1 transition-colors">
               {productFeatures.map((feature, index) => (
                 <li key={index}>{feature}</li>
               ))}
@@ -60,95 +60,95 @@ const Esprit = () => {
             </section>
 
             {/* Technical Specifications Table */}
-              <div className="bg-gray-300 p-6 shadow rounded border border-r divine-y">
-            <h2 className="font-semibold text-black text-xl mb-4">Technical Specification</h2>
+              <div className="p-6 shadow rounded border border-r divine-y">
+            <h2 className="font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">Technical Specification</h2>
 
             <table className="w-full border text-[15px] text-black">
               <tbody>
                 <tr className="bg-gray-100 font-bold">
-                  <td className="border-r border-black border  p-2">Model Name</td>
-                  <td className="border border-r border-black  p-2">PTZ</td>
-                  <td className="border border-r border-black  p-2">BULLET</td>
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">Model Name</td>
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">PTZ</td>
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">BULLET</td>
                 </tr> 
                 <tr>
-                  <td className="border border-r border-black p-2 font-bold">Part Number</td>
-                  <td className="border border-r border-black  p-2">ESSE1-2X40-SPT-M2ESSE1-2X40-SPT-ACESSE1-2X40-SPT-M1</td>
-                  <td className="border border-r border-black  p-2">ESSE1-2X40-SBT-PAPESSE1-2X40-SBT-PAESSE1-2X40-SBT-PAW</td>
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">Part Number</td>
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">ESSE1-2X40-SPT-M2ESSE1-2X40-SPT-ACESSE1-2X40-SPT-M1</td>
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">ESSE1-2X40-SBT-PAPESSE1-2X40-SBT-PAESSE1-2X40-SBT-PAW</td>
                 </tr> 
                 <tr>
-                  <td className="border border-r border-black p-2 font-bold">Resolution (MP)</td>
-                  <td className="border-black  p-2">2 MP</td>
-                  <td className="border-black border-r  p-2"></td>
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">Resolution (MP)</td>
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">2 MP</td>
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80"></td>
                 </tr>
                  <tr>
-                  <td className="border border-black p-2 font-bold">
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     Image Sensor
                   </td>
-                  <td className="border-black border p-2">
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     1/2.8” progressive scan CMOS
                   </td>
-                  <td className="border-black border  p-2">
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                   </td>
                 </tr> 
                  <tr>
-                  <td className="border border-r border-black p-2 font-bold">
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     Optical Zoom
                   </td>
-                  <td className="border-black p-2">
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     40X
                   </td>
-                  <td className="border-black border-r  p-2">
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                   </td>
                 </tr> 
                 <tr>
-                  <td className="border border-r border-black p-2 font-bold">
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     Pan
                   </td>
-                  <td className="border border-r border-black  p-2">
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     360°, endless, up to 100°/second
                   </td>
-                  <td className="border border-r border-black  p-2">
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     N/A
                   </td>
                 </tr>
                  <tr>
-                  <td className="border border-r border-black p-2 font-bold">
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     Pan
                   </td>
-                  <td className="border border-r border-black  p-2">
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     -90° to +90°, up to 100°/second
                   </td>
-                  <td className="border border-r border-black  p-2">
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     N/A
                   </td>
                 </tr>
                 
                 <tr>
-                  <td className="border border-r border-black p-2 font-bold">
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     Max. Dynamic Range (dB)</td>
-                  <td className="border border-r border-black p-2">
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     120 dB
                   </td>
-                  <td className="border border-r border-black p-2"></td>
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80"></td>
                 </tr>
                 <tr>
-                  <td className="border border-r border-black p-2 font-bold">
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     Max. Image Rate (50 Hz / 60 Hz)
                   </td>
-                  <td colSpan className="border border-r border-black  p-2">
+                  <td colSpan className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     Up to 60 fps
                   </td>
-                  <td className="border border-r border-black  p-2"></td>
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80"></td>
                 </tr>
                 <tr>
-                  <td className="border border-r border-black p-2 font-bold">Environmental</td>
-                  <td className="border border-r border-black  p-2"></td>
-                  <td className="border border-r border-black  p-2"></td>
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">Environmental</td>
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80"></td>
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80"></td>
                 </tr>
                 <tr>
-                  <td className="border border-r border-black p-2 font-bold">Thermal camera</td>
-                  <td className="border border-r border-black  p-2"></td>
-                  <td className="border border-r border-black  p-2"></td>
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">Thermal camera</td>
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80"></td>
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80"></td>
                 </tr>
 
                 <tr className="bg-gray-100 font-bold border border-black">
@@ -157,30 +157,30 @@ const Esprit = () => {
                   <td className="border-black  p-2"></td>
                 </tr> 
                  <tr>
-                  <td className="border border-r border-black p-2 font-bold">Image Compression Method</td>
-                  <td className="border-black p-2 border-r border">H.264 and H.265 Pelco Smart Compression, Motion JPEG</td>
-                  <td className="border-black border border-r  p-2"></td>
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">Image Compression Method</td>
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">H.264 and H.265 Pelco Smart Compression, Motion JPEG</td>
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80"></td>
                 </tr>
                  <tr>
-                  <td className="border border-r border-black p-2 font-bold">Audio Input/Output</td>
-                  <td className="border-black border border-r p-2">None</td>
-                  <td className="border-black border border-r  p-2"></td>
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">Audio Input/Output</td>
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">None</td>
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80"></td>
                 </tr>
 
                  <tr>
-                  <td className="border border-r border-black p-2 font-bold">External I/O Terminals</td>
-                  <td className="border-black border border-r p-2">1 Alarm In, 1 Alarm Out, 1 Washer pump Out, 1 Remote reset In</td>
-                  <td className="border-black border border-r  p-2">2 Digital Output (optional)</td>
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">External I/O Terminals</td>
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">1 Alarm In, 1 Alarm Out, 1 Washer pump Out, 1 Remote reset In</td>
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">2 Digital Output (optional)</td>
                 </tr>
                  <tr>
-                  <td className="border border-r border-black p-2 font-bold">Power Source</td>
-                  <td className="border-black border border-r p-2">220-230 VAC ±10%, 0.5 A max, 50/60 Hz; 120 VAC ±10%, 1 A max, 50/60 Hz;4 VAC ±10%, 5 A max, 50/60 Hz</td>
-                  <td className="border-black border border-r  p-2">POE+; 24 VAC, 1.32A, 24 VDC, 0.9A</td>
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">Power Source</td>
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">220-230 VAC ±10%, 0.5 A max, 50/60 Hz; 120 VAC ±10%, 1 A max, 50/60 Hz;4 VAC ±10%, 5 A max, 50/60 Hz</td>
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">POE+; 24 VAC, 1.32A, 24 VDC, 0.9A</td>
                 </tr>
                 <tr>
-                  <td className="border border-r border-black p-2 font-bold">Onboard Storage</td>
-                  <td className="border-black border border-r p-2">MicroSD/microSDHC/microSDXC slot – video speed class card required.Class V10 or better recommended.</td>
-                  <td className="border-black border border-r  p-2">Pre-installed 128 GBytes storage</td>
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">Onboard Storage</td>
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">MicroSD/microSDHC/microSDXC slot – video speed class card required.Class V10 or better recommended.</td>
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">Pre-installed 128 GBytes storage</td>
                 </tr>
                  <tr className="bg-gray-100 font-bold border border-black">
                   <td className="border-black p-2">Learn more at www.pelcom.com </td>
@@ -209,9 +209,9 @@ const Esprit = () => {
 
           {/* Sidebar */}
               <aside className="lg:w-1/4 space-y-6"> 
-                     <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
-                        <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By PELCO</h3>
-                         <ul className="space-y-4 text-gray-700">
+                     <div className="bg-gray-300 dark:bg-[#1e1e22] p-6 rounded-xl shadow-sm border border-gray-400 dark:border-gray-800 transition-colors duration-300">
+                        <h3 className="font-bold text-black dark:text-blue-400 text-xl mb-4 border-b border-black dark:border-gray-700 pb-2 transition-colors">More By PELCO</h3>
+                         <ul className="space-y-4 text-gray-700 dark:text-gray-300">
                           <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
                             <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>Onity DirectKey with Serene</li>
                           </NavLink>

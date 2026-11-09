@@ -11,32 +11,32 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
   return (
     <>
     <Header />
-    <div className="bg-gray-100 min-h-screen font-sans text-slate-800">
+    <div className="bg-gray-200 dark:bg-[#121214] min-h-screen font-sans text-[#333] dark:text-gray-200 transition-colors duration-300">
       {/* Banner Header */}
-      <header className="bg-[#7f95b8] text-white py-14 px-4 text-center">
+      <header className="bg-[#7f95b8] text-white py-12 px-6 text-centerbg-[#7f95b8] dark:bg-blue-950/70 text-center transition-colors duration-300">
         <h1 className="text-5xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
           {title}
         </h1>
       </header>
 
       {/* Content Container */}
-      <main className="max-w-6xl mx-auto bg-gray-200 shadow-xl my-10 p-6 md:p-12">
+      <main className="max-w-6xl mx-auto shadow-xl my-10 p-6 md:p-12">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
           
           {/* Main Product Info */}
-          <div className="lg:col-span-3">
-            <p className="text-[17px]  text-black mb-6">{subtitle}</p>
+          <div className="lg:col-span-3 bg-gray-100 dark:bg-[#1e1e22] p-6 md:p-8 rounded-xl border border-transparent dark:border-gray-800 shadow-md transition-colors duration-300">
+            <p className="text-[15px] text-gray-680 leading-relaxed whitespace-pre-line">{subtitle}</p>
 
             <section className="mb-8">
-              <h2 className="font-bold text-xl text-black mb-2">Product Description:</h2>
-              <p className="text-[17px] text-gray-680 leading-relaxed whitespace-pre-line">
+              <h2 className="font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">Product Description:</h2>
+              <p className="text-[15px] text-gray-680 leading-relaxed whitespace-pre-line">
                 {description}
               </p>
             </section>
 
             <section className="mb-10">
-              <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
-              <ul className="list-disc ml-5 text-[17px] text-gray-680 space-y-1">
+              <h2 className="font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">Product Features:</h2>
+              <ul className="list-disc ml-5 text-[15px] text-gray-680 space-y-1">
                 {features.map((feature, idx) => (
                   <li key={idx}>{feature}</li>
                 ))}
@@ -44,157 +44,157 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
             </section>
 
              {/* Technical Specifications Table */}
-              <div className="bg-gray-300 p-6 shadow rounded border border-r divine-y">
-            <h2 className="font-semibold text-black text-xl mb-4">Technical Specification</h2>
+              <div className="p-6 shadow rounded border border-r divine-y">
+            <h2 className="font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">Technical Specification</h2>
 
             <table className="w-full border text-[15px] text-black">
               <tbody>
                 <tr className="bg-gray-300 font-bold">
-                  <td className="border-r border-black border p-2 ">
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     Model Name
                   </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
+                  <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     THERMAL VARIANTS
                   </td>
-                  <td colSpan="2" className="border border-r border-black  p-2">
+                  <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     RADIOMETRIC VARIANTS
                   </td>
                 </tr> 
                 <tr>
-                  <td className="border border-r border-black p-2 font-bold">
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     Part Number
                   </td>
-                  <td className="border border-r border-black  p-2">
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     SXTE4-QF04-EBTSXTE4-QF04-EBT-1SXTE4-QF09-EBTSXTE4-QF09-EBT-1</td>
-                  <td className="border border-r border-black  p-2">
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     SXTE4-QF13-EBTSXTE4-QF13-EBT-1SXTE4-QF18-EBTSXTE4-QF18-EBT-1</td>
-                     <td className="border border-r border-black  p-2">
+                     <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     SXTE4-VF24-EBTSXTE4-VF24-EBT-1SXTE4-VF36-EBTSXTE4-VF36-EBT-1</td>
-                  <td className="border border-r border-black  p-2">
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     SXRE4-VF09-EBTSXRE4-VF09-EBT-1SXRE4-VF14-EBT</td>
-                  <td className="border border-r border-black  p-2">
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     SXRE4-VF09-EBTSXRE4-VF09-EBT-1SXRE4-VF14-EBT</td>
                 </tr> 
                 <tr>
-                  <td className="border border-r border-black p-2 font-bold">
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     Thermal Resolution (MP)</td>
-                  <td colSpan="2" className="border-black  p-2 border">
+                  <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     320×256
                   </td>
-                  <td colSpan="1" className="border-black  p-2 border">
+                  <td colSpan="1" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     640×512
                   </td>
-                  <td colSpan="2" className="border-black  p-2 border">
+                  <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     640×512
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-r border-black p-2 font-bold">
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     Image Sensor (MP)</td>
-                  <td colSpan="2" className="border-black  p-2 border">
+                  <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     Uncooled VOx Microbolometer
                   </td>
-                  <td colSpan="1" className="border-black  p-2 border">
+                  <td colSpan="1" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     Uncooled VOx Microbolometer
                   </td>
-                  <td colSpan="2" className="border-black  p-2 border">
+                  <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                    Uncooled VOx Microbolometer Radiometric
                   </td>
                 </tr>
 
                  <tr>
-                  <td className="border border-black p-2 font-bold">
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     Pixel Pitch
                   </td>
-                  <td colSpan="5" className="border-black border p-2">
+                  <td colSpan="5" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     12μm
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-black p-2 font-bold">
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     Spectral Range
                   </td>
-                  <td colSpan="5" className="border-black border p-2">
+                  <td colSpan="5" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     8μm to 14μm
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-black p-2 font-bold">
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                    Aspect Ratio
                   </td>
-                  <td colSpan="5" className="border-black border p-2">
+                  <td colSpan="5" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     5:4
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-black p-2 font-bold">
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                    Imaging Rate
                   </td>
-                  <td colSpan="5" className="border-black border p-2">
+                  <td colSpan="5" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                    Up to 30 fps (-1 models up to 8.6 fps)
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-black p-2 font-bold">
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                    Dynamic Range
                   </td>
-                  <td colSpan="5" className="border-black border p-2">
+                  <td colSpan="5" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                    -40 °C to 225 °C (-40 °F to 437 °F) [may vary based on operating temperature]
                   </td>
                 </tr> 
                 <tr>
-                  <td className="border border-r border-black p-2 font-bold">
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     Resolution Scaling</td>
-                  <td colSpan="2" className="border-black  p-2 border">
+                  <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     320×256, can be scaled up to 640×512
                   </td>
-                  <td colSpan="1" className="border-black  p-2 border">
+                  <td colSpan="1" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     640×512, can be scaled down to 320×256
                   </td>
-                  <td colSpan="2" className="border-black  p-2 border">
+                  <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     640×512, can be scaled down to 320×256
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-black p-2 font-bold">
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     3D Noise Reduction Filter
                   </td>
-                  <td colSpan="5" className="border-black border p-2">
+                  <td colSpan="5" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                    Yes
                   </td>
                 </tr> 
                 <tr>
-                  <td className="border border-black p-2 font-bold">
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     Sensitivity
                   </td>
-                  <td colSpan="5" className="border-black border p-2">
+                  <td colSpan="5" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                    NETD ≤50mK (NETD ≤40mK on 30FPS models when Frame Averager feature is enabled)
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-black p-2 font-bold">
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     Image Uniformity Optimization
                   </td>
-                  <td colSpan="5" className="border-black border p-2">
+                  <td colSpan="5" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     Automatic Flat Field Correction (FFC) – Thermal and Temporal
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-black p-2 font-bold">
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     Operating Temperature Range
                   </td>
-                  <td colSpan="5" className="border-black border p-2">
+                  <td colSpan="5" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     -40 °C to +65 °C (-40 °F to 149 °F)
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-black p-2 font-bold">
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     Environmental	
                   </td>
-                  <td colSpan="2" className="border-black border p-2">
+                  <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     IP66, IP67 (IK10 rating) includes window impact on all models Type 4X
                   </td>
-                  <td colSpan="3" className="border-black border p-2">
+                  <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     IP66, IP67 IK10 rating includes window impact only on models SXRE4-VF14-EBT, SXRE4-VF14-EBT-1, SXRE4-VF18-EBT,SXRE4-VF18-EBT-1, SXTE4-VF24-EBT, SXTE4-VF24-EBT-1Type 4X
                   </td>
                 </tr> 
@@ -222,9 +222,9 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
 
           {/* Sidebar */}
           <aside className="lg:col-span-1 space-y-8">
-             <div className="bg-gray-300 p-4 border border-black  border-r mb-6">
-            <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By PELCO</h3>
-          <ul className="space-y-4 text-gray-700">
+             <div className="bg-gray-300 dark:bg-[#1e1e22] p-6 rounded-xl shadow-sm border border-gray-400 dark:border-gray-800 transition-colors duration-300">
+            <h3 className="font-bold text-black dark:text-blue-400 text-xl mb-4 border-b border-black dark:border-gray-700 pb-2 transition-colors">More By PELCO</h3>
+          <ul className="space-y-4 text-gray-700 dark:text-gray-300">
               <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
                 <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>Onity DirectKey with Serene</li>
               </NavLink>

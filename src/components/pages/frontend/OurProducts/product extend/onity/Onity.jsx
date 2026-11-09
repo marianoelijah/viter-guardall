@@ -25,7 +25,7 @@ const ProductCard = ({ title, description, image, detailRoute }) => (
         </p>
       </div>
 
-      <span className="block mt-12 text-gray-500 dark:text-gray-400 text-sm tracking-widest">
+      <span className="block mt-2 text-gray-500 dark:text-gray-400 text-sm tracking-widest">
         <NavLink to={detailRoute} className="text-[#184c9b] dark:text-blue-400 hover:underline mt-2 block">
           <h3 className="text-xl font-poppins hover:text-[#ff5f31] dark:hover:text-[#ff5f31] transition-colors duration-300">
             View Details
@@ -58,7 +58,7 @@ const Onity = () => {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-[#e9eff6] dark:bg-[#121214] text-[#0d3874] dark:text-blue-400 font-figtree transition-colors duration-300">
-        Loading Hotel Systems...
+        Loading Onity Products...
       </div>
     );
   }
@@ -67,7 +67,7 @@ const Onity = () => {
     <div className="bg-[#e9eff6] dark:bg-[#121214] min-h-screen py-16 px-6 lg:px-12 font-figtree transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
         <header className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-5xl text-[#0d3874] dark:text-blue-400 mb-6 tracking-tight font-semibold transition-colors">
+          <h2 className="text-4xl md:text-5xl lg:text-5xl text-[#0d3874] dark:text-blue-400 mb-6 tracking-tight font-bold transition-colors">
             {products.length > 0 ? products[0].category_name : "Hotel Security"} – Onity
           </h2>
           <div className="h-1 w-24 bg-[#2257a0] dark:bg-blue-400 mx-auto rounded-full opacity-20"></div>

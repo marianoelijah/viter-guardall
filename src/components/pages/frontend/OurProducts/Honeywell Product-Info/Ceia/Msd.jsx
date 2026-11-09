@@ -76,35 +76,39 @@ const Msd = () => {
     <>
     <Header />
 
-    <div className="bg-gray-200 min-h-screen font-sans">
+    <div className="bg-gray-100 dark:bg-[#121214] min-h-screen font-sans text-slate-800 dark:text-gray-200 transition-colors duration-300">
       {/* Header Banner */}
-      <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
+      <header className="bg-[#7f95b8] dark:bg-blue-950/70 text-white py-14 px-4 text-center transition-colors duration-300">
         <h1 className="text-5xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
           MSD Highly Portable Cellphone, Ferrous Weapon, and Contraband Detector
         </h1>
       </header>
 
-      <div className="max-w-7xl mx-auto px-4 py-8 flex flex-col lg:flex-row gap-8 items-start">
+      <div className="max-w-5xl mx-auto px-4 py-8 flex flex-col lg:flex-row gap-8 items-start">
       {/* Main Content Container */}
-      <main className="w-full lg:w-2/3 bg-gray-300 p-6 md:p-10 shadow-sm rounded-lg">
+      <main className="w-full lg:w-2/3 bg-gray-200 p-8 rounded-lg shadow-sm dark:bg-[#1e1e22] border border-gray-400 dark:border-gray-800 transition-colors duration-300">
         
           
           {/* Left Column: Content */}
-          <div className="md:w-3/4">
-            <p className="mb-6 text-black text-[17px]">
+          <div>
+            <p className="text-[15px] text-gray-800 dark:text-gray-300 mb-4 border-l-4 border-[#8ba4cc] dark:border-blue-500 font-medium pl-3">
               An easy-to-carry device designed to detect all cellphones and ferrous contraband, particularly in prisons.
             </p>
 
             <section className="mb-8">
-              <h2 className="font-bold text-xl text-black mb-2">Description:</h2>
-              <p className="text-sm leading-relaxed text-black text-[17px]">
+              <h2 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">
+                 Product Description:
+              </h2>
+              <p className="text-[15px] text-gray-800 dark:text-gray-300 mb-4 border-l-4 border-[#8ba4cc] dark:border-blue-500 font-medium pl-3">
                The illegal use of cell phones is a growing and dangerous problem in correctional institutions worldwide. These devices are a significant threat to prison security and circumvent the monitoring processes in prisons, while allowing inmates to commit new crimes both inside and outside the facility. The MSD™ was specifically designed to detect all cell phones and ferrous contraband concealed on the person or in body cavities (including key fob cell phones, smart phones, radio transceivers, etc.) quickly and easily. The one-piece design allows the MSD™ to be easily transported and operational in 10 seconds.
               </p>
             </section>
 
             <section className="mb-10">
-              <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
-              <ul className="list-disc ml-5 text-sm space-y-1 text-black text-[17px]">
+              <h2 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">
+                Product Features:
+              </h2>
+              <ul className="list-disc ml-5 text-sm space-y-1 text-gray-800 dark:text-gray-300">
                 <li>Detection of all cell phones and ferrous contraband concealed on the person or in body cavities (including keyfob cellphones, smart phones, radio transceivers, etc.)</li>
                 <li>Constant Sensitivity across the detection area in pass-through operations</li>
                 <li>Multi-Zone targeting indication identifies location of contraband on the body</li>
@@ -119,16 +123,18 @@ const Msd = () => {
         </div>
 
             {/* Technical Specifications Table */}
-        <div className='bg-gray-300 mt-5 px-10 py-5'>
+        <div>
             <section>
-              <h2 className="font-bold text-xl text-black mb-4 pt-5">Technical Specifications:</h2>
+              <h2 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">
+                Technical Specifications:
+              </h2>
               <div className="border border-black">
                 {specData.map((spec, index) => (
                   <div key={index} className="flex border-b border-black last:border-0">
-                    <div className="w-1/2 p-3 bg-gray-200 font-bold text-[17px] text-black border-r border-black">
+                    <div className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 bg-gray-200 dark:bg-gray-800/80 text-[15px] text-black dark:text-gray-200">
                       {spec.category}
                     </div>
-                    <div className="w-2/3 p-3 text-[17px] text-black">
+                    <div className="w-2/3 p-3 text-[15px] text-black border-gray-500 dark:border-gray-700 font-bold bg-gray-200 dark:bg-gray-800/80  dark:text-gray-200">
                       <ul className="space-y-2">
                         {spec.details.map((item, i) => (
                           <li key={i}>{item}</li>
@@ -160,11 +166,11 @@ const Msd = () => {
 
               {/* Sidebar */}
                     <aside className="w-full lg:w-1/3 space-y-6"> 
-                           <div className="bg-gray-300 p-5 border border-gray-500 mb-6">
-                              <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1 p">
+                           <div className="bg-gray-300 dark:bg-[#1e1e22] p-6 rounded-xl shadow-sm border border-gray-400 dark:border-gray-800 transition-colors duration-300">
+                              <h3 className="font-bold text-black dark:text-blue-400 text-xl mb-4 border-b border-black dark:border-gray-700 pb-2 transition-colors">
                                 More By CEIA
                                 </h3>
-                             <ul className="space-y-4 text-gray-800 font-medium">
+                             <ul className="space-y-4 text-gray-700 dark:text-gray-300">
                                   <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
                                     <li className='cursor-pointer hover:text-[#ff5f31] transition-colors break-words'>Onity DirectKey with Serene</li>
                                   </NavLink>
@@ -186,8 +192,8 @@ const Msd = () => {
                                 </ul>
                             </div>
                             
-                            {/* Contact Card */}
-                             <div 
+        {/* Contact Card */}
+          <div 
               className="relative min-h-[240px] overflow-hidden rounded-2xl p-8 text-white shadow-md bg-cover bg-center bg-blend-multiply bg-blue-900/85"
               style={{ backgroundImage: "url('/assets/image/Our%20Products/quickalert.jpg')" }}
             >

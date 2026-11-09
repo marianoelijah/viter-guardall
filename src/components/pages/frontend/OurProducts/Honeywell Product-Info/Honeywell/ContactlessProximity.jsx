@@ -1,11 +1,8 @@
 import React from 'react';
-import { Facebook, Linkedin, Mail, MessageCircle, Share2 } from 'lucide-react'; // Optional: for the share icons
 import Header from '../../../partials/Header';
 import Footer from '../../../partials/Footer';
 import { NavLink } from 'react-router-dom';
 import SocialShare from '../../Reusable/SocialShare';
-
-
 
 
 const ContactlessProximity = () => {
@@ -36,25 +33,28 @@ const ContactlessProximity = () => {
   return (
     <>
     <Header />
-     <div className="bg-[#f3f4f6] min-h-screen font-sans text-gray-700 pb-12">
+     <div className="bg-gray-100 dark:bg-[#121214] min-h-screen font-sans text-slate-800 dark:text-gray-200 transition-colors duration-300">
       {/* Header Banner */}
-      <header className="bg-[#7f95b8] text-white py-12 text-center">
+      <header className="bg-[#7f95b8] dark:bg-blue-950/70 text-white py-14 px-4 text-center transition-colors duration-300">
         <h1 className="text-5xl font-semibold tracking-tight">
-          OmniProx™ Credentials: Contactless Proximity Card
+           OmniProx™ Credentials: <br/>
+           Contactless Proximinity Card
         </h1>
       </header>
 
-      <div className="max-w-6xl mx-auto bg-gray-200 mt-8 p-8 shadow-sm flex flex-col md:flex-row gap-8">
+      <div className="max-w-6xl mx-auto bg-gray-200 mt-8 p-8 shadow-sm flex flex-col md:flex-row gap-8 dark:bg-[#1e1e22]">
         
         {/* Left Content Area */}
-        <main className="md:w-[72%]">
-          <p className="text-[15px] mb-6 text-black">
+        <main className="md:w-[72%] lg:w-3/4 max-w-6xl mx-auto bg-gray-200 dark:bg-[#1e1e22] border border-transparent dark:border-gray-800 transition-colors shadow-lg p-8 md:p-12">
+          <p className="text-[17px] leading-relaxed space-y-4 mb-6">
             An easy-to-carry proximity card that utilizes RFID technology. It has a high contactless 
             range and is designed to work with OmniProx™ readers.
           </p>
 
-          <h2 className="font-bold text-xl text-black mb-2">Product Description:</h2>
-          <p className="text-[15px] text-black leading-relaxed mb-6">
+          <h2 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">
+            Product Description:
+          </h2>
+          <p className="text-[17px] leading-relaxed space-y-4 mb-6">
             Honeywell OmniClass credentials are designed to work with OmniClass readers. 
             Built on 13.56MHz technology, the OmniClass product line is RFID based and provides 
             excellent contactless sensing range (up to 4.5"). The OmniClass cards are laminated PVC 
@@ -62,35 +62,47 @@ const ContactlessProximity = () => {
             printer.
           </p>
 
-          <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
-          <ul className="list-disc ml-5 text-[15px] text-black space-y-1 mb-8">
+          <h2 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">
+            Product Features:
+          </h2>
+          <ul className="list-disc ml-5 text-[17px] space-y-1 mb-4">
             {productFeatures.map((f, i) => <li key={i}>{f}</li>)}
           </ul>
 
-          <h2 className="font-bold text-xl text-black mb-4 uppercase">Technical Specification:</h2>
-          <table className="w-full border-collapse border border-black text-[11px]">
-            <thead className="bg-gray-200">
-              <tr className="font-bold uppercase">
-                <th className="border border-black p-2 text-left w-1/4"></th>
-                <th colSpan="3" className="border border-black p-2 text-left text-[15px] text-black bg-gray-200">Models</th>
+          <h2 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">
+            Technical Specification:
+          </h2>
+          <table className="w-full border-collapse border border-gray-500 text-[11px]">
+            <thead className="divide-y divide-gray-800 p-2.5 font-bold  tracking-widest text-gray-800 dark:text-blue-400 text-[17px] border-b border-gray-500 dark:border-gray-700">
+              <tr className="font-bold bg-gray-700 dark-gray-800 uppercase">
+                <th className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80"></th>
+                <th colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80 border">
+                  Models
+                </th>
               </tr>
-              <tr className="font-bold">
-                <th className="border border-black p-2"></th>
-                <th className="border border-black p-2 text-left text-[17px] text-black">OmniProx ISOCard (PVC4)</th>
-                <th className="border border-black p-2 text-left text-[17px] text-black">OmniProx ISO Card with Magnetic Stripe (PVC5)</th>
-                <th className="border border-black p-2 text-left text-[17px] text-black">OmniProx Clamshell Card (PX4)</th>
+              <tr className="font-bold bg-gray-400">
+                <th className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80 border"></th>
+                <th className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80 border">
+                   OmniProx ISOCard (PVC4)
+                </th>
+                <th className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80 border">
+                  OmniProx ISO Card with Magnetic Stripe (PVC5
+                </th>
+                <th className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80 border">
+                  OmniProx Clamshell Card (PX4)
+                </th>
               </tr>
             </thead>
             <tbody>
               {specData.map((row, idx) => (
                 <tr key={idx}>
-                  <td className="border border-black p-2 font-bold bg-gray-200 text-black text-[15px]">{row.label}</td>
+                  <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold  text-[14px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">{row.label}</td>
                   {row.isFullWidth ? (
-                    <td colSpan="3" className="border border-black p-2 text-[15px]">{row.col1}</td>
+                    <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80 border">{row.col1}</td>
                   ) : (
                     <>
-                      <td colSpan={row.label === "Dimensions" ? 2 : 1} className="border border-black p-2 text-[15px]">{row.col1}</td>
-                      <td className="border border-black p-2 text-[15px]">{row.col2}</td>
+                      <td colSpan={row.label === "Dimensions" ? 2 : 1} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80 border">{row.col1}</td>
+                      <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80 border">{row.col2}</td>
                     </>
                   )}
                 </tr>
@@ -112,9 +124,11 @@ const ContactlessProximity = () => {
 
         {/* Right Sidebar */}
         <aside className="md:w-[28%]">
-          <div className="bg-gray-300 p-6 rounded shadow-sm border border-gray-400 mb-5">
-                <h3 className="font-bold text-black text-xl mb-4 border-b border-black pb-2">More By HONEYWELL</h3>
-                <ul className="space-y-4 text-gray-700">
+          <div className="bg-gray-300 dark:bg-[#1e1e22] p-6 rounded-xl shadow-sm  mb-6">
+                <h3 className="font-bold text-black dark:text-blue-400 text-x mb-4 border-b border-black dark:border-gray-700 pb-2 transition-colors">
+                  More By HONEYWELL
+                </h3>
+                <ul className="space-y-4 text-gray-700 dark:text-gray-300">
                   <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
                   <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>Onity DirectKey with Serene </li>
                   </NavLink>

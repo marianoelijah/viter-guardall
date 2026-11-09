@@ -1,5 +1,4 @@
 import React from 'react';
-import { Share2, Facebook, Twitter, Linkedin, Mail } from 'lucide-react'; // Optional for icons
 import Header from '../../../partials/Header';
 import Footer from '../../../partials/Footer';
 import { NavLink } from 'react-router-dom';
@@ -11,9 +10,9 @@ const Pro3200 = () => {
   return (
     <>
     <Header />
-    <div className="bg-gray-100 min-h-screen font-sans text-gray-800">
+    <div className="bg-gray-100 dark:bg-[#121214] min-h-screen font-sans text-slate-800 dark:text-gray-200 transition-colors duration-300">
       {/* Blue Header Section */}
-      <header className="bg-[#7f95b8] py-10 px-6 md:px-20 text-white shadow-md">
+      <header className="bg-[#7f95b8] dark:bg-blue-950/70 text-white py-14 px-4 text-center transition-colors duration-300">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-center align-middle">
             PRO3200 Professional Series Access <br/>
                          Modules 
@@ -21,22 +20,22 @@ const Pro3200 = () => {
       </header>
 
       {/* Main Content Container */}
-      <div className="max-w-7xl mx-auto px-6 py-8 flex flex-col lg:flex-row gap-8 ">
+      <div className="max-w-5xl mx-auto px-6 py-8 flex flex-col lg:flex-row gap-8 ">
         
         {/* Left Column: Descriptions & Tables */}
-        <main className="lg:w-3/4 space-y-8 bg-gray-200 p-4 md:p-0 px-5">
-          <section className="space-y-4 text-[17px] leading-relaxed px-6 py-8 rounded-xl">
+        <main className="lg:w-3/4 lg:col-span-2 max-w-6xl mx-auto bg-gray-200 p-8 shadow-sm dark:bg-[#1e1e22]">
+          <section className="space-y-4 text-[15px] leading-relaxed px-6 py-8 rounded-xl">
             <p>
               Designed to work without a PC, the PRO3200 series is a customizable access control that provides real-time processing for connected I/O interfaces.
             </p>
 
-            <h2 className="font-bold text-black text-[17px] mt-6">Product Description:</h2>
+            <h2 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">Product Description:</h2>
             <p>
               The PRO3200 professional series family of access control modules is designed for high density installations. Supporting up to 16 readers per enclosure and 32 readers per intelligent controller along with up to 100,000 card capacity provides a combination of small installation footprint and superior cost per door ratio.
             </p>
 
-            <h2 className="font-bold text-black text-[17px] mt-6">Product Features:</h2>
-            <ul className="list-disc text-black text-[17px] ml-5 space-y-1">
+            <h2 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">Product Features:</h2>
+            <ul className="list-disc ml-5 text-[15px] space-y-1">
               <li>Modular design fits a wide variety of applications</li>
               <li>Up to 9 modules, power-supply and battery can be accommodated by the PRO22ENC1, PRO22ENC2 and PRO22ENC5 (no battery) enclosures</li>
               <li>User programmable relay outputs allow for specific control needs</li>
@@ -58,16 +57,16 @@ const Pro3200 = () => {
           </section>
 
           {/* Technical Specifications Table */}
-          <section className="px-6 py-8">
-  <h2 className="font-bold text-xl text-black mb-4">Technical specification:</h2>
-  <div className="overflow-x-auto rounded-xl bg-gray-200 p-4">
-    <table className="w-full text-left border-collapse border border-black bg-white">
+        <section className="px-6 py-8">
+  <h2 className="font-bold text-xl mb-4 text-black dark:text-blue-400 uppercase transition-colors">Technical specification:</h2>
+  <div className="border border-gray-500 dark:border-gray-700 rounded-sm overflow-x-auto mb-8">
+    <table className="w-full text-[15px] text-left border-collapse">
       <thead className="bg-gray-300 border-b border-black">
         <tr>
-          <th className="p-4 border-r border-black text-black text-[17px] w-1/4 uppercase font-bold">
+          <th className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
             Models
           </th>
-          <th className="p-4 uppercase text-black text-[17px] font-bold">
+          <th className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
             Module Specifications
           </th>
         </tr>
@@ -75,11 +74,11 @@ const Pro3200 = () => {
       <tbody className="divide-y divide-black">
         {/* Row 1 */}
         <tr>
-          <td className="p-4 border-r border-black text-black text-[17px] font-bold bg-gray-100 align-top">
+          <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
             PW-Series Single Reader Module (PW5K1R1)
           </td>
-          <td className="p-4 text-[15px] text-black leading-relaxed">
-            <ul className="list-disc ml-5 space-y-2">
+          <td className="text-[15px] leading-relaxed space-y-4 p-4">
+            <ul className="list-disc ml-5 text-[15px] space-y-1">
               <li>1 reader port – 5 VDC or 12 VDC at 150 mA, clock / data or data0 / data1</li>
               <li>Keypad multiplexed with card data</li>
               <li>Two-wire or one-wire bi-color LED support</li>
@@ -94,10 +93,10 @@ const Pro3200 = () => {
         </tr>
         {/* Row 2 */}
         <tr>
-          <td className="p-4 border-r border-black text-black text-[17px] font-bold bg-gray-100 align-top">
+          <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
             PW-Series Dual Reader Module (PW6K1R2)
           </td>
-          <td className="p-4 text-[15px] text-black leading-relaxed">
+          <td className="text-[15px] leading-relaxed space-y-4 p-4">
             <ul className="list-disc ml-5 space-y-2">
               <li>2 reader ports – 12 VDC at 50 mA, clock/data or data0/data1</li>
               <li>Keypad multiplexed with card data</li>
@@ -112,10 +111,10 @@ const Pro3200 = () => {
         </tr>
         {/* Row 3 */}
         <tr>
-          <td className="p-4 border-r border-black text-black text-[17px] font-bold bg-gray-100 align-top">
+          <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
             PW-Series Sixteen Input Module (PW6K1IN)
           </td>
-          <td className="p-4 text-[15px] text-black leading-relaxed">
+          <td className="text-[15px] leading-relaxed space-y-4 p-4">
             <ul className="list-disc ml-5 space-y-2">
               <li>2 dedicated alarm inputs for tamper detection and power loss</li>
               <li>16 general purpose inputs with programmable circuit type</li>
@@ -125,10 +124,10 @@ const Pro3200 = () => {
         </tr>
         {/* Row 4 */}
         <tr>
-          <td className="p-4 border-r border-black text-black text-[17px] font-bold bg-gray-100 align-top">
+          <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
             PW-Series Sixteen Output Module (PW6K1OUT)
           </td>
-          <td className="p-4 text-[15px] text-black leading-relaxed">
+          <td className="text-[15px] leading-relaxed space-y-4 p-4">
             <ul className="list-disc ml-5 space-y-2">
               <li>2 dedicated alarm inputs for tamper detection and power loss</li>
               <li>16 general purpose output relay, form-C, 2 A 28 VDC (12 available when using PW5K2ENC1/2)</li>
@@ -141,66 +140,68 @@ const Pro3200 = () => {
          </section>
 
           {/* Common Specifications Table */}
-          <section className='px-6 py-8 rounded-xl bg-gray-200'>
-            <h2 className="font-bold text-xl px-5 text-black mb-2 border">Common Specifications:</h2>
-            <div className=" overflow-hidden px-6 py-8 text-black">
-              <div className="bg-gray-200 p-2 font-bold text-xl uppercase border-b border-gray-300">Enclosure Dimensions</div>
-              <table className="w-full text-xs text-left divide-y divide-gray-300">
+          <section className='px-6 py-8 rounded-xl bg-gray-200 '>
+            <h2 className="font-bold text-xl mb-4 text-black dark:text-blue-400 uppercase transition-colors">Common Specifications:</h2>
+            <div className="border border-gray-500 dark:border-gray-700 rounded-sm overflow-x-auto mb-8">
+              <div className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80 text-black">
+                 Enclosure Dimensions
+              </div>
+              <table className="w-full text-[15px] text-left border-collapse ">
                 <thead>
-                    <tr className="bg-gray-200 text-black border border-black">
-                        <th className="p-4 uppercase text-[17px] font-semibold w-1/3">Board</th>
-                        <th className="p-4 uppercase text-[15px] font-semibold">9.0″ H x 5.5″ W x 1.0″ D(228.6 mm H x 139.7 mm W x 25.4 mm D)</th>
+                    <tr className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
+                        <th className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">Board</th>
+                        <th className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">9.0″ H x 5.5″ W x 1.0″ D(228.6 mm H x 139.7 mm W x 25.4 mm D)</th>
                     </tr>
-                     <tr className="bg-gray-200 text-black border border-black">
-                        <th className="p-4 uppercase text-[17px] font-semibold w-1/3">PW5K2ENC1:</th>
-                        <th className="p-4 uppercase text-[15px] font-semibold">13.9″ H x 17.0″ W x 9.0″ D(353.0 mm H x 431.8 mm W x 228.6 mm D)</th>
+                     <tr className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
+                        <th className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">PW5K2ENC1:</th>
+                        <th className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">13.9″ H x 17.0″ W x 9.0″ D(353.0 mm H x 431.8 mm W x 228.6 mm D)</th>
                     </tr>
-                     <tr className="bg-gray-200 text-black border border-black">
-                        <th className="p-4 uppercase text-[17px] font-semibold w-1/3">PW5K2ENC2:</th>
-                        <th className="p-4 uppercase text-[15px] font-semibold">3.9″ H x 18.9″ W x 9″ D(353.0 mm H x 480.0 mm W x 228.6 mm D)</th>
+                     <tr className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
+                        <th className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">PW5K2ENC2:</th>
+                        <th className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">3.9″ H x 18.9″ W x 9″ D(353.0 mm H x 480.0 mm W x 228.6 mm D)</th>
                     </tr>
-                     <tr className="bg-gray-200 text-black border border-black">
-                        <th className="p-4 uppercase text-[17px] font-semibold w-1/3">PW5K1ENC3:</th>
-                        <th className="p-4 uppercase text-[15px] font-semibold">14.0″ H x 16.0″ W x 4.5″ D(355.6 mm H x 406.4 mm W x 114.3 mm D)</th>
+                     <tr className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
+                        <th className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">PW5K1ENC3:</th>
+                        <th className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">14.0″ H x 16.0″ W x 4.5″ D(355.6 mm H x 406.4 mm W x 114.3 mm D)</th>
                     </tr>
-                     <tr className="bg-gray-200 text-black border border-black">
-                        <th className="p-4 uppercase text-[17px] font-semibold w-1/3">PW5K1ENC4:</th>
-                        <th className="p-4 uppercase text-[15px] font-semibold">8.375″ H x 7.625″ W x 7.625″ D(21.275 mm H x 19.4 mm W x 19.4 mm D)</th>
+                     <tr className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
+                        <th className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">PW5K1ENC4:</th>
+                        <th className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">8.375″ H x 7.625″ W x 7.625″ D(21.275 mm H x 19.4 mm W x 19.4 mm D)</th>
                     </tr>
-                    <tr className="bg-gray-200 text-black border border-black">
-                        <th className="p-4 text-[17px] font-semibold w-1/3">Communication Features:</th>
+                    <tr className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
+                        <th className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">Communication Features:</th>
                     </tr>
-                    <tr className="bg-gray-200 text-black border border-black">
-                        <th className="p-4 text-[15px] font-semibold w-1/3">• RS485 port, 4000’ (1,250m) total bus length</th>
+                    <tr className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
+                        <th className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">• RS485 port, 4000’ (1,250m) total bus length</th>
                     </tr>
-                     <tr className="bg-gray-200 text-black border border-black">
-                        <th className="p-4 text-[15px] font-semibold w-1/3">• Standard speed is 38,400 bps</th>
+                     <tr className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
+                        <th className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">• Standard speed is 38,400 bps</th>
                     </tr>
-                     <tr className="bg-gray-200 text-black border border-black">
-                        <th className="p-4 text-[15px] font-semibold w-1/3">Environment</th>
+                     <tr className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
+                        <th className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">Environment</th>
                     </tr>
-                    <tr className="bg-gray-200 text-black border border-black">
-                        <th className="p-4 text-[17px] font-semibold w-1/3">Temperature</th>
-                        <th className="p-4 text-[15px] font-semibold">0 to 70°C operational; -55 to 85°C storage</th>
+                    <tr className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
+                        <th className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">Temperature</th>
+                        <th className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">0 to 70°C operational; -55 to 85°C storage</th>
                     </tr>
-                     <tr className="bg-gray-200 text-black border border-black">
-                        <th className="p-4 text-[17px] font-semibold w-1/3">Humidity</th>
-                        <th className="p-4 text-[15px] font-semibold">0 to 95% RHNC</th>
+                     <tr className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
+                        <th className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">Humidity</th>
+                        <th className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">0 to 95% RHNC</th>
                     </tr>
-                     <tr className="bg-gray-200 text-black border border-black">
-                        <th className="p-4 text-[15px] font-semibold w-1/3">Wire Requirements:</th>
+                     <tr className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
+                        <th className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">Wire Requirements:</th>
                     </tr>
-                    <tr className="bg-gray-200 text-black border border-black">
-                        <th className="p-4 text-[17px] font-semibold w-1/3">Reader</th>
-                        <th className="p-4 text-[15px] font-semibold">24 AWG, 4,000′ (1,200m) max., 2 twisted pairs with shield (120 W, 23 pF, Belden 9842or equiv.)</th>
+                    <tr className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
+                        <th className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">Reader</th>
+                        <th className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">24 AWG, 4,000′ (1,200m) max., 2 twisted pairs with shield (120 W, 23 pF, Belden 9842or equiv.)</th>
                     </tr>
-                    <tr className="bg-gray-200 text-black border border-black">
-                        <th className="p-4 text-[17px] font-semibold w-1/3">Power</th>
-                        <th className="p-4 text-[15px] font-semibold">24 AWG, 25′ (7.6m) max</th>
+                    <tr className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
+                        <th className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">Power</th>
+                        <th className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">24 AWG, 25′ (7.6m) max</th>
                     </tr>
-                    <tr className="bg-gray-200 text-black border border-black">
-                        <th className="p-4 text-[17px] font-semibold w-1/3">Alarm input</th>
-                        <th className="p-4 text-[15px] font-semibold">twisted pair, 30 ohms max</th>
+                    <tr className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
+                        <th className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">Alarm input</th>
+                        <th className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">twisted pair, 30 ohms max</th>
                     </tr>
                 </thead>
               </table>
@@ -223,9 +224,9 @@ const Pro3200 = () => {
         {/* Right Sidebar */}
         <aside className="lg:w-1/4 space-y-6">
           
-          <div className="bg-gray-300 p-6 rounded shadow-sm border border-gray-400">
-                <h3 className="font-bold text-black text-xl mb-4 border-b border-black pb-2">More By HONEYWELL</h3>
-                <ul className="space-y-4 text-gray-700">
+          <div className="bg-gray-300 dark:bg-[#1e1e22] p-6 rounded shadow-sm border border-gray-400 dark:border-gray-800 transition-colors duration-300">
+                <h3 className="font-bold text-black dark:text-blue-400 text-x mb-4 border-b border-black dark:border-gray-700 pb-2 transition-colors">More By HONEYWELL</h3>
+                <ul className="space-y-4 text-gray-700 dark:text-gray-300">
                   <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
                   <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>Onity DirectKey with Serene </li>
                   </NavLink>
@@ -264,7 +265,7 @@ const Pro3200 = () => {
 
                 <NavLink 
                   to="/contacts" 
-                  className="inline-block w-full rounded-xl bg-[#0f3e90] px-6 py-3 text-center text-sm font-semibold tracking-wider text-white transition-colors hover:bg-[#ff5f31] sm:w-auto"
+                  className="inline-block w-full rounded-xl bg-[#0f3e90] px-2 py-3 text-center text-sm font-semibold tracking-wider text-white transition-colors hover:bg-[#ff5f31] sm:w-auto"
                 >
                   CONTACT US TODAY
                 </NavLink>

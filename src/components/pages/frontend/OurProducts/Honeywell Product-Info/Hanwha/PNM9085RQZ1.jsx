@@ -18,9 +18,9 @@ const PNM9085RQZ1 = () => {
   return (
     <>
       <Header />
-      <div className="bg-gray-100 min-h-screen font-sans text-gray-800">
+      <div className="bg-gray-100 dark:bg-[#121214] min-h-screen font-sans text-slate-800 dark:text-gray-200 transition-colors duration-300">
         {/* Blue Header Banner */}
-        <header className="bg-[#8ba4ca] text-white py-12 px-4 text-center">
+        <header className="bg-[#7f95b8] dark:bg-blue-950/70 text-white py-14 px-4 text-center transition-colors duration-300">
           <h1 className="text-5xl font-bold tracking-tight">
             PNM-9085RQZ1
           </h1>
@@ -28,14 +28,14 @@ const PNM9085RQZ1 = () => {
 
         <div className="max-w-7xl mx-auto px-4 py-8 flex flex-col lg:flex-row gap-8">
           {/* Main Content */}
-          <main className="lg:w-3/4 bg-gray-300 p-8 shadow-sm">
-            <p className="text-[15px] text-black mb-6">
-                
+          <main className="lg:w-3/4 lg:col-span-3 bg-gray-100 dark:bg-[#1e1e22] p-6 md:p-8 rounded-xl border border-transparent dark:border-gray-800 shadow-md transition-colors duration-300">
+            <p className="text-[17px] text-gray-800 dark:text-gray-300 mb-6 font-medium transition-colors">
+                The PNM-9085RQZI is a multi-technology credential that combines OmniClass® and HID Prox technologies in a single card. 
             </p>
 
             <section className="mb-8">
-              <h2 className="font-bold text-xl text-black mb-2">Product Description:</h2>
-              <p className="text-[15px] text-black leading-relaxed mb-4">
+              <h2 className="font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">Product Description:</h2>
+              <p className="text-[17px] text-gray-800 dark:text-gray-300 mb-6 font-medium transition-colors">
                  The PNM-9085RQZ1 is a multi-technology credential that combines OmniClass® and HID Prox technologies in a single card. 
                  It is designed for use in access control systems, providing enhanced security and flexibility. 
                  The credential is available in various formats, including cards, key fobs, and stickers, making it suitable for a wide range of applications. 
@@ -44,8 +44,8 @@ const PNM9085RQZ1 = () => {
                  this camera eliminates the need for multiple independent devices by capturing distinct view angles simultaneously.
               </p>
 
-              <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
-              <ul className="list-disc ml-5 text-[15px] text-black space-y-1">
+              <h2 className="font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">Product Features:</h2>
+              <ul className="list-disc ml-5 text-[17px] text-gray-680 space-y-1">
                 {productFeatures.map((feature, index) => (
                   <li key={index}>{feature}</li>
                 ))}
@@ -53,8 +53,8 @@ const PNM9085RQZ1 = () => {
             </section>
 
               {/* Technical Specifications Table */}
-          <div className="bg-gray-300 p-6 shadow rounded border border-r divine-y">
-            <h2 className="font-bold text-black text-xl mb-4">Technical Specification</h2>
+          <div className="p-6 shadow rounded border border-r divine-y">
+            <h2 className="font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">Technical Specification</h2>
 
             <table className="w-full border text-[15px] text-black border-black">
               <tbody>
@@ -67,52 +67,52 @@ const PNM9085RQZ1 = () => {
 
           {/* Imaging Device */}
             <tr>
-              <td rowSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td rowSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Imaging Device
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Size
               </td>
-              <td className="p-4 text-black border-black border align-middle border-b ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 1/1.8"
               </td>
             </tr>
             <tr>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Type
               </td>
-              <td className="p-4 text-black border align-middle border-b border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 CMOS
               </td>
             </tr>
 
             {/* Resolution */}
             <tr>
-              <td className="bg-gray-50 p-4 font-normal text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Resolution
               </td>
-              <td colSpan={2} className="p-4 text-black border-black border align-middle border-b  leading-relaxed ">
+              <td colSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 2560x1920, 2560x1440, 1920x1080, 1600x1200, 1280x1024, 1280x960, 1280x720, 1024x768, 800x600, 800x448, 720x576, 720x480, 640x480, 640x360, 320x240
               </td>
             </tr>
 
             {/* Max. Framerate */}
             <tr>
-              <td rowSpan={2} className="bg-gray-200 p-4 font-normal text-gray-600 align-middle border-b border-r border-black">
+              <td rowSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Max. Framerate
               </td>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 H.264/H.264
               </td>
-              <td className="p-4 text-black border-black border align-middle border-b ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 30fps/25fps(60Hz/50Hz)
               </td>
             </tr>
             <tr>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 MJPEG
               </td>
-              <td className="p-4 text-black border-black border align-middle border-b ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 30fps
               </td>
             </tr>
@@ -125,109 +125,109 @@ const PNM9085RQZ1 = () => {
 
               {/* Min. Illumination */}
             <tr>
-              <td rowSpan={2} className="bg-gray-50 p-4 font-normal text-gray-600 align-middle border-b border-r border-black">
+              <td rowSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Min. Illumination (Lux)
               </td>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Color(1/30sec, 30IRE)
               </td>
-              <td className="p-4 text-black border-black border align-middle border-b ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 0.11
               </td>
             </tr>
             <tr>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 BW(1/30sec, 30IRE)
               </td>
-              <td className="p-4 text-black border-black border align-middle border-b ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 0.011
               </td>
             </tr>
 
             {/* LENS */}
              <tr>
-              <td colSpan={2} className="bg-gray-300 p-4 font-normal text-gray-600 align-middle border-b border-r border-black">
+              <td colSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Focal Length (mm)
               </td>
-              <td colSpan={3} className="p-4 text-black border-black border align-middle border-b  leading-relaxed ">
+              <td colSpan={3} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 4.13-9.4
               </td>
             </tr>
              <tr>
-              <td rowSpan={1} className="bg-gray-100 p-4 font-normal text-gray-600 align-middle border-b border-r border-black">
+              <td rowSpan={1} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Zoom Ratio
               </td>
-              <td className="p-4 text-black border-black border align-middle border-b  leading-relaxed ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Optical
               </td>
-              <td className="p-4 text-black border-black border align-middle border-b  leading-relaxed">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 2.3x
               </td>
             </tr>
 
             {/*  Max Aperture Ratio */}
             <tr>
-              <td rowSpan={2} className="bg-gray-300 p-4 font-normal text-gray-600 align-middle border-b border-r border-black">
+              <td rowSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Max Aperture Ratio (F number)
               </td>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Wide
               </td>
-              <td className="p-4 text-black border-black border align-middle border-b ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 1.92
               </td>
             </tr>
             <tr>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Tele
               </td>
-              <td className="p-4 text-black border-black border align-middle border-b ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 2.67
               </td>
             </tr>
 
              {/*  Angular Field of View */}
             <tr>
-              <td rowSpan={2} className="bg-gray-50 p-4 font-normal text-gray-600 align-middle border-b border-r border-black">
+              <td rowSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Angular Field of View
               </td>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Horizontal
               </td>
-              <td className="p-4 text-black border-black border align-middle border-b ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 88°~37°
               </td>
             </tr>
             <tr>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Vertical
               </td>
-              <td className="p-4 text-black border-black border align-middle border-b ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 65°~28°
               </td>
             </tr>
 
             <tr>
-              <td colSpan={2} className="p-4 text-gray-600  align-middle border-b border-r border-black">
+              <td colSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Min. Object Distance
               </td>
-              <td colSpan={3} className="p-4 text-black border-black border align-middle border-b ">
+              <td colSpan={3} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 1.2m(3.94ft)
               </td>
             </tr>
             <tr>
-              <td colSpan={2} className="p-4 bg-gray-50 text-gray-600 align-middle border-b border-r border-black">
+              <td colSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Focus Control
               </td>
-              <td colSpan={3} className="p-4 text-black border-black border align-middle border-b ">
+              <td colSpan={3} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Simple focus
               </td>
             </tr>
             <tr>
-              <td colSpan={2} className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td colSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Lens Type
               </td>
-              <td colSpan={3} className="p-4 text-black border-black border align-middle border-b ">
+              <td colSpan={3} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 DC auto iris(IR corrected)
               </td>
             </tr>
@@ -240,78 +240,78 @@ const PNM9085RQZ1 = () => {
 
                {/*  OPERATING CONDITION */}
             <tr>
-              <td rowSpan={2} className="bg-gray-50 p-4 font-normal text-gray-600 align-middle border-b border-r border-black">
+              <td rowSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Operating Condition
               </td>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Temperature
               </td>
-              <td className="p-4 text-black border-black border align-middle border-b ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 -40°C~+55°C(-40°F~+131°F)
               </td>
             </tr>
             <tr>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Humidity
               </td>
-              <td className="p-4 text-black border-black border align-middle border-b ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 0~90% RH(non-condensing)
               </td>
             </tr>
 
              <tr>
-              <td rowSpan={2} className="bg-gray-50 p-4 font-normal text-gray-600 align-middle border-b border-r border-black">
+              <td rowSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Storage Condition
               </td>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Temperature
               </td>
-              <td className="p-4 text-black border-black border align-middle border-b ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 -50°C~+60°C(-58°F~+140°F)
               </td>
             </tr>
             <tr>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Humidity
               </td>
-              <td className="p-4 text-black border-black border align-middle border-b ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 0~90% RH(non-condensing)
               </td>
             </tr>
 
              <tr>
-              <td colSpan={2} className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td colSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 EPA (Effective Projected Area)
               </td>
-              <td colSpan={3} className="p-4 text-black border-black border align-middle border-b ">
+              <td colSpan={3} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 0.036㎡
               </td>
             </tr>
              <tr>
-              <td colSpan={2} className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td colSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Input Voltage
               </td>
-              <td colSpan={3} className="p-4 text-black border-black border align-middle border-b ">
+              <td colSpan={3} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 PoE++(IEEE802.3bt type4, Class8), 12VDC
               </td>
             </tr>
 
             <tr>
-              <td rowSpan={2} className="bg-gray-50 p-4 font-normal text-gray-600 align-middle border-b border-r border-black">
+              <td rowSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Power Consumption
               </td>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 PoE
               </td>
-              <td className="p-4 text-black border-black border align-middle border-b ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Max. 45W, Typical 33.7W
               </td>
             </tr>
             <tr>
-              <td className="p-4 text-gray-600 align-middle border-b border-r border-black">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 12VDC
               </td>
-              <td className="p-4 text-black border-black border align-middle border-b ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Max. 42W, Typical 32W
               </td>
             </tr>
@@ -334,9 +334,9 @@ const PNM9085RQZ1 = () => {
 
           {/* Sidebar */}
           <aside className="lg:w-1/4 space-y-6">
-            <div className="bg-gray-300 p-6 rounded shadow-sm border border-gray-400">
-              <h3 className="font-semibold text-xl mb-4 border-b border-black pb-2 ">More By HANWHA</h3>
-              <ul className="space-y-4 text-gray-700">
+            <div className="bg-gray-300 dark:bg-[#1e1e22] p-6 rounded-xl shadow-sm border border-gray-400 dark:border-gray-800 transition-colors duration-300">
+              <h3 className="font-bold text-black dark:text-blue-400 text-x mb-4 border-b border-black dark:border-gray-700 pb-2 transition-colors">More By HANWHA</h3>
+              <ul className="space-y-4 text-gray-700 dark:text-gray-300">
                 <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
                   <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>Onity DirectKey with Serene </li>
                 </NavLink>

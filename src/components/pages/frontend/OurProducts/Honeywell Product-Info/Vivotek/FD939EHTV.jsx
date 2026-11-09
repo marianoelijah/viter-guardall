@@ -15,9 +15,9 @@ const   FD939EHTV = () => {
   return (
     <>
       <Header />
-      <div className="bg-gray-100 min-h-screen font-sans text-gray-800">
+      <div className="bg-gray-200 dark:bg-[#121214] min-h-screen font-sans text-[#333] dark:text-gray-200 transition-colors duration-300">
         {/* Blue Header Banner */}
-        <header className="bg-[#8ba4ca] text-white py-12 px-4 text-center">
+        <header className="bg-[#7f95b8] dark:bg-blue-950/70 text-white py-14 px-6 text-center transition-colors duration-300">
           <h1 className="text-5xl font-bold tracking-tight">
             FD939-EHTV
           </h1>
@@ -25,14 +25,14 @@ const   FD939EHTV = () => {
 
         <div className="max-w-7xl mx-auto px-4 py-8 flex flex-col lg:flex-row gap-8">
           {/* Main Content */}
-          <main className="lg:w-3/4 bg-gray-300 p-8 shadow-sm">
-            <p className="text-[15px] text-black mb-6">
+          <main className="lg:w-3/4 bg-gray-100 dark:bg-[#1e1e22] p-6 md:p-8 rounded-xl border border-transparent dark:border-gray-800 shadow-md transition-colors duration-300">
+            <p className="text-[17px] text-gray-680 leading-relaxed whitespace-pre-line mb-3">
                 8MP Outdoor Dome Camera
             </p>
 
             <section className="mb-8">
-              <h2 className="font-bold text-xl text-black mb-2">Product Description:</h2>
-              <p className="text-[15px] text-black leading-relaxed mb-4">
+              <h2 className="font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">Product Description:</h2>
+              <p className="text-[17px] text-gray-680 leading-relaxed whitespace-pre-line mb-3">
                  The VIVOTEK FD939-EHTV (VORTEX Series) is a high-performance 8MP outdoor cloud 
                  dome camera designed for reliable enterprise-grade surveillance. Equipped with 
                  built-in IR illuminators with up to 40 meters of reach, it ensures clear image 
@@ -43,8 +43,8 @@ const   FD939EHTV = () => {
                  enhanced automated safety and security monitoring
               </p>
 
-              <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
-              <ul className="list-disc ml-5 text-[15px] text-black space-y-1">
+              <h2 className="font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">Product Features:</h2>
+              <ul className="list-disc ml-5 text-[17px] text-gray-800 dark:text-gray-300 space-y-1 transition-colors">
                 {productFeatures.map((feature, index) => (
                   <li key={index}>{feature}</li>
                 ))}
@@ -52,155 +52,155 @@ const   FD939EHTV = () => {
             </section>
 
             {/* Technical Specifications Table */}
-          <div className="bg-gray-300 p-6 shadow rounded border border-r divine-y">
-            <h2 className="font-bold text-black text-xl mb-4">Technical Specification</h2>
+          <div className="p-6 shadow rounded border border-r divine-y">
+            <h2 className="font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">Technical Specification</h2>
 
             <table className="w-full border text-[15px] text-black border-black">
               <tbody>
 
             <tr>
-              <td colSpan={5} className="bg-gray-100 p-4 text-xl text-black font-bold align-middle border-b border-r border-black">
+              <td colSpan={5} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 CAMERA SPECIFICATIONS
               </td>
             </tr>    
             <tr>
-              <td ColSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td ColSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Image Sensor
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 1/1.8" Progressive CMOS
               </td>
             </tr>
             <tr>
-              <td ColSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td ColSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Max. Resolution
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 SD: 1280x720 / HD: 3840x2160
               </td>
             </tr>
             <tr>
-              <td ColSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td ColSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Lens Type
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">            
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">            
                 Motorized, Vari-focal, Remote Focus
               </td>
             </tr>
             <tr>
-              <td ColSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td ColSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Focal Length
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">             
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">             
                 f = 4.3 - 9.8 mm
               </td>
             </tr>
             <tr>
-              <td ColSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td ColSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Aperture
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 F1.6 - F2.6
               </td>
             </tr>
 
             <tr>
-              <td ColSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td ColSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Iris Type
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 P-Iris
               </td>
             </tr> 
              <tr>
-              <td ColSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td ColSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Field of View
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 110.4° ~ 45.1° (Horizontal)
                 57.9° ~ 25.4° (Vertical)
                 133.9° ~ 51.8° (Diagonal)
               </td>
             </tr> 
              <tr>
-              <td ColSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td ColSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Shutter Time
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 1/5 sec. to 1/32,000 sec.
               </td>
             </tr> 
              <tr>
-              <td ColSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td ColSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 WDR Technology
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 WDR Pro
               </td>
             </tr> 
             <tr>
-              <td ColSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td ColSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                Day/Night
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Yes
               </td>
             </tr>
             <tr>
-              <td ColSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td ColSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                Removable IR-cut filter
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Yes
               </td>
             </tr>
             <tr>
-              <td ColSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td ColSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                Illuminators
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Built-in IR illuminators, effective up to 40 meters with Smart IR, IR LED*4
               </td>
             </tr> 
             <tr>
-              <td ColSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td ColSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                Miniminum Illumination
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">                                            
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">                                            
                 0.04 lux @ F1.6 (Color)
                 0.005 lux @ F1.6 (B/W)
                 0 lux with IR illumination on
               </td>
             </tr> 
             <tr>
-              <td ColSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td ColSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                Pan Range
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 350*
               </td>
             </tr>
             <tr>
-              <td ColSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td ColSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                Tilt Range
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 80*
               </td>
             </tr>
             <tr>
-              <td ColSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td ColSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                Rotation Range
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 350*
               </td>
             </tr>
             <tr>
-              <td ColSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td ColSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                Storage
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 MicroSD/SDHC/SDXC card slot
                 (Built-in 512GB industrial SDCard)
               </td>
@@ -208,15 +208,15 @@ const   FD939EHTV = () => {
 
               {/* VIDEO */}
               <tr>
-              <td ColSpan={5} className="bg-gray-100 p-4 text-xl text-black font-bold align-middle border-b border-r border-black">
+              <td ColSpan={5} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 VIDEO
               </td>
             </tr>
             <tr>
-              <td ColSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td ColSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Video Stream Settings
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 HD Video 3840 x 2160 (8MP) @15fps 3Mbps upload
                 SD Video 1280 x 720@15fps 300Kbps upload
               </td>
@@ -224,25 +224,25 @@ const   FD939EHTV = () => {
 
              {/* AUDIO */}
              <tr>
-              <td ColSpan={5} className="bg-gray-100 p-4 text-xl text-black font-bold align-middle border-b border-r border-black">
+              <td ColSpan={5} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 AUDIO
               </td>
             </tr>
             <tr>
-              <td ColSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td ColSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Audio Capability
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Two-way Audio (full duplex)*
                 * Requires AO-015 cable
                 (xPro License required to enable speaker talk-down feature)
               </td>
             </tr>
              <tr>
-              <td ColSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td ColSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Interface
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Built-in microphone
                 External microphone input*
                 External line output*
@@ -250,10 +250,10 @@ const   FD939EHTV = () => {
               </td>
             </tr>
             <tr>
-              <td ColSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td ColSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Effective Range
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 5 meters
               </td>
             </tr>
@@ -261,41 +261,41 @@ const   FD939EHTV = () => {
 
             {/*  NETWORK */}
             <tr>
-              <td ColSpan={5} className="bg-gray-100 p-4 text-xl text-black font-bold align-middle border-b border-r border-black">
+              <td ColSpan={5} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 NETWORK
               </td>
             </tr>
             <tr>
-              <td ColSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td ColSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Users
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Up to 6 clients
                 *Live viewing for 6 clients
                 *live viewing up to 4 clients and playback 2 clients
               </td>
             </tr>
             <tr>
-              <td ColSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td ColSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Security
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Secure boot, Signed firmware, HTTPS/TLS encryption, Video encryption
               </td>
             </tr>
             <tr>
-              <td ColSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td ColSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Protocols
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 ARP, DHCP, DNS, HTTP, HTTPS, ICMP, IPv4, RTSP/RTP/RTCP, SSL, TCP/IP, TLS 1.2, UDP, WebRTC
               </td>
             </tr>
             <tr>
-              <td ColSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td ColSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Interface
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">               
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">               
                 10BASE-T/100BASE-TX Ethernet (RJ-45)
                 *It is highly recommended to use standard CAT5e & CAT6 cables which are compliant with the 3P/ETL standard.
               </td>
@@ -303,16 +303,16 @@ const   FD939EHTV = () => {
 
             {/*  GENERAL */}
              <tr>
-              <td ColSpan={5} className="bg-gray-100 p-4 text-xl text-black font-bold align-middle border-b border-r border-black">
+              <td ColSpan={5} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 GENERAL
               </td>
             </tr>
 
             <tr>
-              <td ColSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td ColSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Cnnectors
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">                            
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">                            
                 RJ-45 cable connector for 10/100 Mbps Network/PoE connection
                 Audio line input*
                 Audio line output*
@@ -322,50 +322,50 @@ const   FD939EHTV = () => {
               </td>
             </tr>
             <tr>
-              <td ColSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td ColSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 LED Indicator
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">               
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">               
                 System power and Status indicator
               </td>
             </tr>
             <tr>
-              <td ColSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td ColSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Power Input
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">               
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">               
                 IEEE 802.3af PoE Class 3
               </td>
             </tr>
             <tr>
-              <td ColSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td ColSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Power Consumption
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">                              
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">                              
                Max. 12.4W/9.6W (IR on/off)
               </td>
             </tr>
             <tr>
-              <td ColSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td ColSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Dimensions
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">               
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">               
                 134 (D) x 116 (H) mm
               </td>
             </tr>
             <tr>
-              <td ColSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td ColSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Weight
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">               
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">               
                 990 g
               </td>
             </tr>
             <tr>
-              <td ColSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td ColSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Certifications
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">                                           
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">                                           
                 EMC
                 CE (EN 55032, EN 55035 Class A), UKCA (BS EN 55032/BS EN 55035 Class A), FCC (FCC Part 15 Subpart B Class A), RCM (AS/NZS CISPR 32 Class A), VCCI (VCCI-CISPR 32 Class A) IC (ICES-003 Issue 7, Class A)
                 Safety
@@ -375,10 +375,10 @@ const   FD939EHTV = () => {
               </td>
             </tr>
             <tr>
-              <td ColSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td ColSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Operating Temperature
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">                                 
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">                                 
                 Starting Temperature:
                 -20°C ~ 50°C (-4°F ~ 122°F)
                 Working Temperature:
@@ -387,18 +387,18 @@ const   FD939EHTV = () => {
               </td>
             </tr>
             <tr>
-              <td ColSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td ColSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Humidity
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">               
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">               
                 98% non-condensing
               </td>
             </tr>
             <tr>
-              <td ColSpan={2} className="w-1/5 bg-gray-200 p-4 font-normal  text-black align-middle border-b border-r border-black">
+              <td ColSpan={2} className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                 Warranty
               </td>
-              <td className="w-1/5 p-4 text-gray-600 align-middle border-b border-r border-black ">               
+              <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">               
                 Up to 120 months (Depends on license type)
               </td>
             </tr> 
@@ -422,9 +422,9 @@ const   FD939EHTV = () => {
 
           {/* Sidebar */}
           <aside className="lg:w-1/4 space-y-6">
-            <div className="bg-gray-300 p-6 rounded shadow-sm border border-gray-400">
-              <h3 className="font-semibold text-xl mb-4 border-b border-black pb-2 ">More By VIVOTEK</h3>
-              <ul className="space-y-4 text-gray-700">
+            <div className="bg-gray-300 dark:bg-[#1e1e22] p-6 rounded-xl shadow-sm border border-gray-400 dark:border-gray-800 transition-colors duration-300">
+              <h3 className="font-bold text-black dark:text-blue-400 text-xl mb-4 border-b border-black dark:border-gray-700 pb-2 transition-colors">More By VIVOTEK</h3>
+              <ul className="space-y-4 text-gray-700 dark:text-gray-300">
                 <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
                   <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>Onity DirectKey with Serene </li>
                 </NavLink>

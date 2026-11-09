@@ -216,7 +216,6 @@ import ConnectionBase from "./components/pages/frontend/OurProducts/Honeywell Pr
 import DetnovCloud from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Detnov/DetnovCloud";
 import Mad464 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Detnov/Mad464";
 import AddressProgram from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Detnov/AddressProgram";
-import Technicalinputs from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Detnov/Technicalinputs";
 import Isolator from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Detnov/Isolator";
 import SmokeDetector from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Detnov/SmokeDetector";
 import MetalBox from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Detnov/MetalBox";
@@ -258,8 +257,6 @@ import SP6000 from "./components/pages/frontend/OurProducts/Honeywell Product-In
 import SP5500 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/SP5500";
 import SP4000 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/SP4000";
 import SP65 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/SP65";
-
-
 import PGM82 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/PGM82";
 import PGM4 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/PGM4";
 import RX1 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/RX1";
@@ -340,7 +337,6 @@ import ZX82 from "./components/pages/frontend/OurProducts/Honeywell Product-Info
 import AdminPanel from "./components/Admin/AdminPanel";
 import Cochrane from "./components/pages/frontend/OurProducts/product extend/Cochrane/Cochrane";
 import Zx8 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Paradox/Zx8";
-
 import PNMC16013RVQ from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hanwha/PNMC16013RVQ";
 import PNM9085RQZ1 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hanwha/PNM9085RQZ1";
 import PNMC34404RQPZ from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hanwha/PNMC34404RQPZ";
@@ -349,12 +345,6 @@ import XNP9300RW from "./components/pages/frontend/OurProducts/Honeywell Product
 import XNVA8084RS from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Hanwha/XNVA8084RS";
 import HanwhaPage from "./components/pages/frontend/OurProducts/product extend/hanwha/HanwhaPage";
 import DeantasPage from "./components/pages/frontend/OurProducts/product extend/deantas/DeantasPage";
-import T39 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Deantas/T39";
-import T21 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Deantas/T21";
-import T11 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Deantas/T11";
-import S87 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Deantas/S87";
-import S58 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Deantas/S58";
-import G11S from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Deantas/G11S";
 import Senstar from "./components/pages/frontend/OurProducts/product extend/senstar/Senstar";
 import Dnake from "./components/pages/frontend/OurProducts/product extend/dnake/Dnake";
 import Commercial from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Dnake/Commercial";
@@ -380,7 +370,6 @@ import N43BX8Z from "./components/pages/frontend/OurProducts/Honeywell Product-I
 import AdminDashboard from "./components/Admin/AdminDashboard";
 import ProtectedRoute from "./components/Admin/ProtectedRoute";
 import AdminLogin from "./components/Admin/AdminLogin";
-
 import Fence from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Fence Sensor/Fence";
 import FiberPatrol from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Fence Sensor/FiberPatrol";
 import SenstarLM100 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Senstar/Fence Sensor/SenstarLM100";
@@ -425,7 +414,6 @@ import VivotekPage from "./components/pages/frontend/OurProducts/product extend/
 import GrundigPage from "./components/pages/frontend/OurProducts/product extend/grundig/GrundigPage";
 import IB939EHTV from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Vivotek/IB939EHTV";
 import IB9380HTVV2 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Vivotek/IB9380HTVV2";
-
 import IB9389EHVV3 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Vivotek/IB9389EHVV3";
 import FD830HV from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Vivotek/FD830HV";
 import FD839EHTVV2 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Vivotek/FD839EHTVV2";
@@ -454,10 +442,25 @@ import GUCIAC4614E from "./components/pages/frontend/OurProducts/Honeywell Produ
 import GUCIAC4614T from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Grundig/GUCIAC4614T";
 import GUCIAC5637T from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Grundig/GUCIAC5637T";
 import GUCIAP4634V from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Grundig/GUCIAP4634V";
-
-
-
-// import TestimonialPage from "./components/pages/frontend/testimonials/TestimonialPage";
+import S70 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Deantas/S70";
+import T1 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Deantas/T1";
+import T8 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Deantas/T8";
+import T18 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Deantas/T18";
+import T26 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Deantas/T26";
+import T29 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Deantas/T29";
+import C5BK3 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Deantas/C5BK3";
+import DS08 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Deantas/DS08";
+import DS09 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Deantas/DS09";
+import DADT03B from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Deantas/DADT03B";
+import S58 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Deantas/S58";
+import DAS72F from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Deantas/DAS72F";
+import S77 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Deantas/S77";
+import S87 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Deantas/S87";
+import T11 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Deantas/T11";
+import T16 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Deantas/T16";
+import T21 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Deantas/T21";
+import T39 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Deantas/T39";
+import T72 from "./components/pages/frontend/OurProducts/Honeywell Product-Info/Deantas/T72";
 
 
  const ScrollToTop = () => {
@@ -879,7 +882,7 @@ const App = () => {
             <Route path="/our-products/detnov/detnov-cloud" element={<DetnovCloud/>} />
             <Route path="/our-products/detnov/addressable-sounder" element={<Mad464/>} />
             <Route path="/our-products/detnov/address-programmer" element={<AddressProgram/>} />
-            <Route path="/our-products/detnov/addressable-modules" element={<Technicalinputs/>} />
+            
             <Route path="/our-products/detnov/manual-call--point-with-isolator" element={<Isolator/>} />
             <Route path="/our-products/detnov/optical-smoke-detector" element={<SmokeDetector/>} />
             <Route path="/our-products/detnov/control-panel-with-metal-box" element={<MetalBox/>} />
@@ -1058,13 +1061,28 @@ const App = () => {
 
 
             {/* Deantas Product Details Route */}
-             <Route path="/products/deantas" element={<Deantas/>} />
-            <Route path="/our-products/deantas/t39" element={<T39/>} />
-            <Route path="/our-products/deantas/t21" element={<T21/>} />
-            <Route path="/our-products/deantas/t11" element={<T11/>} />
-            <Route path="/our-products/deantas/s87" element={<S87/>} />
+            <Route path="/products/deantas" element={<Deantas/>} />
+
+            <Route path="/our-products/deantas/c5bk3" element={<C5BK3/>} />
+            <Route path="/our-products/deantas/ds08" element={<DS08/>} />
+            <Route path="/our-products/deantas/ds09" element={<DS09/>} />
+            <Route path="/our-products/deantas/da-dt03b" element={<DADT03B/>} />
             <Route path="/our-products/deantas/s58" element={<S58/>} />
-            <Route path="/our-products/deantas/g11s" element={<G11S/>} />
+            <Route path="/our-products/deantas/s70" element={<S70/>} />
+            <Route path="/our-products/deantas/da-s72" element={<DAS72F/>} />
+            <Route path="/our-products/deantas/s77" element={<S77/>} />
+            <Route path="/our-products/deantas/s87" element={<S87/>} />
+            <Route path="/our-products/deantas/t1" element={<T1/>} />
+            <Route path="/our-products/deantas/t8" element={<T8/>} />
+            <Route path="/our-products/deantas/t11" element={<T11/>} />
+            <Route path="/our-products/deantas/t16" element={<T16/>} />
+            <Route path="/our-products/deantas/t18" element={<T18/>} />
+            <Route path="/our-products/deantas/t21" element={<T21/>} />
+            <Route path="/our-products/deantas/t26" element={<T26/>} />
+            <Route path="/our-products/deantas/t29" element={<T29/>} />
+            <Route path="/our-products/deantas/t39" element={<T39/>} />
+            <Route path="/our-products/deantas/t72" element={<T72/>} />
+
 
             {/* Sensegiz Product Details Route */}
             <Route path="/products/sensegiz" element={<Sensegiz/>} />

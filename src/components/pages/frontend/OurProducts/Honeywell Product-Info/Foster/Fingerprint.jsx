@@ -33,64 +33,74 @@ const Fingerprint = () => {
   return (
     <>
       <Header />
-      <div className="bg-gray-200 min-h-screen font-sans text-slate-800">
-        <header className="bg-[#7f95b8] text-white py-14 px-4 text-center">
+      <div className="bg-gray-100 dark:bg-[#121214] min-h-screen font-sans text-slate-800 dark:text-gray-200 transition-colors duration-300">
+        <header className="bg-[#7f95b8] dark:bg-blue-950/70 text-white py-14 px-4 text-center transition-colors duration-300">
           <h1 className="text-4xl md:text-5xl font-bold max-w-5xl mx-auto uppercase tracking-wider">
             {productData.title}
           </h1>
         </header>
 
-        <main className="max-w-6xl mx-auto bg-gray-100 shadow-xl my-10 p-6 md:p-12">
+        <main className="max-w-6xl mx-auto shadow-xl my-10 p-6 md:p-12">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
             
             {/* Left Content */}
-            <div className="lg:col-span-3">
-              <p className="text-[15px] text-black mb-6">{productData.subtitle}</p>
+            <div className="lg:col-span-3 max-w-6xl mx-auto bg-gray-200 p-8 shadow-sm dark:bg-[#1e1e22]">
+              <p className="text-[15px] text-gray-800 dark:text-gray-300 mb-6 font-medium transition-colors">
+                {productData.subtitle}
+              </p>
               
               <section className="mb-8">
-                <h2 className="font-bold text-xl text-black mb-2 border-b-2 border-gray-100 pb-1 inline-block">Product Description:</h2>
-                <p className="text-base text-black leading-relaxed mt-2">{productData.description}</p>
+                <h2 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">
+                  Product Description:
+                </h2>
+                <p className="text-[15px] text-gray-800 dark:text-gray-300 mb-6 font-medium transition-colors">
+                  {productData.description}
+                </p>
               </section>
 
               <section className="mb-10">
-                <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1 list-disc text-black ml-5 text-[15px]">
+                <h2 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">
+                  Product Features:
+                </h2>
+                <ul className="list-disc ml-5 text-[15px] text-gray-800 dark:text-gray-300 space-y-1 transition-colors">
                   {productData.features.map((f, i) => <li key={i}>{f}</li>)}
                 </ul>
               </section>
 
               {/* Technical Spec Table */}
               <section className="overflow-x-auto">
-                <h2 className="font-bold text-xl mb-4">Technical and System Specification:</h2>
+                <h2 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">
+                  Technical and System Specification:
+                </h2>
                 <table className="w-full text-[15px] text-black border-collapse border border-black">
                   
                   <tbody>
                     {/* Model Variants */}
                     <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
+                      <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                         PRO Image Capture
                       </td>
-                      <td className="border border-black p-2">
+                      <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-semibold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                         <span className="font-bold">Nikon D6</span>– Custom-modified camera- 20.8 million effective pixels- 35.9 x 23.9mm CMOS sensor<br/>
                         <span className="font-bold">105mm Macro Lens Kit </span>– For visible imaging- Circular polarizing filter- Visible pass rilter- Filter step ring<br/>
                         <span className="font-bold">Infrared Imaging Filters</span>– 715nm IR imaging filter- 780nm IR imaging filter- 850nm IR imaging filter<br/>
                       </td>
                     </tr>
                     <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold">
+                      <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                         PRO Illumination
                       </td>
-                      <td className="border border-black p-2">
+                      <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-semibold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                         <span className="font-bold">Crime-lite 8×4 MK2</span>Multi-waveband Ring Light- 32x high intensity LEDs- White, UV, Violet, Blue, Blue/Green, Orangeand Red illumination- Set of 12 slot-in fluorescence viewing filters- Filter storage case- Ambient light shielding lens bellows<br/>
                         <span className="font-bold">Halogen Light Source </span>– 150W halogen lamp- Variable dimmer control<br/>
                         <span className="font-bold">Fibre Optic Light Guide</span>– 4” Ring Light- Backlight- Twin arm gooseneck- Dark field ring light<br/>
                       </td>
                     </tr>
                     <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold">
+                      <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                         DCS5 System Essentials
                       </td>
-                      <td className="border border-black p-2">
+                      <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-semibold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                         <span className="font-bold">Pro-Grade Copy Stand</span>+ Ring Light Mount+ Camera Filter Pouch+ Camera Filter Step-ring+ DCS Photography Pack<br/>
                         <span className="font-bold">DCS Light Guide Clamp Set</span>+A selection of clamps and flexible arms for the positioning of light guides <br/>
 
@@ -101,46 +111,46 @@ const Fingerprint = () => {
                   </tbody>
                   
                    <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
+                      <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                         PRO Image Capture
                       </td>
-                      <td colSpan="3" className="border border-black p-2">
+                      <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-semibold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                         ✓ Nikon D6✓ 105mm Macro Lens Kit✓ Infrared Imaging Filters
                       </td>
                     </tr>
                     <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
+                      <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                         PRO Illumination
                       </td>
-                      <td colSpan="3" className="border border-black p-2">
+                      <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-semibold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                         ✓ Halogen Light Source✓ Fibre Optic Light Guide✓ Crime-lite 8×4 MK2
                       </td>
                     </tr>
                      <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
+                      <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                         DCS5 System Essentials
                       </td>
-                      <td colSpan="3" className="border border-black p-2">
+                      <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-semibold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                        ✓ Pro-Grade Copy Stand✓ DCS Light Guide Clamp Set✓ Desktop PC✓ DCS 5 Software
                       </td>
                     </tr>
 
                      <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
+                      <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                        Expert Image Capture
                       </td>
-                      <td className="border border-black p-2">
-                        <span className="font-bold">85mm Shift/Tilt Lens Kit</span>
+                      <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-semibold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
+                        <span className="font-semibold">85mm Shift/Tilt Lens Kit</span>
                         – Manual focus lens with shift and tilt control- Circular polarizing filter- Visible pass filter- Filter step-ring* Requires macro extension tubes<br/>
                         <span className="font-bold">60mm UV/Vis/IR Lens Kit</span>
                         – Macro lens with 310-1100nm transmission- 330-385nm bandpass filter- Circular polarizing filter- Visible pass filter- Filter step-ring* Requires macro extension tubes<br/>
                       </td>
                     </tr>
                      <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
+                      <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                        EXPERT Illumination
                       </td>
-                      <td className="border border-black p-2">
+                      <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-semibold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                         <span className="font-bold">Crime-lite 8 x 4 MK 4 N-IR Imaging Ring Light</span>
                         – 32x high intensity LEDs- Blue, Red and N-IR LED illumination- Set of 4 slot-in fluorescence viewing filters- Filter storage case- Sample of fpNatural1 IR fingerprint powder- Sample of fpNatural2 NIR fingerprint powder<br/>
                         <span className="font-bold">Crime-lite 82S UV Light Source</span>
@@ -173,9 +183,9 @@ const Fingerprint = () => {
 
             {/* Right Column: Sidebar */}
                      <div className="lg:col-span-1 space-y-8">
-                         <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
-                       <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By FOSTER + FREEMAN</h3>
-            <ul className="space-y-4 text-gray-800 font-medium">
+                         <div className="bg-gray-300 dark:bg-[#1e1e22] p-6 rounded-xl shadow-sm border border-gray-400 dark:border-gray-800 transition-colors duration-300">
+                       <h3 className="font-bold text-black dark:text-blue-400 text-xl mb-4 border-b border-black dark:border-gray-700 pb-2 transition-colors">More By FOSTER + FREEMAN</h3>
+            <ul className="space-y-4 text-gray-800 dark:text-gray-300">
               <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
                 <li className='cursor-pointer hover:text-[#ff5f31] transition-colors break-words'>Onity DirectKey with Serene</li>
               </NavLink>
@@ -213,7 +223,7 @@ const Fingerprint = () => {
 
                 <NavLink 
                   to="/contacts" 
-                  className="inline-block w-full rounded-xl bg-[#0f3e90] px-6 py-3 text-center text-sm font-semibold tracking-wider text-white transition-colors hover:bg-[#ff5f31] sm:w-auto"
+                  className="inline-block w-full rounded-xl bg-[#0f3e90] px-2 py-3 text-center text-sm font-semibold tracking-wider text-white transition-colors hover:bg-[#ff5f31] sm:w-auto"
                 >
                   CONTACT US TODAY
                 </NavLink>

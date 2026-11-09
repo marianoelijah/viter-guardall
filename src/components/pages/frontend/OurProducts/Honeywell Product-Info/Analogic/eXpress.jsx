@@ -19,9 +19,9 @@ const Express = () => {
    return (
     <>
     <Header />
-    <div className="bg-gray-100 min-h-screen font-sans text-slate-800">
+    <div className="bg-gray-200 dark:bg-[#121214] min-h-screen font-sans text-[#333] dark:text-gray-200 transition-colors duration-300">
       {/* Banner Header */}
-      <header className="bg-[#7f95b8] text-white py-14 px-4 text-center">
+      <header className="bg-[#7f95b8] text-white py-12 px-6 text-centerbg-[#7f95b8] dark:bg-blue-950/70 text-center transition-colors duration-300">
         <h1 className="text-5xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
           eXpress Automated Tray Return System
         </h1>
@@ -29,12 +29,12 @@ const Express = () => {
       </header>
 
       {/* Content Container */}
-      <main className="max-w-6xl mx-auto bg-gray-200 shadow-xl my-10 p-6 md:p-12">
+      <main className="max-w-6xl mx-auto shadow-xl my-10 p-6 md:p-12">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
           
           {/* Main Product Info */}
-          <div className="lg:col-span-3">
-            <p className="text-[17px]  text-black mb-6">
+          <div className="lg:col-span-3 bg-gray-100 dark:bg-[#1e1e22] p-6 md:p-8 rounded-xl border border-transparent dark:border-gray-800 shadow-md transition-colors duration-300">
+            <p className="text-[17px] text-gray-680 leading-relaxed whitespace-pre-line">
                 The Analogic eXpress lane is a fully automated bag handling system that efficiently and reliably processes bags 
                 through the ConneCT Checkpoint Explosive Detection System (EDS CB), and automatically return trays
                 to the divest position.
@@ -42,12 +42,12 @@ const Express = () => {
 
             <section className="mb-8">
                 
-              <h2 className="font-bold text-xl text-black mb-2">Product Description:</h2>
-              <p className="text-[17px] text-gray-900 leading-relaxed whitespace-pre-line mb-3">
+              <h2 className="font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">Product Description:</h2>
+              <p className="text-[17px] text-gray-680 leading-relaxed whitespace-pre-line">
                 The eXpress lane is designed for any airport that needs the quality, reliability, and throughput
                 of a state of the art automated lane and tray return system.
               </p>
-              <p className="text-[17px] text-gray-900 leading-relaxed whitespace-pre-line">
+              <p className="text-[17px] text-gray-680 leading-relaxed whitespace-pre-line">
                 Developed by Analogic, the eXpress lane's modular design permits flexible configurations to
                 optimized the needs of individual airports and checkpoints. The modular architecture of the 
                 eXpress lane permits hardware and software upgrades to facilitate advances in screening
@@ -55,8 +55,8 @@ const Express = () => {
               </p>
 
 
-               <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
-            <ul className="list-disc ml-5 text-[17px] space-y-1 text-black">
+               <h2 className="font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">Product Features:</h2>
+            <ul className="list-disc ml-5 text-[15px] text-gray-680 space-y-1">
               {productFeatures.map((feature, index) => (
                 <li key={index}>{feature}</li>
               ))}
@@ -67,8 +67,8 @@ const Express = () => {
             
 
              {/* Technical Specifications Table */}
-        <div className="bg-gray-300 p-6 shadow rounded border border-r divine-y">
-            <h2 className="font-bold text-black text-xl mb-4">Technical Specification</h2>
+        <div className="p-6 shadow rounded border border-r divine-y">
+            <h2 className="font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">Technical Specification</h2>
 
             <table className="w-full border text-[15px] text-black">
               <tbody>
@@ -77,85 +77,85 @@ const Express = () => {
                     PHYSICAL SPECIFICATIONS
                   </td>
                 </tr>
-                <tr className="bg-gray-300 ">  
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                <tr>  
+                  <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/2 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     Lane Throughput
                   </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
+                  <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/2 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     500 bins/hr
                   </td>
                 </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
+                <tr>
+                  <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/2 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     AVG Installation Time
                   </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
+                  <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/2 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     16 hours
                   </td>
                 </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
+                <tr>
+                  <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/2 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                    Maximum Load
                   </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
+                  <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/2 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     23 kg (50 lb) per bag/bin
                   </td>
                 </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
+                <tr>
+                  <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/2 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                    Dimensions
                   </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
+                  <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/2 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                    L: 12 to 21 m (472-827 in) / W: 0.8 to 1.8 m (30.8-70.7 in)
                   </td>
                 </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
+                <tr>
+                  <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/2 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                    Nominal Belt Height
                   </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
+                  <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/2 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                    0.84 m (33.1 in)
                    </td>
                 </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
+                <tr>
+                  <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/2 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     Power Consumption
                   </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
+                  <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/2 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     800W
                   </td>
                 </tr>
 
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
+                <tr>
+                  <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/2 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     Power Requirements
                   </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
+                  <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/2 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     100-240VAC, 47-63Hz
                   </td>
                 </tr>
                
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
+                <tr>
+                  <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/2 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                    Full Load Current
                   </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
+                  <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/2 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     7A (est.)
                   </td>
                 </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
+                <tr>
+                  <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/2 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                    Facility Circuit
                   </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
+                  <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/2 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                    20A
                   </td>
                 </tr>
-                 <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold">
+                 <tr>
+                  <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/2 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     Operating Noise Level
                   </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
+                  <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/2 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     70dB
                   </td>
                 </tr>
@@ -186,9 +186,9 @@ const Express = () => {
 
           {/* Sidebar */}
           <aside className="lg:col-span-1 space-y-8">
-             <div className="bg-gray-300 p-4 border border-black  border-r mb-6">
-            <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By HIKVISION</h3>
-                       <ul className="space-y-4 text-gray-700">
+             <div className="bg-gray-300 dark:bg-[#1e1e22] p-6 rounded shadow-sm border border-gray-400 dark:border-gray-800 transition-colors duration-300">
+            <h3 className="font-bold text-black dark:text-blue-400 text-x mb-4 border-b border-black dark:border-gray-700 pb-2 transition-colors">More By ANALOGIC</h3>
+                       <ul className="space-y-4 text-gray-700 dark:text-gray-300">
                           <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
                             <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>Onity DirectKey with Serene</li>
                           </NavLink>

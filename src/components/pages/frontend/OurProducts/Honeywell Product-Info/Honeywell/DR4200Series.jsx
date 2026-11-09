@@ -11,10 +11,10 @@ const DR4200Series = () => {
   return (
     <>
     <Header />
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-gray-100 dark:bg-[#121214] min-h-screen font-sans text-slate-800 dark:text-gray-200 transition-colors duration-300">
 
       {/* HERO SECTION */}
-      <div className="bg-[#7f95b8] py-20">
+      <div className="bg-[#7f95b8] dark:bg-blue-950/70 text-white py-14 px-4 text-center transition-colors duration-300">
         <div className="container mx-auto px-6">
           <h1 className="text-white text-4xl md:text-5xl font-bold text-center">
                     DR4200 Series: Digital Proximity <br/>
@@ -24,14 +24,14 @@ const DR4200Series = () => {
       </div>
 
       {/* MAIN CONTAINER */}
-      <div className="container mx-auto px-6 py-16">
+      <div className="md:w-[72%] lg:w-3/4 max-w-6xl mx-auto bg-gray-200 dark:bg-[#1e1e22] border border-transparent dark:border-gray-800 transition-colors shadow-lg my-10 p-8 md:p-12">
         <div className="wrapper grid grid-cols-1 lg:grid-cols-3 gap-8">
 
           {/* LEFT CONTENT */}
-          <div className="lg:col-span-2">
-            <div className="bg-gray-200 border border-gray-300 rounded-xl shadow-sm p-8">
+          <div className="lg:col-span-2 ">
+            <div className="bg-gray-200 border border-gray-300 rounded-xl dark:bg-[#1e1e22] border-transparent dark:border-gray-800 transition-colors shadow-lg p-8">
 
-              <p className="text-black text-lg mb-6">
+              <p className="text-[17px] leading-relaxed space-y-4 mb-6">
               A cost-effective and high-performing proximity access that offers the longest ranges available. It has a fast read time to keep traffic moving.
               </p>
 
@@ -59,9 +59,9 @@ const DR4200Series = () => {
           <div className="space-y-6">
 
             {/* MORE BY SECTION */}
-           <div className="bg-gray-300 p-6 rounded shadow-sm border border-gray-400">
-                <h3 className="font-semibold text-black text-xl mb-4 border-b border-black pb-2">More By HONEYWELL</h3>
-                <ul className="space-y-4 text-gray-700">
+           <div className="bg-gray-300 dark:bg-[#1e1e22] p-6 rounded-xl shadow-sm  mb-6">
+                <h3 className="font-bold text-black dark:text-blue-400 text-xl mb-4 border-b border-black dark:border-gray-700 pb-2 transition-colors">More By HONEYWELL</h3>
+                <ul className="space-y-4 text-gray-700 dark:text-gray-300">
                   <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
                   <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>Onity DirectKey with Serene </li>
                   </NavLink>
@@ -99,7 +99,7 @@ const DR4200Series = () => {
 
                 <NavLink 
                   to="/contacts" 
-                  className="inline-block w-full rounded-xl bg-[#0f3e90] px-6 py-3 text-center text-sm font-semibold tracking-wider text-white transition-colors hover:bg-[#ff5f31] sm:w-auto"
+                  className="inline-block w-full rounded-xl bg-[#0f3e90] px-2 py-3 text-center text-sm font-semibold tracking-wider text-white transition-colors hover:bg-[#ff5f31] sm:w-auto"
                 >
                   CONTACT US TODAY
                 </NavLink>

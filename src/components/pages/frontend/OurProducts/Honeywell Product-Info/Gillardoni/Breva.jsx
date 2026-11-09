@@ -55,10 +55,10 @@ const Breva = () => {
   return (
     <>
     <Header />
-     <div className="bg-slate-50 min-h-screen font-sans">
+     <div className="bg-gray-100 dark:bg-[#121214] min-h-screen font-sans text-slate-800 dark:text-gray-200 transition-colors duration-300">
       {/* Header Banner */}
-      <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
-        <h1 className="text-5xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
+      <header className="bg-[#7f95b8] dark:bg-blue-950/70 text-white py-14 px-4 text-center transition-colors duration-300 ">
+        <h1 className="text-4xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight uppercase">
            BREVA TRS: Breva Automatic Tray Return System
         </h1>
       </header>
@@ -66,19 +66,26 @@ const Breva = () => {
       
       <div className="max-w-6xl mx-auto px-4 py-8 flex flex-col lg:flex-row gap-8">
         {/* Main Content Container */}
-        <main className="lg:w-3/4 bg-gray-200 p-8 shadow-sm">
-            <p className="text-gray-800 text-[17px] mb-6">
+        <main className="lg:w-3/4 bg-gray-200 p-8 rounded-lg shadow-sm dark:bg-[#1e1e22] border border-gray-400 dark:border-gray-800 transition-colors duration-300">
+            <p className="text-[15px] text-gray-800 dark:text-gray-300 mb-4 border-l-4 border-[#8ba4cc] dark:border-blue-500 pl-4 font-medium">
               An advanced tray handling system that can be perfectly integrated with X-ray baggage screening machines with the aim of facilitating the work of airport security staff.
             </p>
 
-            <h2 className="font-bold text-xl mb-2  text-black">Product Description:</h2>
-              <p className="text-gray-800 text-[17px] leading-relaxed">
-                 TRS BREVA is an advanced tray handling system that can be perfectly integrated with X-ray baggage screening machines. The high level of automation and modularity make it ideal for the most modern airport environments, facilitating and speeding up security checking. The moving trays are always tracked thanks to a series of RFID antennas integrated in the structure. BREVA is completely customizable and can be adapted to meet all needs.
+              <h2 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">
+                Product Description:
+              </h2>
+              <p className="text-[15px] text-gray-800 dark:text-gray-300 mb-4 border-l-4 border-[#8ba4cc] dark:border-blue-500 pl-4 font-medium">
+                 TRS BREVA is an advanced tray handling system that can be perfectly integrated with X-ray baggage screening machines. 
+                 The high level of automation and modularity make it ideal for the most modern airport environments, facilitating and 
+                 speeding up security checking. The moving trays are always tracked thanks to a series of RFID antennas integrated 
+                 in the structure. BREVA is completely customizable and can be adapted to meet all needs.
                </p>
 
             <section className="mb-8 mt-3">
-               <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
-            <ul className="list-disc ml-5 text-[17px] space-y-1 text-black">
+               <h2 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">
+                 Product Features:
+              </h2>
+            <ul className="list-disc ml-5 text-[15px] text-gray-800 dark:text-gray-300 space-y-1 transition-colors">
               {productFeatures.map((feature, index) => (
                 <li key={index}>{feature}</li>
               ))}
@@ -87,24 +94,26 @@ const Breva = () => {
 
             {/* Technical Specifications Table */}
                        <section>
-                         <h2 className="font-bold text-xl text-black mb-4">Technical Specification:</h2>
+                          <h2 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold text-xl text-black dark:text-blue-400 transition-colors mb-5">
+                          Technical Specification:
+                          </h2>
                          <div className="border border-gray-500 overflow-hidden">
                            <table className="w-full text-left text-xs border-collapse">
                              <tbody>
                                {specs.map((item, idx) => (
                                  <React.Fragment key={idx}>
                                    {item.type === 'header' ? (
-                                     <tr className="bg-gray-200">
+                                     <tr className="bg-gray-300">
                                        <th colSpan="2" className="p-2 border-b border-gray-500 text-[15px] text-black font-bold uppercase tracking-wider">
                                          {item.label}
                                        </th>
                                      </tr>
                                    ) : (
-                                     <tr className={idx % 2 === 0 ? 'bg-gray-100' : 'bg-gray-50'}>
-                                       <td className="p-3 border-b border-r border-gray-500 font-bold w-1/2 text-[15px] text-black bg-gray-50/50">
+                                     <tr className={idx % 2 === 0 ? 'bg-gray-300' : 'bg-gray-900'}>
+                                       <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 bg-gray-200 dark:bg-gray-800/80 text-[15px] text-black dark:text-gray-200">
                                          {item.label}
                                        </td>
-                                       <td className="p-3 border-b border-gray-500 text-gray-800 w-1/2 whitespace-pre-line text-[15px] hover:bg-slate-50/50 transition-colors">
+                                       <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 bg-gray-200 dark:bg-gray-800/80 text-[15px] text-black dark:text-gray-200">
                                          {item.value}
                                        </td>
                                      </tr>
@@ -135,11 +144,11 @@ const Breva = () => {
 
           {/* Sidebar */}
               <aside className="lg:w-1/4 space-y-6"> 
-                     <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
-                        <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">
+                     <div className="bg-gray-300 dark:bg-[#1e1e22] p-6 rounded-xl shadow-sm border border-gray-400 dark:border-gray-800 transition-colors duration-300">
+                        <h3 className="font-bold text-black dark:text-blue-400 text-xl mb-4 border-b border-black dark:border-gray-700 pb-2 transition-colors">
                           More By GILARDONI
                           </h3>
-                         <ul className="space-y-4 text-gray-700">
+                         <ul className="space-y-4 text-gray-700 dark:text-gray-300">
                           <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
                             <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>Onity DirectKey with Serene</li>
                           </NavLink>

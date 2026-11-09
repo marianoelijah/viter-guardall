@@ -25,7 +25,7 @@ const ProductCard = ({ title, description, image, detailRoute }) => (
         </p>
       </div>
 
-      <span className="block mt-12 text-gray-500 dark:text-gray-400 text-sm tracking-widest">
+      <span className="block mt-2 text-gray-500 dark:text-gray-400 text-sm tracking-widest">
         <NavLink to={detailRoute} className="text-[#184c9b] dark:text-blue-400 hover:underline mt-2 block">
           <h3 className="text-xl font-poppins hover:text-[#ff5f31] dark:hover:text-[#ff5f31] transition-colors duration-300">
             View Details
@@ -68,7 +68,7 @@ const Alarm = () => {
       <div className="max-w-7xl mx-auto">
         <header className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-5xl text-[#0d3874] dark:text-blue-400 mb-6 tracking-tight font-bold transition-colors">
-            {products.length > 0 ? products[0].category_name : "Alarm.com"}
+            {products.length > 0 ? products[0].category_name : "Alarm.com"} - Alarm.com
           </h2>
           <div className="h-1 w-20 bg-blue-500 dark:bg-blue-400 mx-auto rounded-full"></div>
         </header>

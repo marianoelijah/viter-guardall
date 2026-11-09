@@ -9,7 +9,7 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
   return (
     <>
     <Header />
-    <div className="bg-gray-100 min-h-screen font-sans text-slate-800">
+    <div className="bg-gray-200 dark:bg-[#121214] min-h-screen font-sans text-[#333] dark:text-gray-200 transition-colors duration-300">
       {/* Banner Header */}
       <header className="bg-[#7f95b8] text-white py-14 px-4 text-center">
         <h1 className="text-5xl md:text-5xl font-bold max-w-5xl mx-auto leading-tight">

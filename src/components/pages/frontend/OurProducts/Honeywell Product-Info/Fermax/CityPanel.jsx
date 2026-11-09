@@ -24,9 +24,9 @@ const CityPanel = () => {
   return (
     <>
     <Header />
-     <div className="bg-slate-50 min-h-screen font-sans">
+     <div className="bg-gray-200 dark:bg-[#121214] min-h-screen font-sans text-[#333] dark:text-gray-200 transition-colors duration-300">
       {/* Header Banner */}
-      <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
+      <header className="bg-[#7f95b8] dark:bg-blue-950/70 text-white py-14 px-6 text-center transition-colors duration-300">
         <h1 className="text-5xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
            CITY PANEL DUOX PLUS S1 AP201
         </h1>
@@ -35,15 +35,15 @@ const CityPanel = () => {
       
       <div className="max-w-6xl mx-auto px-4 py-8 flex flex-col lg:flex-row gap-8">
         {/* Main Content Container */}
-        <main className="lg:w-3/4 bg-gray-200 p-8 shadow-sm">
-            <p className="text-gray-800 text-[17px] mb-6">
+        <main className="lg:w-3/4 lg:col-span-8 bg-gray-100 dark:bg-[#1e1e22] p-6 md:p-8 rounded-xl border border-transparent dark:border-gray-800 shadow-md transition-colors duration-300">
+            <p className="text-[17px] text-gray-800 dark:text-gray-300 mb-6 font-medium transition-colors">
               This versatile outdoor panel for video door entry systems offers hands-free communication 
               and wide-angle color camera for clear visitor identification.
             </p>
 
             <section className="mb-8">
-              <h2 className="font-bold text-xl mb-2 text-black">Product Description:</h2>
-              <p className="text-gray-800 text-[17px] leading-relaxed">
+              <h2 className="font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">Product Description:</h2>
+              <p className="text-[17px] text-gray-800 dark:text-gray-300 mb-6 font-medium transition-colors">
                The CityLine Outdoor Panel is a series of robust and aesthetically pleasing access control 
                solutions for buildings. Made from anodized aluminum with a chrome zamak finish, it is 
                weather-resistant and durable. It integrates audio and video functions, offering 
@@ -57,24 +57,24 @@ const CityPanel = () => {
 
             {/* Technical Specifications Table */}
                        <section>
-                         <h2 className="font-bold text-xl text-black mb-4">Technical Specification:</h2>
-                         <div className="border border-gray-500 overflow-hidden">
-                           <table className="w-full text-left text-xs border-collapse">
+                         <h2 className="font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">Technical Specification:</h2>
+                         <div className="border border-gray-500 dark:border-gray-700 rounded-lg overflow-hidden transition-colors">
+                           <table className="w-full text-left text-xs border-collapse border border-black">
                              <tbody>
                                {specs.map((item, idx) => (
                                  <React.Fragment key={idx}>
                                    {item.type === 'header' ? (
-                                     <tr className="bg-gray-200">
+                                     <tr className="bg-gray-700">
                                        <th colSpan="2" className="p-2 border-b border-gray-500 text-[15px] text-black font-bold uppercase tracking-wider">
                                          {item.label}
                                        </th>
                                      </tr>
                                    ) : (
-                                     <tr className={idx % 2 === 0 ? 'bg-gray-100' : 'bg-gray-50'}>
-                                       <td className="p-3 border-b border-r border-gray-500 font-bold w-1/3 text-[15px] text-black bg-gray-50/50">
+                                     <tr className={idx % 2 === 0 ? 'bg-gray-700' : 'bg-gray-800'}>
+                                       <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                                          {item.label}
                                        </td>
-                                       <td className="p-3 border-b border-gray-500 text-gray-800 whitespace-pre-line text-[15px] hover:bg-slate-50/50 transition-colors">
+                                       <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                                          {item.value}
                                        </td>
                                      </tr>
@@ -105,9 +105,9 @@ const CityPanel = () => {
 
           {/* Sidebar */}
               <aside className="lg:w-1/4 space-y-6"> 
-                     <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
-                        <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By FERMAX</h3>
-                         <ul className="space-y-4 text-gray-700">
+                     <div className="bg-gray-300 dark:bg-[#1e1e22] p-6 rounded-xl shadow-sm border border-gray-400 dark:border-gray-800 transition-colors duration-300">
+                        <h3 className="font-bold text-black dark:text-blue-400 text-xl mb-4 border-b border-black dark:border-gray-700 pb-2 transition-colors">More By FERMAX</h3>
+                         <ul className="space-y-4 text-gray-700 dark:text-gray-300">
                 <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
                   <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>Onity DirectKey with Serene</li>
                 </NavLink>
@@ -126,7 +126,7 @@ const CityPanel = () => {
                 <NavLink to="/our-products/acti/channel-tower-strandalone" className='block'>
                   <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>GNR 340 100-Channel Tower NVR</li>
                 </NavLink>
-              </ul>
+                        </ul>
                       </div>
                       
             

@@ -29,9 +29,9 @@ const DoorController = () => {
   return (
     <>
     <Header />
-     <div className="bg-slate-50 min-h-screen font-sans">
+     <div className="bg-gray-100 dark:bg-[#121214] min-h-screen font-sans text-slate-800 dark:text-gray-200 transition-colors duration-300">
       {/* Header Banner */}
-      <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
+      <header className="bg-[#7f95b8] dark:bg-blue-950/70 text-white py-14 px-4 text-center transition-colors duration-300">
         <h1 className="text-5xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
             ADC-AC-X1100 Door Controller
         </h1>
@@ -40,26 +40,26 @@ const DoorController = () => {
       
       <div className="max-w-6xl mx-auto px-4 py-8 flex flex-col lg:flex-row gap-8">
         {/* Main Content Container */}
-        <main className="lg:w-3/4 bg-gray-200 p-8 shadow-sm">
-            <p className="text-gray-800 text-[17px] mb-6">
+        <main className="max-w-6xl mx-auto bg-gray-200 dark:bg-[#1e1e22] border border-transparent dark:border-gray-800 transition-colors shadow-lg my-10 p-8 md:p-12">
+            <p className="text-[17px] leading-relaxed space-y-4 mb-6">
                This device supports two card readers with four relay outputs and four programmable inputs. 
             </p>
 
             <section className="mb-8">
-              <h2 className="font-bold text-xl mb-2 text-black">Product Description:</h2>
-              <p className="text-gray-800 text-[17px] leading-relaxed">
+              <h2 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">Product Description:</h2>
+              <p className="text-[17px] leading-relaxed space-y-4 mb-6">
               Alarm.com’s Smarter Access Control is a powerful, easy-to-use solution for commercial 
               properties that seamlessly integrates with the Alarm.com for Business platform. 
               This platform enables intelligent automation and features, such as disarming when 
               badging in, locking doors when arming, and tagging access events on the video timeline.  
               </p>
-              <p className="text-gray-800 text-[17px] leading-relaxed">
+              <p className="text-[17px] leading-relaxed space-y-4 mb-6">
                The X1100 Door Controller supports two readers with four relay outputs and four
                programmable inputs. For larger installations, the X1100 controller can manage up to 64 doors by connecting up to 31 X100 Two Reader Expansion Modules together.
               </p>
 
-               <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
-            <ul className="list-disc ml-5 text-[17px] space-y-1 text-black">
+               <h2 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">Product Features:</h2>
+            <ul className="list-disc ml-5 text-[17px] space-y-1">
               {productFeatures.map((feature, index) => (
                 <li key={index}>{feature}</li>
               ))}
@@ -68,17 +68,17 @@ const DoorController = () => {
 
             {/* Technical Specifications Table */}
             <section>
-              <h2 className="font-bold text-xl text-black mb-4">Technical Specification:</h2>
+              <h2 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">Technical Specification:</h2>
               <div className="overflow-x-auto border border-gray-500">
                 <table className="w-full text-left text-xs border-collapse border border-black">
                  
                   <tbody>
                     {specs.map((spec, index) => (
-                      <tr key={index} className={index % 2 === 0 ? 'bg-gray-100' : 'bg-gray-200'}>
-                        <td className="p-3 border-b border-r border-black text-black text-[17px] font-bold w-1/3">
+                      <tr key={index} className={index % 2 === 0 ? 'bg-gray-00' : 'bg-gray-00'}>
+                        <td className="p-2 border-r border-black font-semibold text-[17px] uppercase text-gray-800 dark:text-gray-200 leading-normal">
                           {spec.label}
                         </td>
-                        <td className="p-3 border-b border-r border-black text-[16px] text-gray-800">
+                        <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                           {spec.value}
                         </td>
                        
@@ -108,9 +108,9 @@ const DoorController = () => {
 
           {/* Sidebar */}
               <aside className="lg:w-1/4 space-y-6"> 
-                     <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
-                        <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">ALARM.COM</h3>
-                         <ul className="space-y-4 text-gray-700">
+                     <div className="bg-gray-300 dark:bg-[#1e1e22] p-6 rounded-xl shadow-sm border border-gray-400 dark:border-gray-800 transition-colors duration-300">
+                        <h3 className="font-bold text-black dark:text-blue-400 text-xl mb-4 border-b border-black dark:border-gray-700 pb-2 transition-colors">ALARM.COM</h3>
+                         <ul className="space-y-4 text-gray-700 dark:text-gray-300">
                 <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
                   <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>Onity DirectKey with Serene</li>
                 </NavLink>
@@ -129,7 +129,7 @@ const DoorController = () => {
                 <NavLink to="/our-products/acti/channel-tower-strandalone" className='block'>
                   <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>GNR 340 100-Channel Tower NVR</li>
                 </NavLink>
-              </ul>
+                         </ul>
                       </div>
                       
             

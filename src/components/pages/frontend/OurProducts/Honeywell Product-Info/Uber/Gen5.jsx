@@ -10,36 +10,36 @@ const Gen5 = () => {
   return (
     <>
     <Header />
-     <div className="bg-gray-100 min-h-screen">
+     <div className="bg-gray-100 dark:bg-[#121214] min-h-screen font-sans text-slate-800 dark:text-gray-200 transition-colors duration-300">
       
       {/* Hero Section */}
-      <div className="bg-[#7f95b8] py-16 text-center">
-        <h1 className="text-5xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
+      <div className="bg-[#7f95b8] dark:bg-blue-950/70 transition-colors duration-300bg-[#7f95b8] text-white py-12 px-4 text-center">
+        <h1 className="text-4xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
              iKLAS Gen 5 Touchscreen
         </h1>
       </div>
 
       {/* Main Container */}
-      <div className="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="max-w-8xl mx-auto px-6 py-12 bg-gray-200 dark:bg-[#1e1e22] shadow-xl my-10 p-6 md:p-12 rounded-sm border border-transparent dark:border-gray-800 transition-colors grid grid-cols-1 lg:grid-cols-3 gap-8">
         
         {/* LEFT CONTENT */}
-        <div className="lg:col-span-2 bg-gray-200 p-8 rounded-lg shadow-sm">
+        <div className="lg:col-span-2 bg-gray-200 p-8 rounded-lg shadow-sm dark:bg-[#1e1e22] border border-gray-400 dark:border-gray-800 transition-colors duration-300">
 
-          <p className="text-gray-800 text-[17px] mb-6">
+          <p className="text-[17px] text-gray-800 dark:text-gray-300 mb-8 border-l-4 border-[#8ba4cc] dark:border-blue-500 pl-4 font-medium">
              A contactless card reader and RFID key-tag reader designed to complement the iKLAS Key Management System.
           </p>
 
           {/* Product Description */}
-          <h2 className="text-xl text-black font-semibold mb-2">Product Description:</h2>
-          <p className="text-gray-800 text-[17px] mb-4">
+          <h2 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">Product Description:</h2>
+          <p className="text-[17px] text-gray-800 dark:text-gray-300 mb-8 border-l-4 border-[#8ba4cc] dark:border-blue-500 pl-4 font-medium">
            The 7″ Colour Touchscreen of the latest iKLAS GEN-5 incorporates a colour camera, card reader,
             key-tag reader, and (optional) QR code reader, providing all-encompassing access control 
             solutions within a single panel.
           </p>
           
           {/* Product Features */}
-          <h2 className="text-xl text-black font-semibold mb-2">Product Features:</h2>
-          <ul className="list-disc pl-6 text-gray-800 text-[17px] space-y-1 mb-8">
+          <h2 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">Product Features:</h2>
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 list-disc ml-5 text-[17px] text-gray-800 dark:text-gray-300">
             <li>Input UID Provides an alphanumeric keypad for users to enter their user ID.</li>
             <li>Multi Access Provides 2 or 3-user authentication for the withdrawal of critical keys.</li>
             <li>Read Card Provides administrators/users with the convenience of reading card IDs, especially when a lost card is found.</li>
@@ -70,13 +70,13 @@ const Gen5 = () => {
         </div>
 
         {/* RIGHT SIDEBAR */}
-        <div className="space-y-6">
+        <div className=" space-y-6">
           
           {/* More By MAG */}
-          <div className="lg:col-span-1 space-y-8">
-            <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
-              <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By UBERGARD</h3>
-              <ul className="space-y-4 text-gray-700">
+          <div className="w-2/4 mt-5 lg:col-span-1 space-y-8">
+            <div className="bg-gray-300 dark:bg-[#1e1e22] p-6 rounded shadow-sm border border-gray-400 dark:border-gray-800 transition-colors duration-300">
+              <h3 className="font-bold text-black dark:text-blue-400 text-xl mb-4 border-b border-black dark:border-gray-700 pb-2 transition-colors">More By UBERGARD</h3>
+              <ul className="space-y-4 text-gray-700 dark:text-gray-300">
                 <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
                   <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>Onity DirectKey with Serene</li>
                 </NavLink>

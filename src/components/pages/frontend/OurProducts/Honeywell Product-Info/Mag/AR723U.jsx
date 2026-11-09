@@ -58,35 +58,35 @@ const AR723U = () => {
   return (
     <>
     <Header />
-     <div className="bg-slate-50 min-h-screen font-sans">
+     <div className="bg-gray-100 dark:bg-[#121214] min-h-screen font-sans text-slate-800 dark:text-gray-200 transition-colors duration-300">
       {/* Header Banner */}
-      <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
+      <header className="bg-[#7f95b8] dark:bg-blue-950/70 text-white py-14 px-4 text-center transition-colors duration-300">
         <h1 className="text-5xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
           AR723U Soyal Wiegand Readers
         </h1>
       </header>
 
       {/* Main Content Container */}
-      <main className="max-w-6xl mx-auto bg-gray-200 shadow-lg my-10 p-8 md:p-12">
+      <main className="max-w-6xl mx-auto bg-gray-200 dark:bg-[#1e1e22] border border-transparent dark:border-gray-800 transition-colors shadow-lg my-10 p-8 md:p-12">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
           
           {/* Left Column: Product Info */}
           <div className="lg:col-span-3">
-            <p className="text-gray-800 text-[17px] mb-6">
+            <p className="text-[17px] text-gray-800 dark:text-gray-300 mb-8 border-l-4 border-[#8ba4cc] dark:border-blue-500 pl-4 font-medium">
               Designed to be used together with the main card reader as exit reader for anti-passback function.  
             </p>
 
             <section className="mb-8">
-              <h2 className="font-bold text-xl mb-2 text-black">Product Description:</h2>
-              <p className="text-gray-800 text-[17px] leading-relaxed">
+              <h2 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">Product Description:</h2>
+              <p className="text-[17px] text-gray-800 dark:text-gray-300 leading-relaxed whitespace-pre-line">
                 Minimalistic design allows it to look simple but elegant. Easily blend into any interior 
                 design. Dark SilverBlack color concept further enhanced the modern contemporary impression 
                 of your office. Compact mini size allows it to easily fit into a narrow door frame with 
                 limited space. 
               </p>
 
-               <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
-            <ul className="list-disc ml-5 text-[17px] space-y-1 text-black">
+               <h2 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold text-xl mb-3 text-black dark:text-blue-400 transition-colors">Product Features:</h2>
+            <ul className="list-disc pl-6 text-gray-800 dark:text-gray-300 text-[17px] space-y-1 mb-8">
               {productFeatures.map((feature, index) => (
                 <li key={index}>{feature}</li>
               ))}
@@ -96,16 +96,16 @@ const AR723U = () => {
 
             {/* Technical Specifications Table */}
             <section>
-              <h2 className="font-bold text-xl text-black mb-4">Technical Specification:</h2>
-              <div className="overflow-x-auto border border-gray-500">
-                <table className="w-full text-left text-xs border-collapse">
-                  <tbody>
+              <h2 className="font-bold text-xl text-black dark:text-blue-400 mb-4 transition-colors">Technical Specification:</h2>
+              <div className="border border-gray-500 dark:border-gray-700 overflow-hidden rounded-sm">
+                <table className="w-full border border-gray-800 text-gray-800 divine-x border-r text-[17px]">
+                  <tbody className="divide-y divide-gray-800 p-2.5 font-bold uppercase tracking-widest text-gray-800 dark:text-blue-400 text-[17px] border-b border-gray-500 dark:border-gray-700">
                     {specs.map((spec, index) => (
-                      <tr key={index} className={index % 2 === 0 ? 'bg-gray-100' : 'bg-gray-200'}>
-                        <td className="p-3 border-b border-r border-gray-500 text-[15px] font-bold w-1/3 text-gray-700">
+                      <tr key={index} className={index % 2 === 0 ? 'bg-gray-700' : 'bg-gray-800'}>
+                        <td className="p-3 text-gray-800 dark:text-gray-200 text-[15px] leading-normal">
                           {spec.label}
                         </td>
-                        <td className="p-3 border-b border-gray-500 text-[15px] text-gray-600">
+                        <td className="p-3 text-gray-800 dark:text-gray-200 text-[15px] leading-normal">
                           {spec.value}
                         </td>
                       </tr>
@@ -134,9 +134,9 @@ const AR723U = () => {
 
           {/* Right Column: Sidebar */}
           <div className="lg:col-span-1 space-y-8">
-              <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
-            <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By MAG</h3>
-            <ul className="space-y-4 text-gray-700">
+              <div className="bg-gray-300 dark:bg-[#1e1e22] p-6 rounded shadow-sm border border-gray-400 dark:border-gray-800 transition-colors duration-300">
+            <h3 className="font-bold text-black dark:text-blue-400 text-xl mb-4 border-b border-black dark:border-gray-700 pb-2 transition-colors">More By MAG</h3>
+            <ul className="space-y-4 text-gray-700 dark:text-gray-300">
                 <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
                   <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>Onity DirectKey with Serene</li>
                 </NavLink>
@@ -174,7 +174,7 @@ const AR723U = () => {
 
                 <NavLink 
                   to="/contacts" 
-                  className="inline-block w-full rounded-xl bg-[#0f3e90] px-6 py-3 text-center text-sm font-semibold tracking-wider text-white transition-colors hover:bg-[#ff5f31] sm:w-auto"
+                  className="inline-block w-full rounded-xl bg-[#0f3e90] dark:bg-blue-600 px-6 py-3 text-center text-sm font-semibold tracking-wider text-white transition-colors hover:bg-[#ff5f31] dark:hover:bg-[#ff5f31] sm:w-auto"
                 >
                   CONTACT US TODAY
                 </NavLink>

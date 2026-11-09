@@ -35,35 +35,35 @@ const AR727H = () => {
   return (
     <>
     <Header />
-     <div className="bg-slate-50 min-h-screen font-sans">
+     <div className="bg-gray-100 dark:bg-[#121214] min-h-screen font-sans text-slate-800 dark:text-gray-200 transition-colors duration-300">
       {/* Header Banner */}
-      <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
+      <header className="bg-[#7f95b8] dark:bg-blue-950/70 text-white py-14 px-4 text-center transition-colors duration-300">
         <h1 className="text-5xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
-         AR727H Standard Controller with Built-In Reader
+         AR727H Standard Controller <br/> with Built-In Reader
         </h1>
       </header>
 
       {/* Main Content Container */}
-      <main className="max-w-6xl mx-auto bg-gray-200 shadow-lg my-10 p-8 md:p-12">
+      <main className="max-w-6xl mx-auto bg-gray-200 dark:bg-[#1e1e22] border border-transparent dark:border-gray-800 transition-colors shadow-lg my-10 p-8 md:p-12">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
           
           {/* Left Column: Product Info */}
           <div className="lg:col-span-3">
-            <p className="text-gray-800 text-[17px] mb-6">
+            <p className="text-[17px] text-gray-800 dark:text-gray-300 mb-8 border-l-4 border-[#8ba4cc] dark:border-blue-500 pl-4 font-medium">
               A cost-effective door access with manual keypad, LCD screen, and easy to use software. 
             </p>
 
             <section className="mb-8">
-              <h2 className="font-bold text-xl mb-2 text-black">Product Description:</h2>
-              <p className="text-gray-800 text-[17px] leading-relaxed">
+              <h2 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold dark:text-blue-400 transition-colorsfont-bold text-xl mb-2 text-black">Product Description:</h2>
+              <p className="text-[17px] text-gray-800 dark:text-gray-300 leading-relaxed whitespace-pre-line">
                SOYAL Standard system is the most affordable, best value PC based door, turnstile, 
                parking and elevator access control system in the market. Effectively control who 
                (card user) can enter where (door group) at what time (time zone) using what method
                (card and/or pin).
               </p>
 
-               <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
-            <ul className="list-disc ml-5 text-[17px] space-y-1 text-black">
+               <h2 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold text-xl mb-3 text-black dark:text-blue-400 transition-colors">Product Features:</h2>
+            <ul className="list-disc pl-6 text-gray-800 dark:text-gray-300 text-[17px] space-y-1 mb-8">
               {productFeatures.map((feature, index) => (
                 <li key={index}>{feature}</li>
               ))}
@@ -72,128 +72,136 @@ const AR727H = () => {
 
 
             {/* Technical Specifications Table */}
-            <section>
-            <h2 className="font-bold text-xl text-black mb-4">Technical Specification:</h2>
-            <div className="overflow-x-auto border border-black">
-              <table className="w-full text-xs text-left">
-                <thead className="bg-gray-100 border-b border-black">
+          <section>
+            <h2 className="font-bold text-xl text-black dark:text-blue-400 mb-4 transition-colors">Technical Specification:</h2>
+            <div className="border border-gray-500 dark:border-gray-700 overflow-hidden rounded-sm">
+              <table className="w-full border border-gray-800 text-gray-800 divine-x border-r text-[17px]">
+                <thead className="divide-y divide-gray-800 p-2.5 font-bold uppercase tracking-widest text-gray-800 dark:text-blue-400 text-[17px] border-b border-gray-500 dark:border-gray-700">
                   <tr>
-                    <th className="p-2 border-r text-black text-[17px] border-black w-1/4">Built-In Operation Mode</th>
-                    <th className="p-2 border-r border-black text-gray-700 text-[17px]">M4</th>
-                    <th className="p-2 border-r border-black text-gray-700 text-[17px]">M6</th>
-                    <th className="p-2 text-gray-700 text-[17px]">M8</th>
+                    <th className="dark:text-blue-400 p-2 border-r text-black text-[17px] border-black w-1/4">
+                    Built-In Operation Mode
+                    </th>
+                    <th className="dark:text-blue-400 p-2 border-r text-black text-[17px] border-black w-1/4">
+                      M4
+                    </th>
+                    <th className="dark:text-blue-400 p-2 border-r text-black text-[17px] border-black w-1/4">
+                      M6
+                    </th>
+                    <th className="dark:text-blue-400 p-2 border-r text-black text-[17px] border-black w-1/4">
+                      M8
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
                   {techSpecs.map((spec, index) => (
-                    <tr key={index} className={index % 2 === 0 ? 'bg-gray-200' : 'bg-gray-50'}>
-                      <td className="p-2 border-r border-black text-black font-semibold text-[17px]">{spec.label}</td>
-                      <td className="p-2 border-r border-black text-gray-700 text-[17px]">{spec.m4}</td>
-                      <td className="p-2 border-r border-black text-gray-700 text-[17px]">{spec.m6}</td>
-                      <td className="p-2 text-gray-700 text-[17px]">{spec.m8}</td>
+                    <tr key={index} className={index % 2 === 0 ? 'dark:bg-gray-700' : 'bg-gray-00'}>
+                      <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">{spec.label}</td>
+                      <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">{spec.m4}</td>
+                      <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">{spec.m6}</td>
+                      <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">{spec.m8}</td>
                     </tr>
                   ))}
                   {/* Static rows for long values */}
-                  <tr className="bg-gray-200 border-t border-black">
-                    <td className="p-2 border-r border-black font-semibold border text-black text-[17px]">
+                  <tr className="bg-gray-200 dark:bg-gray-800">
+                    <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                         Access Mode</td>
-                    <td colSpan="3" className="p-2 text-center text-black text-[17px]">Card only, card or pin, card and pin</td>
+                    <td colSpan="3" className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">Card only, card or pin, card and pin</td>
                   </tr>
-                  <tr className="bg-gray-50 border-t border-black">
-                    <td className="p-2 border-r border-black font-semibold text-black text-[17px]">
+                  <tr className="bg-gray-200 dark:bg-gray-800">
+                    <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                         Access Pin Number Format</td>
-                    <td colSpan="1" className="p-2 text-center border border-black text-black text-[17px]">
+                    <td colSpan="1" className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                         5 digit user num + 4 digit pin
                     </td>
-                    <td colSpan="1" className="p-2 text-center border border-black text-black text-[17px]">
+                    <td colSpan="1" className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                         Public pin 4 digit
                     </td>
-                    <td colSpan="1" className="p-2 text-center border border-black text-black text-[17px]">
+                    <td colSpan="1" className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                          User pin 4 digit
                     </td>
                   </tr>
-                  <tr className="bg-gray-50 border-t border-black">
-                    <td className="p-2 border-r border-black font-semibold text-black text-[17px]">
+                  <tr className="bg-gray-200 dark:bg-gray-800">
+                    <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                         Big LCD Screen</td>
-                    <td colSpan="3" className="p-2 text-center text-black text-[17px]">Resolution 128 x 64 | 4 text lines with 16 characters each line</td>
+                    <td colSpan="3" className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">Resolution 128 x 64 | 4 text lines with 16 characters each line</td>
                   </tr>
-                  <tr className="bg-gray-200 border-t border-black">
-                    <td className="p-2 border-r border-black font-semibold text-black text-[17px]">
+                  <tr className="bg-gray-200 dark:bg-gray-800">
+                    <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                        Wiegand Port
                     </td>
-                    <td colSpan="3" className="p-2 text-center text-black text-[17px]">
+                    <td colSpan="3" className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                       1 input port (selectable WG26 or 34)
                     </td>
                   </tr>
-                  <tr className="bg-gray-200 border-t border-black">
-                    <td className="p-2 border-r border-black font-semibold text-black text-[17px]">
+                  <tr className="bg-gray-200 dark:bg-gray-800">
+                    <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                       Push Button Input
                     </td>
-                    <td colSpan="3" className="p-2 text-center text-black text-[17px]">
+                    <td colSpan="3" className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                       1 negative trigger input
                     </td>
                   </tr>
-                  <tr className="bg-gray-200 border-t border-black">
-                    <td className="p-2 border-r border-black font-semibold text-black text-[17px]">
+                  <tr className="bg-gray-200 dark:bg-gray-800">
+                    <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                       Alarm Sensor Input
                     </td>
-                    <td colSpan="3" className="p-2 text-center text-black text-[17px]">
+                    <td colSpan="3" className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                       1 negative trigger input
                     </td>
                   </tr>
-                   <tr className="bg-gray-200 border-t border-black">
-                    <td className="p-2 border-r border-black font-semibold text-black text-[17px]">
+                   <tr className="bg-gray-200 dark:bg-gray-800">
+                    <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                      Door Output (Dry Contact)
                     </td>
-                    <td colSpan="3" className="p-2 text-center text-black text-[17px]">
+                    <td colSpan="3" className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                      0.1-600 sec N.O/N.C, max 24V-1A
                     </td>
                   </tr>
-                   <tr className="bg-gray-200 border-t border-black">
-                    <td className="p-2 border-r border-black font-semibold text-black text-[17px]">
+                   <tr className="bg-gray-200 dark:bg-gray-800">
+                    <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                      Alarm Output (Open Collector)
                     </td>
-                    <td colSpan="3" className="p-2 text-center text-black text-[17px]">
+                    <td colSpan="3" className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                     0.1-600 sec, active low output
                     </td>
                   </tr>
-                  <tr className="bg-gray-200 border-t border-black">
-                    <td className="p-2 border-r border-black font-semibold text-black text-[17px]">
+                  <tr className="bg-gray-200 dark:bg-gray-800">
+                    <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                        Reader RF Frequency
                     </td>
-                    <td colSpan="3" className="p-2 text-center text-black text-[17px]">
+                    <td colSpan="3" className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                       125KHz or Mifare 13.56MHz
                     </td>
                   </tr>
-                  <tr className="bg-gray-200 border-t border-black">
-                    <td className="p-2 border-r border-black font-semibold text-black text-[17px]">
+                  <tr className="bg-gray-200 dark:bg-gray-800">
+                    <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                        Reading Range
                     </td>
-                    <td colSpan="3" className="p-2 text-center text-black text-[17px]">
+                    <td colSpan="3" className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                        Approx 10cm (4 inch)
                     </td>
                   </tr>
-                  <tr className="bg-gray-200 border-t border-black">
-                    <td className="p-2 border-r border-black font-semibold text-black text-[17px]">
+                  <tr className="bg-gray-200 dark:bg-gray-800">
+                    <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                        Data Communication
                     </td>
-                    <td colSpan="3" className="p-2 text-center text-black text-[17px]">
+                    <td colSpan="3" className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                       RS485-9600bps (N, 8, 1)
                     </td>
                   </tr>
-                  <tr className="bg-gray-200 border-t border-black">
-                    <td className="p-2 border-r border-black font-semibold text-black text-[17px]">
+                  <tr className="bg-gray-200 dark:bg-gray-800">
+                    <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                      Power Consumption
                     </td>
-                    <td colSpan="3" className="p-2 text-center text-black text-[17px]">
+                    <td colSpan="3" className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                       10-24V, less than 3W
                     </td>
                   </tr>
-                  <tr className="bg-gray-200 border-t border-black">
-                    <td className="p-2 border-r border-black font-semibold text-black text-[17px]">
+                  <tr className="bg-gray-200 dark:bg-gray-800">
+                    <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                        Dimension, Weight
                     </td>
-                    <td colSpan="3" className="p-2 text-center text-black text-[17px]">
+                    <td colSpan="3" className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                        126 (H) x 91 (W) X 46 (D) mm, 210 gram
                     </td>
                   </tr>
@@ -204,39 +212,39 @@ const AR727H = () => {
             
             {/* AR721U Wiegand Specification */}
             <section>
-              <h2 className="font-bold text-xl text-black mb-4 mt-5">AR721U Wiegand Specification</h2>
+              <h2 className="dark:text-blue-400 font-bold text-xl text-black mb-4 mt-5">AR721U Wiegand Specification</h2>
                   <div className="overflow-x-auto border border-black">
                    <table className="w-full text-xs text-left">
                      <thead className="bg-gray-100 border-b border-black">
-                        <tr className="bg-gray-200 border-t border-black">
-                          <td className="p-2 border-r border-black font-semibold text-black text-[17px]">
+                        <tr className="bg-gray-200 dark:bg-gray-800">
+                          <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                              RF frequency
                           </td>
-                          <td colSpan="3" className="p-2 text-center text-black text-[17px]">
+                          <td colSpan="3" className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                              125KHz or Mifare 13.56MHz
                           </td>
                         </tr>
-                        <tr className="bg-gray-200 border-t border-black">
-                          <td className="p-2 border-r border-black font-semibold text-black text-[17px]">
+                        <tr className="bg-gray-200 dark:bg-gray-800">
+                          <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                              Reading range
                           </td>
-                          <td colSpan="3" className="p-2 text-center text-black text-[17px]">
+                          <td colSpan="3" className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                               5cm
                           </td>
                         </tr>
-                        <tr className="bg-gray-200 border-t border-black">
-                          <td className="p-2 border-r border-black font-semibold text-black text-[17px]">
+                        <tr className="bg-gray-200 dark:bg-gray-800">
+                          <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                              Power Consumption	
                           </td>
-                          <td colSpan="3" className="p-2 text-center text-black text-[17px]">
+                          <td colSpan="3" className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                              9-16V, less than 1.5W
                           </td>
                         </tr>
-                        <tr className="bg-gray-200 border-t border-black">
-                          <td className="p-2 border-r border-black font-semibold text-black text-[17px]">
+                        <tr className="bg-gray-200 dark:bg-gray-800">
+                          <td className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                              Dimension, Weight
                           </td>
-                          <td colSpan="3" className="p-2 text-center text-black text-[17px]">
+                          <td colSpan="3" className="p-2 border-r border-black font-semibold text-[17px] text-gray-800 dark:text-gray-200 leading-normal">
                              113 (H) x 71 (W) X 36 (D) mm, 90 gram
                           </td>
                         </tr>
@@ -263,9 +271,9 @@ const AR727H = () => {
 
           {/* Right Column: Sidebar */}
           <div className="lg:col-span-1 space-y-8">
-              <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
-            <h3 className="text-xl font-bold text-black mb-4 border-b pb-1">More By MAG</h3>
-             <ul className="space-y-4 text-gray-700">
+              <div className="bg-gray-300 dark:bg-[#1e1e22] p-6 rounded shadow-sm border border-gray-400 dark:border-gray-800 transition-colors duration-300">
+            <h3 className="font-bold text-black dark:text-blue-400 text-xl mb-4 border-b border-black dark:border-gray-700 pb-2 transition-colors">More By MAG</h3>
+             <ul className="space-y-4 text-gray-700 dark:text-gray-300">
                 <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
                   <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>Onity DirectKey with Serene</li>
                 </NavLink>

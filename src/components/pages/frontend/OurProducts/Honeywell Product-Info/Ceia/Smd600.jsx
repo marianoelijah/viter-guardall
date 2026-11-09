@@ -80,36 +80,43 @@ const Smd600 = () => {
     <>
     <Header />
 
-    <div className="bg-gray-200 min-h-screen font-sans">
+    <div className="bg-gray-100 dark:bg-[#121214] min-h-screen font-sans text-slate-800 dark:text-gray-200 transition-colors duration-300">
       {/* Header Banner */}
-      <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
+      <header className="bg-[#7f95b8] dark:bg-blue-950/70 text-white py-14 px-4 text-center transition-colors duration-300 ">
         <h1 className="text-5xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
-         SMD600 Plus:  Enhanced Walkthrough and Metal Detector
+           SMD600 Plus:  Enhanced Walkthrough and Metal Detector
         </h1>
       </header>
 
       {/* Main Layout Grid Wrap */}
-      <div className="max-w-7xl mx-auto px-4 py-8 flex flex-col lg:flex-row gap-8 items-start">
+      <div className="max-w-5xl mx-auto px-4 py-8 flex flex-col lg:flex-row gap-8 items-start">
         
         {/* Main Content Container (Takes up 2/3 width on large screens) */}
-        <main className="w-full lg:w-2/3 bg-gray-300 p-6 md:p-10 shadow-sm rounded-lg">
+        <main className="lg:w-3/4 bg-gray-200 p-8 rounded-lg shadow-sm dark:bg-[#1e1e22] border border-gray-400 dark:border-gray-800 transition-colors duration-300">
           
           {/* Top Info */}
           <div className="w-full">
-            <p className="mb-6 text-black text-[17px] font-medium">
+            <p className="text-[15px] text-gray-800 dark:text-gray-300 mb-4 border-l-4 border-[#8ba4cc] dark:border-blue-500 pl-4 font-medium">
                A two-in-one metal detector that has high sensitivity and high throughput.
             </p>
 
             <section className="mb-8">
-              <h2 className="font-bold text-xl text-black mb-2">Description:</h2>
-              <p className="leading-relaxed text-black text-[17px]">
-               The SMD®600 Plus is a very high sensitivity Metal Detector that also offers characteristics of high discrimination and high detection uniformity. The SMD600 Plus is the first Metal Detector in the market fully compliant with the NIJ-0601.02 Standard, as required in very high sensitivity applications, which also allows very high throughput in high security public screening checkpoints.
+              <h2 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">
+                ProductDescription:
+              </h2>
+              <p className="text-[15px] text-gray-800 dark:text-gray-300 mb-4 border-l-4 border-[#8ba4cc] dark:border-blue-500 pl-4 font-medium">
+               The SMD®600 Plus is a very high sensitivity Metal Detector that also offers characteristics 
+               of high discrimination and high detection uniformity. The SMD600 Plus is the first Metal Detector 
+               in the market fully compliant with the NIJ-0601.02 Standard, as required in very high sensitivity 
+               applications, which also allows very high throughput in high security public screening checkpoints.
               </p>
             </section>
 
             <section className="mb-10">
-              <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
-              <ul className="list-disc ml-5 space-y-1 text-black text-[17px]">
+              <h2 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">
+                Product Features:
+              </h2>
+              <ul className="list-disc ml-5 text-sm space-y-1 text-gray-800 dark:text-gray-300">
                 <li>High Sensitivity</li>
                 <li>High Throughput</li>
                 <li>New certified IP66 control unit</li>
@@ -123,16 +130,18 @@ const Smd600 = () => {
           </div>
 
           {/* Technical Specifications Table */}
-          <div className='bg-gray-300 mt-5 pt-5'>
+          <div className='mt-5 pt-5'>
             <section>
-              <h2 className="font-bold text-xl text-black mb-4">Technical Specifications:</h2>
+              <h2 className="dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">
+                Technical Specifications:
+              </h2>
               <div className="border border-black overflow-x-auto">
                 {specData.map((spec, index) => (
-                  <div key={index} className="flex min-w-[600px] border-b border-black last:border-0">
-                    <div className="w-1/3 p-3 bg-gray-200 font-bold text-[17px] text-black border-r border-black">
+                  <div key={index} className="flex min-w-[600px] border-b border-gray-500 dark:border-gray-700 last:border-0">
+                    <div className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 bg-gray-200 dark:bg-gray-800/80 text-[15px] text-black dark:text-gray-200">
                       {spec.category}
                     </div>
-                    <div className="w-2/3 p-3 text-[17px] text-black">
+                    <div className="w-2/3 p-3 text-[15px] text-black border-gray-500 dark:border-gray-700 font-bold bg-gray-200 dark:bg-gray-800/80  dark:text-gray-200">
                       <ul className="space-y-2">
                         {spec.details.map((item, i) => (
                           <li key={i}>{item}</li>
@@ -163,11 +172,11 @@ const Smd600 = () => {
         <aside className="w-full lg:w-1/3 space-y-6"> 
           
           {/* More By CEIA Box */}
-          <div className="bg-gray-300 p-6 border border-gray-400 rounded-lg shadow-sm">
-            <h3 className="text-xl font-bold text-black mb-4 border-b border-gray-400 pb-2">
+          <div className="bg-gray-300 dark:bg-[#1e1e22] p-6 rounded-xl shadow-sm border border-gray-400 dark:border-gray-800 transition-colors duration-300">
+            <h3 className="font-bold text-black dark:text-blue-400 text-xl mb-4 border-b border-black dark:border-gray-700 pb-2 transition-colors">
               More By CEIA
             </h3>
-            <ul className="space-y-4 text-gray-800 font-medium">
+            <ul className="space-y-4 text-gray-700 dark:text-gray-300">
               <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
                 <li className='cursor-pointer hover:text-[#ff5f31] transition-colors break-words'>Onity DirectKey with Serene</li>
               </NavLink>

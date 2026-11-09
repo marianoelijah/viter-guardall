@@ -11,10 +11,10 @@ const LobbyWorksVisitor = () => {
   return (
     <>
     <Header />
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-gray-100 dark:bg-[#121214]  min-h-screen font-sans text-slate-800 dark:text-gray-200 transition-colors duration-300">
 
       {/* HERO SECTION */}
-      <div className="bg-[#7f95b8] py-20">
+      <div className="bg-[#7f95b8] dark:bg-blue-950/70 text-white py-14 px-4 text-center transition-colors duration-300">
         <div className="container mx-auto px-6">
           <h1 className="text-white text-5xl md:text-5xl font-bold text-center">
             LobbyWorks™ Visitor Management <br/>
@@ -28,10 +28,10 @@ const LobbyWorksVisitor = () => {
         <div className="wrapper grid grid-cols-1 lg:grid-cols-3 gap-8">
 
           {/* LEFT CONTENT */}
-          <div className="lg:col-span-2">
-            <div className="bg-gray-200 rounded-xl border shadow-sm p-8 mb-4">
+          <div className="lg:col-span-2 max-w-5xl mx-auto bg-gray-200 p-8 shadow-sm dark:bg-[#1e1e22]">
+            <div className="container mx-auto px-3 py-2">
 
-              <p className="text-black text-[15px] mb-6">
+              <p className="text-[17px] leading-relaxed space-y-4 mb-6">
                 A platform that enhances your perimeter security by providing a simple and effective way to register, badge, and track visitors.
               </p>
 
@@ -58,12 +58,12 @@ const LobbyWorksVisitor = () => {
           </div>
 
           {/* RIGHT SIDEBAR */}
-          <div className="space-y-6">
+          <div className="space-y-6 ">
 
             {/* MORE BY SECTION */}
-            <div className="bg-gray-300 p-6 rounded shadow-sm border border-gray-400">
-                <h3 className="font-semibold text-black text-xl mb-4 border-b border-black pb-2">More By HONEYWELL</h3>
-                <ul className="space-y-4 text-gray-700">
+            <div className="bg-gray-300 dark:bg-[#1e1e22] p-6 rounded shadow-sm border border-gray-400 dark:border-gray-800 transition-colors duration-300 mr-10">
+                <h3 className="font-bold text-black dark:text-blue-400 text-xl mb-4 border-b border-black dark:border-gray-700 pb-2 transition-colors">More By HONEYWELL</h3>
+                <ul className="space-y-4 text-gray-700 dark:text-gray-300">
                   <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
                   <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>Onity DirectKey with Serene </li>
                   </NavLink>
@@ -87,7 +87,7 @@ const LobbyWorksVisitor = () => {
 
             {/* CTA CARD */}
            <div 
-              className="relative min-h-[240px] overflow-hidden rounded-2xl p-8 text-white shadow-md bg-cover bg-center bg-blend-multiply bg-blue-900/85"
+              className="relative min-h-[240px] overflow-hidden rounded-2xl p-8 text-white shadow-md bg-cover bg-center bg-blend-multiply bg-blue-900/85 mr-10"
               style={{ backgroundImage: "url('/assets/image/Our%20Products/quickalert.jpg')" }}
             >
               <div className="relative z-10 max-w-3xl">
@@ -101,7 +101,7 @@ const LobbyWorksVisitor = () => {
 
                 <NavLink 
                   to="/contacts" 
-                  className="inline-block w-full rounded-xl bg-[#0f3e90] px-6 py-3 text-center text-sm font-semibold tracking-wider text-white transition-colors hover:bg-[#ff5f31] sm:w-auto"
+                  className="inline-block w-full rounded-xl bg-[#0f3e90] px-2 py-3 text-center text-sm font-semibold tracking-wider text-white transition-colors hover:bg-[#ff5f31] sm:w-auto"
                 >
                   CONTACT US TODAY
                 </NavLink>

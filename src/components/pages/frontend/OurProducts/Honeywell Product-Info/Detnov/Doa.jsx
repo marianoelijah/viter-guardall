@@ -43,35 +43,39 @@ const Doa = () => {
   return (
     <>
     <Header />
-     <div className="bg-slate-50 min-h-screen font-sans">
+     <div className="bg-gray-200 dark:bg-[#121214] min-h-screen font-sans text-[#333] dark:text-gray-200 transition-colors duration-300">
       {/* Header Banner */}
-      <header className="bg-[#7f95b8] text-white py-12 px-6 text-center">
+      <header className="bg-[#7f95b8] dark:bg-blue-950/70 text-white py-14 px-6 text-center transition-colors duration-300">
         <h1 className="text-5xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
            DOA Series Indicator Light with Buzzer
         </h1>
       </header>
 
       {/* Main Content Container */}
-      <main className="max-w-6xl mx-auto bg-gray-200 shadow-lg my-10 p-8 md:p-12">
+      <main className="max-w-6xl mx-auto shadow-lg my-10 p-8 md:p-12">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
           
           {/* Left Column: Product Info */}
-          <div className="lg:col-span-3">
-            <p className="text-gray-800 text-[17px] mb-6">
+          <div className="lg:col-span-3 bg-gray-100 dark:bg-[#1e1e22] p-6 md:p-8 rounded-xl border border-transparent dark:border-gray-800 shadow-md transition-colors duration-300lg:col-span-3">
+            <p className="text-[17px] text-gray-680 leading-relaxed whitespace-pre-line">
                The DOA series indicator lights are signaling devices and acoustic warning by buzzer.
             </p>
 
             <section className="mb-8">
-              <h2 className="font-bold text-xl mb-2 text-black">Product Description:</h2>
-              <p className="text-gray-800 text-[17px] leading-relaxed">
+              <h2 className="font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">
+                Product Description:
+              </h2>
+              <p className="text-[17px] text-gray-680 leading-relaxed whitespace-pre-line">
                 The DOA series indicator lights are signaling devices and acoustic warning by buzzer. 
                 Due to their low consumption and high visibility, they are ideal for informing the user 
                 about the actions of the extinguishing system, fire detection system and detection of 
                 toxic gasses (carbon monoxide).
               </p>
             
-               <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
-            <ul className="list-disc ml-5 text-[17px] space-y-1 text-black">
+               <h2 className="font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">
+                Product Features:
+              </h2>
+            <ul className="list-disc ml-5 text-[17px] text-gray-680 space-y-1">
               {productFeatures.map((feature, index) => (
                 <li key={index}>{feature}</li>
               ))}
@@ -80,15 +84,17 @@ const Doa = () => {
 
             {/* Technical Specifications Table */}
             <section>
-              <h2 className="font-bold text-xl text-black mb-4">Technical Specification:</h2>
+              <h2 className="font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">
+                Technical Specification:
+                </h2>
               <div className="overflow-x-auto border border-gray-500">
                 <table className="w-full text-left text-xs border-collapse border border-black">
                   <thead>
                     <tr>
-                      <th className="p-3 border-b border-r border-black text-black text-[17px] font-bold w-1/3">Specification</th>
-                      <th className="p-3 border-b border-r border-black text-[17px] text-black">DOA FJ/CPD</th>
-                      <th className="p-3 border-b border-r border-black text-[17px] text-black">DOA K</th>
-                      <th className="p-3 border-b border-r border-black text-[17px] text-black">DOA K/WP</th>
+                      <th className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">Specification</th>
+                      <th className="p-3 border-b border-r border-gray-500 dark:border-gray-700 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">DOA FJ/CPD</th>
+                      <th className="p-3 border-b border-r border-gray-500 dark:border-gray-700 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">DOA K</th>
+                      <th className="p-3 border-b border-r border-gray-500 dark:border-gray-700 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">DOA K/WP</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -96,25 +102,25 @@ const Doa = () => {
                       if (spec.type === 'header') {
                         return (
                           <tr key={index}>
-                            <td colSpan="4" className="p-3 border-b border-r border-black text-black text-[17px] font-bold bg-gray-300">
+                            <td colSpan="4" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                               {spec.label}
                             </td>
                           </tr>
                         );
                       }
                       return (
-                        <tr key={index} className={index % 2 === 0 ? 'bg-gray-100' : 'bg-gray-200'}>
-                          <td className="p-3 border-b border-r border-black text-black text-[17px] font-bold w-1/3">
+                        <tr key={index} className={index % 2 === 0 ? 'bg-gray-300' : 'bg-gray-900'}>
+                          <td className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                             {spec.label}
                           </td>
-                          <td className="p-3 border-b border-r border-black text-[17px] text-black">
+                          <td className="p-3 border-b border-r border-gray-500 dark:border-gray-700 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                             {spec.value}
                           </td>
-                          <td className="p-3 border-b border-r border-black text-[17px] text-black">
-                            {spec.valu}
+                          <td className="p-3 border-b border-r border-gray-500 dark:border-gray-700 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
+                            {spec.value}
                           </td>
-                          <td className="p-3 border-b border-r border-black text-[17px] text-black">
-                            {spec.vale}
+                          <td className="p-3 border-b border-r border-gray-500 dark:border-gray-700 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
+                            {spec.value}
                           </td>
                         </tr>
                       );
@@ -143,9 +149,9 @@ const Doa = () => {
 
           {/* Right Column: Sidebar */}
           <div className="lg:col-span-1 space-y-8">
-              <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
-            <h3 className="text-xl font-bold text-black mb-4 border-b pb-1">More By DETNOV</h3>
-            <ul className="space-y-4 text-gray-800 font-medium">
+              <div className="bg-gray-300 dark:bg-[#1e1e22] p-6 rounded shadow-sm border border-gray-400 dark:border-gray-800 transition-colors duration-300">
+            <h3 className="font-bold text-black dark:text-blue-400 text-x mb-4 border-b border-black dark:border-gray-700 pb-2 transition-colors">More By DETNOV</h3>
+            <ul className="space-y-4 text-gray-700 dark:text-gray-300">
               <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
                 <li className='cursor-pointer hover:text-[#ff5f31] transition-colors break-words'>Onity DirectKey with Serene</li>
               </NavLink>
@@ -168,7 +174,7 @@ const Doa = () => {
           </div>
 
              {/* Contact Card */}
-             <div 
+          <div 
               className="relative min-h-[240px] overflow-hidden rounded-2xl p-8 text-white shadow-md bg-cover bg-center bg-blend-multiply bg-blue-900/85"
               style={{ backgroundImage: "url('/assets/image/Our%20Products/quickalert.jpg')" }}
             >

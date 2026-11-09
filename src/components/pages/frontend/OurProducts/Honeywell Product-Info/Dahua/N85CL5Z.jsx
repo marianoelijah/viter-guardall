@@ -10,32 +10,32 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
   return (
     <>
     <Header />
-    <div className="bg-gray-100 min-h-screen font-sans text-slate-800">
+    <div className="bg-gray-200 dark:bg-[#121214] min-h-screen font-sans text-[#333] dark:text-gray-200 transition-colors duration-300">
       {/* Banner Header */}
-      <header className="bg-[#7f95b8] text-white py-14 px-4 text-center">
+      <header className="bg-[#7f95b8] dark:bg-blue-950/70 text-white py-14 px-6 text-center transition-colors duration-300">
         <h1 className="text-5xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
           {title}
         </h1>
       </header>
 
       {/* Content Container */}
-      <main className="max-w-6xl mx-auto bg-gray-200 shadow-xl my-10 p-6 md:p-12">
+      <main className="max-w-6xl mx-auto shadow-xl my-10 p-6 md:p-12">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
           
           {/* Main Product Info */}
-          <div className="lg:col-span-3">
-            <p className="text-[17px]  text-black mb-6">{subtitle}</p>
+          <div className="lg:col-span-3 dark:bg-[#1e1e22] p-6 md:p-8 rounded-xl border border-transparent dark:border-gray-800 shadow-md transition-colors duration-300">
+            <p className="text-[17px] text-gray-680 leading-relaxed whitespace-pre-line mb-3">{subtitle}</p>
 
             <section className="mb-8">
-              <h2 className="font-bold text-xl text-black mb-2">Product Description:</h2>
-              <p className="text-[17px] text-black leading-relaxed whitespace-pre-line">
+              <h2 className="font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">Product Description:</h2>
+              <p className="text-[17px] text-gray-680 leading-relaxed whitespace-pre-line mb-3">
                 {description}
               </p>
             </section>
 
             <section className="mb-10">
-              <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
-              <ul className="list-disc ml-5 text-[17px] text-black space-y-1">
+              <h2 className="font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">Product Features:</h2>
+              <ul className="list-disc ml-5 text-[17px] text-gray-800 dark:text-gray-300 space-y-1 transition-colors">
                 {features.map((feature, idx) => (
                   <li key={idx}>{feature}</li>
                 ))}
@@ -43,162 +43,162 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
             </section>
 
              {/* Technical Specifications Table */}
-              <div className="bg-gray-300 p-6 shadow rounded border border-r divine-y">
-            <h2 className="font-bold text-black text-xl mb-4">Technical Specification</h2>
+              <div className="p-6 shadow rounded border border-r divine-y">
+            <h2 className="font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">Technical Specification</h2>
 
             <table className="w-full border text-[15px] text-black">
               <tbody>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                <tr>
+                  <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                       Model
                   </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
+                  <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                       N85CL5Z
                   </td>
                 </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                <tr>
+                  <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                      Day/Night
                   </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
+                  <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     True
                   </td>
                 </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                <tr>
+                  <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                      Camera Angle Adjustment
                   </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
+                  <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                      Horizontal: 0 to 355°Vertical: 0 to 65°
                   </td>
                 </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                <tr>
+                  <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                      Multi-View Streaming
                   </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
+                  <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                    Yes, 3 Streams
                   </td>
                 </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                <tr>
+                  <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                      Automatic Gain Control
                   </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
+                  <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     Yes
                   </td>
                 </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                <tr>
+                  <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                      1- or 2-Way Audio
                   </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
+                  <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                      Two-Way
                   </td>
                 </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                <tr>
+                  <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                      Audio Formats
                   </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
+                  <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                       AAC, G.711, G.726
                   </td>
                 </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                <tr>
+                  <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                      Pan/Tilt
                   </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
+                  <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                      No
                   </td>
                 </tr>
 
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                <tr>
+                  <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                      Security
                   </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
+                  <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     HTTPS, IEEE 802.1X
                   </td>
                 </tr>
 
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                <tr>
+                  <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     Supported Protocols
                   </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
+                  <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     ARP, Bonjour, DDNS, DHCP, DNS, FTP, HTTP, ICMP, IGMP, IPv4/v6, NTP, PPPoE, QoS Layer 3 DiffServ, RTP, RTSP, SMTP, SNMP v1/v2c/v3 (MIB-II), TCP, UDP, UPnP
                   </td>
                 </tr>
-                 <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                 <tr>
+                  <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     Event Trigger
                   </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
+                  <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                      	Yes
                   </td>
                 </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                <tr>
+                  <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     Event Action
                   </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
+                  <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     Recording, Notification, Alarm
                   </td>
                 </tr>
-                 <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                 <tr>
+                  <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                       Data Streaming
                   </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
+                  <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                      Yes
                   </td>
                 </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                <tr>
+                  <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                      Alarm I/O
                   </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
+                  <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                      1 / 1
                   </td>
                 </tr>
-                 <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                 <tr>
+                  <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                      Memory
                   </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
+                  <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     512 MB RAM / 32 MB Flash
                   </td>
                 </tr>
-               <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+               <tr>
+                  <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     Media/Memory Card Slot
                   </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
+                  <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                      Single Slot: microSD/microSDHC/microSDXC [128 GB Maximum]
                   </td>
                 </tr>
-                 <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                 <tr>
+                  <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                      External Storage Options
                   </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
+                  <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                    Local PC, NAS
                   </td>
                 </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                <tr>
+                  <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     Package Weight
                   </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
+                  <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     2.55 lb
                   </td>
                 </tr>
-                 <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                 <tr>
+                  <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                      Box Dimensions (LxWxH)
                   </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
+                  <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                      7.85 x 7.5 x 7.5″
                   </td>
                 </tr>
@@ -225,9 +225,9 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
 
           {/* Sidebar */}
           <aside className="lg:col-span-1 space-y-8">
-             <div className="bg-gray-300 p-4 border border-black  border-r mb-6">
-            <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By DAHUA</h3>
-            <ul className="space-y-4 text-gray-700">
+             <div className="bg-gray-300 dark:bg-[#1e1e22] p-6 rounded-xl shadow-sm border border-gray-400 dark:border-gray-800 transition-colors duration-300">
+            <h3 className="font-bold text-black dark:text-blue-400 text-xl mb-4 border-b border-black dark:border-gray-700 pb-2 transition-colors">More By DAHUA</h3>
+            <ul className="space-y-4 text-gray-700 dark:text-gray-300">
                 <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
                   <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>Onity DirectKey with Serene</li>
                 </NavLink>

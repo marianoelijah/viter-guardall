@@ -62,17 +62,17 @@ const ProductPage = () => {
                />
               </div>
 
-              <h3 className="text-3xl md:text-3xl font-bold text-[#1e3a8a] dark:text-blue-400 mb-4 transition-colors">
+              <h3 className="text-3xl md:text-3xl border-b font-bold text-[#1e3a8a] dark:text-blue-400 mb-4 transition-colors">
                 {cat.title}
               </h3>
 
-              <p className="text-gray-700 dark:text-gray-300 text-xl md:text-2xl leading-relaxed">
+              <p className="text-gray-700 dark:text-gray-300 text-xl md:text-xl lg:text-xl leading-relaxed">
                 {cat.description}
               </p>
 
               {/* Brands Section */}
               <div className="mt-auto border-t border-gray-100 dark:border-gray-800 pt-8">
-                <p className="text-[#ff5f31] text-xl md:text-xl font-black uppercase tracking-[0.25em] mb-6 text-center">
+                <p className="text-[#ff5f31] text-xl md:text-lg font-black uppercase tracking-[0.25em] mb-6 text-center">
                   Click to view more:
                 </p>
                 

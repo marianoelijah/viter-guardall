@@ -6,11 +6,11 @@ import SocialShare from "../../Reusable/SocialShare";
 
 const Fin4000mik = () => {
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="bg-gray-100 dark:bg-[#121214] min-h-screen font-sans text-slate-800 dark:text-gray-200 transition-colors duration-300">
       <Header />
 
       {/* HEADER */}
-      <div className="bg-[#7f95b8] py-16 text-center">
+      <div className="bg-[#7f95b8] dark:bg-blue-950/70 text-white py-14 px-4 text-center transition-colors duration-300">
         <h1 className="text-5xl font-bold text-white tracking-wide leading-snug">
           HON-FIN4000MIK-100K: COMPACT <br />
           FINGERPRINT DEVICE
@@ -18,24 +18,24 @@ const Fin4000mik = () => {
       </div>
 
       {/* CONTAINER */}
-      <div className="max-w-7xl mx-auto px-6 py-12">
+      <div className="max-w-5xl mx-auto px-6 py-12 ">
 
         {/* WRAPPER */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 dark:bg-[#1e1e22]">
 
           {/* LEFT SECTION */}
-          <div className="lg:col-span-2 bg-gray-300 p-8 rounded shadow-sm">
+          <div className="lg:col-span-2 bg-gray-300 p-8 rounded shadow-sm dark:bg-[#1e1e22]">
 
-            <p className="text-black text-[17px] mb-6">
+            <p className="text-[17px] leading-relaxed space-y-4 mb-6">
               A standard fingerprint device with touch keypads and color LCD displays.
               It can accurately identify wet and dry fingerprints.
             </p>
 
-            <h2 className="font-semibold text-black text-lg mb-3">
+            <h2 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">
               Product Description:
             </h2>
 
-            <p className="text-black text-[17px] leading-relaxed mb-6">
+            <p className="text-[17px] leading-relaxed space-y-4 mb-6">
               Equipped with powerful hardware and industry-leading algorithms,
               Honeywell HON-FIN4000 Series standard fingerprint device –
               HON-FIN4000MIK-100K provides instant comparison and authentication
@@ -44,11 +44,11 @@ const Fin4000mik = () => {
               to meet diverse customer requirements.
             </p>
 
-            <h2 className="font-semibold text-black text-[17px] mb-3">
+            <h2 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">
               Product Features:
             </h2>
 
-            <ul className="list-disc pl-6 text-black space-y-2 mb-8">
+            <ul className="list-disc ml-5 text-[17px] space-y-1">
               <li>2-inch color LCD display, full capacitive touch keypads</li>
               <li>1.2GHz quad-core CPU with large capacity memory</li>
               <li>High sensitivity optical sensor</li>
@@ -62,13 +62,13 @@ const Fin4000mik = () => {
             </ul>
 
             {/* TECHNICAL SPECIFICATION */}
-            <h2 className="font-semibold text-black text-lg mb-4">
+            <h2 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-500 dark:border-gray-00 duration-300 font-bold text-xl text-black dark:text-blue-400 transition-colors mb-5 mt-5">
               Technical Specification:
             </h2>
 
-            <div className="overflow-x-auto">
-              <table className="w-full border border-gray-300 text-black text-xl">
-                <tbody className="divide-y divide-gray-300">
+            <div className="mb-8 border border-gray-500 dark:border-gray-700 rounded-sm overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-500 text-[11px]">
+                <tbody className="divide-y divide-gray-00  p-2.5 font-bold  tracking-widest text-gray-800 dark:text-blue-400 text-[17px] border-b  border-gray-500 dark:border-gray-700">
                   {[
                     ["Model", "HON-FIN4000MIK-100K"],
                     ["CPU", "1.2G Quad Core"],
@@ -95,8 +95,8 @@ const Fin4000mik = () => {
                     ["Ingress Protection", "IP67"],
                     ["Dimensions (WxHxD)", "50 x 172 x 43.5 mm"],
                   ].map((row, index) => (
-                    <tr key={index} className="border-t bg-gray-200 border-black border border-r text-[15px] ">
-                      <td className="p-3 bg-gray-100 font-medium w-1/3 text-[17px] border-black border border-r">
+                    <tr key={index} className="border-t dark:bg-gray-800 border-black border border-r text-[15px] ">
+                      <td className="p-2 border-r border-black font-semibold text-[15px]  text-gray-800 dark:text-gray-200 leading-normal ">
                         {row[0]}
                       </td>
                       <td className="p-3 border-black border border-r">{row[1]}</td>
@@ -120,9 +120,9 @@ const Fin4000mik = () => {
           <div className="space-y-6">
 
             {/* More By Honeywell Card */}
-            <div className="bg-gray-300 p-6 rounded shadow-sm border border-gray-400">
-              <h3 className="font-bold text-black text-xl mb-4 border-b border-black pb-2">More By HONEYWELL</h3>
-              <ul className="space-y-4 text-gray-700">
+            <div className="bg-gray-300 dark:bg-[#1e1e22] p-6 rounded-xl shadow-sm  mb-6">
+              <h3 className="font-bold text-black dark:text-blue-400 text-xl mb-4 border-b border-black dark:border-gray-700 pb-2 transition-colors">More By HONEYWELL</h3>
+              <ul className="space-y-4 text-gray-700 dark:text-gray-300">
                 <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
                   <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>Onity DirectKey with Serene </li>
                 </NavLink>
@@ -146,7 +146,7 @@ const Fin4000mik = () => {
 
             {/* Cleaned & Balanced Reference CTA Card */}
              <div 
-              className="relative min-h-[240px] overflow-hidden rounded-2xl p-8 text-white shadow-md bg-cover bg-center bg-blend-multiply bg-blue-900/85"
+              className="relative min-h-[240px] overflow-hidden rounded-2xl p-8 text-white shadow-md bg-cover bg-center bg-blend-multiply bg-blue-900/85 mr-5"
               style={{ backgroundImage: "url('/assets/image/Our%20Products/quickalert.jpg')" }}
             >
               <div className="relative z-10 max-w-3xl">
@@ -160,7 +160,7 @@ const Fin4000mik = () => {
 
                 <NavLink 
                   to="/contacts" 
-                  className="inline-block w-full rounded-xl bg-[#0f3e90] px-6 py-3 text-center text-sm font-semibold tracking-wider text-white transition-colors hover:bg-[#ff5f31] sm:w-auto"
+                  className="inline-block w-full rounded-xl bg-[#0f3e90] px-2 py-3 text-center text-sm font-semibold tracking-wider text-white transition-colors hover:bg-[#ff5f31] sm:w-auto"
                 >
                   CONTACT US TODAY
                 </NavLink>

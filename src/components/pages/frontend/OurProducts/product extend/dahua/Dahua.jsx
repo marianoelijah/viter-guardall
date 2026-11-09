@@ -25,7 +25,7 @@ const ProductCard = ({ title, description, image, detailRoute }) => (
         </p>
       </div>
 
-      <span className="block mt-12 text-gray-500 dark:text-gray-400 text-sm tracking-widest">
+      <span className="block mt-2 text-gray-500 dark:text-gray-400 text-sm tracking-widest">
         <NavLink to={detailRoute} className="text-[#184c9b] dark:text-blue-400 hover:underline mt-2 block">
           <h3 className="text-xl font-poppins hover:text-[#ff5f31] dark:hover:text-[#ff5f31] transition-colors duration-300">
             View Details
@@ -58,7 +58,7 @@ const Dahua = () => {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-[#e9eff6] dark:bg-[#121214] text-[#0d3874] dark:text-blue-400 font-figtree transition-colors duration-300">
-        Loading Dahua...
+        Loading Dahua Products...
       </div>
     );
   }

@@ -8,10 +8,10 @@ const LobbyWorksCredentials = () => {
   return (
     <>
     <Header/>
-     <div className="bg-gray-100 min-h-screen">
+     <div className="bg-gray-100 dark:bg-[#121214] min-h-screen font-sans text-slate-800 dark:text-gray-200 transition-colors duration-300">
 
       {/* HEADER */}
-      <div className="bg-[#7f95b8] py-16">
+      <div className="bg-[#7f95b8] dark:bg-blue-950/70 text-white py-14 px-4 text-center transition-colors duration-300">
         <div className="container mx-auto px-6">
           <h1 className="text-white text-6xl md:text-5xl font-bold text-center tracking-wide">
             LOBBYWORKS™ CREDENTIALS:
@@ -27,29 +27,31 @@ const LobbyWorksCredentials = () => {
         <div className="wrapper grid grid-cols-1 lg:grid-cols-3 gap-8">
 
           {/* LEFT CONTENT */}
-          <div className="lg:col-span-2 bg-gray-300 p-8 rounded shadow">
+          <div className="lg:col-span-2 max-w-6xl mx-auto bg-gray-200 p-8 shadow-sm dark:bg-[#1e1e22]">
 
-            <p className="text-gray-700 mb-6">
+            <p className="text-[15px] leading-relaxed space-y-4 mb-6">
               A platform that enhances your perimeter security by providing a simple and effective way to register, badge, and track visitors.
             </p>
 
-            <h3 className="font-bold text-black font-poppins text-lg mb-2">Product Description:</h3>
-            <p className="text-black mb-6">
+            <h3 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">
+              Product Description:
+            </h3>
+            <p className="text-[15px] leading-relaxed space-y-4 mb-6">
               The LobbyWorks Visitor Management Suite enhances your investment in access control and perimeter security by providing a simple and effective way to register, badge and track visitors. It gives you the ability to generate detailed visitor traffic reports and enforce visitor/contractor security policies.
             </p>
 
-            <h3 className="font-bold text-black text-lg mb-2">Product Features:</h3>
+            <h3 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors mt-5">Product Features:</h3>
 
-            <h3 className="font-bold text-black text-lg mt-4 mb-2">Pre-Registration</h3>
-            <ul className="list-disc ml-6 text-black space-y-1">
+            <h3 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-semibold  text-black dark:text-blue-400 mb-2 transition-colors mt-5">Pre-Registration</h3>
+            <ul className="list-disc ml-5 text-[15px] space-y-1">
               <li>Entry into system by lobby receptionist</li>
               <li>Outlook® Calendar integration via POP3</li>
               <li>Web Center add-on for pre-registration by hosts</li>
               <li>Barcode in email pre-registration notification</li>
             </ul>
 
-            <h3 className="font-bold text-black text-lg mt-6 mb-2">Registration</h3>
-            <ul className="list-disc ml-6 text-black space-y-1 mb-8">
+            <h3 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-semibold text-black dark:text-blue-400 mb-2 transition-colors mt-5">Registration</h3>
+            <ul className="list-disc ml-5 text-[15px] space-y-1">
               <li>Process most visitors in 20 seconds or less</li>
               <li>Capture visitor photo and/or signature</li>
               <li>Scan driver’s license or business card</li>
@@ -59,18 +61,18 @@ const LobbyWorksCredentials = () => {
             </ul>
 
             {/* FEATURES TABLE */}
-            <h3 className="font-bold text-black text-lg mb-4">Edition Comparison</h3>
+            <h3 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors mt-5">Edition Comparison</h3>
 
-            <div className="overflow-x-auto mb-10 text-black border border-black">
+            <div className="border border-gray-500 dark:border-gray-700 rounded-sm overflow-x-auto mb-8">
               <table className="w-full border border-black text-sm">
                 <thead className="bg-gray-300 text-black border-black">
-                  <tr className="text-[17px] uppercase border-black">
+                  <tr className="text-[15px] uppercase border-black">
                     <th className="border p-2 text-left">Features</th>
                     <th className="border p-2">Express Edition</th>
                     <th className="border p-2">Premier Edition</th>
                   </tr>
                 </thead>
-                <tbody className="text-[17px] uppercase font-bold">
+                <tbody className="w-full text-[15px] text-left border-collapse">
                   {[
                     "Registration",
                     "Tracking",
@@ -100,9 +102,9 @@ const LobbyWorksCredentials = () => {
 
             {/* SYSTEM MINIMUM REQUIREMENTS */}
             {/* RECOMMENDED PROCESSOR */}
-            <h3 className="font-bold text-lg text-black mb-4">System Minimum Requirements</h3>
-            <div className="overflow-x-auto">
-              <table className="w-full border border-black text-sm text-black">
+            <h3 className="font-bold text-xl mb-4 text-black dark:text-blue-400 uppercase transition-colors">System Minimum Requirements</h3>
+            <div className="border border-gray-500 dark:border-gray-700 rounded-sm overflow-x-auto mb-8">
+              <table className="w-full text-[15px] text-left border-collapse">
                 <tbody>
                   <tr>
                     <td className="border p-2 font-semibold text-[15px] border-r border-black">Recommended Processor</td>
@@ -153,17 +155,17 @@ const LobbyWorksCredentials = () => {
               </table>
             </div>
 
-            <div className="text-[15px] text-black mt-4 mb-4">
-              1 Windows Server 2003/2008 is supported for Administrator and Scheduler only.
+            <div className="border border-gray-500 dark:border-gray-700 rounded-sm overflow-x-auto mb-8 p-3">
+              1. Windows Server 2003/2008 is supported for Administrator and Scheduler only.
               <br />
-              2 Includes RAM required by the client machine to run the Windows operating system.
+              2. Includes RAM required by the client machine to run the Windows operating system.
               <br />
-              3 Consult Microsoft® for operating system and database license terms.
+              3. Consult Microsoft® for operating system and database license terms.
             </div>
 
           {/* LOBBYWORKS SERVER 1,2 */}
-             <div className="overflow-x-auto">
-              <table className="w-full border border-black text-sm text-black">
+             <div className="border border-gray-500 dark:border-gray-700 rounded-sm overflow-x-auto mb-8">
+              <table className="w-full text-[15px] text-left border-collapse">
                 <tbody >
                   <tr>
                     <td className="border p-2 font-semibold text-[15px] border-r border-black">LobbyWorks Server1, 2</td>
@@ -228,15 +230,15 @@ const LobbyWorksCredentials = () => {
               </table>
             </div>
 
-            <div className="text-[15px] text-black mt-4 mb-4"> 
+            <div className="border border-gray-500 dark:border-gray-700 rounded-sm overflow-x-auto mb-8 p-3"> 
               1. For a system to be considered small, the LobbyWorks system must have fewer than <br />
                  1,500 hosts, fewer than 5 clients, and fewer than 400 visitors per day.
               <br />
-              2 To install LobbyWorks on a server with Pro-Watch®, you must add the LobbyWorks recommended memory and RAM requirements for the larger system server specification to those of Pro-Watch and MS-SQL.
+              2. To install LobbyWorks on a server with Pro-Watch®, you must add the LobbyWorks recommended memory and RAM requirements for the larger system server specification to those of Pro-Watch and MS-SQL.
               <br />
-              3 RAID technology used for the larger system server – disk set 1 and 2. When several physical disks are set up to use RAID technology, the operating system will be installed as on a single disk.
+              3. RAID technology used for the larger system server – disk set 1 and 2. When several physical disks are set up to use RAID technology, the operating system will be installed as on a single disk.
               <br />
-              4 Consult Microsoft® for operating system and database license terms.
+              4. Consult Microsoft® for operating system and database license terms.
             </div>
 
               {/* TAGS */}
@@ -258,9 +260,9 @@ const LobbyWorksCredentials = () => {
           <div className="space-y-6">
 
             {/* More By Section */}
-            <div className="bg-gray-300 p-6 rounded shadow-sm border border-gray-400">
-                <h3 className="font-bold text-black text-xl mb-4 border-b border-black pb-2">More By HONEYWELL</h3>
-                <ul className="space-y-4 text-gray-700">
+            <div className="bg-gray-300 dark:bg-[#1e1e22] p-4 rounded shadow-sm border border-gray-400 dark:border-gray-800 transition-colors duration-300 mr-10">
+                <h3 className="font-bold text-black dark:text-blue-400 text-xl mb-4 border-b border-black dark:border-gray-700 pb-2 transition-colors">More By HONEYWELL</h3>
+                <ul className="space-y-4 text-gray-700 dark:text-gray-300">
                   <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
                   <li className='cursor-pointer hover:text-[#ff5f31] transition-colors'>Onity DirectKey with Serene </li>
                   </NavLink>
@@ -284,7 +286,7 @@ const LobbyWorksCredentials = () => {
 
             {/* CTA Card */}
             <div 
-              className="relative min-h-[240px] overflow-hidden rounded-2xl p-8 text-white shadow-md bg-cover bg-center bg-blend-multiply bg-blue-900/85"
+              className="relative min-h-[240px] overflow-hidden rounded-2xl p-8 text-white shadow-md bg-cover bg-center bg-blend-multiply bg-blue-900/85 mr-10"
               style={{ backgroundImage: "url('/assets/image/Our%20Products/quickalert.jpg')" }}
             >
               <div className="relative z-10 max-w-3xl">
@@ -298,7 +300,7 @@ const LobbyWorksCredentials = () => {
 
                 <NavLink 
                   to="/contacts" 
-                  className="inline-block w-full rounded-xl bg-[#0f3e90] px-6 py-3 text-center text-sm font-semibold tracking-wider text-white transition-colors hover:bg-[#ff5f31] sm:w-auto"
+                  className="inline-block w-full rounded-xl bg-[#0f3e90] px-2 py-3 text-center text-sm font-semibold tracking-wider text-white transition-colors hover:bg-[#ff5f31] sm:w-auto"
                 >
                   CONTACT US TODAY
                 </NavLink>

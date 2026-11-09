@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 const IMAGE_BASE_URL = import.meta.env.VITE_API_URL;
 
 const ProductCard = ({ title, description, image, detailRoute }) => (
-  <div className="bg-white dark:bg-[#1e1e22] border border-gray-200 dark:border-gray-800 rounded-xl p-5 flex flex-col h-full transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl dark:hover:shadow-gray-900/50 cursor-pointer group">
+  <div className="bg-white dark:bg-[#121214]  border border-gray-200 dark:border-gray-800 rounded-xl p-5 flex flex-col h-full transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl dark:hover:shadow-gray-900/50 cursor-pointer group">
     {/* Product Image Container */}
     <div className="bg-gray-50 dark:bg-gray-800/80 border border-gray-100 dark:border-gray-700/50 rounded-lg p-6 mb-5 flex items-center justify-center h-64 overflow-hidden">
       <img 
@@ -25,7 +25,7 @@ const ProductCard = ({ title, description, image, detailRoute }) => (
         </p>
       </div>
 
-      <span className="block mt-12 text-gray-500 dark:text-gray-400 text-sm tracking-widest">
+      <span className="block mt-2 text-gray-500 dark:text-gray-400 text-sm tracking-widest">
         <NavLink to={detailRoute} className="text-[#184c9b] dark:text-blue-400 hover:underline mt-2 block">
           <h3 className="text-xl font-poppins hover:text-[#ff5f31] dark:hover:text-[#ff5f31] transition-colors duration-300">
             View Details
@@ -64,10 +64,10 @@ const Ebs = () => {
   }
 
   return (
-    <div className="bg-[#e9eff6] dark:bg-[#121214] min-h-screen py-16 px-6 lg:px-12 font-figtree transition-colors duration-300">
+    <div className="bg-[#e9eff6] dark:bg-[#121214]  min-h-screen py-16 px-6 lg:px-12 font-figtree transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
         <header className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-5xl text-[#0d3874] dark:text-blue-400 mb-6 tracking-tight font-semibold transition-colors">
+          <h2 className="text-4xl md:text-5xl lg:text-5xl text-[#0d3874] dark:text-blue-400 mb-6 tracking-tight font-bold transition-colors">
             {products.length > 0 ? products[0].category_name : "Guard Tour Systems"} – EBS
           </h2>
           <div className="h-1 w-24 bg-[#2257a0] dark:bg-blue-400 mx-auto rounded-full opacity-20"></div>

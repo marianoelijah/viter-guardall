@@ -37,74 +37,99 @@ const Crime = () => {
   return (
     <>
       <Header />
-      <div className="bg-gray-200 min-h-screen font-sans text-slate-800">
-        <header className="bg-[#7f95b8] text-white py-14 px-4 text-center">
+      <div className="bg-gray-100 dark:bg-[#121214] min-h-screen font-sans text-slate-800 dark:text-gray-200 transition-colors duration-300">
+        <header className="bg-[#7f95b8] dark:bg-blue-950/70 text-white py-14 px-4 text-center transition-colors duration-300">
           <h1 className="text-5xl md:text-5xl font-bold max-w-5xl mx-auto leading-tight">
             {productData.title}
           </h1>
         </header>
 
-        <main className="max-w-6xl mx-auto bg-gray-100 shadow-xl my-10 p-6 md:p-12">
+        <main className="max-w-6xl mx-auto shadow-xl my-10 p-6 md:p-12">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
             
             {/* Left Content */}
-            <div className="lg:col-span-3">
-              <p className="text-[15px] text-black mb-6">{productData.subtitle}</p>
+            <div className="lg:col-span-3 max-w-6xl mx-auto bg-gray-200 p-8 shadow-sm dark:bg-[#1e1e22]">
+              <p className="text-[15px] text-gray-800 dark:text-gray-300 mb-6 font-medium transition-colors">
+                {productData.subtitle}
+              </p>
               
               <section className="mb-8">
-                <h2 className="font-bold text-xl text-black mb-2 border-b-2 border-gray-100 pb-1 inline-block">Product Description:</h2>
-                <p className="text-base text-black leading-relaxed mt-2">{productData.description}</p>
+                <h2 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">
+                  Product Description:
+                </h2>
+                <p className="text-[15px] text-gray-800 dark:text-gray-300 mb-6 font-medium transition-colors">
+                  {productData.description}
+                </p>
               </section>
 
               <section className="mb-10">
-                <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1 list-disc text-black ml-5 text-[15px]">
+                <h2 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">
+                  Product Features:
+                </h2>
+                <ul className="list-disc ml-5 text-[15px] text-gray-800 dark:text-gray-300 space-y-1 transition-colors">
                   {productData.features.map((f, i) => <li key={i}>{f}</li>)}
                 </ul>
               </section>
 
               {/* Technical Spec Table */}
               <section className="overflow-x-auto">
-                <h2 className="font-bold text-xl mb-4">Technical and System Specification:</h2>
+                <h2 className="bg-gray-300 dark:bg-[#1e1e22] p-2 rounded shadow-sm border border-gray-400 dark:border-gray-800 duration-300 font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">
+                  Technical and System Specification:
+                </h2>
                 <table className="w-full text-[15px] text-black border-collapse border border-black">
                   
                    <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
+                      <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                         HARDWARE FEATURES
                       </td>
-                      <td colSpan="3" className="border border-black p-2">
-                       • H 225mm x W 80mm x D 70mm• Weight (including battery) ~650g (approx.)• LED life up to 50,000 hours• 1/4-20 UNC tripod mounting thread• IP64 splash proof/dust tight• Supplied with wrist lanyard and protective end cap
+                      <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-semibold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
+                       • H 225mm x W 80mm x D 70mm 
+                       • Weight (including battery) ~650g (approx.)
+                       • LED life up to 50,000 hours
+                       • 1/4-20 UNC tripod mounting thread
+                       • IP64 splash proof/dust tight
+                       • Supplied with wrist lanyard and protective end cap
                       </td>
                     </tr>
                     <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
+                      <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                         INTERFACE
                       </td>
-                      <td colSpan="3" className="border border-black p-2">
-                        • Integrated 1.25” LCD display• Easy to use, push-button operation• Cycle through illumination wavelengths• Adjust LED brightness• Light source ‘Self-Test’ function• Dark adaptation checker• Battery charge status indicator
+                      <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-semibold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
+                        • Integrated 1.25” LCD display
+                        • Easy to use, push-button operation
+                        • Cycle through illumination wavelengths
+                        • Adjust LED brightness• Light source ‘Self-Test’ function 
+                        • Dark adaptation checker• Battery charge status indicator
                       </td>
                     </tr>
                      <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
+                      <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                         RECHARGEABLE BATTERY
                       </td>
-                      <td colSpan="3" className="border border-black p-2">
-                       • Supplied with 2x high quality 2.6Ah Li-Ion batteries• High energy efficiency with low self-discharge rate• Recharge up to 2000 times• Up to 420 minutes run time on a single battery charge
+                      <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-semibold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
+                       • Supplied with 2x high quality 2.6Ah Li-Ion batteries 
+                       • High energy efficiency with low self-discharge rate 
+                       • Recharge up to 2000 times• Up to 420 minutes run time on a single battery charge
                       </td>
                     </tr>
                     <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
+                      <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                        EXTERNAL BATTERY CHARGER
                       </td>
-                      <td colSpan="3" className="border border-black p-2">
-                       • Rapid charging of Crime-lite X Li-Ion batteries• Charge 1 or 2 batteries simultaneously• Charge status display• Includes micro USB cable• 120 minute typical charge time
+                      <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-semibold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
+                       • Rapid charging of Crime-lite X Li-Ion batteries 
+                       • Charge 1 or 2 batteries simultaneously 
+                       • Charge status display 
+                       • Includes micro USB cable 
+                       • 120 minute typical charge time
                       </td>
                     </tr>
                      <tr>
-                      <td colSpan="2" className="border border-black p-3 font-bold w-1/2">
+                      <td colSpan="2" className="p-3 border-r border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                        AC MAINS POWER
                       </td>
-                      <td colSpan="3" className="border border-black p-2">
+                      <td colSpan="3" className="p-3 border-r border-gray-500 dark:border-gray-700 font-semibold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                        • Versatile USB-Micro connector
                       </td>
                     </tr>
@@ -129,9 +154,9 @@ const Crime = () => {
 
             {/* Right Column: Sidebar */}
           <div className="lg:col-span-1 space-y-8">
-            <div className="bg-gray-300 p-4 border border-gray-500 mb-6">
-                <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By FOSTER + FREEMAN</h3>
-            <ul className="space-y-4 text-gray-800 font-medium">
+            <div className="bg-gray-300 dark:bg-[#1e1e22] p-6 rounded-xl shadow-sm border border-gray-400 dark:border-gray-800 transition-colors duration-300">
+                <h3 className="font-bold text-black dark:text-blue-400 text-xl mb-4 border-b border-black dark:border-gray-700 pb-2 transition-colors">More By FOSTER + FREEMAN</h3>
+            <ul className="space-y-4 text-gray-800 dark:text-gray-300">
               <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
                 <li className='cursor-pointer hover:text-[#ff5f31] transition-colors break-words'>Onity DirectKey with Serene</li>
               </NavLink>
@@ -169,7 +194,7 @@ const Crime = () => {
 
                 <NavLink 
                   to="/contacts" 
-                  className="inline-block w-full rounded-xl bg-[#0f3e90] px-6 py-3 text-center text-sm font-semibold tracking-wider text-white transition-colors hover:bg-[#ff5f31] sm:w-auto"
+                  className="inline-block w-full rounded-xl bg-[#0f3e90] px-2 py-3 text-center text-sm font-semibold tracking-wider text-white transition-colors hover:bg-[#ff5f31] sm:w-auto"
                 >
                   CONTACT US TODAY
                 </NavLink>

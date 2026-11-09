@@ -68,8 +68,8 @@ const Hirsch = () => {
         
         {/* Page Header */}
         <header className="text-center py-16 px-6 md:px-10 lg:px-20">
-          <h2 className="text-5xl md:text-5xl lg:text-5xl text-[#0d3874] dark:text-blue-400 mb-6 tracking-tight font-bold transition-colors">
-            {products.length > 0 ? products[0].category_name : "Hirsch Products"}
+          <h2 className="text-4xl md:text-5xl lg:text-5xl text-[#0d3874] dark:text-blue-400 mb-6 tracking-tight font-bold transition-colors">
+            {products.length > 0 ? products[0].category_name : "Hirsch Products"} - Hirsch
           </h2>
 
           <div className="h-1 w-24 bg-[#2257a0] dark:bg-blue-400 mx-auto rounded-full opacity-30"></div>

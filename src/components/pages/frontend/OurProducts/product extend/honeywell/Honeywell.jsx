@@ -10,13 +10,13 @@ const ProductCard = ({ title, description, image, detailRoute }) => (
       <img
         src={`${IMAGE_BASE_URL}${image}`} 
         alt={title} 
-        className="max-h-full max-w-full object-contain dark:mix-blend-normal mix-blend-multiply filter dark:brightness-105 transition-transform duration-500 group-hover:scale-110" 
+        className="max-h-full max-w-full object-contain filter dark:brightness-105 transition-transform duration-500 group-hover:scale-110" 
       />
     </div>
     
     <div className="flex-grow flex flex-col justify-between">
       <div>
-        <h3 className="text-[#1a365d] dark:text-blue-400 font-semibold text-xl uppercase mb-3 leading-tight tracking-wide min-h-[2.5rem] transition-colors">
+        <h3 className="text-[#1a365d] dark:text-blue-400 font-semibold text-xl uppercase mb-3 leading-tight tracking-wide min-h-[4rem] transition-colors">
           {title}
         </h3>
         <p className="text-gray-600 dark:text-gray-300 text-xl leading-relaxed">
@@ -24,7 +24,7 @@ const ProductCard = ({ title, description, image, detailRoute }) => (
         </p>
       </div>
 
-      <span className="block mt-12 text-gray-500 dark:text-gray-400 text-sm tracking-widest">
+      <span className="block mt-2 text-gray-500 dark:text-gray-400 text-sm tracking-widest">
         <NavLink to={detailRoute} className="text-[#184c9b] dark:text-blue-400 hover:underline mt-2 block">
           <h3 className="text-xl font-poppins hover:text-[#ff5f31] dark:hover:text-[#ff5f31] transition-colors duration-300">
             View Details
@@ -57,7 +57,7 @@ const Honeywell = () => {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-[#f0f4f8] dark:bg-[#121214] text-gray-800 dark:text-gray-200 font-figtree transition-colors duration-300">
-        Loading...
+        Loading Honeywell Products...
       </div>
     );
   }
@@ -66,8 +66,8 @@ const Honeywell = () => {
     <div className="bg-[#f0f4f8] dark:bg-[#121214] min-h-screen px-6 lg:px-12 font-figtree transition-colors duration-300"> 
       <div className="max-w-7xl mx-auto">
         <header className="text-center py-16 px-6 md:px-10 lg:px-20">
-          <h2 className="text-4xl md:text-5xl lg:text-5xl text-[#0d3874] dark:text-blue-400 mb-6 tracking-tight transition-colors">
-            {products.length > 0 ? products[0].category_name : "Honeywell Products"}
+          <h2 className="text-4xl md:text-5xl lg:text-5xl text-[#0d3874] dark:text-blue-400 mb-6 tracking-tight font-bold transition-colors">
+            {products.length > 0 ? products[0].category_name : "Honeywell Products"} - Honeywell
           </h2>
           <div className="h-1 w-24 bg-[#2257a0] dark:bg-blue-400 mx-auto rounded-full opacity-20"></div>
         </header>

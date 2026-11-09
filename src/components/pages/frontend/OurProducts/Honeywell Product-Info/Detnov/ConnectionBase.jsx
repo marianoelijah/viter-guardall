@@ -6,36 +6,36 @@ import SocialShare from '../../Reusable/SocialShare';
 
 
 // Shared Layout Component to maintain design consistency across all products
-const ProductLayout = ({ title, subtitle, description, features, specs, sidebarItems }) => {
+const ProductLayout = ({ title, subtitle, description, features }) => {
   return (
     <>
     <Header />
-    <div className="bg-gray-100 min-h-screen font-sans text-slate-800">
+    <div className="bg-gray-200 dark:bg-[#121214] min-h-screen font-sans text-[#333] dark:text-gray-200 transition-colors duration-300">
       {/* Banner Header */}
-      <header className="bg-[#7f95b8] text-white py-14 px-4 text-center">
+      <header className="bg-[#7f95b8] dark:bg-blue-950/70 text-white py-14 px-6 text-center transition-colors duration-300">
         <h1 className="text-5xl md:text-5xl font-bold max-w-5xl mx-auto leading-tight">
           {title}
         </h1>
       </header>
 
       {/* Content Container */}
-      <main className="max-w-6xl mx-auto bg-gray-200 shadow-xl my-10 p-6 md:p-12">
+      <main className="max-w-6xl mx-auto shadow-xl my-10 p-6 md:p-12">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
           
           {/* Main Product Info */}
-          <div className="lg:col-span-3">
-            <p className="text-[17px]  text-black mb-6">{subtitle}</p>
+          <div className="lg:col-span-3 bg-gray-100 dark:bg-[#1e1e22] p-6 md:p-8 rounded-xl border border-transparent dark:border-gray-800 shadow-md transition-colors duration-300lg:col-span-3">
+            <p className="text-[15px] text-gray-680 leading-relaxed whitespace-pre-line mb-4">{subtitle}</p>
 
-            <section className="mb-8">
-              <h2 className="font-bold text-xl text-black mb-2">Product Description:</h2>
-              <p className="text-[17px] text-gray-680 leading-relaxed whitespace-pre-line">
+            <section className="mb-5">
+              <h2 className="font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">Product Description:</h2>
+              <p className="text-[15px] text-gray-680 leading-relaxed whitespace-pre-line">
                 {description}
               </p>
             </section>
 
-            <section className="mb-10">
-              <h2 className="font-bold text-xl text-black mb-2">Product Features:</h2>
-              <ul className="list-disc ml-5 text-[17px] text-gray-680 space-y-1">
+            <section className="mb-5">
+              <h2 className="font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">Product Features:</h2>
+              <ul className="list-disc ml-5 text-[15px] text-gray-680 space-y-1">
                 {features.map((feature, idx) => (
                   <li key={idx}>{feature}</li>
                 ))}
@@ -43,31 +43,31 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
             </section>
 
              {/* Technical Specifications Table */}
-              <div className="bg-gray-300 p-6 shadow rounded border border-r divine-y">
-            <h2 className="font-bold text-black text-xl mb-4">Technical Specification</h2>
+              <div className="p-6 shadow rounded border border-r divine-y">
+            <h2 className="font-bold text-xl text-black dark:text-blue-400 mb-2 transition-colors">Technical Specification</h2>
 
             <table className="w-full border text-[15px] text-black">
               <tbody>
 
-                 <tr className="bg-gray-300 ">
-                  <td colSpan="5" className="border-r border-black border p-2 font-bold">
+                 <tr>
+                  <td colSpan="5" className="p-3 border-r border-b border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     DIMENSIONS
                   </td>
                 </tr>
 
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                <tr>
+                  <td colSpan="2" className="p-3 border-r border-b border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     Base Height
                   </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
+                  <td colSpan="3" className="p-3 border-r border-b border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                    Z-200 / Z-200-B / Z-200-R: 5 mm x 100 mmZ-200-H / Z-200-H-B: 28 mm x 100 mmSTD-200 / STD-200-B: 30 mm x 100 mm
                   </td>
                 </tr>
-                <tr className="bg-gray-300 ">
-                  <td colSpan="2" className="border-r border-black border p-2 font-bold w-1/2">
+                <tr>
+                  <td colSpan="2" className="p-3 border-r border-b border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[17px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                     Material
                   </td>
-                  <td colSpan="3" className="border border-r border-black  p-2">
+                  <td colSpan="3" className="p-3 border-r border-b border-gray-500 dark:border-gray-700 font-bold w-1/3 text-[15px] text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-800/80">
                      ABS
                   </td>
                 </tr>
@@ -94,9 +94,9 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
 
           {/* Sidebar */}
           <aside className="lg:col-span-1 space-y-8">
-             <div className="bg-gray-300 p-4 border border-black  border-r mb-6">
-            <h3 className="text-xl font-semibold text-black mb-4 border-b pb-1">More By DETNOV</h3>
-            <ul className="space-y-4 text-gray-800 font-medium">
+             <div className="bg-gray-300 dark:bg-[#1e1e22] p-6 rounded shadow-sm border border-gray-400 dark:border-gray-800 transition-colors duration-300">
+            <h3 className="font-bold text-black dark:text-blue-400 text-x mb-4 border-b border-black dark:border-gray-700 pb-2 transition-colors">More By DETNOV</h3>
+            <ul className="space-y-4 text-gray-700 dark:text-gray-300">
               <NavLink to="/our-products/onity/directkey-with-serene" className='block'>
                 <li className='cursor-pointer hover:text-[#ff5f31] transition-colors break-words'>Onity DirectKey with Serene</li>
               </NavLink>
@@ -124,7 +124,7 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
               style={{ backgroundImage: "url('/assets/image/Our%20Products/quickalert.jpg')" }}
             >
               <div className="relative z-10 max-w-3xl">
-                <h3 className="mb-4 text-2xl font-bold leading-tight tracking-wide">
+                <h3 className="mb-4 text-2xl lg:text-2xl font-bold leading-tight tracking-wide">
                   Secure Your Peace Of Mind Today
                 </h3>
                 
@@ -134,7 +134,7 @@ const ProductLayout = ({ title, subtitle, description, features, specs, sidebarI
 
                 <NavLink 
                   to="/contacts" 
-                  className="inline-block w-full rounded-xl bg-[#0f3e90] px-6 py-3 text-center text-sm font-semibold tracking-wider text-white transition-colors hover:bg-[#ff5f31] sm:w-auto"
+                  className="inline-block w-full rounded-xl bg-[#0f3e90] px-2 py-3 text-center text-sm font-semibold tracking-wider text-white transition-colors hover:bg-[#ff5f31] sm:w-auto"
                 >
                   CONTACT US TODAY
                 </NavLink>
